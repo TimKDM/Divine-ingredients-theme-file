@@ -480,6 +480,46 @@
         "margin_spacing": "negative",
         "margin_top": 0
       }
+    },
+    "quick_info_bar": {
+      "type": "quick-info-bar",
+      "settings": {
+        "heading-1": "Free Shipping",
+        "caption-1": "On orders over $75",
+        "heading-2": "USDA Organic",
+        "caption-2": "Certified organic ingredients",
+        "heading-3": "24/7 Support",
+        "caption-3": "We're here to help",
+        "heading-4": "Secure Payment",
+        "caption-4": "Multiple payment options",
+        "image_size": "small",
+        "add_border": false,
+        "full_width_background": false,
+        "color_scheme": "option-1",
+        "color_scheme_1": "",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "ignore_spacing": true,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    },
+    "sticky_add_to_cart": {
+      "type": "sticky-add-to-cart",
+      "settings": {
+        "enable_section": true,
+        "hide_desktop": false,
+        "hide_mobile": false,
+        "heading_size": "medium",
+        "heading_tag": "h3",
+        "hide_img": false,
+        "hide_quantity_input": false,
+        "hide_select_variant": false,
+        "btn_style": "primary",
+        "color_scheme": "option-2",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
     }
   },
   "order": [
@@ -489,6 +529,8 @@
     "testimonials",
     "related-products",
     "video",
-    "recently_viewed_products"
+    "recently_viewed_products",
+    "quick_info_bar",
+    "sticky_add_to_cart"
   ]
 }
