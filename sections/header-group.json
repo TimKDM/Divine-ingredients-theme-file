@@ -1,1 +1,186 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement_bar_MMYfNc":{"type":"announcement-bar","blocks":{"announcement_9GgHEN":{"type":"announcement","settings":{"slider-text":"<p>Free Shipping on $75+ \u00b7 <a href=\"\/collections\" title=\"Shop Wholesale\">Shop Wholesale<\/a><\/p>"}}},"block_order":["announcement_9GgHEN"],"name":"t:sections.announcement-bar.presets.name","settings":{"announcement_position":"position-top","enable_announcement_bar_desktop_sticky":false,"enable_announcement_bar_mobile_sticky":false,"show_social":true,"enable_country_selector":true,"vertical_position":20,"announcement_text_color":"#ffffff","show_countdown":false,"countdown-text":"Offer Ends In","countdown-text-position":"top","countdown-date":"Sep 30, 2024","countdown-time":"9:00","countdown-date-time-style":"style-one","countdown_finished_message":"This offer has ended","color_scheme":"option-3"}},"header":{"type":"header","blocks":{"mega-promotion":{"type":"mega_promotion","settings":{"mega_promotion_item":"Products","mega_promotion_caption":"20% Sale","mega_promotion_title":"Product Spotlight","mega_promotion_link_label":"Explore Now","mega_promotion_link":""}},"mega_image_menu":{"type":"mega_image_menu","settings":{"mega_image_menu_item":"Specials","mega_image_columns":2,"mega_image_menu_caption_1":"10-30% Sale","mega_image_menu_title_1":"Big Savings","mega_image_menu_link_label_1":"","mega_image_menu_link_1":"","mega_image_menu_caption_2":"15% Sale","mega_image_menu_title_2":"Instant Meals","mega_image_menu_link_label_2":"","mega_image_menu_link_2":"","mega_image_menu_caption_3":"30% Sale","mega_image_menu_title_3":"Chocolates","mega_image_menu_link_label_3":"","mega_image_menu_link_3":"","mega_image_menu_caption_4":"30% Sale","mega_image_menu_title_4":"Complete Protein","mega_image_menu_link_label_4":"","mega_image_menu_link_4":"","mega_image_menu_caption_5":"10% Sale","mega_image_menu_title_5":"Suplements","mega_image_menu_link_label_5":"","mega_image_menu_link_5":"","mega_image_menu_caption_6":"20% Sale","mega_image_menu_title_6":"Title","mega_image_menu_link_label_6":"","mega_image_menu_link_6":"","mega_image_menu_caption_7":"20% Sale","mega_image_menu_title_7":"Title","mega_image_menu_link_label_7":"","mega_image_menu_link_7":"","mega_image_menu_caption_8":"20% Sale","mega_image_menu_title_8":"Title","mega_image_menu_link_label_8":"","mega_image_menu_link_8":""}}},"block_order":["mega-promotion","mega_image_menu"],"settings":{"menu":"top-menu-refresh","menu_type_desktop":"mega","all_items_mega":false,"enable_links":false,"desktop_header_layout":"logo-centermenu-icons","show_search_icon":false,"enable_header_full_width":false,"sticky_header_type":"on-scroll-up","enable_fixed_header_type":false,"enable_fixed_header_type_collection":true,"enable_fixed_header_type_all":false,"transparent_menu":"","enable_fixed_header_transparent":false,"fixed_header_type_margin":2,"fixed_header_type_margin_mobile":2,"button_label":"Link label","button_link":"","button_label_one":"Link label","button_link_one":"","image_size":"small","disable_additional_links":false,"enable_mobile_menu_links":false,"enable_item_highlight":true,"item_highlight_text":"HOT","item_highlight_position":"nth-child(2)","adjust_item_highlight_position":9,"enable_country_selector":true,"enable_language_selector":false,"header_icons_decoration":"line","color_scheme":"option-1","item_highlight_background_color":"#f0ebf2","item_highlight_color":"#1d1d1d","padding_top":0,"padding_bottom":0,"enable_country_selector_mobile":true,"enable_language_selector_mobile":true,"featured_collection_1":"","featured_collection_2":"","mobile_desktop_header_layout":"center"}},"scrolling_text_89BeNi":{"type":"scrolling-text","blocks":{"text_X4f7xx":{"type":"text","settings":{"text":"<p>Free Shipping on $75+ \u00b7 Shop Wholesale<\/p>","image_link":""}}},"block_order":["text_X4f7xx"],"disabled":true,"name":"t:sections.scrolling-text.presets.name","settings":{"scroll_direction":"ltc","enable_scroll_decoration":false,"scroll_decoration":"diamond","scroll_speed":70,"scroll_height":35,"scroll_text_size":2,"enable_stencil_text":false,"hover_stop":true,"keep_small_mobile":false,"border":false,"enable_announcement_bar_desktop_sticky":false,"enable_announcement_bar_mobile_sticky":false,"ignore_spacing":false,"color_scheme":"option-3","margin_spacing":"negative","margin_top":0}}},"order":["announcement_bar_MMYfNc","header","scrolling_text_89BeNi"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_MMYfNc": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_9GgHEN": {
+          "type": "announcement",
+          "settings": {
+            "slider-text": "<p>Free Shipping on $75+ · <a href=\"/collections\" title=\"Shop Wholesale\">Shop Wholesale</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_9GgHEN"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "announcement_position": "position-top",
+        "enable_announcement_bar_desktop_sticky": false,
+        "enable_announcement_bar_mobile_sticky": false,
+        "show_social": true,
+        "enable_country_selector": true,
+        "vertical_position": 20,
+        "announcement_text_color": "#ffffff",
+        "show_countdown": false,
+        "countdown-text": "Offer Ends In",
+        "countdown-text-position": "top",
+        "countdown-date": "Sep 30, 2024",
+        "countdown-time": "9:00",
+        "countdown-date-time-style": "style-one",
+        "countdown_finished_message": "This offer has ended",
+        "color_scheme": "option-3"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega-promotion": {
+          "type": "mega_promotion",
+          "settings": {
+            "mega_promotion_item": "Products",
+            "mega_promotion_caption": "20% Sale",
+            "mega_promotion_title": "Product Spotlight",
+            "mega_promotion_link_label": "Explore Now",
+            "mega_promotion_link": ""
+          }
+        },
+        "mega_image_menu": {
+          "type": "mega_image_menu",
+          "settings": {
+            "mega_image_menu_item": "Specials",
+            "mega_image_columns": 2,
+            "mega_image_menu_caption_1": "10-30% Sale",
+            "mega_image_menu_title_1": "Big Savings",
+            "mega_image_menu_link_label_1": "",
+            "mega_image_menu_link_1": "",
+            "mega_image_menu_caption_2": "15% Sale",
+            "mega_image_menu_title_2": "Instant Meals",
+            "mega_image_menu_link_label_2": "",
+            "mega_image_menu_link_2": "",
+            "mega_image_menu_caption_3": "30% Sale",
+            "mega_image_menu_title_3": "Chocolates",
+            "mega_image_menu_link_label_3": "",
+            "mega_image_menu_link_3": "",
+            "mega_image_menu_caption_4": "30% Sale",
+            "mega_image_menu_title_4": "Complete Protein",
+            "mega_image_menu_link_label_4": "",
+            "mega_image_menu_link_4": "",
+            "mega_image_menu_caption_5": "10% Sale",
+            "mega_image_menu_title_5": "Suplements",
+            "mega_image_menu_link_label_5": "",
+            "mega_image_menu_link_5": "",
+            "mega_image_menu_caption_6": "20% Sale",
+            "mega_image_menu_title_6": "Title",
+            "mega_image_menu_link_label_6": "",
+            "mega_image_menu_link_6": "",
+            "mega_image_menu_caption_7": "20% Sale",
+            "mega_image_menu_title_7": "Title",
+            "mega_image_menu_link_label_7": "",
+            "mega_image_menu_link_7": "",
+            "mega_image_menu_caption_8": "20% Sale",
+            "mega_image_menu_title_8": "Title",
+            "mega_image_menu_link_label_8": "",
+            "mega_image_menu_link_8": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega-promotion",
+        "mega_image_menu"
+      ],
+      "settings": {
+        "menu": "top-menu-refresh",
+        "menu_type_desktop": "mega",
+        "all_items_mega": false,
+        "enable_links": false,
+        "desktop_header_layout": "logo-centermenu-icons",
+        "show_search_icon": false,
+        "enable_header_full_width": false,
+        "sticky_header_type": "on-scroll-up",
+        "enable_fixed_header_type": false,
+        "enable_fixed_header_type_collection": true,
+        "enable_fixed_header_type_all": false,
+        "transparent_menu": "",
+        "enable_fixed_header_transparent": false,
+        "fixed_header_type_margin": 2,
+        "fixed_header_type_margin_mobile": 2,
+        "button_label": "Link label",
+        "button_link": "",
+        "button_label_one": "Link label",
+        "button_link_one": "",
+        "image_size": "small",
+        "disable_additional_links": false,
+        "enable_mobile_menu_links": false,
+        "enable_item_highlight": true,
+        "item_highlight_text": "HOT",
+        "item_highlight_position": "nth-child(2)",
+        "adjust_item_highlight_position": 9,
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "header_icons_decoration": "line",
+        "color_scheme": "option-1",
+        "item_highlight_background_color": "#f0ebf2",
+        "item_highlight_color": "#1d1d1d",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "enable_country_selector_mobile": true,
+        "enable_language_selector_mobile": true,
+        "featured_collection_1": "",
+        "featured_collection_2": "",
+        "mobile_desktop_header_layout": "center"
+      }
+    },
+    "scrolling_text_89BeNi": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_X4f7xx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free Shipping on $75+ · Shop Wholesale</p>",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_X4f7xx"
+      ],
+      "disabled": true,
+      "name": "t:sections.scrolling-text.presets.name",
+      "settings": {
+        "scroll_direction": "ltc",
+        "enable_scroll_decoration": false,
+        "scroll_decoration": "diamond",
+        "scroll_speed": 70,
+        "scroll_height": 35,
+        "scroll_text_size": 2,
+        "enable_stencil_text": false,
+        "hover_stop": true,
+        "keep_small_mobile": false,
+        "border": false,
+        "enable_announcement_bar_desktop_sticky": false,
+        "enable_announcement_bar_mobile_sticky": false,
+        "ignore_spacing": false,
+        "color_scheme": "option-3",
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_MMYfNc",
+    "header",
+    "scrolling_text_89BeNi"
+  ]
+}
