@@ -1103,24 +1103,25 @@ a.product-text {
 .product-form__buttons {
   display: flex;
   grid-gap: 1rem;
-  width: 100%;
+  width: auto;
 }
 
 @media screen and (max-width: 990px) {
   .product-form__buttons {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .product-form__buttons .product-form__submit,
 .product-form__buttons .shopify-payment-button{
-  width: 50%;
+  width: auto;
 }
 
 @media screen and (max-width: 990px) {
-  .product-form__buttons .product-form__submit, 
+  .product-form__buttons .product-form__submit,
   .product-form__buttons .shopify-payment-button {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -2390,12 +2391,13 @@ p.rating-count.caption {
 
 @media screen and (max-width: 350px) {
 .product-form__buttons {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product-form__buttons .product-form__submit,
 .product-form__buttons .shopify-payment-button{
-  width: 100%;
+  width: auto;
 }
 }
 
@@ -2572,8 +2574,8 @@ p.rating-count.caption {
     flex-direction: column;
     grid-gap: 0;
   }
-  .product-info-wrapper .product-form__buttons .product-form__submit, 
+  .product-info-wrapper .product-form__buttons .product-form__submit,
   .product-info-wrapper .product-form__buttons .shopify-payment-button {
-    width: 100%;
+    width: auto;
   }
 }
