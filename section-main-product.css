@@ -1116,12 +1116,15 @@ a.product-text {
 .product-form__buttons .product-form__submit,
 .product-form__buttons .shopify-payment-button{
   width: auto;
+  flex: 0 0 auto;
+  max-width: 20rem;
 }
 
 @media screen and (max-width: 990px) {
   .product-form__buttons .product-form__submit,
   .product-form__buttons .shopify-payment-button {
     width: auto;
+    max-width: 20rem;
   }
 }
 
