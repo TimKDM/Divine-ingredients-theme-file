@@ -50,7 +50,7 @@
             "column": "left",
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "swatch_shape": "circle",
             "margin_top": 10,
             "margin_bottom": 0,
