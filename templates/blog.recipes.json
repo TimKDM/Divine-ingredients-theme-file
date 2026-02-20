@@ -48,7 +48,7 @@
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
-        "caption": "Iris tips and tricks",
+        "caption": "Divine tips and tricks",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "Featured Articles",
@@ -77,7 +77,7 @@
         "caption": {
           "type": "caption",
           "settings": {
-            "caption": "Get Latest News",
+            "caption": "Join the Divine Community",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -85,7 +85,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our Newsletter",
+            "heading": "Get Recipes, Tips & 10% Off",
             "heading_size": "medium",
             "heading_style": "default",
             "heading_tag": "h2"
@@ -94,7 +94,7 @@
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Don't miss out on this opportunity to stay in the loop. Sign up for our newsletter today!</p>",
+            "text": "<p>Join the Divine Ingredients community for exclusive recipes, wellness tips, and early access to new arrivals. Plus, get 10% off your first order.</p>",
             "text_style": "body"
           }
         },

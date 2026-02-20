@@ -413,45 +413,45 @@
         "collapsible_row_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products organic?",
+            "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, all our products are crafted with organic ingredients, ensuring the highest quality and purity in every bite or scoop.</p>",
+            "row_content": "<p>Yes, every product we offer is USDA certified organic. We source exclusively from certified organic farms and each batch is independently lab-tested for purity and safety.</p>",
             "page": ""
           }
         },
         "collapsible_row_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products high in protein?",
+            "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan offerings are rich in plant-based proteins, carefully formulated to support muscle growth and recovery.</p>",
+            "row_content": "<p>We work directly with certified organic farms across Japan, India, Sri Lanka, and other growing regions. Each farm partnership is built on trust, fair trade, and sustainable practices.</p>",
             "page": ""
           }
         },
         "collapsible_row_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you offer a variety of vegan options?",
+            "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>Certainly! From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Yes! We offer competitive bulk pricing for cafés, restaurants, wellness brands, and food manufacturers. Visit our wholesale collection or contact us for custom quotes.</p>",
             "page": ""
           }
         },
         "collapsible_row_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products suitable for athletes?",
+            "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan products are designed to provide the essential nutrients and energy levels needed for athletes to perform at their best.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. We maintain complete traceability from farm to kitchen.</p>",
             "page": ""
           }
         },
         "collapsible_row_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are there any artificial additives or preservatives in Fuel products?",
+            "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>No, we pride ourselves on creating clean, wholesome products. You won't find any artificial additives or preservatives in our vegan offerings, ensuring a pure and nourishing experience.</p>",
+            "row_content": "<p>Absolutely not. All Divine Ingredients products are free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Just pure, clean ingredients.</p>",
             "page": ""
           }
         }

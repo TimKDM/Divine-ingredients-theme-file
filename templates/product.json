@@ -230,12 +230,12 @@
           "disabled": true,
           "settings": {
             "column": "right",
-            "heading": "Main Benefits",
+            "heading": "Why Divine Ingredients?",
             "heading_size": "medium",
             "heading_tag": "h4",
             "icon": "heart",
             "no_padding": true,
-            "content": "<p>Our Flux Protein-Rich, Plant-Based Food offers a variety of benefits. It’s packed with high-quality plant-based protein to support muscle growth and recovery, and it’s enriched with essential vitamins and minerals to boost your overall health. Plus, it's made from all-natural ingredients, free from artificial additives, and is easy to digest, making it a perfect addition to any balanced diet.</p>",
+            "content": "<p>Our ingredients are USDA certified organic, sourced directly from trusted farms worldwide, and rigorously lab-tested for purity. Every product is free from synthetic additives, artificial colors, and preservatives — delivering clean, functional ingredients you can trust for your most important creations.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -346,7 +346,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Plant-Based. No Additives. Eco-Friendly.</p>",
+            "text": "<p>USDA Organic. Zero Additives. Farm-to-Kitchen.</p>",
             "image_link": ""
           }
         },
@@ -361,7 +361,7 @@
         "text_3": {
           "type": "text",
           "settings": {
-            "text": "<p>Organic. All-Natural. Non-Allergenic.</p>",
+            "text": "<p>Lab Tested. Ethically Sourced. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -376,7 +376,7 @@
         "text_5": {
           "type": "text",
           "settings": {
-            "text": "<p>Soy Free. Low Sugar. High Protein.</p>",
+            "text": "<p>No Fillers. No Preservatives. Pure Ingredients.</p>",
             "image_link": ""
           }
         }
@@ -418,7 +418,7 @@
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Every Divine Ingredients product is USDA certified organic, sourced directly from trusted farms, and rigorously lab-tested for purity. No synthetic additives, no fillers — just clean, authentic ingredients for your best creations.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -428,10 +428,10 @@
         "tab_2": {
           "type": "tab",
           "settings": {
-            "heading": "Nutritional Info",
+            "heading": "Ingredients & Sourcing",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Energy: 210 kJ / 50 kcal, Fat: 2g (Saturates: 0.3g), Carbohydrate: 15g (Sugars: 6g), Fiber: 5g, Protein: 3g, Salt: 0g</p>",
+            "row_content": "<p>Origin: Sourced from certified organic farms. Certifications: USDA Organic. Testing: Each batch independently verified for purity, potency, and allergen safety. Free from: Synthetic additives, artificial colors, preservatives, fillers, GMOs.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -475,45 +475,45 @@
         "collapsible_row_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products organic?",
+            "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, all our products are crafted with organic ingredients, ensuring the highest quality and purity in every bite or scoop.</p>",
+            "row_content": "<p>Yes, every product we offer is USDA certified organic. We source exclusively from certified organic farms and each batch is independently lab-tested for purity and safety.</p>",
             "page": ""
           }
         },
         "collapsible_row_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products high in protein?",
+            "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan offerings are rich in plant-based proteins, carefully formulated to support muscle growth and recovery.</p>",
+            "row_content": "<p>We work directly with certified organic farms across Japan, India, Sri Lanka, and other growing regions. Each farm partnership is built on trust, fair trade, and sustainable practices.</p>",
             "page": ""
           }
         },
         "collapsible_row_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you offer a variety of vegan options?",
+            "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>Certainly! From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Yes! We offer competitive bulk pricing for cafés, restaurants, wellness brands, and food manufacturers. Visit our wholesale collection or contact us for custom quotes.</p>",
             "page": ""
           }
         },
         "collapsible_row_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products suitable for athletes?",
+            "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan products are designed to provide the essential nutrients and energy levels needed for athletes to perform at their best.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. We maintain complete traceability from farm to kitchen.</p>",
             "page": ""
           }
         },
         "collapsible_row_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are there any artificial additives or preservatives in Fuel products?",
+            "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>No, we pride ourselves on creating clean, wholesome products. You won't find any artificial additives or preservatives in our vegan offerings, ensuring a pure and nourishing experience.</p>",
+            "row_content": "<p>Absolutely not. All Divine Ingredients products are free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Just pure, clean ingredients.</p>",
             "page": ""
           }
         }
@@ -589,10 +589,10 @@
         "column_3"
       ],
       "settings": {
-        "title": "Customer Reviews",
+        "title": "What Our Community Says",
         "heading_size": "medium",
         "heading_tag": "h2",
-        "caption": "What People Say",
+        "caption": "Trusted by Creators",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "button_label": "",
@@ -619,7 +619,7 @@
           "type": "slide",
           "settings": {
             "heading": "Complete Nutrition",
-            "caption": "Power up your day. Your destination for delicious, organic cuisine sourced from the earth's bounty.",
+            "caption": "Discover our premium organic ingredients — from ceremonial matcha to artisan spices, carefully sourced for your best creations.",
             "button_label": "Explore Meals",
             "link": "",
             "show_link_button": false,
@@ -629,8 +629,8 @@
         "slide_2": {
           "type": "slide",
           "settings": {
-            "heading": "Cooking Workshop",
-            "caption": "Our workshops are designed to inspire and empower you to take control of your health and well-being through delicious, nutritious cooking.",
+            "heading": "Matcha Masterclass",
+            "caption": "Learn the art of preparing ceremonial matcha and creative ways to use it — from traditional whisking to café-style latte art.",
             "button_label": "Book Now",
             "link": "",
             "show_link_button": false,
@@ -640,8 +640,8 @@
         "slide_3": {
           "type": "slide",
           "settings": {
-            "heading": "Fuel Restaurant",
-            "caption": "Your destination for delicious, organic cuisine sourced from the earth's bounty. Indulge guilt-free in our plant-based menu crafted to nourish both body and soul.",
+            "heading": "Wholesale Partners",
+            "caption": "Are you a café, restaurant, or brand? We offer dedicated wholesale support, competitive pricing, and the consistent quality your business demands.",
             "button_label": "Find Us",
             "link": "",
             "show_link_button": false,
@@ -711,7 +711,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>No Artificial Flavors. Pure Ingredients</p>",
+            "text": "<p>USDA Organic. Zero Additives. Pure Ingredients.</p>",
             "image_link": ""
           }
         },
@@ -725,7 +725,7 @@
         "text_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Sugar-Free. Low Carb. High Fiber. Nutrient Dense</p>",
+            "text": "<p>Lab Tested. Ethically Sourced. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -739,7 +739,7 @@
         "text_4": {
           "type": "text",
           "settings": {
-            "text": "<p>Whole Foods. Allergen Friendly. Preservative Free</p>",
+            "text": "<p>No Fillers. No Preservatives. Farm-to-Kitchen.</p>",
             "image_link": ""
           }
         },

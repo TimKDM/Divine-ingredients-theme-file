@@ -1,4 +1,3 @@
-
 {
   "sections": {
     "main": {
@@ -16,10 +15,10 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Meet our Team",
-            "caption": "We’re not just a brand; we’re a way of life. Our story began with a vision to provide wholesome, plant-based nutrition that’s as good for your body as it is for the planet. Join us in discovering our mission, exploring our commitment to quality, and becoming part of a healthier, more sustainable future.",
-            "button_label": "",
-            "link": "",
+            "heading": "About Divine Ingredients",
+            "caption": "We believe that extraordinary creations begin with exceptional ingredients. From organic farms around the world to your kitchen, we source the purest teas, matcha, superfood powders, and artisan spices — so you never have to compromise on quality.",
+            "button_label": "Shop Our Collections",
+            "link": "shopify:\/\/collections",
             "button_style_secondary": false
           }
         },
@@ -27,18 +26,15 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Welcome to Flux",
-            "caption": "We’re more than a brand; we’re a movement committed to redefining nutrition. Our journey began with a vision of delivering wholesome, planet-friendly food. Join us in exploring our story, dedication to quality, and the path to a healthier, more sustainable future.",
-            "button_label": "",
+            "heading": "Simply Nourishing. Naturally Vibrant.",
+            "caption": "Every ingredient we offer is USDA certified organic, rigorously lab-tested, and sourced through direct partnerships with trusted growers. Zero synthetic additives. Zero fillers. Just clean, functional ingredients that make a real difference.",
+            "button_label": "Our Story",
             "link": "",
             "button_style_secondary": false
           }
         }
       },
-      "block_order": [
-        "slide_1",
-        "slide_2"
-      ],
+      "block_order": ["slide_1", "slide_2"],
       "settings": {
         "auto_rotate": false,
         "slider_direction": "horizontal",
@@ -83,7 +79,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Welcome to Flux – a journey of flavor, nutrition, and <em>sustainability</em>.</p>",
+            "heading": "<p>Welcome to Divine Ingredients — where purity meets <em>purpose</em>.</p>",
             "heading_size": "large",
             "heading_style": "default",
             "heading_tag": "h2",
@@ -94,15 +90,11 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We’re more than a brand; we’re a movement committed to redefining nutrition. Our journey began with a vision of delivering wholesome, planet-friendly food. Join us in exploring our story, dedication to quality, and the path to a healthier, more sustainable future.</p>"
+            "text": "<p>What started as a passion for authentic, uncompromised ingredients has grown into a trusted source for creators, chefs, wellness practitioners, and home cooks who demand the very best. We work directly with organic farms across Japan, India, Sri Lanka, and beyond to bring you ingredients that are as pure as nature intended.</p>"
           }
         }
       },
-      "block_order": [
-        "image",
-        "heading",
-        "text"
-      ],
+      "block_order": ["image", "heading", "text"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -122,7 +114,7 @@
         "caption": {
           "type": "caption",
           "settings": {
-            "caption": "Crafting Organic Delights",
+            "caption": "Our Sourcing Philosophy",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -130,7 +122,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Get to Know the Passionate Minds",
+            "heading": "From Farm to Kitchen, with Nothing Hidden",
             "heading_size": "medium",
             "heading_style": "default",
             "heading_tag": "h2"
@@ -139,23 +131,18 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Step behind the scenes and meet the diverse team driving the mission at Flux. From dedicated nutritionists to creative culinary experts, each member brings a unique blend of expertise and passion to the table. </p>"
+            "text": "<p>We maintain direct relationships with our growers to ensure complete traceability and the highest quality standards. Every ingredient is sourced from certified organic farms, independently lab-tested for purity, and delivered to you with zero synthetic additives or fillers.</p>"
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Meet Our Team",
-            "button_link": ""
+            "button_label": "Explore Collections",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
-      "block_order": [
-        "caption",
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["caption", "heading", "text", "button"],
       "settings": {
         "image": "",
         "image_2": "",
@@ -177,8 +164,8 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "Locally Made",
-            "text": "<p>Proudly crafted in Europe, our products embody quality, innovation, and timeless beauty.</p>",
+            "title": "USDA Certified Organic",
+            "text": "<p>Every product in our collection is certified organic — free from pesticides, GMOs, and synthetic chemicals. Quality you can verify, not just trust.</p>",
             "link_label": "",
             "link": ""
           }
@@ -188,8 +175,8 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "Top Quality",
-            "text": "<p>Exemplifying European Craftsmanship: Quality, Innovation, Beauty.</p>",
+            "title": "Rigorously Lab Tested",
+            "text": "<p>Each batch is independently tested for purity, potency, heavy metals, and allergen safety before it ever reaches your hands.</p>",
             "link_label": "",
             "link": ""
           }
@@ -199,18 +186,14 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "5 Star Rating",
-            "text": "<p>Five-Star Flair: Discover Flux Vegan's Exquisite Quality and Innovation.</p>",
+            "title": "Trusted by Creators",
+            "text": "<p>From home kitchens to professional cafés and wellness brands, our ingredients are trusted by creators who refuse to compromise.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": [
-        "column_1",
-        "column_2",
-        "column_3"
-      ],
+      "block_order": ["column_1", "column_2", "column_3"],
       "settings": {
         "multicolumn_style": "style-two",
         "enable_card_background": false,
@@ -245,7 +228,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Heart and Journey Behind Our Brand",
+            "heading": "The Heart Behind Divine Ingredients",
             "heading_size": "large",
             "heading_style": "default",
             "heading_tag": "h2"
@@ -254,7 +237,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At Flux, we take great pride in introducing you to the incredible team that fuels our vision for a healthier, more sustainable world. Our story is not just about the products we offer, but also about the people who make it all possible.</p>",
+            "text": "<p>At Divine Ingredients, we take pride in being more than a supplier — we're a partner in your creative journey. Our story is driven by a simple belief: the best creations start with the best ingredients. Whether you're a chef crafting a signature dish, a wellness brand formulating your next product, or a home cook elevating your daily meals, we're here to provide ingredients worthy of your vision.</p>",
             "text_style": "body"
           }
         },
@@ -266,14 +249,10 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "image"
-      ],
+      "block_order": ["heading", "text", "image"],
       "settings": {
         "image": "",
-        "caption": "Flux Story",
+        "caption": "Our Mission",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -294,7 +273,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Summer Sale</p>",
+            "heading": "<p>Shop Wholesale</p>",
             "heading_size": "extra-large",
             "heading_style": "default",
             "heading_tag": "h2",
@@ -305,15 +284,15 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Get ready to stock up on your favorite organic and protein-rich goodies with our sizzling summer discounts. From protein bars to supplements and everything in between, fuel your body and nourish your soul while saving big.</p>",
+            "text": "<p>Are you a café owner, wellness brand, or food manufacturer? We offer competitive bulk pricing, dedicated account support, and consistent quality for businesses of every size.</p>",
             "text_style": "body"
           }
         },
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop the Sale",
-            "button_link_1": "",
+            "button_label_1": "Learn About Wholesale",
+            "button_link_1": "shopify:\/\/collections\/shop-wholesale-with-divine",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -321,11 +300,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "buttons"
-      ],
+      "block_order": ["heading", "text", "buttons"],
       "settings": {
         "image": "",
         "image_overlay_opacity": 50,
