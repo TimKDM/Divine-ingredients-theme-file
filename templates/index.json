@@ -6,7 +6,7 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "100% Organic · Ethically Sourced"
+            "text": "100% Organic · Zero Additives · Farm-to-Kitchen"
           }
         },
         "heading": {
@@ -22,16 +22,16 @@
           "settings": {
             "button_label_1": "Shop Best Sellers",
             "button_link_1": "shopify:\/\/collections\/best-sellers",
-            "button_label_2": "Wholesale",
-            "button_link_2": ""
+            "button_label_2": "Shop Wholesale",
+            "button_link_2": "shopify:\/\/collections\/shop-wholesale-with-divine"
           }
         }
       },
       "block_order": ["badge", "heading", "subtitle", "buttons"],
       "settings": {
         "image": "shopify:\/\/shop_images\/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
-        "heading": "<p><em>Elevate</em> Every Recipe</p>",
-        "subtitle": "Premium matcha, artisan spices, and superfood powders trusted by top cafés and home chefs alike."
+        "heading": "<p>Simply Nourishing. <em>Naturally</em> Vibrant.</p>",
+        "subtitle": "Premium organic teas, matcha, superfood powders, and artisan spices — carefully sourced, rigorously tested, and trusted by creators who refuse to compromise."
       }
     },
     "divine_trust_bar": {
@@ -48,21 +48,21 @@
           "type": "trust_item",
           "settings": {
             "icon": "package",
-            "text": "<strong>Free Ship</strong> on $75+"
+            "text": "<strong>Free Ship</strong> on Orders $75+"
           }
         },
         "trust_3": {
           "type": "trust_item",
           "settings": {
-            "icon": "star",
-            "text": "<strong>4.9★</strong> 2,400+ Reviews"
+            "icon": "leaf",
+            "text": "<strong>Zero</strong> Synthetic Additives"
           }
         },
         "trust_4": {
           "type": "trust_item",
           "settings": {
-            "icon": "dollar",
-            "text": "<strong>Bulk</strong> Pricing Available"
+            "icon": "check",
+            "text": "<strong>Lab Tested</strong> for Purity"
           }
         }
       },
@@ -77,31 +77,31 @@
           "settings": {
             "collection": "matcha-tea-powders",
             "heading": "Matcha",
-            "subtitle": "Ceremonial & culinary"
+            "subtitle": "Ceremonial & culinary grades"
           }
         },
         "cat_2": {
           "type": "category",
           "settings": {
-            "collection": "powder",
+            "collection": "",
             "heading": "Loose Leaf Tea",
-            "subtitle": "Black, green & herbal"
+            "subtitle": "Black, green, oolong & herbal"
           }
         },
         "cat_3": {
           "type": "category",
           "settings": {
-            "collection": "black-tea",
-            "heading": "Superfoods",
-            "subtitle": "Adaptogens & blends"
+            "collection": "powder",
+            "heading": "Superfood Powders",
+            "subtitle": "Mushroom, fruit & adaptogens"
           }
         },
         "cat_4": {
           "type": "category",
           "settings": {
             "collection": "spices",
-            "heading": "Artisan Spices",
-            "subtitle": "Single origin & blends"
+            "heading": "Herbs & Spices",
+            "subtitle": "Single origin & organic blends"
           }
         }
       },
@@ -114,12 +114,13 @@
     "divine_products": {
       "type": "divine-products",
       "settings": {
-        "caption": "Customer Favorites",
+        "caption": "Community Favorites",
         "title": "Best Sellers",
         "collection": "best-sellers",
-        "products_to_show": 4,
+        "products_to_show": 6,
         "show_rating": true,
-        "show_view_all": true
+        "show_view_all": true,
+        "view_all_label": "View All Products"
       }
     },
     "divine_brand_story": {
@@ -130,39 +131,41 @@
           "settings": {
             "icon": "shield",
             "title": "100% Organic",
-            "description": "USDA certified, no pesticides"
+            "description": "USDA certified — zero pesticides, fillers, or synthetic additives in every product we offer."
           }
         },
         "value_2": {
           "type": "value",
           "settings": {
             "icon": "globe",
-            "title": "Ethically Sourced",
-            "description": "Direct farm partnerships"
+            "title": "Direct Farm Partnerships",
+            "description": "Ethically sourced from trusted growers across Asia, Africa, and the Americas."
           }
         },
         "value_3": {
           "type": "value",
           "settings": {
             "icon": "clipboard",
-            "title": "Lab Tested",
-            "description": "Purity verified"
+            "title": "Rigorously Tested",
+            "description": "Every batch lab-verified for purity, potency, and allergen safety before it reaches you."
           }
         },
         "value_4": {
           "type": "value",
           "settings": {
-            "icon": "dollar",
-            "title": "Bulk Pricing",
-            "description": "For cafés & chefs"
+            "icon": "heart",
+            "title": "Partners in Your Journey",
+            "description": "Supporting creators, chefs, and wellness brands who demand the very best ingredients."
           }
         }
       },
       "block_order": ["value_1", "value_2", "value_3", "value_4"],
       "settings": {
         "image": "shopify:\/\/shop_images\/Smoothie-blog-image-2.jpg",
-        "heading": "Sourced with Care, Crafted for Quality",
-        "text": "Every ingredient in our collection is carefully selected from trusted organic farms around the world. We work directly with growers to ensure the highest quality and most authentic flavors."
+        "heading": "Extraordinary Creations Begin with Exceptional Ingredients",
+        "text": "What started as a passion for pure, authentic ingredients has grown into a trusted source for creators who refuse to compromise on quality. We work directly with growers, producers, and artisans who share our commitment to excellence — ensuring that every ingredient bearing our name meets the highest standards of purity and authenticity.",
+        "button_label": "Our Story",
+        "button_link": "shopify:\/\/pages\/about-us"
       }
     },
     "divine_testimonials": {
@@ -172,7 +175,7 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "The ceremonial matcha is the best I've found outside of Japan. Our café customers always ask what brand we use.",
+            "text": "The ceremonial matcha is the best I've found outside of Japan. Our café customers always ask what brand we use. The consistency batch to batch is incredible.",
             "author": "Sarah M.",
             "role": "Café Owner, Portland"
           }
@@ -181,7 +184,7 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "Finally found a reliable source for organic turmeric. The quality is consistent and the bulk pricing is perfect.",
+            "text": "Finally found a reliable source for organic turmeric and ashwagandha. The quality is consistent, the lab testing gives me confidence, and the bulk pricing is perfect for our formulations.",
             "author": "Dr. James K.",
             "role": "Wellness Practitioner"
           }
@@ -190,16 +193,34 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "The chai blend has become my morning ritual. The spice balance is perfect and the aroma is incredible!",
+            "text": "I switched all my baking ingredients to Divine and the difference is night and day. The vanilla, the cinnamon, the matcha — everything tastes more vibrant and real.",
             "author": "Michelle T.",
-            "role": "Tea Enthusiast"
+            "role": "Home Baker & Recipe Creator"
+          }
+        },
+        "testimonial_4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "We've been using Divine Ingredients for our private label tea line and couldn't be happier. The sourcing transparency and quality certifications make it easy to build trust with our own customers.",
+            "author": "Ryan & Co.",
+            "role": "Private Label Brand"
+          }
+        },
+        "testimonial_5": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "The mushroom powder blends are outstanding — lion's mane and reishi that actually taste clean. No fillers, no weird aftertaste. My morning smoothie has never been better.",
+            "author": "Anika P.",
+            "role": "Wellness Coach, Vancouver"
           }
         }
       },
-      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"],
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3", "testimonial_4", "testimonial_5"],
       "settings": {
-        "caption": "What People Say",
-        "title": "Customer Reviews"
+        "caption": "Trusted by Creators",
+        "title": "What Our Community Says"
       }
     },
     "divine_newsletter": {
@@ -208,13 +229,13 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Get 10% Off Your First Order"
+            "heading": "Join the Divine Community"
           }
         },
         "subtitle": {
           "type": "subtitle",
           "settings": {
-            "text": "Plus exclusive recipes, wellness tips, and early access to new products."
+            "text": "Get 10% off your first order, plus exclusive recipes, wellness tips, and early access to new arrivals."
           }
         },
         "email_form": {
@@ -224,9 +245,9 @@
       },
       "block_order": ["heading", "subtitle", "email_form"],
       "settings": {
-        "input_placeholder": "Enter your email",
-        "button_label": "Subscribe",
-        "privacy_text": "No spam, ever. Unsubscribe anytime."
+        "input_placeholder": "Your email address",
+        "button_label": "Get 10% Off",
+        "privacy_text": "We respect your inbox. No spam, ever. Unsubscribe anytime."
       }
     },
     "image_banner_with_featured_collection": {

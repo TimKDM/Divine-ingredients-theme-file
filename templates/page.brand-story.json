@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "divine_story": {
+      "type": "divine-story-page",
+      "blocks": {
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "caption": "Our Story",
+            "heading": "The Divine Ingredients Journey"
+          }
+        },
+        "intro": {
+          "type": "intro",
+          "settings": {
+            "heading": "Extraordinary Creations Begin with Exceptional Ingredients",
+            "text": "<p>At Divine Ingredients, we believe that nourishment shouldn't demand compromise. Founded on the principle that quality matters at every level, we've dedicated ourselves to sourcing and supplying the finest organic ingredients nature has to offer.</p><p>We're more than a supplier — we're partners in your creative journey. Whether you're crafting in your kitchen, formulating products, or building your brand, we provide ingredients you can trust.</p>"
+          }
+        },
+        "story_1": {
+          "type": "image_text",
+          "settings": {
+            "caption": "How It Started",
+            "heading": "A Passion for Pure, Authentic Ingredients",
+            "text": "<p>What started as a passion for pure, authentic ingredients has grown into a trusted source for those who refuse to compromise on quality. We work directly with growers, producers, and artisans who share our commitment to excellence.</p><p>From organic matcha farms in Japan to spice growers in India and tea estates across Sri Lanka, every partnership is built on trust, fair trade, and a shared dedication to the craft.</p>",
+            "layout": "image_left",
+            "use_alt_bg": false
+          }
+        },
+        "story_2": {
+          "type": "image_text",
+          "settings": {
+            "caption": "Our Process",
+            "heading": "Rigorously Tested, Carefully Curated",
+            "text": "<p>Every ingredient that bears our name meets the highest standards. We maintain complete traceability from farm to kitchen — so you always know exactly what you're getting and where it comes from.</p><p>Each batch is independently lab-tested for purity, potency, and allergen safety. Zero synthetic additives. Zero fillers. Zero artificial dyes or preservatives. Just clean, functional ingredients that work.</p>",
+            "layout": "image_right",
+            "use_alt_bg": true
+          }
+        },
+        "values": {
+          "type": "values",
+          "settings": {
+            "caption": "Our Commitments",
+            "heading": "What Drives Us",
+            "value_1_title": "Quality First",
+            "value_1_text": "We never compromise on the integrity of our ingredients. Every product is carefully selected and rigorously tested.",
+            "value_2_title": "Transparency",
+            "value_2_text": "You deserve to know exactly what you're getting and where it comes from. No hidden fillers or additives.",
+            "value_3_title": "Sustainability",
+            "value_3_text": "We partner with suppliers who respect the earth and practice responsible, eco-conscious sourcing.",
+            "value_4_title": "Your Success",
+            "value_4_text": "Your success is our success. We're here to support you every step of the way — from kitchen to market.",
+            "use_alt_bg": false
+          }
+        },
+        "story_3": {
+          "type": "image_text",
+          "settings": {
+            "caption": "Our Community",
+            "heading": "Built for Creators Who Demand the Best",
+            "text": "<p>When you choose Divine Ingredients, you're joining a community of creators, innovators, and perfectionists who believe that the best results come from the best ingredients.</p><p>From home chefs discovering the joy of organic matcha to wellness brands building their product lines and café owners crafting signature drinks — we're honored to be part of your journey.</p>",
+            "button_label": "Shop All Collections",
+            "button_link": "shopify:\/\/collections",
+            "layout": "image_left",
+            "use_alt_bg": true
+          }
+        },
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "Ready to Create Something Extraordinary?",
+            "text": "Join the Divine Ingredients community and discover why creators, chefs, and wellness brands trust us for their most important ingredients.",
+            "button_label": "Shop All Products",
+            "button_link": "shopify:\/\/collections",
+            "use_dark_bg": true
+          }
+        }
+      },
+      "block_order": ["hero", "intro", "story_1", "story_2", "values", "story_3", "cta"],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "divine_story"
+  ]
+}
