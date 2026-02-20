@@ -1,6 +1,40 @@
 {{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
 
-<section class="divine-section divine-section-alt">
+{%- style -%}
+  #shopify-section-{{ section.id }} .divine-section {
+    background-color: {{ section.settings.background_color }};
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+  }
+
+  #shopify-section-{{ section.id }} .divine-section-label {
+    color: {{ section.settings.accent_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-section-title {
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-testimonial-card {
+    background-color: {{ section.settings.card_background_color }};
+    border-color: {{ section.settings.card_border_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-testimonial-stars svg {
+    fill: {{ section.settings.star_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .divine-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
   <div class="divine-section-header">
     {%- if section.settings.caption != blank -%}
       <span class="divine-section-label">{{ section.settings.caption }}</span>
@@ -12,7 +46,12 @@
 
   <div class="divine-testimonial-scroll">
     {%- for block in section.blocks -%}
-      <div class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      {%- if block.settings.link != blank -%}
+        <a href="{{ block.settings.link }}" class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      {%- else -%}
+        <div class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      {%- endif -%}
+
         {%- if block.settings.rating != blank -%}
           <div class="divine-testimonial-stars">
             {%- assign star_count = block.settings.rating | plus: 0 -%}
@@ -23,7 +62,7 @@
         {%- endif -%}
 
         {%- if block.settings.text != blank -%}
-          <p class="divine-testimonial-text">"{{ block.settings.text }}"</p>
+          <p class="divine-testimonial-text"><em>"{{ block.settings.text }}"</em></p>
         {%- endif -%}
 
         {%- if block.settings.author != blank -%}
@@ -33,7 +72,12 @@
         {%- if block.settings.role != blank -%}
           <p class="divine-testimonial-role">{{ block.settings.role }}</p>
         {%- endif -%}
-      </div>
+
+      {%- if block.settings.link != blank -%}
+        </a>
+      {%- else -%}
+        </div>
+      {%- endif -%}
     {%- endfor -%}
   </div>
 </section>
@@ -49,13 +93,89 @@
       "type": "text",
       "id": "caption",
       "label": "Caption",
-      "default": "What People Say"
+      "default": "Trusted by Creators"
     },
     {
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "Customer Reviews"
+      "default": "What Our Community Says"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_alt_bg",
+      "label": "Use alternate background",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
     }
   ],
   "blocks": [
@@ -89,6 +209,11 @@
           "id": "role",
           "label": "Role / Location",
           "default": "Café Owner, Portland"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
         }
       ]
     }
