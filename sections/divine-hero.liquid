@@ -33,20 +33,33 @@
 {%- endstyle -%}
 
 <section class="divine-hero">
-  <div class="divine-hero__image">
-    {%- if section.settings.image != blank -%}
+  {%- if section.settings.video_url != blank -%}
+    {%- assign hero_autoplay = section.settings.autoplay -%}
+    {%- assign hero_loop = section.settings.loop -%}
+    {%- assign hero_muted = section.settings.muted -%}
+    <div class="divine-hero__image divine-hero__image--video">
       {{
-        section.settings.image
-        | image_url: width: 1200
-        | image_tag:
-          loading: 'eager',
-          widths: '375, 550, 750, 1000, 1200',
-          sizes: '100vw'
+        section.settings.video_url
+        | external_video_url: autoplay: hero_autoplay, loop: hero_loop, muted: hero_muted
+        | external_video_tag: loading: 'lazy'
       }}
-    {%- else -%}
-      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-    {%- endif -%}
-  </div>
+    </div>
+  {%- else -%}
+    <div class="divine-hero__image">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'eager',
+            widths: '375, 550, 750, 1000, 1200',
+            sizes: '100vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
 
   <div class="divine-hero__content">
     {%- for block in section.blocks -%}
@@ -106,6 +119,36 @@
       "step": 5,
       "default": 45,
       "unit": "vh"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Video URL (YouTube or Vimeo)",
+      "accept": ["youtube", "vimeo"],
+      "info": "When set, the video replaces the hero image."
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "muted",
+      "label": "Muted",
+      "default": true,
+      "info": "Video must be muted to autoplay on most browsers."
     },
     {
       "type": "header",
