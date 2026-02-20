@@ -1,0 +1,145 @@
+{{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
+
+<section class="divine-hero">
+  <div class="divine-hero__image">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 1200
+        | image_tag:
+          loading: 'eager',
+          widths: '375, 550, 750, 1000, 1200',
+          sizes: '100vw'
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+
+  <div class="divine-hero__content">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'badge' -%}
+          {%- if block.settings.text != blank -%}
+            <span class="divine-hero__badge" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
+          {%- endif -%}
+
+        {%- when 'heading' -%}
+          <h1 {{ block.shopify_attributes }}>{{ section.settings.heading }}</h1>
+
+        {%- when 'subtitle' -%}
+          {%- if section.settings.subtitle != blank -%}
+            <p class="divine-hero__subtitle" {{ block.shopify_attributes }}>{{ section.settings.subtitle }}</p>
+          {%- endif -%}
+
+        {%- when 'buttons' -%}
+          <div class="divine-hero__cta" {{ block.shopify_attributes }}>
+            {%- if block.settings.button_label_1 != blank -%}
+              <a href="{{ block.settings.button_link_1 }}" class="divine-btn divine-btn-primary">
+                {{ block.settings.button_label_1 }}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.button_label_2 != blank -%}
+              <a href="{{ block.settings.button_link_2 }}" class="divine-btn divine-btn-secondary">
+                {{ block.settings.button_label_2 }}
+              </a>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Hero",
+  "tag": "section",
+  "class": "divine-hero-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p><em>Elevate</em> Every Recipe</p>"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Premium matcha, artisan spices, and superfood powders trusted by top cafés and home chefs alike."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Badge text",
+          "default": "100% Organic · Ethically Sourced"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "subtitle",
+      "name": "Subtitle",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "label": "Primary button label",
+          "default": "Shop Best Sellers"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Primary button link"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Secondary button label",
+          "default": "Wholesale"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Secondary button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Hero",
+      "blocks": [
+        { "type": "badge" },
+        { "type": "heading" },
+        { "type": "subtitle" },
+        { "type": "buttons" }
+      ]
+    }
+  ]
+}
+{% endschema %}

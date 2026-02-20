@@ -1,0 +1,877 @@
+/* ============================================
+   DIVINE INGREDIENTS - MOCKUP V3 STYLES
+   Mobile-First Design System
+   ============================================ */
+
+/* -----------------------------------------
+   Design Tokens (extending theme variables)
+----------------------------------------- */
+:root {
+  --color-background-alt: #f7f7f7;
+  --color-accent-hex: #d4c4d9;
+  --color-accent-dark: #9b76a7;
+  --color-text-muted: #666666;
+  --color-border-hex: #e8e8e8;
+  --color-foreground-hex: #1d1d1d;
+  --color-background-hex: #ffffff;
+
+  --font-heading: var(--font-heading-family);
+  --font-body: var(--font-body-family);
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  --tap-target: 44px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --transition-default: all 0.25s ease;
+}
+
+/* -----------------------------------------
+   Shared Horizontal Scroll Container
+----------------------------------------- */
+.divine-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-scroll-container > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------
+   Section Base Styles
+----------------------------------------- */
+.divine-section {
+  padding: 32px 20px;
+}
+
+.divine-section-alt {
+  background: var(--color-background-alt);
+}
+
+.divine-section-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.divine-section-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.divine-section-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-foreground-hex);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-section {
+    padding: 48px 40px;
+  }
+  .divine-section-title {
+    font-size: 28px;
+  }
+}
+
+/* -----------------------------------------
+   Button Styles
+----------------------------------------- */
+.divine-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap-target);
+  padding: 14px 24px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+  width: 100%;
+  line-height: 1;
+}
+
+.divine-btn-primary {
+  background: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+}
+
+.divine-btn-primary:hover {
+  opacity: 0.85;
+}
+
+.divine-btn-secondary {
+  background: transparent;
+  color: var(--color-foreground-hex);
+  border: 1.5px solid var(--color-foreground-hex);
+}
+
+.divine-btn-secondary:hover {
+  background: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+}
+
+@media screen and (min-width: 768px) {
+  .divine-btn {
+    width: auto;
+    padding: 14px 32px;
+  }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.divine-hero {
+  position: relative;
+}
+
+.divine-hero__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8e2ea 0%, #d4c4d9 50%, #c5b8ca 100%);
+}
+
+.divine-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-hero__content {
+  padding: 24px 20px 32px;
+  text-align: center;
+}
+
+.divine-hero__badge {
+  display: inline-block;
+  background: var(--color-background-alt);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 12px;
+}
+
+.divine-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--color-foreground-hex);
+}
+
+.divine-hero h1 strong,
+.divine-hero h1 em {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.divine-hero__subtitle {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.divine-hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-hero__content {
+    padding: 32px 40px 48px;
+  }
+  .divine-hero h1 {
+    font-size: 36px;
+  }
+  .divine-hero__cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   TRUST BAR
+   ============================================ */
+.divine-trust-bar {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border-hex);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-trust-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-trust-bar__inner {
+  display: flex;
+  gap: 24px;
+  padding: 0 20px;
+  min-width: max-content;
+}
+
+.divine-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.divine-trust-item svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-accent-dark);
+  stroke-width: 1.5;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.divine-trust-item span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.divine-trust-item strong {
+  color: var(--color-foreground-hex);
+  font-weight: 600;
+}
+
+/* ============================================
+   CATEGORY GRID
+   ============================================ */
+.divine-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.divine-category-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+.divine-category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.divine-category-card:hover img {
+  transform: scale(1.05);
+}
+
+.divine-category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.divine-category-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 2;
+  color: #fff;
+}
+
+.divine-category-card__content h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+
+.divine-category-card__content p {
+  font-size: 11px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ============================================
+   PRODUCT CAROUSEL
+   ============================================ */
+.divine-product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 20px 16px;
+  margin: 0 -20px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-product-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  background: var(--color-background-hex);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: block;
+}
+
+.divine-product-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.divine-product-card__image {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.divine-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-foreground-hex);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.divine-product-badge--sale {
+  background: #c75050;
+}
+
+.divine-product-card__info {
+  padding: 14px;
+}
+
+.divine-product-card__title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.divine-product-card__meta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.divine-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.divine-product-rating svg {
+  width: 12px;
+  height: 12px;
+  fill: #e5b94e;
+}
+
+.divine-product-rating span {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.divine-product-card__price {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.divine-product-card__price--sale {
+  color: #c75050;
+}
+
+.divine-product-card__price s {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.divine-products__view-all {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 8px;
+}
+
+.divine-products__view-all .divine-btn-secondary {
+  display: inline-flex;
+  width: auto;
+  padding: 12px 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-product-scroll {
+    padding: 0 40px 16px;
+    margin: 0 -40px;
+  }
+  .divine-product-card {
+    flex: 0 0 240px;
+  }
+}
+
+/* ============================================
+   BRAND STORY
+   ============================================ */
+.divine-brand-story__image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.divine-brand-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-brand-story__content h2 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.divine-brand-story__content > p {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.divine-brand-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.divine-brand-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.divine-brand-value svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-accent-dark);
+  stroke-width: 1.5;
+  fill: none;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.divine-brand-value h4 {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+
+.divine-brand-value p {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-brand-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .divine-brand-story__image {
+    margin-bottom: 0;
+    aspect-ratio: 1;
+  }
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.divine-testimonial-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 20px 16px;
+  margin: 0 -20px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-testimonial-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: var(--color-background-hex);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-hex);
+}
+
+.divine-testimonial-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.divine-testimonial-stars svg {
+  width: 14px;
+  height: 14px;
+  fill: #e5b94e;
+}
+
+.divine-testimonial-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-foreground-hex);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.divine-testimonial-author {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.divine-testimonial-role {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-testimonial-scroll {
+    padding: 0 40px 16px;
+    margin: 0 -40px;
+  }
+}
+
+/* ============================================
+   EMAIL SIGNUP / NEWSLETTER
+   ============================================ */
+.divine-newsletter {
+  background: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.divine-newsletter h2 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: var(--color-background-hex);
+}
+
+.divine-newsletter > p,
+.divine-newsletter__subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.divine-newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.divine-newsletter__form input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.divine-newsletter__form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.divine-newsletter__form input[type="email"]:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.divine-newsletter__form button[type="submit"] {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--color-accent-hex);
+  color: var(--color-foreground-hex);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  min-height: var(--tap-target);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.divine-newsletter__form button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.divine-newsletter__privacy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 12px;
+}
+
+.divine-newsletter__message {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.divine-newsletter__message--success {
+  color: #7dca7d;
+}
+
+.divine-newsletter__message--error {
+  color: #e57373;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-newsletter__form {
+    flex-direction: row;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .divine-newsletter__form input[type="email"] {
+    flex: 1;
+  }
+  .divine-newsletter__form button[type="submit"] {
+    width: auto;
+  }
+}
+
+/* ============================================
+   ANNOUNCEMENT BAR OVERRIDES
+   ============================================ */
+.announcement-bar {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.announcement-bar .announcement-bar__message p {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.announcement-bar .announcement-bar__message a {
+  color: var(--color-accent-hex) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================
+   HEADER OVERRIDES
+   ============================================ */
+.section-header {
+  border-bottom: 1px solid var(--color-border-hex);
+}
+
+.header {
+  padding: 12px 16px;
+}
+
+.header__heading-logo {
+  max-width: 100px;
+}
+
+.header__icon .icon,
+header-drawer .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__icon,
+header-drawer summary {
+  min-width: var(--tap-target);
+  min-height: var(--tap-target);
+}
+
+.cart-count-bubble {
+  background-color: var(--color-accent-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   FOOTER OVERRIDES
+   ============================================ */
+.footer {
+  background: var(--color-background-alt) !important;
+}
+
+.footer .color-option-3 {
+  background: var(--color-background-alt);
+}
+
+.footer-block__heading {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer .list-menu__item--link {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.footer .list-menu__item--link:hover {
+  color: var(--color-foreground-hex);
+}
+
+.footer-block__brand-info .rte {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.footer__content-bottom {
+  border-top: 1px solid var(--color-border-hex);
+  padding-top: 24px;
+}
+
+.footer .list-social__link {
+  padding: 10px;
+  min-width: var(--tap-target);
+  min-height: var(--tap-target);
+}
+
+.footer .list-social__link .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-text-muted);
+}
+
+.footer-block__details-content {
+  font-size: 13px;
+}
+
+.footer-block__details-content a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.footer-block__details-content a:hover {
+  color: var(--color-foreground-hex);
+}
+
+.copyright {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
