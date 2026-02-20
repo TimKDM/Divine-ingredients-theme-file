@@ -1,0 +1,155 @@
+{{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
+
+{%- assign collection = collections[section.settings.collection] -%}
+
+<section class="divine-section divine-section-alt">
+  <div class="divine-section-header">
+    {%- if section.settings.caption != blank -%}
+      <span class="divine-section-label">{{ section.settings.caption }}</span>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="divine-section-title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+  </div>
+
+  <div class="divine-product-scroll">
+    {%- if collection != blank -%}
+      {%- for product in collection.products limit: section.settings.products_to_show -%}
+        <a href="{{ product.url }}" class="divine-product-card">
+          <div class="divine-product-card__image">
+            {%- if product.featured_image != blank -%}
+              {{
+                product.featured_image
+                | image_url: width: 500
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '200, 300, 400, 500',
+                  sizes: '240px'
+              }}
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+
+            {%- if product.compare_at_price > product.price -%}
+              <span class="divine-product-badge divine-product-badge--sale">Sale</span>
+            {%- elsif product.tags contains 'best-seller' or forloop.index == 1 -%}
+              <span class="divine-product-badge">Best Seller</span>
+            {%- elsif product.tags contains 'new' -%}
+              <span class="divine-product-badge">New</span>
+            {%- endif -%}
+          </div>
+
+          <div class="divine-product-card__info">
+            <h3 class="divine-product-card__title">{{ product.title }}</h3>
+
+            {%- if product.metafields.custom.subtitle != blank -%}
+              <p class="divine-product-card__meta">{{ product.metafields.custom.subtitle }}</p>
+            {%- elsif product.variants.first.title != 'Default Title' -%}
+              <p class="divine-product-card__meta">{{ product.variants.first.title }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.show_rating -%}
+              <div class="divine-product-rating">
+                {%- for i in (1..5) -%}
+                  <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                {%- endfor -%}
+                {%- if product.metafields.reviews.rating_count != blank -%}
+                  <span>({{ product.metafields.reviews.rating_count }})</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            <p class="divine-product-card__price {% if product.compare_at_price > product.price %}divine-product-card__price--sale{% endif %}">
+              {{ product.price | money }}
+              {%- if product.compare_at_price > product.price -%}
+                <s>{{ product.compare_at_price | money }}</s>
+              {%- endif -%}
+            </p>
+          </div>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..4) -%}
+        <div class="divine-product-card">
+          <div class="divine-product-card__image">
+            {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+          <div class="divine-product-card__info">
+            <h3 class="divine-product-card__title">Sample Product {{ i }}</h3>
+            <p class="divine-product-card__meta">100g · Organic</p>
+            <div class="divine-product-rating">
+              {%- for s in (1..5) -%}
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              {%- endfor -%}
+              <span>(0)</span>
+            </div>
+            <p class="divine-product-card__price">{{ 2000 | money }}</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.show_view_all and collection != blank -%}
+    <div class="divine-products__view-all">
+      <a href="{{ collection.url }}" class="divine-btn divine-btn-secondary">View All</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Divine Products",
+  "tag": "section",
+  "class": "divine-products-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "Customer Favorites"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show star ratings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View All' button",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Products",
+      "settings": {
+        "caption": "Customer Favorites",
+        "title": "Best Sellers"
+      }
+    }
+  ]
+}
+{% endschema %}
