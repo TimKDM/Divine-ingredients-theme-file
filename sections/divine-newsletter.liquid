@@ -1,5 +1,46 @@
 {{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .divine-newsletter {
+    background-color: {{ section.settings.background_color | default: '#1d1d1d' }};
+    {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
+      color: {{ section.settings.text_color }};
+    {% endif %}
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | image_url: width: 1920 }});
+      background-size: cover;
+      background-position: center;
+    {% endif %}
+  }
+  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
+    .divine-newsletter h2 {
+      color: {{ section.settings.text_color }};
+    }
+  {% endif %}
+  {% if section.settings.button_bg != blank and section.settings.button_bg != 'rgba(0,0,0,0)' %}
+    .divine-newsletter button[type="submit"] {
+      background-color: {{ section.settings.button_bg }};
+    }
+  {% endif %}
+  {% if section.settings.button_color != blank and section.settings.button_color != 'rgba(0,0,0,0)' %}
+    .divine-newsletter button[type="submit"] {
+      color: {{ section.settings.button_color }};
+    }
+  {% endif %}
+  .divine-newsletter-section {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  @media screen and (min-width: 768px) {
+    .divine-newsletter-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
 <section class="divine-newsletter">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -83,6 +124,75 @@
       "id": "privacy_text",
       "label": "Privacy disclaimer",
       "default": "No spam, ever. Unsubscribe anytime."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#d4c4d9"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text color",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 52,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
     }
   ],
   "blocks": [

@@ -1,8 +1,43 @@
 {{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .divine-products-section {
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  @media screen and (min-width: 768px) {
+    .divine-products-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
+    .divine-products-section .divine-section-title,
+    .divine-products-section .divine-product-card__title,
+    .divine-products-section .divine-product-card__info {
+      color: {{ section.settings.text_color }};
+    }
+  {% endif %}
+  {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
+    .divine-products-section .divine-section-label {
+      color: {{ section.settings.accent_color }};
+    }
+  {% endif %}
+  {% if section.settings.card_background_color != blank and section.settings.card_background_color != 'rgba(0,0,0,0)' %}
+    .divine-products-section .divine-product-card {
+      background-color: {{ section.settings.card_background_color }};
+    }
+  {% endif %}
+{%- endstyle -%}
+
 {%- assign collection = collections[section.settings.collection] -%}
 
-<section class="divine-section divine-section-alt">
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
   <div class="divine-section-header">
     {%- if section.settings.caption != blank -%}
       <span class="divine-section-label">{{ section.settings.caption }}</span>
@@ -92,7 +127,7 @@
 
   {%- if section.settings.show_view_all and collection != blank -%}
     <div class="divine-products__view-all">
-      <a href="{{ collection.url }}" class="divine-btn divine-btn-secondary">View All</a>
+      <a href="{% if section.settings.view_all_link != blank %}{{ section.settings.view_all_link }}{% else %}{{ collection.url }}{% endif %}" class="divine-btn divine-btn-secondary">{{ section.settings.view_all_label }}</a>
     </div>
   {%- endif -%}
 </section>
@@ -103,6 +138,10 @@
   "tag": "section",
   "class": "divine-products-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
     {
       "type": "text",
       "id": "caption",
@@ -136,10 +175,103 @@
       "default": true
     },
     {
+      "type": "header",
+      "content": "View All Button"
+    },
+    {
       "type": "checkbox",
       "id": "show_view_all",
       "label": "Show 'View All' button",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "View All button label",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All link (optional override)"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_alt_bg",
+      "label": "Use alternate background",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -50,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
     }
   ],
   "presets": [
@@ -147,7 +279,16 @@
       "name": "Divine Products",
       "settings": {
         "caption": "Customer Favorites",
-        "title": "Best Sellers"
+        "title": "Best Sellers",
+        "products_to_show": 4,
+        "show_rating": true,
+        "show_view_all": true,
+        "view_all_label": "View All",
+        "use_alt_bg": true,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     }
   ]
