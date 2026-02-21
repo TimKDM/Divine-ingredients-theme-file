@@ -433,6 +433,7 @@
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .divine-product-card__image img {
