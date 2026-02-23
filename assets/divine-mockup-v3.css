@@ -67,6 +67,21 @@
   background: var(--color-background-alt);
 }
 
+/* Framed section — warm border top/bottom for visual rhythm */
+.divine-section--framed {
+  background: var(--color-background-warm);
+  border-top: 1px solid var(--color-border-hex);
+  border-bottom: 1px solid var(--color-border-hex);
+  position: relative;
+}
+
+/* Inner container for framed sections — adds horizontal breathing room */
+.divine-section--framed > * {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .divine-section-header {
   text-align: center;
   margin-bottom: 32px;
@@ -81,6 +96,7 @@
   color: var(--color-accent-dark);
   margin-bottom: 10px;
   display: block;
+  text-align: center;
 }
 
 .divine-section-title {
@@ -88,9 +104,10 @@
   font-size: 26px;
   font-weight: 400;
   color: var(--color-foreground-hex);
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.25;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
