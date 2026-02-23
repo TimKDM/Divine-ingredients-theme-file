@@ -72,7 +72,9 @@
   padding: 20px;
 }
 .product__media.media {
-  border-radius: calc(var(--media-radius));
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
 }
 .jdgm-star {
   padding: 0 1px !important;

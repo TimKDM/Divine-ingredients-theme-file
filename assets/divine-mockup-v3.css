@@ -541,22 +541,23 @@
 }
 
 .divine-product-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: var(--color-foreground-hex);
-  color: #fff;
-  padding: 4px 8px;
+  display: inline-block;
   font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 3px;
-  z-index: 2;
+  color: var(--color-accent-dark);
+  border: 1px solid var(--color-border-hex);
+  background: transparent;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .divine-product-badge--sale {
-  background: #c75050;
+  color: #c75050;
+  border-color: rgba(199, 80, 80, 0.35);
+  background: transparent;
 }
 
 .divine-product-card__info {
@@ -627,11 +628,18 @@
 
 @media screen and (min-width: 768px) {
   .divine-product-scroll {
-    padding: 0 40px 16px;
-    margin: 0 -40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
+    justify-content: center;
+    gap: 20px;
+    overflow-x: unset;
+    padding: 0 40px;
+    margin: 0;
+    scroll-snap-type: none;
   }
   .divine-product-card {
-    flex: 0 0 240px;
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -1022,4 +1030,58 @@ header-drawer summary {
 .copyright {
   font-size: 11px;
   color: var(--color-text-muted);
+}
+
+/* ============================================
+   SITEWIDE CIRCULAR PRODUCT IMAGES
+   Applies to: product cards across all pages,
+   product detail gallery, thumbnails, related,
+   featured, complementary, cart upsells
+   ============================================ */
+
+/* --- Product detail page main gallery --- */
+.product__media-wrapper .product__media,
+.product__media-wrapper .media,
+.product-single__media-wrapper .media {
+  border-radius: 50% !important;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Thumbnail strip on product pages */
+.thumbnail-list .thumbnail-list__item .media,
+.thumbnail-list .thumbnail-list__item img {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Featured product section */
+.featured-product .product__media,
+.featured-product .media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Cart page — line item images */
+.cart-item__image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Quick-add modal product image */
+.quick-add-modal .product__media,
+.quick-add-modal .media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Complementary products */
+.complementary-products .card .card-inner .card-media,
+.product-recommendations .card .card-inner .card-media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
 }
