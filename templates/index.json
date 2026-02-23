@@ -75,7 +75,7 @@
         "cat_1": {
           "type": "category",
           "settings": {
-            "collection": "matcha-tea-powders",
+            "collection": "shopify:\/\/collections\/matcha-tea-powders",
             "heading": "Matcha",
             "subtitle": "Ceremonial & culinary grades"
           }
@@ -91,7 +91,7 @@
         "cat_3": {
           "type": "category",
           "settings": {
-            "collection": "powder",
+            "collection": "shopify:\/\/collections\/powder",
             "heading": "Superfood Powders",
             "subtitle": "Mushroom, fruit & adaptogens"
           }
@@ -99,7 +99,7 @@
         "cat_4": {
           "type": "category",
           "settings": {
-            "collection": "spices",
+            "collection": "shopify:\/\/collections\/spices",
             "heading": "Herbs & Spices",
             "subtitle": "Single origin & organic blends"
           }

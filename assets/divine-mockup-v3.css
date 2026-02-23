@@ -5,15 +5,17 @@
 
 /* -----------------------------------------
    Design Tokens (extending theme variables)
+   Aesthetic: warm artisan — Art of Tea / Chado inspired
 ----------------------------------------- */
 :root {
-  --color-background-alt: #f7f7f7;
-  --color-accent-hex: #d4c4d9;
-  --color-accent-dark: #9b76a7;
-  --color-text-muted: #666666;
-  --color-border-hex: #e8e8e8;
-  --color-foreground-hex: #1d1d1d;
+  --color-background-alt: #f9f5ef;       /* warm cream */
+  --color-accent-hex: #d4c4d9;           /* Divine lavender */
+  --color-accent-dark: #7a5a8a;          /* deeper purple */
+  --color-text-muted: #7a6f64;           /* warm brown-gray */
+  --color-border-hex: #e8dfd0;           /* warm parchment border */
+  --color-foreground-hex: #1d1917;       /* near-black with warm undertone */
   --color-background-hex: #ffffff;
+  --color-background-warm: #fdf9f4;      /* softer warm white for cards */
 
   --font-heading: var(--font-heading-family);
   --font-body: var(--font-body-family);
@@ -25,11 +27,11 @@
   --spacing-xl: 3rem;
 
   --tap-target: 44px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
   --radius-lg: 16px;
 
-  --transition-default: all 0.25s ease;
+  --transition-default: all 0.28s ease;
 }
 
 /* -----------------------------------------
@@ -55,9 +57,10 @@
 
 /* -----------------------------------------
    Section Base Styles
+   Generous whitespace — artisan editorial feel
 ----------------------------------------- */
 .divine-section {
-  padding: 32px 20px;
+  padding: 48px 24px;
 }
 
 .divine-section-alt {
@@ -66,34 +69,36 @@
 
 .divine-section-header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .divine-section-label {
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   display: block;
 }
 
 .divine-section-title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
   color: var(--color-foreground-hex);
   margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 @media screen and (min-width: 768px) {
   .divine-section {
-    padding: 48px 40px;
+    padding: 72px 48px;
   }
   .divine-section-title {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 
@@ -157,9 +162,10 @@
 
 .divine-hero__image {
   width: 100%;
-  max-height: 45vh;
+  max-height: 65vh;
+  min-height: 320px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8e2ea 0%, #d4c4d9 50%, #c5b8ca 100%);
+  background: linear-gradient(135deg, #ede6e8 0%, #d4c4d9 50%, #c5bbc8 100%);
 }
 
 .divine-hero__image img,
@@ -192,62 +198,73 @@
 }
 
 .divine-hero__content {
-  padding: 20px 20px 28px;
+  padding: 28px 24px 40px;
   text-align: center;
+  background: var(--color-background-warm);
 }
 
 .divine-hero__badge {
   display: inline-block;
-  background: var(--color-background-alt);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  background: transparent;
+  padding: 5px 14px;
+  border-radius: 2px;
+  border: 1px solid var(--color-border-hex);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .divine-hero h1 {
   font-family: var(--font-heading);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   margin-top: 0;
   color: var(--color-foreground-hex);
+  letter-spacing: -0.02em;
 }
 
 .divine-hero h1 strong,
 .divine-hero h1 em {
-  font-weight: 600;
-  font-style: normal;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .divine-hero__subtitle {
   font-size: 14px;
   color: var(--color-text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   margin-top: 0;
-  line-height: 1.5;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .divine-hero__cta {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
   .divine-hero__image {
-    max-height: 50vh;
+    max-height: 70vh;
+    min-height: 420px;
   }
   .divine-hero__content {
-    padding: 28px 40px 40px;
+    padding: 48px 48px 56px;
   }
   .divine-hero h1 {
-    font-size: 36px;
+    font-size: 44px;
+  }
+  .divine-hero__subtitle {
+    font-size: 16px;
   }
   .divine-hero__cta {
     flex-direction: row;
@@ -259,7 +276,8 @@
    TRUST BAR
    ============================================ */
 .divine-trust-bar {
-  padding: 20px 0;
+  padding: 18px 0;
+  background: var(--color-background-warm);
   border-top: 1px solid var(--color-border-hex);
   border-bottom: 1px solid var(--color-border-hex);
   overflow-x: auto;
@@ -275,21 +293,21 @@
 .divine-trust-bar__inner {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  padding: 0 20px;
+  gap: 28px;
+  padding: 0 24px;
   min-width: max-content;
 }
 
 .divine-trust-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   white-space: nowrap;
 }
 
 .divine-trust-item svg {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   stroke: var(--color-accent-dark);
   stroke-width: 1.5;
   fill: none;
@@ -297,7 +315,8 @@
 }
 
 .divine-trust-item span {
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
   color: var(--color-text-muted);
 }
 
@@ -308,17 +327,17 @@
 
 @media screen and (min-width: 768px) {
   .divine-trust-bar {
-    padding: 24px 0;
+    padding: 20px 0;
   }
   .divine-trust-bar__inner {
-    gap: 48px;
+    gap: 56px;
   }
   .divine-trust-item svg {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
   }
   .divine-trust-item span {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -414,19 +433,21 @@
 }
 
 .divine-product-card {
-  flex: 0 0 200px;
+  flex: 0 0 210px;
   scroll-snap-align: start;
-  background: var(--color-background-hex);
+  background: var(--color-background-warm);
   border-radius: var(--radius-md);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
   display: block;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
 
 .divine-product-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 
 .divine-product-card__image {
@@ -434,6 +455,8 @@
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  margin: 16px 16px 0;   /* give the circle breathing room */
+  background: var(--color-background-alt);
 }
 
 .divine-product-card__image img {
@@ -558,18 +581,19 @@
 
 .divine-brand-story__content h2 {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
-  margin-bottom: 16px;
-  line-height: 1.3;
+  margin-bottom: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
   margin-top: 0;
 }
 
 .divine-brand-story__content > p {
   color: var(--color-text-muted);
-  margin-bottom: 16px;
-  font-size: 14px;
-  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .divine-brand-values {
@@ -643,10 +667,10 @@
 }
 
 .divine-testimonial-card {
-  flex: 0 0 280px;
+  flex: 0 0 300px;
   scroll-snap-align: start;
-  background: var(--color-background-hex);
-  padding: 20px;
+  background: var(--color-background-warm);
+  padding: 24px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-hex);
 }
@@ -695,17 +719,18 @@
    EMAIL SIGNUP / NEWSLETTER
    ============================================ */
 .divine-newsletter {
-  background: var(--color-foreground-hex);
+  background: #2c2420;                   /* warm dark brown — earthy, not stark black */
   color: var(--color-background-hex);
-  padding: 40px 20px;
+  padding: 56px 24px;
   text-align: center;
 }
 
 .divine-newsletter h2 {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
-  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
   margin-top: 0;
   color: var(--color-background-hex);
 }
@@ -860,11 +885,11 @@ header-drawer summary {
    FOOTER OVERRIDES
    ============================================ */
 .footer {
-  background: var(--color-background-alt) !important;
+  background: var(--color-background-warm) !important;
 }
 
 .footer .color-option-3 {
-  background: var(--color-background-alt);
+  background: var(--color-background-warm);
 }
 
 .footer-block__heading {
