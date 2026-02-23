@@ -21,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Best Sellers",
-            "button_link_1": "shopify:\/\/collections\/best-sellers",
+            "button_link_1": "shopify:\/\/collections\/powder",
             "button_label_2": "Shop Wholesale",
             "button_link_2": "shopify:\/\/collections\/shop-wholesale-with-divine"
           }
@@ -85,7 +85,7 @@
         "cat_2": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "shopify:\/\/collections\/organic-herbal-tea",
             "heading": "Loose Leaf Tea",
             "subtitle": "Black, green, oolong & herbal"
           }
@@ -93,7 +93,7 @@
         "cat_3": {
           "type": "category",
           "settings": {
-            "collection": "shopify:\/\/collections\/powder",
+            "collection": "shopify:\/\/collections\/organic-superfood-powders",
             "heading": "Superfood Powders",
             "subtitle": "Mushroom, fruit & adaptogens"
           }
@@ -118,11 +118,14 @@
       "settings": {
         "caption": "Community Favorites",
         "title": "Best Sellers",
-        "collection": "best-sellers",
+        "collection": "powder",
         "products_to_show": 6,
         "show_rating": true,
         "show_view_all": true,
-        "view_all_label": "View All Products"
+        "view_all_label": "View All Products",
+        "view_all_link": "shopify:\/\/collections\/powder",
+        "use_frame": true,
+        "use_alt_bg": false
       }
     },
     "divine_brand_story": {
