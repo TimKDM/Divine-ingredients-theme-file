@@ -17,7 +17,7 @@
         "announcement_9GgHEN": {
           "type": "announcement",
           "settings": {
-            "slider-text": "<p>Free Shipping on $75+ · <a href=\"/collections\" title=\"Shop Wholesale\">Shop Wholesale</a></p>"
+            "slider-text": "<p>Free Shipping on Orders $75+ · USDA Certified Organic · <a href=\"/pages/wholesale\" title=\"Wholesale\">Wholesale Inquiries</a></p>"
           }
         }
       },
@@ -49,48 +49,48 @@
         "mega-promotion": {
           "type": "mega_promotion",
           "settings": {
-            "mega_promotion_item": "Products",
-            "mega_promotion_caption": "20% Sale",
-            "mega_promotion_title": "Product Spotlight",
-            "mega_promotion_link_label": "Explore Now",
-            "mega_promotion_link": ""
+            "mega_promotion_item": "Tea",
+            "mega_promotion_caption": "Ceremonial Grade",
+            "mega_promotion_title": "Organic Matcha",
+            "mega_promotion_link_label": "Shop Matcha",
+            "mega_promotion_link": "/collections/matcha-tea-powders"
           }
         },
         "mega_image_menu": {
           "type": "mega_image_menu",
           "settings": {
-            "mega_image_menu_item": "Specials",
+            "mega_image_menu_item": "Powders",
             "mega_image_columns": 2,
-            "mega_image_menu_caption_1": "10-30% Sale",
-            "mega_image_menu_title_1": "Big Savings",
-            "mega_image_menu_link_label_1": "",
-            "mega_image_menu_link_1": "",
-            "mega_image_menu_caption_2": "15% Sale",
-            "mega_image_menu_title_2": "Instant Meals",
-            "mega_image_menu_link_label_2": "",
-            "mega_image_menu_link_2": "",
-            "mega_image_menu_caption_3": "30% Sale",
-            "mega_image_menu_title_3": "Chocolates",
+            "mega_image_menu_caption_1": "Adaptogenic",
+            "mega_image_menu_title_1": "Mushroom Powders",
+            "mega_image_menu_link_label_1": "Shop Now",
+            "mega_image_menu_link_1": "/collections/organic-superfood-powders",
+            "mega_image_menu_caption_2": "Antioxidant Rich",
+            "mega_image_menu_title_2": "Fruit Powders",
+            "mega_image_menu_link_label_2": "Shop Now",
+            "mega_image_menu_link_2": "/collections/organic-fruit-powders",
+            "mega_image_menu_caption_3": "",
+            "mega_image_menu_title_3": "",
             "mega_image_menu_link_label_3": "",
             "mega_image_menu_link_3": "",
-            "mega_image_menu_caption_4": "30% Sale",
-            "mega_image_menu_title_4": "Complete Protein",
+            "mega_image_menu_caption_4": "",
+            "mega_image_menu_title_4": "",
             "mega_image_menu_link_label_4": "",
             "mega_image_menu_link_4": "",
-            "mega_image_menu_caption_5": "10% Sale",
-            "mega_image_menu_title_5": "Suplements",
+            "mega_image_menu_caption_5": "",
+            "mega_image_menu_title_5": "",
             "mega_image_menu_link_label_5": "",
             "mega_image_menu_link_5": "",
-            "mega_image_menu_caption_6": "20% Sale",
-            "mega_image_menu_title_6": "Title",
+            "mega_image_menu_caption_6": "",
+            "mega_image_menu_title_6": "",
             "mega_image_menu_link_label_6": "",
             "mega_image_menu_link_6": "",
-            "mega_image_menu_caption_7": "20% Sale",
-            "mega_image_menu_title_7": "Title",
+            "mega_image_menu_caption_7": "",
+            "mega_image_menu_title_7": "",
             "mega_image_menu_link_label_7": "",
             "mega_image_menu_link_7": "",
-            "mega_image_menu_caption_8": "20% Sale",
-            "mega_image_menu_title_8": "Title",
+            "mega_image_menu_caption_8": "",
+            "mega_image_menu_title_8": "",
             "mega_image_menu_link_label_8": "",
             "mega_image_menu_link_8": ""
           }
