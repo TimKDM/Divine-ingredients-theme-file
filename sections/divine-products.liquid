@@ -1,7 +1,5 @@
-{{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
-
 {%- style -%}
-  .divine-products-section {
+  #shopify-section-{{ section.id }} .divine-section {
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
       background-color: {{ section.settings.background_color }};
     {% endif %}
@@ -11,25 +9,25 @@
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   @media screen and (min-width: 768px) {
-    .divine-products-section {
+    #shopify-section-{{ section.id }} .divine-section {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
   {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    .divine-products-section .divine-section-title,
-    .divine-products-section .divine-product-card__title,
-    .divine-products-section .divine-product-card__info {
+    #shopify-section-{{ section.id }} .divine-section-title,
+    #shopify-section-{{ section.id }} .divine-product-card__title,
+    #shopify-section-{{ section.id }} .divine-product-card__info {
       color: {{ section.settings.text_color }};
     }
   {% endif %}
   {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
-    .divine-products-section .divine-section-label {
+    #shopify-section-{{ section.id }} .divine-section-label {
       color: {{ section.settings.accent_color }};
     }
   {% endif %}
   {% if section.settings.card_background_color != blank and section.settings.card_background_color != 'rgba(0,0,0,0)' %}
-    .divine-products-section .divine-product-card {
+    #shopify-section-{{ section.id }} .divine-product-card {
       background-color: {{ section.settings.card_background_color }};
     }
   {% endif %}
