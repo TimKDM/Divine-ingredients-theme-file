@@ -1,31 +1,17 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-hero {
-    background-color: {{ section.settings.background_color }};
-  }
-  #shopify-section-{{ section.id }} .divine-hero__content {
-    {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-      color: {{ section.settings.text_color }};
-    {% endif %}
-  }
-  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    #shopify-section-{{ section.id }} .divine-hero h1 { color: {{ section.settings.text_color }}; }
-    #shopify-section-{{ section.id }} .divine-hero__subtitle { color: {{ section.settings.text_color }}; opacity: 0.7; }
-  {% endif %}
   #shopify-section-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
-  @media screen and (min-width: 768px) {
-    #shopify-section-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
   {% if section.settings.image_height != blank and section.settings.image_height != 0 %}
-    #shopify-section-{{ section.id }} .divine-hero__image {
-      max-height: {{ section.settings.image_height }}vh;
+    #shopify-section-{{ section.id }} .divine-hero,
+    #shopify-section-{{ section.id }} .divine-hero__content {
+      min-height: {{ section.settings.image_height }}vh;
+    }
+  {% endif %}
+  {% if section.settings.overlay_opacity != blank %}
+    #shopify-section-{{ section.id }} .divine-hero::after {
+      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     }
   {% endif %}
 {%- endstyle -%}
@@ -111,11 +97,11 @@
     {
       "type": "range",
       "id": "image_height",
-      "label": "Image max height (vh)",
-      "min": 20,
-      "max": 80,
+      "label": "Hero height (vh)",
+      "min": 40,
+      "max": 100,
       "step": 5,
-      "default": 45,
+      "default": 72,
       "unit": "vh"
     },
     {
@@ -166,42 +152,22 @@
     },
     {
       "type": "header",
-      "content": "Colors"
+      "content": "Overlay"
     },
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color"
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Gradient overlay strength",
+      "info": "Controls how dark the gradient is over the image for text readability",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100,
+      "unit": "%"
     },
     {
       "type": "header",
       "content": "Spacing"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Padding top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Padding bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "default": 0,
-      "unit": "px"
     },
     {
       "type": "range",
