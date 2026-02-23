@@ -9,16 +9,17 @@
 ----------------------------------------- */
 :root {
   --color-background-alt: #f9f5ef;       /* warm cream */
-  --color-accent-hex: #d4c4d9;           /* Divine lavender */
-  --color-accent-dark: #7a5a8a;          /* deeper purple */
+  --color-accent-hex: #c8a8d8;           /* Divine lavender — punched up */
+  --color-accent-dark: #9b76a7;          /* richer, visible purple */
+  --color-accent-light: #f0ebf4;         /* very soft lavender tint */
   --color-text-muted: #7a6f64;           /* warm brown-gray */
   --color-border-hex: #e8dfd0;           /* warm parchment border */
   --color-foreground-hex: #1d1917;       /* near-black with warm undertone */
   --color-background-hex: #ffffff;
   --color-background-warm: #fdf9f4;      /* softer warm white for cards */
 
-  --font-heading: var(--font-heading-family);
-  --font-body: var(--font-body-family);
+  --font-heading: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  --font-body: 'Jost', var(--font-body-family), sans-serif;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -53,6 +54,45 @@
 .divine-scroll-container > * {
   scroll-snap-align: start;
   flex-shrink: 0;
+}
+
+/* -----------------------------------------
+   Global Font Overrides — Josefin Sans + Jost
+   Applied site-wide over theme defaults
+----------------------------------------- */
+body,
+.rte,
+.page-width,
+p,
+li,
+td,
+input,
+select,
+textarea,
+button {
+  font-family: 'Jost', var(--font-body-family), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.announcement-bar__message,
+.header__menu-item,
+.header__heading,
+.footer__heading,
+.card__heading,
+.product__title,
+.collection__title,
+.full-unstyled-link {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Announcement bar — clean, modern */
+.announcement-bar {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* -----------------------------------------
@@ -1081,6 +1121,16 @@ header-drawer summary {
 /* Complementary products */
 .complementary-products .card .card-inner .card-media,
 .product-recommendations .card .card-inner .card-media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Recently viewed products */
+.recently-viewed .card .card-inner .card-media,
+.recently-viewed-products .card .card-inner .card-media,
+[class*="recently-viewed"] .card .card-inner .card-media,
+[class*="recently_viewed"] .card .card-inner .card-media {
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
