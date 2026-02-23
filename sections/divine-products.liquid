@@ -62,17 +62,16 @@
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
+          </div>
 
+          <div class="divine-product-card__info">
             {%- if product.compare_at_price > product.price -%}
               <span class="divine-product-badge divine-product-badge--sale">Sale</span>
-            {%- elsif product.tags contains 'best-seller' or forloop.index == 1 -%}
+            {%- elsif product.tags contains 'best-seller' -%}
               <span class="divine-product-badge">Best Seller</span>
             {%- elsif product.tags contains 'new' -%}
               <span class="divine-product-badge">New</span>
             {%- endif -%}
-          </div>
-
-          <div class="divine-product-card__info">
             <h3 class="divine-product-card__title">{{ product.title }}</h3>
 
             {%- if product.metafields.custom.subtitle != blank -%}
