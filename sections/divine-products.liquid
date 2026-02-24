@@ -35,7 +35,7 @@
 
 {%- assign collection = collections[section.settings.collection] -%}
 
-<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}{% if section.settings.use_frame %} divine-section--framed{% endif %}">
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
   <div class="divine-section-header">
     {%- if section.settings.caption != blank -%}
       <span class="divine-section-label">{{ section.settings.caption }}</span>
@@ -200,12 +200,6 @@
       "type": "checkbox",
       "id": "use_alt_bg",
       "label": "Use alternate background",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "use_frame",
-      "label": "Add border frame (top/bottom border)",
       "default": true
     },
     {

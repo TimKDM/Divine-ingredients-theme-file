@@ -12,19 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "column": "left",
-            "text": "<p>No GMO. Dairy Free. Gluten Free. Peanut Free</p>",
-            "text_style": "body",
-            "text_block_size": "small",
-            "show_text_background": true,
-            "margin_top": 0,
-            "color_scheme_1": "option-2",
-            "hide_quick_view": true
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -44,12 +31,51 @@
             "hide_quick_view": false
           }
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "column": "under-gallery",
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "picker_type": "button",
+            "swatch_shape": "circle",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "hide_unavailable": false,
+            "hide_quantity_input": false,
+            "hide_mobile": false,
+            "hide_desktop": false,
+            "hide_quick_view": false
+          }
+        },
         "spacer": {
           "type": "spacer",
           "settings": {
             "column": "left",
             "margin_top": 0,
             "hide_quick_view": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "column": "left",
+            "margin_top": 0,
+            "text_size": "medium",
+            "hide_quick_view": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "column": "left",
+            "text": "<p>No GMO. Dairy Free. Gluten Free. Peanut Free</p>",
+            "text_style": "body",
+            "text_block_size": "small",
+            "show_text_background": true,
+            "margin_top": 0,
+            "color_scheme_1": "option-2",
+            "hide_quick_view": true
           }
         },
         "inventory": {
@@ -60,15 +86,6 @@
             "show_inventory_quantity": true,
             "margin_top": 0,
             "hide_quick_view": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "column": "left",
-            "margin_top": 0,
-            "text_size": "medium",
-            "hide_quick_view": false
           }
         },
         "dynamic_card_icons": {
@@ -88,6 +105,38 @@
             "hide_quick_view": true
           }
         },
+        "delivery_estimator": {
+          "type": "delivery_estimator",
+          "disabled": true,
+          "settings": {
+            "column": "left",
+            "delivery_estimator_text": "Delivery between",
+            "earliest_delivery": "5",
+            "latest_delivery": "9",
+            "color_scheme_1": "option-2",
+            "margin_top": 10,
+            "hide_mobile": false,
+            "hide_desktop": false,
+            "hide_quick_view": true
+          }
+        },
+        "ingredient_details": {
+          "type": "ingredient_details",
+          "disabled": true,
+          "settings": {
+            "column": "right",
+            "heading": "Nutritional information",
+            "heading_size": "medium",
+            "heading_tag": "h4",
+            "left_column_label": "Typical values",
+            "right_column_label": "Per 100g",
+            "content": "<p>Energy, 210 kJ / 50 kcal<br/>Fat, 2g<br/>- of which: Saturates, 0.3g <br/>Carbohydrate, 15g <br/>- of which: Sugars, 6g <br/>Fiber, 5g <br/>Protein, 3g <br/>Salt, 0.02g</p>",
+            "open_first_collapsible_row": false,
+            "margin_top": 0,
+            "color_scheme_1": "option-2",
+            "hide_quick_view": true
+          }
+        },
         "payment_enable_1": {
           "type": "payment_enable",
           "settings": {
@@ -95,6 +144,16 @@
             "margin_top": 0,
             "hide_mobile": false,
             "hide_desktop": true,
+            "hide_quick_view": true
+          }
+        },
+        "payment_enable_2": {
+          "type": "payment_enable",
+          "settings": {
+            "column": "left",
+            "margin_top": 0,
+            "hide_mobile": true,
+            "hide_desktop": false,
             "hide_quick_view": true
           }
         },
@@ -113,6 +172,44 @@
             "hide_quick_view": true
           }
         },
+        "collapsible_tab_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "column": "under-gallery",
+            "heading": "Shipping & Returns",
+            "heading_size": "medium",
+            "heading_tag": "h4",
+            "icon": "truck",
+            "no_padding": true,
+            "content": "<p>For unopened products that you wish to return for reasons other than damage or incorrect items, we offer a return window of 14 days from the date of receipt.<br/><br/><strong>Free shipping on orders over $110.00</strong></p>",
+            "page": "",
+            "custom_liquid": "",
+            "open_first_collapsible_row": false,
+            "show_spacer": false,
+            "margin_top": 0,
+            "color_scheme_1": "option-1",
+            "hide_quick_view": true
+          }
+        },
+        "collapsible_tab_3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "column": "under-gallery",
+            "heading": "24/7 Support",
+            "heading_size": "medium",
+            "heading_tag": "h4",
+            "icon": "headset",
+            "no_padding": true,
+            "content": "<p>You can reach out to us through our [contact channels, e.g., email form, contact page] with any feedback or questions you may have. We'll respond as soon as possible during our regular business hours.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open_first_collapsible_row": false,
+            "show_spacer": false,
+            "margin_top": 0,
+            "color_scheme_1": "option-1",
+            "hide_quick_view": true
+          }
+        },
         "share": {
           "type": "share",
           "disabled": true,
@@ -123,20 +220,21 @@
             "hide_quick_view": true
           }
         },
-        "ingredient_details": {
-          "type": "ingredient_details",
+        "spacer_2": {
+          "type": "spacer",
           "disabled": true,
           "settings": {
             "column": "right",
-            "heading": "Nutritional information",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "left_column_label": "Typical values",
-            "right_column_label": "Per 100g",
-            "content": "<p>Energy, 210 kJ / 50 kcal<br/>Fat, 2g<br/>- of which: Saturates, 0.3g <br/>Carbohydrate, 15g <br/>- of which: Sugars, 6g <br/>Fiber, 5g <br/>Protein, 3g <br/>Salt, 0.02g</p>",
-            "open_first_collapsible_row": false,
             "margin_top": 0,
-            "color_scheme_1": "option-2",
+            "hide_quick_view": true
+          }
+        },
+        "spacer_3": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "column": "right",
+            "margin_top": 0,
             "hide_quick_view": true
           }
         },
@@ -169,62 +267,6 @@
             "hide_quick_view": true
           }
         },
-        "collapsible_tab_2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "column": "under-gallery",
-            "heading": "Shipping & Returns",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "truck",
-            "no_padding": true,
-            "content": "<p>For unopened products that you wish to return for reasons other than damage or incorrect items, we offer a return window of 14 days from the date of receipt.<br/><br/><strong>Free shipping on orders over $110.00</strong></p>",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
-            "hide_quick_view": true
-          }
-        },
-        "spacer_2": {
-          "type": "spacer",
-          "disabled": true,
-          "settings": {
-            "column": "right",
-            "margin_top": 0,
-            "hide_quick_view": true
-          }
-        },
-        "collapsible_tab_3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "column": "under-gallery",
-            "heading": "24/7 Support",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "headset",
-            "no_padding": true,
-            "content": "<p>You can reach out to us through our [contact channels, e.g., email form, contact page] with any feedback or questions you may have. We'll respond as soon as possible during our regular business hours.</p>",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
-            "hide_quick_view": true
-          }
-        },
-        "spacer_3": {
-          "type": "spacer",
-          "disabled": true,
-          "settings": {
-            "column": "right",
-            "margin_top": 0,
-            "hide_quick_view": true
-          }
-        },
         "collapsible_tab_4": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -244,59 +286,19 @@
             "color_scheme_1": "option-1",
             "hide_quick_view": true
           }
-        },
-        "delivery_estimator": {
-          "type": "delivery_estimator",
-          "settings": {
-            "column": "left",
-            "delivery_estimator_text": "Delivery between",
-            "earliest_delivery": "5",
-            "latest_delivery": "9",
-            "color_scheme_1": "option-2",
-            "margin_top": 10,
-            "hide_mobile": false,
-            "hide_desktop": false,
-            "hide_quick_view": true
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "column": "left",
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "picker_type": "button",
-            "swatch_shape": "circle",
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "hide_unavailable": false,
-            "hide_quantity_input": false,
-            "hide_mobile": false,
-            "hide_desktop": false,
-            "hide_quick_view": false
-          }
-        },
-        "payment_enable_2": {
-          "type": "payment_enable",
-          "settings": {
-            "column": "left",
-            "margin_top": 0,
-            "hide_mobile": true,
-            "hide_desktop": false,
-            "hide_quick_view": true
-          }
         }
       },
       "block_order": [
         "title",
         "price",
+        "buy_buttons",
         "spacer",
         "description",
         "text",
         "inventory",
         "dynamic_card_icons",
         "delivery_estimator",
-        "buy_buttons",
+        "ingredient_details",
         "payment_enable_1",
         "payment_enable_2",
         "complementary",
@@ -305,7 +307,6 @@
         "share",
         "spacer_2",
         "spacer_3",
-        "ingredient_details",
         "collapsible_tab_1",
         "spacer_1",
         "collapsible_tab_4"

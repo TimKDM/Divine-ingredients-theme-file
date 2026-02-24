@@ -50,7 +50,7 @@
             "column": "left",
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "swatch_shape": "circle",
             "margin_top": 10,
             "margin_bottom": 0,
@@ -270,6 +270,7 @@
         },
         "text_2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "column": "under-gallery",
             "text": "<h3>⭐ Limited time offer ⭐ - 20% Sale</h3><p>Make this space work for you by spotlighting exclusive deals or time-sensitive discounts on your product. For instance: \"Hurry! Save 20% on this item for a limited time only!\" Inspire urgency by emphasizing how long the offer lasts, motivating customers to grab the deal before it’s too late. </p>",
