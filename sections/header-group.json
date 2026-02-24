@@ -32,7 +32,7 @@
         "show_social": true,
         "enable_country_selector": true,
         "vertical_position": 20,
-        "announcement_text_color": "#ffffff",
+        "announcement_text_color": "#2c2420",
         "show_countdown": false,
         "countdown-text": "Offer Ends In",
         "countdown-text-position": "top",
@@ -40,7 +40,7 @@
         "countdown-time": "9:00",
         "countdown-date-time-style": "style-one",
         "countdown_finished_message": "This offer has ended",
-        "color_scheme": "option-3"
+        "color_scheme": "option-1"
       }
     },
     "header": {

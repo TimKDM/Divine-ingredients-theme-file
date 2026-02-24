@@ -945,22 +945,88 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ============================================
-   ANNOUNCEMENT BAR OVERRIDES
+   ANNOUNCEMENT BAR — Static Centered Trust Strip
+   Replaces default dark ticker with warm static bar
    ============================================ */
-.announcement-bar {
-  font-size: 12px;
-  letter-spacing: 0.02em;
+
+/* Force warm background regardless of color scheme */
+.announcement-bar,
+.announcement-bar.color-option-3,
+.announcement-bar.color-option-3.gradient,
+.announcement-bar[class*="color-option"],
+.announcement-bar[class*="color-option"].gradient {
+  background: var(--color-accent-light) !important;
+  background-color: var(--color-accent-light) !important;
+  border-bottom: 1px solid rgba(155, 118, 167, 0.25);
+  --color-foreground: 44, 36, 32;
+  --color-background: 240, 235, 244;
+  --gradient-background: transparent;
 }
 
-.announcement-bar .announcement-bar__message p {
-  font-size: 12px;
-  letter-spacing: 0.02em;
+/* Message wrapper: kill flex column layout the theme uses */
+.announcement-bar .announcement-bar__message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  width: 100%;
 }
 
-.announcement-bar .announcement-bar__message a {
-  color: var(--color-accent-hex) !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+/* Kill the text-slider animation — pin it static */
+.announcement-bar text-slider {
+  display: block;
+  position: relative;
+  height: auto !important;
+  overflow: visible;
+}
+
+.announcement-bar text-slider div {
+  position: static !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Hide all but first slide since we're static */
+.announcement-bar text-slider div:not(:first-child) {
+  display: none;
+}
+
+/* Text styling */
+.announcement-bar .announcement-bar__message p,
+.announcement-bar .announcement-bar__message a,
+.announcement-bar .announcement-text,
+.announcement-bar .announcement-text p {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-foreground-hex) !important;
+  margin: 0;
+}
+
+.announcement-bar .announcement-bar__message a,
+.announcement-bar .announcement-text a {
+  color: var(--color-accent-dark) !important;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.announcement-bar .announcement-bar__message a:hover,
+.announcement-bar .announcement-text a:hover {
+  opacity: 0.8;
+}
+
+/* Hide the social icons column — keeps bar clean */
+.announcement-bar .announcement-bar__socials {
+  display: none !important;
+}
+
+/* Hide country selector in bar — cleaner */
+.announcement-bar localization-form {
+  display: none !important;
 }
 
 /* ============================================
@@ -1005,13 +1071,25 @@ header-drawer summary {
 
 /* ============================================
    FOOTER OVERRIDES
+   Nuke any dark color scheme the theme applies
    ============================================ */
-.footer {
+.footer,
+.footer .color-option-3,
+.footer .color-option-3.gradient,
+.footer [class*="color-option"],
+.footer [class*="color-option"].gradient {
   background: var(--color-background-warm) !important;
+  background-color: var(--color-background-warm) !important;
+  /* Reset CSS vars the color scheme may have flipped to dark */
+  --color-foreground: 44, 36, 32;
+  --color-background: 253, 249, 244;
+  --gradient-background: transparent;
 }
 
-.footer .color-option-3 {
-  background: var(--color-background-warm);
+.footer,
+.footer .color-option-3,
+.footer [class*="color-option"] {
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer-block__heading {
@@ -1020,21 +1098,34 @@ header-drawer summary {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer .list-menu__item--link {
   font-size: 13px;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted) !important;
 }
 
 .footer .list-menu__item--link:hover {
-  color: var(--color-foreground-hex);
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer-block__brand-info .rte {
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+/* Footer newsletter field — warm styled */
+.footer .newsletter-form__field-wrapper input {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--color-border-hex);
+  color: var(--color-foreground-hex);
+}
+.footer .newsletter-form__button {
+  background: var(--color-accent-dark) !important;
+  border-color: var(--color-accent-dark) !important;
+  color: #fff !important;
 }
 
 .footer__content-bottom {
