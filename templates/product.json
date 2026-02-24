@@ -347,7 +347,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Organic. Lab-Tested. No Junk. Just Good Stuff.</p>",
+            "text": "<p>Where Purity Meets Performance. Lab-Tested. Farm-Direct.</p>",
             "image_link": ""
           }
         },
@@ -712,7 +712,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>USDA Organic. Zero Additives. Honestly Good Ingredients.</p>",
+            "text": "<p>USDA Organic. Zero Additives. Where Purity Meets Performance.</p>",
             "image_link": ""
           }
         },
