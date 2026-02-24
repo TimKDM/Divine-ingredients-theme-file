@@ -5,9 +5,9 @@
       "settings": {
         "hero_label": "Say Hello",
         "hero_heading": "<p>We're Real People. <strong>Let's Talk.</strong></p>",
-        "hero_subtext": "Got a question about a product, an order, or a wild idea for a partnership? We're here and we actually read these.",
+        "hero_subtext": "Have a question about a product, an order, or a partnership idea? We'd love to hear from you — and we always respond personally.",
         "info_heading": "Let's Connect",
-        "info_text": "Whether you're a matcha enthusiast, a café owner sourcing new ingredients, or just curious about what we do — reach out. We love hearing from the people who use our stuff.",
+        "info_text": "Whether you're a matcha enthusiast, a café owner sourcing premium ingredients, or exploring what we can do together — reach out. We love connecting with the people who use our products.",
         "email_address": "hello@divineingredients.com",
         "email_response_time": "We get back to you within 24 hours",
         "phone_number": "",
@@ -15,7 +15,7 @@
         "show_location": false,
         "location_address": "",
         "cta_heading": "Thinking Wholesale?",
-        "cta_text": "We work with cafés, brands, and producers who want premium organic ingredients at scale. Let's figure it out together.",
+        "cta_text": "We partner with cafés, brands, and producers who want premium organic ingredients at scale. Let's build something great together.",
         "cta_label": "Apply for Wholesale",
         "cta_link": "/pages/wholesale"
       }

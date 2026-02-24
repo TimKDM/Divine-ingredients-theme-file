@@ -15,7 +15,7 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "Organic · Lab-Tested · No Fillers · Just Good Stuff"
+            "text": "Organic · Lab-Tested · No Fillers · Pure Purpose"
           }
         },
         "heading": {
@@ -40,7 +40,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
         "heading": "<p>What You Put In <em>Matters</em>.</p>",
-        "subtitle": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested for real, and made for people who actually care what goes in their body.",
+        "subtitle": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
         "image_height": 70,
         "overlay_opacity": 100
       }
@@ -66,7 +66,7 @@
           "type": "trust_item",
           "settings": {
             "icon": "leaf",
-            "text": "<strong>Zero</strong> Junk. Period."
+            "text": "<strong>Zero</strong> Additives. Ever."
           }
         },
         "trust_4": {
@@ -96,7 +96,7 @@
           "settings": {
             "collection": "shopify:\/\/collections\/organic-herbal-tea",
             "heading": "Loose Leaf Tea",
-            "subtitle": "Black, green, oolong, herbal — pick your vibe"
+            "subtitle": "Black, green, oolong, herbal — pick your mood"
           }
         },
         "cat_3": {
@@ -145,7 +145,7 @@
           "settings": {
             "icon": "shield",
             "title": "Certified Organic",
-            "description": "USDA certified. No pesticides, no fillers, no mystery powders. Just the real thing."
+            "description": "USDA certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
           }
         },
         "value_2": {
@@ -161,7 +161,7 @@
           "settings": {
             "icon": "clipboard",
             "title": "Lab-Tested Everything",
-            "description": "Every single batch gets tested for purity, potency, and safety. We don't cut corners."
+            "description": "Every single batch gets tested for purity, potency, and safety. Precision matters — we don't cut corners."
           }
         },
         "value_4": {
@@ -169,7 +169,7 @@
           "settings": {
             "icon": "heart",
             "title": "Built for You",
-            "description": "Creators, chefs, wellness folks, home cooks — if you care about what goes in, we're your people."
+            "description": "Creators, chefs, wellness brands, home cooks — if you care about what goes in, we're here for you."
           }
         }
       },
@@ -177,7 +177,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Smoothie-blog-image-2.jpg",
         "heading": "We Care About What Goes In — And Who It Goes To",
-        "text": "We started Divine because we couldn't find ingredients we actually trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people making it deserve to know exactly what they're working with.",
+        "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency.",
         "button_label": "Our Story",
         "button_link": "shopify:\/\/pages\/about-us"
       }
@@ -260,7 +260,7 @@
       "block_order": ["heading", "subtitle", "email_form"],
       "settings": {
         "input_placeholder": "Your email address",
-        "button_label": "I'm In",
+        "button_label": "Count Me In",
         "privacy_text": "No spam. No nonsense. Unsubscribe whenever."
       }
     },

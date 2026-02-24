@@ -15,8 +15,8 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Hey, We're Divine Ingredients",
-            "caption": "We're a crew of food nerds, wellness advocates, and sourcing obsessives on a mission to get the cleanest organic ingredients into your hands — whether you're running a café, building a brand, or just making a really good smoothie.",
+            "heading": "Welcome to Divine Ingredients",
+            "caption": "We're a passionate team of sourcing experts, wellness advocates, and quality obsessives on a mission to bring the cleanest organic ingredients to your kitchen — whether you're running a café, building a brand, or crafting something extraordinary at home.",
             "button_label": "Shop Our Collections",
             "link": "shopify:\/\/collections",
             "button_style_secondary": false
@@ -27,7 +27,7 @@
           "settings": {
             "image": "",
             "heading": "Clean Ingredients. No Compromises.",
-            "caption": "Everything we sell is USDA certified organic and independently lab-tested. No synthetic additives, no fillers, no fine print. We believe you deserve to know exactly what you're putting in your body — and we think that's a pretty low bar, honestly.",
+            "caption": "Everything we sell is USDA certified organic and independently lab-tested. No synthetic additives, no fillers, no fine print. We believe you deserve to know exactly what you're putting in your body — full transparency, always.",
             "button_label": "Our Story",
             "link": "",
             "button_style_secondary": false
@@ -165,7 +165,7 @@
             "image": "",
             "hide_image": false,
             "title": "USDA Certified Organic",
-            "text": "<p>Every product we carry is certified organic — no pesticides, no GMOs, no synthetics. We don't just say it, we prove it. The receipts are always available.</p>",
+            "text": "<p>Every product we carry is certified organic — no pesticides, no GMOs, no synthetics. We don't just say it, we prove it. Full documentation, always available.</p>",
             "link_label": "",
             "link": ""
           }
@@ -237,7 +237,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We're not just a supplier — we're the people who geek out over soil quality, obsess over lab results, and genuinely celebrate when our customers create something amazing with our ingredients. Whether you're perfecting a signature latte, formulating your next product line, or just trying to make dinner a little more special, we're here for it. Your wins are our wins.</p>",
+            "text": "<p>We're more than a supplier — we're the team that obsesses over soil quality, pores over lab results, and genuinely celebrates when our partners create something exceptional with our ingredients. Whether you're perfecting a signature latte, formulating your next product line, or elevating your home cooking, we're here for the journey. Your success is our success.</p>",
             "text_style": "body"
           }
         },

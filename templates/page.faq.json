@@ -47,7 +47,7 @@
           "settings": {
             "hide_image": false,
             "title": "Product Info",
-            "text": "<p>Curious about our matcha grades, where our spices come from, or how to use superfood powders? Here's the lowdown on everything we carry — and why it's worth it.</p>",
+            "text": "<p>Curious about our matcha grades, where our spices come from, or how to use superfood powders? Here's everything you need to know about what we carry — and why it matters.</p>",
             "link_label": "View FAQ",
             "link": "#product",
             "open_new_tab_1": false
@@ -102,7 +102,7 @@
           "settings": {
             "heading": "How do I place an order?",
             "icon": "question_mark",
-            "row_content": "<p>Browse our collections, add what catches your eye to your cart, and check out. We accept all major credit cards and PayPal. The whole process takes about two minutes — we timed it.</p>",
+            "row_content": "<p>Browse our collections, add what catches your eye to your cart, and check out. We accept all major credit cards and PayPal. The whole process is quick and seamless.</p>",
             "page": ""
           }
         },
@@ -129,7 +129,7 @@
           "settings": {
             "heading": "Can I track my order?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely. Once your order ships, you'll get a tracking number by email. Follow along and know exactly when your ingredients are landing. If anything looks off, hit us up — we're on it.</p>",
+            "row_content": "<p>Absolutely. Once your order ships, you'll get a tracking number by email. Follow along and know exactly when your ingredients are arriving. If anything looks off, reach out — we're on it.</p>",
             "page": ""
           }
         },
@@ -230,7 +230,7 @@
           "settings": {
             "heading": "How do I start a return?",
             "icon": "question_mark",
-            "row_content": "<p>Just contact our support team with your order details and what's going on. We'll walk you through it and make the process as smooth as possible. That's kind of our thing.</p>",
+            "row_content": "<p>Just contact our support team with your order details and let us know what happened. We'll walk you through it and make the process as smooth as possible — that's what we're here for.</p>",
             "page": ""
           }
         },
@@ -331,7 +331,7 @@
           "settings": {
             "heading": "How do I use superfood powders?",
             "icon": "question_mark",
-            "row_content": "<p>However you want! Smoothies, lattes, baking, cooking — they're super versatile. Each product page has usage ideas, and our blog is packed with recipes if you're looking for inspiration. Get creative with it.</p>",
+            "row_content": "<p>The possibilities are wide open — smoothies, lattes, baking, cooking. Each product page has usage ideas, and our blog is packed with recipes if you're looking for inspiration. We encourage you to experiment and make them your own.</p>",
             "page": ""
           }
         }
@@ -409,7 +409,7 @@
         "heading_size": "extra-large",
         "heading_style": "default",
         "heading_tag": "h2",
-        "text": "<p><strong>Got a question we didn't cover? Reach out — we're real people and we love hearing from you.</strong></p>",
+        "text": "<p><strong>Have a question we didn't cover? We'd love to hear from you — reach out and we'll get back to you personally.</strong></p>",
         "button_label_1": "",
         "button_link_1": "",
         "open_new_tab_1": false,

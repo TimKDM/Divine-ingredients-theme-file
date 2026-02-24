@@ -22,7 +22,7 @@
           "type": "intro",
           "settings": {
             "heading": "We Believe Good Food Should Be Simple, Honest, and Backed by Facts",
-            "text": "<p>Divine Ingredients exists because we think you deserve to know exactly what's in your food — and where it came from. We're not here to slap a label on something and call it organic. We go to the farms. We test the batches. We build relationships that last.</p><p>Whether you're creating in your kitchen, developing products, or growing your brand, we're in your corner. Not as a supplier — as your people.</p>"
+            "text": "<p>Divine Ingredients exists because we believe you deserve to know exactly what's in your food — and where it came from. We're not here to slap a label on something and call it organic. We go to the farms. We test every batch. We build relationships that last.</p><p>Whether you're creating in your kitchen, developing products, or growing your brand, we're in your corner. Not as a vendor — as a true partner.</p>"
           }
         },
         "story_1": {
@@ -57,7 +57,7 @@
             "value_3_title": "People and Planet",
             "value_3_text": "We partner with growers who care about sustainable practices and fair wages. Good ingredients start with good relationships.",
             "value_4_title": "Your Success Is the Point",
-            "value_4_text": "We built this for you — the creators, the makers, the kitchen experimenters. If you succeed, we've done our job.",
+            "value_4_text": "We built this for creators, makers, and kitchen innovators. Your success is the whole point — and we're here to support every step.",
             "use_alt_bg": false
           }
         },
@@ -66,7 +66,7 @@
           "settings": {
             "caption": "Our Community",
             "heading": "You're in Good Company",
-            "text": "<p>When you choose Divine, you're joining a community of people who give a damn about what goes into their food, their products, and their bodies. That's not a niche — that's a movement.</p><p>From home chefs discovering the joy of real matcha to wellness brands formulating their next big thing, café owners pouring signature drinks, and creators pushing the boundaries of what good food can be — we're honored to be part of your story.</p>",
+            "text": "<p>When you choose Divine, you're joining a community of people who genuinely care about what goes into their food, their products, and their bodies. That's not a niche — that's a movement.</p><p>From home chefs discovering the joy of real matcha to wellness brands formulating their next breakthrough, café owners pouring signature drinks, and creators pushing the boundaries of what good food can be — we're honored to be part of your journey.</p>",
             "button_label": "Shop All Collections",
             "button_link": "shopify:\/\/collections",
             "layout": "image_left",
@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Ready to Make Something Great?",
             "text": "Join the community of creators, chefs, and wellness brands who trust Divine for the ingredients that matter most.",
-            "button_label": "Let's Go",
+            "button_label": "Explore Collections",
             "button_link": "shopify:\/\/collections",
             "use_dark_bg": true
           }

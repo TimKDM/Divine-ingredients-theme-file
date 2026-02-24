@@ -200,7 +200,7 @@
             "heading_tag": "h4",
             "icon": "headset",
             "no_padding": true,
-            "content": "<p>Got questions? Hit us up through our contact page or email us at hello@divineingredients.com. We're real people and we get back to you within 24 hours on business days.</p>",
+            "content": "<p>Have questions? Reach out through our contact page or email us at hello@divineingredients.com. We're real people and we respond within 24 hours on business days.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -505,7 +505,7 @@
           "settings": {
             "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims — that's how we roll.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims — that's how we operate.</p>",
             "page": ""
           }
         },
@@ -514,7 +514,7 @@
           "settings": {
             "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>Hard no. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Just clean ingredients. That's it. That's the whole list.</p>",
+            "row_content": "<p>Never. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Clean ingredients — nothing more, nothing less.</p>",
             "page": ""
           }
         }
@@ -566,7 +566,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>I needed a source for organic turmeric I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works. Done deal.</p>",
+            "text": "<p>I needed a source for organic turmeric I could truly trust. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice.</p>",
             "title": "Dr. James K.",
             "hide_image": true,
             "product": ""
