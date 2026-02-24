@@ -25,7 +25,7 @@
           "settings": {
             "hide_image": false,
             "title": "Orders & Support",
-            "text": "<p>We're here to ensure your tea and superfood shopping experience is smooth and enjoyable. Whether you have questions about our matcha, subscription boxes, or wholesale options, our support team is ready to help.</p>",
+            "text": "<p>Questions about placing an order, tracking a package, or managing your account? We've got you covered. Our support team is real people who actually want to help.</p>",
             "link_label": "View FAQ",
             "link": "#orders",
             "open_new_tab_1": false
@@ -36,7 +36,7 @@
           "settings": {
             "hide_image": false,
             "title": "Shipping & Returns",
-            "text": "<p>We ship to the US and Canada with quick, reliable service. Our shipping process ensures your organic teas and powders arrive fresh. If you're not completely satisfied, our simple returns process makes it easy.</p>",
+            "text": "<p>We ship fast, pack with care, and make returns painless. Your organic teas and powders arrive fresh — and if something's off, we make it right. Simple as that.</p>",
             "link_label": "View FAQ",
             "link": "#shipping",
             "open_new_tab_1": false
@@ -47,7 +47,7 @@
           "settings": {
             "hide_image": false,
             "title": "Product Info",
-            "text": "<p>Learn about our premium organic matcha, loose leaf teas, and superfood powders. All our products are Fairtrade & Organic certified, sourced from trusted growers worldwide for exceptional quality and flavor.</p>",
+            "text": "<p>Curious about our matcha grades, where our spices come from, or how to use superfood powders? Here's the lowdown on everything we carry — and why it's worth it.</p>",
             "link_label": "View FAQ",
             "link": "#product",
             "open_new_tab_1": false
@@ -100,9 +100,9 @@
         "collapsible_row-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How can I place an order?",
+            "heading": "How do I place an order?",
             "icon": "question_mark",
-            "row_content": "<p>Browse our collection of organic matcha, loose leaf teas, superfood powders, and spices. Add your favorite products to your cart and proceed to checkout. Enter your shipping and payment details, and we'll take care of the rest. It's quick and easy!</p>",
+            "row_content": "<p>Browse our collections, add what catches your eye to your cart, and check out. We accept all major credit cards and PayPal. The whole process takes about two minutes — we timed it.</p>",
             "page": ""
           }
         },
@@ -111,16 +111,16 @@
           "settings": {
             "heading": "What payment methods do you accept?",
             "icon": "question_mark",
-            "row_content": "<p>We accept major credit cards (Visa, Mastercard, American Express), PayPal, and other secure online payment platforms. All payment information is encrypted and secure for your protection.</p>",
+            "row_content": "<p>Visa, Mastercard, American Express, PayPal, and other secure payment platforms. Everything is encrypted and protected — your info stays safe with us.</p>",
             "page": ""
           }
         },
         "collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you offer wholesale pricing?",
+            "heading": "Do you do wholesale?",
             "icon": "question_mark",
-            "row_content": "<p>Yes! We offer wholesale pricing on our teas, matcha, spices, and superfood powders for businesses and bulk orders. Contact our team to discuss volume pricing and set up a wholesale account.</p>",
+            "row_content": "<p>We do! If you're a café, wellness brand, or anyone buying in bulk, we'd love to chat. Reach out to our team and we'll get you set up with volume pricing and a dedicated account.</p>",
             "page": ""
           }
         },
@@ -129,25 +129,25 @@
           "settings": {
             "heading": "Can I track my order?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Once your order ships, we'll send you a tracking number via email. Use this number to monitor your package and see its estimated delivery date. If you have any tracking issues, our support team is here to help.</p>",
+            "row_content": "<p>Absolutely. Once your order ships, you'll get a tracking number by email. Follow along and know exactly when your ingredients are landing. If anything looks off, hit us up — we're on it.</p>",
             "page": ""
           }
         },
         "collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What are your subscription boxes?",
+            "heading": "What's the deal with subscription boxes?",
             "icon": "question_mark",
-            "row_content": "<p>We offer two subscription options: a Matcha Subscription Box ($49.99) and a Seasonal Subscription Box ($59.99) that deliver curated selections of our premium products regularly to your door. You can pause, skip, or cancel anytime.</p>",
+            "row_content": "<p>We offer a Matcha Subscription Box ($49.99) and a Seasonal Subscription Box ($59.99) — curated picks delivered to your door on a regular schedule. Pause, skip, or cancel whenever you want. No strings.</p>",
             "page": ""
           }
         },
         "collapsible_row-5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How can I contact customer support?",
+            "heading": "How do I get in touch with you?",
             "icon": "question_mark",
-            "row_content": "<p>We're here to help! Reach out through our contact form, and we'll respond within 24 hours on business days. Whether you have questions about products, orders, or need assistance, our team is ready to support you.</p>",
+            "row_content": "<p>Drop us a line through our contact form and we'll get back to you within 24 hours on business days. Product questions, order issues, partnership ideas — whatever it is, we want to hear it.</p>",
             "page": ""
           }
         }
@@ -161,7 +161,7 @@
         "collapsible_row-5"
       ],
       "settings": {
-        "caption": "Support FAQs",
+        "caption": "The Basics",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "Orders & Support",
@@ -194,43 +194,43 @@
           "settings": {
             "heading": "Where do you ship?",
             "icon": "question_mark",
-            "row_content": "<p>We currently ship to the United States and Canada. Shipping costs and delivery times are calculated at checkout based on your location.</p>",
+            "row_content": "<p>We currently ship throughout the US and Canada. Shipping costs and delivery times are calculated at checkout based on where you are.</p>",
             "page": ""
           }
         },
         "collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How long does shipping take?",
+            "heading": "How fast does shipping take?",
             "icon": "question_mark",
-            "row_content": "<p>Standard shipping typically takes 3-7 business days after your order is processed. Expedited shipping options are available at checkout if you need your matcha and teas faster.</p>",
+            "row_content": "<p>Standard shipping runs 3–7 business days after processing. Need it sooner? We've got expedited options at checkout. Either way, your stuff arrives fresh and well-packed.</p>",
             "page": ""
           }
         },
         "collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How much does shipping cost?",
+            "heading": "How much is shipping?",
             "icon": "question_mark",
-            "row_content": "<p>Shipping costs vary based on your location and order weight. During checkout, you'll see all available shipping options with their costs so you can choose what works best for you.</p>",
+            "row_content": "<p>It depends on your location and order size — you'll see all the options and costs at checkout. Pro tip: orders over $75 ship free.</p>",
             "page": ""
           }
         },
         "collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is your return policy?",
+            "heading": "What's your return policy?",
             "icon": "question_mark",
-            "row_content": "<p>We want you to love your purchase! If you're not satisfied, contact us within 30 days of receipt. We'll work with you to resolve any issues and ensure you're happy with your order.</p>",
+            "row_content": "<p>We want you to be genuinely happy with what you get. If something's not right, reach out within 30 days and we'll sort it out. No runaround, no hassle.</p>",
             "page": ""
           }
         },
         "collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I initiate a return?",
+            "heading": "How do I start a return?",
             "icon": "question_mark",
-            "row_content": "<p>Contact our customer support team with your order details and reason for return. We'll guide you through the process and provide instructions. We're here to make it easy.</p>",
+            "row_content": "<p>Just contact our support team with your order details and what's going on. We'll walk you through it and make the process as smooth as possible. That's kind of our thing.</p>",
             "page": ""
           }
         },
@@ -239,7 +239,7 @@
           "settings": {
             "heading": "What if my order arrives damaged?",
             "icon": "question_mark",
-            "row_content": "<p>We apologize if you receive a damaged product! Contact us immediately with photos and your order number, and we'll quickly arrange a replacement or refund. Your satisfaction is our priority.</p>",
+            "row_content": "<p>That's on us. Snap a photo, send it over with your order number, and we'll get a replacement or refund sorted fast. We take packaging seriously, but if something slips through, we make it right.</p>",
             "page": ""
           }
         }
@@ -253,7 +253,7 @@
         "collapsible_row-5"
       ],
       "settings": {
-        "caption": "Support FAQs",
+        "caption": "Getting Your Goods",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "Shipping & Returns",
@@ -284,18 +284,18 @@
         "collapsible_row-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What types of products do you offer?",
+            "heading": "What kind of products do you carry?",
             "icon": "question_mark",
-            "row_content": "<p>We specialize in premium organic matcha powders, loose leaf teas, superfood powders (like taro, lion's mane, coffee cherry, and molasses powder), and wholesale spices. All products are carefully sourced for exceptional quality and flavor.</p>",
+            "row_content": "<p>Premium organic matcha (multiple grades), loose leaf teas, superfood powders (taro, lion's mane, coffee cherry, molasses, and more), and artisan spices. Everything is carefully sourced and lab-tested. No filler, no fluff.</p>",
             "page": ""
           }
         },
         "collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are your products organic?",
+            "heading": "Is everything actually organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes! We're proud to be Fairtrade & Organic certified. Our products are organically sourced from trusted growers worldwide who meet strict quality and sustainability standards.</p>",
+            "row_content": "<p>Yes — and we can prove it. Every product is USDA certified organic, sourced from farms that meet strict quality and sustainability standards. We don't use the word lightly.</p>",
             "page": ""
           }
         },
@@ -304,34 +304,34 @@
           "settings": {
             "heading": "What makes your matcha different?",
             "icon": "question_mark",
-            "row_content": "<p>Our Supreme Matcha is sourced from premium organic tea farms and stone-ground to preserve maximum flavor, color, and nutritional benefits. We offer different grades suitable for various uses from ceremonial drinking to culinary applications.</p>",
+            "row_content": "<p>Our matcha is sourced from premium organic farms and stone-ground to preserve flavor, color, and nutrients. We carry different grades for different uses — ceremonial for sipping, culinary for cooking and lattes. It's tested, it's real, and it's seriously good.</p>",
             "page": ""
           }
         },
         "collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How should I store my tea and powders?",
+            "heading": "How should I store my teas and powders?",
             "icon": "question_mark",
-            "row_content": "<p>Store in a cool, dry place away from direct sunlight and strong odors. Keep matcha refrigerated after opening for optimal freshness. Reseal bags tightly after each use. Check individual product pages for specific storage recommendations.</p>",
+            "row_content": "<p>Cool, dry, away from sunlight and strong smells. Matcha does best in the fridge once opened. Always reseal tightly. Check individual product pages for specifics — we include storage tips on everything.</p>",
             "page": ""
           }
         },
         "collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are your products suitable for dietary restrictions?",
+            "heading": "Are your products good for dietary restrictions?",
             "icon": "question_mark",
-            "row_content": "<p>Yes! Our products are plant-based and suitable for vegan and vegetarian diets. Many are also gluten-free. Specific allergen information is listed on each product page.</p>",
+            "row_content": "<p>Most of our products are plant-based, vegan-friendly, and many are gluten-free. We list allergen info on every product page so you can check before you buy. No surprises.</p>",
             "page": ""
           }
         },
         "collapsible_row-5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How can I use superfood powders?",
+            "heading": "How do I use superfood powders?",
             "icon": "question_mark",
-            "row_content": "<p>Our superfood powders like taro, lion's mane, and coffee cherry are versatile! Use them in smoothies, lattes, baking, and cooking. Each product page includes usage suggestions, and our blog has delicious recipes for inspiration.</p>",
+            "row_content": "<p>However you want! Smoothies, lattes, baking, cooking — they're super versatile. Each product page has usage ideas, and our blog is packed with recipes if you're looking for inspiration. Get creative with it.</p>",
             "page": ""
           }
         }
@@ -345,7 +345,7 @@
         "collapsible_row-5"
       ],
       "settings": {
-        "caption": "Support FAQs",
+        "caption": "The Nerdy Details",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "Product Info",
@@ -370,7 +370,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Can't find an <em>Answer</em>? Get in Touch!</p>",
+            "heading": "<p>Still have questions? <em>We're here.</em></p>",
             "heading_size": "medium",
             "heading_style": "default",
             "heading_tag": "h2",
@@ -402,14 +402,14 @@
         "image": "shopify://shop_images/GT.Supreha1_a142c4ff-7e20-4e71-bb11-9296a43987f7.jpg",
         "image_height": "adapt",
         "hide_image": false,
-        "caption": "Get in Touch",
+        "caption": "Drop Us a Line",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "",
         "heading_size": "extra-large",
         "heading_style": "default",
         "heading_tag": "h2",
-        "text": "<p><strong>Have questions about our organic matcha, teas, or superfood powders? We're here to help! Contact us anytime, and we'll get back to you as soon as possible.</strong></p>",
+        "text": "<p><strong>Got a question we didn't cover? Reach out — we're real people and we love hearing from you.</strong></p>",
         "button_label_1": "",
         "button_link_1": "",
         "open_new_tab_1": false,

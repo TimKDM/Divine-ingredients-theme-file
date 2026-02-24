@@ -15,8 +15,8 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "About Divine Ingredients",
-            "caption": "We believe that extraordinary creations begin with exceptional ingredients. From organic farms around the world to your kitchen, we source the purest teas, matcha, superfood powders, and artisan spices — so you never have to compromise on quality.",
+            "heading": "Hey, We're Divine Ingredients",
+            "caption": "We're a crew of food nerds, wellness advocates, and sourcing obsessives on a mission to get the cleanest organic ingredients into your hands — whether you're running a café, building a brand, or just making a really good smoothie.",
             "button_label": "Shop Our Collections",
             "link": "shopify:\/\/collections",
             "button_style_secondary": false
@@ -26,8 +26,8 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Simply Nourishing. Naturally Vibrant.",
-            "caption": "Every ingredient we offer is USDA certified organic, rigorously lab-tested, and sourced through direct partnerships with trusted growers. Zero synthetic additives. Zero fillers. Just clean, functional ingredients that make a real difference.",
+            "heading": "Clean Ingredients. No Compromises.",
+            "caption": "Everything we sell is USDA certified organic and independently lab-tested. No synthetic additives, no fillers, no fine print. We believe you deserve to know exactly what you're putting in your body — and we think that's a pretty low bar, honestly.",
             "button_label": "Our Story",
             "link": "",
             "button_style_secondary": false
@@ -79,7 +79,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Welcome to Divine Ingredients — where purity meets <em>purpose</em>.</p>",
+            "heading": "<p>Good food is good for you. That's not a tagline — it's just <em>science</em>.</p>",
             "heading_size": "large",
             "heading_style": "default",
             "heading_tag": "h2",
@@ -90,7 +90,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>What started as a passion for authentic, uncompromised ingredients has grown into a trusted source for creators, chefs, wellness practitioners, and home cooks who demand the very best. We work directly with organic farms across Japan, India, Sri Lanka, and beyond to bring you ingredients that are as pure as nature intended.</p>"
+            "text": "<p>We built Divine Ingredients for people who want to know what's in their food — and who's behind it. We work directly with organic farms across Japan, India, Sri Lanka, and beyond because we think the relationship between grower and maker matters just as much as the ingredient itself.</p>"
           }
         }
       },
@@ -114,7 +114,7 @@
         "caption": {
           "type": "caption",
           "settings": {
-            "caption": "Our Sourcing Philosophy",
+            "caption": "How We Source",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -122,7 +122,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "From Farm to Kitchen, with Nothing Hidden",
+            "heading": "Farm to Kitchen, Nothing to Hide",
             "heading_size": "medium",
             "heading_style": "default",
             "heading_tag": "h2"
@@ -131,7 +131,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We maintain direct relationships with our growers to ensure complete traceability and the highest quality standards. Every ingredient is sourced from certified organic farms, independently lab-tested for purity, and delivered to you with zero synthetic additives or fillers.</p>"
+            "text": "<p>We go direct. We visit farms, build long-term relationships with growers, and maintain full traceability on every ingredient. Every batch is independently lab-tested for purity and safety. No middlemen padding things out, no mystery ingredients sneaking in. What you see is what you get — and what you get is really, really good.</p>"
           }
         },
         "button": {
@@ -165,7 +165,7 @@
             "image": "",
             "hide_image": false,
             "title": "USDA Certified Organic",
-            "text": "<p>Every product in our collection is certified organic — free from pesticides, GMOs, and synthetic chemicals. Quality you can verify, not just trust.</p>",
+            "text": "<p>Every product we carry is certified organic — no pesticides, no GMOs, no synthetics. We don't just say it, we prove it. The receipts are always available.</p>",
             "link_label": "",
             "link": ""
           }
@@ -175,8 +175,8 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "Rigorously Lab Tested",
-            "text": "<p>Each batch is independently tested for purity, potency, heavy metals, and allergen safety before it ever reaches your hands.</p>",
+            "title": "Independently Lab Tested",
+            "text": "<p>Every batch gets tested by third-party labs for purity, potency, heavy metals, and allergens. We test because facts matter — and so does your trust.</p>",
             "link_label": "",
             "link": ""
           }
@@ -186,8 +186,8 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "Trusted by Creators",
-            "text": "<p>From home kitchens to professional cafés and wellness brands, our ingredients are trusted by creators who refuse to compromise.</p>",
+            "title": "Trusted by People Who Care",
+            "text": "<p>Home kitchens, professional cafés, wellness brands — our community is made up of people who refuse to settle. We're proud to be their go-to.</p>",
             "link_label": "",
             "link": ""
           }
@@ -228,7 +228,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Heart Behind Divine Ingredients",
+            "heading": "The Heart Behind the Brand",
             "heading_size": "large",
             "heading_style": "default",
             "heading_tag": "h2"
@@ -237,7 +237,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At Divine Ingredients, we take pride in being more than a supplier — we're a partner in your creative journey. Our story is driven by a simple belief: the best creations start with the best ingredients. Whether you're a chef crafting a signature dish, a wellness brand formulating your next product, or a home cook elevating your daily meals, we're here to provide ingredients worthy of your vision.</p>",
+            "text": "<p>We're not just a supplier — we're the people who geek out over soil quality, obsess over lab results, and genuinely celebrate when our customers create something amazing with our ingredients. Whether you're perfecting a signature latte, formulating your next product line, or just trying to make dinner a little more special, we're here for it. Your wins are our wins.</p>",
             "text_style": "body"
           }
         },
@@ -252,7 +252,7 @@
       "block_order": ["heading", "text", "image"],
       "settings": {
         "image": "",
-        "caption": "Our Mission",
+        "caption": "Why We Do This",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -273,7 +273,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Shop Wholesale</p>",
+            "heading": "<p>Let's Work Together<\/p>",
             "heading_size": "extra-large",
             "heading_style": "default",
             "heading_tag": "h2",
@@ -284,14 +284,14 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Are you a café owner, wellness brand, or food manufacturer? We offer competitive bulk pricing, dedicated account support, and consistent quality for businesses of every size.</p>",
+            "text": "<p>Running a café, building a wellness brand, or producing at scale? We offer bulk pricing, dedicated support, and the kind of consistency your business can actually rely on.</p>",
             "text_style": "body"
           }
         },
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Learn About Wholesale",
+            "button_label_1": "Explore Wholesale",
             "button_link_1": "shopify:\/\/collections\/shop-wholesale-with-divine",
             "button_style_secondary_1": false,
             "button_label_2": "",

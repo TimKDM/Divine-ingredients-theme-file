@@ -161,7 +161,7 @@
           "type": "complementary",
           "settings": {
             "column": "under-gallery",
-            "block_heading": "Goes well with",
+            "block_heading": "Pairs nicely with",
             "product_list_limit": 10,
             "image_ratio": "square",
             "enable_quick_add": false,
@@ -200,7 +200,7 @@
             "heading_tag": "h4",
             "icon": "headset",
             "no_padding": true,
-            "content": "<p>You can reach out to us through our [contact channels, e.g., email form, contact page] with any feedback or questions you may have. We'll respond as soon as possible during our regular business hours.</p>",
+            "content": "<p>Got questions? Hit us up through our contact page or email us at hello@divineingredients.com. We're real people and we get back to you within 24 hours on business days.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -277,7 +277,7 @@
             "heading_tag": "h4",
             "icon": "heart",
             "no_padding": true,
-            "content": "<p>Our ingredients are USDA certified organic, sourced directly from trusted farms worldwide, and rigorously lab-tested for purity. Every product is free from synthetic additives, artificial colors, and preservatives — delivering clean, functional ingredients you can trust for your most important creations.</p>",
+            "content": "<p>Every ingredient is USDA certified organic, sourced direct from farms we know, and independently lab-tested. No synthetic additives, no artificial colors, no preservatives. Just clean, honest ingredients for people who care about what goes in.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -347,7 +347,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>USDA Organic. Zero Additives. Farm-to-Kitchen.</p>",
+            "text": "<p>Organic. Lab-Tested. No Junk. Just Good Stuff.</p>",
             "image_link": ""
           }
         },
@@ -362,7 +362,7 @@
         "text_3": {
           "type": "text",
           "settings": {
-            "text": "<p>Lab Tested. Ethically Sourced. Allergen Safe.</p>",
+            "text": "<p>Farm-Direct. Independently Tested. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -377,7 +377,7 @@
         "text_5": {
           "type": "text",
           "settings": {
-            "text": "<p>No Fillers. No Preservatives. Pure Ingredients.</p>",
+            "text": "<p>Zero Fillers. Zero Preservatives. The Real Deal.</p>",
             "image_link": ""
           }
         }
@@ -419,7 +419,7 @@
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Every Divine Ingredients product is USDA certified organic, sourced directly from trusted farms, and rigorously lab-tested for purity. No synthetic additives, no fillers — just clean, authentic ingredients for your best creations.</p>",
+            "row_content": "<p>Everything we sell is USDA certified organic, sourced direct from farms we know and trust, and independently lab-tested. No synthetic anything, no fillers — just clean ingredients for whatever you're making.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -432,7 +432,7 @@
             "heading": "Ingredients & Sourcing",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Origin: Sourced from certified organic farms. Certifications: USDA Organic. Testing: Each batch independently verified for purity, potency, and allergen safety. Free from: Synthetic additives, artificial colors, preservatives, fillers, GMOs.</p>",
+            "row_content": "<p>Origin: Direct from certified organic farms we work with personally. Certifications: USDA Organic. Testing: Every batch independently verified for purity, potency, and allergen safety. Free from: Synthetic additives, artificial colors, preservatives, fillers, GMOs. What you see is what you get.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -478,7 +478,7 @@
           "settings": {
             "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, every product we offer is USDA certified organic. We source exclusively from certified organic farms and each batch is independently lab-tested for purity and safety.</p>",
+            "row_content": "<p>Every single one. USDA certified organic, sourced from certified farms, and independently lab-tested. We don't use the word \"organic\" lightly — we can back it up.</p>",
             "page": ""
           }
         },
@@ -487,7 +487,7 @@
           "settings": {
             "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>We work directly with certified organic farms across Japan, India, Sri Lanka, and other growing regions. Each farm partnership is built on trust, fair trade, and sustainable practices.</p>",
+            "row_content": "<p>Direct from certified organic farms across Japan, India, Sri Lanka, and beyond. We know our growers personally — every partnership is built on trust, fair trade, and a shared commitment to doing things right.</p>",
             "page": ""
           }
         },
@@ -496,7 +496,7 @@
           "settings": {
             "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>Yes! We offer competitive bulk pricing for cafés, restaurants, wellness brands, and food manufacturers. Visit our wholesale collection or contact us for custom quotes.</p>",
+            "row_content": "<p>We do! Cafés, restaurants, wellness brands, food manufacturers — if you're buying in volume, we've got you. Check out our wholesale collection or reach out for custom pricing.</p>",
             "page": ""
           }
         },
@@ -505,7 +505,7 @@
           "settings": {
             "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. We maintain complete traceability from farm to kitchen.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims — that's how we roll.</p>",
             "page": ""
           }
         },
@@ -514,7 +514,7 @@
           "settings": {
             "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely not. All Divine Ingredients products are free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Just pure, clean ingredients.</p>",
+            "row_content": "<p>Hard no. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Just clean ingredients. That's it. That's the whole list.</p>",
             "page": ""
           }
         }
@@ -555,7 +555,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>The ceremonial matcha is the best I've found outside of Japan. Our café customers always ask what brand we use.</p>",
+            "text": "<p>This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use.</p>",
             "title": "Sarah M.",
             "hide_image": true,
             "product": "supreme-matcha"
@@ -566,7 +566,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>Finally found a reliable source for organic turmeric. The quality is consistent and the bulk pricing is perfect.</p>",
+            "text": "<p>I needed a source for organic turmeric I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works. Done deal.</p>",
             "title": "Dr. James K.",
             "hide_image": true,
             "product": ""
@@ -577,7 +577,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>The chai blend has become my morning ritual. The spice balance is perfect and the aroma is incredible!</p>",
+            "text": "<p>Switched all my baking ingredients to Divine and honestly — night and day. Everything just tastes more real.</p>",
             "title": "Michelle T.",
             "hide_image": true,
             "product": "mumbai-chai"
@@ -590,10 +590,10 @@
         "column_3"
       ],
       "settings": {
-        "title": "What Our Community Says",
+        "title": "Hear It From the Community",
         "heading_size": "medium",
         "heading_tag": "h2",
-        "caption": "Trusted by Creators",
+        "caption": "Real People, Real Talk",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "button_label": "",
@@ -620,7 +620,7 @@
           "type": "slide",
           "settings": {
             "heading": "Complete Nutrition",
-            "caption": "Discover our premium organic ingredients — from ceremonial matcha to artisan spices, carefully sourced for your best creations.",
+            "caption": "Premium organic ingredients — matcha, spices, superfoods — sourced from farms we trust and tested in labs we don't own.",
             "button_label": "Explore Meals",
             "link": "",
             "show_link_button": false,
@@ -631,7 +631,7 @@
           "type": "slide",
           "settings": {
             "heading": "Matcha Masterclass",
-            "caption": "Learn the art of preparing ceremonial matcha and creative ways to use it — from traditional whisking to café-style latte art.",
+            "caption": "Learn traditional whisking, nail your latte art, and discover new ways to make matcha part of your daily routine.",
             "button_label": "Book Now",
             "link": "",
             "show_link_button": false,
@@ -642,7 +642,7 @@
           "type": "slide",
           "settings": {
             "heading": "Wholesale Partners",
-            "caption": "Are you a café, restaurant, or brand? We offer dedicated wholesale support, competitive pricing, and the consistent quality your business demands.",
+            "caption": "Running a café, building a brand, or producing at scale? We've got bulk pricing, dedicated support, and consistency you can count on.",
             "button_label": "Find Us",
             "link": "",
             "show_link_button": false,
@@ -712,7 +712,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>USDA Organic. Zero Additives. Pure Ingredients.</p>",
+            "text": "<p>USDA Organic. Zero Additives. Honestly Good Ingredients.</p>",
             "image_link": ""
           }
         },
@@ -726,7 +726,7 @@
         "text_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Lab Tested. Ethically Sourced. Allergen Safe.</p>",
+            "text": "<p>Lab Tested. Farm-Direct. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -740,7 +740,7 @@
         "text_4": {
           "type": "text",
           "settings": {
-            "text": "<p>No Fillers. No Preservatives. Farm-to-Kitchen.</p>",
+            "text": "<p>No Fillers. No Preservatives. Just the Good Stuff.</p>",
             "image_link": ""
           }
         },
@@ -832,8 +832,8 @@
         "caption-1": "On orders over $75",
         "heading-2": "USDA Organic",
         "caption-2": "Certified organic ingredients",
-        "heading-3": "24/7 Support",
-        "caption-3": "We're here to help",
+        "heading-3": "Real Humans",
+        "caption-3": "Actual people who help",
         "heading-4": "Secure Payment",
         "caption-4": "Multiple payment options",
         "image_size": "small",
