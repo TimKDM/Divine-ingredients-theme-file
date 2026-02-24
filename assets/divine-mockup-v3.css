@@ -1005,13 +1005,25 @@ header-drawer summary {
 
 /* ============================================
    FOOTER OVERRIDES
+   Nuke any dark color scheme the theme applies
    ============================================ */
-.footer {
+.footer,
+.footer .color-option-3,
+.footer .color-option-3.gradient,
+.footer [class*="color-option"],
+.footer [class*="color-option"].gradient {
   background: var(--color-background-warm) !important;
+  background-color: var(--color-background-warm) !important;
+  /* Reset CSS vars the color scheme may have flipped to dark */
+  --color-foreground: 44, 36, 32;
+  --color-background: 253, 249, 244;
+  --gradient-background: transparent;
 }
 
-.footer .color-option-3 {
-  background: var(--color-background-warm);
+.footer,
+.footer .color-option-3,
+.footer [class*="color-option"] {
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer-block__heading {
@@ -1020,21 +1032,34 @@ header-drawer summary {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer .list-menu__item--link {
   font-size: 13px;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted) !important;
 }
 
 .footer .list-menu__item--link:hover {
-  color: var(--color-foreground-hex);
+  color: var(--color-foreground-hex) !important;
 }
 
 .footer-block__brand-info .rte {
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+/* Footer newsletter field — warm styled */
+.footer .newsletter-form__field-wrapper input {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--color-border-hex);
+  color: var(--color-foreground-hex);
+}
+.footer .newsletter-form__button {
+  background: var(--color-accent-dark) !important;
+  border-color: var(--color-accent-dark) !important;
+  color: #fff !important;
 }
 
 .footer__content-bottom {
