@@ -1,28 +1,44 @@
 {
   "sections": {
-    "rich_text": {
-      "type": "rich-text",
+    "divine_hero": {
+      "type": "divine-hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Homepage test — standard section</p>",
-            "heading_size": "large",
-            "heading_style": "default",
-            "heading_tag": "h1"
-          }
-        }
+        "badge": { "type": "badge", "settings": { "text": "100% Organic · Zero Additives · Farm-to-Kitchen" } },
+        "heading": { "type": "heading", "settings": {} },
+        "subtitle": { "type": "subtitle", "settings": {} },
+        "buttons": { "type": "buttons", "settings": { "button_label_1": "Shop Best Sellers", "button_link_1": "shopify://collections/powder", "button_label_2": "Shop Wholesale", "button_link_2": "shopify://collections/shop-wholesale-with-divine" } }
       },
-      "block_order": ["heading"],
+      "block_order": ["badge", "heading", "subtitle", "buttons"],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "color_scheme": "option-1",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "image": "shopify://shop_images/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
+        "heading": "<p>Simply Nourishing. <em>Naturally</em> Vibrant.</p>",
+        "subtitle": "Premium organic teas, matcha, superfood powders, and artisan spices — carefully sourced, rigorously tested, and trusted by creators who refuse to compromise.",
+        "image_height": 72,
+        "overlay_opacity": 100
       }
+    },
+    "divine_trust_bar": {
+      "type": "divine-trust-bar",
+      "blocks": {
+        "trust_1": { "type": "trust_item", "settings": { "icon": "shield", "text": "<strong>USDA</strong> Certified Organic" } },
+        "trust_2": { "type": "trust_item", "settings": { "icon": "package", "text": "<strong>Free Ship</strong> on Orders $75+" } },
+        "trust_3": { "type": "trust_item", "settings": { "icon": "leaf", "text": "<strong>Zero</strong> Synthetic Additives" } },
+        "trust_4": { "type": "trust_item", "settings": { "icon": "check", "text": "<strong>Lab Tested</strong> for Purity" } }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3", "trust_4"],
+      "settings": {}
+    },
+    "divine_categories": {
+      "type": "divine-categories",
+      "blocks": {
+        "cat_1": { "type": "category", "settings": { "collection": "shopify://collections/matcha-tea-powders", "heading": "Matcha", "subtitle": "Ceremonial & culinary grades" } },
+        "cat_2": { "type": "category", "settings": { "collection": "shopify://collections/organic-herbal-tea", "heading": "Loose Leaf Tea", "subtitle": "Black, green, oolong & herbal" } },
+        "cat_3": { "type": "category", "settings": { "collection": "shopify://collections/organic-superfood-powders", "heading": "Superfood Powders", "subtitle": "Mushroom, fruit & adaptogens" } },
+        "cat_4": { "type": "category", "settings": { "collection": "shopify://collections/spices", "heading": "Herbs & Spices", "subtitle": "Single origin & organic blends" } }
+      },
+      "block_order": ["cat_1", "cat_2", "cat_3", "cat_4"],
+      "settings": { "caption": "Shop by Category", "title": "Explore Our Collections" }
     }
   },
-  "order": ["rich_text"]
+  "order": ["divine_hero", "divine_trust_bar", "divine_categories"]
 }
