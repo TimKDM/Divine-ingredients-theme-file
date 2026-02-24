@@ -164,8 +164,8 @@
           "settings": {
             "image": "",
             "hide_image": false,
-            "title": "USDA Certified Organic",
-            "text": "<p>Every product we carry is certified organic — no pesticides, no GMOs, no synthetics. We don't just say it, we prove it. Full documentation, always available.</p>",
+            "title": "USDA Organic · CCOF Certified",
+            "text": "<p>Every product we carry is USDA certified organic and CCOF certified — no pesticides, no GMOs, no synthetics. We don't just say it, we prove it. Full documentation, always available.</p>",
             "link_label": "",
             "link": ""
           }
@@ -220,6 +220,56 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "disable_arrow_mobile": true
+      }
+    },
+    "certification_logos": {
+      "type": "image-gallery",
+      "blocks": {
+        "logo_1": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_5": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_6": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "caption": "Committed to Quality",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Certified for Your Confidence",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "scroll_direction": "ltc",
+        "scroll_speed": 60,
+        "scroll_height": 200,
+        "hover_stop": true,
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true,
+        "scroll_height_mobile": 120,
+        "margin_spacing": "negative",
+        "margin_top": 0
       }
     },
     "image_with_text": {
@@ -323,6 +373,7 @@
     "rich_text",
     "two_images_text",
     "multicolumn",
+    "certification_logos",
     "image_with_text",
     "image_banner"
   ]

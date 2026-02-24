@@ -52,7 +52,7 @@
           "type": "trust_item",
           "settings": {
             "icon": "shield",
-            "text": "<strong>USDA</strong> Certified Organic"
+            "text": "<strong>USDA</strong> Organic · CCOF Certified"
           }
         },
         "trust_2": {
@@ -145,7 +145,7 @@
           "settings": {
             "icon": "shield",
             "title": "Certified Organic",
-            "description": "USDA certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
+            "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
           }
         },
         "value_2": {
@@ -180,6 +180,56 @@
         "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency.",
         "button_label": "Our Story",
         "button_link": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "certification_logos": {
+      "type": "image-gallery",
+      "blocks": {
+        "logo_1": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_5": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_6": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "caption": "Committed to Quality",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Certified for Your Confidence",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "scroll_direction": "ltc",
+        "scroll_speed": 60,
+        "scroll_height": 200,
+        "hover_stop": true,
+        "color_scheme": "option-2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true,
+        "scroll_height_mobile": 120,
+        "margin_spacing": "negative",
+        "margin_top": 0
       }
     },
     "divine_testimonials": {
@@ -416,6 +466,7 @@
     "divine_hero",
     "divine_trust_bar",
     "divine_brand_story",
+    "certification_logos",
     "divine_categories",
     "divine_products",
     "divine_testimonials",
