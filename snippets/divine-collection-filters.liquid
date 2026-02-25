@@ -1,0 +1,170 @@
+{% comment %}
+  Renders tag-based filter chips for Divine Ingredients collection pages.
+  Parses the prefixed tag system (Benefit_*, Flavor_*, Dietary_*, etc.)
+  and renders clickable filter groups.
+
+  Accepts:
+  - collection: {Object} Collection Liquid object
+  - current_tags: {Array} Currently active tags
+
+  Usage:
+  {% render 'divine-collection-filters', collection: collection, current_tags: current_tags %}
+{% endcomment %}
+
+{%- liquid
+  comment
+    Build unique tag groups from all products in the collection.
+    Tag format: Prefix_Value (e.g. Benefit_Energy, Flavor_Floral)
+  endcomment
+
+  assign benefit_tags = ''
+  assign flavor_tags = ''
+  assign dietary_tags = ''
+  assign caffeine_tags = ''
+  assign origin_tags = ''
+  assign format_tags = ''
+
+  for tag in collection.all_tags
+    if tag contains 'Benefit_'
+      assign label = tag | remove: 'Benefit_'
+      assign benefit_tags = benefit_tags | append: label | append: '|||'
+    elsif tag contains 'Flavor_'
+      assign label = tag | remove: 'Flavor_'
+      assign flavor_tags = flavor_tags | append: label | append: '|||'
+    elsif tag contains 'Dietary_'
+      assign label = tag | remove: 'Dietary_'
+      assign dietary_tags = dietary_tags | append: label | append: '|||'
+    elsif tag contains 'Caffeine_'
+      assign label = tag | remove: 'Caffeine_'
+      assign caffeine_tags = caffeine_tags | append: label | append: '|||'
+    elsif tag contains 'Origin_'
+      assign label = tag | remove: 'Origin_'
+      assign origin_tags = origin_tags | append: label | append: '|||'
+    elsif tag contains 'Format_'
+      assign label = tag | remove: 'Format_'
+      assign format_tags = format_tags | append: label | append: '|||'
+    endif
+  endfor
+-%}
+
+<div class="divine-filters" id="divine-collection-filters">
+  {%- if benefit_tags != blank -%}
+    {%- assign items = benefit_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Benefits</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Benefit_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--benefit' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--benefit' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if flavor_tags != blank -%}
+    {%- assign items = flavor_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Flavors</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Flavor_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--flavor' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--flavor' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if caffeine_tags != blank -%}
+    {%- assign items = caffeine_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Caffeine Level</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Caffeine_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--caffeine' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--caffeine' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if dietary_tags != blank -%}
+    {%- assign items = dietary_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Dietary</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Dietary_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--dietary' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--dietary' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if origin_tags != blank -%}
+    {%- assign items = origin_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Origin</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Origin_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--origin' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--origin' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if format_tags != blank -%}
+    {%- assign items = format_tags | split: '|||' -%}
+    <div class="divine-filter-group">
+      <h4 class="divine-filter-group__title">Format</h4>
+      <div class="divine-filter-group__chips">
+        {%- for item in items -%}
+          {%- if item != blank -%}
+            {%- assign full_tag = 'Format_' | append: item -%}
+            {%- if current_tags contains full_tag -%}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--format' }}
+            {%- else -%}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--format' }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if current_tags.size > 0 -%}
+    <div class="divine-filter-group divine-filter-group--active">
+      <a href="{{ collection.url }}" class="divine-chip divine-chip--clear">Clear All Filters</a>
+    </div>
+  {%- endif -%}
+</div>

@@ -1209,3 +1209,164 @@ header-drawer summary {
   overflow: hidden;
   aspect-ratio: 1;
 }
+
+/* ============================================
+   DIVINE TAG BADGES (product cards)
+   ============================================ */
+.divine-product-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.divine-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.divine-tag--benefit {
+  background-color: var(--color-accent-light, #f0ebf4);
+  color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-tag--flavor {
+  background-color: #fef6e8;
+  color: #a07628;
+}
+
+.divine-tag--dietary {
+  background-color: #e8f5e9;
+  color: #4a7c4f;
+}
+
+/* Larger tags on product detail page */
+.divine-product-detail-tags .divine-tag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+}
+
+/* ============================================
+   DIVINE COLLECTION FILTERS
+   ============================================ */
+.divine-filters {
+  padding: var(--spacing-sm) 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.divine-filter-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+.divine-filter-group__title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #7a6f64);
+  margin-bottom: 6px;
+}
+
+.divine-filter-group__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.divine-chip {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-hex, #e8dfd0);
+  background-color: var(--color-background-hex, #fff);
+  color: var(--color-foreground-hex, #1d1917);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.divine-chip:hover {
+  border-color: var(--color-accent-dark, #9b76a7);
+  color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-chip--active {
+  background-color: var(--color-accent-dark, #9b76a7);
+  color: #fff;
+  border-color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-chip--active:hover {
+  background-color: var(--color-accent-hex, #c8a8d8);
+  color: #fff;
+}
+
+.divine-chip--clear {
+  background-color: transparent;
+  border-color: var(--color-text-muted, #7a6f64);
+  color: var(--color-text-muted, #7a6f64);
+  font-weight: 600;
+}
+
+.divine-chip--clear:hover {
+  background-color: var(--color-foreground-hex, #1d1917);
+  color: #fff;
+  border-color: var(--color-foreground-hex, #1d1917);
+}
+
+/* Flavor-specific chip accent colors */
+.divine-chip--benefit.divine-chip--active {
+  background-color: #9b76a7;
+  border-color: #9b76a7;
+}
+
+.divine-chip--flavor.divine-chip--active {
+  background-color: #a07628;
+  border-color: #a07628;
+}
+
+.divine-chip--dietary.divine-chip--active {
+  background-color: #4a7c4f;
+  border-color: #4a7c4f;
+}
+
+.divine-chip--caffeine.divine-chip--active {
+  background-color: #6b5e52;
+  border-color: #6b5e52;
+}
+
+.divine-chip--origin.divine-chip--active {
+  background-color: #5a7d9a;
+  border-color: #5a7d9a;
+}
+
+.divine-chip--format.divine-chip--active {
+  background-color: #8b6e4e;
+  border-color: #8b6e4e;
+}
+
+/* Filter group responsive */
+@media screen and (max-width: 767px) {
+  .divine-filter-group__chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .divine-filter-group__chips::-webkit-scrollbar {
+    display: none;
+  }
+}

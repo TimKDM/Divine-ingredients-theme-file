@@ -1,0 +1,73 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .divine-filters-section {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .divine-filters-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="divine-filters-section page-width">
+  {%- if section.settings.title != blank -%}
+    <h3 class="divine-filter-group__title" style="margin-bottom: var(--spacing-sm);">{{ section.settings.title }}</h3>
+  {%- endif -%}
+
+  {% render 'divine-collection-filters',
+    collection: collection,
+    current_tags: current_tags
+  %}
+</section>
+
+{% schema %}
+{
+  "name": "Divine Collection Filters",
+  "tag": "section",
+  "class": "divine-collection-filters-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Filter by"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "default": 8,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Collection Filters",
+      "settings": {
+        "title": "Filter by",
+        "padding_top": 16,
+        "padding_bottom": 8
+      }
+    }
+  ]
+}
+{% endschema %}

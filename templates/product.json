@@ -65,6 +65,18 @@
             "hide_quick_view": false
           }
         },
+        "product_tags": {
+          "type": "product_tags",
+          "settings": {
+            "column": "left",
+            "max_tags": 5,
+            "show_benefits": true,
+            "show_flavors": true,
+            "show_dietary": false,
+            "margin_top": 0,
+            "hide_quick_view": false
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
@@ -294,6 +306,7 @@
         "buy_buttons",
         "spacer",
         "description",
+        "product_tags",
         "text",
         "inventory",
         "dynamic_card_icons",
