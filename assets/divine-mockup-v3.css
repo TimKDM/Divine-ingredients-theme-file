@@ -1300,24 +1300,37 @@ header-drawer summary {
 [class*="recently-viewed"] .card__media,
 [class*="recently_viewed"] .card__media {
   border-radius: 50% !important;
-  overflow: hidden;
+  overflow: hidden !important;
   aspect-ratio: 1;
 }
 
 .recently-viewed .card__media .media,
+.recently-viewed .card__media .global-media-settings,
 [class*="recently-viewed"] .card__media .media,
-[class*="recently_viewed"] .card__media .media {
+[class*="recently-viewed"] .card__media .global-media-settings,
+[class*="recently_viewed"] .card__media .media,
+[class*="recently_viewed"] .card__media .global-media-settings {
   border-radius: 50% !important;
-  overflow: hidden;
+  overflow: hidden !important;
   aspect-ratio: 1;
 }
 
+.recently-viewed .card__media .global-media-settings:after,
+[class*="recently-viewed"] .card__media .global-media-settings:after,
+[class*="recently_viewed"] .card__media .global-media-settings:after {
+  border-radius: 50% !important;
+}
+
 .recently-viewed .card__media .media img,
+.recently-viewed .card__media .global-media-settings img,
 [class*="recently-viewed"] .card__media .media img,
-[class*="recently_viewed"] .card__media .media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+[class*="recently-viewed"] .card__media .global-media-settings img,
+[class*="recently_viewed"] .card__media .media img,
+[class*="recently_viewed"] .card__media .global-media-settings img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
 }
 
 /* ============================================
