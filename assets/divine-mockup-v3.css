@@ -1460,28 +1460,9 @@ header-drawer summary {
 }
 
 /* ============================================
-   PRODUCT PAGE — Related Products Section
-   Divine-branded headings and spacing
-   ============================================ */
-.related-products .related-products__heading {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  color: var(--color-foreground-hex);
-}
-
-.related-products .caption-with-letter-spacing {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-accent-dark);
-  font-size: 11px;
-}
-
-/* ============================================
    PRODUCT PAGE — Recently Viewed Section
    Divine-branded headings
+   (Related Products headings live in section-related-products.css)
    ============================================ */
 .recent-products .title-wrapper .title {
   font-family: var(--font-heading);
@@ -1499,112 +1480,7 @@ header-drawer summary {
   font-size: 11px;
 }
 
-/* Card headings inside related & recently viewed */
-.related-products .card-heading,
-.related-products .full-unstyled-link,
-.recent-products .card-heading,
-.recent-products .full-unstyled-link {
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-
-.related-products .price,
-.recent-products .price {
-  font-family: var(--font-body);
-  font-weight: 600;
-}
-
-/* ============================================
-   PRODUCT PAGE — Testimonials Section
-   Divine-branded cards with warm borders
-   ============================================ */
-.testimonials-title .title {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-.testimonials-title .image-with-text-text--caption {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-accent-dark);
-  font-size: 11px;
-}
-
-/* Testimonial cards — warm parchment border, soft background */
-.testimonials.content-container {
-  border: 1px solid var(--color-border-hex);
-  border-radius: var(--radius-md);
-  background: var(--color-background-warm);
-}
-
-.testimonials .testimonials-text {
-  font-size: 15px;
-  line-height: 1.65;
-  font-style: italic;
-  color: var(--color-foreground-hex);
-}
-
-.testimonials .testimonials-author {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-}
-
-/* Star ratings — warm gold */
-.testimonials .rating svg,
-.testimonials .rating-star {
-  fill: #e5b94e;
-  color: #e5b94e;
-}
-
-/* ============================================
-   PRODUCT PAGE — Tabs Section
-   Divine-branded tab navigation and content
-   ============================================ */
-.tab-nav {
-  border-bottom: 2px solid var(--color-border-hex);
-}
-
-.tab-nav .tab-item .link {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  padding: 14px 20px;
-  transition: var(--transition-default);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-}
-
-.tab-nav .tab-item .link:hover {
-  color: var(--color-foreground-hex);
-}
-
-.tab-nav .tab-item .link.active,
-.tab-nav .tab-item.active .link {
-  color: var(--color-foreground-hex);
-  border-bottom-color: var(--color-accent-dark);
-}
-
-.tab-content {
-  font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.75;
-  color: var(--color-text-muted);
-}
-
-.tab-content h2 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--color-foreground-hex);
-  margin-bottom: 12px;
-}
+/* Card headings & prices — now in component-card.css
+   Testimonials — now in section-testimonials.css
+   Tabs — now in tabs.css
+   Related Products — now in section-related-products.css */

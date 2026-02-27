@@ -18,6 +18,18 @@
 
 .testimonials-title .title {
   margin-top: 0;
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.testimonials-title .image-with-text-text--caption {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9b76a7;
+  font-size: 11px;
 }
 
 .testimonials-info h4.column.product-title {
@@ -25,8 +37,9 @@
 }
 
 .testimonials.content-container {
-  border: 1px solid rgba(var(--color-base-border-1));
-  border-radius: var(--media-radius);
+  border: 1px solid #e8dfd0;
+  border-radius: 10px;
+  background: #fdf9f4;
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
     var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
@@ -70,7 +83,10 @@
 
 .testimonial-text p,
 .testimonial-text h3 {
-  font-size: calc(var(--font-body-scale) * 1.4rem);
+  font-size: 15px;
+  line-height: 1.65;
+  font-style: italic;
+  color: #1d1917;
 }
 
 .testimonial-text h3 {
@@ -114,6 +130,20 @@
 
 .testimonials .rating {
   color: rgb(var(--color-foreground));
+}
+
+.testimonials .rating svg {
+  fill: #e5b94e;
+  color: #e5b94e;
+}
+
+.testimonials-info h4,
+.testimonials .testimonials-author,
+.testimonials .product__title {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
 }
 
 .testimonials svg.five-stars {
@@ -287,48 +317,4 @@
   }
 }
 
-/* --- Divine Ingredients overrides --- */
-.testimonials-title .title {
-  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-.testimonials-title .image-with-text-text--caption {
-  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #9b76a7;
-  font-size: 11px;
-}
-
-.testimonials.content-container {
-  border: 1px solid #e8dfd0;
-  border-radius: 10px;
-  background: #fdf9f4;
-}
-
-.testimonial-text p,
-.testimonial-text h3,
-.testimonials-style-2 .testimonial-text p {
-  font-size: 15px;
-  line-height: 1.65;
-  font-style: italic;
-  color: #1d1917;
-}
-
-.testimonials-info h4,
-.testimonials .testimonials-author,
-.testimonials .product__title {
-  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-}
-
-.testimonials .rating svg {
-  fill: #e5b94e;
-  color: #e5b94e;
-}
 

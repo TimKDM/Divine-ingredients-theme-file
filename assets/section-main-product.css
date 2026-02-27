@@ -424,11 +424,6 @@ variant-selects .select__select {
 
 .shopify-payment-button__button {
   font-family: inherit;
-  min-height: 4.6rem;
-}
-
-.product-form__buttons .product-form__submit {
-  align-self: flex-start;
 }
 
 .shopify-payment-button__button [role="button"].focused,
@@ -738,7 +733,7 @@ fieldset.product-form-input .form-label {
 }
 
 .product-form__submit {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -1102,33 +1097,7 @@ a.product-text {
   margin: 0 auto 1.2rem auto;
 }
 
-.product-form__buttons {
-  display: flex;
-  grid-gap: 1rem;
-  width: auto;
-}
-
-@media screen and (max-width: 990px) {
-  .product-form__buttons {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.product-form__buttons .product-form__submit,
-.product-form__buttons .shopify-payment-button{
-  width: auto;
-  flex: 0 0 auto;
-  max-width: 20rem;
-}
-
-@media screen and (max-width: 990px) {
-  .product-form__buttons .product-form__submit,
-  .product-form__buttons .shopify-payment-button {
-    width: auto;
-    max-width: 20rem;
-  }
-}
+/* Button layout handled by divine-mockup-v3.css */
 
 .product-form-quantity .quantity:before {
     background: none;
@@ -2394,17 +2363,7 @@ p.rating-count.caption {
   }
 }
 
-@media screen and (max-width: 350px) {
-.product-form__buttons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product-form__buttons .product-form__submit,
-.product-form__buttons .shopify-payment-button{
-  width: auto;
-}
-}
+/* 350px button reset removed — handled by divine-mockup-v3.css */
 
 /* Recipient form */
 .recipient-form {
@@ -2575,87 +2534,5 @@ p.rating-count.caption {
   .product-info-wrapper .accordion__title.extra-large {
     font-size: calc(var(--font-heading-scale)* 2.2rem);
   }
-  .product-form__buttons {
-    flex-direction: column;
-    grid-gap: 0;
-  }
-  .product-info-wrapper .product-form__buttons .product-form__submit,
-  .product-info-wrapper .product-form__buttons .shopify-payment-button {
-    width: auto;
-  }
-}
-
-/* ============================================
-   DIVINE OVERRIDES — appended last to win cascade
-   These rules override earlier defaults in this
-   file to apply the Divine brand design system.
-   ============================================ */
-
-/* Buy buttons — stacked, full-width, uniform 52px */
-.product-form__buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  grid-gap: 10px;
-}
-
-.product-form__buttons .product-form__submit,
-.product-form__buttons .shopify-payment-button {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 auto;
-  box-sizing: border-box;
-}
-
-.product-form__buttons .product-form__submit {
-  align-self: stretch;
-  height: 52px;
-  min-height: 52px;
-  margin-bottom: 0;
-}
-
-.shopify-payment-button__button {
-  min-height: 52px;
-}
-
-.product-form__buttons .shopify-payment-button .shopify-payment-button__button {
-  width: 100%;
-  height: 52px;
-  min-height: 52px;
-}
-
-.product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
-  height: 52px;
-  min-height: 52px;
-}
-
-/* Override all media-query button resets */
-@media screen and (max-width: 990px) {
-  .product-form__buttons {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-  .product-form__buttons .product-form__submit,
-  .product-form__buttons .shopify-payment-button {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .product-form__buttons {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .product-form__buttons .product-form__submit,
-  .product-form__buttons .shopify-payment-button {
-    width: 100%;
-  }
-}
-
-/* Product form submit — Divine styling */
-.product-form__submit {
-  margin-bottom: 0;
+  /* Button layout handled by divine-mockup-v3.css */
 }
