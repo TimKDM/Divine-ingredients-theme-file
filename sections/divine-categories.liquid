@@ -50,17 +50,18 @@
       {%- endif -%}
       <a href="{{ card_url }}" class="divine-category-card" {{ block.shopify_attributes }}>
         {%- if block.settings.image != blank -%}
-          {{
-            block.settings.image
-            | image_url: width: 600
-            | image_tag:
-              loading: 'lazy',
-              widths: '200, 300, 400, 600',
-              sizes: '(min-width: 768px) 25vw, 50vw'
-          }}
+          {%- assign card_image = block.settings.image -%}
         {%- elsif collection.image != blank -%}
+          {%- assign card_image = collection.image -%}
+        {%- elsif collection.products.first.featured_image != blank -%}
+          {%- assign card_image = collection.products.first.featured_image -%}
+        {%- else -%}
+          {%- assign card_image = blank -%}
+        {%- endif -%}
+
+        {%- if card_image != blank -%}
           {{
-            collection.image
+            card_image
             | image_url: width: 600
             | image_tag:
               loading: 'lazy',
