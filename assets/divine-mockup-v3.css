@@ -1201,6 +1201,20 @@ header-drawer summary {
   height: 52px !important;
   min-height: 52px !important;
   border-radius: var(--radius-sm) !important;
+  background-color: var(--color-foreground-hex) !important;
+  color: var(--color-background-hex) !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-default);
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button:hover {
+  opacity: 0.85 !important;
 }
 
 .product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
