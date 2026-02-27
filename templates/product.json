@@ -233,11 +233,11 @@
         "tab_1": {
           "type": "tab",
           "settings": {
-            "heading": "Product description",
+            "heading": "How to Use",
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Everything we sell is USDA certified organic, sourced direct from farms we know and trust, and independently lab-tested. No synthetic anything, no fillers — just clean ingredients for whatever you're making.</p>",
+            "row_content": "<p>Every product page includes specific usage instructions, but here are a few general tips:</p><ul><li><strong>Powders &amp; Superfoods</strong> — Start with ½ to 1 tsp. Mix into smoothies, lattes, oatmeal, or baked goods.</li><li><strong>Loose Leaf Teas</strong> — Use 1–2 tsp per 8 oz of water. Steep at the recommended temperature for the best flavor.</li><li><strong>Spices &amp; Seasonings</strong> — Add to taste during cooking or as a finishing touch. A little goes a long way with high-quality ingredients.</li></ul><p>Store in a cool, dry place away from direct sunlight to preserve freshness and potency.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -250,7 +250,7 @@
             "heading": "Ingredients & Sourcing",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Origin: Direct from certified organic farms we work with personally. Certifications: USDA Organic, CCOF Certified. Testing: Every batch independently verified for purity, potency, and allergen safety. Free from: Synthetic additives, artificial colors, preservatives, fillers, GMOs. What you see is what you get.</p>",
+            "row_content": "<p>We source every ingredient directly from certified organic farms we know and trust — no middlemen, no compromises.</p><ul><li><strong>Certifications</strong> — USDA Organic, CCOF Certified</li><li><strong>Testing</strong> — Every batch independently lab-verified for purity, potency, heavy metals, and allergen safety</li><li><strong>Traceability</strong> — Full farm-to-shelf transparency on every product</li><li><strong>Free from</strong> — Synthetic additives, artificial colors, preservatives, fillers, and GMOs</li></ul><p>Check individual product listings for origin country, farm details, and batch-specific certifications.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
