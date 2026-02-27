@@ -2584,3 +2584,78 @@ p.rating-count.caption {
     width: auto;
   }
 }
+
+/* ============================================
+   DIVINE OVERRIDES — appended last to win cascade
+   These rules override earlier defaults in this
+   file to apply the Divine brand design system.
+   ============================================ */
+
+/* Buy buttons — stacked, full-width, uniform 52px */
+.product-form__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  grid-gap: 10px;
+}
+
+.product-form__buttons .product-form__submit,
+.product-form__buttons .shopify-payment-button {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.product-form__buttons .product-form__submit {
+  align-self: stretch;
+  height: 52px;
+  min-height: 52px;
+  margin-bottom: 0;
+}
+
+.shopify-payment-button__button {
+  min-height: 52px;
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button {
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
+  height: 52px;
+  min-height: 52px;
+}
+
+/* Override all media-query button resets */
+@media screen and (max-width: 990px) {
+  .product-form__buttons {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .product-form__buttons .product-form__submit,
+  .product-form__buttons .shopify-payment-button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .product-form__buttons {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .product-form__buttons .product-form__submit,
+  .product-form__buttons .shopify-payment-button {
+    width: 100%;
+  }
+}
+
+/* Product form submit — Divine styling */
+.product-form__submit {
+  margin-bottom: 0;
+}

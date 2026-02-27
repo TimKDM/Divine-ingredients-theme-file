@@ -34,3 +34,20 @@
     margin-right: 0;
   }
 }
+
+/* --- Divine Ingredients overrides --- */
+.related-products__heading {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #1d1917;
+}
+
+.related-products p.caption-with-letter-spacing {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9b76a7;
+  font-size: 11px;
+}
