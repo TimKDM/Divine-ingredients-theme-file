@@ -34,7 +34,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "column": "under-gallery",
+            "column": "left",
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
             "picker_type": "button",
@@ -95,7 +95,7 @@
           "settings": {
             "column": "left",
             "inventory_threshold": 10,
-            "show_inventory_quantity": true,
+            "show_inventory_quantity": false,
             "margin_top": 0,
             "hide_quick_view": true
           }
@@ -188,9 +188,9 @@
       "block_order": [
         "title",
         "price",
-        "buy_buttons",
         "spacer",
         "description",
+        "buy_buttons",
         "product_tags",
         "text",
         "inventory",
