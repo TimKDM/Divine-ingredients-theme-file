@@ -1163,16 +1163,29 @@ header-drawer summary {
   width: 100% !important;
   max-width: 100% !important;
   flex: 1 1 100% !important;
+  box-sizing: border-box;
 }
 
 .product-form__buttons .product-form__submit {
   align-self: stretch;
-  min-height: 50px;
+  min-height: 54px;
+  height: 54px;
+}
+
+.product-form__buttons .shopify-payment-button {
+  min-height: 54px;
+  height: 54px;
 }
 
 .product-form__buttons .shopify-payment-button .shopify-payment-button__button {
   width: 100% !important;
-  min-height: 50px !important;
+  min-height: 54px !important;
+  height: 54px !important;
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
+  min-height: 54px !important;
+  height: 54px !important;
 }
 
 /* ============================================

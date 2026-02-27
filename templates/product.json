@@ -870,6 +870,7 @@
   "order": [
     "main",
     "custom_schema",
+    "scrolling_text_1",
     "product_trust_bar",
     "tabs",
     "collapsible_content",
