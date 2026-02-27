@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6,
 
 @media screen and (min-width: 768px) {
   .divine-section {
-    padding: 72px 48px;
+    padding: 56px 48px;
   }
   .divine-section-title {
     font-size: 34px;
@@ -745,13 +745,13 @@ h1, h2, h3, h4, h5, h6,
   .divine-brand-story__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 32px;
     align-items: center;
   }
   .divine-brand-story__image {
     margin-bottom: 0;
     aspect-ratio: 4/5;
-    max-width: 420px;
+    max-width: 100%;
   }
 }
 
