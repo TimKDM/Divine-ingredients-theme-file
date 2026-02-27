@@ -779,6 +779,7 @@ fieldset.product-form-input .form-label {
 
 .product-info-container .product-form,
 .product-info-container .product-description,
+.under-gallery .product-description,
 .product-info-container .icon-with-text {
   font-size: calc(var(--font-body-scale) * 1.6rem);
   line-height: calc(1 + 0.6 / max(1, var(--font-body-scale)));
@@ -869,19 +870,27 @@ a.product-text {
     font-size: calc(var(--font-heading-scale) * 4.2rem);
   }
 
-  .product-description.small p {
+  .product-description.small p,
+  .product-description.small ul,
+  .product-description.small li {
     font-size: calc(var(--font-heading-scale) * 1.4rem);
   }
-  
-  .product-description.medium p {
+
+  .product-description.medium p,
+  .product-description.medium ul,
+  .product-description.medium li {
     font-size: calc(var(--font-body-scale) * 1.6rem);
   }
-  
-  .product-description.large p {
+
+  .product-description.large p,
+  .product-description.large ul,
+  .product-description.large li {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
   }
 
-  .product-description.extra-large p {
+  .product-description.extra-large p,
+  .product-description.extra-large ul,
+  .product-description.extra-large li {
     font-size: calc(var(--font-heading-scale) * 2rem);
   }
 
@@ -943,19 +952,27 @@ a.product-text {
     font-size: calc(var(--font-heading-scale) * 3.4rem);
   }
   
-  .product-description.small p {
+  .product-description.small p,
+  .product-description.small ul,
+  .product-description.small li {
     font-size: calc(var(--font-heading-scale) * 1.4rem);
   }
-  
-  .product-description.medium p {
+
+  .product-description.medium p,
+  .product-description.medium ul,
+  .product-description.medium li {
     font-size: calc(var(--font-body-scale) * 1.6rem);
   }
-  
-  .product-description.large p {
+
+  .product-description.large p,
+  .product-description.large ul,
+  .product-description.large li {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
   }
 
-  .product-description.extra-large p {
+  .product-description.extra-large p,
+  .product-description.extra-large ul,
+  .product-description.extra-large li {
     font-size: calc(var(--font-heading-scale) * 2rem);
   }
 }
