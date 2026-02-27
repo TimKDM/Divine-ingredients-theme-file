@@ -8,15 +8,15 @@
    Aesthetic: warm artisan — Art of Tea / Chado inspired
 ----------------------------------------- */
 :root {
-  --color-background-alt: #d4c4d9;       /* soft lavender */
+  --color-background-alt: #e2d6e6;       /* soft lavender */
   --color-accent-hex: #c8a8d8;           /* Divine lavender — punched up */
   --color-accent-dark: #9b76a7;          /* richer, visible purple */
   --color-accent-light: #f0ebf4;         /* very soft lavender tint */
   --color-text-muted: #7a6f64;           /* warm brown-gray */
-  --color-border-hex: #c4b4c9;           /* soft lavender border */
+  --color-border-hex: #d2c4d7;           /* soft lavender border */
   --color-foreground-hex: #1d1917;       /* near-black with warm undertone */
   --color-background-hex: #ffffff;
-  --color-background-warm: #d4c4d9;      /* soft lavender for cards */
+  --color-background-warm: #e2d6e6;      /* soft lavender for cards */
 
   --font-heading: 'Josefin Sans', var(--font-heading-family), sans-serif;
   --font-body: 'Jost', var(--font-body-family), sans-serif;
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   overflow: hidden;
   min-height: 65vh;
-  background: linear-gradient(135deg, #ede6e8 0%, #d4c4d9 50%, #c5bbc8 100%);
+  background: linear-gradient(135deg, #f0eaf2 0%, #e2d6e6 50%, #d5c9d8 100%);
 }
 
 /* Image fills the whole hero */
@@ -1068,7 +1068,7 @@ header-drawer summary {
   background-color: var(--color-background-warm) !important;
   /* Reset CSS vars the color scheme may have flipped to dark */
   --color-foreground: 44, 36, 32;
-  --color-background: 212, 196, 217;
+  --color-background: 226, 214, 230;
   --gradient-background: transparent;
 }
 
@@ -1384,7 +1384,7 @@ header-drawer summary {
   font-weight: 500;
   padding: 5px 14px;
   border-radius: 999px;
-  border: 1px solid var(--color-border-hex, #c4b4c9);
+  border: 1px solid var(--color-border-hex, #d2c4d7);
   background-color: var(--color-background-hex, #fff);
   color: var(--color-foreground-hex, #1d1917);
   text-decoration: none;

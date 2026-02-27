@@ -37,9 +37,9 @@
 }
 
 .testimonials.content-container {
-  border: 1px solid var(--color-border-hex, #c4b4c9);
+  border: 1px solid var(--color-border-hex, #d2c4d7);
   border-radius: 10px;
-  background: var(--color-background-warm, #d4c4d9);
+  background: var(--color-background-warm, #e2d6e6);
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
     var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
