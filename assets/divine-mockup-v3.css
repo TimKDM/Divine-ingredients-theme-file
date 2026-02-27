@@ -1289,47 +1289,18 @@ header-drawer summary {
   aspect-ratio: 1;
 }
 
-/* Recently viewed products */
-.recently-viewed .card .card-inner .card-media,
-.recently-viewed-products .card .card-inner .card-media,
-[class*="recently-viewed"] .card .card-inner .card-media,
-[class*="recently_viewed"] .card .card-inner .card-media,
-.recently-viewed .card .card-inner .card__media,
-.recently-viewed .card__media,
-.recently-viewed .card-inner .card__media,
-[class*="recently-viewed"] .card__media,
-[class*="recently_viewed"] .card__media {
+/* Recently viewed products — circular images
+   The JS template now uses .card-media (single dash) which inherits
+   the global circular rules from component-card.css.  These overrides
+   ensure the inner .media / .global-media-settings layers also clip
+   to a circle. */
+.recently-viewed .card-media .media,
+.recently-viewed .card-media .global-media-settings {
   border-radius: 50% !important;
   overflow: hidden !important;
-  aspect-ratio: 1;
 }
 
-.recently-viewed .card__media .media,
-.recently-viewed .card__media .global-media-settings,
-[class*="recently-viewed"] .card__media .media,
-[class*="recently-viewed"] .card__media .global-media-settings,
-[class*="recently_viewed"] .card__media .media,
-[class*="recently_viewed"] .card__media .global-media-settings {
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  aspect-ratio: 1;
-}
-
-.recently-viewed .card__media .global-media-settings:after,
-[class*="recently-viewed"] .card__media .global-media-settings:after,
-[class*="recently_viewed"] .card__media .global-media-settings:after {
-  border-radius: 50% !important;
-}
-
-.recently-viewed .card__media .media img,
-.recently-viewed .card__media .global-media-settings img,
-[class*="recently-viewed"] .card__media .media img,
-[class*="recently-viewed"] .card__media .global-media-settings img,
-[class*="recently_viewed"] .card__media .media img,
-[class*="recently_viewed"] .card__media .global-media-settings img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+.recently-viewed .card-media .global-media-settings:after {
   border-radius: 50% !important;
 }
 
