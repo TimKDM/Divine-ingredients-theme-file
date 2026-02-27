@@ -1,4 +1,20 @@
 {%- if section.settings.enable_schema -%}
+  {%- comment -%}
+    Resolve each field: product metafield first, then section setting fallback.
+    Define metafields in Settings > Custom data > Products:
+      custom.gtin              (single_line_text)
+      custom.mpn               (single_line_text)
+      custom.material          (single_line_text)
+      custom.product_category  (single_line_text)
+      custom.schema_additional_type (url)
+  {%- endcomment -%}
+  {%- liquid
+    assign schema_gtin = product.metafields.custom.gtin.value | default: section.settings.gtin
+    assign schema_mpn = product.metafields.custom.mpn.value | default: section.settings.mpn
+    assign schema_material = product.metafields.custom.material.value | default: section.settings.material
+    assign schema_category = product.metafields.custom.product_category.value | default: section.settings.category
+    assign schema_additional_type = product.metafields.custom.schema_additional_type.value | default: section.settings.additional_type
+  -%}
   <script type="application/ld+json">
     {%- if section.settings.schema_type == 'custom' -%}
       {{ section.settings.custom_json }}
@@ -17,20 +33,20 @@
           "name": {{ product.vendor | json }}
         },
         "sku": {{ product.selected_or_first_available_variant.sku | json }},
-        {%- if section.settings.gtin != blank -%}
-          "gtin": {{ section.settings.gtin | json }},
+        {%- if schema_gtin != blank -%}
+          "gtin": {{ schema_gtin | json }},
         {%- endif -%}
-        {%- if section.settings.mpn != blank -%}
-          "mpn": {{ section.settings.mpn | json }},
+        {%- if schema_mpn != blank -%}
+          "mpn": {{ schema_mpn | json }},
         {%- endif -%}
-        {%- if section.settings.material != blank -%}
-          "material": {{ section.settings.material | json }},
+        {%- if schema_material != blank -%}
+          "material": {{ schema_material | json }},
         {%- endif -%}
-        {%- if section.settings.category != blank -%}
-          "category": {{ section.settings.category | json }},
+        {%- if schema_category != blank -%}
+          "category": {{ schema_category | json }},
         {%- endif -%}
-        {%- if section.settings.additional_type != blank -%}
-          "additionalType": {{ section.settings.additional_type | json }},
+        {%- if schema_additional_type != blank -%}
+          "additionalType": {{ schema_additional_type | json }},
         {%- endif -%}
         "offers": {
           "@type": "AggregateOffer",
@@ -81,41 +97,41 @@
         }
       ],
       "default": "product",
-      "info": "Auto-generate uses product fields and the settings below. Custom lets you paste raw JSON-LD."
+      "info": "Auto-generate pulls from product metafields (custom.gtin, custom.mpn, custom.material, custom.product_category, custom.schema_additional_type). Fallback values below are used when a metafield is empty."
     },
     {
       "type": "header",
-      "content": "Auto-generate settings"
+      "content": "Fallback values (used when metafield is empty)"
     },
     {
       "type": "text",
       "id": "gtin",
-      "label": "GTIN / UPC / EAN",
-      "info": "Global Trade Item Number. Helps Google match your product in Shopping results."
+      "label": "GTIN / UPC / EAN (fallback)",
+      "info": "Metafield: custom.gtin — Global Trade Item Number. Set per-product in Products > [product] > Metafields."
     },
     {
       "type": "text",
       "id": "mpn",
-      "label": "MPN",
-      "info": "Manufacturer Part Number."
+      "label": "MPN (fallback)",
+      "info": "Metafield: custom.mpn — Manufacturer Part Number."
     },
     {
       "type": "text",
       "id": "material",
-      "label": "Material",
-      "info": "E.g. 'Organic Ceremonial Grade Matcha'"
+      "label": "Material (fallback)",
+      "info": "Metafield: custom.material — E.g. 'Organic Ceremonial Grade Matcha'"
     },
     {
       "type": "text",
       "id": "category",
-      "label": "Product category",
-      "info": "Google product category. E.g. 'Food, Beverages & Tobacco > Beverages > Tea & Infusions'"
+      "label": "Product category (fallback)",
+      "info": "Metafield: custom.product_category — Google product category. E.g. 'Food, Beverages & Tobacco > Beverages > Tea & Infusions'"
     },
     {
       "type": "text",
       "id": "additional_type",
-      "label": "Additional schema type URL",
-      "info": "Optional schema.org URL for more specific typing. E.g. 'https://schema.org/FoodProduct'"
+      "label": "Additional schema type URL (fallback)",
+      "info": "Metafield: custom.schema_additional_type — Optional schema.org URL. E.g. 'https://schema.org/FoodProduct'"
     },
     {
       "type": "header",
