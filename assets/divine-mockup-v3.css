@@ -1147,6 +1147,37 @@ header-drawer summary {
 }
 
 /* ============================================
+   PRODUCT PAGE — Buy Buttons (under-gallery)
+   Full-width, uniform buttons
+   ============================================ */
+.under-gallery .product-form__buttons {
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.under-gallery .product-form__buttons .product-form__submit,
+.under-gallery .product-form__buttons .shopify-payment-button {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1 1 100%;
+}
+
+.under-gallery .product-form__buttons .product-form__submit {
+  align-self: stretch;
+  min-height: 50px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.under-gallery .shopify-payment-button__button {
+  min-height: 50px !important;
+}
+
+/* ============================================
    SITEWIDE CIRCULAR PRODUCT IMAGES
    Applies to: product cards across all pages,
    product detail gallery, thumbnails, related,

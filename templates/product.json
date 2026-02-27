@@ -321,6 +321,7 @@
         "text_4",
         "text_5"
       ],
+      "disabled": true,
       "settings": {
         "scroll_direction": "ltc",
         "enable_scroll_decoration": true,
@@ -339,6 +340,10 @@
         "margin_spacing": "negative",
         "margin_top": 0
       }
+    },
+    "product_trust_bar": {
+      "type": "divine-trust-bar",
+      "settings": {}
     },
     "tabs": {
       "type": "tabs",
@@ -863,7 +868,7 @@
   "order": [
     "main",
     "custom_schema",
-    "scrolling_text_1",
+    "product_trust_bar",
     "tabs",
     "collapsible_content",
     "testimonials",
