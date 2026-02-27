@@ -8,15 +8,15 @@
    Aesthetic: warm artisan — Art of Tea / Chado inspired
 ----------------------------------------- */
 :root {
-  --color-background-alt: #f9f5ef;       /* warm cream */
+  --color-background-alt: #d4c4d9;       /* soft lavender */
   --color-accent-hex: #c8a8d8;           /* Divine lavender — punched up */
   --color-accent-dark: #9b76a7;          /* richer, visible purple */
   --color-accent-light: #f0ebf4;         /* very soft lavender tint */
   --color-text-muted: #7a6f64;           /* warm brown-gray */
-  --color-border-hex: #e8dfd0;           /* warm parchment border */
+  --color-border-hex: #c4b4c9;           /* soft lavender border */
   --color-foreground-hex: #1d1917;       /* near-black with warm undertone */
   --color-background-hex: #ffffff;
-  --color-background-warm: #fdf9f4;      /* softer warm white for cards */
+  --color-background-warm: #d4c4d9;      /* soft lavender for cards */
 
   --font-heading: 'Josefin Sans', var(--font-heading-family), sans-serif;
   --font-body: 'Jost', var(--font-body-family), sans-serif;
@@ -374,9 +374,9 @@ h1, h2, h3, h4, h5, h6,
    ============================================ */
 .divine-trust-bar {
   padding: 18px 0;
-  background: #c8a8d8;
-  border-top: 1px solid #b896ca;
-  border-bottom: 1px solid #b896ca;
+  background: var(--color-background-warm);
+  border-top: 1px solid var(--color-border-hex);
+  border-bottom: 1px solid var(--color-border-hex);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6,
 .divine-trust-item svg {
   width: 22px;
   height: 22px;
-  stroke: #fff;
+  stroke: var(--color-accent-dark);
   stroke-width: 1.5;
   fill: none;
   flex-shrink: 0;
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6,
 .divine-trust-item span {
   font-size: 13px;
   letter-spacing: 0.04em;
-  color: var(--color-foreground-hex);
+  color: var(--color-text-muted);
 }
 
 .divine-trust-item strong {
@@ -1068,7 +1068,7 @@ header-drawer summary {
   background-color: var(--color-background-warm) !important;
   /* Reset CSS vars the color scheme may have flipped to dark */
   --color-foreground: 44, 36, 32;
-  --color-background: 253, 249, 244;
+  --color-background: 212, 196, 217;
   --gradient-background: transparent;
 }
 
@@ -1384,7 +1384,7 @@ header-drawer summary {
   font-weight: 500;
   padding: 5px 14px;
   border-radius: 999px;
-  border: 1px solid var(--color-border-hex, #e8dfd0);
+  border: 1px solid var(--color-border-hex, #c4b4c9);
   background-color: var(--color-background-hex, #fff);
   color: var(--color-foreground-hex, #1d1917);
   text-decoration: none;
