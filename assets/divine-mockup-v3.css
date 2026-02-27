@@ -1173,6 +1173,9 @@ header-drawer summary {
   align-self: stretch;
   height: 52px;
   min-height: 52px;
+  background-color: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+  border: none;
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 600;
@@ -1180,6 +1183,11 @@ header-drawer summary {
   text-transform: uppercase;
   border-radius: var(--radius-sm);
   transition: var(--transition-default);
+  box-shadow: none;
+}
+
+.product-form__buttons .product-form__submit:hover {
+  opacity: 0.85;
 }
 
 /* Shop Pay / dynamic checkout — match height */
