@@ -279,7 +279,7 @@ def enhance_body_html(handle, title, product_type, body_html):
     Enhance existing Body HTML with Divine brand voice.
     Strategy: preserve existing content, but ensure consistent structure.
     - Add brand intro paragraph if missing
-    - Ensure steeping/usage instructions are present for teas
+    - Ensure usage instructions ("How to Use") are present where applicable
     - Add quality/sourcing footer
     """
     if not body_html.strip():
@@ -288,7 +288,7 @@ def enhance_body_html(handle, title, product_type, body_html):
     text_lower = body_html.lower()
 
     # -- Check what's already present --
-    has_steeping = any(kw in text_lower for kw in ["steep", "brew", "steeping", "brewing", "water temperature", "preparation"])
+    has_usage = any(kw in text_lower for kw in ["how to use", "steep", "brew", "steeping", "brewing", "water temperature", "preparation"])
     has_ingredients_section = any(kw in text_lower for kw in ["<h5>ingredients", "<h4>ingredients", "<h3>ingredients", "<strong>ingredients"])
     has_taste_notes = any(kw in text_lower for kw in ["taste notes", "tasting notes", "flavor profile", "flavor notes"])
     has_benefits = any(kw in text_lower for kw in ["benefit", "health benefit", "nutritional", "properties"])
