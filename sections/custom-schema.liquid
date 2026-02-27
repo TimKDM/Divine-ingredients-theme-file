@@ -1,0 +1,133 @@
+{%- if section.settings.enable_schema -%}
+  <script type="application/ld+json">
+    {%- if section.settings.schema_type == 'custom' -%}
+      {{ section.settings.custom_json }}
+    {%- elsif section.settings.schema_type == 'product' -%}
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": {{ product.title | json }},
+        "url": {{ request.origin | append: product.url | json }},
+        {%- if product.featured_image -%}
+          "image": {{ product.featured_image | image_url: width: 1200 | json }},
+        {%- endif -%}
+        "description": {{ product.description | strip_html | truncate: 500 | json }},
+        "brand": {
+          "@type": "Brand",
+          "name": {{ product.vendor | json }}
+        },
+        "sku": {{ product.selected_or_first_available_variant.sku | json }},
+        {%- if section.settings.gtin != blank -%}
+          "gtin": {{ section.settings.gtin | json }},
+        {%- endif -%}
+        {%- if section.settings.mpn != blank -%}
+          "mpn": {{ section.settings.mpn | json }},
+        {%- endif -%}
+        {%- if section.settings.material != blank -%}
+          "material": {{ section.settings.material | json }},
+        {%- endif -%}
+        {%- if section.settings.category != blank -%}
+          "category": {{ section.settings.category | json }},
+        {%- endif -%}
+        {%- if section.settings.additional_type != blank -%}
+          "additionalType": {{ section.settings.additional_type | json }},
+        {%- endif -%}
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": {{ request.origin | append: product.url | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "lowPrice": {{ product.price_min | money_without_currency | json }},
+          "highPrice": {{ product.price_max | money_without_currency | json }},
+          "offerCount": {{ product.variants.size | json }},
+          "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}"
+        }
+        {%- if product.metafields.reviews.rating.value != blank -%}
+          ,"aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": {{ product.metafields.reviews.rating.value | json }},
+            "reviewCount": {{ product.metafields.reviews.rating_count.value | default: 0 | json }}
+          }
+        {%- endif -%}
+      }
+    {%- endif -%}
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Schema Markup",
+  "tag": "div",
+  "class": "custom-schema-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_schema",
+      "default": true,
+      "label": "Enable custom schema markup",
+      "info": "When enabled, this replaces or supplements Shopify's default structured data."
+    },
+    {
+      "type": "select",
+      "id": "schema_type",
+      "label": "Schema source",
+      "options": [
+        {
+          "value": "product",
+          "label": "Auto-generate from product data"
+        },
+        {
+          "value": "custom",
+          "label": "Custom JSON-LD (manual entry)"
+        }
+      ],
+      "default": "product",
+      "info": "Auto-generate uses product fields and the settings below. Custom lets you paste raw JSON-LD."
+    },
+    {
+      "type": "header",
+      "content": "Auto-generate settings"
+    },
+    {
+      "type": "text",
+      "id": "gtin",
+      "label": "GTIN / UPC / EAN",
+      "info": "Global Trade Item Number. Helps Google match your product in Shopping results."
+    },
+    {
+      "type": "text",
+      "id": "mpn",
+      "label": "MPN",
+      "info": "Manufacturer Part Number."
+    },
+    {
+      "type": "text",
+      "id": "material",
+      "label": "Material",
+      "info": "E.g. 'Organic Ceremonial Grade Matcha'"
+    },
+    {
+      "type": "text",
+      "id": "category",
+      "label": "Product category",
+      "info": "Google product category. E.g. 'Food, Beverages & Tobacco > Beverages > Tea & Infusions'"
+    },
+    {
+      "type": "text",
+      "id": "additional_type",
+      "label": "Additional schema type URL",
+      "info": "Optional schema.org URL for more specific typing. E.g. 'https://schema.org/FoodProduct'"
+    },
+    {
+      "type": "header",
+      "content": "Custom JSON-LD"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_json",
+      "label": "Custom JSON-LD markup",
+      "info": "Paste your full JSON-LD object here (without the script tags). Liquid variables like {{ product.title }} are available."
+    }
+  ],
+  "templates": ["product"]
+}
+{% endschema %}

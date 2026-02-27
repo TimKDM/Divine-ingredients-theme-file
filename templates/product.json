@@ -65,6 +65,18 @@
             "hide_quick_view": false
           }
         },
+        "product_tags": {
+          "type": "product_tags",
+          "settings": {
+            "column": "left",
+            "max_tags": 5,
+            "show_benefits": true,
+            "show_flavors": true,
+            "show_dietary": false,
+            "margin_top": 0,
+            "hide_quick_view": false
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
@@ -161,7 +173,7 @@
           "type": "complementary",
           "settings": {
             "column": "under-gallery",
-            "block_heading": "Goes well with",
+            "block_heading": "Pairs nicely with",
             "product_list_limit": 10,
             "image_ratio": "square",
             "enable_quick_add": false,
@@ -169,44 +181,6 @@
             "disable_arrow_mobile": true,
             "color_scheme_1": "",
             "margin_top": 0,
-            "hide_quick_view": true
-          }
-        },
-        "collapsible_tab_2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "column": "under-gallery",
-            "heading": "Shipping & Returns",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "truck",
-            "no_padding": true,
-            "content": "<p>For unopened products that you wish to return for reasons other than damage or incorrect items, we offer a return window of 14 days from the date of receipt.<br/><br/><strong>Free shipping on orders over $110.00</strong></p>",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
-            "hide_quick_view": true
-          }
-        },
-        "collapsible_tab_3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "column": "under-gallery",
-            "heading": "24/7 Support",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "headset",
-            "no_padding": true,
-            "content": "<p>You can reach out to us through our [contact channels, e.g., email form, contact page] with any feedback or questions you may have. We'll respond as soon as possible during our regular business hours.</p>",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
             "hide_quick_view": true
           }
         },
@@ -238,52 +212,12 @@
             "hide_quick_view": true
           }
         },
-        "collapsible_tab_1": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "column": "right",
-            "heading": "Additional Info",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "none",
-            "no_padding": true,
-            "content": "",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
-            "hide_quick_view": true
-          }
-        },
         "spacer_1": {
           "type": "spacer",
           "disabled": true,
           "settings": {
             "column": "right",
             "margin_top": 0,
-            "hide_quick_view": true
-          }
-        },
-        "collapsible_tab_4": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "column": "right",
-            "heading": "Main Benefits",
-            "heading_size": "medium",
-            "heading_tag": "h4",
-            "icon": "heart",
-            "no_padding": true,
-            "content": "<p>Our Flux Protein-Rich, Plant-Based Food offers a variety of benefits. It’s packed with high-quality plant-based protein to support muscle growth and recovery, and it’s enriched with essential vitamins and minerals to boost your overall health. Plus, it's made from all-natural ingredients, free from artificial additives, and is easy to digest, making it a perfect addition to any balanced diet.</p>",
-            "page": "",
-            "custom_liquid": "",
-            "open_first_collapsible_row": false,
-            "show_spacer": false,
-            "margin_top": 0,
-            "color_scheme_1": "option-1",
             "hide_quick_view": true
           }
         }
@@ -294,6 +228,7 @@
         "buy_buttons",
         "spacer",
         "description",
+        "product_tags",
         "text",
         "inventory",
         "dynamic_card_icons",
@@ -302,14 +237,10 @@
         "payment_enable_1",
         "payment_enable_2",
         "complementary",
-        "collapsible_tab_2",
-        "collapsible_tab_3",
         "share",
         "spacer_2",
         "spacer_3",
-        "collapsible_tab_1",
-        "spacer_1",
-        "collapsible_tab_4"
+        "spacer_1"
       ],
       "settings": {
         "enable_full_width": false,
@@ -347,7 +278,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Plant-Based. No Additives. Eco-Friendly.</p>",
+            "text": "<p>Where Purity Meets Performance. Lab-Tested. Farm-Direct.</p>",
             "image_link": ""
           }
         },
@@ -362,7 +293,7 @@
         "text_3": {
           "type": "text",
           "settings": {
-            "text": "<p>Organic. All-Natural. Non-Allergenic.</p>",
+            "text": "<p>Farm-Direct. Independently Tested. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -377,7 +308,7 @@
         "text_5": {
           "type": "text",
           "settings": {
-            "text": "<p>Soy Free. Low Sugar. High Protein.</p>",
+            "text": "<p>Zero Fillers. Zero Preservatives. The Real Deal.</p>",
             "image_link": ""
           }
         }
@@ -419,7 +350,7 @@
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Everything we sell is USDA certified organic, sourced direct from farms we know and trust, and independently lab-tested. No synthetic anything, no fillers — just clean ingredients for whatever you're making.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -429,10 +360,10 @@
         "tab_2": {
           "type": "tab",
           "settings": {
-            "heading": "Nutritional Info",
+            "heading": "Ingredients & Sourcing",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Energy: 210 kJ / 50 kcal, Fat: 2g (Saturates: 0.3g), Carbohydrate: 15g (Sugars: 6g), Fiber: 5g, Protein: 3g, Salt: 0g</p>",
+            "row_content": "<p>Origin: Direct from certified organic farms we work with personally. Certifications: USDA Organic, CCOF Certified. Testing: Every batch independently verified for purity, potency, and allergen safety. Free from: Synthetic additives, artificial colors, preservatives, fillers, GMOs. What you see is what you get.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -476,45 +407,45 @@
         "collapsible_row_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products organic?",
+            "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, all our products are crafted with organic ingredients, ensuring the highest quality and purity in every bite or scoop.</p>",
+            "row_content": "<p>Every single one. USDA certified organic and CCOF certified, sourced from certified farms, and independently lab-tested. We don't use the word \"organic\" lightly — we can back it up.</p>",
             "page": ""
           }
         },
         "collapsible_row_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products high in protein?",
+            "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan offerings are rich in plant-based proteins, carefully formulated to support muscle growth and recovery.</p>",
+            "row_content": "<p>Direct from certified organic farms across Japan, India, Sri Lanka, and beyond. We know our growers personally — every partnership is built on trust, fair trade, and a shared commitment to doing things right.</p>",
             "page": ""
           }
         },
         "collapsible_row_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you offer a variety of vegan options?",
+            "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>Certainly! From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>We do! Cafés, restaurants, wellness brands, food manufacturers — if you're buying in volume, we've got you. Check out our wholesale collection or reach out for custom pricing.</p>",
             "page": ""
           }
         },
         "collapsible_row_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Fuel products suitable for athletes?",
+            "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan products are designed to provide the essential nutrients and energy levels needed for athletes to perform at their best.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims — that's how we operate.</p>",
             "page": ""
           }
         },
         "collapsible_row_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are there any artificial additives or preservatives in Fuel products?",
+            "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>No, we pride ourselves on creating clean, wholesome products. You won't find any artificial additives or preservatives in our vegan offerings, ensuring a pure and nourishing experience.</p>",
+            "row_content": "<p>Never. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Clean ingredients — nothing more, nothing less.</p>",
             "page": ""
           }
         }
@@ -555,7 +486,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>The ceremonial matcha is the best I've found outside of Japan. Our café customers always ask what brand we use.</p>",
+            "text": "<p>This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use.</p>",
             "title": "Sarah M.",
             "hide_image": true,
             "product": "supreme-matcha"
@@ -566,7 +497,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>Finally found a reliable source for organic turmeric. The quality is consistent and the bulk pricing is perfect.</p>",
+            "text": "<p>I needed a source for organic turmeric I could truly trust. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice.</p>",
             "title": "Dr. James K.",
             "hide_image": true,
             "product": ""
@@ -577,7 +508,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>The chai blend has become my morning ritual. The spice balance is perfect and the aroma is incredible!</p>",
+            "text": "<p>Switched all my baking ingredients to Divine and honestly — night and day. Everything just tastes more real.</p>",
             "title": "Michelle T.",
             "hide_image": true,
             "product": "mumbai-chai"
@@ -590,10 +521,10 @@
         "column_3"
       ],
       "settings": {
-        "title": "Customer Reviews",
+        "title": "Hear It From the Community",
         "heading_size": "medium",
         "heading_tag": "h2",
-        "caption": "What People Say",
+        "caption": "Real People, Real Talk",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "button_label": "",
@@ -620,7 +551,7 @@
           "type": "slide",
           "settings": {
             "heading": "Complete Nutrition",
-            "caption": "Power up your day. Your destination for delicious, organic cuisine sourced from the earth's bounty.",
+            "caption": "Premium organic ingredients — matcha, spices, superfoods — sourced from farms we trust and tested in labs we don't own.",
             "button_label": "Explore Meals",
             "link": "",
             "show_link_button": false,
@@ -630,8 +561,8 @@
         "slide_2": {
           "type": "slide",
           "settings": {
-            "heading": "Cooking Workshop",
-            "caption": "Our workshops are designed to inspire and empower you to take control of your health and well-being through delicious, nutritious cooking.",
+            "heading": "Matcha Masterclass",
+            "caption": "Learn traditional whisking, nail your latte art, and discover new ways to make matcha part of your daily routine.",
             "button_label": "Book Now",
             "link": "",
             "show_link_button": false,
@@ -641,8 +572,8 @@
         "slide_3": {
           "type": "slide",
           "settings": {
-            "heading": "Fuel Restaurant",
-            "caption": "Your destination for delicious, organic cuisine sourced from the earth's bounty. Indulge guilt-free in our plant-based menu crafted to nourish both body and soul.",
+            "heading": "Wholesale Partners",
+            "caption": "Running a café, building a brand, or producing at scale? We've got bulk pricing, dedicated support, and consistency you can count on.",
             "button_label": "Find Us",
             "link": "",
             "show_link_button": false,
@@ -712,7 +643,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>No Artificial Flavors. Pure Ingredients</p>",
+            "text": "<p>USDA Organic. Zero Additives. Where Purity Meets Performance.</p>",
             "image_link": ""
           }
         },
@@ -726,7 +657,7 @@
         "text_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Sugar-Free. Low Carb. High Fiber. Nutrient Dense</p>",
+            "text": "<p>Lab Tested. Farm-Direct. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -740,7 +671,7 @@
         "text_4": {
           "type": "text",
           "settings": {
-            "text": "<p>Whole Foods. Allergen Friendly. Preservative Free</p>",
+            "text": "<p>No Fillers. No Preservatives. Just the Good Stuff.</p>",
             "image_link": ""
           }
         },
@@ -825,15 +756,65 @@
         "margin_top": 0
       }
     },
+    "certification_logos": {
+      "type": "image-gallery",
+      "blocks": {
+        "logo_1": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_5": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_6": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "caption": "Committed to Quality",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Certified for Your Confidence",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "scroll_direction": "ltc",
+        "scroll_speed": 60,
+        "scroll_height": 200,
+        "hover_stop": true,
+        "color_scheme": "option-2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true,
+        "scroll_height_mobile": 120,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    },
     "quick_info_bar": {
       "type": "quick-info-bar",
       "settings": {
         "heading-1": "Free Shipping",
         "caption-1": "On orders over $75",
-        "heading-2": "USDA Organic",
+        "heading-2": "USDA · CCOF",
         "caption-2": "Certified organic ingredients",
-        "heading-3": "24/7 Support",
-        "caption-3": "We're here to help",
+        "heading-3": "Real Humans",
+        "caption-3": "Actual people who help",
         "heading-4": "Secure Payment",
         "caption-4": "Multiple payment options",
         "image_size": "small",
@@ -864,10 +845,24 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
+    },
+    "custom_schema": {
+      "type": "custom-schema",
+      "settings": {
+        "enable_schema": true,
+        "schema_type": "product",
+        "gtin": "",
+        "mpn": "",
+        "material": "",
+        "category": "Food, Beverages & Tobacco > Beverages > Tea & Infusions",
+        "additional_type": "",
+        "custom_json": ""
+      }
     }
   },
   "order": [
     "main",
+    "custom_schema",
     "scrolling_text_1",
     "tabs",
     "collapsible_content",
@@ -877,6 +872,7 @@
     "scrolling_text",
     "comparison_slider",
     "recently_viewed_products",
+    "certification_logos",
     "quick_info_bar",
     "sticky_add_to_cart"
   ]

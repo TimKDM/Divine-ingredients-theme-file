@@ -1,0 +1,306 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .divine-section {
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .divine-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-section-title,
+    #shopify-section-{{ section.id }} .divine-product-card__title,
+    #shopify-section-{{ section.id }} .divine-product-card__info {
+      color: {{ section.settings.text_color }};
+    }
+  {% endif %}
+  {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-section-label {
+      color: {{ section.settings.accent_color }};
+    }
+  {% endif %}
+  {% if section.settings.card_background_color != blank and section.settings.card_background_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-product-card {
+      background-color: {{ section.settings.card_background_color }};
+    }
+  {% endif %}
+{%- endstyle -%}
+
+{%- assign collection = collections[section.settings.collection] -%}
+
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+  <div class="divine-section-header">
+    {%- if section.settings.caption != blank -%}
+      <span class="divine-section-label">{{ section.settings.caption }}</span>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="divine-section-title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+  </div>
+
+  <div class="divine-product-scroll">
+    {%- if collection != blank -%}
+      {%- for product in collection.products limit: section.settings.products_to_show -%}
+        <a href="{{ product.url }}" class="divine-product-card">
+          <div class="divine-product-card__image">
+            {%- if product.featured_image != blank -%}
+              {{
+                product.featured_image
+                | image_url: width: 500
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '200, 300, 400, 500',
+                  sizes: '240px'
+              }}
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+
+          <div class="divine-product-card__info">
+            {%- if product.compare_at_price > product.price -%}
+              <span class="divine-product-badge divine-product-badge--sale">Sale</span>
+            {%- elsif product.tags contains 'best-seller' -%}
+              <span class="divine-product-badge">Best Seller</span>
+            {%- elsif product.tags contains 'new' -%}
+              <span class="divine-product-badge">New</span>
+            {%- endif -%}
+            <h3 class="divine-product-card__title">{{ product.title }}</h3>
+
+            {%- if product.metafields.custom.subtitle != blank -%}
+              <p class="divine-product-card__meta">{{ product.metafields.custom.subtitle }}</p>
+            {%- elsif product.variants.first.title != 'Default Title' -%}
+              <p class="divine-product-card__meta">{{ product.variants.first.title }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.show_rating -%}
+              <div class="divine-product-rating">
+                {%- for i in (1..5) -%}
+                  <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                {%- endfor -%}
+                {%- if product.metafields.reviews.rating_count != blank -%}
+                  <span>({{ product.metafields.reviews.rating_count }})</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.show_tags -%}
+              <div class="divine-product-card__tags">
+                {% render 'divine-product-tags', product: product, max_tags: 3 %}
+              </div>
+            {%- endif -%}
+
+            <p class="divine-product-card__price {% if product.compare_at_price > product.price %}divine-product-card__price--sale{% endif %}">
+              {{ product.price | money }}
+              {%- if product.compare_at_price > product.price -%}
+                <s>{{ product.compare_at_price | money }}</s>
+              {%- endif -%}
+            </p>
+          </div>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for i in (1..4) -%}
+        <div class="divine-product-card">
+          <div class="divine-product-card__image">
+            {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+          <div class="divine-product-card__info">
+            <h3 class="divine-product-card__title">Sample Product {{ i }}</h3>
+            <p class="divine-product-card__meta">100g · Organic</p>
+            <div class="divine-product-rating">
+              {%- for s in (1..5) -%}
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              {%- endfor -%}
+              <span>(0)</span>
+            </div>
+            <p class="divine-product-card__price">{{ 2000 | money }}</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.show_view_all and collection != blank -%}
+    <div class="divine-products__view-all">
+      <a href="{% if section.settings.view_all_link != blank %}{{ section.settings.view_all_link }}{% else %}{{ collection.url }}{% endif %}" class="divine-btn divine-btn-secondary">{{ section.settings.view_all_label }}</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Divine Products",
+  "tag": "section",
+  "class": "divine-products-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "People Love These"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show star ratings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show benefit & flavor tags",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "View All Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View All' button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "View All button label",
+      "default": "See Everything"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All link (optional override)"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_alt_bg",
+      "label": "Use alternate background",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Products",
+      "settings": {
+        "caption": "People Love These",
+        "title": "Best Sellers",
+        "products_to_show": 4,
+        "show_rating": true,
+        "show_tags": true,
+        "show_view_all": true,
+        "view_all_label": "See Everything",
+        "use_alt_bg": true,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  ]
+}
+{% endschema %}

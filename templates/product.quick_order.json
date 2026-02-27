@@ -150,13 +150,13 @@
           "type": "collapsible_tab",
           "settings": {
             "column": "right",
-            "heading": "Main Benefits",
+            "heading": "Why Divine Ingredients?",
             "heading_size": "medium",
             "heading_tag": "h4",
             "icon": "headset",
             "no_padding": true,
             "image": "",
-            "content": "<p>Our Flux Protein-Rich, Plant-Based Food offers a variety of benefits. It’s packed with high-quality plant-based protein to support muscle growth and recovery, and it’s enriched with essential vitamins and minerals to boost your overall health. Plus, it's made from all-natural ingredients, free from artificial additives, and is easy to digest, making it a perfect addition to any balanced diet.</p>",
+            "content": "<p>Our ingredients are USDA certified organic, sourced directly from trusted farms worldwide, and rigorously lab-tested for purity. Every product is free from synthetic additives, artificial colors, and preservatives — delivering clean, functional ingredients you can trust for your most important creations.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -170,7 +170,7 @@
           "type": "text",
           "settings": {
             "column": "right",
-            "text": "<h3>⭐ Limited time offer ⭐ - 20% Sale</h3><p>Make this space work for you by spotlighting exclusive deals or time-sensitive discounts on your product. For instance: \"Hurry! Save 20% on this item for a limited time only!\" Inspire urgency by emphasizing how long the offer lasts, motivating customers to grab the deal before it’s too late.</p><p></p>",
+            "text": "<h3>Wholesale Available</h3><p>Looking to stock Divine Ingredients for your business? We offer competitive bulk pricing, dedicated account support, and consistent quality for cafés, restaurants, wellness brands, and food manufacturers. Contact us for custom wholesale quotes.</p>",
             "text_style": "body",
             "text_block_size": "small",
             "show_text_background": false,
@@ -261,7 +261,7 @@
             "image": "",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Every Divine Ingredients product is USDA certified organic, sourced directly from trusted farms, and rigorously lab-tested for purity. No synthetic additives, no fillers — just clean, authentic ingredients.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false
@@ -270,11 +270,11 @@
         "tab_2": {
           "type": "tab",
           "settings": {
-            "heading": "Nutritional Info",
+            "heading": "Ingredients & Sourcing",
             "image": "",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Energy: 210 kJ / 50 kcal, Fat: 2g (Saturates: 0.3g), Carbohydrate: 15g (Sugars: 6g), Fiber: 5g, Protein: 3g, Salt: 0g</p>",
+            "row_content": "<p>Origin: Sourced from certified organic farms. Certifications: USDA Organic. Testing: Each batch independently verified for purity, potency, and allergen safety.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false
@@ -318,8 +318,8 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Cooking Workshop",
-            "caption": "Our workshops are designed to inspire and empower you to take control of your health and well-being through delicious, nutritious cooking.",
+            "heading": "Matcha Masterclass",
+            "caption": "Learn the art of preparing ceremonial matcha — from traditional whisking to café-style latte art.",
             "button_label": "Book Now",
             "link": "",
             "show_link_button": false
@@ -330,7 +330,7 @@
           "settings": {
             "image": "",
             "heading": "Complete Nutrition",
-            "caption": "Power up your day. Your destination for delicious, organic cuisine sourced from the earth's bounty.",
+            "caption": "Discover our premium organic ingredients — from ceremonial matcha to artisan spices, sourced for your best creations.",
             "button_label": "Explore Meals",
             "link": "",
             "show_link_button": false
@@ -340,8 +340,8 @@
           "type": "slide",
           "settings": {
             "image": "",
-            "heading": "Flux Restaurant",
-            "caption": "Your destination for delicious, organic cuisine sourced from the earth's bounty. Indulge guilt-free in our plant-based menu crafted to nourish both body and soul.",
+            "heading": "Wholesale Partners",
+            "caption": "Are you a café, restaurant, or brand? We offer wholesale support, competitive pricing, and consistent quality.",
             "button_label": "Find Us",
             "link": "",
             "show_link_button": false
@@ -407,45 +407,45 @@
         "collapsible_row_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Flux products organic?",
+            "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes, all our products are crafted with organic ingredients, ensuring the highest quality and purity in every bite or scoop.</p>",
+            "row_content": "<p>Yes, all Divine Ingredients products are USDA certified organic. We source only from farms that meet strict organic standards, ensuring every ingredient is free from synthetic pesticides, herbicides, and GMOs.</p>",
             "page": ""
           }
         },
         "collapsible_row_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Flux plant-based products high in protein?",
+            "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely! Our vegan offerings are rich in plant-based proteins, carefully formulated to support muscle growth and recovery.</p>",
+            "row_content": "<p>We partner directly with certified organic farms around the world. Our ingredients are sourced through direct farm partnerships, ensuring traceability, fair trade practices, and the highest quality from origin to your kitchen.</p>",
             "page": ""
           }
         },
         "collapsible_row_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you offer a variety of plant-based options?",
+            "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>Certainly! From protein powders to bars, chocolates, and supplements, our diverse range of vegan products caters to all your nutritional needs.</p>",
+            "row_content": "<p>Yes! We offer wholesale pricing for cafés, restaurants, wellness brands, and food manufacturers. Contact our team for custom bulk quotes and dedicated account support.</p>",
             "page": ""
           }
         },
         "collapsible_row_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are Flux products suitable for athletes?",
+            "heading": "How do you ensure product quality?",
             "icon": "check_mark",
-            "row_content": "<p>Absolutely! Our vegan products are designed to provide the essential nutrients and energy levels needed for athletes to perform at their best.</p>",
+            "row_content": "<p>Every batch of our products undergoes independent third-party lab testing for purity, potency, and allergen safety. We maintain rigorous quality control from sourcing through packaging to ensure consistent excellence.</p>",
             "page": ""
           }
         },
         "collapsible_row_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are there any artificial additives or preservatives in Flux products?",
+            "heading": "Are there any additives in your products?",
             "icon": "check_mark",
-            "row_content": "<p>No, we pride ourselves on creating clean, wholesome products. You won't find any artificial additives or preservatives in our vegan offerings, ensuring a pure and nourishing experience.</p>",
+            "row_content": "<p>Absolutely not. We maintain a strict zero additives policy. Our products contain no synthetic fillers, artificial colors, flavors, or preservatives — just pure, clean ingredients as nature intended.</p>",
             "page": ""
           }
         }
@@ -482,7 +482,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>No Artificial Flavors. Pure Ingredients</p>",
+            "text": "<p>USDA Organic. Zero Additives. Pure Ingredients.</p>",
             "image_link": ""
           }
         },
@@ -497,7 +497,7 @@
         "text_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Sugar-Free. Low Carb. High Fiber. Nutrient Dense</p>",
+            "text": "<p>Lab Tested. Ethically Sourced. Allergen Safe.</p>",
             "image_link": ""
           }
         },
@@ -512,7 +512,7 @@
         "text_4": {
           "type": "text",
           "settings": {
-            "text": "<p>Whole Foods. Allergen Friendly. Preservative Free</p>",
+            "text": "<p>No Fillers. No Preservatives. Farm-to-Kitchen.</p>",
             "image_link": ""
           }
         },
@@ -560,7 +560,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>Chocolate Cherry is a delightful blend that satisfies both my sweet cravings and my need for nutrition. The combination of rich chocolate and tangy cherry is perfectly balanced</p>",
+            "text": "<p>The ceremonial matcha from Divine Ingredients is exceptional. The flavor is smooth, vibrant, and authentic — it's become my daily ritual. You can truly taste the quality and care in every cup.</p>",
             "title": "Robin Doe",
             "image": "",
             "hide_image": false,
@@ -572,7 +572,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "4-star",
-            "text": "<p>Mac and Cheeze is a comforting and delicious plant-based alternative to the classic dish. Its creamy texture and cheesy flavor make it a winner for both vegans and non-vegans alike.</p>",
+            "text": "<p>I've been using Divine Ingredients spices in my restaurant for months now. The turmeric and cinnamon are incredibly aromatic and potent — our customers notice the difference. Wholesale ordering is seamless too.</p>",
             "title": "John Smith",
             "image": "",
             "hide_image": false,
@@ -584,7 +584,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "3-star",
-            "text": "<p>Beet Potato Chips are a delightful twist on a classic snack. These crispy chips offer a unique combination of earthy beet flavor and the familiar crunch of potato. Lightly seasoned & yummy.</p>",
+            "text": "<p>The superfood powders from Divine Ingredients have transformed my morning smoothies. The acai and spirulina are so fresh and pure — you can tell they're lab-tested and genuinely organic. Highly recommend.</p>",
             "title": "Liz Lesley",
             "image": "",
             "hide_image": false,
@@ -598,7 +598,7 @@
         "column_3"
       ],
       "settings": {
-        "title": "Testimonials",
+        "title": "What Our Community Says",
         "heading_size": "medium",
         "heading_tag": "h2",
         "caption": "",
@@ -643,16 +643,16 @@
       "settings": {
         "image-1": "",
         "heading-1": "Free Shipping",
-        "caption-1": "For orders over $110",
+        "caption-1": "On orders over $75",
         "image-2": "",
-        "heading-2": "Money Guarantee",
-        "caption-2": "30 days for an exchange",
+        "heading-2": "USDA Organic",
+        "caption-2": "Certified organic ingredients",
         "image-3": "",
-        "heading-3": "Online Support",
-        "caption-3": "24 hours per day",
+        "heading-3": "24/7 Support",
+        "caption-3": "We're here to help",
         "image-4": "",
-        "heading-4": "Flexible Payment",
-        "caption-4": "Multiple Credit Cards",
+        "heading-4": "Secure Payment",
+        "caption-4": "Multiple payment options",
         "image_size": "small",
         "add_border": false,
         "full_width_background": false,

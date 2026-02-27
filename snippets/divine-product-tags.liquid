@@ -1,0 +1,56 @@
+{% comment %}
+  Renders product tag badges for a given product.
+  Shows benefit and flavor tags as small pills on product cards.
+
+  Accepts:
+  - product: {Object} Product Liquid object
+  - max_tags: {Number} Maximum tags to show (default: 3)
+  - show_benefits: {Boolean} Show benefit tags (default: true)
+  - show_flavors: {Boolean} Show flavor tags (default: true)
+  - show_dietary: {Boolean} Show dietary tags (default: false)
+  - tag_style: {String} "pill" or "text" (default: "pill")
+
+  Usage:
+  {% render 'divine-product-tags', product: product, max_tags: 3 %}
+{% endcomment %}
+
+{%- liquid
+  assign max_display = max_tags | default: 3
+  assign displayed = 0
+  assign tag_items = ''
+-%}
+
+{%- for tag in product.tags -%}
+  {%- if displayed >= max_display -%}
+    {%- break -%}
+  {%- endif -%}
+
+  {%- liquid
+    assign tag_lower = tag | downcase
+    assign is_benefit = false
+    assign is_flavor = false
+    assign is_dietary = false
+
+    if tag contains 'Benefit_'
+      assign is_benefit = true
+      assign tag_label = tag | remove: 'Benefit_'
+    elsif tag contains 'Flavor_'
+      assign is_flavor = true
+      assign tag_label = tag | remove: 'Flavor_'
+    elsif tag contains 'Dietary_'
+      assign is_dietary = true
+      assign tag_label = tag | remove: 'Dietary_'
+    endif
+  -%}
+
+  {%- if is_benefit and show_benefits != false -%}
+    <span class="divine-tag divine-tag--benefit">{{ tag_label }}</span>
+    {%- assign displayed = displayed | plus: 1 -%}
+  {%- elsif is_flavor and show_flavors != false -%}
+    <span class="divine-tag divine-tag--flavor">{{ tag_label }}</span>
+    {%- assign displayed = displayed | plus: 1 -%}
+  {%- elsif is_dietary and show_dietary == true -%}
+    <span class="divine-tag divine-tag--dietary">{{ tag_label }}</span>
+    {%- assign displayed = displayed | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "divine_story": {
+      "type": "divine-story-page",
+      "blocks": {
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "caption": "Our Story",
+            "heading": "How We Got Here (And Why We're Not Stopping)"
+          }
+        },
+        "intro": {
+          "type": "intro",
+          "settings": {
+            "heading": "We Believe Good Food Should Be Simple, Honest, and Backed by Facts",
+            "text": "<p>Divine Ingredients exists because we believe you deserve to know exactly what's in your food — and where it came from. We're not here to slap a label on something and call it organic. We go to the farms. We test every batch. We build relationships that last.</p><p>Whether you're creating in your kitchen, developing products, or growing your brand, we're in your corner. Not as a vendor — as a true partner.</p>"
+          }
+        },
+        "story_1": {
+          "type": "image_text",
+          "settings": {
+            "caption": "How It Started",
+            "heading": "We Couldn't Find What We Wanted, So We Built It",
+            "text": "<p>It started with frustration. We wanted clean, organic ingredients we could actually trace back to the source — and they didn't exist in the way we needed them to. So we bought plane tickets, visited farms, and started building the kind of supply chain we wished someone else had already built.</p><p>From matcha fields in Japan to spice growers in India and tea estates in Sri Lanka, every partnership is rooted in trust, fair trade, and a shared love for doing things right.</p>",
+            "layout": "image_left",
+            "use_alt_bg": false
+          }
+        },
+        "story_2": {
+          "type": "image_text",
+          "settings": {
+            "caption": "Our Process",
+            "heading": "We Test Everything Because Facts Actually Matter",
+            "text": "<p>Every ingredient that carries our name has been lab-tested by independent third parties. Not some of them — all of them. Purity, potency, heavy metals, allergens. If it doesn't pass, it doesn't ship.</p><p>Zero synthetic additives. Zero fillers. Zero artificial anything. We know that sounds like every brand's tagline, but for us it's the baseline. The bare minimum. The starting point.</p>",
+            "layout": "image_right",
+            "use_alt_bg": true
+          }
+        },
+        "values": {
+          "type": "values",
+          "settings": {
+            "caption": "What We Stand For",
+            "heading": "The Things We Won't Bend On",
+            "value_1_title": "Quality Over Everything",
+            "value_1_text": "We'd rather carry fewer products than compromise on a single one. Every ingredient is selected with intention and tested with rigor.",
+            "value_2_title": "Radical Transparency",
+            "value_2_text": "You deserve the full picture — where it's from, how it's tested, what's in it. We don't do hidden fillers or vague labels.",
+            "value_3_title": "People and Planet",
+            "value_3_text": "We partner with growers who care about sustainable practices and fair wages. Good ingredients start with good relationships.",
+            "value_4_title": "Your Success Is the Point",
+            "value_4_text": "We built this for creators, makers, and kitchen innovators. Your success is the whole point — and we're here to support every step.",
+            "use_alt_bg": false
+          }
+        },
+        "story_3": {
+          "type": "image_text",
+          "settings": {
+            "caption": "Our Community",
+            "heading": "You're in Good Company",
+            "text": "<p>When you choose Divine, you're joining a community of people who genuinely care about what goes into their food, their products, and their bodies. That's not a niche — that's a movement.</p><p>From home chefs discovering the joy of real matcha to wellness brands formulating their next breakthrough, café owners pouring signature drinks, and creators pushing the boundaries of what good food can be — we're honored to be part of your journey.</p>",
+            "button_label": "Shop All Collections",
+            "button_link": "shopify:\/\/collections",
+            "layout": "image_left",
+            "use_alt_bg": true
+          }
+        },
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "Ready to Make Something Great?",
+            "text": "Join the community of creators, chefs, and wellness brands who trust Divine for the ingredients that matter most.",
+            "button_label": "Explore Collections",
+            "button_link": "shopify:\/\/collections",
+            "use_dark_bg": true
+          }
+        }
+      },
+      "block_order": ["hero", "intro", "story_1", "story_2", "values", "story_3", "cta"],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "divine_story"
+  ]
+}
