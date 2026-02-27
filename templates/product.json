@@ -59,7 +59,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "column": "left",
+            "column": "under-gallery",
             "margin_top": 0,
             "text_size": "medium",
             "hide_quick_view": false
