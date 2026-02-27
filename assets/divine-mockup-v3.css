@@ -671,10 +671,12 @@ h1, h2, h3, h4, h5, h6,
    ============================================ */
 .divine-brand-story__image {
   width: 100%;
-  aspect-ratio: 16/10;
+  max-width: 480px;
+  aspect-ratio: 4/3;
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: 24px;
+  margin-inline: auto;
 }
 
 .divine-brand-story__image img {
@@ -748,7 +750,8 @@ h1, h2, h3, h4, h5, h6,
   }
   .divine-brand-story__image {
     margin-bottom: 0;
-    aspect-ratio: 1;
+    aspect-ratio: 4/5;
+    max-width: 420px;
   }
 }
 
@@ -1147,33 +1150,28 @@ header-drawer summary {
 }
 
 /* ============================================
-   PRODUCT PAGE — Buy Buttons (under-gallery)
-   Full-width, uniform buttons
+   PRODUCT PAGE — Buy Buttons (full-width, uniform)
    ============================================ */
-.under-gallery .product-form__buttons {
-  flex-direction: column;
+.product-form__buttons {
+  flex-direction: column !important;
   gap: 0.75rem;
-  width: 100%;
+  width: 100% !important;
 }
 
-.under-gallery .product-form__buttons .product-form__submit,
-.under-gallery .product-form__buttons .shopify-payment-button {
+.product-form__buttons .product-form__submit,
+.product-form__buttons .shopify-payment-button {
   width: 100% !important;
   max-width: 100% !important;
-  flex: 1 1 100%;
+  flex: 1 1 100% !important;
 }
 
-.under-gallery .product-form__buttons .product-form__submit {
+.product-form__buttons .product-form__submit {
   align-self: stretch;
   min-height: 50px;
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
-.under-gallery .shopify-payment-button__button {
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button {
+  width: 100% !important;
   min-height: 50px !important;
 }
 
@@ -1191,6 +1189,9 @@ header-drawer summary {
   border-radius: 50% !important;
   overflow: hidden;
   aspect-ratio: 1;
+  max-width: 420px;
+  max-height: 420px;
+  margin-inline: auto;
 }
 
 /* Thumbnail strip on product pages */
@@ -1235,10 +1236,31 @@ header-drawer summary {
 .recently-viewed .card .card-inner .card-media,
 .recently-viewed-products .card .card-inner .card-media,
 [class*="recently-viewed"] .card .card-inner .card-media,
-[class*="recently_viewed"] .card .card-inner .card-media {
-  border-radius: 50%;
+[class*="recently_viewed"] .card .card-inner .card-media,
+.recently-viewed .card .card-inner .card__media,
+.recently-viewed .card__media,
+.recently-viewed .card-inner .card__media,
+[class*="recently-viewed"] .card__media,
+[class*="recently_viewed"] .card__media {
+  border-radius: 50% !important;
   overflow: hidden;
   aspect-ratio: 1;
+}
+
+.recently-viewed .card__media .media,
+[class*="recently-viewed"] .card__media .media,
+[class*="recently_viewed"] .card__media .media {
+  border-radius: 50% !important;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.recently-viewed .card__media .media img,
+[class*="recently-viewed"] .card__media .media img,
+[class*="recently_viewed"] .card__media .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ============================================

@@ -696,6 +696,7 @@
         "text_4",
         "text_5"
       ],
+      "disabled": true,
       "settings": {
         "scroll_direction": "rtl",
         "enable_scroll_decoration": false,
@@ -813,6 +814,7 @@
     },
     "quick_info_bar": {
       "type": "quick-info-bar",
+      "disabled": true,
       "settings": {
         "heading-1": "Free Shipping",
         "caption-1": "On orders over $75",
