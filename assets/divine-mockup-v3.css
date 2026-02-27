@@ -1173,6 +1173,7 @@ header-drawer summary {
   align-self: stretch;
   height: 52px;
   min-height: 52px;
+  padding: 0 24px;
   background-color: var(--color-foreground-hex);
   color: var(--color-background-hex);
   border: none;
@@ -1200,11 +1201,13 @@ header-drawer summary {
   width: 100% !important;
   height: 52px !important;
   min-height: 52px !important;
+  padding: 0 24px !important;
   border-radius: var(--radius-sm) !important;
   background-color: var(--color-foreground-hex) !important;
   color: var(--color-background-hex) !important;
   border: none !important;
   box-shadow: none !important;
+  box-sizing: border-box !important;
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 600;
