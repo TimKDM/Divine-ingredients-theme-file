@@ -1165,15 +1165,16 @@ header-drawer summary {
   width: 100% !important;
   max-width: 100% !important;
   flex: 0 0 auto !important;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+  align-self: stretch !important;
 }
 
 /* Add to Cart — Divine primary */
 .product-form__buttons .product-form__submit {
-  align-self: stretch;
-  height: 52px;
-  min-height: 52px;
-  padding: 0 24px;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  padding: 0 24px !important;
   background-color: var(--color-foreground-hex);
   color: var(--color-background-hex);
   border: none;
@@ -1193,14 +1194,16 @@ header-drawer summary {
 
 /* Shop Pay / dynamic checkout — match height */
 .product-form__buttons .shopify-payment-button {
-  height: 52px;
-  min-height: 52px;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
 }
 
 .product-form__buttons .shopify-payment-button .shopify-payment-button__button {
   width: 100% !important;
   height: 52px !important;
   min-height: 52px !important;
+  max-height: 52px !important;
   padding: 0 24px !important;
   border-radius: var(--radius-sm) !important;
   background-color: var(--color-foreground-hex) !important;
@@ -1220,9 +1223,17 @@ header-drawer summary {
   opacity: 0.85 !important;
 }
 
+/* Branded button inner div — override base.css max-height cap */
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button .shopify-cleanslate div[role=button] {
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+}
+
 .product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
   height: 52px !important;
   min-height: 52px !important;
+  max-height: 52px !important;
   font-family: var(--font-heading);
   letter-spacing: 0.06em;
 }
