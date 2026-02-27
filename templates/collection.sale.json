@@ -3,7 +3,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": false,
+        "show_collection_description": true,
         "show_breadcrumbs": true,
         "collection_style": "style-three",
         "desktop_content_alignment": "left",
@@ -63,6 +63,52 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "disable_arrow_mobile": true
+      }
+    },
+    "collection_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes this collection special?",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right product?",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are these products organic?",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "caption": "Common Questions",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "open_first_collapsible_row": true,
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true
       }
     },
     "certification_logos": {
@@ -144,6 +190,7 @@
     "banner",
     "product-grid",
     "subcollections",
+    "collection_faq",
     "certification_logos",
     "quick_info_bar"
   ]
