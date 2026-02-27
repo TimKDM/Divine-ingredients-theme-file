@@ -845,10 +845,24 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
+    },
+    "custom_schema": {
+      "type": "custom-schema",
+      "settings": {
+        "enable_schema": true,
+        "schema_type": "product",
+        "gtin": "",
+        "mpn": "",
+        "material": "",
+        "category": "Food, Beverages & Tobacco > Beverages > Tea & Infusions",
+        "additional_type": "",
+        "custom_json": ""
+      }
     }
   },
   "order": [
     "main",
+    "custom_schema",
     "scrolling_text_1",
     "tabs",
     "collapsible_content",
