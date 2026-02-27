@@ -12,7 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_breadcrumbs": true,
         "collection_style": "style-three",
         "desktop_content_alignment": "left",
@@ -128,6 +128,14 @@
         "padding_top": 20,
         "padding_bottom": 72,
         "ignore_spacing": true
+      }
+    },
+    "collection_description": {
+      "type": "collection-description",
+      "settings": {
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collection_faq": {
@@ -273,6 +281,7 @@
     "banner",
     "subcollections",
     "product-grid",
+    "collection_description",
     "collection_faq",
     "recently_viewed_products",
     "certification_logos",
