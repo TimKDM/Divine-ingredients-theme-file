@@ -144,22 +144,65 @@
     margin-top: 0;
     letter-spacing: 0.02em;
   }
-  .divine-contact-form-card .field__label {
+  /* Form fields — stack with vertical gaps */
+  .divine-contact-form-card .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .divine-contact-form-card .field__label,
+  .divine-contact-form-card .form__label {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    margin-bottom: 8px;
+    order: -1;
+    position: static;
+    pointer-events: auto;
+    color: rgba(var(--color-foreground));
+  }
+  .divine-contact-form-card .field__input,
+  .divine-contact-form-card .text-area {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: 'Jost', var(--font-body-family), sans-serif;
+    border: 1px solid rgba(var(--color-base-border-1));
+    border-radius: 6px;
+    background: transparent;
+    color: rgb(var(--color-foreground));
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+  }
+  .divine-contact-form-card .select__select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: 'Jost', var(--font-body-family), sans-serif;
+    border: 1px solid rgba(var(--color-base-border-1));
+    border-radius: 6px;
+    background: transparent;
+    color: rgb(var(--color-foreground));
+    cursor: pointer;
+    margin: 0;
   }
   .divine-contact-form-card .field__input:focus,
-  .divine-contact-form-card select:focus,
-  .divine-contact-form-card textarea:focus {
+  .divine-contact-form-card .text-area:focus,
+  .divine-contact-form-card .select__select:focus {
     border-color: var(--color-accent-dark, #9b76a7);
     outline: none;
     box-shadow: 0 0 0 3px rgba(155, 118, 167, 0.12);
   }
+  .divine-contact-form-card .field:before,
+  .divine-contact-form-card .field:after {
+    content: none;
+  }
   .divine-contact-submit {
     width: 100%;
+    margin-top: 8px;
   }
 
   /* Quick Help Section */
