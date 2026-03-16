@@ -1,0 +1,400 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ingredient Guide</p>",
+            "heading_size": "extra-large",
+            "heading_style": "default",
+            "heading_tag": "h1",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#d4c4d9"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything you need to know about what goes into our products — where it comes from, how it's sourced, and why it matters.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "image": "",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "ignore_spacing": false,
+        "color_scheme_1": "",
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Pure Ingredients. Full Transparency.</p>",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h2",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#d4c4d9"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Divine Ingredients, we believe you deserve to know exactly what you're putting into your body. Every product we carry is USDA certified organic, independently lab-tested, and free from synthetic additives, fillers, or artificial preservatives. This guide is your resource for understanding our ingredients — their origins, benefits, and the quality standards we uphold.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 32,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "quality_standards": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "hide_image": false,
+            "title": "100% Organic",
+            "text": "<p>Every ingredient is USDA certified organic and CCOF certified. No pesticides, no GMOs, no synthetic chemicals — ever.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "hide_image": false,
+            "title": "Ethically Sourced",
+            "text": "<p>We work directly with organic farms across Japan, India, Sri Lanka, and beyond. Direct relationships mean full traceability and fair practices.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "hide_image": false,
+            "title": "Tested for Quality",
+            "text": "<p>Every batch is independently tested by third-party labs for purity, potency, heavy metals, and allergens. Microbiologically tested for your safety.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["column_1", "column_2", "column_3"],
+      "settings": {
+        "multicolumn_style": "style-two",
+        "enable_card_background": false,
+        "caption": "Our Standards",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Why Divine Ingredients Are Different",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "image_width": "fourth",
+        "image_ratio": "circle",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "option-2",
+        "color_scheme_1": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "disable_arrow_mobile": true
+      }
+    },
+    "teas_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Organic Loose Leaf Teas",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our tea collection spans black, green, oolong, herbal, and wellness varieties — all sourced as whole loose leaf for maximum flavor and aroma. Each tea is carefully selected from organic estates and blended without artificial flavoring. Whether you prefer a bold Assam, a delicate Gyokuro, or a soothing chamomile, our teas are crafted for the ritual of a perfect cup.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Tea Rituals",
+            "button_link": "/collections/tea-rituals"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "",
+        "caption": "Teas",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "powders_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Superfood Powders",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From ceremonial-grade matcha to vibrant blue spirulina and adaptogenic mushroom powders, our superfood range is designed to boost your smoothies, lattes, and recipes. Every powder is single-ingredient or transparently blended — no fillers, no maltodextrin, no hidden additives. Just pure, nutrient-dense goodness.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Superfoods",
+            "button_link": "/collections/smoothies-superfoods"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "",
+        "caption": "Powders",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "full_width": true,
+        "color_scheme": "option-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "spices_herbs_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Herbs, Spices & Botanicals",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our organic spices and botanicals are sourced whole or minimally processed to preserve their natural oils and potency. From warming cinnamon and turmeric to fragrant rose petals and chamomile flowers, these ingredients bring authentic flavor and holistic benefits to your kitchen and wellness rituals.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Herbs & Spices",
+            "button_link": "/collections/spices"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "",
+        "caption": "Herbs & Spices",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "sweeteners_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natural Sweeteners",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skip the refined sugar. Our organic sweeteners — including coconut sugar, maple sugar, date powder, and lucuma — offer natural sweetness with added minerals and a lower glycemic impact. Perfect for baking, beverages, and everyday cooking.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Sweeteners",
+            "button_link": "/collections/organic-sweeteners"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "image": "",
+        "caption": "Sweeteners",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "full_width": true,
+        "color_scheme": "option-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "cta_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Questions About Our Ingredients?</p>",
+            "heading_size": "extra-large",
+            "heading_style": "default",
+            "heading_tag": "h2",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#ffffff"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're always happy to share more about our sourcing, testing, and quality standards. Reach out anytime — transparency is at the heart of everything we do.</p>",
+            "text_style": "body"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "/pages/contact-us",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop All Collections",
+            "button_link_2": "shopify://collections",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": ["heading", "text", "buttons"],
+      "settings": {
+        "image": "",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "ignore_spacing": false,
+        "color_scheme_1": "",
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner",
+    "intro",
+    "quality_standards",
+    "teas_section",
+    "powders_section",
+    "spices_herbs_section",
+    "sweeteners_section",
+    "cta_banner"
+  ]
+}
