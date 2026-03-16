@@ -1,1 +1,192 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":36,"padding_bottom":36}},"comparison_slider":{"type":"comparison-slider","settings":{"caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","title":"","heading_size":"medium","heading_style":"default","heading_tag":"h2","image":"","image_2":"","animate_slider":true,"height":450,"before_text":"In-Person Events","after_text":"Virtual Workshops","disable_before_after":false,"full_width":false,"accessibility_info":"Compare Items","padding_top":12,"padding_bottom":12,"ignore_spacing":false,"mobile_height":450}},"events_calendar":{"type":"events-calendar","blocks":{"event_1":{"type":"event","settings":{"event_date":7,"event_month":"Feb","hide_date":false,"event_time":"Sunday, 12:30pm","event_price":"37","event_heading":"Matcha Masterclass: From Ceremony to Latte Art","heading_size":"medium","heading_tag":"h2","event_description":"<p>Get hands-on with ceremonial matcha — learn traditional whisking techniques, nail your latte art, and discover new ways to make matcha part of your daily routine. Whether you're just starting out or a seasoned matcha enthusiast, this one's for you.</p>","event_location":"Divine Ingredients HQ, Vancouver, BC, Canada","link_label":"Reserve Your Spot","link":""}},"event_2":{"type":"event","settings":{"event_date":15,"event_month":"Mar","hide_date":false,"event_time":"Saturday, 7:30pm","event_price":"25","event_heading":"Superfood Smoothie Workshop","heading_size":"medium","heading_tag":"h2","event_description":"<p>Learn how to build vibrant, nutrient-packed smoothies with organic superfood powders. Real recipes, real tips, from wellness creators who use these ingredients every day. You'll never look at smoothies the same way.</p>","event_location":"Online — Virtual Workshop via Zoom","link_label":"Reserve Your Spot","link":""}},"event_3":{"type":"event","settings":{"event_date":25,"event_month":"Jun","hide_date":false,"event_time":"Monday, 5:30pm","event_price":"20","event_heading":"Spice Blending & Chai Crafting","heading_size":"medium","heading_tag":"h2","event_description":"<p>Dive into the world of artisan spices and learn to blend your own custom chai from scratch. Hands-on, fun, and you leave with your own creation. Bring your curiosity (and your taste buds).</p>","event_location":"Community Kitchen, 456 Main Street, Vancouver, BC, Canada","link_label":"Reserve Your Spot","link":""}}},"block_order":["event_1","event_2","event_3"],"settings":{"caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading_size":"medium","heading_style":"default","heading_tag":"h2","color_scheme":"","padding_top":36,"padding_bottom":0,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0}},"rich_text":{"type":"rich-text","blocks":{"image":{"type":"image","settings":{"image":""}},"heading":{"type":"heading","settings":{"heading":"<p>Want in? Get event updates and exclusive invites before anyone else.</p>","heading_size":"medium","heading_style":"default","heading_tag":"h2"}}},"block_order":["image","heading"],"settings":{"desktop_content_position":"center","content_alignment":"center","full_width":true,"color_scheme":"","padding_top":0,"padding_bottom":32,"ignore_spacing":false,"mobile_content_alignment":"center"}},"newsletter":{"type":"newsletter","blocks":{"email_form":{"type":"email_form","settings":{}}},"block_order":["email_form"],"settings":{"full_width":true,"color_scheme":"","padding_top":0,"padding_bottom":0,"ignore_spacing":true}},"separator":{"type":"separator","settings":{"margin_top_desktop":36,"margin_bottom_desktop":0,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0}}},"order":["main","comparison_slider","events_calendar","rich_text","newsletter","separator"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "comparison_slider": {
+      "type": "comparison-slider",
+      "settings": {
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "image": "",
+        "image_2": "",
+        "animate_slider": true,
+        "height": 450,
+        "before_text": "In-Person Events",
+        "after_text": "Virtual Workshops",
+        "disable_before_after": false,
+        "full_width": false,
+        "accessibility_info": "Compare Items",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "ignore_spacing": false,
+        "mobile_height": 450
+      }
+    },
+    "events_calendar": {
+      "type": "events-calendar",
+      "blocks": {
+        "event_1": {
+          "type": "event",
+          "settings": {
+            "event_date": 7,
+            "event_month": "Feb",
+            "hide_date": false,
+            "event_time": "Sunday, 12:30pm",
+            "event_price": "37",
+            "event_heading": "Matcha Masterclass: From Ceremony to Latte Art",
+            "heading_size": "medium",
+            "heading_tag": "h2",
+            "event_description": "<p>Get hands-on with ceremonial matcha — learn traditional whisking techniques, nail your latte art, and discover new ways to make matcha part of your daily routine. Whether you're just starting out or a seasoned matcha enthusiast, this one's for you.</p>",
+            "event_location": "Divine Ingredients HQ, Vancouver, BC, Canada",
+            "link_label": "Reserve Your Spot",
+            "link": ""
+          }
+        },
+        "event_2": {
+          "type": "event",
+          "settings": {
+            "event_date": 15,
+            "event_month": "Mar",
+            "hide_date": false,
+            "event_time": "Saturday, 7:30pm",
+            "event_price": "25",
+            "event_heading": "Superfood Smoothie Workshop",
+            "heading_size": "medium",
+            "heading_tag": "h2",
+            "event_description": "<p>Learn how to build vibrant, nutrient-packed smoothies with organic superfood powders. Real recipes, real tips, from wellness creators who use these ingredients every day. You'll never look at smoothies the same way.</p>",
+            "event_location": "Online — Virtual Workshop via Zoom",
+            "link_label": "Reserve Your Spot",
+            "link": ""
+          }
+        },
+        "event_3": {
+          "type": "event",
+          "settings": {
+            "event_date": 25,
+            "event_month": "Jun",
+            "hide_date": false,
+            "event_time": "Monday, 5:30pm",
+            "event_price": "20",
+            "event_heading": "Spice Blending & Chai Crafting",
+            "heading_size": "medium",
+            "heading_tag": "h2",
+            "event_description": "<p>Dive into the world of artisan spices and learn to blend your own custom chai from scratch. Hands-on, fun, and you leave with your own creation. Bring your curiosity (and your taste buds).</p>",
+            "event_location": "Community Kitchen, 456 Main Street, Vancouver, BC, Canada",
+            "link_label": "Reserve Your Spot",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "event_1",
+        "event_2",
+        "event_3"
+      ],
+      "settings": {
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image": ""
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Want in? Get event updates and exclusive invites before anyone else.</p>",
+            "heading_size": "medium",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "heading"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "ignore_spacing": false,
+        "mobile_content_alignment": "center"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "email_form"
+      ],
+      "settings": {
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "ignore_spacing": true
+      }
+    },
+    "separator": {
+      "type": "separator",
+      "settings": {
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 0,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "comparison_slider",
+    "events_calendar",
+    "rich_text",
+    "newsletter",
+    "separator"
+  ]
+}

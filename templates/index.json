@@ -15,7 +15,9 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "Rooted in Purpose · Driven by Wellness · 100% Organic"
+            "text": "Rooted in Purpose · Driven by Wellness · 100% Organic",
+            "badge_bg": "",
+            "badge_color": ""
           }
         },
         "heading": {
@@ -30,19 +32,33 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Superfoods",
-            "button_link_1": "shopify:\/\/collections\/organic-superfood-powders",
+            "button_link_1": "shopify://collections/organic-superfood-powders",
+            "btn1_bg": "",
+            "btn1_color": "",
             "button_label_2": "Explore Tea Rituals",
-            "button_link_2": "shopify:\/\/collections\/organic-herbal-tea"
+            "button_link_2": "shopify://collections/organic-herbal-tea",
+            "btn2_color": ""
           }
         }
       },
-      "block_order": ["badge", "heading", "subtitle", "buttons"],
+      "block_order": [
+        "badge",
+        "heading",
+        "subtitle",
+        "buttons"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
+        "image": "shopify://shop_images/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
+        "image_height": 70,
+        "video_url": "",
+        "autoplay": true,
+        "loop": true,
+        "muted": true,
         "heading": "<p>Pure Organic Ingredients for <em>Everyday Wellness</em></p>",
         "subtitle": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
-        "image_height": 70,
-        "overlay_opacity": 100
+        "overlay_opacity": 100,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_trust_bar": {
@@ -52,33 +68,51 @@
           "type": "trust_item",
           "settings": {
             "icon": "shield",
-            "text": "<strong>USDA</strong> Organic · CCOF Certified"
+            "text": "<strong>USDA</strong> Organic · CCOF Certified",
+            "link": ""
           }
         },
         "trust_2": {
           "type": "trust_item",
           "settings": {
             "icon": "package",
-            "text": "<strong>Free Ship</strong> on Orders $100+"
+            "text": "<strong>Free Ship</strong> on Orders $100+",
+            "link": ""
           }
         },
         "trust_3": {
           "type": "trust_item",
           "settings": {
             "icon": "leaf",
-            "text": "<strong>Zero</strong> Additives. Ever."
+            "text": "<strong>Zero</strong> Additives. Ever.",
+            "link": ""
           }
         },
         "trust_4": {
           "type": "trust_item",
           "settings": {
             "icon": "check",
-            "text": "<strong>Every Batch</strong> Lab Tested"
+            "text": "<strong>Every Batch</strong> Lab Tested",
+            "link": ""
           }
         }
       },
-      "block_order": ["trust_1", "trust_2", "trust_3", "trust_4"],
-      "settings": {}
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3",
+        "trust_4"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "icon_color": "",
+        "border_color": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
     },
     "divine_lifestyle": {
       "type": "divine-categories",
@@ -86,40 +120,57 @@
         "lifestyle_1": {
           "type": "category",
           "settings": {
-            "collection": "shopify:\/\/collections\/matcha-tea-powders",
+            "collection": "shopify://collections/matcha-tea-powders",
             "heading": "Focus & Energy",
-            "subtitle": "Matcha, mushroom blends — fuel your mind naturally"
+            "subtitle": "Matcha, mushroom blends — fuel your mind naturally",
+            "link": ""
           }
         },
         "lifestyle_2": {
           "type": "category",
           "settings": {
-            "collection": "shopify:\/\/collections\/spices",
+            "collection": "shopify://collections/spices",
             "heading": "Detox & Wellness",
-            "subtitle": "Turmeric, herbs — nourish from the inside out"
+            "subtitle": "Turmeric, herbs — nourish from the inside out",
+            "link": ""
           }
         },
         "lifestyle_3": {
           "type": "category",
           "settings": {
-            "collection": "shopify:\/\/collections\/organic-herbal-tea",
+            "collection": "shopify://collections/organic-herbal-tea",
             "heading": "Tea Rituals",
-            "subtitle": "Loose leaf teas for every mood and moment"
+            "subtitle": "Loose leaf teas for every mood and moment",
+            "link": ""
           }
         },
         "lifestyle_4": {
           "type": "category",
           "settings": {
-            "collection": "shopify:\/\/collections\/organic-superfood-powders",
+            "collection": "shopify://collections/organic-superfood-powders",
             "heading": "Smoothies & Superfoods",
-            "subtitle": "Superfood powders to boost your daily blends"
+            "subtitle": "Superfood powders to boost your daily blends",
+            "link": ""
           }
         }
       },
-      "block_order": ["lifestyle_1", "lifestyle_2", "lifestyle_3", "lifestyle_4"],
+      "block_order": [
+        "lifestyle_1",
+        "lifestyle_2",
+        "lifestyle_3",
+        "lifestyle_4"
+      ],
       "settings": {
         "caption": "Find Your Ritual",
-        "title": "Shop by Lifestyle"
+        "title": "Shop by Lifestyle",
+        "use_alt_bg": true,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_products": {
@@ -128,12 +179,21 @@
         "caption": "Community Favorites",
         "title": "Our Most Loved Ingredients",
         "collection": "powder",
-        "products_to_show": 6,
+        "products_to_show": 4,
         "show_rating": true,
+        "show_tags": true,
         "show_view_all": true,
         "view_all_label": "Shop All Best Sellers",
-        "view_all_link": "shopify:\/\/collections\/powder",
-        "use_alt_bg": false
+        "view_all_link": "shopify://collections/powder",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "card_background_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_brand_story": {
@@ -172,13 +232,28 @@
           }
         }
       },
-      "block_order": ["value_1", "value_2", "value_3", "value_4"],
+      "block_order": [
+        "value_1",
+        "value_2",
+        "value_3",
+        "value_4"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Smoothie-blog-image-2.jpg",
+        "image": "shopify://shop_images/Smoothie-blog-image-2.jpg",
         "heading": "We Care About What Goes In — And Who It Goes To",
         "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency.",
         "button_label": "Read Our Story",
-        "button_link": "shopify:\/\/pages\/about-us"
+        "button_link": "shopify://pages/about-us",
+        "button_bg": "",
+        "button_color": "",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "certification_logos": {
@@ -209,7 +284,14 @@
           "settings": {}
         }
       },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_5",
+        "logo_6"
+      ],
       "settings": {
         "caption": "Committed to Quality",
         "text_style": "caption-with-letter-spacing",
@@ -229,61 +311,6 @@
         "scroll_height_mobile": 120,
         "margin_spacing": "negative",
         "margin_top": 0
-      }
-    },
-    "divine_testimonials": {
-      "type": "divine-testimonials",
-      "blocks": {
-        "testimonial_1": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use. The consistency batch to batch is next level.",
-            "author": "Sarah M.",
-            "role": "Café Owner, Portland"
-          }
-        },
-        "testimonial_2": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "I needed a source for organic turmeric and ashwagandha that I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
-            "author": "Dr. James K.",
-            "role": "Wellness Practitioner"
-          }
-        },
-        "testimonial_3": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "Switched all my baking ingredients to Divine and honestly — night and day. The vanilla, the cinnamon, the matcha. Everything just tastes more real.",
-            "author": "Michelle T.",
-            "role": "Home Baker & Recipe Creator"
-          }
-        },
-        "testimonial_4": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "We built our entire private label tea line on Divine ingredients. The sourcing transparency and quality certs make it easy to build trust with our own customers. Couldn't ask for a better partner.",
-            "author": "Ryan & Co.",
-            "role": "Private Label Brand"
-          }
-        },
-        "testimonial_5": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "The mushroom powder blends are next level — lion's mane and reishi that actually taste clean. No fillers, no weird aftertaste. My morning smoothie game has never been stronger.",
-            "author": "Anika P.",
-            "role": "Wellness Coach, Vancouver"
-          }
-        }
-      },
-      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3", "testimonial_4", "testimonial_5"],
-      "settings": {
-        "caption": "Real People, Real Talk",
-        "title": "Hear It From the Community"
       }
     },
     "divine_why_us": {
@@ -314,11 +341,101 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
       "settings": {
+        "caption": "",
         "heading": "Why Divine Ingredients",
         "cta_label": "Learn About Our Ingredients",
-        "cta_link": "shopify:\/\/pages\/about-us"
+        "cta_link": "shopify://pages/about-us",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "divine_testimonials": {
+      "type": "divine-testimonials",
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use. The consistency batch to batch is next level.",
+            "author": "Sarah M.",
+            "role": "Café Owner, Portland",
+            "link": ""
+          }
+        },
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I needed a source for organic turmeric and ashwagandha that I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
+            "author": "Dr. James K.",
+            "role": "Wellness Practitioner",
+            "link": ""
+          }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "Switched all my baking ingredients to Divine and honestly — night and day. The vanilla, the cinnamon, the matcha. Everything just tastes more real.",
+            "author": "Michelle T.",
+            "role": "Home Baker & Recipe Creator",
+            "link": ""
+          }
+        },
+        "testimonial_4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "We built our entire private label tea line on Divine ingredients. The sourcing transparency and quality certs make it easy to build trust with our own customers. Couldn't ask for a better partner.",
+            "author": "Ryan & Co.",
+            "role": "Private Label Brand",
+            "link": ""
+          }
+        },
+        "testimonial_5": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "The mushroom powder blends are next level — lion's mane and reishi that actually taste clean. No fillers, no weird aftertaste. My morning smoothie game has never been stronger.",
+            "author": "Anika P.",
+            "role": "Wellness Coach, Vancouver",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3",
+        "testimonial_4",
+        "testimonial_5"
+      ],
+      "settings": {
+        "caption": "Real People, Real Talk",
+        "title": "Hear It From the Community",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "card_background_color": "",
+        "card_border_color": "",
+        "star_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_subscription": {
@@ -329,8 +446,9 @@
           "settings": {
             "title": "Monthly Tea Box",
             "description": "A curated selection of seasonal loose leaf teas delivered to your door every month.",
-            "price": "From $29\/month",
-            "button_label": "Start My Subscription"
+            "price": "From $29/month",
+            "button_label": "Start My Subscription",
+            "button_link": ""
           }
         },
         "plan_2": {
@@ -338,8 +456,9 @@
           "settings": {
             "title": "Superfood Powder Club",
             "description": "Your monthly dose of organic superfood powders — adaptogens, mushrooms, and more.",
-            "price": "From $34\/month",
-            "button_label": "Start My Subscription"
+            "price": "From $34/month",
+            "button_label": "Start My Subscription",
+            "button_link": ""
           }
         },
         "plan_3": {
@@ -347,18 +466,29 @@
           "settings": {
             "title": "Matcha of the Month",
             "description": "Explore a different premium matcha grade each month from Japan's finest farms.",
-            "price": "From $24\/month",
-            "button_label": "Start My Subscription"
+            "price": "From $24/month",
+            "button_label": "Start My Subscription",
+            "button_link": ""
           }
         }
       },
-      "block_order": ["plan_1", "plan_2", "plan_3"],
+      "block_order": [
+        "plan_1",
+        "plan_2",
+        "plan_3"
+      ],
       "settings": {
         "caption": "Subscribe & Save",
         "heading": "Join the Divine Ritual",
         "subheading": "Never run out of your favorites. Subscribe monthly and save 15% on every delivery.",
         "cta_label": "Save 15% Monthly",
-        "use_alt_bg": true
+        "cta_link": "",
+        "use_alt_bg": true,
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_wholesale": {
@@ -389,13 +519,25 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ],
       "settings": {
         "caption": "B2B & Private Label",
         "heading": "Launch Your Own Organic Tea or Superfood Brand",
         "text": "<p>Partner with Divine Ingredients for wholesale pricing, private label solutions, and custom blending. We supply cafés, wellness brands, retailers, and entrepreneurs with premium organic ingredients.</p>",
         "button_label_1": "Start a Private Label Project",
-        "button_label_2": "Request Wholesale Pricing"
+        "button_link_1": "",
+        "button_label_2": "Request Wholesale Pricing",
+        "button_link_2": "",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_newsletter": {
@@ -418,13 +560,25 @@
           "settings": {}
         }
       },
-      "block_order": ["heading", "subtitle", "email_form"],
+      "block_order": [
+        "heading",
+        "subtitle",
+        "email_form"
+      ],
       "settings": {
         "input_placeholder": "Your email address",
         "button_label": "Join the Ritual",
         "privacy_text": "No spam. No nonsense. Unsubscribe whenever.",
         "show_first_name": true,
-        "name_placeholder": "First name"
+        "name_placeholder": "First name",
+        "background_color": "#1d1d1d",
+        "text_color": "#ffffff",
+        "button_bg": "#d4c4d9",
+        "button_color": "#1d1d1d",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     }
   },
