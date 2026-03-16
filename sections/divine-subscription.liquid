@@ -47,7 +47,7 @@
           </div>
         {%- else -%}
           <div class="divine-subscription__card-image divine-subscription__card-image--placeholder">
-            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
           </div>
         {%- endif -%}
         <div class="divine-subscription__card-content">

@@ -20,8 +20,8 @@
 
 <section class="divine-wholesale">
   <div class="divine-wholesale__grid">
-    {%- if section.settings.image != blank -%}
-      <div class="divine-wholesale__image">
+    <div class="divine-wholesale__image">
+      {%- if section.settings.image != blank -%}
         {{
           section.settings.image
           | image_url: width: 900
@@ -30,8 +30,10 @@
             widths: '375, 550, 750, 900',
             sizes: '(min-width: 768px) 50vw, 100vw'
         }}
-      </div>
-    {%- endif -%}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
 
     <div class="divine-wholesale__content">
       {%- if section.settings.caption != blank -%}
