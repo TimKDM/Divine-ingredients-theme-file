@@ -115,7 +115,7 @@
         "mega_image_menu"
       ],
       "settings": {
-        "menu": "top-menu-refresh",
+        "menu": "divine-mega-menu",
         "menu_type_desktop": "mega",
         "all_items_mega": false,
         "enable_links": false,
@@ -137,7 +137,7 @@
         "image_size": "small",
         "disable_additional_links": false,
         "enable_mobile_menu_links": false,
-        "enable_item_highlight": true,
+        "enable_item_highlight": false,
         "item_highlight_text": "HOT",
         "item_highlight_position": "nth-child(2)",
         "adjust_item_highlight_position": 9,
