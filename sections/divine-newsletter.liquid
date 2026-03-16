@@ -56,6 +56,15 @@
         <div {{ block.shopify_attributes }}>
           {%- form 'customer', id: 'DivineNewsletter', class: 'divine-newsletter__form' -%}
             <input type="hidden" name="contact[tags]" value="newsletter">
+            {%- if section.settings.show_first_name -%}
+              <input
+                id="DivineNewsletterName--{{ section.id }}"
+                type="text"
+                name="contact[first_name]"
+                autocomplete="given-name"
+                placeholder="{{ section.settings.name_placeholder | default: 'First name' }}"
+              >
+            {%- endif -%}
             <input
               id="DivineNewsletterEmail--{{ section.id }}"
               type="email"
@@ -122,6 +131,18 @@
       "id": "privacy_text",
       "label": "Privacy disclaimer",
       "default": "No spam. No nonsense. Unsubscribe whenever."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_first_name",
+      "label": "Show first name field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name placeholder",
+      "default": "First name"
     },
     {
       "type": "color",

@@ -14,15 +14,29 @@
     "announcement_bar_MMYfNc": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_9GgHEN": {
+        "announcement_1": {
           "type": "announcement",
           "settings": {
-            "slider-text": "<p>Free Shipping on Orders $75+ · USDA Certified Organic · <a href=\"/pages/wholesale\" title=\"Wholesale\">Wholesale Inquiries</a></p>"
+            "slider-text": "<p>Free Shipping on Orders Over $100 · USDA Certified Organic</p>"
+          }
+        },
+        "announcement_2": {
+          "type": "announcement",
+          "settings": {
+            "slider-text": "<p>Get 15% Off Your First Order — <a href=\"/collections\" title=\"Shop\">Join the Divine Ritual</a></p>"
+          }
+        },
+        "announcement_3": {
+          "type": "announcement",
+          "settings": {
+            "slider-text": "<p>New Blends Just Dropped — <a href=\"/collections\" title=\"Shop New\">Shop What's New</a></p>"
           }
         }
       },
       "block_order": [
-        "announcement_9GgHEN"
+        "announcement_1",
+        "announcement_2",
+        "announcement_3"
       ],
       "name": "t:sections.announcement-bar.presets.name",
       "settings": {
