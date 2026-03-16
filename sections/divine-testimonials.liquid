@@ -1,0 +1,254 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .divine-section {
+    background-color: {{ section.settings.background_color }};
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+  }
+
+  #shopify-section-{{ section.id }} .divine-section-label {
+    color: {{ section.settings.accent_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-section-title {
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-testimonial-card {
+    background-color: {{ section.settings.card_background_color }};
+    border-color: {{ section.settings.card_border_color }};
+  }
+
+  #shopify-section-{{ section.id }} .divine-testimonial-stars svg {
+    fill: {{ section.settings.star_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .divine-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+  <div class="divine-section-header">
+    {%- if section.settings.caption != blank -%}
+      <span class="divine-section-label">{{ section.settings.caption }}</span>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="divine-section-title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+  </div>
+
+  <div class="divine-testimonial-scroll">
+    {%- for block in section.blocks -%}
+      {%- if block.settings.link != blank -%}
+        <a href="{{ block.settings.link }}" class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      {%- else -%}
+        <div class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      {%- endif -%}
+
+        {%- if block.settings.rating != blank -%}
+          <div class="divine-testimonial-stars">
+            {%- assign star_count = block.settings.rating | plus: 0 -%}
+            {%- for i in (1..star_count) -%}
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if block.settings.text != blank -%}
+          <p class="divine-testimonial-text"><em>"{{ block.settings.text }}"</em></p>
+        {%- endif -%}
+
+        {%- if block.settings.author != blank -%}
+          <p class="divine-testimonial-author">{{ block.settings.author }}</p>
+        {%- endif -%}
+
+        {%- if block.settings.role != blank -%}
+          <p class="divine-testimonial-role">{{ block.settings.role }}</p>
+        {%- endif -%}
+
+      {%- if block.settings.link != blank -%}
+        </a>
+      {%- else -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Testimonials",
+  "tag": "section",
+  "class": "divine-testimonials-section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "Real People, Real Talk"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Hear It From the Community"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_alt_bg",
+      "label": "Use alternate background",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role / Location",
+          "default": "Café Owner, Portland"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use.",
+            "author": "Sarah M.",
+            "role": "Café Owner, Portland"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I needed a source for organic turmeric that I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
+            "author": "Dr. James K.",
+            "role": "Wellness Practitioner"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "Switched all my baking ingredients to Divine and honestly — night and day. The vanilla, the cinnamon, the matcha. Everything just tastes more real.",
+            "author": "Michelle T.",
+            "role": "Home Baker"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,149 @@
+{%- if section.settings.enable_schema -%}
+  {%- comment -%}
+    Resolve each field: product metafield first, then section setting fallback.
+    Define metafields in Settings > Custom data > Products:
+      custom.gtin              (single_line_text)
+      custom.mpn               (single_line_text)
+      custom.material          (single_line_text)
+      custom.product_category  (single_line_text)
+      custom.schema_additional_type (url)
+  {%- endcomment -%}
+  {%- liquid
+    assign schema_gtin = product.metafields.custom.gtin.value | default: section.settings.gtin
+    assign schema_mpn = product.metafields.custom.mpn.value | default: section.settings.mpn
+    assign schema_material = product.metafields.custom.material.value | default: section.settings.material
+    assign schema_category = product.metafields.custom.product_category.value | default: section.settings.category
+    assign schema_additional_type = product.metafields.custom.schema_additional_type.value | default: section.settings.additional_type
+  -%}
+  <script type="application/ld+json">
+    {%- if section.settings.schema_type == 'custom' -%}
+      {{ section.settings.custom_json }}
+    {%- elsif section.settings.schema_type == 'product' -%}
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": {{ product.title | json }},
+        "url": {{ request.origin | append: product.url | json }},
+        {%- if product.featured_image -%}
+          "image": {{ product.featured_image | image_url: width: 1200 | json }},
+        {%- endif -%}
+        "description": {{ product.description | strip_html | truncate: 500 | json }},
+        "brand": {
+          "@type": "Brand",
+          "name": {{ product.vendor | json }}
+        },
+        "sku": {{ product.selected_or_first_available_variant.sku | json }},
+        {%- if schema_gtin != blank -%}
+          "gtin": {{ schema_gtin | json }},
+        {%- endif -%}
+        {%- if schema_mpn != blank -%}
+          "mpn": {{ schema_mpn | json }},
+        {%- endif -%}
+        {%- if schema_material != blank -%}
+          "material": {{ schema_material | json }},
+        {%- endif -%}
+        {%- if schema_category != blank -%}
+          "category": {{ schema_category | json }},
+        {%- endif -%}
+        {%- if schema_additional_type != blank -%}
+          "additionalType": {{ schema_additional_type | json }},
+        {%- endif -%}
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": {{ request.origin | append: product.url | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "lowPrice": {{ product.price_min | money_without_currency | json }},
+          "highPrice": {{ product.price_max | money_without_currency | json }},
+          "offerCount": {{ product.variants.size | json }},
+          "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}"
+        }
+        {%- if product.metafields.reviews.rating.value != blank -%}
+          ,"aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": {{ product.metafields.reviews.rating.value | json }},
+            "reviewCount": {{ product.metafields.reviews.rating_count.value | default: 0 | json }}
+          }
+        {%- endif -%}
+      }
+    {%- endif -%}
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Schema Markup",
+  "tag": "div",
+  "class": "custom-schema-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_schema",
+      "default": true,
+      "label": "Enable custom schema markup",
+      "info": "When enabled, this replaces or supplements Shopify's default structured data."
+    },
+    {
+      "type": "select",
+      "id": "schema_type",
+      "label": "Schema source",
+      "options": [
+        {
+          "value": "product",
+          "label": "Auto-generate from product data"
+        },
+        {
+          "value": "custom",
+          "label": "Custom JSON-LD (manual entry)"
+        }
+      ],
+      "default": "product",
+      "info": "Auto-generate pulls from product metafields (custom.gtin, custom.mpn, custom.material, custom.product_category, custom.schema_additional_type). Fallback values below are used when a metafield is empty."
+    },
+    {
+      "type": "header",
+      "content": "Fallback values (used when metafield is empty)"
+    },
+    {
+      "type": "text",
+      "id": "gtin",
+      "label": "GTIN / UPC / EAN (fallback)",
+      "info": "Metafield: custom.gtin — Global Trade Item Number. Set per-product in Products > [product] > Metafields."
+    },
+    {
+      "type": "text",
+      "id": "mpn",
+      "label": "MPN (fallback)",
+      "info": "Metafield: custom.mpn — Manufacturer Part Number."
+    },
+    {
+      "type": "text",
+      "id": "material",
+      "label": "Material (fallback)",
+      "info": "Metafield: custom.material — E.g. 'Organic Ceremonial Grade Matcha'"
+    },
+    {
+      "type": "text",
+      "id": "category",
+      "label": "Product category (fallback)",
+      "info": "Metafield: custom.product_category — Google product category. E.g. 'Food, Beverages & Tobacco > Beverages > Tea & Infusions'"
+    },
+    {
+      "type": "text",
+      "id": "additional_type",
+      "label": "Additional schema type URL (fallback)",
+      "info": "Metafield: custom.schema_additional_type — Optional schema.org URL. E.g. 'https://schema.org/FoodProduct'"
+    },
+    {
+      "type": "header",
+      "content": "Custom JSON-LD"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_json",
+      "label": "Custom JSON-LD markup",
+      "info": "Paste your full JSON-LD object here (without the script tags). Liquid variables like {{ product.title }} are available."
+    }
+  ],
+  "templates": ["product"]
+}
+{% endschema %}

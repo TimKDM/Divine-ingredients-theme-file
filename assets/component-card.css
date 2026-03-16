@@ -175,7 +175,8 @@
   overflow: hidden;
   /* Fix for Safari border bug on hover */
   z-index: 0;
-  border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
+  border-radius: 50%;
+  aspect-ratio: 1;         /* enforce square — prevents ovals on non-square containers */
 }
 
 .collection .card--card:after,
@@ -185,8 +186,7 @@
 }
 
 .card--card .card-inner .card-media {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 50%;
 }
 
 .card--standard.card--text {
@@ -483,7 +483,10 @@
 }
 
 .card-information .card-heading {
-  font-size: calc(var(--font-heading-scale)* 1.6rem);
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0;
@@ -671,6 +674,8 @@
 
 .card-information > .price {
   color: rgb(var(--color-foreground));
+  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-weight: 600;
 }
 
 .card--horizontal .card-information > .price {
@@ -976,7 +981,7 @@
 }
 
 .card-wrapper:hover .media.media--hover-effect > img + img {
-  transform: translateY(0%) scale(1.03); 
+  transform: translateY(0%) scale(1.03);
   opacity: 1;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.4, 1);
 }

@@ -35,8 +35,12 @@
   border-bottom-right-radius: 0;
 }
 
+/* Tab content — Divine body font */
 .tabs .tab-content-wrapper {
-  font-size: calc(var(--font-body-scale) * 1.6rem);
+  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #7a6f64;
 }
 
 .tabs .hide-image .grid-item {
@@ -55,16 +59,20 @@
   display: none;
 }
 
+/* Tab links — Divine heading font */
 .tabs .tab-item a {
-  font-family: var(--font-heading-family);
-  font-size: calc(var(--font-body-scale) * 1.8rem);
-  font-weight: 700;
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a6f64;
   border-right: 1px solid rgba(var(--color-base-border-1));
   display: block;
   padding: 1.5rem 2rem;
   text-align: center;
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.28s ease;
 }
 
 .tabs.tabs-style-2 .tab-item a {
@@ -85,8 +93,10 @@
   border-right: none;
 }
 
+/* Active/hover — Divine lavender underline */
 .tabs .tab-item a:hover,
 .tabs .tab-item a.active {
+  color: #1d1917;
   box-shadow: inset 0 -6px rgb(var(--color-base-border-1));
 }
 
@@ -129,6 +139,14 @@
   background-size: 100%;
 }
 
+.tab-content h2 {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1d1917;
+  margin-bottom: 12px;
+}
+
 .tabs svg.placeholder-svg {
   border-radius: var(--media-radius);
   width: 100%;
@@ -141,26 +159,31 @@
   align-items: center;
 }
 
+/* Product page tab border — Divine warm parchment */
 .product-section .tabs-style-2.remove-border-tabs-false .tab-nav {
-  border-bottom: 1px solid rgba(var(--color-base-border-1));
+  border-bottom: 2px solid var(--color-border-hex, #d2c4d7);
 }
 
 .product-section .tabs-style-2.centered-tabs-false .tab-nav {
   justify-content: flex-start;
 }
 
-.product-section .tabs-style-2 .tab-item a:hover, 
+/* Product page active — Divine lavender accent */
+.product-section .tabs-style-2 .tab-item a:hover,
 .product-section .tabs-style-2 .tab-item a.active {
-  box-shadow: inset 0 -3px rgb(var(--color-base-border-1));
+  box-shadow: inset 0 -3px #9b76a7;
 }
 
 .product-section .tabs .tab-item a {
-  font-size: calc(var(--font-body-scale)* 1.6rem);
+  font-size: 13px;
   margin-bottom: -1px;
 }
 
 .product-section .tabs .tab-content-wrapper {
-  font-size: calc(var(--font-body-scale)* 1.4rem);
+  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #7a6f64;
 }
 
 .tabs .footer-block__image-wrapper {

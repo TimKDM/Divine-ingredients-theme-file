@@ -67,7 +67,7 @@
             "heading": "Matcha Tea",
             "heading_size": "small",
             "heading_tag": "h2",
-            "subheading": "Discover the clean, earthy taste of our premium matcha",
+            "subheading": "Clean, earthy, and seriously good — try our premium matcha",
             "link_label": "Order Now",
             "link": "shopify://products/supreme-matcha",
             "show_text_box": false,
@@ -87,7 +87,7 @@
             "heading": "Pure Organic",
             "heading_size": "medium",
             "heading_tag": "h2",
-            "subheading": "Elevate your wellness with our premium organic powders – the purest ingredients to fuel your vibrant life.",
+            "subheading": "Clean organic powders that actually deliver — for smoothies, lattes, and whatever you're creating next.",
             "link_label": "Order Now",
             "link": "",
             "show_text_box": false,
@@ -130,10 +130,64 @@
         "ignore_spacing": true
       }
     },
+    "collection_description": {
+      "type": "collection-description",
+      "settings": {
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes this collection special?",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right product?",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are these products organic?",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "caption": "Common Questions",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "open_first_collapsible_row": true,
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true
+      }
+    },
     "recently_viewed_products": {
       "type": "recently-viewed-products",
       "settings": {
-        "caption": "Pick up where you left off",
+        "caption": "You were eyeing these",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "heading": "Recently Viewed",
@@ -149,17 +203,67 @@
         "margin_top": 0
       }
     },
+    "certification_logos": {
+      "type": "image-gallery",
+      "blocks": {
+        "logo_1": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_5": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_6": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "caption": "Committed to Quality",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Certified for Your Confidence",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "scroll_direction": "ltc",
+        "scroll_speed": 60,
+        "scroll_height": 200,
+        "hover_stop": true,
+        "color_scheme": "option-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true,
+        "scroll_height_mobile": 120,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    },
     "quick_info_bar": {
       "type": "quick-info-bar",
       "settings": {
         "heading-1": "Free Shipping",
-        "caption-1": "For orders over $110",
-        "heading-2": "Money Guarantee",
-        "caption-2": "14 Day Exchange or Refund on Unopened Products",
-        "heading-3": "Online Support",
-        "caption-3": "24 hours per day",
-        "heading-4": "Flexible Payment",
-        "caption-4": "Multiple Credit Cards",
+        "caption-1": "On orders over $75",
+        "heading-2": "USDA · CCOF",
+        "caption-2": "Certified organic ingredients",
+        "heading-3": "Real Humans",
+        "caption-3": "Actual people who help",
+        "heading-4": "Secure Payment",
+        "caption-4": "Multiple payment options",
         "image_size": "small",
         "add_border": false,
         "full_width_background": false,
@@ -177,7 +281,10 @@
     "banner",
     "subcollections",
     "product-grid",
+    "collection_description",
+    "collection_faq",
     "recently_viewed_products",
+    "certification_logos",
     "quick_info_bar"
   ]
 }

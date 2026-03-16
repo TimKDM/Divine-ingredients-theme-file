@@ -1,1 +1,444 @@
-{"sections":{"image_banner_Q6f6DA":{"type":"image-banner","blocks":{"heading_NVxNib":{"type":"heading","settings":{"heading":"<p><em>Elevate<\/em> Every Recipe<\/p>","heading_size":"extra-large","heading_style":"default","heading_tag":"h2","highlight_option":"underline","word_animation_color":"#FFFFFF"}},"text_74FGEP":{"type":"text","settings":{"text":"<p>Premium matcha, artisan spices, and superfood powders trusted by top caf\u00e9s and home chefs alike.<\/p>","text_style":"body"}},"buttons_CFa7AR":{"type":"buttons","settings":{"button_label_1":"Shop Best Sellers","button_link_1":"shopify:\/\/collections\/best-sellers","apply_link_to_image":false,"open_new_tab_1":false,"button_style_secondary_1":false,"button_label_2":"Wholesale","button_link_2":"","open_new_tab_2":false,"button_style_secondary_2":true}}},"block_order":["heading_NVxNib","text_74FGEP","buttons_CFa7AR"],"settings":{"image":"shopify:\/\/shop_images\/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg","image_overlay_opacity":40,"image_border_radius":50,"image_height":"medium","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","ignore_spacing":false,"color_scheme_1":"","margin_spacing":"negative","margin_top":0,"mobile_content_alignment":"center","show_text_below":false}},"multicolumn":{"type":"multicolumn","blocks":{"column_1":{"type":"column","settings":{"hide_image":false,"disable_autoplay":false,"title":"USDA Organic","text":"<p>Certified Organic<\/p>","link_label":"","link":"","open_new_tab_1":false}},"column_2":{"type":"column","settings":{"hide_image":false,"disable_autoplay":false,"title":"Free Ship","text":"<p>On orders $75+<\/p>","link_label":"","link":"","open_new_tab_1":false}},"column_3":{"type":"column","settings":{"hide_image":false,"disable_autoplay":false,"title":"4.9\u2605 Rating","text":"<p>2,400+ Reviews<\/p>","link_label":"","link":"","open_new_tab_1":false}},"column_4":{"type":"column","settings":{"hide_image":false,"disable_autoplay":false,"title":"Bulk Pricing","text":"<p>Available for caf\u00e9s & chefs<\/p>","link_label":"","link":"","open_new_tab_1":false}}},"block_order":["column_1","column_2","column_3","column_4"],"settings":{"multicolumn_style":"style-one","enable_card_background":false,"caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","title":"","heading_size":"medium","heading_style":"default","heading_tag":"h2","image_width":"third","image_ratio":"circle","columns_desktop":4,"column_alignment":"center","button_label":"","button_link":"","open_new_tab_2":false,"color_scheme":"option-1","color_scheme_1":"","padding_top":16,"padding_bottom":16,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"columns_mobile":"2","swipe_on_mobile":true,"disable_arrow_mobile":true}},"collection_list":{"type":"collection-list","blocks":{"featured_collection_1":{"type":"featured_collection","settings":{"collection":"matcha-tea-powders"}},"featured_collection_2":{"type":"featured_collection","settings":{"collection":"powder"}},"featured_collection_3":{"type":"featured_collection","settings":{"collection":"black-tea"}},"featured_collection_4":{"type":"featured_collection","settings":{"collection":"spices"}}},"block_order":["featured_collection_1","featured_collection_2","featured_collection_3","featured_collection_4"],"settings":{"title":"Explore Our Collections","heading_size":"medium","heading_style":"default","heading_tag":"h2","caption":"Shop by Category","text_style":"caption-with-letter-spacing","text_size":"medium","enable_desktop_slider":true,"collection_list_style":"collection-list-two","image_ratio":"square","columns_desktop":4,"color_scheme":"option-1","color_scheme_1":"option-1","padding_top":36,"padding_bottom":36,"ignore_spacing":true,"margin_spacing":"negative","margin_top":0,"columns_mobile":"2","swipe_on_mobile":true,"disable_arrow_mobile":true}},"featured_collection":{"type":"featured-collection","blocks":{"slide":{"type":"slide","settings":{"hide_image":false,"caption":"","text_style":"caption-with-letter-spacing","text_size":"small","heading":"","heading_size":"medium","heading_tag":"h2","subheading":"","link_label":"","link":"","open_new_tab_1":false,"show_text_box":false,"image_overlay_opacity":80,"color_scheme_1":"option-3"}}},"block_order":["slide"],"settings":{"collection":"best-sellers","caption":"Customer Favorites","text_style":"caption-with-letter-spacing","text_size":"small","title":"Best Sellers","heading_size":"medium","heading_style":"default","heading_tag":"h2","description":"","show_description":false,"description_style":"body","collection_style":"collection-three","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"link","enable_desktop_slider":true,"image_ratio":"square","show_secondary_image":true,"show_vendor":false,"enable_quick_add":true,"enable_quick_buy":true,"quick_add_position":"default","color_scheme":"option-2","color_scheme_1":"option-2","padding_top":36,"padding_bottom":36,"ignore_spacing":true,"margin_spacing":"negative","margin_top":0,"columns_mobile":"2","disable_quick_add":false,"swipe_on_mobile":true,"disable_arrow_mobile":true}},"image_with_text":{"type":"image-with-text","blocks":{"caption":{"type":"caption","settings":{"caption":"Our Story","text_style":"caption-with-letter-spacing","text_size":"medium"}},"heading":{"type":"heading","settings":{"heading":"Sourced with Care, Crafted for Quality","heading_size":"large","heading_style":"default","heading_tag":"h2"}},"text":{"type":"text","settings":{"text":"<p>Every ingredient in our collection is carefully selected from trusted organic farms around the world. We work directly with growers to ensure the highest quality and most authentic flavors.<\/p>","text_style":"body"}},"button":{"type":"button","settings":{"button_label":"Learn More","button_link":"","open_new_tab_1":false,"button_style_secondary":false}},"image":{"type":"image","settings":{"position_image_relative":false,"mobile_disable_image_animation":false,"mobile_disable_image":false}}},"block_order":["caption","heading","text","button","image"],"settings":{"image":"shopify:\/\/shop_images\/Smoothie-blog-image-2.jpg","caption":"Our Story","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","full_width":true,"color_scheme":"option-1","padding_top":36,"padding_bottom":36,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"mobile_content_alignment":"left"}},"testimonials":{"type":"testimonials","blocks":{"column_1":{"type":"column","settings":{"rating":true,"rating_stars":"5-star","text":"<p>The ceremonial matcha is the best I've found outside of Japan. Our caf\u00e9 customers always ask what brand we use.<\/p>","title":"Sarah M.","hide_image":true,"product":"supreme-matcha"}},"column_2":{"type":"column","settings":{"rating":true,"rating_stars":"5-star","text":"<p>Finally found a reliable source for organic turmeric. The quality is consistent and the bulk pricing is perfect.<\/p>","title":"Dr. James K.","hide_image":true,"product":""}},"column_3":{"type":"column","settings":{"rating":true,"rating_stars":"5-star","text":"<p>The chai blend has become my morning ritual. The spice balance is perfect and the aroma is incredible!<\/p>","title":"Michelle T.","hide_image":true,"product":"mumbai-chai"}}},"block_order":["column_1","column_2","column_3"],"settings":{"title":"Customer Reviews","heading_size":"medium","heading_tag":"h2","caption":"What People Say","text_style":"caption-with-letter-spacing","text_size":"medium","button_label":"","button_link":"","open_new_tab_1":false,"testimonials_style":"style-2","columns_desktop":3,"enable_desktop_slider":true,"color_scheme":"option-2","color_scheme_1":"option-1","padding_top":36,"padding_bottom":36,"ignore_spacing":true,"margin_spacing":"negative","margin_top":0,"swipe_on_mobile":true,"disable_arrow_mobile":true}},"newsletter":{"type":"newsletter","blocks":{"heading":{"type":"heading","settings":{"heading":"Get 10% Off Your First Order","heading_size":"large","heading_style":"default","heading_tag":"h2"}},"paragraph":{"type":"paragraph","settings":{"text":"<p>Plus exclusive recipes, wellness tips, and early access to new products.<\/p>"}},"email_form":{"type":"email_form"}},"block_order":["heading","paragraph","email_form"],"settings":{"full_width":true,"color_scheme":"option-3","padding_top":40,"padding_bottom":52,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0}},"image_banner_with_featured_collection":{"type":"image-banner-with-featured-collection","blocks":{"heading":{"type":"heading","settings":{"heading":"<p>Premium Organic Products<\/p>","heading_size":"extra-large","heading_style":"default","heading_tag":"h2","highlight_option":"underline-hand","word_animation_color":"#d4c4d9"}},"text":{"type":"text","settings":{"text":"","text_style":"body"}},"buttons":{"type":"buttons","settings":{"button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections","open_new_tab_1":false,"button_style_secondary_1":false,"button_label_2":"","button_link_2":"","open_new_tab_2":false,"button_style_secondary_2":false}}},"block_order":["heading","text","buttons"],"disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Smoothie_Blog_Image.jpg","hide_image":false,"image_overlay_opacity":60,"image_height":80,"full_width_banner":true,"adapt_to_image":false,"desktop_content_position":"middle-left","desktop_content_alignment":"left","enable_collection":true,"collection":"powder","collection_style":"collection-one","products_to_show":12,"columns_desktop":4,"full_width":false,"enable_desktop_slider":true,"desktop_margin_top":230,"mobile_margin_top":110,"image_ratio":"square","show_secondary_image":true,"show_vendor":false,"enable_quick_add":true,"enable_quick_buy":true,"quick_add_position":"overlay","color_scheme":"option-3","color_scheme_1":"option-4","padding_top":0,"padding_bottom":8,"ignore_spacing":false,"image_overlay_opacity_mobile":50,"image_height_mobile":56,"margin_spacing":"negative","margin_top":0,"mobile_content_alignment":"center","columns_mobile":"1","disable_quick_add":true,"swipe_on_mobile":true,"disable_arrow_mobile":true}},"rich-text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<p><em>Nourish<\/em> Your Body, Delight Your Taste Buds<\/p>","heading_size":"large","heading_style":"default","heading_tag":"h2","highlight_option":"underline-hand","word_animation_color":"#d4c4d9"}},"text":{"type":"text","disabled":true,"settings":{"text":"<p><br\/>Nourish your body and delight your taste buds with Divine Ingredients' range of organic teas, superfood powders, herbs and spices. Crafted with care from high\u2011quality, sustainably sourced ingredients, every product is designed to boost your nutrition without sacrificing flavor. Treat yourself to natural goodness in every cup and pinch!<\/p>"}}},"block_order":["heading","text"],"disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","full_width":true,"color_scheme":"option-4","padding_top":0,"padding_bottom":0,"ignore_spacing":false,"margin_spacing":"negative","margin_top":36,"mobile_content_alignment":"center"}},"collection_tabs":{"type":"collection-tabs","blocks":{"collection_1":{"type":"collection","settings":{"collection":"","tab_heading":"Best Sellers"}},"collection_2":{"type":"collection","settings":{"collection":"","tab_heading":"New Arrivals"}},"collection_3":{"type":"collection","settings":{"collection":"","tab_heading":"Save Big"}}},"block_order":["collection_1","collection_2","collection_3"],"disabled":true,"settings":{"caption":"Image Caption","text_style":"caption-with-letter-spacing","text_size":"small","title":"Featured collection","heading_size":"medium","heading_style":"default","heading_tag":"h2","description":"","description_style":"body","collection_style":"collection-three","content_alignment":"center","products_to_show":4,"columns_desktop":4,"full_width":false,"enable_desktop_slider":false,"image_ratio":"square","show_secondary_image":false,"show_vendor":false,"enable_quick_add":false,"enable_quick_buy":true,"quick_add_position":"default","color_scheme":"option-2","color_scheme_1":"","padding_top":32,"padding_bottom":32,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"columns_mobile":"1","disable_quick_add":false,"swipe_on_mobile":false}},"slick_slider":{"type":"slick-slider","blocks":{"slide_1":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/blog_on_chai.jpg","heading":"We love Chai!","caption":"Warm up your wellness routine with Divine Ingredients' organic chai blends. Crafted from premium spices and rich black tea, each cup nourishes your body and soothes your soul\u2014one sip at a time.","button_label":"Order Now","link":"shopify:\/\/products\/mumbai-chai","show_link_button":true,"open_new_tab_1":false}},"slide_2":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/movember.jpg","heading":"Movember Matcha Mustache","caption":"Grow bold this Movember with a daily matcha ritual that keeps you grounded and energized. Whether you're whisking up a warm latte or blending it cold, our matcha is a smooth way to support the season.","button_label":"Shop Now","link":"shopify:\/\/products\/supreme-matcha","show_link_button":true,"open_new_tab_1":false}},"slide_nrTXwC":{"type":"slide","disabled":true,"settings":{"heading":"Image slide heading","caption":"Image slide caption","button_label":"Button label","link":"","show_link_button":false,"open_new_tab_1":false}},"slide_3":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/shutterstock_1216396786.jpg","heading":"Hot Tea Holidays!","caption":"Stock up on Tea for the holiday season!","button_label":"Order now","link":"shopify:\/\/collections\/tea","show_link_button":true,"open_new_tab_1":false}}},"block_order":["slide_1","slide_2","slide_nrTXwC","slide_3"],"disabled":true,"settings":{"auto_rotate":true,"slider_interval":4,"full_width":true,"image_opacity":0.1,"opacity_mobile":false,"hide_slider_desktop":false,"hide_slider_mobile":false,"heading_size":9,"heading_tag":"h2","heading_style":"none","caption_size":1.6,"caption_style":"none","link_size":1.8,"color_scheme":"option-2","margin_spacing":"negative","margin_top":0,"padding_top":0,"padding_bottom":0,"ignore_spacing":false}},"info_cards":{"type":"info-cards","blocks":{"infocard_1":{"type":"infocard","settings":{"image":"shopify:\/\/shop_images\/TartCherryPowder-Organic.jpg","hide_image":false,"product":"","caption":"Pure Ingredients.","title":"Organic by Nature. Honest by Choice.","text":"<p>At Divine Ingredients, we believe nourishment shouldn't demand compromise. That's why every powder, herb, and spice we offer is <strong>100% organic<\/strong>, responsibly sourced, and free from synthetic nasties. We partner with eco-conscious farmers to nurture soil, communities, and flavor \u2014 because quality should radiate from farm to cup.<\/p><p>We're not about fillers or fluff: our blends contain no preservatives, artificial dyes, or synthetic flavorings \u2014 just pure plant power in its cleanest form. For those with sensitivities, we uphold rigorous standards to keep our products allergy-safe and broadly accessible.<\/p><p>What sets us apart?<\/p><ul><li>Certified-organic, farm-to-kitchen ingredients<br\/><\/li><li>Zero artificial additives or preservatives<br\/><\/li><li>Transparency & quality testing for allergen safety<br\/><\/li><li>Sustainable sourcing for people and planet<\/li><\/ul><p>Fuel your ritual with Divine Ingredients \u2014 pure, potent, and made to elevate your daily dose of wellness.<\/p>","link_label":"","link":"","infocards_background_color":"#d4c4d9","infocards_color":"#1d1d1d"}},"infocard_2":{"type":"infocard","settings":{"image":"shopify:\/\/shop_images\/GT.Peachgo1_65ffc7e5-b64c-4c4a-a9e7-759a0e2e792e.jpg","hide_image":false,"product":"","caption":"Organic Origins.","title":"Clean Ingredients. Divine Results.","text":"<p>At Divine Ingredients, we embrace the power of plants to nourish your body with pure, organic goodness. Our powders, herbs, and botanicals are thoughtfully sourced and minimally processed\u2014just the way nature intended.<\/p><p>We skip the fillers, refined sugars, and synthetic additives so you get only what your body needs\u2014and nothing you don't. Every product is clean, potent, and made with integrity, supporting your wellness journey with ingredients you can actually recognize.<\/p><p>Whether you're blending a superfood smoothie or crafting a tea ritual, our products deliver simple, plant-powered nutrition that feels as good as it tastes.<\/p><p><strong>Why Choose Divine?<\/strong><br\/><br\/>• 100% Organic & Plant-Based Ingredients<br\/><br\/>• No Artificial Additives or Preservatives<br\/><br\/>• Minimal, Transparent Ingredient Lists<br\/><br\/>• Pure, Functional Products That Work<\/p><p>Choose Divine for organic wellness you can trust\u2014clean, conscious, and always rooted in nature.<\/p>","link_label":"","link":"","infocards_background_color":"#eae6e6","infocards_color":"#1d1d1d"}},"infocard_3":{"type":"infocard","settings":{"hide_image":true,"product":"golden-pineapple-oolong-tea","caption":"Clean Foods.","title":"Vegan. Soy Free. Low Sugar.","text":"<p>At Divine Ingredients, we believe eating well should be easy, intentional, and good for both you and the planet. That's why our entire collection of organic powders, herbs, and botanicals is 100% plant-based, vegan-friendly, and crafted without compromise.<\/p><p>Our ingredients are naturally soy-free and thoughtfully selected to be gentle on digestion\u2014without giving up flavor or function. With no added sugars or synthetic sweeteners, our powders offer clean, sustained energy you can feel good about.<\/p><p>From smoothie blends to nourishing tea rituals, Divine Ingredients fits seamlessly into your lifestyle. Every product is created with your wellness in mind, supporting balance, energy, and honest nourishment.<\/p><p><strong>Why Choose Divine?<\/strong><br\/><br\/>• 100% Vegan & Plant-Based Ingredients<br\/><br\/>• Soy-Free and Easy on Digestion<br\/><br\/>• No Added Sugars or Artificial Sweeteners<br\/><br\/>• Clean, Functional, and Flavorful<\/p><p>Rooted in nature, made for your everyday rituals.<\/p>","link_label":"","link":"","infocards_background_color":"#e9daec","infocards_color":"#1d1d1d"}},"infocard_4":{"type":"infocard","settings":{"hide_image":true,"product":"organic-cinnamon-spice","caption":"Simply Wholesome","title":"Naturally Delicious. Pure Ingredients.","text":"<p><br\/>At Divine Ingredients, we keep things simple\u2014because simple is powerful. Our collection of organic powders, teas, herbs, and botanicals delivers clean, honest nutrition you can feel good about every day.<br\/><br\/>Crafted with pure, minimally processed ingredients, each product is thoughtfully balanced to support natural energy and rich, authentic flavor. No synthetic additives, no unnecessary fillers\u2014just real plant-based goodness that fits effortlessly into your daily rituals.<br\/><br\/>Divine's Commitment to Quality:<br\/>• Wholesome Ingredients: Pure and simple, with no artificial additives<br\/>• Balanced Flavor: Just the right amount of natural sweetness, when used<br\/>• Everyday Goodness: Made for real life, with nutrition you can trust<br\/><br\/>Simply nourishing. Naturally vibrant. Always Divine.<br\/><br\/><br\/><\/p>","link_label":"","link":"","infocards_background_color":"#f2f2f2","infocards_color":"#1d1d1d"}}},"block_order":["infocard_1","infocard_2","infocard_3","infocard_4"],"disabled":true,"settings":{"full_width":false,"color_scheme":"","padding_top":0,"padding_bottom":0,"ignore_spacing":false,"cards_style":"style-2","margin_spacing":"negative","margin_top":36}},"promotion_cards":{"type":"promotion-cards","blocks":{"column_1":{"type":"column","settings":{"caption":"20% sale","title":"Suplements","link_label":"Shop Here","link":"","open_new_tab_1":false}},"column_2":{"type":"column","settings":{"caption":"30% sale","title":"Snacks","link_label":"Order Now","link":"","open_new_tab_1":false}},"column_3":{"type":"column","settings":{"caption":"Complete Protein","title":"15% sale","link_label":"Shop Now","link":"","open_new_tab_1":false}},"column_4":{"type":"column","settings":{"caption":"20% sale","title":"Powders","link_label":"Order Now","link":"","open_new_tab_1":false}},"column_5":{"type":"column","settings":{"caption":"15% sale","title":"Instant Meals","link_label":"Shop Now","link":"","open_new_tab_1":false}},"column_6":{"type":"column","settings":{"caption":"Caption","title":"Title","link_label":"Link Label","link":"","open_new_tab_1":false}}},"block_order":["column_1","column_2","column_3","column_4","column_5","column_6"],"disabled":true,"settings":{"title":"Our Top Picks","heading_size":"medium","heading_style":"default","heading_tag":"h2","caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","promotion_cards_style":"promotion-cards-one","columns_desktop":4,"enable_desktop_slider":true,"color_scheme":"option-1","color_scheme_1":"","padding_top":0,"padding_bottom":0,"ignore_spacing":false,"columns_mobile":"1","margin_spacing":"negative","margin_top":0,"swipe_on_mobile":true,"disable_arrow_mobile":true}},"image_hotspots":{"type":"image-hotspots","blocks":{"tooltip_1":{"type":"Tooltip","settings":{"product":"","content":"Made with organic ingredients, this protein powder provides a convenient way to fuel your body.","top":24,"left":37}},"tooltip_2":{"type":"Tooltip","settings":{"product":"","content":"This decadent treat combines creamy caramel with a hint of sea salt, creating a symphony of flavors.","top":32,"left":73}}},"block_order":["tooltip_1","tooltip_2"],"disabled":true,"settings":{"image_size":"default","caption":"Limited Time","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Lowest Price Deal","heading_size":"small","heading_style":"default","heading_tag":"h2","layout":"image_first","full_width":false,"color_scheme":"option-1","tooltip_background_color":"#ffffff","padding_top":0,"padding_bottom":12,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"layout_mobile":"image_first"}},"featured_product":{"type":"featured-product","blocks":{"title":{"type":"title","settings":{"heading_size":"large","margin_top":10}},"price":{"type":"price","settings":{"price_size":"small","margin_top":10}},"spacer":{"type":"spacer","settings":{"margin_top":0}},"description":{"type":"description","settings":{"margin_top":10,"text_size":"medium"}},"image":{"type":"image","settings":{"image_link":"","margin_top":10}},"quantity_selector":{"type":"quantity_selector","settings":{"margin_top":10}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true,"margin_top":10}}},"block_order":["title","price","spacer","description","image","quantity_selector","buy_buttons"],"disabled":true,"settings":{"product":"","product_gallery_width":55,"media_position":"right","media_fit":"contain","image_zoom":"lightbox","enable_video_looping":false,"color_scheme":"option-2","padding_top":36,"padding_bottom":36,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0}},"two_images_text":{"type":"two-images-text","blocks":{"caption":{"type":"caption","settings":{"caption":"Organic","text_style":"caption-with-letter-spacing","text_size":"medium"}},"heading":{"type":"heading","settings":{"heading":"Made with Love","heading_size":"medium","heading_style":"default","heading_tag":"h2"}},"text":{"type":"text","settings":{"text":"<p>Indulge guilt-free with our organic delights! Explore protein-rich powders and sumptuous chocolates for a nourishing boost. Elevate your snacking experience with Flux. Crafted with care, our products are the perfect fusion of health and flavor.<\/p>"}},"button":{"type":"button","settings":{"button_label":"","button_link":"","open_new_tab_1":false}},"image_1":{"type":"image_1","settings":{}}},"block_order":["caption","heading","text","button","image_1"],"disabled":true,"settings":{"layout":"image_first","color_scheme":"option-1","padding_top":0,"padding_bottom":64,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"layout_mobile":"image_first"}},"featured_blog":{"type":"featured-blog","disabled":true,"settings":{"caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Featured Blog","heading_size":"medium","heading_style":"default","heading_tag":"h2","blog":"tea","blog_style":"blog-style-four","post_limit":3,"columns_desktop":3,"show_image":true,"show_date":true,"show_author":false,"show_excerpt":false,"show_view_all":true,"color_scheme":"option-1","color_scheme_1":"option-3","padding_top":44,"padding_bottom":60,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0,"swipe_on_mobile":false,"disable_arrow_mobile":true}},"events_calendar":{"type":"events-calendar","blocks":{"event_1":{"type":"event","settings":{"event_date":12,"event_month":"Apr","hide_date":false,"event_time":"Saturday, 7:30pm","event_price":"$10","event_heading":"Cook with Flux Team","heading_size":"medium","heading_tag":"h2","event_description":"<p>Are you ready to embark on a culinary adventure unlike any other?<\/p>","event_location":"Oxford Street 13, 92746 London","link_label":"Book Now","link":"","open_new_tab_1":false,"show_text_box":false,"image_overlay_opacity":60,"color_scheme_1":""}},"event_2":{"type":"event","settings":{"event_date":12,"event_month":"Apr","hide_date":false,"event_time":"Sunday, 8:30pm","event_price":"$20","event_heading":"Fueling Your Fitness","heading_size":"medium","heading_tag":"h2","event_description":"<p>Effective exercise routines and essential recovery strategies for optimal performance.<\/p>","event_location":"Oxford Street 13, 92746 London","link_label":"Book Now","link":"","open_new_tab_1":false,"show_text_box":false,"image_overlay_opacity":60,"color_scheme_1":""}},"event_3":{"type":"event","settings":{"event_date":18,"event_month":"Aug","hide_date":false,"event_time":"Monday, 9:30pm","event_price":"$10","event_heading":"Wellness with Flux","heading_size":"medium","heading_tag":"h2","event_description":"<p>Your Fuel journey begins with a commitment to nourishing your body.<\/p>","event_location":"Maple Grove Farm, USA","link_label":"Book Now","link":"","open_new_tab_1":false,"show_text_box":false,"image_overlay_opacity":60,"color_scheme_1":""}}},"block_order":["event_1","event_2","event_3"],"disabled":true,"settings":{"caption":"","text_style":"caption-with-letter-spacing","text_size":"medium","heading":"Our Events: Stay Energized and Inspired","heading_size":"medium","heading_style":"default","heading_tag":"h2","banner_height":"small","animate_slider":false,"full_width":false,"disable_animation":false,"color_scheme":"","padding_top":36,"padding_bottom":0,"ignore_spacing":false,"margin_spacing":"negative","margin_top":0}},"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"<p>Discover the Power of clean <em>Nutrition<\/em><\/p>","heading_size":"extra-large","heading_style":"default","heading_tag":"h2","highlight_option":"underline-hand","word_animation_color":"#ffffff"}},"text":{"type":"text","settings":{"text":"<p>Fuel your body with wholesome, all-natural ingredients designed to energize and satisfy. Our high-protein, nutrient-rich products are crafted for those who value wellness and taste. Embrace a healthier lifestyle with food you can feel good about.<\/p>","text_style":"body"}},"buttons":{"type":"buttons","settings":{"button_label_1":"Explore Now","button_link_1":"","apply_link_to_image":false,"open_new_tab_1":false,"button_style_secondary_1":false,"button_label_2":"","button_link_2":"","open_new_tab_2":false,"button_style_secondary_2":false}}},"block_order":["heading","text","buttons"],"disabled":true,"settings":{"image_overlay_opacity":40,"image_border_radius":50,"image_height":"medium","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","ignore_spacing":true,"color_scheme_1":"","margin_spacing":"positive","margin_top":56,"mobile_content_alignment":"center","show_text_below":false}}},"order":["image_banner_Q6f6DA","multicolumn","collection_list","featured_collection","image_with_text","testimonials","newsletter","image_banner_with_featured_collection","rich-text","collection_tabs","slick_slider","info_cards","promotion_cards","image_hotspots","featured_product","two_images_text","featured_blog","events_calendar","image_banner"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "divine_hero": {
+      "type": "divine-hero",
+      "blocks": {
+        "badge": {
+          "type": "badge",
+          "settings": {
+            "text": "Rooted in Purpose · Driven by Wellness · 100% Organic"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {}
+        },
+        "subtitle": {
+          "type": "subtitle",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Superfoods",
+            "button_link_1": "shopify:\/\/collections\/organic-superfood-powders",
+            "button_label_2": "Explore Tea Rituals",
+            "button_link_2": "shopify:\/\/collections\/organic-herbal-tea"
+          }
+        }
+      },
+      "block_order": ["badge", "heading", "subtitle", "buttons"],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg",
+        "heading": "<p>Pure Organic Ingredients for <em>Everyday Wellness</em></p>",
+        "subtitle": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
+        "image_height": 70,
+        "overlay_opacity": 100
+      }
+    },
+    "divine_trust_bar": {
+      "type": "divine-trust-bar",
+      "blocks": {
+        "trust_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "<strong>USDA</strong> Organic · CCOF Certified"
+          }
+        },
+        "trust_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "package",
+            "text": "<strong>Free Ship</strong> on Orders $100+"
+          }
+        },
+        "trust_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "leaf",
+            "text": "<strong>Zero</strong> Additives. Ever."
+          }
+        },
+        "trust_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "check",
+            "text": "<strong>Every Batch</strong> Lab Tested"
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3", "trust_4"],
+      "settings": {}
+    },
+    "divine_lifestyle": {
+      "type": "divine-categories",
+      "blocks": {
+        "lifestyle_1": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify:\/\/collections\/matcha-tea-powders",
+            "heading": "Focus & Energy",
+            "subtitle": "Matcha, mushroom blends — fuel your mind naturally"
+          }
+        },
+        "lifestyle_2": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify:\/\/collections\/spices",
+            "heading": "Detox & Wellness",
+            "subtitle": "Turmeric, herbs — nourish from the inside out"
+          }
+        },
+        "lifestyle_3": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify:\/\/collections\/organic-herbal-tea",
+            "heading": "Tea Rituals",
+            "subtitle": "Loose leaf teas for every mood and moment"
+          }
+        },
+        "lifestyle_4": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify:\/\/collections\/organic-superfood-powders",
+            "heading": "Smoothies & Superfoods",
+            "subtitle": "Superfood powders to boost your daily blends"
+          }
+        }
+      },
+      "block_order": ["lifestyle_1", "lifestyle_2", "lifestyle_3", "lifestyle_4"],
+      "settings": {
+        "caption": "Find Your Ritual",
+        "title": "Shop by Lifestyle"
+      }
+    },
+    "divine_products": {
+      "type": "divine-products",
+      "settings": {
+        "caption": "Community Favorites",
+        "title": "Our Most Loved Ingredients",
+        "collection": "powder",
+        "products_to_show": 6,
+        "show_rating": true,
+        "show_view_all": true,
+        "view_all_label": "Shop All Best Sellers",
+        "view_all_link": "shopify:\/\/collections\/powder",
+        "use_alt_bg": false
+      }
+    },
+    "divine_brand_story": {
+      "type": "divine-brand-story",
+      "blocks": {
+        "value_1": {
+          "type": "value",
+          "settings": {
+            "icon": "shield",
+            "title": "Certified Organic",
+            "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
+          }
+        },
+        "value_2": {
+          "type": "value",
+          "settings": {
+            "icon": "globe",
+            "title": "Farm-Direct Sourcing",
+            "description": "We know our growers by name. Fair trade, direct relationships, full traceability from farm to your kitchen."
+          }
+        },
+        "value_3": {
+          "type": "value",
+          "settings": {
+            "icon": "clipboard",
+            "title": "Lab-Tested Everything",
+            "description": "Every single batch gets tested for purity, potency, and safety. Precision matters — we don't cut corners."
+          }
+        },
+        "value_4": {
+          "type": "value",
+          "settings": {
+            "icon": "heart",
+            "title": "Built for Wellness Seekers",
+            "description": "Creators, chefs, wellness brands, home cooks — if you care about what goes in, we're here for you."
+          }
+        }
+      },
+      "block_order": ["value_1", "value_2", "value_3", "value_4"],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Smoothie-blog-image-2.jpg",
+        "heading": "We Care About What Goes In — And Who It Goes To",
+        "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency.",
+        "button_label": "Read Our Story",
+        "button_link": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "certification_logos": {
+      "type": "image-gallery",
+      "blocks": {
+        "logo_1": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_5": {
+          "type": "text",
+          "settings": {}
+        },
+        "logo_6": {
+          "type": "text",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "caption": "Committed to Quality",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Certified for Your Confidence",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "scroll_direction": "ltc",
+        "scroll_speed": 60,
+        "scroll_height": 200,
+        "hover_stop": true,
+        "color_scheme": "option-2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "ignore_spacing": true,
+        "scroll_height_mobile": 120,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    },
+    "divine_testimonials": {
+      "type": "divine-testimonials",
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use. The consistency batch to batch is next level.",
+            "author": "Sarah M.",
+            "role": "Café Owner, Portland"
+          }
+        },
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I needed a source for organic turmeric and ashwagandha that I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
+            "author": "Dr. James K.",
+            "role": "Wellness Practitioner"
+          }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "Switched all my baking ingredients to Divine and honestly — night and day. The vanilla, the cinnamon, the matcha. Everything just tastes more real.",
+            "author": "Michelle T.",
+            "role": "Home Baker & Recipe Creator"
+          }
+        },
+        "testimonial_4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "We built our entire private label tea line on Divine ingredients. The sourcing transparency and quality certs make it easy to build trust with our own customers. Couldn't ask for a better partner.",
+            "author": "Ryan & Co.",
+            "role": "Private Label Brand"
+          }
+        },
+        "testimonial_5": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "The mushroom powder blends are next level — lion's mane and reishi that actually taste clean. No fillers, no weird aftertaste. My morning smoothie game has never been stronger.",
+            "author": "Anika P.",
+            "role": "Wellness Coach, Vancouver"
+          }
+        }
+      },
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3", "testimonial_4", "testimonial_5"],
+      "settings": {
+        "caption": "Real People, Real Talk",
+        "title": "Hear It From the Community"
+      }
+    },
+    "divine_why_us": {
+      "type": "divine-why-us",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "leaf",
+            "title": "100% Organic Ingredients",
+            "description": "No fillers, additives, or artificial flavors."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "globe",
+            "title": "Ethically Sourced",
+            "description": "Direct relationships with farms worldwide."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "Tested for Quality",
+            "description": "Microbiologically tested for purity and safety."
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "settings": {
+        "heading": "Why Divine Ingredients",
+        "cta_label": "Learn About Our Ingredients",
+        "cta_link": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "divine_subscription": {
+      "type": "divine-subscription",
+      "blocks": {
+        "plan_1": {
+          "type": "plan",
+          "settings": {
+            "title": "Monthly Tea Box",
+            "description": "A curated selection of seasonal loose leaf teas delivered to your door every month.",
+            "price": "From $29\/month",
+            "button_label": "Start My Subscription"
+          }
+        },
+        "plan_2": {
+          "type": "plan",
+          "settings": {
+            "title": "Superfood Powder Club",
+            "description": "Your monthly dose of organic superfood powders — adaptogens, mushrooms, and more.",
+            "price": "From $34\/month",
+            "button_label": "Start My Subscription"
+          }
+        },
+        "plan_3": {
+          "type": "plan",
+          "settings": {
+            "title": "Matcha of the Month",
+            "description": "Explore a different premium matcha grade each month from Japan's finest farms.",
+            "price": "From $24\/month",
+            "button_label": "Start My Subscription"
+          }
+        }
+      },
+      "block_order": ["plan_1", "plan_2", "plan_3"],
+      "settings": {
+        "caption": "Subscribe & Save",
+        "heading": "Join the Divine Ritual",
+        "subheading": "Never run out of your favorites. Subscribe monthly and save 15% on every delivery.",
+        "cta_label": "Save 15% Monthly",
+        "use_alt_bg": true
+      }
+    },
+    "divine_wholesale": {
+      "type": "divine-wholesale",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "text": "Low minimum order quantities"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "text": "Custom private label packaging"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "text": "All products USDA Organic certified"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "text": "Dedicated account support"
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {
+        "caption": "B2B & Private Label",
+        "heading": "Launch Your Own Organic Tea or Superfood Brand",
+        "text": "<p>Partner with Divine Ingredients for wholesale pricing, private label solutions, and custom blending. We supply cafés, wellness brands, retailers, and entrepreneurs with premium organic ingredients.</p>",
+        "button_label_1": "Start a Private Label Project",
+        "button_label_2": "Request Wholesale Pricing"
+      }
+    },
+    "divine_newsletter": {
+      "type": "divine-newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Divine Wellness Community"
+          }
+        },
+        "subtitle": {
+          "type": "subtitle",
+          "settings": {
+            "text": "Get 15% off your first order, plus recipes, wellness inspo, and first dibs on new drops."
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading", "subtitle", "email_form"],
+      "settings": {
+        "input_placeholder": "Your email address",
+        "button_label": "Join the Ritual",
+        "privacy_text": "No spam. No nonsense. Unsubscribe whenever.",
+        "show_first_name": true,
+        "name_placeholder": "First name"
+      }
+    }
+  },
+  "order": [
+    "divine_hero",
+    "divine_trust_bar",
+    "divine_lifestyle",
+    "divine_products",
+    "divine_brand_story",
+    "certification_logos",
+    "divine_why_us",
+    "divine_testimonials",
+    "divine_subscription",
+    "divine_wholesale",
+    "divine_newsletter"
+  ]
+}

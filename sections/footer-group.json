@@ -46,7 +46,7 @@
           "type": "brand_information",
           "settings": {
             "brand_headline": "DIVINE INGREDIENTS",
-            "brand_description": "<p>Premium organic matcha, teas, superfoods, and spices for discerning creators.</p>",
+            "brand_description": "<p>Pure organic ingredients for everyday wellness. Matcha, teas, superfoods, and spices — rooted in purpose, driven by wellness.</p>",
             "brand_image": "shopify://shop_images/tea_lover_1920x480_56e55ab3-75bc-4acb-b89e-1478b381c3d9.jpg",
             "brand_image_width": 50,
             "hide_image": true,
@@ -55,40 +55,41 @@
             "social_icons_size": "small"
           }
         },
-        "footer-0": {
+        "footer_shop": {
+          "type": "text",
+          "settings": {
+            "heading": "Shop",
+            "subtext": "<p><a href=\"/collections/organic-superfood-powders\" title=\"Superfoods\">Superfoods</a></p><p><a href=\"/collections/organic-herbal-tea\" title=\"Tea\">Tea</a></p><p><a href=\"/collections/spices\" title=\"Spices\">Spices</a></p>"
+          }
+        },
+        "footer_learn": {
+          "type": "text",
+          "settings": {
+            "heading": "Learn",
+            "subtext": "<p><a href=\"/blogs/tea\" title=\"Recipes\">Recipes</a></p><p><a href=\"/blogs/tea\" title=\"Ingredient Guide\">Ingredient Guide</a></p><p><a href=\"/blogs/tea\" title=\"Blog\">Blog</a></p>"
+          }
+        },
+        "footer_company": {
           "type": "text",
           "settings": {
             "heading": "Company",
-            "subtext": "<p><a href=\"/pages/about-us\" title=\"Our Story\">Our Story</a></p><p><a href=\"/collections\" title=\"Wholesale\">Wholesale</a></p><p><a href=\"/blogs/tea\" title=\"Blog\">Blog</a></p><p><a href=\"/pages/contact-us\" title=\"Contact\">Contact</a></p>"
+            "subtext": "<p><a href=\"/pages/about-us\" title=\"About\">About</a></p><p><a href=\"/pages/about-us\" title=\"Brand Story\">Brand Story</a></p><p><a href=\"/collections/shop-wholesale-with-divine\" title=\"Wholesale\">Wholesale</a></p>"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "footer_support": {
+          "type": "text",
           "settings": {
-            "heading": "Shop",
-            "menu": "quick-links"
-          }
-        },
-        "footer-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Because_conscious_cooking_shouldn_t_be_boring_and_neither_should_the_brands_behind_it..png",
-            "image_width": 550,
-            "image_headline": "Seasonal Subscription Boxes!",
-            "image_description": "<p>Get Tea Delivered to your DOOR!</p>",
-            "button_label": "Tea Box Subscriptions",
-            "button_link": "shopify://products/seasonal-subscription-box",
-            "open_new_tab_1": false,
-            "button_style_secondary": false,
-            "color_scheme_1": "option-2"
+            "heading": "Support",
+            "subtext": "<p><a href=\"/pages/contact-us\" title=\"Contact\">Contact</a></p><p><a href=\"/policies/shipping-policy\" title=\"Shipping\">Shipping</a></p><p><a href=\"/pages/faq\" title=\"FAQ\">FAQ</a></p>"
           }
         }
       },
       "block_order": [
         "brand_information",
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer_shop",
+        "footer_learn",
+        "footer_company",
+        "footer_support"
       ],
       "settings": {
         "enable_follow_on_shop": true,

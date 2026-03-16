@@ -1,0 +1,1492 @@
+/* ============================================
+   DIVINE INGREDIENTS - MOCKUP V3 STYLES
+   Mobile-First Design System
+   ============================================ */
+
+/* -----------------------------------------
+   Design Tokens (extending theme variables)
+   Aesthetic: warm artisan — Art of Tea / Chado inspired
+----------------------------------------- */
+:root {
+  --color-background-alt: #e2d6e6;       /* soft lavender */
+  --color-accent-hex: #c8a8d8;           /* Divine lavender — punched up */
+  --color-accent-dark: #9b76a7;          /* richer, visible purple */
+  --color-accent-light: #f0ebf4;         /* very soft lavender tint */
+  --color-text-muted: #7a6f64;           /* warm brown-gray */
+  --color-border-hex: #d2c4d7;           /* soft lavender border */
+  --color-foreground-hex: #1d1917;       /* near-black with warm undertone */
+  --color-background-hex: #ffffff;
+  --color-background-warm: #e2d6e6;      /* soft lavender for cards */
+
+  --font-heading: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  --font-body: 'Jost', var(--font-body-family), sans-serif;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  --tap-target: 44px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --transition-default: all 0.28s ease;
+}
+
+/* -----------------------------------------
+   Shared Horizontal Scroll Container
+----------------------------------------- */
+.divine-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-scroll-container > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------
+   Global Font Overrides — Josefin Sans + Jost
+   Applied site-wide over theme defaults
+----------------------------------------- */
+body,
+.rte,
+.page-width,
+p,
+li,
+td,
+input,
+select,
+textarea,
+button {
+  font-family: 'Jost', var(--font-body-family), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.announcement-bar__message,
+.header__menu-item,
+.header__heading,
+.footer__heading,
+.card__heading,
+.product__title,
+.collection__title,
+.full-unstyled-link {
+  font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Announcement bar — clean, modern */
+.announcement-bar {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* -----------------------------------------
+   Section Base Styles
+   Generous whitespace — artisan editorial feel
+----------------------------------------- */
+.divine-section {
+  padding: 48px 24px;
+}
+
+.divine-section-alt {
+  background: var(--color-background-alt);
+}
+
+.divine-section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.divine-section-label {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.divine-section-title {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-foreground-hex);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-section {
+    padding: 56px 48px;
+  }
+  .divine-section-title {
+    font-size: 34px;
+  }
+}
+
+/* -----------------------------------------
+   Button Styles
+----------------------------------------- */
+.divine-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap-target);
+  padding: 14px 24px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+  width: 100%;
+  line-height: 1;
+}
+
+.divine-btn-primary {
+  background: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+}
+
+.divine-btn-primary:hover {
+  opacity: 0.85;
+}
+
+.divine-btn-secondary {
+  background: transparent;
+  color: var(--color-foreground-hex);
+  border: 1.5px solid var(--color-foreground-hex);
+}
+
+.divine-btn-secondary:hover {
+  background: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+}
+
+@media screen and (min-width: 768px) {
+  .divine-btn {
+    width: auto;
+    padding: 14px 32px;
+  }
+}
+
+/* ============================================
+   HERO SECTION — Full-bleed overlay layout
+   Art of Tea / Chado style: image fills frame,
+   content sits on top with gradient for legibility
+   ============================================ */
+.divine-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 65vh;
+  background: linear-gradient(135deg, #f0eaf2 0%, #e2d6e6 50%, #d5c9d8 100%);
+}
+
+/* Image fills the whole hero */
+.divine-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.divine-hero__image img,
+.divine-hero__image svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-hero__image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-hero__image iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.divine-hero__image--video {
+  position: absolute;
+  inset: 0;
+}
+
+/* Gradient overlay — darkens bottom for text readability */
+.divine-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 6, 0.82) 0%,
+    rgba(10, 8, 6, 0.48) 35%,
+    rgba(10, 8, 6, 0.12) 65%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content sits above gradient */
+.divine-hero__content {
+  position: relative;
+  z-index: 2;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px 24px 52px;
+  text-align: center;
+  color: #fff;
+}
+
+.divine-hero__badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.10);
+  padding: 5px 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 14px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.divine-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  margin-top: 0;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.divine-hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.divine-hero__subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 28px;
+  margin-top: 0;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divine-hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+/* Button overrides for overlay context */
+.divine-hero .divine-btn-primary {
+  background: #fff;
+  color: var(--color-foreground-hex);
+  border: none;
+}
+
+.divine-hero .divine-btn-primary:hover {
+  background: rgba(255, 255, 255, 0.90);
+  opacity: 1;
+}
+
+.divine-hero .divine-btn-secondary {
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.divine-hero .divine-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.20);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-hero {
+    min-height: 78vh;
+  }
+  .divine-hero__content {
+    min-height: 78vh;
+    padding: 60px 48px 80px;
+  }
+  .divine-hero h1 {
+    font-size: 56px;
+  }
+  .divine-hero__subtitle {
+    font-size: 17px;
+    max-width: 580px;
+  }
+  .divine-hero__cta {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+}
+
+/* ============================================
+   TRUST BAR
+   ============================================ */
+.divine-trust-bar {
+  padding: 18px 0;
+  background: var(--color-background-warm);
+  border-top: 1px solid var(--color-border-hex);
+  border-bottom: 1px solid var(--color-border-hex);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-trust-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-trust-bar__inner {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 24px;
+  min-width: max-content;
+}
+
+.divine-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.divine-trust-item svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-accent-dark);
+  stroke-width: 1.5;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.divine-trust-item span {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.divine-trust-item strong {
+  color: var(--color-foreground-hex);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-trust-bar {
+    padding: 20px 0;
+  }
+  .divine-trust-bar__inner {
+    gap: 56px;
+  }
+  .divine-trust-item svg {
+    width: 26px;
+    height: 26px;
+  }
+  .divine-trust-item span {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   CATEGORY GRID
+   ============================================ */
+.divine-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.divine-category-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+.divine-category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.divine-category-card:hover img {
+  transform: scale(1.05);
+}
+
+.divine-category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.divine-category-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 2;
+  color: #fff;
+}
+
+.divine-category-card__content h3 {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  margin-top: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.divine-category-card__content p {
+  font-size: 13px;
+  opacity: 1;
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .divine-category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ============================================
+   PRODUCT CAROUSEL
+   ============================================ */
+.divine-product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 20px 16px;
+  margin: 0 -20px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-product-card {
+  flex: 0 0 210px;
+  scroll-snap-align: start;
+  background: var(--color-background-warm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+  display: block;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+
+.divine-product-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.divine-product-card__image {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 16px 16px 0;   /* give the circle breathing room */
+  background: var(--color-background-alt);
+}
+
+.divine-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-product-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  border: 1px solid var(--color-border-hex);
+  background: transparent;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.divine-product-badge--sale {
+  color: #c75050;
+  border-color: rgba(199, 80, 80, 0.35);
+  background: transparent;
+}
+
+.divine-product-card__info {
+  padding: 14px;
+}
+
+.divine-product-card__title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.divine-product-card__meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.divine-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.divine-product-rating svg {
+  width: 12px;
+  height: 12px;
+  fill: #e5b94e;
+}
+
+.divine-product-rating span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.divine-product-card__price {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.divine-product-card__price--sale {
+  color: #c75050;
+}
+
+.divine-product-card__price s {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.divine-products__view-all {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 8px;
+}
+
+.divine-products__view-all .divine-btn-secondary {
+  display: inline-flex;
+  width: auto;
+  padding: 12px 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-product-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
+    justify-content: center;
+    gap: 20px;
+    overflow-x: unset;
+    padding: 0 40px;
+    margin: 0;
+    scroll-snap-type: none;
+  }
+  .divine-product-card {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* ============================================
+   BRAND STORY
+   ============================================ */
+.divine-brand-story__image {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+  margin-inline: auto;
+}
+
+.divine-brand-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.divine-brand-story__content h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-top: 0;
+}
+
+.divine-brand-story__content > p {
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.divine-brand-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.divine-brand-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.divine-brand-value svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-accent-dark);
+  stroke-width: 1.5;
+  fill: none;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.divine-brand-value h4 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.divine-brand-value p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-brand-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+  .divine-brand-story__image {
+    margin-bottom: 0;
+    aspect-ratio: auto;
+    max-width: 100%;
+  }
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.divine-testimonial-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 20px 16px;
+  margin: 0 -20px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.divine-testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.divine-testimonial-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: var(--color-background-warm);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-hex);
+}
+
+.divine-testimonial-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.divine-testimonial-stars svg {
+  width: 14px;
+  height: 14px;
+  fill: #e5b94e;
+}
+
+.divine-testimonial-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-foreground-hex);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.divine-testimonial-author {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.divine-testimonial-role {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-testimonial-scroll {
+    padding: 0 40px 16px;
+    margin: 0 -40px;
+  }
+}
+
+/* ============================================
+   EMAIL SIGNUP / NEWSLETTER
+   ============================================ */
+.divine-newsletter {
+  background: #2c2420;                   /* warm dark brown — earthy, not stark black */
+  color: var(--color-background-hex);
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.divine-newsletter h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: var(--color-background-hex);
+}
+
+.divine-newsletter > p,
+.divine-newsletter__subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.divine-newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.divine-newsletter__form input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.divine-newsletter__form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.divine-newsletter__form input[type="email"]:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.divine-newsletter__form button[type="submit"] {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--color-accent-hex);
+  color: var(--color-foreground-hex);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  min-height: var(--tap-target);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.divine-newsletter__form button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.divine-newsletter__privacy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 12px;
+}
+
+.divine-newsletter__message {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.divine-newsletter__message--success {
+  color: #7dca7d;
+}
+
+.divine-newsletter__message--error {
+  color: #e57373;
+}
+
+@media screen and (min-width: 768px) {
+  .divine-newsletter__form {
+    flex-direction: row;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .divine-newsletter__form input[type="email"] {
+    flex: 1;
+  }
+  .divine-newsletter__form button[type="submit"] {
+    width: auto;
+  }
+}
+
+/* ============================================
+   ANNOUNCEMENT BAR — Static Centered Trust Strip
+   Replaces default dark ticker with warm static bar
+   ============================================ */
+
+/* Force warm background regardless of color scheme */
+.announcement-bar,
+.announcement-bar.color-option-3,
+.announcement-bar.color-option-3.gradient,
+.announcement-bar[class*="color-option"],
+.announcement-bar[class*="color-option"].gradient {
+  background: var(--color-accent-light) !important;
+  background-color: var(--color-accent-light) !important;
+  border-bottom: 1px solid rgba(155, 118, 167, 0.25);
+  --color-foreground: 44, 36, 32;
+  --color-background: 240, 235, 244;
+  --gradient-background: transparent;
+}
+
+/* Message wrapper: kill flex column layout the theme uses */
+.announcement-bar .announcement-bar__message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+/* Kill the text-slider animation — pin it static */
+.announcement-bar text-slider {
+  display: block;
+  position: relative;
+  height: auto !important;
+  overflow: visible;
+}
+
+.announcement-bar text-slider div {
+  position: static !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Hide all but first slide since we're static */
+.announcement-bar text-slider div:not(:first-child) {
+  display: none;
+}
+
+/* Text styling */
+.announcement-bar .announcement-bar__message p,
+.announcement-bar .announcement-bar__message a,
+.announcement-bar .announcement-text,
+.announcement-bar .announcement-text p {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-foreground-hex) !important;
+  margin: 0;
+}
+
+.announcement-bar .announcement-bar__message a,
+.announcement-bar .announcement-text a {
+  color: var(--color-accent-dark) !important;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.announcement-bar .announcement-bar__message a:hover,
+.announcement-bar .announcement-text a:hover {
+  opacity: 0.8;
+}
+
+/* Hide the social icons column — keeps bar clean */
+.announcement-bar .announcement-bar__socials {
+  display: none !important;
+}
+
+/* Hide country selector in bar — cleaner */
+.announcement-bar localization-form {
+  display: none !important;
+}
+
+/* ============================================
+   HEADER OVERRIDES
+   ============================================ */
+.section-header {
+  border-bottom: 1px solid var(--color-border-hex);
+}
+
+.header {
+  padding: 12px 16px;
+}
+
+.header__heading-logo {
+  max-width: 100px;
+}
+
+.header__icon .icon,
+header-drawer .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__icon,
+header-drawer summary {
+  min-width: var(--tap-target);
+  min-height: var(--tap-target);
+}
+
+.cart-count-bubble {
+  background-color: var(--color-accent-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   FOOTER OVERRIDES
+   Nuke any dark color scheme the theme applies
+   ============================================ */
+.footer,
+.footer .color-option-3,
+.footer .color-option-3.gradient,
+.footer [class*="color-option"],
+.footer [class*="color-option"].gradient {
+  background: var(--color-background-warm) !important;
+  background-color: var(--color-background-warm) !important;
+  /* Reset CSS vars the color scheme may have flipped to dark */
+  --color-foreground: 44, 36, 32;
+  --color-background: 226, 214, 230;
+  --gradient-background: transparent;
+}
+
+.footer,
+.footer .color-option-3,
+.footer [class*="color-option"] {
+  color: var(--color-foreground-hex) !important;
+}
+
+.footer-block__heading {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-foreground-hex) !important;
+}
+
+.footer .list-menu__item--link {
+  font-size: 13px;
+  color: var(--color-text-muted) !important;
+}
+
+.footer .list-menu__item--link:hover {
+  color: var(--color-foreground-hex) !important;
+}
+
+.footer-block__brand-info .rte {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Footer newsletter field — warm styled */
+.footer .newsletter-form__field-wrapper input {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--color-border-hex);
+  color: var(--color-foreground-hex);
+}
+.footer .newsletter-form__button {
+  background: var(--color-accent-dark) !important;
+  border-color: var(--color-accent-dark) !important;
+  color: #fff !important;
+}
+
+.footer__content-bottom {
+  border-top: 1px solid var(--color-border-hex);
+  padding-top: 24px;
+}
+
+.footer .list-social__link {
+  padding: 10px;
+  min-width: var(--tap-target);
+  min-height: var(--tap-target);
+}
+
+.footer .list-social__link .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-text-muted);
+}
+
+.footer-block__details-content {
+  font-size: 13px;
+}
+
+.footer-block__details-content a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.footer-block__details-content a:hover {
+  color: var(--color-foreground-hex);
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   PRODUCT PAGE — Buy Buttons
+   Divine-branded, full-width, uniform height
+   ============================================ */
+.product-form__buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px;
+  width: 100% !important;
+}
+
+.product-form__buttons .product-form__submit,
+.product-form__buttons .shopify-payment-button {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box;
+}
+
+/* Add to Cart — Divine primary */
+.product-form__buttons .product-form__submit {
+  align-self: stretch;
+  height: 52px;
+  min-height: 52px;
+  background-color: var(--color-foreground-hex);
+  color: var(--color-background-hex);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-default);
+  box-shadow: none;
+}
+
+.product-form__buttons .product-form__submit:hover {
+  opacity: 0.85;
+}
+
+/* Shop Pay / dynamic checkout — match height */
+.product-form__buttons .shopify-payment-button {
+  height: 52px;
+  min-height: 52px;
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button {
+  width: 100% !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: var(--radius-sm) !important;
+  background-color: var(--color-foreground-hex) !important;
+  color: var(--color-background-hex) !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-default);
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button:hover {
+  opacity: 0.85 !important;
+}
+
+.product-form__buttons .shopify-payment-button .shopify-payment-button__button--unbranded {
+  height: 52px !important;
+  min-height: 52px !important;
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+}
+
+/* "More payment options" link — Divine style */
+.shopify-payment-button__more-options {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   SITEWIDE CIRCULAR PRODUCT IMAGES
+   Applies to: product cards across all pages,
+   product detail gallery, thumbnails, related,
+   featured, complementary, cart upsells
+   ============================================ */
+
+/* --- Product detail page main gallery --- */
+.product__media-wrapper .product__media,
+.product__media-wrapper .media,
+.product-single__media-wrapper .media {
+  border-radius: 50% !important;
+  overflow: hidden;
+  aspect-ratio: 1;
+  max-width: 420px;
+  max-height: 420px;
+  margin-inline: auto;
+}
+
+/* Thumbnail strip on product pages */
+.thumbnail-list .thumbnail-list__item .media,
+.thumbnail-list .thumbnail-list__item img {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Featured product section */
+.featured-product .product__media,
+.featured-product .media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Cart page — line item images */
+.cart-item__image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Quick-add modal product image */
+.quick-add-modal .product__media,
+.quick-add-modal .media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Complementary products */
+.complementary-products .card .card-inner .card-media,
+.product-recommendations .card .card-inner .card-media {
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+/* Recently viewed products — circular images
+   The JS template now uses .card-media (single dash) which inherits
+   the global circular rules from component-card.css.  These overrides
+   ensure the inner .media / .global-media-settings layers also clip
+   to a circle. */
+.recently-viewed .card-media .media,
+.recently-viewed .card-media .global-media-settings {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.recently-viewed .card-media .global-media-settings:after {
+  border-radius: 50% !important;
+}
+
+/* ============================================
+   DIVINE TAG BADGES (product cards)
+   ============================================ */
+.divine-product-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.divine-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.divine-tag--benefit {
+  background-color: var(--color-accent-light, #f0ebf4);
+  color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-tag--flavor {
+  background-color: #fef6e8;
+  color: #a07628;
+}
+
+.divine-tag--dietary {
+  background-color: #e8f5e9;
+  color: #4a7c4f;
+}
+
+/* Larger tags on product detail page */
+.divine-product-detail-tags .divine-tag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+}
+
+/* ============================================
+   DIVINE COLLECTION FILTERS
+   ============================================ */
+.divine-filters {
+  padding: var(--spacing-sm) 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.divine-filter-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+.divine-filter-group__title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #7a6f64);
+  margin-bottom: 6px;
+}
+
+.divine-filter-group__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.divine-chip {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-hex, #d2c4d7);
+  background-color: var(--color-background-hex, #fff);
+  color: var(--color-foreground-hex, #1d1917);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.divine-chip:hover {
+  border-color: var(--color-accent-dark, #9b76a7);
+  color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-chip--active {
+  background-color: var(--color-accent-dark, #9b76a7);
+  color: #fff;
+  border-color: var(--color-accent-dark, #9b76a7);
+}
+
+.divine-chip--active:hover {
+  background-color: var(--color-accent-hex, #c8a8d8);
+  color: #fff;
+}
+
+.divine-chip--clear {
+  background-color: transparent;
+  border-color: var(--color-text-muted, #7a6f64);
+  color: var(--color-text-muted, #7a6f64);
+  font-weight: 600;
+}
+
+.divine-chip--clear:hover {
+  background-color: var(--color-foreground-hex, #1d1917);
+  color: #fff;
+  border-color: var(--color-foreground-hex, #1d1917);
+}
+
+/* Flavor-specific chip accent colors */
+.divine-chip--benefit.divine-chip--active {
+  background-color: #9b76a7;
+  border-color: #9b76a7;
+}
+
+.divine-chip--flavor.divine-chip--active {
+  background-color: #a07628;
+  border-color: #a07628;
+}
+
+.divine-chip--dietary.divine-chip--active {
+  background-color: #4a7c4f;
+  border-color: #4a7c4f;
+}
+
+.divine-chip--caffeine.divine-chip--active {
+  background-color: #6b5e52;
+  border-color: #6b5e52;
+}
+
+.divine-chip--origin.divine-chip--active {
+  background-color: #5a7d9a;
+  border-color: #5a7d9a;
+}
+
+.divine-chip--format.divine-chip--active {
+  background-color: #8b6e4e;
+  border-color: #8b6e4e;
+}
+
+/* Filter group responsive */
+@media screen and (max-width: 767px) {
+  .divine-filter-group__chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .divine-filter-group__chips::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================
+   PRODUCT PAGE — Recently Viewed Section
+   Divine-branded headings
+   (Related Products headings live in section-related-products.css)
+   ============================================ */
+.recent-products .title-wrapper .title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-foreground-hex);
+}
+
+.recent-products .image-with-text-text--caption {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  font-size: 11px;
+}
+
+/* Card headings & prices — now in component-card.css
+   Testimonials — now in section-testimonials.css
+   Tabs — now in tabs.css
+   Related Products — now in section-related-products.css */

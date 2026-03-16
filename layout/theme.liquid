@@ -7,6 +7,9 @@
       <meta name="theme-color" content="">
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   
       {%- if settings.favicon != blank -%}
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -45,14 +48,24 @@
         assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
         assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
         assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+        assign heading_font_400 = settings.type_header_font | font_modify: 'weight', '400'
+        assign heading_font_500 = settings.type_header_font | font_modify: 'weight', '500'
+        assign heading_font_600 = settings.type_header_font | font_modify: 'weight', '600'
+        assign body_font_500 = settings.type_body_font | font_modify: 'weight', '500'
+        assign body_font_600 = settings.type_body_font | font_modify: 'weight', '600'
       %}
-  
+
       {% style %}
           {{ settings.type_body_font | font_face: font_display: 'swap' }}
           {{ body_font_bold | font_face: font_display: 'swap' }}
           {{ body_font_italic | font_face: font_display: 'swap' }}
           {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+          {{ body_font_500 | font_face: font_display: 'swap' }}
+          {{ body_font_600 | font_face: font_display: 'swap' }}
           {{ settings.type_header_font | font_face: font_display: 'swap' }}
+          {{ heading_font_400 | font_face: font_display: 'swap' }}
+          {{ heading_font_500 | font_face: font_display: 'swap' }}
+          {{ heading_font_600 | font_face: font_display: 'swap' }}
   
           {% for scheme in settings.color_schemes -%}
           {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
@@ -293,6 +306,7 @@
       {% endstyle %}
   
       {{ 'base.css' | asset_url | stylesheet_tag }}
+      {{ 'divine-mockup-v3.css' | asset_url | stylesheet_tag }}
       {%- if settings.deactivate_animation == false -%}
         {{ 'aos.css' | asset_url | stylesheet_tag }}
       {%- endif -%}

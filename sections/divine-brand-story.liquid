@@ -1,0 +1,244 @@
+{%- style -%}
+  .divine-brand-story-section {
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  @media screen and (min-width: 768px) {
+    .divine-brand-story-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
+    .divine-brand-story-section h2,
+    .divine-brand-story-section h4,
+    .divine-brand-story-section p {
+      color: {{ section.settings.text_color }};
+    }
+  {% endif %}
+  {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
+    .divine-brand-story-section .divine-brand-value svg {
+      stroke: {{ section.settings.accent_color }};
+    }
+  {% endif %}
+{%- endstyle -%}
+
+<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+  <div class="divine-brand-story__grid">
+    <div class="divine-brand-story__image">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1000
+          | image_tag:
+            loading: 'lazy',
+            widths: '375, 550, 750, 1000',
+            sizes: '(min-width: 768px) 50vw, 100vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+
+    <div class="divine-brand-story__content">
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <p>{{ section.settings.text }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link }}" class="divine-btn divine-btn-primary" style="{% if section.settings.button_bg != blank and section.settings.button_bg != 'rgba(0,0,0,0)' %}background:{{ section.settings.button_bg }};{% endif %}{% if section.settings.button_color != blank and section.settings.button_color != 'rgba(0,0,0,0)' %}color:{{ section.settings.button_color }};{% endif %}">
+          {{ section.settings.button_label }}
+        </a>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="divine-brand-values">
+          {%- for block in section.blocks -%}
+            <div class="divine-brand-value" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon == 'shield' -%}
+                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              {%- elsif block.settings.icon == 'globe' -%}
+                <svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              {%- elsif block.settings.icon == 'clipboard' -%}
+                <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+              {%- elsif block.settings.icon == 'dollar' -%}
+                <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              {%- elsif block.settings.icon == 'leaf' -%}
+                <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L7 18c4-2 6-5 7-9 1 4 3 7 7 9l1.36 4 1.82-.64C22.1 16.17 19.9 10.04 17 8z"></path></svg>
+              {%- elsif block.settings.icon == 'heart' -%}
+                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              {%- endif -%}
+              <div>
+                <h4>{{ block.settings.title }}</h4>
+                <p>{{ block.settings.description }}</p>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Brand Story",
+  "tag": "section",
+  "class": "divine-brand-story-section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "We Care About What Goes In — And Who It Goes To"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description",
+      "default": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text color"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_alt_bg",
+      "label": "Use alternate background",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Brand Value",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "shield", "label": "Shield / Certified" },
+            { "value": "globe", "label": "Globe / Sourcing" },
+            { "value": "clipboard", "label": "Clipboard / Tested" },
+            { "value": "dollar", "label": "Dollar / Pricing" },
+            { "value": "leaf", "label": "Leaf / Organic" },
+            { "value": "heart", "label": "Heart / Care" }
+          ],
+          "default": "shield"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Certified Organic"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Brand Story",
+      "blocks": [
+        { "type": "value", "settings": { "icon": "shield", "title": "Certified Organic", "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always." } },
+        { "type": "value", "settings": { "icon": "globe", "title": "Farm-Direct", "description": "We know our growers by name. Fair trade, direct relationships, full traceability." } },
+        { "type": "value", "settings": { "icon": "clipboard", "title": "Lab-Tested Everything", "description": "Every single batch gets tested for purity, potency, and safety. Precision matters — we don't cut corners." } },
+        { "type": "value", "settings": { "icon": "heart", "title": "Built for You", "description": "Creators, chefs, wellness brands, home cooks — if you care about what goes in, we're here for you." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
