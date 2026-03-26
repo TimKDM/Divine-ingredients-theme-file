@@ -31,12 +31,12 @@
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Explore Our Teas",
-            "button_link_1": "shopify://collections/zen-greens-green-tea",
+            "button_label_1": "Explore Our Collections",
+            "button_link_1": "shopify://collections",
             "btn1_bg": "",
             "btn1_color": "",
-            "button_label_2": "Shop Wellness Blends",
-            "button_link_2": "shopify://collections/herbal-harmony-wellness-tea",
+            "button_label_2": "Our Story",
+            "button_link_2": "shopify://pages/about-us",
             "btn2_color": ""
           }
         }
@@ -55,7 +55,7 @@
         "loop": true,
         "muted": true,
         "heading": "<p>Pure Organic Ingredients for <em>Everyday Wellness</em></p>",
-        "subtitle": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
+        "subtitle": "Organic teas, superfoods, and botanicals — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
         "overlay_opacity": 100,
         "margin_top": 0,
         "margin_bottom": 0
@@ -117,160 +117,58 @@
     "divine_lifestyle": {
       "type": "divine-categories",
       "blocks": {
-        "cat_zen_greens": {
+        "lifestyle_morning": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/zen-greens-green-tea",
-            "heading": "Zen Greens",
-            "subtitle": "Matcha, sencha, jasmine — calm focus in every cup",
+            "heading": "Morning Ritual",
+            "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
             "link": ""
           }
         },
-        "cat_bold_classics": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/bold-classics-black-tea",
-            "heading": "Bold Classics",
-            "subtitle": "Earl Grey, English Breakfast — timeless and full-bodied",
-            "link": ""
-          }
-        },
-        "cat_botanical_bliss": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/botanical-bliss-herbal-tea",
-            "heading": "Botanical Bliss",
-            "subtitle": "Caffeine-free herbal blends that soothe and refresh",
-            "link": ""
-          }
-        },
-        "cat_herbal_harmony": {
+        "lifestyle_calm": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/herbal-harmony-wellness-tea",
-            "heading": "Herbal Harmony",
-            "subtitle": "Turmeric, immunity, adaptogens — wellness in a cup",
+            "heading": "Calm & Restore",
+            "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
             "link": ""
           }
         },
-        "cat_calm_rituals": {
+        "lifestyle_botanical": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/calm-rituals-hemp-tea",
-            "heading": "Calm Rituals",
-            "subtitle": "Organic hemp teas for those quiet moments",
+            "collection": "shopify://collections/botanical-bliss-herbal-tea",
+            "heading": "Botanical Garden",
+            "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
             "link": ""
           }
         },
-        "cat_cool_brews": {
+        "lifestyle_refresh": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/cool-brews-iced-tea",
-            "heading": "Cool Brews",
-            "subtitle": "Refreshing iced teas for warm days and bold flavor",
-            "link": ""
-          }
-        },
-        "cat_silk_leaves": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/silk-leaves-oolong-tea",
-            "heading": "Silk Leaves",
-            "subtitle": "Smooth, complex oolong — nuanced and refined",
+            "heading": "Cool & Refresh",
+            "subtitle": "Iced teas and light oolongs for bright, easy moments",
             "link": ""
           }
         }
       },
       "block_order": [
-        "cat_zen_greens",
-        "cat_bold_classics",
-        "cat_botanical_bliss",
-        "cat_herbal_harmony",
-        "cat_calm_rituals",
-        "cat_cool_brews",
-        "cat_silk_leaves"
+        "lifestyle_morning",
+        "lifestyle_calm",
+        "lifestyle_botanical",
+        "lifestyle_refresh"
       ],
       "settings": {
-        "caption": "Our Collections",
-        "title": "Find Your Tea",
+        "caption": "Shop by Ritual",
+        "title": "Find Your Moment",
         "use_alt_bg": true,
         "background_color": "",
         "text_color": "",
         "accent_color": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "divine_more_categories": {
-      "type": "divine-categories",
-      "blocks": {
-        "cat_powders": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/powder",
-            "heading": "Powders",
-            "subtitle": "Full range of organic superfood & functional powders",
-            "link": ""
-          }
-        },
-        "cat_botanicals": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/botanicals",
-            "heading": "Botanicals",
-            "subtitle": "Chamomile, hibiscus, tulsi, rose petals & more",
-            "link": ""
-          }
-        },
-        "cat_subscriptions": {
-          "type": "category",
-          "settings": {
-            "collection": "shopify://collections/subscriptions-accessories",
-            "heading": "Subscriptions & Accessories",
-            "subtitle": "Monthly boxes & artisan brewing gear",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "cat_powders",
-        "cat_botanicals",
-        "cat_subscriptions"
-      ],
-      "settings": {
-        "caption": "More From Divine",
-        "title": "Beyond the Cup",
-        "use_alt_bg": false,
-        "background_color": "",
-        "text_color": "",
-        "accent_color": "",
-        "padding_top": 0,
-        "padding_bottom": 32,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "divine_products": {
-      "type": "divine-products",
-      "settings": {
-        "caption": "Community Favorites",
-        "title": "Our Most Loved Ingredients",
-        "collection": "powder",
-        "products_to_show": 4,
-        "show_rating": true,
-        "show_tags": true,
-        "show_view_all": true,
-        "view_all_label": "Shop All Best Sellers",
-        "view_all_link": "shopify://collections/powder",
-        "use_alt_bg": false,
-        "background_color": "",
-        "text_color": "",
-        "accent_color": "",
-        "card_background_color": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -283,7 +181,7 @@
           "settings": {
             "icon": "shield",
             "title": "Certified Organic",
-            "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients. Pure and authentic, always."
+            "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients."
           }
         },
         "value_2": {
@@ -291,36 +189,18 @@
           "settings": {
             "icon": "globe",
             "title": "Farm-Direct Sourcing",
-            "description": "We know our growers by name. Fair trade, direct relationships, full traceability from farm to your kitchen."
-          }
-        },
-        "value_3": {
-          "type": "value",
-          "settings": {
-            "icon": "clipboard",
-            "title": "Lab-Tested Everything",
-            "description": "Every single batch gets tested for purity, potency, and safety. Precision matters — we don't cut corners."
-          }
-        },
-        "value_4": {
-          "type": "value",
-          "settings": {
-            "icon": "heart",
-            "title": "Built for Wellness Seekers",
-            "description": "Creators, chefs, wellness brands, home cooks — if you care about what goes in, we're here for you."
+            "description": "We know our growers by name. Japan, India, Sri Lanka — full traceability."
           }
         }
       },
       "block_order": [
         "value_1",
-        "value_2",
-        "value_3",
-        "value_4"
+        "value_2"
       ],
       "settings": {
         "image": "shopify://shop_images/Smoothie-blog-image-2.jpg",
         "heading": "We Care About What Goes In — And Who It Goes To",
-        "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms — Japan, India, Sri Lanka, and beyond. We built real relationships with real growers. We test every batch in independent labs. And we made a promise: no synthetic anything, ever. Because the best food starts with the best ingredients, and the people creating with them deserve complete transparency.",
+        "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms, built real relationships with real growers, and test every batch in independent labs. No synthetic anything, ever.",
         "button_label": "Read Our Story",
         "button_link": "shopify://pages/about-us",
         "button_bg": "",
@@ -329,67 +209,10 @@
         "background_color": "",
         "text_color": "",
         "accent_color": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
+        "padding_top": 48,
+        "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0
-      }
-    },
-    "certification_logos": {
-      "type": "image-gallery",
-      "blocks": {
-        "logo_1": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_2": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_3": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_4": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_5": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_6": {
-          "type": "text",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "logo_1",
-        "logo_2",
-        "logo_3",
-        "logo_4",
-        "logo_5",
-        "logo_6"
-      ],
-      "settings": {
-        "caption": "Committed to Quality",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "Certified for Your Confidence",
-        "heading_size": "medium",
-        "heading_style": "default",
-        "heading_tag": "h2",
-        "scroll_direction": "ltc",
-        "scroll_speed": 60,
-        "scroll_height": 200,
-        "hover_stop": true,
-        "color_scheme": "option-2",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "ignore_spacing": true,
-        "scroll_height_mobile": 120,
-        "margin_spacing": "negative",
-        "margin_top": 0
       }
     },
     "divine_why_us": {
@@ -427,8 +250,8 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "Why Divine Ingredients",
-        "cta_label": "Learn About Our Ingredients",
+        "heading": "Why Divine",
+        "cta_label": "Learn More",
         "cta_link": "shopify://pages/about-us",
         "use_alt_bg": false,
         "background_color": "",
@@ -447,7 +270,7 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use. The consistency batch to batch is next level.",
+            "text": "This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use.",
             "author": "Sarah M.",
             "role": "Café Owner, Portland",
             "link": ""
@@ -457,7 +280,7 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "I needed a source for organic turmeric and ashwagandha that I could actually stand behind. Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
+            "text": "Lab-tested, consistent quality, and the bulk pricing works perfectly for our practice. Done deal.",
             "author": "Dr. James K.",
             "role": "Wellness Practitioner",
             "link": ""
@@ -467,29 +290,9 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "Switched all my baking ingredients to Divine and honestly — night and day. The vanilla, the cinnamon, the matcha. Everything just tastes more real.",
+            "text": "Switched all my baking ingredients to Divine and honestly — night and day. Everything just tastes more real.",
             "author": "Michelle T.",
             "role": "Home Baker & Recipe Creator",
-            "link": ""
-          }
-        },
-        "testimonial_4": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "We built our entire private label tea line on Divine ingredients. The sourcing transparency and quality certs make it easy to build trust with our own customers. Couldn't ask for a better partner.",
-            "author": "Ryan & Co.",
-            "role": "Private Label Brand",
-            "link": ""
-          }
-        },
-        "testimonial_5": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "The mushroom powder blends are next level — lion's mane and reishi that actually taste clean. No fillers, no weird aftertaste. My morning smoothie game has never been stronger.",
-            "author": "Anika P.",
-            "role": "Wellness Coach, Vancouver",
             "link": ""
           }
         }
@@ -497,12 +300,10 @@
       "block_order": [
         "testimonial_1",
         "testimonial_2",
-        "testimonial_3",
-        "testimonial_4",
-        "testimonial_5"
+        "testimonial_3"
       ],
       "settings": {
-        "caption": "Real People, Real Talk",
+        "caption": "",
         "title": "Hear It From the Community",
         "use_alt_bg": false,
         "background_color": "",
@@ -511,65 +312,6 @@
         "card_background_color": "",
         "card_border_color": "",
         "star_color": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "divine_subscription": {
-      "type": "divine-subscription",
-      "blocks": {
-        "plan_1": {
-          "type": "plan",
-          "settings": {
-            "title": "Monthly Tea Box",
-            "description": "Curated seasonal teas, delivered monthly. Save 15%.",
-            "price": "From $29/month",
-            "button_label": "Subscribe",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "plan_1"
-      ],
-      "settings": {
-        "caption": "Subscribe & Save",
-        "heading": "Never Run Out of Your Favorites",
-        "subheading": "Monthly deliveries, 15% off every order. Cancel anytime.",
-        "cta_label": "View All Subscriptions",
-        "cta_link": "",
-        "use_alt_bg": true,
-        "background_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "divine_wholesale": {
-      "type": "divine-wholesale",
-      "blocks": {
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "text": "Low MOQs · Private label · USDA Certified"
-          }
-        }
-      },
-      "block_order": [
-        "feature_1"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Wholesale & Private Label",
-        "text": "<p>We supply cafés, wellness brands, and retailers with premium organic ingredients. Custom blending and private label available.</p>",
-        "button_label_1": "Get Wholesale Pricing",
-        "button_link_1": "",
-        "button_label_2": "",
-        "button_link_2": "",
-        "background_color": "",
         "padding_top": 32,
         "padding_bottom": 32,
         "margin_top": 0,
@@ -622,14 +364,9 @@
     "divine_hero",
     "divine_trust_bar",
     "divine_lifestyle",
-    "divine_more_categories",
-    "divine_products",
     "divine_brand_story",
-    "certification_logos",
     "divine_why_us",
     "divine_testimonials",
-    "divine_subscription",
-    "divine_wholesale",
     "divine_newsletter"
   ]
 }
