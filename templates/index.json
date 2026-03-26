@@ -263,6 +263,62 @@
         "margin_bottom": 0
       }
     },
+    "divine_certs": {
+      "type": "divine-cert-bar",
+      "blocks": {
+        "cert_usda": {
+          "type": "cert",
+          "settings": {
+            "icon": "usda",
+            "label": "USDA Organic"
+          }
+        },
+        "cert_ccof": {
+          "type": "cert",
+          "settings": {
+            "icon": "ccof",
+            "label": "CCOF Certified"
+          }
+        },
+        "cert_nongmo": {
+          "type": "cert",
+          "settings": {
+            "icon": "non-gmo",
+            "label": "Non-GMO"
+          }
+        },
+        "cert_lab": {
+          "type": "cert",
+          "settings": {
+            "icon": "lab-tested",
+            "label": "Lab Tested"
+          }
+        },
+        "cert_vegan": {
+          "type": "cert",
+          "settings": {
+            "icon": "vegan",
+            "label": "Vegan"
+          }
+        }
+      },
+      "block_order": [
+        "cert_usda",
+        "cert_ccof",
+        "cert_nongmo",
+        "cert_lab",
+        "cert_vegan"
+      ],
+      "settings": {
+        "heading": "Trusted & Certified",
+        "use_alt_bg": false,
+        "background_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "divine_testimonials": {
       "type": "divine-testimonials",
       "blocks": {
@@ -366,6 +422,7 @@
     "divine_lifestyle",
     "divine_brand_story",
     "divine_why_us",
+    "divine_certs",
     "divine_testimonials",
     "divine_newsletter"
   ]
