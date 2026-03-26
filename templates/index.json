@@ -203,6 +203,55 @@
         "margin_bottom": 0
       }
     },
+    "divine_more_categories": {
+      "type": "divine-categories",
+      "blocks": {
+        "cat_powders": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/powder",
+            "heading": "Powders",
+            "subtitle": "Full range of organic superfood & functional powders",
+            "link": ""
+          }
+        },
+        "cat_botanicals": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/botanicals",
+            "heading": "Botanicals",
+            "subtitle": "Chamomile, hibiscus, tulsi, rose petals & more",
+            "link": ""
+          }
+        },
+        "cat_subscriptions": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/subscriptions-accessories",
+            "heading": "Subscriptions & Accessories",
+            "subtitle": "Monthly boxes & artisan brewing gear",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "cat_powders",
+        "cat_botanicals",
+        "cat_subscriptions"
+      ],
+      "settings": {
+        "caption": "More From Divine",
+        "title": "Beyond the Cup",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "divine_products": {
       "type": "divine-products",
       "settings": {
@@ -573,6 +622,7 @@
     "divine_hero",
     "divine_trust_bar",
     "divine_lifestyle",
+    "divine_more_categories",
     "divine_products",
     "divine_brand_story",
     "certification_logos",

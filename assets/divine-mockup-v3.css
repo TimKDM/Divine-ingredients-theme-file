@@ -538,6 +538,11 @@ h1, h2, h3, h4, h5, h6,
     grid-column: span 4;
   }
 }
+@media screen and (min-width: 768px) {
+  .divine-category-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* ============================================
    PRODUCT CAROUSEL
