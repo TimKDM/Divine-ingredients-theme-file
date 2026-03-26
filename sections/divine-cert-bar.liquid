@@ -38,19 +38,68 @@
           <div class="divine-cert-bar__icon">
             {%- case block.settings.icon -%}
               {%- when 'usda' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M14 28V20h2c2.5 0 3.5 1 3.5 2.5S18.5 25 16 25h-1v3h-1zm1-4h1c1.7 0 2.5-.6 2.5-1.5S17.7 21 16 21h-1v3z" fill="currentColor"/><text x="24" y="32" text-anchor="middle" font-size="7" font-weight="600" fill="currentColor">USDA</text><text x="24" y="18" text-anchor="middle" font-size="5" fill="currentColor">ORGANIC</text></svg>
+                {%- comment -%} USDA Organic seal — outer ring + inner shield shape + text {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <circle cx="32" cy="32" r="26"/>
+                  <path d="M32 10c-4 4-12 7-18 8 1 14 7 24 18 34 11-10 17-20 18-34-6-1-14-4-18-8z" stroke-width="1.2" fill="none"/>
+                  <text x="32" y="30" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">USDA</text>
+                  <text x="32" y="40" text-anchor="middle" font-size="6" font-weight="400" fill="currentColor" stroke="none" font-family="sans-serif">ORGANIC</text>
+                </svg>
               {%- when 'ccof' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><text x="24" y="27" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor">CCOF</text><text x="24" y="35" text-anchor="middle" font-size="5" fill="currentColor">CERTIFIED</text></svg>
+                {%- comment -%} CCOF Certified — circle with leaf arc + text {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <path d="M20 44c2-12 8-20 20-26-2 10-6 18-14 22" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M26 40c1-6 4-12 10-16" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+                  <text x="32" y="23" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">CCOF</text>
+                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="500" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.5">CERTIFIED</text>
+                </svg>
               {%- when 'non-gmo' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><text x="24" y="22" text-anchor="middle" font-size="6" font-weight="600" fill="currentColor">NON</text><text x="24" y="30" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor">GMO</text></svg>
+                {%- comment -%} Non-GMO Project Verified — butterfly outline {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <path d="M32 22c-6-8-16-10-18-4s4 14 18 20c14-6 20-14 18-20s-12-4-18 4z" stroke-width="1.3" stroke-linejoin="round"/>
+                  <line x1="32" y1="18" x2="32" y2="42" stroke-width="1.2"/>
+                  <path d="M28 16l4-4 4 4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="32" y="52" text-anchor="middle" font-size="5.5" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">NON-GMO</text>
+                </svg>
               {%- when 'lab-tested' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M20 14v10l-4 8h16l-4-8V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="18" y1="14" x2="30" y2="14" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="28" r="1.5" fill="currentColor"/><circle cx="27" cy="30" r="1" fill="currentColor"/></svg>
+                {%- comment -%} Lab Tested — Erlenmeyer flask with checkmark {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <path d="M25 14h14M27 14v14l-8 14a2 2 0 001.7 3h22.6a2 2 0 001.7-3l-8-14V14" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="22" y1="37" x2="42" y2="37" stroke-width="0.8" opacity="0.4"/>
+                  <polyline points="28,39 31,42 37,35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.3">LAB TESTED</text>
+                </svg>
               {%- when 'vegan' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M17 32c0-8 4-16 14-18-1 6-3 10-6 13s-5 4-8 5z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><text x="24" y="38" text-anchor="middle" font-size="5" font-weight="600" fill="currentColor">VEGAN</text></svg>
+                {%- comment -%} Vegan — V with leaf sprouting from it {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <path d="M20 16l12 28 12-28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M36 28c2-6 6-10 12-12-1 8-5 14-12 16" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M40 24c1-3 3-6 6-7" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+                  <text x="32" y="56" text-anchor="middle" font-size="5.5" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">VEGAN</text>
+                </svg>
               {%- when 'fair-trade' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><text x="24" y="38" text-anchor="middle" font-size="4.5" font-weight="600" fill="currentColor">FAIR TRADE</text></svg>
+                {%- comment -%} Fair Trade — person figure with bowl/globe {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <circle cx="32" cy="18" r="4" stroke-width="1.3"/>
+                  <path d="M24 28c2-2 5-4 8-4s6 2 8 4" stroke-width="1.3" stroke-linecap="round"/>
+                  <path d="M26 28l-4 8M38 28l4 8" stroke-width="1.3" stroke-linecap="round"/>
+                  <path d="M28 36h8" stroke-width="1.3" stroke-linecap="round"/>
+                  <text x="32" y="52" text-anchor="middle" font-size="4.5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.3">FAIR TRADE</text>
+                </svg>
               {%- when 'kosher' -%}
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><text x="24" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor">K</text><text x="24" y="37" text-anchor="middle" font-size="4.5" font-weight="600" fill="currentColor">KOSHER</text></svg>
+                {%- comment -%} Kosher — circle-K mark {%- endcomment -%}
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="32" cy="32" r="30"/>
+                  <circle cx="32" cy="30" r="16" stroke-width="1.3"/>
+                  <path d="M27 20v20M27 30l10-10M27 30l10 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif">KOSHER</text>
+                </svg>
             {%- endcase -%}
           </div>
         {%- endif -%}
@@ -77,11 +126,11 @@
   }
   .divine-cert-bar__icons {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 32px;
-    max-width: 800px;
+    gap: 40px;
+    max-width: 900px;
     margin: 0 auto;
   }
   @media screen and (max-width: 749px) {
@@ -106,8 +155,8 @@
     opacity: 1;
   }
   .divine-cert-bar__icon {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     color: var(--color-text-muted, #888);
     transition: color 0.2s ease;
   }
