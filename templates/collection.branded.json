@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "hero": {
+      "type": "divine-collection-hero",
+      "settings": {
+        "label": "",
+        "heading": "",
+        "description": "",
+        "cta_label": "Browse Collection",
+        "cta_link": "",
+        "overlay_color": "",
+        "overlay_color_end": "",
+        "text_color": "#ffffff",
+        "button_bg": "#ffffff",
+        "button_color": "#1d1d1d",
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "pagination": "load-more",
+        "load_button": "Load more",
+        "product_card_style": "collection-one",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_quick_add": true,
+        "enable_quick_buy": true,
+        "list_color_variants_in_collection": false,
+        "list_size_variants_in_collection": false,
+        "hide_unavailable": false,
+        "quick_add_position": "overlay",
+        "enable_filtering": false,
+        "enable_switcher": false,
+        "filter_type": "horizontal",
+        "open_filter": "all",
+        "enable_sorting": true,
+        "product_count": false,
+        "color_scheme": "option-1",
+        "color_scheme_1": "option-2",
+        "columns_mobile": "2",
+        "disable_quick_add": true,
+        "padding_top": 36,
+        "padding_bottom": 48,
+        "ignore_spacing": true
+      }
+    },
+    "collection_description": {
+      "type": "collection-description",
+      "settings": {
+        "color_scheme": "option-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "quick_info_bar": {
+      "type": "quick-info-bar",
+      "settings": {
+        "heading-1": "Certified Organic",
+        "caption-1": "USDA · CCOF verified",
+        "heading-2": "Lab Tested",
+        "caption-2": "Every single batch",
+        "heading-3": "Free Shipping",
+        "caption-3": "On orders over $75",
+        "heading-4": "Farm Direct",
+        "caption-4": "Full traceability",
+        "image_size": "small",
+        "add_border": false,
+        "full_width_background": false,
+        "color_scheme": "option-1",
+        "color_scheme_1": "option-2",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "ignore_spacing": true,
+        "margin_spacing": "negative",
+        "margin_top": 0
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "product-grid",
+    "collection_description",
+    "quick_info_bar"
+  ]
+}
