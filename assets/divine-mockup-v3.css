@@ -706,19 +706,19 @@ h1, h2, h3, h4, h5, h6,
 .divine-brand-values {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 24px;
   margin-top: 24px;
 }
 
 .divine-brand-value {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 14px;
 }
 
 .divine-brand-value svg {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   stroke: var(--color-accent-dark);
   stroke-width: 1.5;
   fill: none;
@@ -728,17 +728,17 @@ h1, h2, h3, h4, h5, h6,
 
 .divine-brand-value h4 {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   margin-top: 0;
 }
 
 .divine-brand-value p {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--color-text-muted);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 @media screen and (min-width: 768px) {
