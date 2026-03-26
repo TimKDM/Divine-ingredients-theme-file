@@ -38,7 +38,7 @@
     {%- endif -%}
   </div>
 
-  <div class="divine-category-grid">
+  <div class="divine-category-grid{% if section.blocks.size > 4 %} divine-category-grid--{{ section.blocks.size }}{% endif %}">
     {%- for block in section.blocks -%}
       {%- assign collection = block.settings.collection -%}
       {%- if block.settings.link != blank -%}

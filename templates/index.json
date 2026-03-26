@@ -31,12 +31,12 @@
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Superfoods",
-            "button_link_1": "shopify://collections/organic-superfood-powders",
+            "button_label_1": "Explore Our Teas",
+            "button_link_1": "shopify://collections/zen-greens-green-tea",
             "btn1_bg": "",
             "btn1_color": "",
-            "button_label_2": "Explore Tea Rituals",
-            "button_link_2": "shopify://collections/organic-herbal-tea",
+            "button_label_2": "Shop Wellness Blends",
+            "button_link_2": "shopify://collections/herbal-harmony-wellness-tea",
             "btn2_color": ""
           }
         }
@@ -117,52 +117,82 @@
     "divine_lifestyle": {
       "type": "divine-categories",
       "blocks": {
-        "lifestyle_1": {
+        "cat_zen_greens": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/matcha-tea-powders",
-            "heading": "Focus & Energy",
-            "subtitle": "Matcha, mushroom blends — fuel your mind naturally",
+            "collection": "shopify://collections/zen-greens-green-tea",
+            "heading": "Zen Greens",
+            "subtitle": "Matcha, sencha, jasmine — calm focus in every cup",
             "link": ""
           }
         },
-        "lifestyle_2": {
+        "cat_bold_classics": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/spices",
-            "heading": "Detox & Wellness",
-            "subtitle": "Turmeric, herbs — nourish from the inside out",
+            "collection": "shopify://collections/bold-classics-black-tea",
+            "heading": "Bold Classics",
+            "subtitle": "Earl Grey, English Breakfast — timeless and full-bodied",
             "link": ""
           }
         },
-        "lifestyle_3": {
+        "cat_botanical_bliss": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/organic-herbal-tea",
-            "heading": "Tea Rituals",
-            "subtitle": "Loose leaf teas for every mood and moment",
+            "collection": "shopify://collections/botanical-bliss-herbal-tea",
+            "heading": "Botanical Bliss",
+            "subtitle": "Caffeine-free herbal blends that soothe and refresh",
             "link": ""
           }
         },
-        "lifestyle_4": {
+        "cat_herbal_harmony": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/organic-superfood-powders",
-            "heading": "Smoothies & Superfoods",
-            "subtitle": "Superfood powders to boost your daily blends",
+            "collection": "shopify://collections/herbal-harmony-wellness-tea",
+            "heading": "Herbal Harmony",
+            "subtitle": "Turmeric, immunity, adaptogens — wellness in a cup",
+            "link": ""
+          }
+        },
+        "cat_calm_rituals": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/calm-rituals-hemp-tea",
+            "heading": "Calm Rituals",
+            "subtitle": "Organic hemp teas for those quiet moments",
+            "link": ""
+          }
+        },
+        "cat_cool_brews": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/cool-brews-iced-tea",
+            "heading": "Cool Brews",
+            "subtitle": "Refreshing iced teas for warm days and bold flavor",
+            "link": ""
+          }
+        },
+        "cat_silk_leaves": {
+          "type": "category",
+          "settings": {
+            "collection": "shopify://collections/silk-leaves-oolong-tea",
+            "heading": "Silk Leaves",
+            "subtitle": "Smooth, complex oolong — nuanced and refined",
             "link": ""
           }
         }
       },
       "block_order": [
-        "lifestyle_1",
-        "lifestyle_2",
-        "lifestyle_3",
-        "lifestyle_4"
+        "cat_zen_greens",
+        "cat_bold_classics",
+        "cat_botanical_bliss",
+        "cat_herbal_harmony",
+        "cat_calm_rituals",
+        "cat_cool_brews",
+        "cat_silk_leaves"
       ],
       "settings": {
-        "caption": "Find Your Ritual",
-        "title": "Shop by Lifestyle",
+        "caption": "Our Collections",
+        "title": "Find Your Tea",
         "use_alt_bg": true,
         "background_color": "",
         "text_color": "",
@@ -445,48 +475,26 @@
           "type": "plan",
           "settings": {
             "title": "Monthly Tea Box",
-            "description": "A curated selection of seasonal loose leaf teas delivered to your door every month.",
+            "description": "Curated seasonal teas, delivered monthly. Save 15%.",
             "price": "From $29/month",
-            "button_label": "Start My Subscription",
-            "button_link": ""
-          }
-        },
-        "plan_2": {
-          "type": "plan",
-          "settings": {
-            "title": "Superfood Powder Club",
-            "description": "Your monthly dose of organic superfood powders — adaptogens, mushrooms, and more.",
-            "price": "From $34/month",
-            "button_label": "Start My Subscription",
-            "button_link": ""
-          }
-        },
-        "plan_3": {
-          "type": "plan",
-          "settings": {
-            "title": "Matcha of the Month",
-            "description": "Explore a different premium matcha grade each month from Japan's finest farms.",
-            "price": "From $24/month",
-            "button_label": "Start My Subscription",
+            "button_label": "Subscribe",
             "button_link": ""
           }
         }
       },
       "block_order": [
-        "plan_1",
-        "plan_2",
-        "plan_3"
+        "plan_1"
       ],
       "settings": {
         "caption": "Subscribe & Save",
-        "heading": "Join the Divine Ritual",
-        "subheading": "Never run out of your favorites. Subscribe monthly and save 15% on every delivery.",
-        "cta_label": "Save 15% Monthly",
+        "heading": "Never Run Out of Your Favorites",
+        "subheading": "Monthly deliveries, 15% off every order. Cancel anytime.",
+        "cta_label": "View All Subscriptions",
         "cta_link": "",
         "use_alt_bg": true,
         "background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -497,45 +505,24 @@
         "feature_1": {
           "type": "feature",
           "settings": {
-            "text": "Low minimum order quantities"
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "text": "Custom private label packaging"
-          }
-        },
-        "feature_3": {
-          "type": "feature",
-          "settings": {
-            "text": "All products USDA Organic certified"
-          }
-        },
-        "feature_4": {
-          "type": "feature",
-          "settings": {
-            "text": "Dedicated account support"
+            "text": "Low MOQs · Private label · USDA Certified"
           }
         }
       },
       "block_order": [
-        "feature_1",
-        "feature_2",
-        "feature_3",
-        "feature_4"
+        "feature_1"
       ],
       "settings": {
-        "caption": "B2B & Private Label",
-        "heading": "Launch Your Own Organic Tea or Superfood Brand",
-        "text": "<p>Partner with Divine Ingredients for wholesale pricing, private label solutions, and custom blending. We supply cafés, wellness brands, retailers, and entrepreneurs with premium organic ingredients.</p>",
-        "button_label_1": "Start a Private Label Project",
+        "caption": "",
+        "heading": "Wholesale & Private Label",
+        "text": "<p>We supply cafés, wellness brands, and retailers with premium organic ingredients. Custom blending and private label available.</p>",
+        "button_label_1": "Get Wholesale Pricing",
         "button_link_1": "",
-        "button_label_2": "Request Wholesale Pricing",
+        "button_label_2": "",
         "button_link_2": "",
         "background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
+        "padding_top": 32,
+        "padding_bottom": 32,
         "margin_top": 0,
         "margin_bottom": 0
       }
