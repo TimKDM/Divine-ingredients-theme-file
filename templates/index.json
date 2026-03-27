@@ -183,7 +183,7 @@
         "caption": "Customer Favorites",
         "title": "Our Most Loved Ingredients",
         "collection": "favorite-products",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "show_rating": true,
         "show_tags": false,
         "show_view_all": true,
