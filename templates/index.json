@@ -300,6 +300,27 @@
             "icon": "vegan",
             "label": "Vegan"
           }
+        },
+        "cert_fairtrade": {
+          "type": "cert",
+          "settings": {
+            "icon": "fair-trade",
+            "label": "Fair Trade"
+          }
+        },
+        "cert_rainforest": {
+          "type": "cert",
+          "settings": {
+            "icon": "rainforest",
+            "label": "Rainforest Alliance"
+          }
+        },
+        "cert_kosher": {
+          "type": "cert",
+          "settings": {
+            "icon": "kosher",
+            "label": "Kosher"
+          }
         }
       },
       "block_order": [
@@ -307,7 +328,10 @@
         "cert_ccof",
         "cert_nongmo",
         "cert_lab",
-        "cert_vegan"
+        "cert_vegan",
+        "cert_fairtrade",
+        "cert_rainforest",
+        "cert_kosher"
       ],
       "settings": {
         "heading": "Trusted & Certified",
