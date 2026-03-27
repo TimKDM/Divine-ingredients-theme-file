@@ -96,10 +96,15 @@
   }
   .divine-subscription__card {
     background: var(--color-background-hex, #fff);
-    border-radius: var(--radius-md, 8px);
+    border-radius: var(--radius-md, 10px);
     overflow: hidden;
-    border: 1px solid var(--color-border, #e5e5e5);
+    border: 1px solid var(--color-border-hex, #d2c4d7);
     text-align: left;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+  }
+  .divine-subscription__card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
   }
   .divine-subscription__card-image {
     aspect-ratio: 16/10;
@@ -110,9 +115,13 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+  }
+  .divine-subscription__card:hover .divine-subscription__card-image img {
+    transform: scale(1.03);
   }
   .divine-subscription__card-image--placeholder {
-    background: var(--color-background-alt, #f5f5f5);
+    background: var(--color-background-alt, #e2d6e6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,14 +131,14 @@
   }
   .divine-subscription__card-content h3 {
     font-family: var(--font-heading);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     margin: 0 0 6px;
   }
   .divine-subscription__card-content p {
     font-size: 14px;
-    color: var(--color-text-muted, #666);
-    line-height: 1.5;
+    color: var(--color-text-muted, #7a6f64);
+    line-height: 1.6;
     margin: 0 0 12px;
   }
   .divine-subscription__price {
@@ -137,7 +146,7 @@
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 14px;
-    color: var(--color-accent-dark, #7c6c5b);
+    color: var(--color-accent-dark, #9b76a7);
   }
   .divine-subscription__card .divine-btn--small {
     padding: 10px 20px;
