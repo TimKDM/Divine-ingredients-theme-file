@@ -25,7 +25,7 @@
           "settings": {
             "caption": "Our Story",
             "heading": "Rooted in Purpose. Built on Trust.",
-            "image": "shopify://shop_images/iStock-1298434383.jpg"
+            "image": "shopify://shop_images/IMG_6326_ac2a714e-fffa-454c-8849-c8568b2ece0e.jpg"
           }
         },
         "intro": {
@@ -41,7 +41,7 @@
             "caption": "The Problem",
             "heading": "The Gap Between \"Natural\" and Actually Natural",
             "text": "<p>Walk down any grocery aisle and you'll find turmeric cut with rice flour, matcha bulked with sugar, and spices that lost their potency months before they hit the shelf. Most people can tell the difference when they taste it — the problem is finding a brand that consistently delivers the real thing.</p><p>We believe that gap shouldn't exist. If the label says organic, the ingredient should be organic — nothing more, nothing less. Every batch, every time.</p>",
-            "image": "shopify://shop_images/iStock-1210444088_add2a83f-e02e-4917-a070-0fd39309c376.jpg",
+            "image": "shopify://shop_images/About_us_image_2.jpg",
             "layout": "image_left",
             "use_alt_bg": false
           }
@@ -52,7 +52,7 @@
             "caption": "The Fix",
             "heading": "Direct to the Farms. Tested in the Lab.",
             "text": "<p>We work directly with organic farms in Japan, India, Sri Lanka, and beyond — not through brokers or distributors, but with the actual growers. We know their methods, we trust their practices, and we maintain full traceability on every ingredient.</p><p>Every batch that comes through Divine is independently lab tested for purity, potency, heavy metals, and microbial safety. It's the standard we set from day one, and it's the one thing we'll never compromise on.</p>",
-            "image": "shopify://shop_images/labtested.jpg",
+            "image": "shopify://shop_images/IMG_3518.jpg",
             "layout": "image_right",
             "use_alt_bg": true
           }
@@ -63,7 +63,7 @@
             "caption": "What We Stand On",
             "heading": "Nothing Synthetic. Full Traceability. Every Batch Tested.",
             "text": "<p>Every product is USDA Organic and CCOF certified — no fillers, no additives, no artificial anything. We can tell you exactly which farm grew your matcha, your turmeric, your chamomile.</p><p>And every batch is independently lab tested for purity, potency, and safety. Full COAs available on request. It's the standard we set from day one.</p>",
-            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
+            "image": "shopify://shop_images/Smoothie-blog-image-2.jpg",
             "layout": "image_left",
             "use_alt_bg": false
           }
@@ -74,7 +74,7 @@
             "caption": "Today",
             "heading": "From Kitchen Counter to Cafés, Spas, and Kitchens Worldwide",
             "text": "<p>What started as one person reading labels too carefully is now a brand trusted by wellness practitioners, café owners, juice bars, spas, private label partners, and home cooks who refuse to settle.</p><p>Your morning latte, your post-workout smoothie, the chai your family has made for generations — these ingredients are for the moments that matter.</p>",
-            "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
+            "image": "shopify://shop_images/About_us_image.jpg",
             "button_label": "Shop All Collections",
             "button_link": "shopify://collections",
             "layout": "image_right",
