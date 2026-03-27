@@ -230,10 +230,10 @@
         "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
         "button_label": "Our Story",
         "button_link": "shopify://pages/about-us",
-        "button_bg": "",
+        "button_bg": "#b8a3bf",
         "button_color": "",
         "use_alt_bg": false,
-        "background_color": "",
+        "background_color": "#f0ebf2",
         "text_color": "",
         "accent_color": "",
         "padding_top": 48,
@@ -291,7 +291,7 @@
         "cta_label": "View All Subscription Options",
         "cta_link": "",
         "use_alt_bg": true,
-        "background_color": "",
+        "background_color": "#ffffff",
         "padding_top": 48,
         "padding_bottom": 48,
         "margin_top": 0,
@@ -353,6 +353,7 @@
           "type": "cert",
           "settings": {
             "icon": "usda",
+            "image": "shopify://shop_images/Organic4colorsealJPG.jpg",
             "label": "USDA Organic"
           }
         },
@@ -360,6 +361,7 @@
           "type": "cert",
           "settings": {
             "icon": "ccof",
+            "image": "shopify://shop_images/ccof_logo_4color_0.jpg",
             "label": "CCOF Certified"
           }
         },
@@ -367,6 +369,7 @@
           "type": "cert",
           "settings": {
             "icon": "non-gmo",
+            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
             "label": "Non-GMO"
           }
         },
@@ -374,6 +377,7 @@
           "type": "cert",
           "settings": {
             "icon": "lab-tested",
+            "image": "shopify://shop_images/labtested.jpg",
             "label": "Lab Tested"
           }
         },
@@ -381,6 +385,7 @@
           "type": "cert",
           "settings": {
             "icon": "vegan",
+            "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
             "label": "Vegan"
           }
         },
@@ -388,6 +393,7 @@
           "type": "cert",
           "settings": {
             "icon": "fair-trade",
+            "image": "shopify://shop_images/Asset_1.png",
             "label": "Fair Trade"
           }
         },
@@ -395,6 +401,7 @@
           "type": "cert",
           "settings": {
             "icon": "rainforest",
+            "image": "shopify://shop_images/iStock-2245960744.jpg",
             "label": "Rainforest Alliance"
           }
         },
@@ -402,6 +409,7 @@
           "type": "cert",
           "settings": {
             "icon": "kosher",
+            "image": "shopify://shop_images/KosherCheck-tag_3c_300.jpg",
             "label": "Kosher"
           }
         }
@@ -418,7 +426,7 @@
       ],
       "settings": {
         "heading": "Trusted & Certified",
-        "use_alt_bg": false,
+        "use_alt_bg": true,
         "background_color": "",
         "padding_top": 32,
         "padding_bottom": 32,
