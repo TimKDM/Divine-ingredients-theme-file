@@ -45,21 +45,8 @@
         "link_list_7h94kk": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Divine Tea",
             "menu": "divine-mega-menu"
-          }
-        },
-        "brand_information": {
-          "type": "brand_information",
-          "settings": {
-            "brand_headline": "DIVINE INGREDIENTS",
-            "brand_description": "<p>Pure organic ingredients for everyday wellness. Teas, superfoods, and botanicals — rooted in purpose, driven by wellness.</p>",
-            "brand_image": "shopify://shop_images/tea_lover_1920x480_56e55ab3-75bc-4acb-b89e-1478b381c3d9.jpg",
-            "brand_image_width": 50,
-            "hide_image": true,
-            "newsletter_enable": false,
-            "show_social": true,
-            "social_icons_size": "small"
           }
         },
         "footer_shop": {
@@ -93,7 +80,6 @@
       },
       "block_order": [
         "link_list_7h94kk",
-        "brand_information",
         "footer_shop",
         "footer_learn",
         "footer_company",
