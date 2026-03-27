@@ -57,7 +57,14 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4", "feature_5", "feature_6"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5",
+        "feature_6"
+      ],
       "settings": {
         "image": "shopify://shop_images/Matcha_Lattes.jpg",
         "caption": "B2B & Private Label",
@@ -76,8 +83,7 @@
             "rating": 5,
             "text": "We built our entire private label tea line with Divine. The sourcing transparency and quality certs make it easy to build trust with our own customers. Reordering is seamless.",
             "author": "Ryan & Co.",
-            "role": "Private Label Brand, Toronto",
-            "source": "Wholesale Partner"
+            "role": "Private Label Brand, Toronto"
           }
         },
         "testimonial_2": {
@@ -86,8 +92,7 @@
             "rating": 5,
             "text": "We tried four matcha suppliers before Divine. The quality is consistent batch to batch, the pricing works for our margins, and our customers notice the difference.",
             "author": "Sarah M.",
-            "role": "Café Owner, Portland OR",
-            "source": "Google Review"
+            "role": "Café Owner, Portland OR"
           }
         },
         "testimonial_3": {
@@ -96,12 +101,15 @@
             "rating": 5,
             "text": "We carry Divine in our spa retail section and it sells itself. Clean packaging, real story, and guests trust it immediately. We've reordered three times.",
             "author": "Anita W.",
-            "role": "Spa Director, Scottsdale AZ",
-            "source": "Wholesale Partner"
+            "role": "Spa Director, Scottsdale AZ"
           }
         }
       },
-      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"],
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3"
+      ],
       "settings": {
         "caption": "Trusted Partners",
         "title": "What Our Wholesale Clients Say"
@@ -112,5 +120,10 @@
       "settings": {}
     }
   },
-  "order": ["main", "divine_wholesale", "divine_testimonials", "divine_contact"]
+  "order": [
+    "main",
+    "divine_wholesale",
+    "divine_testimonials",
+    "divine_contact"
+  ]
 }
