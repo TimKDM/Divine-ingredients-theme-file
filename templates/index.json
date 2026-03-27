@@ -337,7 +337,7 @@
         "cta_label": "Learn About Our Ingredients",
         "cta_link": "shopify://pages/about-us",
         "use_alt_bg": false,
-        "background_color": "",
+        "background_color": "#f0ebf2",
         "text_color": "",
         "accent_color": "",
         "padding_top": 48,
@@ -426,10 +426,10 @@
       ],
       "settings": {
         "heading": "Trusted & Certified",
-        "use_alt_bg": true,
+        "use_alt_bg": false,
         "background_color": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -444,6 +444,7 @@
             "text": "We tried four matcha suppliers before landing on Divine. Our customers noticed the switch immediately — it's smoother, more vibrant, and we go through it twice as fast now. This is the one we kept.",
             "author": "Sarah M.",
             "role": "Café Owner, Portland OR",
+            "source": "Google Review",
             "link": ""
           }
         },
@@ -454,6 +455,7 @@
             "text": "I recommend Divine turmeric and their superfood blends to clients who are serious about what they put in their bodies. Lab-tested, consistent potency, transparent sourcing. That's not common in this space.",
             "author": "Dr. James K.",
             "role": "Naturopathic Practitioner, Vancouver BC",
+            "source": "Google Review",
             "link": ""
           }
         },
@@ -464,6 +466,7 @@
             "text": "I run a small juice bar and switched all our powders to Divine six months ago. The ashwagandha, the moringa, the matcha — my regulars can taste the difference. Clean ingredients show up in the final product.",
             "author": "Rina P.",
             "role": "Juice Bar Owner, Austin TX",
+            "source": "Google Review",
             "link": ""
           }
         },
@@ -474,6 +477,7 @@
             "text": "Finally — a brand where I don't have to second-guess the ingredient list. The chamomile and lavender blend is part of my nightly routine now. Simple, honest, and it actually works.",
             "author": "David L.",
             "role": "Wellness Coach & Yoga Instructor",
+            "source": "Google Review",
             "link": ""
           }
         },
@@ -484,6 +488,7 @@
             "text": "We carry Divine in our spa retail section and it basically sells itself. The packaging is clean, the story is real, and our guests trust it. We've reordered three times already.",
             "author": "Anita W.",
             "role": "Spa Director, Scottsdale AZ",
+            "source": "Google Review",
             "link": ""
           }
         },
@@ -494,6 +499,7 @@
             "text": "Switched from a big grocery brand to Divine for all my baking — the cinnamon, the vanilla, the turmeric. Night and day. Everything just tastes more like the real thing because it is.",
             "author": "Michelle T.",
             "role": "Recipe Creator & Home Baker",
+            "source": "Google Review",
             "link": ""
           }
         }
@@ -510,7 +516,7 @@
         "caption": "",
         "title": "Trusted by Wellness Lovers & Business Owners",
         "use_alt_bg": false,
-        "background_color": "",
+        "background_color": "#f0ebf2",
         "text_color": "",
         "accent_color": "",
         "card_background_color": "",
@@ -557,8 +563,8 @@
         "text_color": "#ffffff",
         "button_bg": "#d4c4d9",
         "button_color": "#1d1d1d",
-        "padding_top": 40,
-        "padding_bottom": 48,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 0
       }

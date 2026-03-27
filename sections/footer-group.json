@@ -42,6 +42,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "link_list_7h94kk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "divine-mega-menu"
+          }
+        },
         "brand_information": {
           "type": "brand_information",
           "settings": {
@@ -85,6 +92,7 @@
         }
       },
       "block_order": [
+        "link_list_7h94kk",
         "brand_information",
         "footer_shop",
         "footer_learn",
