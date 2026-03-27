@@ -435,6 +435,84 @@
         "margin_bottom": 0
       }
     },
+    "divine_best_sellers": {
+      "type": "divine-products",
+      "settings": {
+        "caption": "Customer Favorites",
+        "title": "Our Most Loved Ingredients",
+        "collection": "shopify://collections/powder",
+        "products_to_show": 8,
+        "show_rating": true,
+        "show_tags": false,
+        "show_view_all": true,
+        "view_all_label": "Shop All Best Sellers",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "card_background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "divine_subscription": {
+      "type": "divine-subscription",
+      "blocks": {
+        "plan_tea": {
+          "type": "plan",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3309.jpg",
+            "name": "Monthly Tea Box",
+            "description": "A curated selection of organic teas delivered to your door every month. Discover new favorites and seasonal blends.",
+            "price": "From $29/mo",
+            "button_label": "Start My Subscription",
+            "button_link": ""
+          }
+        },
+        "plan_superfood": {
+          "type": "plan",
+          "settings": {
+            "image": "shopify://shop_images/Smoothie_Blog_Image.jpg",
+            "name": "Superfood Powder Club",
+            "description": "Premium organic superfood powders — matcha, turmeric, adaptogens, and more. Perfect for smoothies, lattes, and daily rituals.",
+            "price": "From $34/mo",
+            "button_label": "Start My Subscription",
+            "button_link": ""
+          }
+        },
+        "plan_matcha": {
+          "type": "plan",
+          "settings": {
+            "image": "shopify://shop_images/Matcha_banner.jpg",
+            "name": "Matcha of the Month",
+            "description": "Explore Japan's finest organic matcha varieties. Each month features a different origin, grade, or seasonal harvest.",
+            "price": "From $32/mo",
+            "button_label": "Start My Subscription",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "plan_tea",
+        "plan_superfood",
+        "plan_matcha"
+      ],
+      "settings": {
+        "caption": "Subscribe & Save",
+        "heading": "Join a Wellness Ritual That Comes to You",
+        "subheading": "Save 15% on every order. Pause or cancel anytime. Free shipping on all subscriptions.",
+        "cta_label": "View All Subscription Options",
+        "cta_link": "",
+        "use_alt_bg": true,
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "divine_newsletter": {
       "type": "divine-newsletter",
       "blocks": {
@@ -481,7 +559,9 @@
     "divine_hero",
     "divine_trust_bar",
     "divine_lifestyle",
+    "divine_best_sellers",
     "divine_brand_story",
+    "divine_subscription",
     "divine_why_us",
     "divine_certs",
     "divine_testimonials",
