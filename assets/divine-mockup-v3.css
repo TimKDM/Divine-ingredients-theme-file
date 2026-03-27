@@ -564,20 +564,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .divine-product-card {
-  flex: 0 0 210px;
+  flex: 0 0 240px;
   scroll-snap-align: start;
   background: var(--color-background-warm);
   border-radius: var(--radius-md);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  border: 1px solid var(--color-border-hex, rgba(0,0,0,0.06));
   display: block;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
 
 .divine-product-card:hover {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transform: translateY(-2px);
 }
 
@@ -585,8 +586,7 @@ h1, h2, h3, h4, h5, h6,
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
-  border-radius: 50%;
-  margin: 16px 16px 0;   /* give the circle breathing room */
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
   background: var(--color-background-alt);
 }
 
@@ -686,8 +686,7 @@ h1, h2, h3, h4, h5, h6,
 @media screen and (min-width: 768px) {
   .divine-product-scroll {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     overflow-x: unset;
     padding: 0 40px;
