@@ -59,7 +59,7 @@
           "type": "text",
           "settings": {
             "heading": "Shop",
-            "subtext": "<p><a href=\"/collections/zen-greens-green-tea\" title=\"Zen Greens\">Zen Greens</a></p><p><a href=\"/collections/bold-classics-black-tea\" title=\"Bold Classics\">Bold Classics</a></p><p><a href=\"/collections/botanical-bliss-herbal-tea\" title=\"Botanical Bliss\">Botanical Bliss</a></p><p><a href=\"/collections/herbal-harmony-wellness-tea\" title=\"Herbal Harmony\">Herbal Harmony</a></p><p><a href=\"/collections/cool-brews-iced-tea\" title=\"Cool Brews\">Cool Brews</a></p><p><a href=\"/collections/powder\" title=\"Powders\">Powders</a></p>"
+            "subtext": "<p><a href=\"/collections/all\" title=\"All Products\">All Products</a></p><p><a href=\"/collections/powder\" title=\"Superfoods\">Superfoods</a></p><p><a href=\"/collections/zen-greens-green-tea\" title=\"Tea\">Tea</a></p><p><a href=\"/collections/spice-route-chai-spiced-tea\" title=\"Spices\">Spices</a></p><p><a href=\"/collections/botanicals\" title=\"Botanicals\">Botanicals</a></p>"
           }
         },
         "footer_learn": {
@@ -73,14 +73,14 @@
           "type": "text",
           "settings": {
             "heading": "Company",
-            "subtext": "<p><a href=\"/pages/about-us\" title=\"About\">About</a></p><p><a href=\"/pages/about-us\" title=\"Brand Story\">Brand Story</a></p><p><a href=\"/collections/shop-wholesale-with-divine\" title=\"Wholesale\">Wholesale</a></p>"
+            "subtext": "<p><a href=\"/pages/about-us\" title=\"About Us\">About Us</a></p><p><a href=\"/pages/about-us\" title=\"Our Story\">Our Story</a></p><p><a href=\"/collections/shop-wholesale-with-divine\" title=\"Wholesale\">Wholesale</a></p>"
           }
         },
         "footer_support": {
           "type": "text",
           "settings": {
             "heading": "Support",
-            "subtext": "<p><a href=\"/pages/contact-us\" title=\"Contact\">Contact</a></p><p><a href=\"/policies/shipping-policy\" title=\"Shipping\">Shipping</a></p><p><a href=\"/pages/faq\" title=\"FAQ\">FAQ</a></p>"
+            "subtext": "<p><a href=\"/pages/contact-us\" title=\"Contact\">Contact</a></p><p><a href=\"/policies/shipping-policy\" title=\"Shipping\">Shipping</a></p><p><a href=\"/pages/faq\" title=\"FAQ\">FAQ</a></p><p><a href=\"/policies/refund-policy\" title=\"Returns\">Returns</a></p>"
           }
         }
       },
@@ -94,28 +94,28 @@
       "settings": {
         "enable_follow_on_shop": true,
         "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_powered_by_link": false,
-        "show_policy": false,
-        "enable_terms": true,
-        "terms_label": "<p>I agree to receive marketing emails</p>",
+        "show_policy": true,
+        "enable_terms": false,
+        "terms_label": "",
         "back_to_top_desktop": true,
-        "back_to_top_bottom": 80,
-        "back_to_top_right": 4,
+        "back_to_top_bottom": 24,
+        "back_to_top_right": 24,
         "back_to_top_mobile": true,
         "centered_content": false,
         "color_scheme": "option-3",
         "apply_scheme_footer_bottom": false,
-        "footer_border": false,
+        "footer_border": true,
         "swipe_on_mobile": false,
         "disable_arrow_mobile": true,
         "margin_top": 0,
         "margin_bottom": 0,
-        "make_columns_even": false,
+        "make_columns_even": true,
         "padding_top": 48,
-        "padding_bottom": 36,
-        "ignore_spacing": true
+        "padding_bottom": 32,
+        "ignore_spacing": false
       }
     }
   },
