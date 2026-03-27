@@ -23,7 +23,7 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iStock-1298434383.jpg",
+            "image": "shopify://shop_images/IMG_6326.jpg",
             "heading": "We're Divine Ingredients",
             "caption": "Sourcing experts, wellness obsessives, and quality nerds on a mission to bring the cleanest organic ingredients to your kitchen — whether you're running a café, building a brand, or making something extraordinary at home.",
             "button_label": "Shop Collections",
@@ -34,7 +34,7 @@
         "slide_2": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
+            "image": "shopify://shop_images/teas2024.jpg",
             "heading": "Clean Ingredients. No Compromises.",
             "caption": "Everything we sell is USDA certified organic and independently lab-tested. No synthetic additives, no fillers, no fine print. Full transparency, always.",
             "button_label": "Our Story",
@@ -153,8 +153,8 @@
       },
       "block_order": ["caption", "heading", "text", "button"],
       "settings": {
-        "image": "shopify://shop_images/iStock-1210444088_add2a83f-e02e-4917-a070-0fd39309c376.jpg",
-        "image_2": "shopify://shop_images/iStock-1152628588.jpg",
+        "image": "shopify://shop_images/IMG_3518.jpg",
+        "image_2": "shopify://shop_images/IMG_3309.jpg",
         "layout": "image_first",
         "color_scheme": "option-2",
         "padding_top": 96,
@@ -361,7 +361,7 @@
       },
       "block_order": ["heading", "text", "buttons"],
       "settings": {
-        "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
+        "image": "shopify://shop_images/teas2024.jpg",
         "image_overlay_opacity": 50,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
