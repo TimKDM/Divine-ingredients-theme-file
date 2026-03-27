@@ -117,48 +117,48 @@
     "divine_lifestyle": {
       "type": "divine-categories",
       "blocks": {
-        "lifestyle_focus": {
+        "lifestyle_morning": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/zen-greens-green-tea",
-            "heading": "Focus & Energy",
-            "subtitle": "Matcha, green teas, and mushroom blends for clear-headed mornings",
+            "heading": "Morning Ritual",
+            "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
             "link": ""
           }
         },
-        "lifestyle_detox": {
+        "lifestyle_calm": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/herbal-harmony-wellness-tea",
-            "heading": "Detox & Wellness",
-            "subtitle": "Turmeric, adaptogens, and herbal blends that support you daily",
+            "heading": "Calm & Restore",
+            "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
             "link": ""
           }
         },
-        "lifestyle_tea": {
+        "lifestyle_botanical": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/botanical-bliss-herbal-tea",
-            "heading": "Tea Rituals",
-            "subtitle": "Loose leaf teas and botanicals for quiet, intentional moments",
+            "heading": "Botanical Garden",
+            "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
             "link": ""
           }
         },
-        "lifestyle_smoothie": {
+        "lifestyle_refresh": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/powder",
-            "heading": "Smoothies & Superfoods",
-            "subtitle": "Superfood powders and blends to fuel your day",
+            "collection": "shopify://collections/cool-brews-iced-tea",
+            "heading": "Cool & Refresh",
+            "subtitle": "Iced teas and light oolongs for bright, easy moments",
             "link": ""
           }
         }
       },
       "block_order": [
-        "lifestyle_focus",
-        "lifestyle_detox",
-        "lifestyle_tea",
-        "lifestyle_smoothie"
+        "lifestyle_morning",
+        "lifestyle_calm",
+        "lifestyle_botanical",
+        "lifestyle_refresh"
       ],
       "settings": {
         "caption": "Shop by Lifestyle",
