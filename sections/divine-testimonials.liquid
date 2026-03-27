@@ -1,38 +1,39 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-section {
-    background-color: {{ section.settings.background_color }};
+  #shopify-section-{{ section.id }} .divine-testimonials {
+    padding: 48px 20px;
+    text-align: center;
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
-    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
-  #shopify-section-{{ section.id }} .divine-section-label {
-    color: {{ section.settings.accent_color }};
-  }
-
-  #shopify-section-{{ section.id }} .divine-section-title {
-    color: {{ section.settings.text_color }};
-  }
-
-  #shopify-section-{{ section.id }} .divine-testimonial-card {
-    background-color: {{ section.settings.card_background_color }};
-    border-color: {{ section.settings.card_border_color }};
-  }
-
-  #shopify-section-{{ section.id }} .divine-testimonial-stars svg {
-    fill: {{ section.settings.star_color }};
-  }
-
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .divine-section {
+    #shopify-section-{{ section.id }} .divine-testimonials {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {% if section.settings.star_color != blank and section.settings.star_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-testimonials__stars svg {
+      fill: {{ section.settings.star_color }};
+    }
+  {% endif %}
+  {% if section.settings.card_background_color != blank and section.settings.card_background_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-testimonials__card {
+      background-color: {{ section.settings.card_background_color }};
+    }
+  {% endif %}
+  {% if section.settings.card_border_color != blank and section.settings.card_border_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .divine-testimonials__card {
+      border-color: {{ section.settings.card_border_color }};
+    }
+  {% endif %}
 {%- endstyle -%}
 
-<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+<section class="divine-testimonials{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
   <div class="divine-section-header">
     {%- if section.settings.caption != blank -%}
       <span class="divine-section-label">{{ section.settings.caption }}</span>
@@ -42,42 +43,42 @@
     {%- endif -%}
   </div>
 
-  <div class="divine-testimonial-grid">
+  <div class="divine-testimonials__grid">
     {%- for block in section.blocks -%}
-      <div class="divine-testimonial-card" {{ block.shopify_attributes }}>
+      <div class="divine-testimonials__card" {{ block.shopify_attributes }}>
         {%- if block.settings.rating != blank -%}
-          <div class="divine-testimonial-stars">
+          <div class="divine-testimonials__stars">
             {%- assign star_count = block.settings.rating | plus: 0 -%}
             {%- for i in (1..star_count) -%}
               <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             {%- endfor -%}
             {%- if block.settings.source != blank -%}
-              <span class="divine-testimonial-source">{{ block.settings.source }}</span>
+              <span class="divine-testimonials__source">{{ block.settings.source }}</span>
             {%- endif -%}
           </div>
         {%- endif -%}
 
         {%- if block.settings.text != blank -%}
-          <p class="divine-testimonial-text">"{{ block.settings.text }}"</p>
+          <p class="divine-testimonials__text">"{{ block.settings.text }}"</p>
         {%- endif -%}
 
-        <div class="divine-testimonial-footer">
-          <div class="divine-testimonial-avatar">
+        <div class="divine-testimonials__footer">
+          <div class="divine-testimonials__avatar">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: width: 96 | image_tag: loading: 'lazy', widths: '48, 96' }}
             {%- else -%}
-              <span class="divine-testimonial-initial">{{ block.settings.author | slice: 0 }}</span>
+              <span class="divine-testimonials__initial">{{ block.settings.author | slice: 0 }}</span>
             {%- endif -%}
           </div>
-          <div class="divine-testimonial-meta">
+          <div class="divine-testimonials__meta">
             {%- if block.settings.author != blank -%}
-              <p class="divine-testimonial-author">
+              <p class="divine-testimonials__author">
                 {{ block.settings.author }}
-                <svg class="divine-verified-badge" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <svg class="divine-testimonials__badge" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
               </p>
             {%- endif -%}
             {%- if block.settings.role != blank -%}
-              <p class="divine-testimonial-role">{{ block.settings.role }}</p>
+              <p class="divine-testimonials__role">{{ block.settings.role }}</p>
             {%- endif -%}
           </div>
         </div>
@@ -85,6 +86,123 @@
     {%- endfor -%}
   </div>
 </section>
+
+<style>
+  .divine-testimonials {
+    padding: 48px 20px;
+    text-align: center;
+  }
+  .divine-testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 32px auto 0;
+  }
+  .divine-testimonials__card {
+    background: var(--color-background-hex, #fff);
+    border-radius: var(--radius-md, 10px);
+    border: 1px solid var(--color-border-hex, #d2c4d7);
+    padding: 28px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
+  }
+  .divine-testimonials__card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  .divine-testimonials__stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 16px;
+  }
+  .divine-testimonials__stars svg {
+    width: 15px;
+    height: 15px;
+    fill: #e5b94e;
+  }
+  .divine-testimonials__source {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted, #7a6f64);
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid var(--color-border-hex, #d2c4d7);
+    white-space: nowrap;
+  }
+  .divine-testimonials__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-foreground-hex, #1d1917);
+    margin: 0 0 20px;
+    flex: 1;
+  }
+  .divine-testimonials__footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-hex, #d2c4d7);
+  }
+  .divine-testimonials__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--color-background-alt, #e2d6e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divine-testimonials__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .divine-testimonials__initial {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-accent-dark, #9b76a7);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .divine-testimonials__meta {
+    min-width: 0;
+  }
+  .divine-testimonials__author {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.3;
+  }
+  .divine-testimonials__badge {
+    width: 16px;
+    height: 16px;
+    color: #4a9e6b;
+    flex-shrink: 0;
+  }
+  .divine-testimonials__role {
+    font-size: 12px;
+    color: var(--color-text-muted, #7a6f64);
+    margin: 2px 0 0;
+    line-height: 1.3;
+  }
+  @media screen and (min-width: 750px) {
+    .divine-testimonials__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
 
 {% schema %}
 {
@@ -211,7 +329,7 @@
           "type": "text",
           "id": "role",
           "label": "Role / Location",
-          "default": "Café Owner, Portland"
+          "default": "Caf\u00e9 Owner, Portland"
         },
         {
           "type": "text",
@@ -240,9 +358,9 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "The matcha is the real deal. Our customers notice the difference and so do we. We've tried four other suppliers — this is the one we kept.",
+            "text": "The matcha is the real deal. Our customers notice the difference and so do we. We've tried four other suppliers \u2014 this is the one we kept.",
             "author": "Sarah M.",
-            "role": "Café Owner, Portland",
+            "role": "Caf\u00e9 Owner, Portland",
             "source": "Google Review"
           }
         },
@@ -260,7 +378,7 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "text": "Switched from a big-box brand and the difference is night and day. The cinnamon, the vanilla, the matcha — everything actually tastes like the real thing.",
+            "text": "Switched from a big-box brand and the difference is night and day. The cinnamon, the vanilla, the matcha \u2014 everything actually tastes like the real thing.",
             "author": "Michelle T.",
             "role": "Recipe Creator & Home Baker",
             "source": "Shopify Review"
