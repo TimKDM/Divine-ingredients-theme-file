@@ -24,22 +24,24 @@
           "type": "hero",
           "settings": {
             "caption": "Our Story",
-            "heading": "Rooted in Purpose, Driven by Wellness"
+            "heading": "Built by a Scientist. Run on Principles.",
+            "image": "shopify://shop_images/iStock-1298434383.jpg"
           }
         },
         "intro": {
           "type": "intro",
           "settings": {
-            "heading": "At Divine, Every Jar, Every Blend, and Every Cup Is More Than Just a Product",
-            "text": "<p>It's the result of a deeply personal journey toward pure, intentional living. Long before Divine Ingredients became a trusted name for organic powders, teas, herbs, and spices, its story began with one person's commitment to wellness and quality.</p><p>Preet Bhullar — a microbiologist by training and a wellness enthusiast at heart — has always believed that what we put into our bodies isn't just fuel; it's nourishment for life. This belief didn't spring from a fad or a passing trend — it grew from lived experience, curiosity, and a desire to help others thrive daily.</p>"
+            "heading": "Divine Didn't Start with a Business Plan. It Started with a Label.",
+            "text": "<p>Preet Bhullar is a microbiologist. She spent years studying what goes into food at a molecular level — and what she found in most \"health\" products didn't sit right. Fillers disguised as ingredients. Additives with names longer than the nutrition panel. Marketing that said \"natural\" while the contents said otherwise.</p><p>So she stopped buying what the market offered and went looking for the real thing. Direct to the farms. Direct to the source. That search became Divine Ingredients.</p>"
           }
         },
         "story_1": {
           "type": "image_text",
           "settings": {
-            "caption": "The Spark",
-            "heading": "Seeing the Gap Between Nature and What the Market Offered",
-            "text": "<p>Preet's passion for clean nutrition came from seeing the gulf between the way nature intended food to be and what too many products on the market actually offered. She saw ingredients pumped with fillers, additives, and artificial agents that often did more harm than good.</p><p>Instead of settling for what was available, she began a simple but radical idea: to share only earth-true ingredients — products that are organic, honest, and genuinely beneficial for body and mind.</p>",
+            "caption": "The Problem",
+            "heading": "Most \"Organic\" Brands Still Cut Corners",
+            "text": "<p>Walk down any grocery aisle and you'll find turmeric cut with rice flour, matcha bulked with sugar, and spices that lost their potency months before they hit the shelf. Preet saw it in the lab. She tasted it in her kitchen. And she knew there had to be a better way.</p><p>The gap wasn't knowledge — people know what clean ingredients look like. The gap was access. Finding a brand that actually delivers what it promises, batch after batch, with the paperwork to prove it.</p>",
+            "image": "shopify://shop_images/iStock-1210444088_add2a83f-e02e-4917-a070-0fd39309c376.jpg",
             "layout": "image_left",
             "use_alt_bg": false
           }
@@ -47,9 +49,10 @@
         "story_2": {
           "type": "image_text",
           "settings": {
-            "caption": "The Mission",
-            "heading": "Honoring Purity Without Compromise",
-            "text": "<p>With that mission — to honor purity without compromise — Divine Ingredients was born. What started as a yearning to create better choices for her own wellness journey soon blossomed into a purpose-driven brand aimed at health-conscious consumers everywhere.</p><p>Preet believed that everyone should have access to nutrient-rich, real-food ingredients that don't ask you to trade flavor for function, or simplicity for integrity.</p>",
+            "caption": "The Fix",
+            "heading": "Go to the Source. Test Everything. Skip the Middlemen.",
+            "text": "<p>Preet built relationships directly with organic farms in Japan, India, Sri Lanka, and beyond. Not brokers. Not distributors. The actual growers. She visits them. She knows their soil, their methods, their families.</p><p>Every batch that comes through Divine gets independently lab tested — for purity, potency, heavy metals, and microbial safety. Not because regulations require it. Because she's a microbiologist, and precision is non-negotiable.</p>",
+            "image": "shopify://shop_images/labtested.jpg",
             "layout": "image_right",
             "use_alt_bg": true
           }
@@ -57,27 +60,28 @@
         "values": {
           "type": "values",
           "settings": {
-            "caption": "Our Philosophy",
-            "heading": "At the Heart of the Brand",
-            "value_1_title": "Nature First. Always.",
-            "value_1_text": "Only 100% plant-based, organic ingredients that are responsibly sourced and free from synthetic nasties.",
-            "value_2_title": "Transparency You Can Trust",
-            "value_2_text": "Clear labeling, honest sourcing information, and products you can recognize — and pronounce.",
-            "value_3_title": "Support for Everyday Wellness",
-            "value_3_text": "Each product — whether a superfood powder, herbal tea blend, or spice — is designed to support daily rituals, mindful living, and a balanced lifestyle.",
-            "value_4_title": "Community at the Core",
-            "value_4_text": "A space where wellness seekers feel seen, supported, and empowered to nourish themselves the way nature intended.",
+            "caption": "What We Stand On",
+            "heading": "Four Things We Won't Compromise",
+            "value_1_title": "Nothing Synthetic. Ever.",
+            "value_1_text": "100% organic, plant-based ingredients. No fillers, no additives, no artificial anything. USDA and CCOF certified.",
+            "value_2_title": "Full Traceability",
+            "value_2_text": "We can tell you exactly which farm grew your matcha, your turmeric, your chamomile. Ask us.",
+            "value_3_title": "Lab Tested Every Batch",
+            "value_3_text": "Independent third-party testing for purity, potency, and safety. Every single batch. Full COAs available.",
+            "value_4_title": "Built for Real Life",
+            "value_4_text": "Your morning latte, your post-workout smoothie, the chai your family has made for generations — ingredients for the moments that matter.",
             "use_alt_bg": false
           }
         },
         "story_3": {
           "type": "image_text",
           "settings": {
-            "caption": "The Vision",
-            "heading": "More Than Selling Great Ingredients",
-            "text": "<p>Preet's vision was always larger than selling great ingredients. She wanted to cultivate community — a space where wellness seekers feel seen, supported, and empowered to nourish themselves the way nature intended.</p><p>That means being there in the quiet morning matcha ritual, the post-workout smoothie boost, the spice-rich memories of home cooking, and the moments of connection over a steaming cup of chai.</p>",
+            "caption": "Today",
+            "heading": "From Kitchen Counter to Cafés, Spas, and Kitchens Worldwide",
+            "text": "<p>What started as one person reading labels too carefully is now a brand trusted by wellness practitioners, café owners, juice bars, spas, private label partners, and home cooks who refuse to settle.</p><p>We're not the biggest brand in the space. We don't want to be. We want to be the one you trust — the one where you never have to wonder what's actually in the jar.</p>",
+            "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
             "button_label": "Shop All Collections",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify://collections",
             "layout": "image_left",
             "use_alt_bg": true
           }
@@ -85,10 +89,10 @@
         "cta": {
           "type": "cta",
           "settings": {
-            "heading": "A Path to Wellness That Feels as Good as It Tastes",
-            "text": "Today, Divine Ingredients stands as a testament to what happens when passion meets purpose. It's a brand built on trust, guided by principles, and born from one person's commitment to making clean nourishment accessible to all.",
-            "button_label": "Start Your Wellness Journey",
-            "button_link": "shopify:\/\/collections",
+            "heading": "You Read Labels. So Do We.",
+            "text": "Everything we sell is organic, independently tested, and fully traceable. No marketing fluff — just real ingredients for people who care about what goes in.",
+            "button_label": "Start Shopping",
+            "button_link": "shopify://collections",
             "use_dark_bg": true
           }
         }
@@ -97,8 +101,5 @@
       "settings": {}
     }
   },
-  "order": [
-    "main",
-    "divine_story"
-  ]
+  "order": ["main", "divine_story"]
 }
