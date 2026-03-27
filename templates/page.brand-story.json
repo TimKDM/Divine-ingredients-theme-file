@@ -57,32 +57,27 @@
             "use_alt_bg": true
           }
         },
-        "values": {
-          "type": "values",
+        "story_3": {
+          "type": "image_text",
           "settings": {
             "caption": "What We Stand On",
-            "heading": "Four Things We Won't Compromise",
-            "value_1_title": "Nothing Synthetic. Ever.",
-            "value_1_text": "100% organic, plant-based ingredients. No fillers, no additives, no artificial anything. USDA and CCOF certified.",
-            "value_2_title": "Full Traceability",
-            "value_2_text": "We can tell you exactly which farm grew your matcha, your turmeric, your chamomile. Ask us.",
-            "value_3_title": "Lab Tested Every Batch",
-            "value_3_text": "Independent third-party testing for purity, potency, and safety. Every single batch. Full COAs available.",
-            "value_4_title": "Built for Real Life",
-            "value_4_text": "Your morning latte, your post-workout smoothie, the chai your family has made for generations — ingredients for the moments that matter.",
+            "heading": "Nothing Synthetic. Full Traceability. Every Batch Tested.",
+            "text": "<p>Every product is USDA Organic and CCOF certified — no fillers, no additives, no artificial anything. We can tell you exactly which farm grew your matcha, your turmeric, your chamomile.</p><p>And every batch is independently lab tested for purity, potency, and safety. Full COAs available on request. It's the standard we set from day one.</p>",
+            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
+            "layout": "image_left",
             "use_alt_bg": false
           }
         },
-        "story_3": {
+        "story_4": {
           "type": "image_text",
           "settings": {
             "caption": "Today",
             "heading": "From Kitchen Counter to Cafés, Spas, and Kitchens Worldwide",
-            "text": "<p>What started as one person reading labels too carefully is now a brand trusted by wellness practitioners, café owners, juice bars, spas, private label partners, and home cooks who refuse to settle.</p><p>We're not the biggest brand in the space. We don't want to be. We want to be the one you trust — the one where you never have to wonder what's actually in the jar.</p>",
+            "text": "<p>What started as one person reading labels too carefully is now a brand trusted by wellness practitioners, café owners, juice bars, spas, private label partners, and home cooks who refuse to settle.</p><p>Your morning latte, your post-workout smoothie, the chai your family has made for generations — these ingredients are for the moments that matter.</p>",
             "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
             "button_label": "Shop All Collections",
             "button_link": "shopify://collections",
-            "layout": "image_left",
+            "layout": "image_right",
             "use_alt_bg": true
           }
         },
@@ -97,7 +92,7 @@
           }
         }
       },
-      "block_order": ["hero", "intro", "story_1", "story_2", "values", "story_3", "cta"],
+      "block_order": ["hero", "intro", "story_1", "story_2", "story_3", "story_4", "cta"],
       "settings": {}
     }
   },
