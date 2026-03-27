@@ -791,43 +791,35 @@ h1, h2, h3, h4, h5, h6,
 /* ============================================
    TESTIMONIALS
    ============================================ */
-/* Testimonial grid — cards, not full-width stacked */
-.divine-testimonial-grid {
-  display: grid !important;
-  grid-template-columns: 1fr;
-  gap: 16px;
+/* Testimonial grid — 3-column card layout */
+.divine-section .divine-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
-.divine-testimonial-card {
-  background: var(--color-background-hex) !important;
+.divine-section .divine-testimonial-card {
+  background: var(--color-background-hex);
   padding: 24px;
-  border-radius: var(--radius-md) !important;
-  border: 1px solid var(--color-border-hex) !important;
-  display: flex !important;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-hex);
+  display: flex;
   flex-direction: column;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  min-width: 0;
 }
 
-.divine-testimonial-card:hover {
+.divine-section .divine-testimonial-card:hover {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
-@media screen and (min-width: 480px) {
-  .divine-testimonial-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .divine-testimonial-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px;
-    padding: 0 40px;
+@media screen and (max-width: 767px) {
+  .divine-section .divine-testimonial-grid {
+    grid-template-columns: 1fr;
   }
 }
 
