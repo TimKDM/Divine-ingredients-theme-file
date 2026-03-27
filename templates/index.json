@@ -121,7 +121,7 @@
           "type": "category",
           "settings": {
             "collection": "shopify://collections/zen-greens-green-tea",
-            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
+            "image": "shopify://shop_images/Matcha_banner.jpg",
             "heading": "Morning Ritual",
             "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
             "link": ""
@@ -131,7 +131,7 @@
           "type": "category",
           "settings": {
             "collection": "shopify://collections/herbal-harmony-wellness-tea",
-            "image": "shopify://shop_images/iStock-1152628588.jpg",
+            "image": "shopify://shop_images/IMG_3309.jpg",
             "heading": "Calm & Restore",
             "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
             "link": ""
@@ -141,7 +141,7 @@
           "type": "category",
           "settings": {
             "collection": "shopify://collections/botanical-bliss-herbal-tea",
-            "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
+            "image": "shopify://shop_images/IMG_3589.jpg",
             "heading": "Botanical Garden",
             "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
             "link": ""
@@ -202,7 +202,7 @@
         "value_2"
       ],
       "settings": {
-        "image": "shopify://shop_images/iStock-1210444088_add2a83f-e02e-4917-a070-0fd39309c376.jpg",
+        "image": "shopify://shop_images/About_us_image.jpg",
         "heading": "Real Ingredients, From Farms We Actually Know",
         "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
         "button_label": "Our Story",
