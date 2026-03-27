@@ -199,8 +199,8 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Smoothie-blog-image-2.jpg",
-        "heading": "Started by a Microbiologist Who Read Every Label",
-        "text": "Preet Bhullar spent years in labs before she started Divine. She saw what most brands put in their products — fillers, additives, ingredients that had no business being there. So she went to the source. Direct to the farms. Built relationships with the growers. Now every jar, every blend, every batch is tested with the same precision she learned in the lab. Not because it's trendy. Because it's the only way she'd have it in her own kitchen.",
+        "heading": "Real Ingredients, From Farms We Actually Know",
+        "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
         "button_label": "Our Story",
         "button_link": "shopify://pages/about-us",
         "button_bg": "",
@@ -239,7 +239,7 @@
           "settings": {
             "icon": "shield",
             "title": "Tested for Purity",
-            "description": "Every batch is microbiologically tested by an independent lab. Founded by a microbiologist — precision is in our DNA."
+            "description": "Every batch is independently tested by a third-party lab for purity, potency, and safety. No exceptions."
           }
         }
       },
