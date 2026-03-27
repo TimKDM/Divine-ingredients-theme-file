@@ -791,50 +791,36 @@ h1, h2, h3, h4, h5, h6,
 /* ============================================
    TESTIMONIALS
    ============================================ */
-/* Testimonial scroll — horizontal card carousel */
+/* Testimonial grid — single column mobile, 3-up desktop */
 .divine-testimonial-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
-  overflow-x: auto;
-  padding: 0 24px 16px;
-  margin: 0 -24px;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.divine-testimonial-grid::-webkit-scrollbar {
-  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .divine-testimonial-card {
-  flex: 0 0 320px;
-  scroll-snap-align: start;
   background: var(--color-background-hex);
-  padding: 24px;
+  padding: 28px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-hex);
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 .divine-testimonial-card:hover {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
 @media screen and (min-width: 768px) {
   .divine-testimonial-grid {
-    padding: 0 40px 16px;
-    margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .divine-testimonial-card {
-    flex: 0 0 calc(33.333% - 14px);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 40px;
   }
 }
 
