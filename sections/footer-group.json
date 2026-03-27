@@ -56,31 +56,31 @@
           }
         },
         "footer_shop": {
-          "type": "text",
+          "type": "link_list",
           "settings": {
             "heading": "Shop",
-            "subtext": "<p><a href=\"/collections/all\" title=\"All Products\">All Products</a></p><p><a href=\"/collections/powder\" title=\"Superfoods\">Superfoods</a></p><p><a href=\"/collections/zen-greens-green-tea\" title=\"Tea\">Tea</a></p><p><a href=\"/collections/spice-route-chai-spiced-tea\" title=\"Spices\">Spices</a></p><p><a href=\"/collections/botanicals\" title=\"Botanicals\">Botanicals</a></p>"
+            "menu": "footer-shop"
           }
         },
         "footer_learn": {
-          "type": "text",
+          "type": "link_list",
           "settings": {
             "heading": "Learn",
-            "subtext": "<p><a href=\"/blogs/tea\" title=\"Recipes\">Recipes</a></p><p><a href=\"/blogs/tea\" title=\"Ingredient Guide\">Ingredient Guide</a></p><p><a href=\"/blogs/tea\" title=\"Blog\">Blog</a></p>"
+            "menu": "footer-learn"
           }
         },
         "footer_company": {
-          "type": "text",
+          "type": "link_list",
           "settings": {
             "heading": "Company",
-            "subtext": "<p><a href=\"/pages/about-us\" title=\"About Us\">About Us</a></p><p><a href=\"/pages/about-us\" title=\"Our Story\">Our Story</a></p><p><a href=\"/collections/shop-wholesale-with-divine\" title=\"Wholesale\">Wholesale</a></p>"
+            "menu": "footer-company"
           }
         },
         "footer_support": {
-          "type": "text",
+          "type": "link_list",
           "settings": {
             "heading": "Support",
-            "subtext": "<p><a href=\"/pages/contact-us\" title=\"Contact\">Contact</a></p><p><a href=\"/policies/shipping-policy\" title=\"Shipping\">Shipping</a></p><p><a href=\"/pages/faq\" title=\"FAQ\">FAQ</a></p><p><a href=\"/policies/refund-policy\" title=\"Returns\">Returns</a></p>"
+            "menu": "footer-support"
           }
         }
       },
