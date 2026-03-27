@@ -15,7 +15,7 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "Rooted in Purpose · Driven by Wellness · 100% Organic",
+            "text": "USDA Organic · CCOF Certified · Lab Tested",
             "badge_bg": "",
             "badge_color": ""
           }
@@ -31,12 +31,12 @@
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Explore Our Collections",
-            "button_link_1": "shopify://collections",
+            "button_label_1": "Shop Superfoods",
+            "button_link_1": "shopify://collections/powder",
             "btn1_bg": "",
             "btn1_color": "",
-            "button_label_2": "Our Story",
-            "button_link_2": "shopify://pages/about-us",
+            "button_label_2": "Explore Tea Rituals",
+            "button_link_2": "shopify://collections/zen-greens-green-tea",
             "btn2_color": ""
           }
         }
@@ -55,7 +55,7 @@
         "loop": true,
         "muted": true,
         "heading": "<p>Pure Organic Ingredients for <em>Everyday Wellness</em></p>",
-        "subtitle": "Organic teas, superfoods, and botanicals — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters.",
+        "subtitle": "Farm-sourced teas, superfoods, and botanicals — every batch tested, every ingredient real. Built for the people who read the label.",
         "overlay_opacity": 100,
         "margin_top": 0,
         "margin_bottom": 0
@@ -68,31 +68,31 @@
           "type": "trust_item",
           "settings": {
             "icon": "shield",
-            "text": "<strong>USDA</strong> Organic · CCOF Certified",
+            "text": "<strong>100%</strong> Organic Ingredients",
             "link": ""
           }
         },
         "trust_2": {
           "type": "trust_item",
           "settings": {
-            "icon": "package",
-            "text": "<strong>Free Ship</strong> on Orders $100+",
+            "icon": "globe",
+            "text": "<strong>Ethically</strong> Sourced Worldwide",
             "link": ""
           }
         },
         "trust_3": {
           "type": "trust_item",
           "settings": {
-            "icon": "leaf",
-            "text": "<strong>Zero</strong> Additives. Ever.",
+            "icon": "check",
+            "text": "<strong>Every Batch</strong> Lab Tested",
             "link": ""
           }
         },
         "trust_4": {
           "type": "trust_item",
           "settings": {
-            "icon": "check",
-            "text": "<strong>Every Batch</strong> Lab Tested",
+            "icon": "package",
+            "text": "<strong>Free Shipping</strong> Over $100",
             "link": ""
           }
         }
@@ -117,52 +117,52 @@
     "divine_lifestyle": {
       "type": "divine-categories",
       "blocks": {
-        "lifestyle_morning": {
+        "lifestyle_focus": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/zen-greens-green-tea",
-            "heading": "Morning Ritual",
-            "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
+            "heading": "Focus & Energy",
+            "subtitle": "Matcha, green teas, and mushroom blends for clear-headed mornings",
             "link": ""
           }
         },
-        "lifestyle_calm": {
+        "lifestyle_detox": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/herbal-harmony-wellness-tea",
-            "heading": "Calm & Restore",
-            "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
+            "heading": "Detox & Wellness",
+            "subtitle": "Turmeric, adaptogens, and herbal blends that support you daily",
             "link": ""
           }
         },
-        "lifestyle_botanical": {
+        "lifestyle_tea": {
           "type": "category",
           "settings": {
             "collection": "shopify://collections/botanical-bliss-herbal-tea",
-            "heading": "Botanical Garden",
-            "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
+            "heading": "Tea Rituals",
+            "subtitle": "Loose leaf teas and botanicals for quiet, intentional moments",
             "link": ""
           }
         },
-        "lifestyle_refresh": {
+        "lifestyle_smoothie": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/cool-brews-iced-tea",
-            "heading": "Cool & Refresh",
-            "subtitle": "Iced teas and light oolongs for bright, easy moments",
+            "collection": "shopify://collections/powder",
+            "heading": "Smoothies & Superfoods",
+            "subtitle": "Superfood powders and blends to fuel your day",
             "link": ""
           }
         }
       },
       "block_order": [
-        "lifestyle_morning",
-        "lifestyle_calm",
-        "lifestyle_botanical",
-        "lifestyle_refresh"
+        "lifestyle_focus",
+        "lifestyle_detox",
+        "lifestyle_tea",
+        "lifestyle_smoothie"
       ],
       "settings": {
-        "caption": "Shop by Ritual",
-        "title": "Find Your Moment",
+        "caption": "Shop by Lifestyle",
+        "title": "Find Your Ritual",
         "use_alt_bg": true,
         "background_color": "",
         "text_color": "",
@@ -180,16 +180,16 @@
           "type": "value",
           "settings": {
             "icon": "shield",
-            "title": "Certified Organic",
-            "description": "USDA Organic and CCOF certified. No pesticides, no fillers, no mystery ingredients."
+            "title": "No Shortcuts",
+            "description": "USDA Organic, CCOF certified, and every batch independently lab tested. We don't cut corners."
           }
         },
         "value_2": {
           "type": "value",
           "settings": {
             "icon": "globe",
-            "title": "Farm-Direct Sourcing",
-            "description": "We know our growers by name. Japan, India, Sri Lanka — full traceability."
+            "title": "We Know Our Farms",
+            "description": "Direct relationships with growers in Japan, India, and Sri Lanka. Full traceability, always."
           }
         }
       },
@@ -199,9 +199,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Smoothie-blog-image-2.jpg",
-        "heading": "We Care About What Goes In — And Who It Goes To",
-        "text": "We started Divine because we couldn't find ingredients we truly trusted. So we went direct to the farms, built real relationships with real growers, and test every batch in independent labs. No synthetic anything, ever.",
-        "button_label": "Read Our Story",
+        "heading": "Started by a Microbiologist Who Read Every Label",
+        "text": "Preet Bhullar spent years in labs before she started Divine. She saw what most brands put in their products — fillers, additives, ingredients that had no business being there. So she went to the source. Direct to the farms. Built relationships with the growers. Now every jar, every blend, every batch is tested with the same precision she learned in the lab. Not because it's trendy. Because it's the only way she'd have it in her own kitchen.",
+        "button_label": "Our Story",
         "button_link": "shopify://pages/about-us",
         "button_bg": "",
         "button_color": "",
@@ -223,7 +223,7 @@
           "settings": {
             "icon": "leaf",
             "title": "100% Organic Ingredients",
-            "description": "No fillers, additives, or artificial flavors."
+            "description": "No fillers. No additives. No artificial flavors. Just the ingredient on the label — nothing else."
           }
         },
         "feature_2": {
@@ -231,15 +231,15 @@
           "settings": {
             "icon": "globe",
             "title": "Ethically Sourced",
-            "description": "Direct relationships with farms worldwide."
+            "description": "Direct relationships with farms across Japan, India, and Sri Lanka. We know where everything comes from."
           }
         },
         "feature_3": {
           "type": "feature",
           "settings": {
             "icon": "shield",
-            "title": "Tested for Quality",
-            "description": "Microbiologically tested for purity and safety."
+            "title": "Tested for Purity",
+            "description": "Every batch is microbiologically tested by an independent lab. Founded by a microbiologist — precision is in our DNA."
           }
         }
       },
@@ -250,8 +250,8 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "Why Divine",
-        "cta_label": "Learn More",
+        "heading": "Why Divine Ingredients",
+        "cta_label": "Learn About Our Ingredients",
         "cta_link": "shopify://pages/about-us",
         "use_alt_bg": false,
         "background_color": "",
@@ -410,7 +410,7 @@
         "subtitle": {
           "type": "subtitle",
           "settings": {
-            "text": "Get 15% off your first order, plus recipes, wellness inspo, and first dibs on new drops."
+            "text": "Get 15% off your first order. Plus recipes, new arrivals, and wellness tips — no fluff."
           }
         },
         "email_form": {
@@ -426,7 +426,7 @@
       "settings": {
         "input_placeholder": "Your email address",
         "button_label": "Join the Ritual",
-        "privacy_text": "No spam. No nonsense. Unsubscribe whenever.",
+        "privacy_text": "No spam. Unsubscribe anytime.",
         "show_first_name": true,
         "name_placeholder": "First name",
         "background_color": "#1d1d1d",
@@ -434,7 +434,7 @@
         "button_bg": "#d4c4d9",
         "button_color": "#1d1d1d",
         "padding_top": 40,
-        "padding_bottom": 52,
+        "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0
       }
