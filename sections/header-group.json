@@ -62,8 +62,10 @@
       "blocks": {
         "mega-promotion": {
           "type": "mega_promotion",
+          "disabled": true,
           "settings": {
             "mega_promotion_item": "Tea",
+            "mega_promotion_image": "shopify://shop_images/iced_matcha.jpg",
             "mega_promotion_caption": "Ceremonial Grade",
             "mega_promotion_title": "Organic Matcha",
             "mega_promotion_link_label": "Shop Matcha",
@@ -75,7 +77,6 @@
           "settings": {
             "mega_image_menu_item": "Powders",
             "mega_image_columns": 2,
-            "mega_image_menu_image_1": "shopify://shop_images/matcha-mocktails-banner.png",
             "mega_image_menu_caption_1": "Adaptogenic",
             "mega_image_menu_title_1": "Mushroom Powders",
             "mega_image_menu_link_label_1": "Shop Now",
