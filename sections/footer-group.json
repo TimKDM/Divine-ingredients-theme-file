@@ -42,48 +42,32 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_7h94kk": {
+        "link_list_9z3Q9p": {
           "type": "link_list",
           "settings": {
-            "heading": "Divine Tea",
+            "heading": "Divine Ingredients",
             "menu": "divine-mega-menu"
           }
         },
-        "footer_shop": {
+        "link_list_EjQTJk": {
           "type": "link_list",
           "settings": {
-            "heading": "Shop",
-            "menu": "footer-shop"
+            "heading": "Shop By LifeStyle",
+            "menu": "shop-by-lifestyle"
           }
         },
-        "footer_learn": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Learn",
-            "menu": "footer-learn"
-          }
-        },
-        "footer_company": {
+        "link_list_pGJWUM": {
           "type": "link_list",
           "settings": {
             "heading": "Company",
             "menu": "footer-company"
           }
-        },
-        "footer_support": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Support",
-            "menu": "footer-support"
-          }
         }
       },
       "block_order": [
-        "link_list_7h94kk",
-        "footer_shop",
-        "footer_learn",
-        "footer_company",
-        "footer_support"
+        "link_list_9z3Q9p",
+        "link_list_EjQTJk",
+        "link_list_pGJWUM"
       ],
       "settings": {
         "enable_follow_on_shop": true,
