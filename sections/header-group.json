@@ -75,6 +75,7 @@
           "settings": {
             "mega_image_menu_item": "Powders",
             "mega_image_columns": 2,
+            "mega_image_menu_image_1": "shopify://shop_images/matcha-mocktails-banner.png",
             "mega_image_menu_caption_1": "Adaptogenic",
             "mega_image_menu_title_1": "Mushroom Powders",
             "mega_image_menu_link_label_1": "Shop Now",
