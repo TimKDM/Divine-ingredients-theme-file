@@ -131,46 +131,35 @@
 
 .footer__content-bottom-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 749px) {
   .footer__content-bottom {
-    flex-wrap: wrap;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    row-gap: 1.5rem;
   }
 
   .footer__content-bottom-wrapper {
     flex-wrap: wrap;
     justify-content: center;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .footer__localization:empty + .footer__column {
-    padding-top: 1.5rem;
+    gap: 1rem;
   }
 }
 
 .footer__column {
-  width: 100%;
   align-items: center;
 }
 
 .footer__column--info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-}
-
-@media screen and (max-width: 749px) {
-  
-  .footer__column--info {
-    align-items: flex-start;
-  }
+  align-items: center;
 }
 
 .footer-block:only-child:last-child {
@@ -229,10 +218,6 @@
   .footer-block__heading {
     font-size: calc(var(--font-heading-scale) * 2rem);
   }
-  .footer__copyright {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .social-bar:empty,
@@ -269,12 +254,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-content: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .payment-enable-false.footer__localization {
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .footer__localization:empty {
@@ -283,10 +269,10 @@
 
 .footer .localization-form {
   display: flex;
-  flex-direction: column;
-  flex: auto 1 0;
-  padding: 1rem 0;
-  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0;
 }
 
 .footer .localization-form:only-child {
@@ -301,7 +287,7 @@
 }
 
 .footer__localization {
-  margin-bottom: -2.5rem;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 750px) {
@@ -313,11 +299,11 @@
 
 @media screen and (max-width: 989px) {
   .footer__localization noscript {
-    width: 100%;
+    width: auto;
   }
 
   .footer__localization {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 }
 
@@ -327,7 +313,7 @@
 
 @media screen and (min-width: 750px) {
   .footer__payment {
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
 }
 
@@ -336,7 +322,7 @@
 }
 
 .footer__copyright {
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 @keyframes appear-down {

@@ -364,8 +364,8 @@
         {%- endif -%}
       </div>
 
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
+      {%- if section.settings.payment_enable -%}
+        <div class="footer__column footer__column--info">
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
@@ -376,8 +376,8 @@
               {%- endfor -%}
             </ul>
           </div>
-        {%- endif -%}
-      </div>
+        </div>
+      {%- endif -%}
 
       <div class="{% if section.settings.payment_enable == false %}payment-enable-false{% endif %} footer__column footer__localization extract">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
