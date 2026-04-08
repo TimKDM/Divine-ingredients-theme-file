@@ -761,14 +761,14 @@ h1, h2, h3, h4, h5, h6,
 
 .divine-brand-value h4 {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   margin-top: 0;
 }
 
 .divine-brand-value p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--color-text-muted);
   margin: 0;
   line-height: 1.6;
