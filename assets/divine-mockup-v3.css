@@ -786,6 +786,15 @@ h1, h2, h3, h4, h5, h6,
     aspect-ratio: auto;
     max-width: 100%;
   }
+  .divine-brand-story__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .divine-brand-values {
+    margin-top: auto;
+    padding-top: 24px;
+  }
 }
 
 /* Testimonials — all styles moved inline to divine-testimonials.liquid */
