@@ -15,10 +15,12 @@
     color: {{ section.settings.text_color }};
   }
 
+  {%- if section.settings.text_color != blank -%}
   #shopify-section-{{ section.id }} .divine-category-card__content h3,
   #shopify-section-{{ section.id }} .divine-category-card__content p {
     color: {{ section.settings.text_color }};
   }
+  {%- endif -%}
 
   @media screen and (min-width: 750px) {
     #shopify-section-{{ section.id }} .divine-section {
