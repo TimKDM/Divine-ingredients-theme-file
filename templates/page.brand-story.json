@@ -110,7 +110,8 @@
       "settings": {
         "background_color": "",
         "text_color": "",
-        "accent_color": ""
+        "accent_color": "",
+        "body_font_size": 22
       }
     }
   },
