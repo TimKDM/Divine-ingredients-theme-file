@@ -71,7 +71,9 @@
         "heading": "Launch Your Own Organic Tea or Superfood Brand",
         "text": "<p>We supply cafés, wellness brands, juice bars, spas, retailers, and entrepreneurs with premium organic ingredients. Competitive wholesale pricing, consistent quality across batches, and full lab documentation — because your customers deserve the same transparency ours get.</p>",
         "button_label_1": "Start a Private Label Project",
-        "button_label_2": "Request Wholesale Pricing"
+        "button_link_1": "#wholesale-form",
+        "button_label_2": "Request Wholesale Pricing",
+        "button_link_2": "#wholesale-form"
       }
     },
     "divine_testimonials": {
@@ -115,15 +117,20 @@
         "title": "What Our Wholesale Clients Say"
       }
     },
-    "divine_contact": {
-      "type": "divine-contact-us",
-      "settings": {}
+    "divine_wholesale_form": {
+      "type": "divine-wholesale-form",
+      "settings": {
+        "label": "Wholesale & Trade",
+        "heading": "Trade Inquiry",
+        "subtext": "Tell us about your business and what you're looking to source. A member of our wholesale team will respond within 1–2 business days with pricing, samples, and next steps.",
+        "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days."
+      }
     }
   },
   "order": [
     "main",
     "divine_wholesale",
     "divine_testimonials",
-    "divine_contact"
+    "divine_wholesale_form"
   ]
 }
