@@ -71,9 +71,9 @@
         "heading": "Launch Your Own Organic Tea or Superfood Brand",
         "text": "<p>We supply cafés, wellness brands, juice bars, spas, retailers, and entrepreneurs with premium organic ingredients. Competitive wholesale pricing, consistent quality across batches, and full lab documentation — because your customers deserve the same transparency ours get.</p>",
         "button_label_1": "Start a Private Label Project",
-        "button_link_1": "",
+        "button_link_1": "#wholesale-form",
         "button_label_2": "Request Wholesale Pricing",
-        "button_link_2": "",
+        "button_link_2": "#wholesale-form",
         "background_color": "",
         "padding_top": 48,
         "padding_bottom": 48,
@@ -139,24 +139,13 @@
         "margin_bottom": 0
       }
     },
-    "divine_contact": {
-      "type": "divine-contact-us",
+    "divine_wholesale_form": {
+      "type": "divine-wholesale-form",
       "settings": {
-        "hero_label": "Say Hello",
-        "hero_heading": "<p>We're Real People. <strong>Let's Talk.</strong></p>",
-        "hero_subtext": "Have a question about a product, an order, or a partnership idea? We'd love to hear from you — and we always respond personally.",
-        "info_heading": "Let's Connect",
-        "info_text": "Whether you're a matcha enthusiast, a café owner sourcing premium ingredients, or exploring what we can do together — reach out. We love connecting with the people who use our products.",
-        "email_address": "hello@divineingredients.com",
-        "email_response_time": "We get back to you within 24 hours",
-        "phone_number": "",
-        "phone_hours": "Mon–Fri 9am–5pm MST",
-        "show_location": false,
-        "location_address": "",
-        "cta_heading": "Thinking Wholesale?",
-        "cta_text": "We partner with cafés, brands, and producers who want premium organic ingredients at scale. Let's build something great together.",
-        "cta_label": "Apply for Wholesale",
-        "cta_link": ""
+        "label": "Wholesale & Trade",
+        "heading": "Trade Inquiry",
+        "subtext": "Tell us about your business and what you're looking to source. A member of our wholesale team will respond within 1–2 business days with pricing, samples, and next steps.",
+        "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days."
       }
     }
   },
