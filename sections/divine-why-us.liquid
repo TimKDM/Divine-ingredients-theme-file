@@ -1,5 +1,7 @@
 {%- style -%}
   .divine-why-us-section {
+    --body-font-size: {{ section.settings.body_font_size | default: 14 }}px;
+    --body-font-size-lg: {{ section.settings.body_font_size | default: 14 | plus: 1 }}px;
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
@@ -119,7 +121,7 @@
     letter-spacing: 0.02em;
   }
   .divine-why-us__item p {
-    font-size: 14px;
+    font-size: var(--body-font-size);
     color: var(--color-text-muted, #666);
     line-height: 1.6;
     margin: 0;
@@ -144,7 +146,7 @@
       font-size: 18px;
     }
     .divine-why-us__item p {
-      font-size: 15px;
+      font-size: var(--body-font-size-lg);
     }
   }
 </style>
@@ -237,6 +239,16 @@
       "max": 100,
       "step": 4,
       "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 14,
       "unit": "px"
     }
   ],

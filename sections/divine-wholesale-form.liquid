@@ -1,5 +1,6 @@
 {%- style -%}
   .divine-wholesale-form-section {
+    --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
@@ -119,7 +120,7 @@
   .divine-wholesale-form__textarea {
     width: 100%;
     padding: 12px 14px;
-    font-size: 15px;
+    font-size: var(--body-font-size);
     font-family: 'Jost', var(--font-body-family), sans-serif;
     border: 1px solid rgba(var(--color-base-border-1));
     border-radius: 6px;
@@ -586,6 +587,16 @@
       "max": 100,
       "step": 4,
       "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 15,
       "unit": "px"
     }
   ],

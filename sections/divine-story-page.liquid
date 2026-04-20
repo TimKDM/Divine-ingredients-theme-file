@@ -1,5 +1,8 @@
 {%- style -%}
   .divine-story-page {
+    --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
+  }
+  .divine-story-page {
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
       background-color: {{ section.settings.background_color }};
     {% endif %}
@@ -232,7 +235,7 @@
 
   /* Intro Section */
   .divine-story__intro {
-    max-width: 720px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
@@ -280,7 +283,7 @@
     line-height: 1.3;
   }
   .divine-story__section-text {
-    font-size: 14px;
+    font-size: var(--body-font-size);
     color: var(--color-text-muted);
     line-height: 1.7;
     margin-bottom: 20px;
@@ -443,6 +446,16 @@
       "type": "color",
       "id": "accent_color",
       "label": "Accent color"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
     }
   ],
   "blocks": [
