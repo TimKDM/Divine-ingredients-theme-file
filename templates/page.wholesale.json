@@ -143,8 +143,8 @@
       "type": "divine-wholesale-form",
       "settings": {
         "label": "Wholesale & Trade",
-        "heading": "Trade Inquiry",
-        "subtext": "Tell us about your business and what you're looking to source. A member of our wholesale team will respond within 1–2 business days with pricing, samples, and next steps.",
+        "heading": "Ready to get started?",
+        "subtext": "<p>Simply fill out the trade inquiry form below — tell us a bit about your business, your goals, and what you're looking for. Whether you're exploring wholesale opportunities, private-label options, custom blends, or just want to learn more about what we offer, we can't wait to connect.</p><p>Once submitted, our team will review your details and reach out promptly to begin the conversation. Let's connect, collaborate, and craft something extraordinary together.</p>",
         "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days."
       }
     }
