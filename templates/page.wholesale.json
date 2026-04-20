@@ -66,12 +66,19 @@
         "feature_6"
       ],
       "settings": {
-        "image": "shopify://shop_images/Matcha_Lattes.jpg",
+        "image": "shopify://shop_images/spoons-full-of-spices.jpg",
         "caption": "B2B & Private Label",
         "heading": "Launch Your Own Organic Tea or Superfood Brand",
         "text": "<p>We supply cafés, wellness brands, juice bars, spas, retailers, and entrepreneurs with premium organic ingredients. Competitive wholesale pricing, consistent quality across batches, and full lab documentation — because your customers deserve the same transparency ours get.</p>",
         "button_label_1": "Start a Private Label Project",
-        "button_label_2": "Request Wholesale Pricing"
+        "button_link_1": "#wholesale-form",
+        "button_label_2": "Request Wholesale Pricing",
+        "button_link_2": "#wholesale-form",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "divine_testimonials": {
@@ -83,7 +90,9 @@
             "rating": 5,
             "text": "We built our entire private label tea line with Divine. The sourcing transparency and quality certs make it easy to build trust with our own customers. Reordering is seamless.",
             "author": "Ryan & Co.",
-            "role": "Private Label Brand, Toronto"
+            "role": "Private Label Brand, Toronto",
+            "source": "Google Review",
+            "link": ""
           }
         },
         "testimonial_2": {
@@ -92,7 +101,9 @@
             "rating": 5,
             "text": "We tried four matcha suppliers before Divine. The quality is consistent batch to batch, the pricing works for our margins, and our customers notice the difference.",
             "author": "Sarah M.",
-            "role": "Café Owner, Portland OR"
+            "role": "Café Owner, Portland OR",
+            "source": "Google Review",
+            "link": ""
           }
         },
         "testimonial_3": {
@@ -101,7 +112,9 @@
             "rating": 5,
             "text": "We carry Divine in our spa retail section and it sells itself. Clean packaging, real story, and guests trust it immediately. We've reordered three times.",
             "author": "Anita W.",
-            "role": "Spa Director, Scottsdale AZ"
+            "role": "Spa Director, Scottsdale AZ",
+            "source": "Google Review",
+            "link": ""
           }
         }
       },
@@ -112,18 +125,34 @@
       ],
       "settings": {
         "caption": "Trusted Partners",
-        "title": "What Our Wholesale Clients Say"
+        "title": "What Our Wholesale Clients Say",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "card_background_color": "",
+        "card_border_color": "",
+        "star_color": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
-    "divine_contact": {
-      "type": "divine-contact-us",
-      "settings": {}
+    "divine_wholesale_form": {
+      "type": "divine-wholesale-form",
+      "settings": {
+        "label": "Wholesale & Trade",
+        "heading": "Trade Inquiry",
+        "subtext": "Tell us about your business and what you're looking to source. A member of our wholesale team will respond within 1–2 business days with pricing, samples, and next steps.",
+        "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days."
+      }
     }
   },
   "order": [
     "main",
     "divine_wholesale",
     "divine_testimonials",
-    "divine_contact"
+    "divine_wholesale_form"
   ]
 }
