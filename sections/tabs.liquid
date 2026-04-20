@@ -23,77 +23,168 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  assign dynamic_tabs = null
+
+  if section.settings.dynamic_source == 'product_metafield' and product != blank
+    assign ns = section.settings.metafield_namespace | default: 'custom'
+    assign key = section.settings.metafield_key | default: 'product_tabs'
+    assign mf = product.metafields[ns][key]
+    if mf != blank and mf.value != blank
+      assign dynamic_tabs = mf.value
+    endif
+  endif
+-%}
+
 <div class="ignore-{{ section.settings.ignore_spacing }}">
 <div class="color-{{ section.settings.color_scheme }} gradient {% if section.settings.full_width == false %}tabs-boxed{% endif %} margin-spacing-{{ section.settings.margin_spacing }} section-{{ section.id }}-margin">
   <div class="tabs page-width section-{{ section.id }}-padding tabs-{{ section.settings.tabs_style }}">
     <custom-tabs>
-      <ul class="color-{{ section.settings.color_scheme_1 }} gradient tab-nav" data-aos="fade-up">
-        {%- for block in section.blocks -%}
-          <li class="tab-item">
-            <a href="#Tab-{{ block.id }}-{{ section.id }}" class="link link--text" {{ block.shopify_attributes }}>
-              {{ block.settings.heading | default: block.settings.page.title }}
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
 
+      {%- if dynamic_tabs -%}
+        {%- comment -%} ----- Dynamic source: product metaobject list ----- {%- endcomment -%}
+        <ul class="color-{{ section.settings.color_scheme_1 }} gradient tab-nav" data-aos="fade-up">
+          {%- for tab in dynamic_tabs -%}
+            <li class="tab-item">
+              <a href="#Tab-mo-{{ forloop.index }}-{{ section.id }}" class="link link--text">
+                {{ tab.heading | default: tab.title | default: 'Tab' }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
 
-      <div class="tab-content-wrapper">
-        {% for block in section.blocks %}
-          <div id="Tab-{{ block.id }}-{{ section.id }}" class="tab-content">
-            <div class="{% if block.settings.hide_image == true %}hide-image{% endif %} grid">
-              
-              {% if block.settings.hide_image == false %}<div class="grid-item global-media-settings" data-aos="fade-up">{% endif %}
-                {% if block.settings.hide_image != true and block.settings.image != blank %}
-                  {%- assign tab_image_height = block.settings.tab_image_width
-                    | divided_by: block.settings.tab_image.aspect_ratio
-                  -%}
-
-                  <div
-                    class="footer-block__image-wrapper"
-                    style="max-width: min(100%, {{ block.settings.tab_image_width }}px);"
-                  >
-                    {{
-                      block.settings.image
-                      | image_url: width: 1100
-                      | image_tag:
-                        loading: 'lazy',
-                        widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                        height: tab_image_height,
-                        width: block.settings.tab_image_width,
-                        class: 'tab-image'
-                    }}
+        <div class="tab-content-wrapper">
+          {%- for tab in dynamic_tabs -%}
+            {%- liquid
+              assign hide_image = tab.hide_image
+              if hide_image == nil
+                assign hide_image = false
+              endif
+              assign tab_image_width = tab.image_width | default: 1000
+              assign tab_image = tab.image
+              assign tab_content = tab.content
+              assign tab_btn_label = tab.button_label
+              assign tab_btn_link = tab.button_link
+              assign tab_btn_new_tab = tab.open_in_new_tab
+              assign tab_btn_secondary = tab.secondary_button_style
+            -%}
+            <div id="Tab-mo-{{ forloop.index }}-{{ section.id }}" class="tab-content">
+              <div class="{% if hide_image %}hide-image{% endif %} grid">
+                {%- unless hide_image -%}
+                  <div class="grid-item global-media-settings" data-aos="fade-up">
+                    {%- if tab_image != blank -%}
+                      {%- assign tab_image_height = tab_image_width | divided_by: tab_image.aspect_ratio -%}
+                      <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ tab_image_width }}px);">
+                        {{
+                          tab_image
+                          | image_url: width: 1100
+                          | image_tag:
+                            loading: 'lazy',
+                            widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                            height: tab_image_height,
+                            width: tab_image_width,
+                            class: 'tab-image'
+                        }}
+                      </div>
+                    {%- else -%}
+                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                    {%- endif -%}
                   </div>
-                {%- else -%}
-                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                {% endif %}
-                  
-              {% if block.settings.hide_image == false %}</div>{% endif %}
-            
-            <div class="grid-item" data-aos="fade-up">
-            {{ block.settings.row_content }}
-            <div
-              class="button-block"
-            >
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}" {% if block.settings.open_new_tab_1 %} target="_blank" {% endif %}
+                {%- endunless -%}
+
+                <div class="grid-item" data-aos="fade-up">
+                  {{ tab_content }}
+                  <div class="button-block">
+                    {%- if tab_btn_label != blank -%}
+                      <a
+                        {% if tab_btn_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ tab_btn_link }}" {% if tab_btn_new_tab %} target="_blank" rel="noopener"{% endif %}
+                        {% endif %}
+                        class="button-arrow button{% if tab_btn_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      >
+                        {{- tab_btn_label | escape -}}
+                        {%- if settings.show_button_arrow -%}{% render 'icon-slider-arrows' %}{% endif %}
+                      </a>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+
+      {%- else -%}
+        {%- comment -%} ----- Fallback: section blocks (original behavior) ----- {%- endcomment -%}
+        <ul class="color-{{ section.settings.color_scheme_1 }} gradient tab-nav" data-aos="fade-up">
+          {%- for block in section.blocks -%}
+            <li class="tab-item">
+              <a href="#Tab-{{ block.id }}-{{ section.id }}" class="link link--text" {{ block.shopify_attributes }}>
+                {{ block.settings.heading | default: block.settings.page.title }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+
+        <div class="tab-content-wrapper">
+          {% for block in section.blocks %}
+            <div id="Tab-{{ block.id }}-{{ section.id }}" class="tab-content">
+              <div class="{% if block.settings.hide_image == true %}hide-image{% endif %} grid">
+
+                {% if block.settings.hide_image == false %}<div class="grid-item global-media-settings" data-aos="fade-up">{% endif %}
+                  {% if block.settings.hide_image != true and block.settings.image != blank %}
+                    {%- assign tab_image_height = block.settings.tab_image_width
+                      | divided_by: block.settings.tab_image.aspect_ratio
+                    -%}
+
+                    <div
+                      class="footer-block__image-wrapper"
+                      style="max-width: min(100%, {{ block.settings.tab_image_width }}px);"
+                    >
+                      {{
+                        block.settings.image
+                        | image_url: width: 1100
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                          height: tab_image_height,
+                          width: block.settings.tab_image_width,
+                          class: 'tab-image'
+                      }}
+                    </div>
+                  {%- else -%}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                   {% endif %}
-                  class="button-arrow button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                >
-                  {{- block.settings.button_label | escape -}}
-                  {%- if settings.show_button_arrow -%}{% render 'icon-slider-arrows' %}{% endif %}
-                </a>
-              {%- endif -%}
+
+                {% if block.settings.hide_image == false %}</div>{% endif %}
+
+              <div class="grid-item" data-aos="fade-up">
+              {{ block.settings.row_content }}
+              <div
+                class="button-block"
+              >
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}" {% if block.settings.open_new_tab_1 %} target="_blank" {% endif %}
+                    {% endif %}
+                    class="button-arrow button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label | escape -}}
+                    {%- if settings.show_button_arrow -%}{% render 'icon-slider-arrows' %}{% endif %}
+                  </a>
+                {%- endif -%}
+              </div>
+              </div>
             </div>
             </div>
-          </div>
-          </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
+      {%- endif -%}
     </custom-tabs>
   </div>
 </div>
@@ -133,6 +224,34 @@
       "id": "full_width",
       "label": "t:sections.tabs.settings.full_width.label",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Dynamic content (product pages)"
+    },
+    {
+      "type": "select",
+      "id": "dynamic_source",
+      "label": "Tab content source",
+      "info": "On product templates, choose 'Product metafield' to show tabs from a product's metaobject list. Falls back to the section blocks below if the product has no tabs set.",
+      "options": [
+        { "value": "section_blocks", "label": "Use section blocks below" },
+        { "value": "product_metafield", "label": "Use product metafield" }
+      ],
+      "default": "section_blocks"
+    },
+    {
+      "type": "text",
+      "id": "metafield_namespace",
+      "label": "Metafield namespace",
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "Metafield key",
+      "default": "product_tabs",
+      "info": "Must be a list-of-references metafield pointing to a 'tab' metaobject. See setup notes."
     },
     {
       "type": "header",
