@@ -769,7 +769,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .divine-brand-value p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--color-text-muted);
   margin: 0;
   line-height: 1.6;
@@ -786,6 +786,15 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 0;
     aspect-ratio: auto;
     max-width: 100%;
+  }
+  .divine-brand-story__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .divine-brand-values {
+    margin-top: auto;
+    padding-top: 24px;
   }
 }
 
