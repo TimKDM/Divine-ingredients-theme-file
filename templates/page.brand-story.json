@@ -113,8 +113,8 @@
         "accent_color": "",
         "body_font_size": 22,
         "heading_font_size": 26,
-        "caption_font_size": 14,
-        "item_heading_font_size": 16
+        "caption_font_size": 20,
+        "item_heading_font_size": 30
       }
     }
   },
