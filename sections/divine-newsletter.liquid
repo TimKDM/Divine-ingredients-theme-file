@@ -40,6 +40,9 @@
   .divine-newsletter-section .divine-newsletter__subtitle {
     font-size: {{ section.settings.body_font_size | default: 16 }}px;
   }
+  .divine-newsletter-section h2 {
+    font-size: {{ section.settings.heading_font_size | default: 30 }}px;
+  }
 {%- endstyle -%}
 
 <section class="divine-newsletter">
@@ -224,6 +227,16 @@
       "max": 22,
       "step": 1,
       "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "default": 30,
       "unit": "px"
     }
   ],

@@ -1,6 +1,12 @@
 {%- style -%}
   .divine-cert-bar-section {
     --body-font-size: {{ section.settings.body_font_size | default: 10 }}px;
+    --heading-font-size: {{ section.settings.heading_font_size | default: 11 }}px;
+  }
+  .divine-cert-bar__heading {
+    font-size: var(--heading-font-size) !important;
+  }
+  .divine-cert-bar-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
@@ -263,6 +269,16 @@
       "max": 22,
       "step": 1,
       "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "default": 11,
       "unit": "px"
     }
   ],

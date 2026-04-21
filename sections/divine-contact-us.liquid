@@ -1,7 +1,20 @@
 {%- style -%}
   .divine-contact-page {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
+    --heading-font-size: {{ section.settings.heading_font_size | default: 34 }}px;
     font-family: 'Jost', var(--font-body-family), sans-serif;
+  }
+  .divine-contact-hero h1 {
+    font-size: var(--heading-font-size);
+  }
+  .divine-contact-info h2,
+  .divine-contact-quick .divine-section-title,
+  .divine-contact-cta h2 {
+    font-size: calc(var(--heading-font-size) * 0.82);
+  }
+  .divine-contact-form-card h3,
+  .divine-quick-card h3 {
+    font-size: calc(var(--heading-font-size) * 0.55);
   }
 
   /* Hero */
@@ -602,6 +615,16 @@
       "max": 22,
       "step": 1,
       "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 64,
+      "step": 1,
+      "default": 34,
       "unit": "px"
     }
   ],

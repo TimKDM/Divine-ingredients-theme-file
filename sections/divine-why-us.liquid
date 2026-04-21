@@ -2,6 +2,15 @@
   .divine-why-us-section {
     --body-font-size: {{ section.settings.body_font_size | default: 14 }}px;
     --body-font-size-lg: {{ section.settings.body_font_size | default: 14 | plus: 1 }}px;
+    --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+  }
+  .divine-why-us .divine-section-title {
+    font-size: var(--heading-font-size);
+  }
+  .divine-why-us__item h3 {
+    font-size: calc(var(--heading-font-size) * 0.62);
+  }
+  .divine-why-us-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
@@ -249,6 +258,16 @@
       "max": 22,
       "step": 1,
       "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "default": 26,
       "unit": "px"
     }
   ],

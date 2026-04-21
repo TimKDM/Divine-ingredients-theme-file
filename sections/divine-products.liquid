@@ -12,6 +12,9 @@
   #shopify-section-{{ section.id }} .divine-product-card__meta {
     font-size: {{ section.settings.body_font_size | default: 16 }}px;
   }
+  #shopify-section-{{ section.id }} .divine-section-title {
+    font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+  }
   @media screen and (min-width: 768px) {
     #shopify-section-{{ section.id }} .divine-section {
       padding-top: {{ section.settings.padding_top }}px;
@@ -294,6 +297,16 @@
       "max": 22,
       "step": 1,
       "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "default": 26,
       "unit": "px"
     }
   ],

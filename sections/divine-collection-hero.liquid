@@ -58,7 +58,7 @@
   }
   .divine-collection-hero__title {
     font-family: var(--font-heading);
-    font-size: 32px;
+    font-size: {{ section.settings.heading_font_size | default: 32 }}px;
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 12px;
@@ -237,6 +237,16 @@
       "max": 22,
       "step": 1,
       "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 64,
+      "step": 1,
+      "default": 32,
       "unit": "px"
     }
   ],
