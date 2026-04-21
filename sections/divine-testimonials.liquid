@@ -1,6 +1,14 @@
 {%- style -%}
   #shopify-section-{{ section.id }} .divine-testimonials {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
+    --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  #shopify-section-{{ section.id }} .divine-testimonials .divine-section-title {
+    font-size: var(--heading-font-size);
+  }
+  #shopify-section-{{ section.id }} .divine-testimonials {
     padding: 48px 20px;
     text-align: center;
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
@@ -307,6 +315,16 @@
       "max": 22,
       "step": 1,
       "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "default": 26,
       "unit": "px"
     }
   ],

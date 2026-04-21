@@ -6,6 +6,9 @@
   #shopify-section-{{ section.id }} .divine-hero__subtitle {
     font-size: {{ section.settings.body_font_size | default: 16 }}px;
   }
+  #shopify-section-{{ section.id }} .divine-hero h1 {
+    font-size: {{ section.settings.heading_font_size | default: 32 }}px;
+  }
   {% if section.settings.image_height != blank and section.settings.image_height != 0 %}
     #shopify-section-{{ section.id }} .divine-hero,
     #shopify-section-{{ section.id }} .divine-hero__content {
@@ -204,6 +207,16 @@
       "max": 22,
       "step": 1,
       "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 72,
+      "step": 1,
+      "default": 32,
       "unit": "px"
     }
   ],

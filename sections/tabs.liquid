@@ -25,6 +25,12 @@
   #shopify-section-{{ section.id }} .tabs .tab-content-wrapper p {
     font-size: {{ section.settings.body_font_size | default: 15 }}px;
   }
+  #shopify-section-{{ section.id }} .tabs .tab-content-wrapper h2 {
+    font-size: {{ section.settings.heading_font_size | default: 18 }}px;
+  }
+  #shopify-section-{{ section.id }} .tabs .tab-item a {
+    font-size: {{ section.settings.heading_font_size | default: 18 | minus: 5 }}px;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -341,6 +347,16 @@
       "max": 22,
       "step": 1,
       "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "default": 18,
       "unit": "px"
     }
   ],

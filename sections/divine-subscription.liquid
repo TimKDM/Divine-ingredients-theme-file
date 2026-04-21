@@ -1,6 +1,15 @@
 {%- style -%}
   .divine-subscription-section {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
+    --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+  }
+  .divine-subscription .divine-section-title {
+    font-size: var(--heading-font-size);
+  }
+  .divine-subscription__card-content h3 {
+    font-size: calc(var(--heading-font-size) * 0.62);
+  }
+  .divine-subscription-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
@@ -259,6 +268,16 @@
       "max": 22,
       "step": 1,
       "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 18,
+      "max": 56,
+      "step": 1,
+      "default": 26,
       "unit": "px"
     }
   ],
