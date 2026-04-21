@@ -109,7 +109,7 @@
       ],
       "settings": {
         "background_color": "",
-        "text_color": "",
+        "text_color": "#000000",
         "accent_color": "",
         "body_font_size": 22,
         "heading_font_size": 26,
