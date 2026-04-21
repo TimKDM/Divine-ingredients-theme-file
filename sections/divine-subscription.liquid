@@ -144,7 +144,7 @@
   }
   .divine-subscription__card-content h3 {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
     font-weight: 600;
     margin: 0 0 6px;
   }

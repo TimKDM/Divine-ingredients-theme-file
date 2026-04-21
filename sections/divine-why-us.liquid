@@ -127,7 +127,7 @@
   }
   .divine-why-us__item h3 {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
     font-weight: 600;
     margin: 0 0 8px;
     letter-spacing: 0.02em;
@@ -155,7 +155,7 @@
       height: 56px;
     }
     .divine-why-us__item h3 {
-      font-size: 18px;
+      font-size: {{ section.settings.item_heading_font_size | default: 16 | plus: 2 }}px;
     }
     .divine-why-us__item p {
       font-size: var(--body-font-size-lg);
