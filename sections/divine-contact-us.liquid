@@ -32,7 +32,7 @@
   }
   .divine-contact-hero__label {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 11px;
+    font-size: {{ section.settings.caption_font_size | default: 12 }}px;
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
   }
   .divine-contact-hero h1 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: clamp(28px, 5vw, 42px);
+    font-size: {{ section.settings.heading_font_size | default: 34 }}px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 16px;
@@ -53,7 +53,7 @@
     font-weight: 600;
   }
   .divine-contact-hero p {
-    font-size: 17px;
+    font-size: {{ section.settings.hero_subtext_font_size | default: 17 }}px;
     color: var(--color-text-muted, #7a6f64);
     max-width: 600px;
     margin: 0 auto;
@@ -82,14 +82,14 @@
   /* Contact Info */
   .divine-contact-info h2 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 28px;
+    font-size: {{ section.settings.subheading_font_size | default: 28 }}px;
     font-weight: 400;
     margin-bottom: 16px;
     margin-top: 0;
     letter-spacing: -0.01em;
   }
   .divine-contact-info > p {
-    font-size: 16px;
+    font-size: {{ section.settings.info_text_font_size | default: 16 }}px;
     color: var(--color-text-muted, #7a6f64);
     margin-bottom: 36px;
     line-height: 1.7;
@@ -123,7 +123,7 @@
   }
   .divine-contact-method h4 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 13px;
+    font-size: {{ section.settings.method_heading_font_size | default: 13 }}px;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -159,7 +159,7 @@
   }
   .divine-contact-form-card h3 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 20px;
+    font-size: {{ section.settings.item_heading_font_size | default: 18 }}px;
     font-weight: 600;
     margin-bottom: 28px;
     margin-top: 0;
@@ -280,13 +280,13 @@
   }
   .divine-quick-card h3 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 16px;
+    font-size: {{ section.settings.item_heading_font_size | default: 18 }}px;
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 0;
   }
   .divine-quick-card p {
-    font-size: var(--body-font-size);
+    font-size: {{ section.settings.body_font_size | default: 15 }}px;
     color: var(--color-text-muted, #7a6f64);
     margin: 0;
     line-height: 1.5;
@@ -301,7 +301,7 @@
   }
   .divine-contact-cta h2 {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: clamp(22px, 4vw, 30px);
+    font-size: {{ section.settings.subheading_font_size | default: 28 }}px;
     font-weight: 400;
     margin-bottom: 12px;
     margin-top: 0;
@@ -310,7 +310,7 @@
   .divine-contact-cta p {
     color: rgba(255,255,255,0.7);
     margin-bottom: 28px;
-    font-size: 16px;
+    font-size: {{ section.settings.cta_text_font_size | default: 16 }}px;
   }
   .divine-contact-cta .divine-btn-accent {
     background: var(--color-accent-hex, #c8a8d8);
@@ -672,6 +672,58 @@
       "max": 22,
       "step": 1,
       "default": 11,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "label": "Sub-heading font size",
+      "info": "Controls 'Let's Connect', 'Looking for Something Specific?', and 'Thinking Wholesale?'",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "hero_subtext_font_size",
+      "label": "Hero subtext font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "info_text_font_size",
+      "label": "Contact info description font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "method_heading_font_size",
+      "label": "Contact method label font size",
+      "info": "Controls 'Email Us', 'Call Us', 'Location'",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "cta_text_font_size",
+      "label": "Bottom CTA text font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],
