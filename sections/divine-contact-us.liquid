@@ -14,7 +14,14 @@
   }
   .divine-contact-form-card h3,
   .divine-quick-card h3 {
-    font-size: calc(var(--heading-font-size) * 0.55);
+    font-size: {{ section.settings.item_heading_font_size | default: 18 }}px;
+  }
+  .divine-contact-method h4 {
+    font-size: calc({{ section.settings.item_heading_font_size | default: 18 }}px * 0.72);
+  }
+  .divine-contact-page .divine-section-label,
+  .divine-contact-hero__label {
+    font-size: {{ section.settings.caption_font_size | default: 12 }}px;
   }
 
   /* Hero */
@@ -625,6 +632,26 @@
       "max": 64,
       "step": 1,
       "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "item_heading_font_size",
+      "label": "Item/card title font size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 18,
       "unit": "px"
     }
   ],

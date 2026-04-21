@@ -7,6 +7,9 @@
   .divine-wholesale-form__intro h2 {
     font-size: var(--heading-font-size) !important;
   }
+  .divine-wholesale-form__intro .divine-section-label {
+    font-size: {{ section.settings.caption_font_size | default: 11 }}px !important;
+  }
   .divine-wholesale-form-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -614,6 +617,16 @@
       "max": 56,
       "step": 1,
       "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 11,
       "unit": "px"
     }
   ],

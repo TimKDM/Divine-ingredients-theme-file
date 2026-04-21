@@ -21,7 +21,7 @@
     font-size: {{ section.settings.heading_font_size | default: 30 }}px;
   }
   .divine-brand-story-section .divine-brand-story__content h4 {
-    font-size: calc({{ section.settings.heading_font_size | default: 30 }}px * 0.6);
+    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
   }
   {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
     .divine-brand-story-section h2,
@@ -221,6 +221,16 @@
       "max": 56,
       "step": 1,
       "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "item_heading_font_size",
+      "label": "Item/card title font size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],
