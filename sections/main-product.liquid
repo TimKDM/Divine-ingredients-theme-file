@@ -23,6 +23,21 @@
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
+    #shopify-section-{{ section.id }} .product-info-wrapper .product-title h1,
+    #shopify-section-{{ section.id }} .product-info-wrapper h2.product-title,
+    #shopify-section-{{ section.id }} .under-gallery .product-title h1 {
+      font-size: {{ section.settings.product_title_font_size | default: 32 }}px !important;
+    }
+    #shopify-section-{{ section.id }} .product-info-wrapper span.price-item,
+    #shopify-section-{{ section.id }} .product-info-wrapper .price-item--regular,
+    #shopify-section-{{ section.id }} .product-info-wrapper .price-item--sale {
+      font-size: {{ section.settings.price_font_size | default: 24 }}px !important;
+    }
+    #shopify-section-{{ section.id }} .product__description,
+    #shopify-section-{{ section.id }} .product-description p,
+    #shopify-section-{{ section.id }} .product-description .rte {
+      font-size: {{ section.settings.description_font_size | default: 16 }}px;
+    }
 
     {%- for block in section.blocks -%}
     .section-{{ block.id }}-margin {
@@ -4350,6 +4365,40 @@
       "id": "ignore_spacing",
       "default": false,
       "label": "t:sections.all.ignore_spacing.label"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "product_title_font_size",
+      "label": "Product title font size",
+      "min": 16,
+      "max": 64,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "price_font_size",
+      "label": "Price font size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Description font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
     }
   ]
 }

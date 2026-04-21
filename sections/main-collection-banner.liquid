@@ -17,6 +17,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}rem;
     }
   }
+
+  #Banner-{{ section.id }} .collection-hero__title {
+    font-size: {{ section.settings.title_font_size | default: 40 }}px !important;
+  }
 {%- endstyle -%}
 
 
@@ -263,6 +267,16 @@
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Collection title font size",
+      "min": 20,
+      "max": 80,
+      "step": 1,
+      "default": 40,
+      "unit": "px"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
