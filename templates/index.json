@@ -98,13 +98,22 @@
             "text": "<strong>Free Shipping</strong> Over $100",
             "link": ""
           }
+        },
+        "trust_5": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "woman",
+            "text": "<strong>Woman Owned</strong> & Operated",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "trust_1",
         "trust_2",
         "trust_3",
-        "trust_4"
+        "trust_4",
+        "trust_5"
       ],
       "settings": {
         "background_color": "",
