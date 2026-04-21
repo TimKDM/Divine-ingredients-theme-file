@@ -82,7 +82,7 @@
   }
   .divine-wholesale-form__legend {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 13px;
+    font-size: {{ section.settings.form_header_font_size | default: 13 }}px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -114,7 +114,7 @@
   }
   .divine-wholesale-form__label {
     font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
-    font-size: 11px;
+    font-size: {{ section.settings.form_label_font_size | default: 11 }}px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -625,6 +625,26 @@
       "label": "Caption font size",
       "min": 8,
       "max": 24,
+      "step": 1,
+      "default": 11,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_header_font_size",
+      "label": "Form section header font size",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_label_font_size",
+      "label": "Field label font size",
+      "min": 8,
+      "max": 22,
       "step": 1,
       "default": 11,
       "unit": "px"
