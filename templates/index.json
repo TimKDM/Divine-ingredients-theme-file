@@ -179,7 +179,9 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 22,
-        "heading_font_size": 40
+        "heading_font_size": 40,
+        "caption_font_size": 18,
+        "item_heading_font_size": 24
       }
     },
     "divine_best_sellers": {
@@ -204,7 +206,8 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 19,
-        "heading_font_size": 35
+        "heading_font_size": 35,
+        "caption_font_size": 14
       }
     },
     "divine_brand_story": {
@@ -248,7 +251,8 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 22,
-        "heading_font_size": 41
+        "heading_font_size": 41,
+        "item_heading_font_size": 27
       }
     },
     "divine_subscription": {
@@ -306,7 +310,9 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 20,
-        "heading_font_size": 39
+        "heading_font_size": 39,
+        "caption_font_size": 14,
+        "item_heading_font_size": 16
       }
     },
     "divine_why_us": {
@@ -356,7 +362,9 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 20,
-        "heading_font_size": 46
+        "heading_font_size": 46,
+        "caption_font_size": 21,
+        "item_heading_font_size": 26
       }
     },
     "divine_certs": {
@@ -446,7 +454,7 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 10,
-        "heading_font_size": 11
+        "heading_font_size": 21
       }
     },
     "divine_testimonials": {
@@ -542,7 +550,8 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 19,
-        "heading_font_size": 26
+        "heading_font_size": 26,
+        "caption_font_size": 14
       }
     },
     "divine_newsletter": {
