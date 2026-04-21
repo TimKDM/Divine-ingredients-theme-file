@@ -32,7 +32,12 @@
         "caption_font_size": 20,
         "item_heading_font_size": 24,
         "form_font_size": 18,
-        "form_label_font_size": 18
+        "form_label_font_size": 20,
+        "subheading_font_size": 28,
+        "hero_subtext_font_size": 20,
+        "info_text_font_size": 20,
+        "method_heading_font_size": 20,
+        "cta_text_font_size": 20
       }
     }
   },
