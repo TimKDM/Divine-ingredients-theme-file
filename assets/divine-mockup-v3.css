@@ -823,7 +823,7 @@ h1, h2, h3, h4, h5, h6,
 .divine-newsletter > p,
 .divine-newsletter__subtitle {
   color: rgba(255,255,255,0.7);
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
@@ -840,7 +840,7 @@ h1, h2, h3, h4, h5, h6,
   background: rgba(255,255,255,0.12);
   color: #fff;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   border-radius: var(--radius-sm);
   outline: none;
 }
@@ -1066,7 +1066,7 @@ header-drawer summary {
 }
 
 .footer .list-menu__item--link {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-muted) !important;
 }
 
@@ -1075,7 +1075,7 @@ header-drawer summary {
 }
 
 .footer-block__brand-info .rte {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -1110,7 +1110,7 @@ header-drawer summary {
 }
 
 .footer-block__details-content {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .footer-block__details-content a {
