@@ -31,23 +31,6 @@
             "hide_quick_view": false
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "column": "left",
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "picker_type": "button",
-            "swatch_shape": "circle",
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "hide_unavailable": false,
-            "hide_quantity_input": false,
-            "hide_mobile": false,
-            "hide_desktop": false,
-            "hide_quick_view": false
-          }
-        },
         "spacer": {
           "type": "spacer",
           "settings": {
@@ -62,6 +45,23 @@
             "column": "under-gallery",
             "margin_top": 0,
             "text_size": "medium",
+            "hide_quick_view": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "column": "left",
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "picker_type": "button",
+            "swatch_shape": "circle",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "hide_unavailable": false,
+            "hide_quantity_input": false,
+            "hide_mobile": false,
+            "hide_desktop": false,
             "hide_quick_view": false
           }
         },
@@ -220,12 +220,38 @@
         "mobile_thumbnails": "show",
         "padding_top": 0,
         "padding_bottom": 36,
-        "ignore_spacing": false
+        "ignore_spacing": false,
+        "product_title_font_size": 32,
+        "price_font_size": 36,
+        "description_font_size": 20
+      }
+    },
+    "custom_schema": {
+      "type": "custom-schema",
+      "settings": {
+        "enable_schema": true,
+        "schema_type": "product",
+        "gtin": "",
+        "mpn": "",
+        "material": "",
+        "category": "Food, Beverages & Tobacco > Beverages > Tea & Infusions",
+        "additional_type": "",
+        "custom_json": ""
       }
     },
     "product_trust_bar": {
       "type": "divine-trust-bar",
-      "settings": {}
+      "settings": {
+        "background_color": "",
+        "text_color": "",
+        "icon_color": "",
+        "border_color": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "body_font_size": 16
+      }
     },
     "tabs": {
       "type": "tabs",
@@ -234,6 +260,8 @@
           "type": "tab",
           "settings": {
             "heading": "How to Use",
+            "product_metafield": "",
+            "product_metafield_image": "",
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
@@ -248,6 +276,8 @@
           "type": "tab",
           "settings": {
             "heading": "Ingredients & Sourcing",
+            "product_metafield": "",
+            "product_metafield_image": "",
             "tab_image_width": 1000,
             "hide_image": false,
             "row_content": "<p>We source every ingredient directly from certified organic farms we know and trust — no middlemen, no compromises.</p><ul><li><strong>Certifications</strong> — USDA Organic, CCOF Certified</li><li><strong>Testing</strong> — Every batch independently lab-verified for purity, potency, heavy metals, and allergen safety</li><li><strong>Traceability</strong> — Full farm-to-shelf transparency on every product</li><li><strong>Free from</strong> — Synthetic additives, artificial colors, preservatives, fillers, and GMOs</li></ul><p>Check individual product listings for origin country, farm details, and batch-specific certifications.</p>",
@@ -261,6 +291,8 @@
           "type": "tab",
           "settings": {
             "heading": "Shipping & Returns",
+            "product_metafield": "",
+            "product_metafield_image": "",
             "tab_image_width": 1000,
             "hide_image": false,
             "row_content": "<h2>Returns policy</h2><ul><li>Dispatch: Within 24 Hours</li><li>Free shipping across all products on a minimum purchase of $50.</li><li>International delivery time - 7-10 business days</li><li>Cash on delivery might be available</li><li>Easy 30 days returns and exchanges</li></ul><h2>Shipping policy</h2><p>We offer standard and expedited shipping options at checkout. Standard shipping typically takes 3-7 business days, while expedited shipping arrives in 2-3 business days. Shipping costs are calculated based on the weight of the order and the selected shipping method. Free standard shipping is available on orders over $50.</p>",
@@ -279,13 +311,18 @@
       "settings": {
         "tabs_style": "style-2",
         "full_width": true,
+        "dynamic_source": "section_blocks",
+        "metafield_namespace": "custom",
+        "metafield_key": "product_tabs",
         "color_scheme": "option-1",
         "color_scheme_1": "option-2",
         "padding_top": 84,
         "padding_bottom": 36,
         "ignore_spacing": true,
         "margin_spacing": "negative",
-        "margin_top": 0
+        "margin_top": 0,
+        "body_font_size": 20,
+        "heading_font_size": 24
       }
     },
     "collapsible_content": {
@@ -506,7 +543,14 @@
           "settings": {}
         }
       },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_5",
+        "logo_6"
+      ],
       "settings": {
         "caption": "Committed to Quality",
         "text_style": "caption-with-letter-spacing",
@@ -543,19 +587,6 @@
         "color_scheme": "option-2",
         "padding_top": 8,
         "padding_bottom": 8
-      }
-    },
-    "custom_schema": {
-      "type": "custom-schema",
-      "settings": {
-        "enable_schema": true,
-        "schema_type": "product",
-        "gtin": "",
-        "mpn": "",
-        "material": "",
-        "category": "Food, Beverages & Tobacco > Beverages > Tea & Infusions",
-        "additional_type": "",
-        "custom_json": ""
       }
     }
   },
