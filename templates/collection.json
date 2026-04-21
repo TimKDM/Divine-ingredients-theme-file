@@ -12,6 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
+        "title_font_size": 40,
         "show_collection_description": false,
         "show_breadcrumbs": true,
         "collection_style": "style-three",
@@ -101,6 +102,7 @@
         "promo_row_1"
       ],
       "settings": {
+        "card_title_font_size": 22,
         "products_per_page": 12,
         "columns_desktop": 4,
         "pagination": "load-more",
@@ -200,7 +202,7 @@
       "settings": {
         "caption": "You were eyeing these",
         "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
+        "text_size": "large",
         "heading": "Recently Viewed",
         "heading_size": "medium",
         "heading_tag": "h2",
