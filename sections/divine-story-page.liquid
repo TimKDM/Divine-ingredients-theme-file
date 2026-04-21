@@ -9,7 +9,10 @@
     font-size: var(--heading-font-size);
   }
   .divine-story-page h3 {
-    font-size: calc(var(--heading-font-size) * 0.7);
+    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
+  }
+  .divine-story-page .divine-section-label {
+    font-size: {{ section.settings.caption_font_size | default: 14 }}px;
   }
   .divine-story-page {
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
@@ -474,6 +477,26 @@
       "max": 56,
       "step": 1,
       "default": 26,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "item_heading_font_size",
+      "label": "Item/card title font size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],

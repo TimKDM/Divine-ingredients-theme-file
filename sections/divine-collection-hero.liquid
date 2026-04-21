@@ -49,7 +49,7 @@
   }
   .divine-collection-hero__label {
     display: inline-block;
-    font-size: 12px;
+    font-size: {{ section.settings.caption_font_size | default: 12 }}px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -247,6 +247,16 @@
       "max": 64,
       "step": 1,
       "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 12,
       "unit": "px"
     }
   ],

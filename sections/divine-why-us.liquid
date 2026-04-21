@@ -8,7 +8,10 @@
     font-size: var(--heading-font-size);
   }
   .divine-why-us__item h3 {
-    font-size: calc(var(--heading-font-size) * 0.62);
+    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
+  }
+  .divine-why-us .divine-section-label {
+    font-size: {{ section.settings.caption_font_size | default: 14 }}px;
   }
   .divine-why-us-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -268,6 +271,26 @@
       "max": 56,
       "step": 1,
       "default": 26,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "item_heading_font_size",
+      "label": "Item/card title font size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],
