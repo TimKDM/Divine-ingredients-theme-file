@@ -3327,23 +3327,23 @@ details[open]:hover > .nav-menu-item {
 }
 
 .navigation-menu .list-menu__item {
-  font-size: calc(var(--font-navigation-scale)*1.6rem);
+  font-size: calc(var(--font-navigation-scale)*1.9rem);
   text-transform: var(--text-transform);
 }
 
 .navigation-menu .nav-first-child.list-menu__item {
-  font-size: calc(var(--font-navigation-scale)*1.6rem);
+  font-size: calc(var(--font-navigation-scale)*1.9rem);
   text-transform: var(--text-transform);
 }
 
 .navigation-menu .navigation-submenu .list-menu__item {
-  font-size: calc(var(--font-subnavigation-scale)*1.6rem);
+  font-size: calc(var(--font-subnavigation-scale)*1.9rem);
   text-transform: none;
 }
 
 .menu-drawer__menu-item,
 .menu-drawer-close-button {
-  font-size: calc(var(--font-navigation-scale)*1.6rem);
+  font-size: calc(var(--font-navigation-scale)*1.9rem);
   text-transform: var(--text-transform);
 }
 
@@ -3386,7 +3386,7 @@ details[open]:hover > .nav-menu-item {
 }
 
 .navigation-submenu li a {
-  font-size: calc(var(--font-subnavigation-scale)*1.6rem);
+  font-size: calc(var(--font-subnavigation-scale)*1.9rem);
 }
 
 .main-navigation li:hover>.navigation-submenu,
