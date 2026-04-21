@@ -78,7 +78,10 @@
         "padding_top": 48,
         "padding_bottom": 48,
         "margin_top": 0,
-        "margin_bottom": 0
+        "margin_bottom": 0,
+        "body_font_size": 20,
+        "heading_font_size": 36,
+        "caption_font_size": 19
       }
     },
     "divine_testimonials": {
@@ -136,7 +139,10 @@
         "padding_top": 32,
         "padding_bottom": 32,
         "margin_top": 0,
-        "margin_bottom": 0
+        "margin_bottom": 0,
+        "body_font_size": 20,
+        "heading_font_size": 26,
+        "caption_font_size": 20
       }
     },
     "divine_wholesale_form": {
@@ -145,7 +151,14 @@
         "label": "Wholesale & Trade",
         "heading": "Trade Inquiry",
         "subtext": "Tell us about your business and what you're looking to source. A member of our wholesale team will respond within 1–2 business days with pricing, samples, and next steps.",
-        "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days."
+        "submit_note": "We review every inquiry personally. You'll hear back within 1–2 business days.",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "body_font_size": 20,
+        "heading_font_size": 36,
+        "caption_font_size": 19
       }
     }
   },
