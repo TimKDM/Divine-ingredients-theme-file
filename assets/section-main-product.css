@@ -2332,7 +2332,7 @@ a.product-text {
 
 .product-meta .product-sku.caption {
   display: inline;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0;
 }
 
@@ -2345,7 +2345,7 @@ a.product-text {
 }
 
 .product-meta .rating-star {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 p.rating-count.caption {
