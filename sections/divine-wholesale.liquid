@@ -130,7 +130,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
+    font-size: {{ section.settings.feature_font_size | default: 14 }}px;
   }
   .divine-wholesale__feature svg {
     width: 18px;
@@ -275,6 +275,16 @@
       "id": "caption_font_size",
       "label": "Caption font size",
       "min": 8,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "feature_font_size",
+      "label": "Feature list font size",
+      "min": 10,
       "max": 24,
       "step": 1,
       "default": 14,

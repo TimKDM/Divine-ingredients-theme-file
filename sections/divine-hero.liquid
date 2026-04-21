@@ -9,6 +9,9 @@
   #shopify-section-{{ section.id }} .divine-hero h1 {
     font-size: {{ section.settings.heading_font_size | default: 32 }}px;
   }
+  #shopify-section-{{ section.id }} .divine-hero__badge {
+    font-size: {{ section.settings.badge_font_size | default: 10 }}px;
+  }
   {% if section.settings.image_height != blank and section.settings.image_height != 0 %}
     #shopify-section-{{ section.id }} .divine-hero,
     #shopify-section-{{ section.id }} .divine-hero__content {
@@ -217,6 +220,16 @@
       "max": 72,
       "step": 1,
       "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size",
+      "label": "Badge font size",
+      "min": 8,
+      "max": 22,
+      "step": 1,
+      "default": 10,
       "unit": "px"
     }
   ],

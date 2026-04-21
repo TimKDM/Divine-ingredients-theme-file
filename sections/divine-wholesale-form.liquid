@@ -1,6 +1,6 @@
 {%- style -%}
   .divine-wholesale-form-section {
-    --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
+    --body-font-size: {{ section.settings.body_font_size | default: 20 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 28 }}px;
   }
   .divine-wholesale-form__intro h1,
@@ -602,11 +602,11 @@
     {
       "type": "range",
       "id": "body_font_size",
-      "label": "Body font size",
-      "min": 12,
-      "max": 22,
+      "label": "Form input font size",
+      "min": 18,
+      "max": 24,
       "step": 1,
-      "default": 15,
+      "default": 20,
       "unit": "px"
     },
     {
