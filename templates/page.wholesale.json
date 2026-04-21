@@ -81,7 +81,8 @@
         "margin_bottom": 0,
         "body_font_size": 20,
         "heading_font_size": 36,
-        "caption_font_size": 19
+        "caption_font_size": 19,
+        "feature_font_size": 17
       }
     },
     "divine_testimonials": {
@@ -156,7 +157,7 @@
         "padding_bottom": 72,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 20,
+        "body_font_size": 18,
         "heading_font_size": 36,
         "caption_font_size": 19
       }
