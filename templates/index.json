@@ -59,7 +59,8 @@
         "overlay_opacity": 100,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 16
+        "body_font_size": 22,
+        "heading_font_size": 48
       }
     },
     "divine_trust_bar": {
@@ -113,7 +114,7 @@
         "padding_bottom": 20,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 16
+        "body_font_size": 22
       }
     },
     "divine_lifestyle": {
@@ -177,7 +178,8 @@
         "padding_bottom": 40,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 12
+        "body_font_size": 22,
+        "heading_font_size": 40
       }
     },
     "divine_best_sellers": {
@@ -201,7 +203,8 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 19
+        "body_font_size": 19,
+        "heading_font_size": 35
       }
     },
     "divine_brand_story": {
@@ -244,7 +247,8 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 22
+        "body_font_size": 22,
+        "heading_font_size": 41
       }
     },
     "divine_subscription": {
@@ -301,7 +305,8 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 20
+        "body_font_size": 20,
+        "heading_font_size": 39
       }
     },
     "divine_why_us": {
@@ -350,7 +355,8 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 20
+        "body_font_size": 20,
+        "heading_font_size": 46
       }
     },
     "divine_certs": {
@@ -439,7 +445,8 @@
         "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 10
+        "body_font_size": 10,
+        "heading_font_size": 11
       }
     },
     "divine_testimonials": {
@@ -534,7 +541,8 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 19
+        "body_font_size": 19,
+        "heading_font_size": 26
       }
     },
     "divine_newsletter": {
@@ -576,7 +584,8 @@
         "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 20
+        "body_font_size": 20,
+        "heading_font_size": 30
       }
     }
   },
