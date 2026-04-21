@@ -309,10 +309,10 @@
         "padding_bottom": 48,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 20,
+        "body_font_size": 18,
         "heading_font_size": 39,
-        "caption_font_size": 14,
-        "item_heading_font_size": 16
+        "caption_font_size": 22,
+        "item_heading_font_size": 24
       }
     },
     "divine_why_us": {
