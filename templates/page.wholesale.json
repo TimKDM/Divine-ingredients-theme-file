@@ -159,7 +159,9 @@
         "margin_bottom": 0,
         "body_font_size": 18,
         "heading_font_size": 36,
-        "caption_font_size": 19
+        "caption_font_size": 19,
+        "form_header_font_size": 22,
+        "form_label_font_size": 18
       }
     }
   },
