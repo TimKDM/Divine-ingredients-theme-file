@@ -60,7 +60,8 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "body_font_size": 22,
-        "heading_font_size": 48
+        "heading_font_size": 48,
+        "badge_font_size": 10
       }
     },
     "divine_trust_bar": {
@@ -235,7 +236,7 @@
         "value_2"
       ],
       "settings": {
-        "image": "shopify://shop_images/istockphoto-2207332273-2048x2048.jpg",
+        "image": "shopify://shop_images/iStock-2207332273.jpg",
         "heading": "Real Ingredients, From Farms We Actually Know",
         "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
         "button_label": "Our Story",
