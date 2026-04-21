@@ -1058,7 +1058,7 @@ header-drawer summary {
 
 .footer-block__heading {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1066,7 +1066,7 @@ header-drawer summary {
 }
 
 .footer .list-menu__item--link {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--color-text-muted) !important;
 }
 
@@ -1075,7 +1075,7 @@ header-drawer summary {
 }
 
 .footer-block__brand-info .rte {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -1110,7 +1110,7 @@ header-drawer summary {
 }
 
 .footer-block__details-content {
-  font-size: 16px;
+  font-size: 19px;
 }
 
 .footer-block__details-content a {
