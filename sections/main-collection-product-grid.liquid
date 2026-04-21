@@ -23,6 +23,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  #shopify-section-{{ section.id }} .card-information .card__heading,
+  #shopify-section-{{ section.id }} .card-information .card__heading a,
+  #shopify-section-{{ section.id }} .card-information .product-title,
+  #shopify-section-{{ section.id }} .card-information .product-title a {
+    font-size: {{ section.settings.card_title_font_size | default: 16 }}px !important;
+  }
 {%- endstyle -%}
 
 <div class="product-grid-section section-{{ section.id }}-padding ignore-{{ section.settings.ignore_spacing }}">
@@ -337,6 +344,16 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Product card title font size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
     {
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__layout.content"
