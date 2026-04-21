@@ -8,6 +8,10 @@
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
+  #shopify-section-{{ section.id }} .divine-product-card__title,
+  #shopify-section-{{ section.id }} .divine-product-card__meta {
+    font-size: {{ section.settings.body_font_size | default: 16 }}px;
+  }
   @media screen and (min-width: 768px) {
     #shopify-section-{{ section.id }} .divine-section {
       padding-top: {{ section.settings.padding_top }}px;
@@ -280,6 +284,16 @@
       "max": 100,
       "step": 4,
       "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],

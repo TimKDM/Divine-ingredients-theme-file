@@ -37,6 +37,9 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .divine-newsletter-section .divine-newsletter__subtitle {
+    font-size: {{ section.settings.body_font_size | default: 16 }}px;
+  }
 {%- endstyle -%}
 
 <section class="divine-newsletter">
@@ -211,6 +214,16 @@
       "max": 100,
       "step": 4,
       "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16,
       "unit": "px"
     }
   ],

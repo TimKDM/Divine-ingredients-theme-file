@@ -21,6 +21,10 @@
       margin-top: {{ section.settings.margin_top }}px;
     }
   }
+  #shopify-section-{{ section.id }} .tabs .tab-content-wrapper,
+  #shopify-section-{{ section.id }} .tabs .tab-content-wrapper p {
+    font-size: {{ section.settings.body_font_size | default: 15 }}px;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -328,6 +332,16 @@
       "unit": "px",
       "label": "t:sections.all.margin_top",
       "default": 0
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
     }
   ],
   "blocks": [
