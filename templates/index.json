@@ -133,7 +133,7 @@
         "lifestyle_morning": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/zen-greens-green-tea",
+            "collection": "tea",
             "image": "shopify://shop_images/iStock-1060404954.jpg",
             "heading": "Morning Ritual",
             "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
@@ -143,7 +143,7 @@
         "lifestyle_calm": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/herbal-harmony-wellness-tea",
+            "collection": "calm-rituals-hemp-tea",
             "image": "shopify://shop_images/iStock-1144247743.jpg",
             "heading": "Calm & Restore",
             "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
@@ -153,7 +153,7 @@
         "lifestyle_botanical": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/botanical-bliss-herbal-tea",
+            "collection": "botanical-bliss-herbal-tea",
             "image": "shopify://shop_images/iStock-496610026.jpg",
             "heading": "Botanical Garden",
             "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
@@ -163,7 +163,7 @@
         "lifestyle_refresh": {
           "type": "category",
           "settings": {
-            "collection": "shopify://collections/cool-brews-iced-tea",
+            "collection": "cool-brews-iced-tea",
             "image": "shopify://shop_images/iStock-1320143694.jpg",
             "heading": "Cool & Refresh",
             "subtitle": "Iced teas and light oolongs for bright, easy moments",
