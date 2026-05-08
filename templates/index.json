@@ -283,7 +283,7 @@
           "type": "plan",
           "settings": {
             "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
-            "title": "Monthly Tea Box",
+            "title": "Superfood Powder Box",
             "description": "Premium organic superfood powders — matcha, turmeric, adaptogens, and more. Perfect for smoothies, lattes, and daily rituals.",
             "price": "From $34/mo",
             "button_label": "Start My Subscription",
@@ -294,7 +294,7 @@
           "type": "plan",
           "settings": {
             "image": "shopify://shop_images/matcha_ritual_subscription_box.jpg",
-            "title": "Monthly Tea Box",
+            "title": "Matcha Discovery Box",
             "description": "Explore Japan's finest organic matcha varieties. Each month features a different origin, grade, or seasonal harvest.",
             "price": "From $32/mo",
             "button_label": "Start My Subscription",
