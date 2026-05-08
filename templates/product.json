@@ -209,7 +209,7 @@
         "media_position": "left",
         "media_fit": "contain",
         "thumbnail_size": "large",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "hide_variants": false,
         "enable_video_looping": false,
         "quantity_selector": 4,
