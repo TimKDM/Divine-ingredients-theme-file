@@ -138,7 +138,7 @@
           "settings": {
             "heading": "What's the deal with subscription boxes?",
             "icon": "question_mark",
-            "row_content": "<p>We offer a Matcha Subscription Box ($49.99) and a Seasonal Subscription Box ($59.99) — curated picks delivered to your door on a regular schedule. Pause, skip, or cancel whenever you want. No strings.</p>",
+            "row_content": "<p>We have three: the Monthly Tea Box (from $29/mo), the Superfood Powder Box (from $34/mo), and the Matcha Discovery Box (from $32/mo). Curated picks delivered to your door every month. Pause, skip, or cancel whenever you want. No strings.</p>",
             "page": ""
           }
         },
@@ -212,7 +212,7 @@
           "settings": {
             "heading": "How much is shipping?",
             "icon": "question_mark",
-            "row_content": "<p>It depends on your location and order size — you'll see all the options and costs at checkout. Pro tip: orders over $75 ship free.</p>",
+            "row_content": "<p>It depends on your location and order size — you'll see all the options and costs at checkout. Pro tip: orders over $100 ship free.</p>",
             "page": ""
           }
         },
