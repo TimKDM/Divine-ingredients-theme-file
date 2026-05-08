@@ -120,12 +120,36 @@
             "source": "Google Review",
             "link": ""
           }
+        },
+        "testimonial_4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I recommend Divine turmeric and their superfood blends to clients who are serious about what they put in their bodies. Lab-tested, consistent potency, transparent sourcing. That's not common in this space.",
+            "author": "Dr. James K.",
+            "role": "Naturopathic Practitioner, Vancouver BC",
+            "source": "Google Review",
+            "link": ""
+          }
+        },
+        "testimonial_5": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "text": "I run a small juice bar and switched all our powders to Divine six months ago. The ashwagandha, the moringa, the matcha — my regulars can taste the difference. Clean ingredients show up in the final product.",
+            "author": "Rina P.",
+            "role": "Juice Bar Owner, Austin TX",
+            "source": "Google Review",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "testimonial_1",
         "testimonial_2",
-        "testimonial_3"
+        "testimonial_3",
+        "testimonial_4",
+        "testimonial_5"
       ],
       "settings": {
         "caption": "Trusted Partners",
