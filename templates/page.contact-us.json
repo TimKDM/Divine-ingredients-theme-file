@@ -177,8 +177,8 @@
             "text": "<p>We partner with cafés, brands, and producers who want premium organic ingredients at scale. Let's build something great together.</p>"
           }
         },
-        "buttons": {
-          "type": "buttons",
+        "button": {
+          "type": "button",
           "settings": {
             "button_label": "Apply for Wholesale",
             "button_link": "/pages/wholesale",
@@ -186,7 +186,7 @@
           }
         }
       },
-      "block_order": ["heading", "text", "buttons"],
+      "block_order": ["heading", "text", "button"],
       "settings": {
         "content_alignment": "center",
         "color_scheme": "option-4",
