@@ -307,6 +307,7 @@
         "plan_superfood",
         "plan_matcha"
       ],
+      "disabled": true,
       "settings": {
         "caption": "Subscribe & Save",
         "heading": "Join a Wellness Ritual That Comes to You",
