@@ -25,14 +25,14 @@
           "settings": {
             "image": "shopify://shop_images/Preet-hero-image.jpg",
             "caption": "Our Story",
-            "heading": "Rooted in Purpose. Built on Trust."
+            "heading": ""
           }
         },
         "intro": {
           "type": "intro",
           "settings": {
-            "heading": "It Started with a Simple Question: What's Actually in This?",
-            "text": "<p>Our founder, Preet Bhullar, has a background in microbiology — so reading ingredient labels isn't just a habit, it's second nature. And what she kept finding in so-called \"health\" products didn't add up. Fillers where there should be food. Additives that didn't need to be there. Labels that promised purity but delivered something else.</p><p>Rather than settle, she went looking for the real thing — direct to the farms, direct to the source. That search became Divine Ingredients — a woman-owned and operated brand built on the same principle that started it all: if it's on the label, it should be in the jar.</p>"
+            "heading": "Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, “but what's really in this?”",
+            "text": "<p></p><p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for — and more importantly, what didn't belong.</p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place — not because it sounds good on a label. No fillers, no shortcuts — just what nature meant, thoughtfully refined.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence — precise, uncompromising, yet deeply personal.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
           }
         },
         "story_1": {
