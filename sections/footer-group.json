@@ -14,7 +14,7 @@
     "popup": {
       "type": "popup",
       "settings": {
-        "enable_popup": true,
+        "enable_popup": false,
         "popup_test": false,
         "fadein": 4,
         "popup_count": 1,

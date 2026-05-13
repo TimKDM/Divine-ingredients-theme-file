@@ -1,0 +1,125 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "divine_story": {
+      "type": "divine-story-page",
+      "blocks": {
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "image": "shopify://shop_images/Preet-hero-image.jpg",
+            "caption": "Our Story",
+            "heading": "Rooted in Purpose. Built on Trust."
+          }
+        },
+        "intro": {
+          "type": "intro",
+          "settings": {
+            "heading": "It Started with a Simple Question: What's Actually in This?",
+            "text": "<p>Our founder, Preet Bhullar, has a background in microbiology — so reading ingredient labels isn't just a habit, it's second nature. And what she kept finding in so-called \"health\" products didn't add up. Fillers where there should be food. Additives that didn't need to be there. Labels that promised purity but delivered something else.</p><p>Rather than settle, she went looking for the real thing — direct to the farms, direct to the source. That search became Divine Ingredients — a woman-owned and operated brand built on the same principle that started it all: if it's on the label, it should be in the jar.</p>"
+          }
+        },
+        "story_1": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/spoons-full-of-spices.jpg",
+            "caption": "The Problem",
+            "heading": "The Gap Between \"Natural\" and Actually Natural",
+            "text": "<p>Walk down any grocery aisle and you'll find turmeric cut with rice flour, matcha bulked with sugar, and spices that lost their potency months before they hit the shelf. Most people can tell the difference when they taste it — the problem is finding a brand that consistently delivers the real thing.</p><p>We believe that gap shouldn't exist. If the label says organic, the ingredient should be organic — nothing more, nothing less. Every batch, every time.</p>",
+            "button_label": "",
+            "button_link": "",
+            "layout": "image_left",
+            "use_alt_bg": false
+          }
+        },
+        "story_2": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/iStock-2251805765.jpg",
+            "caption": "The Fix",
+            "heading": "Direct to the Farms. Tested in the Lab.",
+            "text": "<p>We work directly with organic farms in Japan, India, Sri Lanka, and beyond — not through brokers or distributors, but with the actual growers. We know their methods, we trust their practices, and we maintain full traceability on every ingredient.</p><p>Every batch that comes through Divine is independently lab tested for purity, potency, heavy metals, and microbial safety. It's the standard we set from day one, and it's the one thing we'll never compromise on.</p>",
+            "button_label": "",
+            "button_link": "",
+            "layout": "image_right",
+            "use_alt_bg": true
+          }
+        },
+        "story_3": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/iStock-2251840437.jpg",
+            "caption": "What We Stand On",
+            "heading": "Nothing Synthetic. Full Traceability. Every Batch Tested.",
+            "text": "<p>Every product is USDA Organic and CCOF certified — no fillers, no additives, no artificial anything. We can tell you exactly which farm grew your matcha, your turmeric, your chamomile.</p><p>And every batch is independently lab tested for purity, potency, and safety. Full COAs available on request. It's the standard we set from day one.</p>",
+            "button_label": "",
+            "button_link": "",
+            "layout": "image_left",
+            "use_alt_bg": false
+          }
+        },
+        "story_4": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/green-smoothie-break.jpg",
+            "caption": "Today",
+            "heading": "From Kitchen Counter to Cafés, Spas, and Kitchens Worldwide",
+            "text": "<p>What started as one person reading labels too carefully is now a brand trusted by wellness practitioners, café owners, juice bars, spas, private label partners, and home cooks who refuse to settle.</p><p>Your morning latte, your post-workout smoothie, the chai your family has made for generations — these ingredients are for the moments that matter.</p>",
+            "button_label": "Shop All Collections",
+            "button_link": "shopify://collections",
+            "layout": "image_right",
+            "use_alt_bg": true
+          }
+        },
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "heading": "You Read Labels. So Do We.",
+            "text": "Everything we sell is organic, independently tested, and fully traceable. No marketing fluff — just real ingredients for people who care about what goes in.",
+            "button_label": "Start Shopping",
+            "button_link": "shopify://collections",
+            "use_dark_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "hero",
+        "intro",
+        "story_1",
+        "story_2",
+        "story_3",
+        "story_4",
+        "cta"
+      ],
+      "settings": {
+        "background_color": "",
+        "text_color": "#000000",
+        "accent_color": "",
+        "body_font_size": 22,
+        "heading_font_size": 26,
+        "caption_font_size": 20,
+        "item_heading_font_size": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "divine_story"
+  ]
+}
