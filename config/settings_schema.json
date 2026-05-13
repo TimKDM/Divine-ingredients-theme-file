@@ -1109,6 +1109,30 @@
         "id": "disable_checkout_button",
         "label": "t:settings_schema.cart.settings.disable_checkout_button.label",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Cart weight limit"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_weight_limit",
+        "label": "Enable cart weight limit",
+        "default": true,
+        "info": "Blocks checkout when the cart exceeds the maximum weight."
+      },
+      {
+        "type": "number",
+        "id": "weight_limit_oz",
+        "label": "Maximum cart weight (oz)",
+        "default": 160,
+        "info": "160 oz = 10 lb. Product weights are converted from grams automatically."
+      },
+      {
+        "type": "richtext",
+        "id": "weight_limit_message",
+        "label": "Over-limit message",
+        "default": "<p>Your cart is over our 10 lb (160 oz) shipping limit. Please remove items to continue.</p>"
       }
     ]
   }

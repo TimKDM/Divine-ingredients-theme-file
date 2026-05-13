@@ -5,6 +5,16 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
+{%- liquid
+  assign weight_over_limit = false
+  if settings.enable_weight_limit and cart != empty
+    assign cart_weight_oz = cart.total_weight | times: 10000 | divided_by: 283495
+    if cart_weight_oz > settings.weight_limit_oz
+      assign weight_over_limit = true
+    endif
+  endif
+-%}
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -548,13 +558,14 @@
             {{ 'sections.cart.view_cart' | t }}
           </button>
 
+          {%- render 'cart-weight-limit', is_over: weight_over_limit -%}
           <button
             type="submit"
             id="CartDrawer-Checkout"
             class="cart-checkout-button button"
             name="checkout"
             form="CartDrawer-Form"
-            {% if cart == empty or settings.enable_terms %}
+            {% if cart == empty or settings.enable_terms or weight_over_limit %}
               disabled
             {% endif %}
           >
