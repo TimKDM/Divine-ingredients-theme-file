@@ -3,6 +3,16 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign weight_over_limit = false
+  if settings.enable_weight_limit and cart != empty
+    assign cart_weight_oz = cart.total_weight | times: 10000 | divided_by: 283495
+    if cart_weight_oz > settings.weight_limit_oz
+      assign weight_over_limit = true
+    endif
+  endif
+-%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -155,6 +165,7 @@
                   </div>
                 </div>
               {%- else -%}
+                {%- render 'cart-weight-limit', is_over: weight_over_limit -%}
                 <div class="cart-ctas" {{ block.shopify_attributes }}>
                   <noscript>
                     <button type="submit" class="cart-update-button button button--secondary" form="cart">
@@ -167,7 +178,7 @@
                     id="checkout"
                     class="cart-checkout-button button"
                     name="checkout"
-                    {% if cart == empty or settings.enable_terms %}
+                    {% if cart == empty or settings.enable_terms or weight_over_limit %}
                       disabled
                     {% endif %}
                     form="cart"

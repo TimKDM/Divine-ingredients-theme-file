@@ -1,0 +1,24 @@
+{%- comment -%}
+  Renders the over-limit warning. Caller must pass `is_over` (boolean).
+  Caller computes the flag itself so it can also disable the checkout button:
+
+    {%- liquid
+      assign weight_over_limit = false
+      if settings.enable_weight_limit and cart != empty
+        assign cart_weight_oz = cart.total_weight | times: 10000 | divided_by: 283495
+        if cart_weight_oz > settings.weight_limit_oz
+          assign weight_over_limit = true
+        endif
+      endif
+    -%}
+    {%- render 'cart-weight-limit', is_over: weight_over_limit -%}
+
+  Shopify's cart.total_weight is in grams; 1 oz = 28.3495 g, so
+  oz = grams * 10000 / 283495 (kept in integer math).
+{%- endcomment -%}
+
+{%- if is_over -%}
+  <div class="cart-weight-warning" role="alert" data-cart-weight-warning>
+    {{ settings.weight_limit_message }}
+  </div>
+{%- endif -%}

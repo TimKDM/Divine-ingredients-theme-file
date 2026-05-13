@@ -455,3 +455,18 @@ cart-note.cart-note.field {
     gap: 1rem;
   }
 }
+
+.cart-weight-warning {
+  background: #fdecea;
+  color: #8a1f11;
+  border: 1px solid #f5c6c1;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cart-weight-warning p {
+  margin: 0;
+}

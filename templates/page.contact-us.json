@@ -1,47 +1,199 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "divine_contact_us": {
-      "type": "divine-contact-us",
+    "main": {
+      "type": "main-page",
+      "disabled": true,
       "settings": {
-        "hero_label": "Say Hello",
-        "hero_heading": "<p>We're Real People. <strong>Let's Talk.</strong></p>",
-        "hero_subtext": "Question about a product, an order, or a wholesale partnership? We respond personally — usually within 24 hours.",
-        "info_heading": "Let's Connect",
-        "info_text": "Whether you're a home cook, a café owner sourcing ingredients, or a brand looking to partner — we're here. Real people, real answers.",
-        "email_address": "hello@divineingredients.com",
-        "email_response_time": "We get back to you within 24 hours",
-        "phone_number": "",
-        "phone_hours": "Mon–Fri 9am–5pm MST",
-        "show_location": false,
-        "location_address": "",
-        "cta_heading": "Thinking Wholesale?",
-        "cta_text": "We partner with cafés, brands, and producers who want premium organic ingredients at scale. Let's build something great together.",
-        "cta_label": "Apply for Wholesale",
-        "cta_link": "/pages/wholesale",
-        "body_font_size": 22,
-        "heading_font_size": 48,
-        "caption_font_size": 20,
-        "item_heading_font_size": 24,
-        "form_font_size": 18,
-        "form_label_font_size": 20,
-        "subheading_font_size": 28,
-        "hero_subtext_font_size": 20,
-        "info_text_font_size": 20,
-        "method_heading_font_size": 20,
-        "cta_text_font_size": 20
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Say Hello",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We're Real People. <em>Let's Talk.</em></p>",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Question about a product, an order, or a wholesale partnership? We respond personally — usually within 24 hours.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "option-2",
+        "padding_top": 64,
+        "padding_bottom": 32
+      }
+    },
+    "methods": {
+      "type": "multicolumn",
+      "blocks": {
+        "email": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "Email Us",
+            "text": "<p>hello@divineingredients.com</p><p>We get back to you within 24 hours.</p>",
+            "link_label": "Send an email",
+            "link": "mailto:hello@divineingredients.com"
+          }
+        },
+        "phone": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "Call Us",
+            "text": "<p>Mon–Fri 9am–5pm MST</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "wholesale": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "Wholesale Inquiries",
+            "text": "<p>Interested in partnering with us?</p>",
+            "link_label": "Apply for a wholesale account",
+            "link": "/pages/wholesale"
+          }
+        }
+      },
+      "block_order": ["email", "phone", "wholesale"],
+      "settings": {
+        "title": "Let's Connect",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "column_alignment": "center",
+        "color_scheme": "option-1",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "settings": {
+        "contact_style": "column",
+        "hide_image": true,
+        "caption": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "heading": "Send Us a Message",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "text": "<p>Fill out the form and we'll get back to you within 24 hours.</p>",
+        "full_width": false,
+        "hide_phone_field": false,
+        "all_fields_required": false,
+        "color_scheme": "option-2",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "quick-help": {
+      "type": "multicolumn",
+      "blocks": {
+        "track": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "Track Your Order",
+            "text": "<p>Check the status of your recent order with your order number.</p>",
+            "link_label": "View orders",
+            "link": "/account/orders"
+          }
+        },
+        "shipping": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "Shipping & Returns",
+            "text": "<p>Learn about our shipping options and hassle-free return policy.</p>",
+            "link_label": "Read policy",
+            "link": "/policies/shipping-policy"
+          }
+        },
+        "faq": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "title": "FAQ",
+            "text": "<p>Find answers to commonly asked questions about our products.</p>",
+            "link_label": "Browse FAQ",
+            "link": "/pages/faq"
+          }
+        }
+      },
+      "block_order": ["track", "shipping", "faq"],
+      "settings": {
+        "title": "Looking for Something Specific?",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "column_alignment": "center",
+        "color_scheme": "option-3",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Thinking Wholesale?</p>",
+            "heading_size": "medium",
+            "heading_style": "default",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We partner with cafés, brands, and producers who want premium organic ingredients at scale. Let's build something great together.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Apply for Wholesale",
+            "button_link": "/pages/wholesale",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "buttons"],
+      "settings": {
+        "content_alignment": "center",
+        "color_scheme": "option-4",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     }
   },
-  "order": [
-    "divine_contact_us"
-  ]
+  "order": ["main", "hero", "methods", "contact-form", "quick-help", "cta"]
 }
