@@ -408,11 +408,13 @@
 
       {%- comment -%} Right: Contact Form {%- endcomment -%}
       <div class="divine-contact-form-card">
-        <h3>Send Us a Message</h3>
+        {%- if section.settings.form_heading != blank -%}
+          <h3>{{ section.settings.form_heading }}</h3>
+        {%- endif -%}
         {%- form 'contact', id: 'ContactForm' -%}
           {%- if form.posted_successfully? -%}
             <div class="form-status form-status-list form__message" role="status">
-              <h2>Thanks for reaching out — we'll be in touch within 24 hours.</h2>
+              <h2>{{ section.settings.form_success_message | default: "Thanks for reaching out — we'll be in touch within 24 hours." }}</h2>
             </div>
           {%- endif -%}
 
@@ -428,18 +430,18 @@
           {%- endif -%}
 
           <div class="field">
-            <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[name]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="Your name *">
+            <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[name]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ section.settings.form_placeholder_name | default: 'Your name *' }}">
             <label class="field__label" for="ContactForm-name">Name</label>
           </div>
 
           <div class="field">
-            <input class="field__input" autocomplete="email" type="email" id="ContactForm-email" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required placeholder="your@email.com *">
+            <input class="field__input" autocomplete="email" type="email" id="ContactForm-email" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required placeholder="{{ section.settings.form_placeholder_email | default: 'your@email.com *' }}">
             <label class="field__label" for="ContactForm-email">Email</label>
           </div>
 
           <div class="field">
             <select class="select__select" name="contact[subject]" id="ContactForm-subject">
-              <option value="">Select a topic...</option>
+              <option value="">{{ section.settings.form_subject_placeholder | default: 'Select a topic...' }}</option>
               <option>Product Question</option>
               <option>Order Status</option>
               <option>Wholesale Inquiry</option>
@@ -450,14 +452,14 @@
           </div>
 
           <div class="field">
-            <textarea class="text-area field__input" rows="5" id="ContactForm-body" name="contact[body]" placeholder="How can we help you? *">
+            <textarea class="text-area field__input" rows="5" id="ContactForm-body" name="contact[body]" placeholder="{{ section.settings.form_placeholder_message | default: 'How can we help you? *' }}">
               {%- if form.body -%}{{ form.body }}{%- endif -%}
             </textarea>
             <label class="form__label field__label" for="ContactForm-body">Message</label>
           </div>
 
           <button type="submit" class="button button--full-width divine-contact-submit">
-            Send Message
+            {{ section.settings.form_button_label | default: 'Send Message' }}
           </button>
         {%- endform -%}
       </div>
@@ -582,6 +584,52 @@
       "type": "text",
       "id": "location_address",
       "label": "Location address"
+    },
+    {
+      "type": "header",
+      "content": "Contact form"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form heading",
+      "default": "Send Us a Message"
+    },
+    {
+      "type": "text",
+      "id": "form_button_label",
+      "label": "Submit button label",
+      "default": "Send Message"
+    },
+    {
+      "type": "textarea",
+      "id": "form_success_message",
+      "label": "Success message (after submit)",
+      "default": "Thanks for reaching out — we'll be in touch within 24 hours."
+    },
+    {
+      "type": "text",
+      "id": "form_placeholder_name",
+      "label": "Name field placeholder",
+      "default": "Your name *"
+    },
+    {
+      "type": "text",
+      "id": "form_placeholder_email",
+      "label": "Email field placeholder",
+      "default": "your@email.com *"
+    },
+    {
+      "type": "text",
+      "id": "form_subject_placeholder",
+      "label": "Subject dropdown placeholder",
+      "default": "Select a topic..."
+    },
+    {
+      "type": "text",
+      "id": "form_placeholder_message",
+      "label": "Message field placeholder",
+      "default": "How can we help you? *"
     },
     {
       "type": "header",
