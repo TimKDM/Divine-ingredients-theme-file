@@ -58,6 +58,7 @@
       "blocks": {
         "promo_row": {
           "type": "promo_row",
+          "disabled": true,
           "settings": {
             "promo_row": "4",
             "image": "shopify://shop_images/GT.Supreha1_a142c4ff-7e20-4e71-bb11-9296a43987f7.jpg",
