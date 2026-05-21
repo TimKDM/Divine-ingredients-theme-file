@@ -241,6 +241,7 @@
     },
     "product_trust_bar": {
       "type": "divine-trust-bar",
+      "disabled": true,
       "settings": {
         "background_color": "",
         "text_color": "",
