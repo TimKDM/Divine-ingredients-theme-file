@@ -19,7 +19,7 @@
   --color-background-warm: #e2d6e6;      /* soft lavender for cards */
 
   --font-heading: 'Josefin Sans', var(--font-heading-family), sans-serif;
-  --font-body: 'Jost', var(--font-body-family), sans-serif;
+  --font-body: var(--font-body-family), sans-serif;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -70,7 +70,7 @@ input,
 select,
 textarea,
 button {
-  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-family: var(--font-body-family), sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6,

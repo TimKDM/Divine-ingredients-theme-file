@@ -2,7 +2,7 @@
   .divine-contact-page {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 34 }}px;
-    font-family: 'Jost', var(--font-body-family), sans-serif;
+    font-family: var(--font-body-family), sans-serif;
   }
   .divine-contact-hero h1 {
     font-size: var(--heading-font-size);
@@ -190,7 +190,7 @@
     width: 100%;
     padding: 12px 16px;
     font-size: {{ section.settings.form_font_size | default: 20 }}px;
-    font-family: 'Jost', var(--font-body-family), sans-serif;
+    font-family: var(--font-body-family), sans-serif;
     border: 1px solid rgba(var(--color-base-border-1));
     border-radius: 6px;
     background: transparent;
@@ -202,7 +202,7 @@
     width: 100%;
     padding: 12px 16px;
     font-size: {{ section.settings.form_font_size | default: 20 }}px;
-    font-family: 'Jost', var(--font-body-family), sans-serif;
+    font-family: var(--font-body-family), sans-serif;
     border: 1px solid rgba(var(--color-base-border-1));
     border-radius: 6px;
     background: transparent;
