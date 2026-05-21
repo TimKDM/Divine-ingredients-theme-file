@@ -15,11 +15,11 @@
       "type": "popup",
       "settings": {
         "enable_popup": true,
-        "popup_test": false,
+        "popup_test": true,
         "fadein": 4,
         "popup_count": 1,
         "trigger_link": true,
-        "layout": "style_3",
+        "layout": "style_1",
         "popup_image": "shopify://shop_images/matcha_val.jpg",
         "image_width": 45,
         "image_alt": "A bowl of vibrant Divine matcha with bamboo whisk",
