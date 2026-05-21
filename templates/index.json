@@ -245,7 +245,7 @@
         "value_2"
       ],
       "settings": {
-        "image": "shopify://shop_images/iStock-2207332273.jpg",
+        "image": "shopify://shop_images/Preet-hero-image.jpg",
         "heading": "Real Ingredients, From Farms We Actually Know",
         "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
         "button_label": "Our Story",
@@ -324,6 +324,61 @@
         "heading_font_size": 39,
         "caption_font_size": 22,
         "item_heading_font_size": 24
+      }
+    },
+    "divine_wholesale_wqQPLT": {
+      "type": "divine-wholesale",
+      "blocks": {
+        "feature_feVXGY": {
+          "type": "feature",
+          "settings": {
+            "text": "Low minimum order quantities"
+          }
+        },
+        "feature_hchQY4": {
+          "type": "feature",
+          "settings": {
+            "text": "Custom private label packaging"
+          }
+        },
+        "feature_twC8eH": {
+          "type": "feature",
+          "settings": {
+            "text": "All products USDA Organic certified"
+          }
+        },
+        "feature_xUtbYr": {
+          "type": "feature",
+          "settings": {
+            "text": "Dedicated account support"
+          }
+        }
+      },
+      "block_order": [
+        "feature_feVXGY",
+        "feature_hchQY4",
+        "feature_twC8eH",
+        "feature_xUtbYr"
+      ],
+      "name": "Divine Wholesale",
+      "settings": {
+        "image": "shopify://shop_images/iStock-2252738400.jpg",
+        "caption": "B2B & Private Label",
+        "heading": "Launch Your Own Organic Tea or Superfood Brand",
+        "text": "<p>Partner with Divine Ingredients for wholesale pricing, private label solutions, and custom blending. We supply cafés, wellness brands, retailers, and entrepreneurs with premium organic ingredients.</p>",
+        "button_label_1": "Start a Private Label Project",
+        "button_link_1": "",
+        "button_label_2": "Request Wholesale Pricing",
+        "button_link_2": "",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "body_font_size": 15,
+        "heading_font_size": 30,
+        "caption_font_size": 14,
+        "feature_font_size": 14
       }
     },
     "divine_why_us": {
@@ -616,6 +671,7 @@
     "divine_best_sellers",
     "divine_brand_story",
     "divine_subscription",
+    "divine_wholesale_wqQPLT",
     "divine_why_us",
     "divine_certs",
     "divine_testimonials",
