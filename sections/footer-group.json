@@ -47,6 +47,7 @@
           "settings": {
             "brand_headline": "Follow Divine",
             "brand_description": "<p>Recipes, sourcing stories, and the occasional behind-the-scenes from our kitchen. Tag us — we love seeing what you make.</p>",
+            "brand_image_width": 100,
             "hide_image": true,
             "newsletter_enable": false,
             "show_social": true,
@@ -64,7 +65,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Shop By LifeStyle",
-            "menu": "divine-mega-menu"
+            "menu": "shop-by-lifestyle"
           }
         },
         "link_list_pGJWUM": {
