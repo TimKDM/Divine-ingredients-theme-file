@@ -20,11 +20,18 @@
     "divine_story": {
       "type": "divine-story-page",
       "blocks": {
+        "page_intro": {
+          "type": "intro",
+          "settings": {
+            "heading": "Our Story",
+            "text": "<p>Divine Ingredients was built on a single question — <em>but what's really in this?</em> Here's the story behind that question, the standards it created, and the people who hold us to them every day.</p>"
+          }
+        },
         "intro": {
           "type": "image_text",
           "settings": {
             "image": "shopify://shop_images/Preet-hero-image.jpg",
-            "caption": "Our Story",
+            "caption": "Meet the Founder",
             "heading": "Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, \"but what's really in this?\"",
             "text": "<p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for — and more importantly, what didn't belong.</p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place — not because it sounds good on a label. No fillers, no shortcuts — just what nature meant, thoughtfully refined.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence — precise, uncompromising, yet deeply personal.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
             "button_label": "",
@@ -97,6 +104,7 @@
         }
       },
       "block_order": [
+        "page_intro",
         "intro",
         "story_1",
         "story_2",
