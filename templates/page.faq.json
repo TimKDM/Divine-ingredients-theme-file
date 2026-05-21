@@ -24,6 +24,7 @@
           "type": "column",
           "settings": {
             "hide_image": false,
+            "disable_autoplay": false,
             "title": "Orders & Support",
             "text": "<p>Questions about placing an order, tracking a package, or managing your account? We've got you covered. Our support team is real people who actually want to help.</p>",
             "link_label": "View FAQ",
@@ -35,29 +36,18 @@
           "type": "column",
           "settings": {
             "hide_image": false,
+            "disable_autoplay": false,
             "title": "Shipping & Returns",
             "text": "<p>We ship fast, pack with care, and make returns painless. Your organic teas and powders arrive fresh — and if something's off, we make it right. Simple as that.</p>",
             "link_label": "View FAQ",
             "link": "#shipping",
             "open_new_tab_1": false
           }
-        },
-        "column_3": {
-          "type": "column",
-          "settings": {
-            "hide_image": false,
-            "title": "Product Info",
-            "text": "<p>Curious about our matcha grades, where our spices come from, or how to use superfood powders? Here's everything you need to know about what we carry — and why it matters.</p>",
-            "link_label": "View FAQ",
-            "link": "#product",
-            "open_new_tab_1": false
-          }
         }
       },
       "block_order": [
         "column_1",
-        "column_2",
-        "column_3"
+        "column_2"
       ],
       "settings": {
         "multicolumn_style": "style-two",
@@ -71,7 +61,7 @@
         "heading_tag": "h2",
         "image_width": "third",
         "image_ratio": "circle",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "button_label": "",
         "button_link": "",
@@ -344,6 +334,7 @@
         "collapsible_row-4",
         "collapsible_row-5"
       ],
+      "disabled": true,
       "settings": {
         "caption": "The Nerdy Details",
         "text_style": "caption-with-letter-spacing",
@@ -416,6 +407,7 @@
         "button_style_secondary_1": false,
         "full_width": false,
         "hide_phone_field": false,
+        "all_fields_required": false,
         "color_scheme": "option-2",
         "color_scheme_1": "",
         "padding_top": 0,
