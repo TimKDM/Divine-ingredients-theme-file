@@ -586,7 +586,7 @@ h1, h2, h3, h4, h5, h6,
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: var(--border-radius, 12px);
   margin: 16px 16px 0;
   background: var(--color-background-alt);
 }
