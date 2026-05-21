@@ -552,6 +552,7 @@
         "logo_5",
         "logo_6"
       ],
+      "disabled": true,
       "settings": {
         "caption": "Committed to Quality",
         "text_style": "caption-with-letter-spacing",
