@@ -265,6 +265,49 @@
         "item_heading_font_size": 22
       }
     },
+    "divine_newsletter": {
+      "type": "divine-newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Divine Wellness Community"
+          }
+        },
+        "subtitle": {
+          "type": "subtitle",
+          "settings": {
+            "text": "Get 15% off your first order. Plus recipes, new arrivals, and wellness tips — no fluff."
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "subtitle",
+        "email_form"
+      ],
+      "settings": {
+        "input_placeholder": "Your email address",
+        "button_label": "Join the Ritual",
+        "privacy_text": "No spam. Unsubscribe anytime.",
+        "show_first_name": true,
+        "name_placeholder": "First name",
+        "background_color": "#1d1d1d",
+        "text_color": "#ffffff",
+        "button_bg": "#d4c4d9",
+        "button_color": "#1d1d1d",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "body_font_size": 20,
+        "heading_font_size": 30
+      }
+    },
     "divine_subscription": {
       "type": "divine-subscription",
       "blocks": {
@@ -619,49 +662,6 @@
         "heading_font_size": 26,
         "caption_font_size": 14
       }
-    },
-    "divine_newsletter": {
-      "type": "divine-newsletter",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Join the Divine Wellness Community"
-          }
-        },
-        "subtitle": {
-          "type": "subtitle",
-          "settings": {
-            "text": "Get 15% off your first order. Plus recipes, new arrivals, and wellness tips — no fluff."
-          }
-        },
-        "email_form": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading",
-        "subtitle",
-        "email_form"
-      ],
-      "settings": {
-        "input_placeholder": "Your email address",
-        "button_label": "Join the Ritual",
-        "privacy_text": "No spam. Unsubscribe anytime.",
-        "show_first_name": true,
-        "name_placeholder": "First name",
-        "background_color": "#1d1d1d",
-        "text_color": "#ffffff",
-        "button_bg": "#d4c4d9",
-        "button_color": "#1d1d1d",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 20,
-        "heading_font_size": 30
-      }
     }
   },
   "order": [
@@ -670,11 +670,11 @@
     "divine_lifestyle",
     "divine_best_sellers",
     "divine_brand_story",
-    "divine_subscription",
-    "divine_wholesale_wqQPLT",
-    "divine_why_us",
+    "divine_newsletter",
     "divine_certs",
+    "divine_subscription",
+    "divine_why_us",
     "divine_testimonials",
-    "divine_newsletter"
+    "divine_wholesale_wqQPLT"
   ]
 }
