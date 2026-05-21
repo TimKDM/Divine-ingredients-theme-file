@@ -82,7 +82,7 @@
   transition: transform 0.5s ease;
 }
 .product__media-list .product-media-item:hover img {
-  transform: scale(1.07);
+  transform: scale(1.2);
 }
 .jdgm-star {
   padding: 0 1px !important;

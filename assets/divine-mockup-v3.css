@@ -600,7 +600,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .divine-product-card:hover .divine-product-card__image img {
-  transform: scale(1.08);
+  transform: scale(1.2);
 }
 
 .divine-product-badge {
