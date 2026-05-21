@@ -308,6 +308,7 @@
         "tab_2",
         "tab_3"
       ],
+      "disabled": true,
       "settings": {
         "tabs_style": "style-2",
         "full_width": true,
