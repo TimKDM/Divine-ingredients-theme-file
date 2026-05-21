@@ -42,6 +42,17 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_info_social": {
+          "type": "brand_information",
+          "settings": {
+            "brand_headline": "Follow Divine",
+            "brand_description": "<p>Recipes, sourcing stories, and the occasional behind-the-scenes from our kitchen. Tag us — we love seeing what you make.</p>",
+            "hide_image": true,
+            "newsletter_enable": false,
+            "show_social": true,
+            "social_icons_size": "medium"
+          }
+        },
         "link_list_9z3Q9p": {
           "type": "link_list",
           "settings": {
@@ -53,7 +64,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Shop By LifeStyle",
-            "menu": "shop-by-lifestyle"
+            "menu": "divine-mega-menu"
           }
         },
         "link_list_pGJWUM": {
@@ -65,6 +76,7 @@
         }
       },
       "block_order": [
+        "brand_info_social",
         "link_list_9z3Q9p",
         "link_list_EjQTJk",
         "link_list_pGJWUM"
