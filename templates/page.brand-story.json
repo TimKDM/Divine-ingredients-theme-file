@@ -20,19 +20,17 @@
     "divine_story": {
       "type": "divine-story-page",
       "blocks": {
-        "hero": {
-          "type": "hero",
+        "intro": {
+          "type": "image_text",
           "settings": {
             "image": "shopify://shop_images/Preet-hero-image.jpg",
             "caption": "Our Story",
-            "heading": ""
-          }
-        },
-        "intro": {
-          "type": "intro",
-          "settings": {
             "heading": "Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, \"but what's really in this?\"",
-            "text": "<p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for — and more importantly, what didn't belong.<br/></p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p><br/>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place — not because it sounds good on a label. No fillers, no shortcuts — just what nature meant, thoughtfully refined.<br/><br/>As a women-owned brand, Divine Ingredients carries a quiet confidence — precise, uncompromising, yet deeply personal.<br/><br/>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
+            "text": "<p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for — and more importantly, what didn't belong.</p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place — not because it sounds good on a label. No fillers, no shortcuts — just what nature meant, thoughtfully refined.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence — precise, uncompromising, yet deeply personal.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
+            "button_label": "",
+            "button_link": "",
+            "layout": "image_right",
+            "use_alt_bg": false
           }
         },
         "story_1": {
@@ -99,7 +97,6 @@
         }
       },
       "block_order": [
-        "hero",
         "intro",
         "story_1",
         "story_2",
