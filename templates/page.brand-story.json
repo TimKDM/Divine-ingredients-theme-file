@@ -50,7 +50,7 @@
             "button_label": "",
             "button_link": "",
             "layout": "image_left",
-            "use_alt_bg": false
+            "use_alt_bg": true
           }
         },
         "story_2": {
@@ -63,7 +63,7 @@
             "button_label": "",
             "button_link": "",
             "layout": "image_right",
-            "use_alt_bg": true
+            "use_alt_bg": false
           }
         },
         "story_3": {
@@ -76,7 +76,7 @@
             "button_label": "",
             "button_link": "",
             "layout": "image_left",
-            "use_alt_bg": false
+            "use_alt_bg": true
           }
         },
         "story_4": {
@@ -89,7 +89,7 @@
             "button_label": "Shop All Collections",
             "button_link": "shopify://collections",
             "layout": "image_right",
-            "use_alt_bg": true
+            "use_alt_bg": false
           }
         },
         "cta": {
