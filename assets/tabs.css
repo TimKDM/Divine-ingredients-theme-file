@@ -37,7 +37,7 @@
 
 /* Tab content — Divine body font */
 .tabs .tab-content-wrapper {
-  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-family: var(--font-body-family), sans-serif;
   font-size: 16px;
   line-height: 1.75;
   color: #7a6f64;
@@ -180,7 +180,7 @@
 }
 
 .product-section .tabs .tab-content-wrapper {
-  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-family: var(--font-body-family), sans-serif;
   font-size: 16px;
   line-height: 1.75;
   color: #7a6f64;

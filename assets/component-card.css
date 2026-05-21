@@ -675,7 +675,7 @@
 
 .card-information > .price {
   color: rgb(var(--color-foreground));
-  font-family: 'Jost', var(--font-body-family), sans-serif;
+  font-family: var(--font-body-family), sans-serif;
   font-weight: 600;
 }
 
