@@ -72,9 +72,17 @@
   padding: 20px;
 }
 .product__media.media {
-  border-radius: 50%;
+  border-radius: calc(var(--media-radius));
+}
+.product__media-list .product-media-item {
   overflow: hidden;
-  aspect-ratio: 1;
+  border-radius: calc(var(--media-radius));
+}
+.product__media-list .product-media-item img {
+  transition: transform 0.5s ease;
+}
+.product__media-list .product-media-item:hover img {
+  transform: scale(1.07);
 }
 .jdgm-star {
   padding: 0 1px !important;

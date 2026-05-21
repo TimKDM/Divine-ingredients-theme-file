@@ -329,12 +329,6 @@
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-resale">Resale / Tax ID number</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-resale" name="contact[Resale Or Tax ID]" placeholder="EIN, Resale Certificate #, etc. (if applicable)">
-          </div>
-        </div>
       </fieldset>
 
       {%- comment -%} Shipping / Business Address {%- endcomment -%}
@@ -391,8 +385,8 @@
 
         <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
           <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-title">Job title</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-title" name="contact[Job Title]">
+            <label class="divine-wholesale-form__label" for="WholesaleForm-title">Title</label>
+            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-title" name="contact[Title]">
           </div>
           <div class="divine-wholesale-form__field">
             <label class="divine-wholesale-form__label" for="WholesaleForm-phone">Phone<span class="req">*</span></label>
@@ -428,19 +422,7 @@
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-volume">Estimated monthly order volume<span class="req">*</span></label>
-            <select class="divine-wholesale-form__select" id="WholesaleForm-volume" name="contact[Monthly Volume]" required>
-              <option value="">Select volume…</option>
-              <option>Under 10 kg / 25 lb</option>
-              <option>10–50 kg / 25–110 lb</option>
-              <option>50–200 kg / 110–440 lb</option>
-              <option>200–500 kg / 440–1,100 lb</option>
-              <option>500+ kg / 1,100+ lb</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
+        <div class="divine-wholesale-form__row">
           <div class="divine-wholesale-form__field">
             <label class="divine-wholesale-form__label" for="WholesaleForm-timeline">Desired start timeline</label>
             <select class="divine-wholesale-form__select" id="WholesaleForm-timeline" name="contact[Timeline]">
@@ -451,20 +433,6 @@
               <option>3–6 months</option>
               <option>Just researching</option>
             </select>
-          </div>
-        </div>
-
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-current">Current supplier (if any)</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-current" name="contact[Current Supplier]">
-          </div>
-        </div>
-
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-enduse">How do you plan to use our products?<span class="req">*</span></label>
-            <textarea class="divine-wholesale-form__textarea" id="WholesaleForm-enduse" name="contact[Intended Use]" rows="4" placeholder="Tell us a little about your business and what you're looking to source — retail resale, café service, product formulation, etc." required></textarea>
           </div>
         </div>
 
