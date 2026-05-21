@@ -470,13 +470,13 @@
 
 .card .card-inner:hover .card-media .media img,
 .card-media:hover .media img {
-  transform: scale(1.07);
+  transform: scale(1.2);
 }
 
 .collection-style-three .card .card-inner:hover .card-media .media img,
 .collection-style-two .card .card-inner:hover .card-media .media img,
 .collection-style-one .card .card-inner:hover .card-media .media img {
-  transform: scale(1.07);
+  transform: scale(1.2);
 }
 
 .card-inner:not(.ratio) > .card-content {
