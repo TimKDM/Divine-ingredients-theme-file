@@ -1,0 +1,218 @@
+{%- comment -%}
+  Divine Popup — email capture modal that matches the brand aesthetic.
+  Drops in as a footer-group section (renders once per page).
+  Trigger logic:
+    - waits `delay` seconds
+    - only shows if cookie `divine_popup_seen` is not set
+    - sets that cookie for `cookie_days` after first display
+{%- endcomment -%}
+
+{%- unless section.settings.enabled == false -%}
+<div
+  class="d-popup"
+  id="DivinePopup-{{ section.id }}"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="DivinePopupTitle-{{ section.id }}"
+  aria-hidden="true"
+  data-delay="{{ section.settings.delay | default: 5 }}"
+  data-cookie-days="{{ section.settings.cookie_days | default: 14 }}"
+  data-cookie-name="divine_popup_seen"
+>
+  <div class="d-popup-card">
+    <button class="d-popup-close" type="button" aria-label="Close offer" data-popup-close>
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    {%- if section.settings.kicker != blank -%}
+      <div class="d-popup-kicker">{{ section.settings.kicker }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="d-popup-h" id="DivinePopupTitle-{{ section.id }}">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.text != blank -%}
+      <p class="d-popup-p">{{ section.settings.text }}</p>
+    {%- endif -%}
+
+    {%- form 'customer', class: 'd-popup-form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter,popup">
+      <label for="DivinePopupEmail-{{ section.id }}" class="d-sr-only">Email address</label>
+      <div class="d-popup-row">
+        <input
+          class="d-popup-inp"
+          id="DivinePopupEmail-{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          placeholder="{{ section.settings.input_placeholder | default: 'your@email.com' }}"
+          autocomplete="email"
+          required
+        >
+        <button class="d-popup-btn" type="submit">{{ section.settings.button_label | default: 'Send My 20% Off Code' }}</button>
+      </div>
+      {%- if form.errors -%}
+        <p class="d-popup-fine" style="color:#a83232;">{{ form.errors | default_errors }}</p>
+      {%- else -%}
+        <p class="d-popup-fine">
+          {{ section.settings.fine_print | default: 'By signing up you agree to receive marketing emails. Unsubscribe any time.' }}
+        </p>
+      {%- endif -%}
+    {%- endform -%}
+
+    <div class="d-popup-success" role="status" aria-live="polite">
+      {{ section.settings.success_message | default: "Thanks — your 20% off code is on its way. Welcome to <em>Divine</em>." }}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var root = document.getElementById('DivinePopup-{{ section.id }}');
+    if (!root) return;
+
+    /* If the form just submitted successfully, Shopify reloads the page and
+       sets form.posted_successfully — we surface that with .is-success. */
+    {%- if form.posted_successfully? -%}
+      root.classList.add('is-open', 'is-success');
+      root.setAttribute('aria-hidden','false');
+      setCookie();
+      return;
+    {%- endif -%}
+
+    var cookieName = root.dataset.cookieName || 'divine_popup_seen';
+    var cookieDays = parseInt(root.dataset.cookieDays || '14', 10);
+    var delay = (parseInt(root.dataset.delay || '5', 10)) * 1000;
+
+    function getCookie(name){
+      var m = document.cookie.match('(?:^|;)\\s*' + name + '=([^;]+)');
+      return m ? m[1] : null;
+    }
+    function setCookie(){
+      var d = new Date();
+      d.setTime(d.getTime() + (cookieDays * 24 * 60 * 60 * 1000));
+      document.cookie = cookieName + '=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+    }
+    function open(){
+      root.classList.add('is-open');
+      root.setAttribute('aria-hidden','false');
+      var firstInput = root.querySelector('input[type="email"]');
+      if (firstInput) setTimeout(function(){ firstInput.focus(); }, 50);
+      document.addEventListener('keydown', escClose);
+    }
+    function close(){
+      root.classList.remove('is-open');
+      root.setAttribute('aria-hidden','true');
+      setCookie();
+      document.removeEventListener('keydown', escClose);
+    }
+    function escClose(e){ if (e.key === 'Escape') close(); }
+
+    /* Theme editor: always open when this section is selected so merchant can style it */
+    if (window.Shopify && Shopify.designMode) {
+      document.addEventListener('shopify:section:select', function(e){
+        if (e.detail && e.detail.sectionId === '{{ section.id }}') open();
+      });
+      document.addEventListener('shopify:section:deselect', function(e){
+        if (e.detail && e.detail.sectionId === '{{ section.id }}') close();
+      });
+    }
+
+    if (getCookie(cookieName)) return;
+
+    setTimeout(open, delay);
+
+    root.querySelectorAll('[data-popup-close]').forEach(function(b){
+      b.addEventListener('click', close);
+    });
+    root.addEventListener('click', function(e){
+      if (e.target === root) close();
+    });
+  })();
+</script>
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Divine Popup",
+  "tag": "section",
+  "class": "divine-popup-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enable popup",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker / eyebrow",
+      "default": "Welcome to Divine"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>20% off your <em>first order.</em></p>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Body text",
+      "default": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send your 20% off code — plus first looks at new arrivals."
+    },
+    {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "Email placeholder",
+      "default": "your@email.com"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Submit button label",
+      "default": "Send My 20% Off Code"
+    },
+    {
+      "type": "html",
+      "id": "fine_print",
+      "label": "Fine print",
+      "default": "By signing up you agree to receive marketing emails. Unsubscribe any time."
+    },
+    {
+      "type": "html",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thanks — your 20% off code is on its way. Welcome to <em>Divine</em>."
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "label": "Display delay",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "range",
+      "id": "cookie_days",
+      "label": "Days to wait before re-showing to the same visitor",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Popup"
+    }
+  ]
+}
+{% endschema %}
