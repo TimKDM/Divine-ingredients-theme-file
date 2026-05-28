@@ -43,29 +43,29 @@
 
   <div class="d-nav-icons">
     {%- if section.settings.show_search -%}
-      <a href="{{ routes.search_url }}" class="d-nav-icon" aria-label="Search" title="Search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <a href="{{ routes.search_url }}" class="d-nav-icon" aria-label="Search">
+        <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <circle cx="11" cy="11" r="8"/>
           <path d="m21 21-4.35-4.35"/>
         </svg>
       </a>
     {%- endif -%}
     {%- if shop.customer_accounts_enabled and section.settings.show_account -%}
-      <a href="{{ routes.account_url }}" class="d-nav-icon" aria-label="Account" title="Account">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <a href="{{ routes.account_url }}" class="d-nav-icon" aria-label="Account">
+        <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
           <circle cx="12" cy="7" r="4"/>
         </svg>
       </a>
     {%- endif -%}
-    <a href="{{ routes.cart_url }}" class="d-nav-icon" aria-label="Cart ({{ cart.item_count }} items)" title="Cart">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <a href="{{ routes.cart_url }}" class="d-nav-icon" aria-label="{%- if cart.item_count > 0 -%}Cart, {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}{%- else -%}Cart, empty{%- endif -%}">
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
         <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
         <line x1="3" y1="6" x2="21" y2="6"/>
         <path d="M16 10a4 4 0 0 1-8 0"/>
       </svg>
       {%- if cart.item_count > 0 -%}
-        <span style="position:absolute;background:var(--d-forest);color:var(--d-beige-lt);font-size:9px;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;margin-left:18px;margin-top:-14px;font-family:var(--d-font-sans);font-weight:500;">{{ cart.item_count }}</span>
+        <span class="d-nav-cart-count" aria-hidden="true">{{ cart.item_count }}</span>
       {%- endif -%}
     </a>
   </div>

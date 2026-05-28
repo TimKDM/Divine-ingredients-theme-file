@@ -100,7 +100,7 @@
                 </div>
                 <div class="d-pcard-sz">{{ cart.currency.iso_code }}</div>
               </div>
-              <button class="d-pcard-add" aria-label="View {{ product.title | escape }}" type="button" data-product-url="{{ product.url }}">+</button>
+              <span class="d-pcard-add" aria-hidden="true">+</span>
             </div>
           </div>
         </a>
@@ -121,7 +121,7 @@
                 <div class="d-pcard-price">{{ 3000 | money_without_trailing_zeros }}</div>
                 <div class="d-pcard-sz">{{ cart.currency.iso_code }}</div>
               </div>
-              <button class="d-pcard-add" aria-label="Add to cart" type="button">+</button>
+              <span class="d-pcard-add" aria-hidden="true">+</span>
             </div>
           </div>
         </div>
@@ -130,18 +130,6 @@
   </div>
 </section>
 
-<script>
-  (function(){
-    document.querySelectorAll('#shopify-section-{{ section.id }} .d-pcard-add').forEach(function(btn){
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        var url = btn.getAttribute('data-product-url');
-        if (url) { window.location.href = url; }
-      });
-    });
-  })();
-</script>
 
 {% schema %}
 {

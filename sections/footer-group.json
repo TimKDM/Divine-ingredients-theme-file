@@ -45,28 +45,9 @@
         "padding_top": 72,
         "padding_bottom": 36
       }
-    },
-    "popup": {
-      "type": "popup",
-      "disabled": true,
-      "settings": {
-        "enable_popup": false,
-        "color_scheme": "option-2"
-      }
-    },
-    "footer": {
-      "type": "footer",
-      "disabled": true,
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "color_scheme": "option-3"
-      }
     }
   },
   "order": [
-    "divine_footer",
-    "popup",
-    "footer"
+    "divine_footer"
   ]
 }

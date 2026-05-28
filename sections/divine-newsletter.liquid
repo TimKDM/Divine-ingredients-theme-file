@@ -65,11 +65,15 @@
 
     {%- form 'customer', class: 'd-email-form' -%}
       <input type="hidden" name="contact[tags]" value="newsletter">
+      <label for="DivineNewsletterEmail-{{ section.id }}" class="d-sr-only">Email address</label>
+      {%- if section.settings.show_first_name -%}
+        <label for="DivineNewsletterName-{{ section.id }}" class="d-sr-only">First name</label>
+      {%- endif -%}
       <div class="d-email-row">
         {%- if section.settings.show_first_name -%}
-          <input class="d-email-inp" type="text" name="contact[first_name]" placeholder="{{ section.settings.name_placeholder | default: 'First name' }}" aria-label="First name" style="max-width:140px;border-right:1px solid var(--d-border)">
+          <input class="d-email-inp" id="DivineNewsletterName-{{ section.id }}" type="text" name="contact[first_name]" placeholder="{{ section.settings.name_placeholder | default: 'First name' }}" autocomplete="given-name" style="max-width:140px;border-right:1px solid var(--d-border)">
         {%- endif -%}
-        <input class="d-email-inp" type="email" name="contact[email]" placeholder="{{ section.settings.input_placeholder | default: 'your@email.com' }}" aria-label="Email" required>
+        <input class="d-email-inp" id="DivineNewsletterEmail-{{ section.id }}" type="email" name="contact[email]" placeholder="{{ section.settings.input_placeholder | default: 'your@email.com' }}" autocomplete="email" required>
         <button class="d-email-btn" type="submit">{{ section.settings.button_label | default: 'Begin Your Ritual' }}</button>
       </div>
       {%- if form.posted_successfully? -%}

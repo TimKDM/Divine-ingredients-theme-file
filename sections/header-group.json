@@ -47,41 +47,10 @@
         "show_account": false,
         "nav_height": 64
       }
-    },
-    "announcement_bar_MMYfNc": {
-      "type": "announcement-bar",
-      "disabled": true,
-      "blocks": {
-        "announcement_1": {
-          "type": "announcement",
-          "settings": {
-            "slider-text": "<p>Free Shipping on Orders Over $100 · USDA Certified Organic</p>"
-          }
-        }
-      },
-      "block_order": ["announcement_1"],
-      "name": "t:sections.announcement-bar.presets.name",
-      "settings": {
-        "announcement_position": "position-top",
-        "color_scheme": "option-1"
-      }
-    },
-    "header": {
-      "type": "header",
-      "disabled": true,
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "menu": "divine-mega-menu",
-        "menu_type_desktop": "mega",
-        "color_scheme": "option-1"
-      }
     }
   },
   "order": [
     "divine_announce",
-    "divine_nav",
-    "announcement_bar_MMYfNc",
-    "header"
+    "divine_nav"
   ]
 }
