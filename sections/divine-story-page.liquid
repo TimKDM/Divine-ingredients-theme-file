@@ -319,8 +319,8 @@
       "limit": 1,
       "settings": [
         { "type": "text", "id": "kicker", "label": "Kicker", "default": "About Divine Ingredients" },
-        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>When you know better, you <em>choose better.</em></p>" },
-        { "type": "richtext", "id": "text", "label": "Intro text", "default": "<p>The story of a microbiologist who turned a habit of reading labels into a brand built entirely on the truth of what's inside.</p>" },
+        { "type": "html", "id": "heading", "label": "Heading", "default": "<p>When you know better, you <em>choose better.</em></p>" },
+        { "type": "html", "id": "text", "label": "Intro text", "default": "<p>The story of a microbiologist who turned a habit of reading labels into a brand built entirely on the truth of what's inside.</p>" },
         { "type": "image_picker", "id": "image", "label": "Founder photo" },
         { "type": "text", "id": "placeholder_text", "label": "Photo placeholder text", "default": "Preet's photo coming soon" },
         { "type": "text", "id": "cap_name", "label": "Caption name", "default": "Preet Bhullar" },
@@ -332,7 +332,7 @@
       "name": "Pull quote",
       "limit": 2,
       "settings": [
-        { "type": "richtext", "id": "quote", "label": "Quote", "default": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>" },
+        { "type": "html", "id": "quote", "label": "Quote", "default": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>" },
         { "type": "text", "id": "attribution", "label": "Attribution", "default": "Preet Bhullar, Founder" }
       ]
     },
@@ -340,20 +340,20 @@
       "type": "story_body",
       "name": "Story body",
       "settings": [
-        { "type": "richtext", "id": "text", "label": "Body text",
+        { "type": "html", "id": "text", "label": "Body text",
           "default": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for — and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
         },
         { "type": "header", "content": "Sidebar card 1" },
         { "type": "text", "id": "card_1_label", "label": "Label", "default": "Background" },
-        { "type": "richtext", "id": "card_1_value", "label": "Value", "default": "<p><em>Microbiology</em></p>" },
+        { "type": "html", "id": "card_1_value", "label": "Value", "default": "<p><em>Microbiology</em></p>" },
         { "type": "text", "id": "card_1_desc", "label": "Description", "default": "Quality control expertise. She knows exactly what belongs — and what doesn't." },
         { "type": "header", "content": "Sidebar card 2" },
         { "type": "text", "id": "card_2_label", "label": "Label", "default": "Founded on" },
-        { "type": "richtext", "id": "card_2_value", "label": "Value", "default": "<p><em>Honesty</em></p>" },
+        { "type": "html", "id": "card_2_value", "label": "Value", "default": "<p><em>Honesty</em></p>" },
         { "type": "text", "id": "card_2_desc", "label": "Description", "default": "Not marketing. Not buzzwords. What's on the label is exactly what's inside." },
         { "type": "header", "content": "Sidebar card 3 (optional)" },
         { "type": "text", "id": "card_3_label", "label": "Label" },
-        { "type": "richtext", "id": "card_3_value", "label": "Value" },
+        { "type": "html", "id": "card_3_value", "label": "Value" },
         { "type": "text", "id": "card_3_desc", "label": "Description" }
       ]
     },
@@ -363,16 +363,16 @@
       "limit": 1,
       "settings": [
         { "type": "text", "id": "kicker", "label": "Kicker", "default": "What we stand for" },
-        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Our <em>values</em></p>" },
+        { "type": "html", "id": "heading", "label": "Heading", "default": "<p>Our <em>values</em></p>" },
         { "type": "header", "content": "Value 1" },
-        { "type": "richtext", "id": "value_1_title", "label": "Title", "default": "<p><em>Honesty</em> over marketing</p>" },
-        { "type": "richtext", "id": "value_1_body", "label": "Body", "default": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less.</p>" },
+        { "type": "html", "id": "value_1_title", "label": "Title", "default": "<p><em>Honesty</em> over marketing</p>" },
+        { "type": "html", "id": "value_1_body", "label": "Body", "default": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less.</p>" },
         { "type": "header", "content": "Value 2" },
-        { "type": "richtext", "id": "value_2_title", "label": "Title", "default": "<p>Rigour without <em>compromise</em></p>" },
-        { "type": "richtext", "id": "value_2_body", "label": "Body", "default": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO — the minimum we accept.</p>" },
+        { "type": "html", "id": "value_2_title", "label": "Title", "default": "<p>Rigour without <em>compromise</em></p>" },
+        { "type": "html", "id": "value_2_body", "label": "Body", "default": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO — the minimum we accept.</p>" },
         { "type": "header", "content": "Value 3" },
-        { "type": "richtext", "id": "value_3_title", "label": "Title", "default": "<p>Sourcing with <em>intention</em></p>" },
-        { "type": "richtext", "id": "value_3_body", "label": "Body", "default": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. No brokers. No mystery. Full traceability, every time.</p>" }
+        { "type": "html", "id": "value_3_title", "label": "Title", "default": "<p>Sourcing with <em>intention</em></p>" },
+        { "type": "html", "id": "value_3_body", "label": "Body", "default": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. No brokers. No mystery. Full traceability, every time.</p>" }
       ]
     },
     {
@@ -381,19 +381,19 @@
       "limit": 1,
       "settings": [
         { "type": "text", "id": "kicker", "label": "Kicker", "default": "Certifications & standards" },
-        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Every claim, <em>verified.</em></p>" },
+        { "type": "html", "id": "heading", "label": "Heading", "default": "<p>Every claim, <em>verified.</em></p>" },
         { "type": "header", "content": "Cert 1" },
         { "type": "text", "id": "cert_1_title", "label": "Title", "default": "USDA Organic" },
-        { "type": "richtext", "id": "cert_1_body", "label": "Body", "default": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>" },
+        { "type": "html", "id": "cert_1_body", "label": "Body", "default": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>" },
         { "type": "header", "content": "Cert 2" },
         { "type": "text", "id": "cert_2_title", "label": "Title", "default": "CCOF Certified" },
-        { "type": "richtext", "id": "cert_2_body", "label": "Body", "default": "<p>California Certified Organic Farmers — one of the most rigorous certifications in North America.</p>" },
+        { "type": "html", "id": "cert_2_body", "label": "Body", "default": "<p>California Certified Organic Farmers — one of the most rigorous certifications in North America.</p>" },
         { "type": "header", "content": "Cert 3" },
         { "type": "text", "id": "cert_3_title", "label": "Title", "default": "Lab Tested Every Batch" },
-        { "type": "richtext", "id": "cert_3_body", "label": "Body", "default": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>" },
+        { "type": "html", "id": "cert_3_body", "label": "Body", "default": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>" },
         { "type": "header", "content": "Cert 4" },
         { "type": "text", "id": "cert_4_title", "label": "Title", "default": "Non-GMO · Fair Trade · Rainforest Alliance" },
-        { "type": "richtext", "id": "cert_4_body", "label": "Body", "default": "<p>Sourced responsibly, from farms that treat people and land with the same care we put into every product.</p>" }
+        { "type": "html", "id": "cert_4_body", "label": "Body", "default": "<p>Sourced responsibly, from farms that treat people and land with the same care we put into every product.</p>" }
       ]
     },
     {
@@ -402,8 +402,8 @@
       "limit": 1,
       "settings": [
         { "type": "text", "id": "kicker", "label": "Kicker", "default": "Ready to explore?" },
-        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Taste the<br><em>difference honesty makes.</em></p>" },
-        { "type": "richtext", "id": "text", "label": "Body", "default": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard.</p>" },
+        { "type": "html", "id": "heading", "label": "Heading", "default": "<p>Taste the<br><em>difference honesty makes.</em></p>" },
+        { "type": "html", "id": "text", "label": "Body", "default": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard.</p>" },
         { "type": "text", "id": "button_label_1", "label": "Primary button label", "default": "Shop All Products" },
         { "type": "url", "id": "button_link_1", "label": "Primary button link" },
         { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Try the Discovery Set — $38" },
@@ -420,7 +420,7 @@
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "caption", "label": "Caption" },
         { "type": "text", "id": "heading", "label": "Heading" },
-        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "html", "id": "text", "label": "Text" },
         { "type": "text", "id": "button_label", "label": "Button label" },
         { "type": "url", "id": "button_link", "label": "Button link" },
         { "type": "select", "id": "layout", "label": "Layout",
@@ -438,7 +438,7 @@
       "name": "Page intro (legacy)",
       "settings": [
         { "type": "text", "id": "heading", "label": "Heading" },
-        { "type": "richtext", "id": "text", "label": "Intro text" }
+        { "type": "html", "id": "text", "label": "Intro text" }
       ]
     }
   ],
