@@ -1,116 +1,71 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "popup": {
-      "type": "popup",
-      "settings": {
-        "enable_popup": true,
-        "popup_test": false,
-        "fadein": 4,
-        "popup_count": 1,
-        "trigger_link": true,
-        "layout": "style_1",
-        "popup_image": "shopify://shop_images/matcha_val.jpg",
-        "image_width": 45,
-        "image_alt": "A bowl of vibrant Divine matcha with bamboo whisk",
-        "popup_title": "Take 20% Off Your First Order",
-        "header_font_size": 32,
-        "popup_message": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send you a 20% off code — plus first looks at new arrivals and the occasional recipe from our kitchen.",
-        "message_font_size": 14,
-        "submit_button_text": "Send My 20% Off Code",
-        "success_message": "Thanks — your 20% off code is on its way to your inbox. Welcome to Divine.",
-        "show_social": true,
-        "enable_terms": true,
-        "terms_label": "<p>I agree to receive marketing emails. Unsubscribe anytime.</p>",
-        "terms_position": "position_above",
-        "subs_form": false,
-        "button_label": "",
-        "link": "",
-        "color_scheme": "option-2"
-      }
-    },
-    "footer": {
-      "type": "footer",
+    "divine_footer": {
+      "type": "divine-footer",
       "blocks": {
-        "brand_info_social": {
-          "type": "brand_information",
+        "menu_teas": {
+          "type": "menu_column",
           "settings": {
-            "brand_headline": "Follow Divine",
-            "brand_description": "<p>Recipes, sourcing stories, and the occasional behind-the-scenes from our kitchen. Tag us — we love seeing what you make.</p>",
-            "brand_image_width": 100,
-            "hide_image": true,
-            "newsletter_enable": false,
-            "show_social": true,
-            "social_icons_size": "medium"
+            "heading": "Shop Teas",
+            "menu": "main-menu"
           }
         },
-        "link_list_9z3Q9p": {
-          "type": "link_list",
+        "menu_powders": {
+          "type": "menu_column",
           "settings": {
-            "heading": "Divine Ingredients",
-            "menu": "divine-mega-menu"
+            "heading": "Shop Powders",
+            "menu": "footer-company",
+            "heading_2": "Company",
+            "menu_2": "footer-company"
           }
         },
-        "link_list_EjQTJk": {
-          "type": "link_list",
+        "menu_help": {
+          "type": "menu_column",
           "settings": {
-            "heading": "Shop By LifeStyle",
-            "menu": "shop-by-lifestyle"
-          }
-        },
-        "link_list_pGJWUM": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Company",
+            "heading": "Help",
             "menu": "footer-company"
           }
         }
       },
       "block_order": [
-        "brand_info_social",
-        "link_list_9z3Q9p",
-        "link_list_EjQTJk",
-        "link_list_pGJWUM"
+        "menu_teas",
+        "menu_powders",
+        "menu_help"
       ],
       "settings": {
-        "enable_follow_on_shop": true,
-        "enable_country_selector": true,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_powered_by_link": false,
-        "show_policy": true,
-        "enable_terms": false,
-        "terms_label": "",
-        "back_to_top_desktop": true,
-        "back_to_top_bottom": 24,
-        "back_to_top_right": 24,
-        "back_to_top_mobile": true,
-        "centered_content": false,
-        "color_scheme": "option-3",
-        "apply_scheme_footer_bottom": false,
-        "footer_border": true,
-        "swipe_on_mobile": false,
-        "disable_arrow_mobile": true,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "make_columns_even": true,
-        "padding_top": 48,
-        "padding_bottom": 32,
-        "ignore_spacing": false
+        "logo_text": "Divine *Ingredients*",
+        "description": "Farm-sourced teas, superfoods, and botanicals — every batch tested, every ingredient real.",
+        "instagram": "https://instagram.com",
+        "tiktok": "https://tiktok.com",
+        "pinterest": "https://pinterest.com",
+        "facebook": "https://facebook.com",
+        "locale_text": "CA ($) · US ($)",
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    },
+    "popup": {
+      "type": "popup",
+      "disabled": true,
+      "settings": {
+        "enable_popup": false,
+        "color_scheme": "option-2"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "disabled": true,
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "option-3"
       }
     }
   },
   "order": [
+    "divine_footer",
     "popup",
     "footer"
   ]

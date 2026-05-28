@@ -1,457 +1,260 @@
+{%- comment -%}
+  Divine Story Page — About-Us layout
+  Mirrors the About-Us mockup: breadcrumb, page hero with founder photo,
+  pull quote, story body w/ sidebar cards, 3-col values, 4-col certs grid, CTA band.
+
+  Uses block types to keep backwards compatibility with existing JSON:
+    - intro      → page hero (heading + intro)
+    - image_text → reused as: pull_quote or story body (depending on caption tag)
+    - cta        → forest-green CTA band
+{%- endcomment -%}
+
 {%- style -%}
-  .divine-story-page {
-    --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
-    --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+  #shopify-section-{{ section.id }} .divine-story-page{
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
   }
-  .divine-story-page h1,
-  .divine-story-page h2,
-  .divine-story-page .divine-section-title {
-    font-size: var(--heading-font-size);
+  #shopify-section-{{ section.id }} .d-ph-h1{
+    font-size: {{ section.settings.heading_font_size | default: 88 }}px;
   }
-  .divine-story-page h3 {
-    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
-  }
-  .divine-story-page .divine-section-label {
-    font-size: {{ section.settings.caption_font_size | default: 14 }}px;
-  }
-  .divine-story-page {
-    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-      background-color: {{ section.settings.background_color }};
-    {% endif %}
-    {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-      color: {{ section.settings.text_color }};
-    {% endif %}
-  }
-  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    .divine-story-page h1,
-    .divine-story-page h2,
-    .divine-story-page h3 {
-      color: {{ section.settings.text_color }};
-    }
-  {% endif %}
-  {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
-    .divine-story-page .divine-section-label,
-    .divine-story-page .divine-story__values-icon svg {
-      color: {{ section.settings.accent_color }};
-      stroke: {{ section.settings.accent_color }};
-    }
-  {% endif %}
 {%- endstyle -%}
 
 <div class="divine-story-page">
+
+  <div class="d-breadcrumb">
+    <a href="{{ routes.root_url }}">Home</a>
+    <span class="d-breadcrumb-sep">·</span>
+    <span>{{ page.title | default: 'Our Story' }}</span>
+  </div>
+
   {%- for block in section.blocks -%}
     {%- case block.type -%}
 
-      {%- when 'hero' -%}
-        <div class="divine-story__hero" {{ block.shopify_attributes }}>
-          {%- if block.settings.image != blank -%}
-            <div class="divine-story__hero-image">
-              {{
-                block.settings.image
-                | image_url: width: 1600
-                | image_tag:
-                  loading: 'eager',
-                  widths: '375, 750, 1100, 1600',
-                  sizes: '100vw'
+      {%- when 'intro' -%}
+        <section class="d-page-hero">
+          <div class="d-ph-left d-reveal">
+            {%- if block.settings.kicker != blank -%}
+              <div class="d-ph-kicker">{{ block.settings.kicker }}</div>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h1 class="d-ph-h1">{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h1>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <div class="d-ph-intro">{{ block.settings.text }}</div>
+            {%- endif -%}
+          </div>
+          <div class="d-ph-right">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 1200 | image_tag:
+                loading: 'eager', widths: '500, 750, 1000, 1200',
+                sizes: '(min-width: 1100px) 50vw, 100vw',
+                class: 'd-ph-img', alt: block.settings.image.alt | default: 'Founder photo'
               }}
-              <div class="divine-story__hero-overlay"></div>
-              <div class="divine-story__hero-content">
-                {%- if block.settings.caption != blank -%}
-                  <span class="divine-section-label">{{ block.settings.caption }}</span>
-                {%- endif -%}
-                {%- if block.settings.heading != blank -%}
-                  <h1>{{ block.settings.heading }}</h1>
+            {%- else -%}
+              <div class="d-ph-placeholder">
+                <div class="d-ph-placeholder-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(60,76,48,.3)" stroke-width="1.4">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+                <div class="d-ph-placeholder-text">{{ block.settings.placeholder_text | default: "Founder photo coming soon" }}</div>
+              </div>
+            {%- endif -%}
+            {%- if block.settings.cap_name != blank -%}
+              <div class="d-ph-cap">
+                <div class="d-ph-cap-name"><em>{{ block.settings.cap_name }}</em></div>
+                {%- if block.settings.cap_role != blank -%}
+                  <div class="d-ph-cap-role">{{ block.settings.cap_role }}</div>
                 {%- endif -%}
               </div>
-            </div>
-          {%- else -%}
-            <div class="divine-story__hero-simple">
-              {%- if block.settings.caption != blank -%}
-                <span class="divine-section-label">{{ block.settings.caption }}</span>
-              {%- endif -%}
-              {%- if block.settings.heading != blank -%}
-                <h1>{{ block.settings.heading }}</h1>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-        </div>
-
-      {%- when 'intro' -%}
-        <div class="divine-story__intro" {{ block.shopify_attributes }}>
-          {%- if block.settings.heading != blank -%}
-            <h2>{{ block.settings.heading }}</h2>
-          {%- endif -%}
-          {%- if block.settings.text != blank -%}
-            <div class="divine-story__intro-text">{{ block.settings.text }}</div>
-          {%- endif -%}
-        </div>
-
-      {%- when 'image_text' -%}
-        <div class="divine-story__section {% if block.settings.layout == 'image_right' %}divine-story__section--reversed{% endif %} {% if block.settings.use_alt_bg %}divine-section-alt{% endif %}" {{ block.shopify_attributes }}>
-          <div class="divine-story__section-grid">
-            <div class="divine-story__section-image">
-              {%- if block.settings.image != blank -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 800
-                  | image_tag:
-                    loading: 'lazy',
-                    widths: '375, 550, 800',
-                    sizes: '(min-width: 768px) 50vw, 100vw'
-                }}
-              {%- else -%}
-                {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
-            </div>
-            <div class="divine-story__section-content">
-              {%- if block.settings.caption != blank -%}
-                <span class="divine-section-label">{{ block.settings.caption }}</span>
-              {%- endif -%}
-              {%- if block.settings.heading != blank -%}
-                <h2>{{ block.settings.heading }}</h2>
-              {%- endif -%}
-              {%- if block.settings.text != blank -%}
-                <div class="divine-story__section-text">{{ block.settings.text }}</div>
-              {%- endif -%}
-              {%- if block.settings.button_label != blank -%}
-                <a href="{{ block.settings.button_link }}" class="divine-btn divine-btn-primary">{{ block.settings.button_label }}</a>
-              {%- endif -%}
-            </div>
+            {%- endif -%}
           </div>
-        </div>
+        </section>
+
+      {%- when 'pull_quote' -%}
+        <section class="d-pullquote d-reveal">
+          <div class="d-pq-line"></div>
+          <div>
+            <div class="d-pq-text">{{ block.settings.quote | replace: '<p>', '' | replace: '</p>', '' }}</div>
+            {%- if block.settings.attribution != blank -%}
+              <div class="d-pq-attr">— {{ block.settings.attribution }}</div>
+            {%- endif -%}
+          </div>
+        </section>
+
+      {%- when 'story_body' -%}
+        <section class="d-story-section">
+          <div class="d-story-body-text d-reveal">
+            {{ block.settings.text }}
+          </div>
+          <div class="d-story-sidebar d-reveal">
+            {%- if block.settings.card_1_label != blank or block.settings.card_1_value != blank -%}
+              <div class="d-sidebar-card">
+                <div class="d-sc-label">{{ block.settings.card_1_label }}</div>
+                <div class="d-sc-val">{{ block.settings.card_1_value | replace: "<p>", "" | replace: "</p>", "" }}</div>
+                {%- if block.settings.card_1_desc != blank -%}
+                  <div class="d-sc-desc">{{ block.settings.card_1_desc }}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.card_2_label != blank or block.settings.card_2_value != blank -%}
+              <div class="d-sidebar-card">
+                <div class="d-sc-label">{{ block.settings.card_2_label }}</div>
+                <div class="d-sc-val">{{ block.settings.card_2_value | replace: "<p>", "" | replace: "</p>", "" }}</div>
+                {%- if block.settings.card_2_desc != blank -%}
+                  <div class="d-sc-desc">{{ block.settings.card_2_desc }}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.card_3_label != blank or block.settings.card_3_value != blank -%}
+              <div class="d-sidebar-card">
+                <div class="d-sc-label">{{ block.settings.card_3_label }}</div>
+                <div class="d-sc-val">{{ block.settings.card_3_value | replace: "<p>", "" | replace: "</p>", "" }}</div>
+                {%- if block.settings.card_3_desc != blank -%}
+                  <div class="d-sc-desc">{{ block.settings.card_3_desc }}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </section>
 
       {%- when 'values' -%}
-        <div class="divine-story__values {% if block.settings.use_alt_bg %}divine-section-alt{% endif %}" {{ block.shopify_attributes }}>
-          {%- if block.settings.heading != blank -%}
-            <div class="divine-section-header">
-              {%- if block.settings.caption != blank -%}
-                <span class="divine-section-label">{{ block.settings.caption }}</span>
-              {%- endif -%}
-              <h2 class="divine-section-title">{{ block.settings.heading }}</h2>
-            </div>
-          {%- endif -%}
-          <div class="divine-story__values-grid">
-            {%- if block.settings.value_1_title != blank -%}
-              <div class="divine-story__values-item">
-                <div class="divine-story__values-icon">
-                  <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                </div>
-                <h3>{{ block.settings.value_1_title }}</h3>
-                {%- if block.settings.value_1_text != blank -%}
-                  <p>{{ block.settings.value_1_text }}</p>
-                {%- endif -%}
-              </div>
+        <section class="d-values d-reveal">
+          <div class="d-values-header">
+            {%- if block.settings.kicker != blank -%}
+              <div class="d-sec-label">{{ block.settings.kicker }}</div>
             {%- endif -%}
-            {%- if block.settings.value_2_title != blank -%}
-              <div class="divine-story__values-item">
-                <div class="divine-story__values-icon">
-                  <svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <h3>{{ block.settings.value_2_title }}</h3>
-                {%- if block.settings.value_2_text != blank -%}
-                  <p>{{ block.settings.value_2_text }}</p>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
-            {%- if block.settings.value_3_title != blank -%}
-              <div class="divine-story__values-item">
-                <div class="divine-story__values-icon">
-                  <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                </div>
-                <h3>{{ block.settings.value_3_title }}</h3>
-                {%- if block.settings.value_3_text != blank -%}
-                  <p>{{ block.settings.value_3_text }}</p>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
-            {%- if block.settings.value_4_title != blank -%}
-              <div class="divine-story__values-item">
-                <div class="divine-story__values-icon">
-                  <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                </div>
-                <h3>{{ block.settings.value_4_title }}</h3>
-                {%- if block.settings.value_4_text != blank -%}
-                  <p>{{ block.settings.value_4_text }}</p>
-                {%- endif -%}
-              </div>
+            {%- if block.settings.heading != blank -%}
+              <h2 class="d-sec-h">{{ block.settings.heading | replace: "<p>", "" | replace: "</p>", "" }}</h2>
             {%- endif -%}
           </div>
-        </div>
+          <div class="d-values-grid">
+            {%- for i in (1..3) -%}
+              {%- assign t_key = 'value_' | append: i | append: '_title' -%}
+              {%- assign b_key = 'value_' | append: i | append: '_body' -%}
+              {%- assign v_title = block.settings[t_key] -%}
+              {%- assign v_body = block.settings[b_key] -%}
+              {%- if v_title != blank or v_body != blank -%}
+                <div class="d-value-card">
+                  <div class="d-vc-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+                  <h3 class="d-vc-title">{{ v_title | replace: "<p>", "" | replace: "</p>", "" }}</h3>
+                  <div class="d-vc-body">{{ v_body }}</div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </section>
+
+      {%- when 'certs_grid' -%}
+        <section class="d-certs-grid-sec d-reveal">
+          <div class="d-certs-header">
+            {%- if block.settings.kicker != blank -%}
+              <div class="d-sec-label">{{ block.settings.kicker }}</div>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h2 class="d-sec-h" style="font-size:clamp(32px,3.4vw,46px)">{{ block.settings.heading | replace: "<p>", "" | replace: "</p>", "" }}</h2>
+            {%- endif -%}
+          </div>
+          <div class="d-certs-grid">
+            {%- for i in (1..4) -%}
+              {%- assign t_key = 'cert_' | append: i | append: '_title' -%}
+              {%- assign b_key = 'cert_' | append: i | append: '_body' -%}
+              {%- assign c_title = block.settings[t_key] -%}
+              {%- assign c_body = block.settings[b_key] -%}
+              {%- if c_title != blank or c_body != blank -%}
+                <div class="d-cert-card">
+                  <div class="d-cert-card-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--d-forest)" stroke-width="1.6">
+                      <path d="M9 11l3 3L22 4"/>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                  </div>
+                  <div class="d-cert-card-name">{{ c_title }}</div>
+                  <div class="d-cert-card-desc">{{ c_body }}</div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </section>
 
       {%- when 'cta' -%}
-        <div class="divine-story__cta {% if block.settings.use_dark_bg %}divine-story__cta--dark{% endif %}" {{ block.shopify_attributes }}>
-          {%- if block.settings.heading != blank -%}
-            <h2>{{ block.settings.heading }}</h2>
-          {%- endif -%}
-          {%- if block.settings.text != blank -%}
-            <p>{{ block.settings.text }}</p>
-          {%- endif -%}
-          {%- if block.settings.button_label != blank -%}
-            <a href="{{ block.settings.button_link }}" class="divine-btn divine-btn-primary">{{ block.settings.button_label }}</a>
-          {%- endif -%}
-        </div>
+        <section class="d-cta-band d-reveal">
+          <div>
+            {%- if block.settings.kicker != blank -%}
+              <div class="d-cta-label">{{ block.settings.kicker }}</div>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h2 class="d-cta-h">{{ block.settings.heading | replace: "<p>", "" | replace: "</p>", "" }}</h2>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="d-cta-p">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+          <div class="d-cta-buttons">
+            {%- if block.settings.button_label_1 != blank -%}
+              <a href="{{ block.settings.button_link_1 | default: '/collections/all' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+            {%- endif -%}
+            {%- if block.settings.button_label_2 != blank -%}
+              <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-t-lt">{{ block.settings.button_label_2 }} →</a>
+            {%- endif -%}
+            {%- if block.settings.button_label_3 != blank -%}
+              <a href="{{ block.settings.button_link_3 | default: '#' }}" class="d-btn-t-lt">{{ block.settings.button_label_3 }} →</a>
+            {%- endif -%}
+          </div>
+        </section>
+
+      {%- when 'image_text' -%}
+        {%- comment -%} Legacy block — render as a story section split {%- endcomment -%}
+        <section class="d-story{% if block.settings.layout == 'image_left' %} d-story-rev{% endif %}" style="{% if block.settings.use_alt_bg %}background:var(--d-beige-lt);{% endif %}">
+          <div class="d-story-left">
+            {%- if block.settings.caption != blank -%}
+              <div class="d-sec-label">{{ block.settings.caption }}</div>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h2 class="d-sec-h" style="margin-bottom:24px">{{ block.settings.heading | replace: "<p>", "" | replace: "</p>", "" }}</h2>
+            {%- endif -%}
+            <div>{{ block.settings.text }}</div>
+            {%- if block.settings.button_label != blank -%}
+              <a href="{{ block.settings.button_link | default: '#' }}" class="d-btn-t" style="margin-top:24px">{{ block.settings.button_label }} →</a>
+            {%- endif -%}
+          </div>
+          <div class="d-story-right">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 1200 | image_tag:
+                loading: 'lazy', class: 'd-story-img', alt: block.settings.image.alt | default: block.settings.heading
+              }}
+            {%- else -%}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'd-story-img placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </section>
+
+      {%- when 'page_intro' -%}
+        {%- if block.settings.heading != blank or block.settings.text != blank -%}
+          <section class="d-pullquote d-reveal">
+            <div class="d-pq-line"></div>
+            <div>
+              {%- if block.settings.heading != blank -%}
+                <div class="d-pq-text" style="font-style:normal;color:var(--d-black);font-size:clamp(28px,3vw,42px);font-weight:300;">{{ block.settings.heading | replace: "<p>", "" | replace: "</p>", "" }}</div>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="d-pq-attr" style="font-size:15px;color:var(--d-mid);line-height:1.85;margin-top:18px;max-width:720px">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          </section>
+        {%- endif -%}
 
     {%- endcase -%}
   {%- endfor -%}
+
 </div>
-
-<style>
-  /* Story Page Hero */
-  .divine-story__hero-image {
-    position: relative;
-    width: 100%;
-    max-height: 50vh;
-    overflow: hidden;
-  }
-  .divine-story__hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .divine-story__hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.2) 100%);
-  }
-  .divine-story__hero-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 32px 20px;
-    color: #fff;
-    text-align: center;
-  }
-  .divine-story__hero-content h1 {
-    font-family: var(--font-heading);
-    font-size: {{ section.settings.heading_font_size | default: 26 | plus: 2 }}px;
-    font-weight: 500;
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.45);
-  }
-  .divine-story__hero-content .divine-section-label {
-    color: #fff;
-    font-weight: 700;
-    opacity: 0.92;
-    margin-bottom: 8px;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
-  }
-  .divine-story__hero-simple {
-    text-align: center;
-    padding: 48px 20px;
-  }
-  .divine-story__hero-simple h1 {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  /* Intro Section */
-  .divine-story__intro {
-    background-color: #f0ebf2;
-    padding: 72px 20px;
-    text-align: center;
-  }
-  .divine-story__intro h2,
-  .divine-story__intro-text {
-    max-width: 1040px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .divine-story__intro h2 {
-    font-family: var(--font-heading);
-    font-size: {{ section.settings.heading_font_size | default: 26 }}px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    margin-top: 0;
-    line-height: 1.3;
-  }
-  .divine-story__intro-text {
-    font-size: {{ section.settings.body_font_size | default: 15 }}px;
-    color: var(--color-text-muted);
-    line-height: 1.8;
-  }
-  .divine-story__intro-text p {
-    margin-bottom: 16px;
-  }
-
-  /* Image + Text Sections */
-  .divine-story__section {
-    padding: 40px 20px;
-  }
-  .divine-story__section-image {
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    margin-bottom: 24px;
-  }
-  .divine-story__section-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .divine-story__section-content h2 {
-    font-family: var(--font-heading);
-    font-size: {{ section.settings.heading_font_size | default: 26 }}px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    margin-top: 0;
-    line-height: 1.3;
-  }
-  .divine-story__section-text {
-    font-size: var(--body-font-size);
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-  .divine-story__section-text p {
-    margin-bottom: 12px;
-  }
-
-  /* Values Grid */
-  .divine-story__values {
-    padding: 40px 20px;
-  }
-  .divine-story__values-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 24px;
-  }
-  .divine-story__values-item {
-    text-align: center;
-  }
-  .divine-story__values-icon {
-    margin-bottom: 12px;
-  }
-  .divine-story__values-icon svg {
-    width: 32px;
-    height: 32px;
-    stroke: var(--color-accent-dark);
-    stroke-width: 1.5;
-    fill: none;
-  }
-  .divine-story__values-item h3 {
-    font-family: var(--font-heading);
-    font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    margin-top: 0;
-  }
-  .divine-story__values-item p {
-    font-size: {{ section.settings.body_font_size | default: 15 }}px;
-    color: var(--color-text-muted);
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  /* CTA Section */
-  .divine-story__cta {
-    text-align: center;
-    padding: 48px 20px;
-  }
-  .divine-story__cta--dark {
-    background: var(--color-foreground-hex);
-    color: var(--color-background-hex);
-  }
-  .divine-story__cta--dark h2 {
-    color: var(--color-background-hex);
-  }
-  .divine-story__cta--dark p {
-    color: rgba(255,255,255,0.7);
-  }
-  .divine-story__cta h2 {
-    font-family: var(--font-heading);
-    font-size: {{ section.settings.heading_font_size | default: 26 }}px;
-    font-weight: 400;
-    margin-bottom: 12px;
-    margin-top: 0;
-  }
-  .divine-story__cta p {
-    font-size: {{ section.settings.body_font_size | default: 15 }}px;
-    color: var(--color-text-muted);
-    margin-bottom: 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-  .divine-story__cta .divine-btn {
-    display: inline-flex;
-    width: auto;
-  }
-
-  @media screen and (min-width: 768px) {
-    .divine-story__hero-content {
-      padding: 48px 40px;
-    }
-    .divine-story__hero-content h1 {
-      font-size: {{ section.settings.heading_font_size | default: 26 | plus: 14 }}px;
-    }
-    .divine-story__hero-simple h1 {
-      font-size: {{ section.settings.heading_font_size | default: 26 | plus: 14 }}px;
-    }
-    .divine-story__hero-image {
-      max-height: 60vh;
-    }
-    .divine-story__intro {
-      padding: 60px 40px;
-    }
-    .divine-story__intro h2 {
-      font-size: {{ section.settings.heading_font_size | default: 26 | plus: 2 }}px;
-    }
-    .divine-story__section {
-      padding: 60px 40px;
-    }
-    .divine-story__section-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-    .divine-story__section--reversed .divine-story__section-grid {
-      direction: rtl;
-    }
-    .divine-story__section--reversed .divine-story__section-grid > * {
-      direction: ltr;
-    }
-    .divine-story__section-image {
-      margin-bottom: 0;
-      aspect-ratio: 1;
-    }
-    .divine-story__section-content h2 {
-      font-size: {{ section.settings.heading_font_size | default: 26 }}px;
-    }
-    .divine-story__values {
-      padding: 60px 40px;
-    }
-    .divine-story__values-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-    }
-    .divine-story__values-icon svg {
-      width: 40px;
-      height: 40px;
-    }
-    .divine-story__cta {
-      padding: 64px 40px;
-    }
-    .divine-story__cta h2 {
-      font-size: {{ section.settings.heading_font_size | default: 26 | plus: 2 }}px;
-    }
-  }
-</style>
 
 {% schema %}
 {
   "name": "Divine Story Page",
   "tag": "section",
   "class": "divine-story-page-section",
+  "max_blocks": 12,
   "settings": [
     {
       "type": "color",
@@ -473,19 +276,19 @@
       "id": "body_font_size",
       "label": "Body font size",
       "min": 12,
-      "max": 22,
+      "max": 28,
       "step": 1,
-      "default": 15,
+      "default": 16,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "heading_font_size",
-      "label": "Heading font size",
-      "min": 18,
-      "max": 56,
+      "label": "Page hero heading size",
+      "min": 24,
+      "max": 120,
       "step": 1,
-      "default": 26,
+      "default": 88,
       "unit": "px"
     },
     {
@@ -495,220 +298,147 @@
       "min": 8,
       "max": 24,
       "step": 1,
-      "default": 14,
+      "default": 11,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "item_heading_font_size",
-      "label": "Item/card title font size",
-      "min": 12,
-      "max": 36,
+      "label": "Card heading font size",
+      "min": 14,
+      "max": 48,
       "step": 1,
-      "default": 16,
+      "default": 24,
       "unit": "px"
     }
   ],
   "blocks": [
     {
-      "type": "hero",
-      "name": "Page Hero",
+      "type": "intro",
+      "name": "Page hero",
       "limit": 1,
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Background image"
-        },
-        {
-          "type": "text",
-          "id": "caption",
-          "label": "Caption",
-          "default": "Our Story"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "How We Got Here (And Why We're Not Stopping)"
-        }
+        { "type": "text", "id": "kicker", "label": "Kicker", "default": "About Divine Ingredients" },
+        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>When you know better, you <em>choose better.</em></p>" },
+        { "type": "richtext", "id": "text", "label": "Intro text", "default": "<p>The story of a microbiologist who turned a habit of reading labels into a brand built entirely on the truth of what's inside.</p>" },
+        { "type": "image_picker", "id": "image", "label": "Founder photo" },
+        { "type": "text", "id": "placeholder_text", "label": "Photo placeholder text", "default": "Preet's photo coming soon" },
+        { "type": "text", "id": "cap_name", "label": "Caption name", "default": "Preet Bhullar" },
+        { "type": "text", "id": "cap_role", "label": "Caption role", "default": "Founder · Microbiologist" }
       ]
     },
     {
-      "type": "intro",
-      "name": "Introduction",
+      "type": "pull_quote",
+      "name": "Pull quote",
       "limit": 2,
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        }
+        { "type": "richtext", "id": "quote", "label": "Quote", "default": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>" },
+        { "type": "text", "id": "attribution", "label": "Attribution", "default": "Preet Bhullar, Founder" }
       ]
     },
     {
-      "type": "image_text",
-      "name": "Image + Text",
+      "type": "story_body",
+      "name": "Story body",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+        { "type": "richtext", "id": "text", "label": "Body text",
+          "default": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for — and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
         },
-        {
-          "type": "text",
-          "id": "caption",
-          "label": "Caption"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Button label"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button link"
-        },
-        {
-          "type": "select",
-          "id": "layout",
-          "label": "Layout",
-          "options": [
-            { "value": "image_left", "label": "Image left" },
-            { "value": "image_right", "label": "Image right" }
-          ],
-          "default": "image_left"
-        },
-        {
-          "type": "checkbox",
-          "id": "use_alt_bg",
-          "label": "Use alternate background",
-          "default": false
-        }
+        { "type": "header", "content": "Sidebar card 1" },
+        { "type": "text", "id": "card_1_label", "label": "Label", "default": "Background" },
+        { "type": "richtext", "id": "card_1_value", "label": "Value", "default": "<p><em>Microbiology</em></p>" },
+        { "type": "text", "id": "card_1_desc", "label": "Description", "default": "Quality control expertise. She knows exactly what belongs — and what doesn't." },
+        { "type": "header", "content": "Sidebar card 2" },
+        { "type": "text", "id": "card_2_label", "label": "Label", "default": "Founded on" },
+        { "type": "richtext", "id": "card_2_value", "label": "Value", "default": "<p><em>Honesty</em></p>" },
+        { "type": "text", "id": "card_2_desc", "label": "Description", "default": "Not marketing. Not buzzwords. What's on the label is exactly what's inside." },
+        { "type": "header", "content": "Sidebar card 3 (optional)" },
+        { "type": "text", "id": "card_3_label", "label": "Label" },
+        { "type": "richtext", "id": "card_3_value", "label": "Value" },
+        { "type": "text", "id": "card_3_desc", "label": "Description" }
       ]
     },
     {
       "type": "values",
-      "name": "Values Grid",
+      "name": "Values 3-column",
       "limit": 1,
       "settings": [
-        {
-          "type": "text",
-          "id": "caption",
-          "label": "Caption"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "The Things We Won't Bend On"
-        },
-        {
-          "type": "text",
-          "id": "value_1_title",
-          "label": "Value 1 title",
-          "default": "Quality Over Everything"
-        },
-        {
-          "type": "text",
-          "id": "value_1_text",
-          "label": "Value 1 text",
-          "default": "We'd rather carry fewer products than compromise on a single one. Every ingredient is selected with intention and tested with rigor."
-        },
-        {
-          "type": "text",
-          "id": "value_2_title",
-          "label": "Value 2 title",
-          "default": "Radical Transparency"
-        },
-        {
-          "type": "text",
-          "id": "value_2_text",
-          "label": "Value 2 text",
-          "default": "You deserve the full picture — where it's from, how it's tested, what's in it. We don't do hidden fillers or vague labels."
-        },
-        {
-          "type": "text",
-          "id": "value_3_title",
-          "label": "Value 3 title",
-          "default": "People and Planet"
-        },
-        {
-          "type": "text",
-          "id": "value_3_text",
-          "label": "Value 3 text",
-          "default": "We partner with growers who care about sustainable practices and fair wages. Good ingredients start with good relationships."
-        },
-        {
-          "type": "text",
-          "id": "value_4_title",
-          "label": "Value 4 title",
-          "default": "Your Success Is the Point"
-        },
-        {
-          "type": "text",
-          "id": "value_4_text",
-          "label": "Value 4 text",
-          "default": "We built this for creators, makers, and kitchen innovators. Your success is the whole point — and we're here to support every step."
-        },
-        {
-          "type": "checkbox",
-          "id": "use_alt_bg",
-          "label": "Use alternate background",
-          "default": true
-        }
+        { "type": "text", "id": "kicker", "label": "Kicker", "default": "What we stand for" },
+        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Our <em>values</em></p>" },
+        { "type": "header", "content": "Value 1" },
+        { "type": "richtext", "id": "value_1_title", "label": "Title", "default": "<p><em>Honesty</em> over marketing</p>" },
+        { "type": "richtext", "id": "value_1_body", "label": "Body", "default": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less.</p>" },
+        { "type": "header", "content": "Value 2" },
+        { "type": "richtext", "id": "value_2_title", "label": "Title", "default": "<p>Rigour without <em>compromise</em></p>" },
+        { "type": "richtext", "id": "value_2_body", "label": "Body", "default": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO — the minimum we accept.</p>" },
+        { "type": "header", "content": "Value 3" },
+        { "type": "richtext", "id": "value_3_title", "label": "Title", "default": "<p>Sourcing with <em>intention</em></p>" },
+        { "type": "richtext", "id": "value_3_body", "label": "Body", "default": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. No brokers. No mystery. Full traceability, every time.</p>" }
+      ]
+    },
+    {
+      "type": "certs_grid",
+      "name": "Certifications grid",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "kicker", "label": "Kicker", "default": "Certifications & standards" },
+        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Every claim, <em>verified.</em></p>" },
+        { "type": "header", "content": "Cert 1" },
+        { "type": "text", "id": "cert_1_title", "label": "Title", "default": "USDA Organic" },
+        { "type": "richtext", "id": "cert_1_body", "label": "Body", "default": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>" },
+        { "type": "header", "content": "Cert 2" },
+        { "type": "text", "id": "cert_2_title", "label": "Title", "default": "CCOF Certified" },
+        { "type": "richtext", "id": "cert_2_body", "label": "Body", "default": "<p>California Certified Organic Farmers — one of the most rigorous certifications in North America.</p>" },
+        { "type": "header", "content": "Cert 3" },
+        { "type": "text", "id": "cert_3_title", "label": "Title", "default": "Lab Tested Every Batch" },
+        { "type": "richtext", "id": "cert_3_body", "label": "Body", "default": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>" },
+        { "type": "header", "content": "Cert 4" },
+        { "type": "text", "id": "cert_4_title", "label": "Title", "default": "Non-GMO · Fair Trade · Rainforest Alliance" },
+        { "type": "richtext", "id": "cert_4_body", "label": "Body", "default": "<p>Sourced responsibly, from farms that treat people and land with the same care we put into every product.</p>" }
       ]
     },
     {
       "type": "cta",
-      "name": "Call to Action",
-      "limit": 2,
+      "name": "CTA band",
+      "limit": 1,
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Ready to Make Something Great?"
+        { "type": "text", "id": "kicker", "label": "Kicker", "default": "Ready to explore?" },
+        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Taste the<br><em>difference honesty makes.</em></p>" },
+        { "type": "richtext", "id": "text", "label": "Body", "default": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard.</p>" },
+        { "type": "text", "id": "button_label_1", "label": "Primary button label", "default": "Shop All Products" },
+        { "type": "url", "id": "button_link_1", "label": "Primary button link" },
+        { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Try the Discovery Set — $38" },
+        { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
+        { "type": "text", "id": "button_label_3", "label": "Tertiary button label", "default": "Wholesale enquiries" },
+        { "type": "url", "id": "button_link_3", "label": "Tertiary button link" },
+        { "type": "checkbox", "id": "use_dark_bg", "label": "Use dark background (legacy)", "default": true }
+      ]
+    },
+    {
+      "type": "image_text",
+      "name": "Legacy image+text",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "caption", "label": "Caption" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "text", "id": "button_label", "label": "Button label" },
+        { "type": "url", "id": "button_link", "label": "Button link" },
+        { "type": "select", "id": "layout", "label": "Layout",
+          "options": [
+            { "value": "image_right", "label": "Image right" },
+            { "value": "image_left", "label": "Image left" }
+          ],
+          "default": "image_right"
         },
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": "Text",
-          "default": "Join the community of creators, chefs, and wellness brands who trust Divine for the ingredients that matter most."
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Button label",
-          "default": "Explore Collections"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button link"
-        },
-        {
-          "type": "checkbox",
-          "id": "use_dark_bg",
-          "label": "Use dark background",
-          "default": true
-        }
+        { "type": "checkbox", "id": "use_alt_bg", "label": "Use alternate background", "default": false }
+      ]
+    },
+    {
+      "type": "page_intro",
+      "name": "Page intro (legacy)",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "text", "label": "Intro text" }
       ]
     }
   ],
@@ -716,75 +446,12 @@
     {
       "name": "Divine Story Page",
       "blocks": [
-        {
-          "type": "hero",
-          "settings": {
-            "caption": "Our Story",
-            "heading": "How We Got Here (And Why We're Not Stopping)"
-          }
-        },
-        {
-          "type": "intro",
-          "settings": {
-            "heading": "We Believe Good Food Should Be Simple, Honest, and Backed by Facts",
-            "text": "<p>Divine Ingredients exists because we think you deserve to know exactly what's in your food — and where it came from. We're not here to slap a label on something and call it organic. We go to the farms. We test the batches. We build relationships that last.</p><p>Whether you're creating in your kitchen, developing products, or growing your brand, we're in your corner. Not as a supplier — as your people.</p>"
-          }
-        },
-        {
-          "type": "image_text",
-          "settings": {
-            "caption": "How It Started",
-            "heading": "We Couldn't Find What We Wanted, So We Built It",
-            "text": "<p>It started with frustration. We wanted clean, organic ingredients we could actually trace back to the source — and they didn't exist in the way we needed them to. So we bought plane tickets, visited farms, and started building the kind of supply chain we wished someone else had already built.</p><p>From matcha fields in Japan to spice growers in India and tea estates in Sri Lanka, every partnership is rooted in trust, fair trade, and a shared love for doing things right.</p>",
-            "layout": "image_left"
-          }
-        },
-        {
-          "type": "image_text",
-          "settings": {
-            "caption": "Our Process",
-            "heading": "We Test Everything Because Facts Actually Matter",
-            "text": "<p>Every ingredient that carries our name has been lab-tested by independent third parties. Not some of them — all of them. Purity, potency, heavy metals, allergens. If it doesn't pass, it doesn't ship.</p><p>Zero synthetic additives. Zero fillers. Zero artificial anything. We know that sounds like every brand's tagline, but for us it's the baseline. The bare minimum. The starting point.</p>",
-            "layout": "image_right",
-            "use_alt_bg": true
-          }
-        },
-        {
-          "type": "values",
-          "settings": {
-            "caption": "Our Commitments",
-            "heading": "The Things We Won't Bend On",
-            "value_1_title": "Quality Over Everything",
-            "value_1_text": "We'd rather carry fewer products than compromise on a single one. Every ingredient is selected with intention and tested with rigor.",
-            "value_2_title": "Radical Transparency",
-            "value_2_text": "You deserve the full picture — where it's from, how it's tested, what's in it. We don't do hidden fillers or vague labels.",
-            "value_3_title": "People and Planet",
-            "value_3_text": "We partner with growers who care about sustainable practices and fair wages. Good ingredients start with good relationships.",
-            "value_4_title": "Your Success Is the Point",
-            "value_4_text": "We built this for creators, makers, and kitchen innovators. Your success is the whole point — and we're here to support every step.",
-            "use_alt_bg": false
-          }
-        },
-        {
-          "type": "image_text",
-          "settings": {
-            "caption": "Our Community",
-            "heading": "You're in Good Company",
-            "text": "<p>When you choose Divine, you're joining a community of people who genuinely care about what goes into their food, their products, and their bodies. That's not a niche — that's a movement.</p><p>From home chefs discovering the joy of real matcha to wellness brands formulating their next big thing, café owners pouring signature drinks, and creators pushing the boundaries of what good food can be — we're honored to be part of your story.</p>",
-            "button_label": "Shop All Collections",
-            "layout": "image_left",
-            "use_alt_bg": true
-          }
-        },
-        {
-          "type": "cta",
-          "settings": {
-            "heading": "Ready to Make Something Great?",
-            "text": "Join the community of creators, chefs, and wellness brands who trust Divine for the ingredients that matter most.",
-            "button_label": "Explore Collections",
-            "use_dark_bg": true
-          }
-        }
+        { "type": "intro" },
+        { "type": "pull_quote" },
+        { "type": "story_body" },
+        { "type": "values" },
+        { "type": "certs_grid" },
+        { "type": "cta" }
       ]
     }
   ]

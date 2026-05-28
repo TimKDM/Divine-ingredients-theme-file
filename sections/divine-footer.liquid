@@ -1,0 +1,209 @@
+{%- comment -%}
+  Divine Footer — dark footer matching the mockup
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-footer{
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+    padding-top: {{ section.settings.padding_top | default: 72 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 36 }}px;
+  }
+{%- endstyle -%}
+
+<footer class="d-footer">
+  <div class="d-ft">
+
+    {%- comment -%} Brand block {%- endcomment -%}
+    <div>
+      <div class="d-f-logo">
+        {%- if section.settings.logo_text != blank -%}
+          {%- assign parts = section.settings.logo_text | split: '*' -%}
+          {%- for p in parts -%}
+            {%- if forloop.index0 | modulo: 2 == 1 -%}<em>{{ p }}</em>{%- else -%}{{ p }}{%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {{ shop.name }}
+        {%- endif -%}
+      </div>
+      {%- if section.settings.description != blank -%}
+        <div class="d-f-desc">{{ section.settings.description }}</div>
+      {%- endif -%}
+      <div class="d-f-socials">
+        {%- if section.settings.instagram != blank -%}
+          <a href="{{ section.settings.instagram }}" class="d-fsoc" aria-label="Instagram">ig</a>
+        {%- endif -%}
+        {%- if section.settings.tiktok != blank -%}
+          <a href="{{ section.settings.tiktok }}" class="d-fsoc" aria-label="TikTok">tk</a>
+        {%- endif -%}
+        {%- if section.settings.pinterest != blank -%}
+          <a href="{{ section.settings.pinterest }}" class="d-fsoc" aria-label="Pinterest">pt</a>
+        {%- endif -%}
+        {%- if section.settings.facebook != blank -%}
+          <a href="{{ section.settings.facebook }}" class="d-fsoc" aria-label="Facebook">fb</a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} Menu columns from blocks {%- endcomment -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'menu_column' -%}
+        <div {{ block.shopify_attributes }}>
+          {%- if block.settings.heading != blank -%}
+            <div class="d-f-col-h">{{ block.settings.heading }}</div>
+          {%- endif -%}
+          {%- if block.settings.menu != blank -%}
+            <ul class="d-fl">
+              {%- for link in block.settings.menu.links -%}
+                {%- assign is_special = false -%}
+                {%- if link.title contains '→' -%}{%- assign is_special = true -%}{%- endif -%}
+                <li><a href="{{ link.url }}"{% if is_special %} class="d-sp"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+          {%- if block.settings.heading_2 != blank -%}
+            <div class="d-f-col-h" style="margin-top:24px">{{ block.settings.heading_2 }}</div>
+          {%- endif -%}
+          {%- if block.settings.menu_2 != blank -%}
+            <ul class="d-fl">
+              {%- for link in block.settings.menu_2.links -%}
+                {%- assign is_special = false -%}
+                {%- if link.title contains '→' -%}{%- assign is_special = true -%}{%- endif -%}
+                <li><a href="{{ link.url }}"{% if is_special %} class="d-sp"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="d-fb">
+    <div class="d-fb-legal">
+      © {{ 'now' | date: '%Y' }}, {{ shop.name }}.
+      {%- if section.settings.privacy_link != blank -%}<a href="{{ section.settings.privacy_link }}">Privacy</a>{%- endif -%}
+      {%- if section.settings.terms_link != blank -%}<a href="{{ section.settings.terms_link }}">Terms</a>{%- endif -%}
+      {%- if section.settings.contact_link != blank -%}<a href="{{ section.settings.contact_link }}">Contact</a>{%- endif -%}
+    </div>
+    <div class="d-fb-meta">{{ section.settings.locale_text }}</div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Divine Footer",
+  "tag": "section",
+  "class": "divine-footer-section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text (use * for italics)",
+      "default": "Divine *Ingredients*"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Brand description",
+      "default": "Farm-sourced teas, superfoods, and botanicals — every batch tested, every ingredient real."
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "tiktok",
+      "label": "TikTok URL"
+    },
+    {
+      "type": "url",
+      "id": "pinterest",
+      "label": "Pinterest URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "header",
+      "content": "Bottom bar"
+    },
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "Privacy link"
+    },
+    {
+      "type": "url",
+      "id": "terms_link",
+      "label": "Terms link"
+    },
+    {
+      "type": "url",
+      "id": "contact_link",
+      "label": "Contact link"
+    },
+    {
+      "type": "text",
+      "id": "locale_text",
+      "label": "Locale text",
+      "default": "CA ($) · US ($)"
+    },
+    {
+      "type": "header",
+      "content": "Colors & spacing"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 24,
+      "max": 160,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 12,
+      "max": 100,
+      "step": 4,
+      "default": 36,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_column",
+      "name": "Menu column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Shop" },
+        { "type": "link_list", "id": "menu", "label": "Menu" },
+        { "type": "header", "content": "Optional second list" },
+        { "type": "text", "id": "heading_2", "label": "Second heading" },
+        { "type": "link_list", "id": "menu_2", "label": "Second menu" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Footer",
+      "blocks": [
+        { "type": "menu_column", "settings": { "heading": "Shop Teas" } },
+        { "type": "menu_column", "settings": { "heading": "Shop Powders" } },
+        { "type": "menu_column", "settings": { "heading": "Help" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
