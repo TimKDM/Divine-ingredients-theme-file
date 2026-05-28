@@ -1,0 +1,198 @@
+{%- comment -%}
+  Divine Powders Split — image left + numbered list right
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-powders{
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .d-powders-body{
+    padding-top: {{ section.settings.padding_top | default: 88 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+  }
+  #shopify-section-{{ section.id }} .d-sec-h{
+    font-size: {{ section.settings.heading_font_size | default: 52 }}px;
+  }
+  #shopify-section-{{ section.id }} .d-sec-label{
+    font-size: {{ section.settings.caption_font_size | default: 11 }}px;
+  }
+{%- endstyle -%}
+
+<section class="d-powders d-reveal">
+  <div class="d-powders-img-wrap">
+    {%- if section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 1400 | image_tag:
+        loading: 'lazy', widths: '500, 750, 1000, 1400', sizes: '(min-width: 1100px) 50vw, 100vw',
+        class: 'd-powders-img', alt: section.settings.image.alt | default: section.settings.title
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'd-powders-img placeholder-svg' }}
+    {%- endif -%}
+  </div>
+  <div class="d-powders-body">
+    {%- if section.settings.caption != blank -%}
+      <div class="d-sec-label">{{ section.settings.caption }}</div>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="d-sec-h" style="margin-bottom:16px">{{ section.settings.title | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p class="d-sec-p" style="margin-bottom:36px;max-width:400px">{{ section.settings.text }}</p>
+    {%- endif -%}
+
+    <div class="d-powder-list">
+      {%- for block in section.blocks -%}
+        {%- assign row_link = block.settings.link | default: '#' -%}
+        {%- if block.settings.collection != blank and block.settings.link == blank -%}
+          {%- assign row_link = block.settings.collection.url -%}
+        {%- endif -%}
+        <a href="{{ row_link }}" class="d-powder-row" {{ block.shopify_attributes }}>
+          <span class="d-pr-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+          <div>
+            <div class="d-pr-title">{{ block.settings.title | default: block.settings.collection.title }}</div>
+            <div class="d-pr-desc">{{ block.settings.description }}</div>
+          </div>
+          <span class="d-pr-arrow">→</span>
+        </a>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '/collections/powders' }}" class="d-btn-t">{{ section.settings.button_label }} →</a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Powders",
+  "tag": "section",
+  "class": "divine-powders-section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Left-side image"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption / kicker",
+      "default": "14 Products"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Superfood<br><em>powders</em></p>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description",
+      "default": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Bottom button label",
+      "default": "Browse all powders"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Bottom button link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Right-side background color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 24,
+      "max": 80,
+      "step": 1,
+      "default": 52,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "caption_font_size",
+      "label": "Caption font size",
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "default": 11,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "powder",
+      "name": "Powder row",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Mushroom Powders" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Lion's Mane · Reishi · Cordyceps" },
+        { "type": "url", "id": "link", "label": "Custom link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Powders",
+      "blocks": [
+        { "type": "powder", "settings": { "title": "Mushroom Powders", "description": "Lion's Mane · Reishi · Cordyceps" } },
+        { "type": "powder", "settings": { "title": "Fruit Powders", "description": "Blueberry · Taro · Tart Cherries · Rose Petals · Date" } },
+        { "type": "powder", "settings": { "title": "Superfood Blends", "description": "Ashwagandha · Rhodiola · Coconut Milk · Molasses · Coffee Cherry" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

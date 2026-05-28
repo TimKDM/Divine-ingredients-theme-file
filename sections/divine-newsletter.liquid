@@ -1,117 +1,86 @@
+{%- liquid
+  assign heading_text = ''
+  assign subtitle_text = ''
+  for block in section.blocks
+    case block.type
+      when 'heading'
+        assign heading_text = block.settings.heading
+      when 'subtitle'
+        assign subtitle_text = block.settings.text
+    endcase
+  endfor
+-%}
+
 {%- style -%}
-  .divine-newsletter {
-    background-color: {{ section.settings.background_color | default: '#1d1d1d' }};
-    {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-      color: {{ section.settings.text_color }};
-    {% endif %}
-    {% if section.settings.background_image != blank %}
-      background-image: url({{ section.settings.background_image | image_url: width: 1920 }});
-      background-size: cover;
-      background-position: center;
-    {% endif %}
-  }
-  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    .divine-newsletter h2 {
-      color: {{ section.settings.text_color }};
-    }
-  {% endif %}
-  {% if section.settings.button_bg != blank and section.settings.button_bg != 'rgba(0,0,0,0)' %}
-    .divine-newsletter button[type="submit"] {
-      background-color: {{ section.settings.button_bg }};
-    }
-  {% endif %}
-  {% if section.settings.button_color != blank and section.settings.button_color != 'rgba(0,0,0,0)' %}
-    .divine-newsletter button[type="submit"] {
-      color: {{ section.settings.button_color }};
-    }
-  {% endif %}
-  .divine-newsletter-section {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  #shopify-section-{{ section.id }} .d-email{
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top | default: 96 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
   }
-  @media screen and (min-width: 768px) {
-    .divine-newsletter-section {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+  #shopify-section-{{ section.id }} .d-email .d-sec-h{
+    font-size: {{ section.settings.heading_font_size | default: 52 }}px;
+    {% if section.settings.text_color != blank %}color:{{ section.settings.text_color }};{% endif %}
   }
-  .divine-newsletter-section .divine-newsletter__subtitle {
-    font-size: {{ section.settings.body_font_size | default: 16 }}px;
+  {% if section.settings.text_color != blank %}
+  #shopify-section-{{ section.id }} .d-email .d-email-desc,
+  #shopify-section-{{ section.id }} .d-email .d-eperk{
+    color: {{ section.settings.text_color }};
   }
-  .divine-newsletter-section h2 {
-    font-size: {{ section.settings.heading_font_size | default: 30 }}px;
-  }
+  {% endif %}
+  {% if section.settings.button_bg != blank %}
+  #shopify-section-{{ section.id }} .d-email-btn{ background:{{ section.settings.button_bg }}; }
+  {% endif %}
+  {% if section.settings.button_color != blank %}
+  #shopify-section-{{ section.id }} .d-email-btn{ color:{{ section.settings.button_color }}; }
+  {% endif %}
 {%- endstyle -%}
 
-<section class="divine-newsletter">
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when 'heading' -%}
-        {%- if block.settings.heading != blank -%}
-          <h2 {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
-        {%- endif -%}
-
-      {%- when 'subtitle' -%}
-        {%- if block.settings.text != blank -%}
-          <p class="divine-newsletter__subtitle" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
-        {%- endif -%}
-
-      {%- when 'email_form' -%}
-        <div {{ block.shopify_attributes }}>
-          {%- form 'customer', id: 'DivineNewsletter', class: 'divine-newsletter__form' -%}
-            <input type="hidden" name="contact[tags]" value="newsletter">
-            {%- if section.settings.show_first_name -%}
-              <input
-                id="DivineNewsletterName--{{ section.id }}"
-                type="text"
-                name="contact[first_name]"
-                autocomplete="given-name"
-                placeholder="{{ section.settings.name_placeholder | default: 'First name' }}"
-              >
-            {%- endif -%}
-            <input
-              id="DivineNewsletterEmail--{{ section.id }}"
-              type="email"
-              name="contact[email]"
-              value="{{ form.email }}"
-              aria-required="true"
-              autocorrect="off"
-              autocapitalize="off"
-              autocomplete="email"
-              {% if form.errors %}
-                autofocus
-                aria-invalid="true"
-                aria-describedby="DivineNewsletter-error"
-              {% elsif form.posted_successfully? %}
-                aria-describedby="DivineNewsletter-success"
-              {% endif %}
-              placeholder="{{ section.settings.input_placeholder | default: 'Enter your email' }}"
-              required
-            >
-            <button type="submit">{{ section.settings.button_label | default: 'Subscribe' }}</button>
-          {%- endform -%}
-
-          {%- if form.errors -%}
-            <p class="divine-newsletter__message divine-newsletter__message--error" id="DivineNewsletter-error">
-              {{ form.errors.translated_fields.email | capitalize }}
-              {{ form.errors.messages.email }}
-            </p>
+<section class="d-email d-reveal">
+  <div>
+    {%- if section.settings.caption != blank -%}
+      <div class="d-sec-label">{{ section.settings.caption }}</div>
+    {%- endif -%}
+    {%- if heading_text != blank -%}
+      <h2 class="d-sec-h">{{ heading_text }}</h2>
+    {%- endif -%}
+    {%- if subtitle_text != blank -%}
+      <p class="d-email-desc">{{ subtitle_text }}</p>
+    {%- endif -%}
+  </div>
+  <div>
+    {%- if section.blocks.size > 0 -%}
+      <div class="d-email-perks">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'perk' -%}
+            <div class="d-eperk" {{ block.shopify_attributes }}>
+              <div class="d-eperk-ck">✓</div>
+              {{ block.settings.text }}
+            </div>
           {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
 
-          {%- if form.posted_successfully? -%}
-            <p class="divine-newsletter__message divine-newsletter__message--success" id="DivineNewsletter-success">
-              {{ 'newsletter.success' | t }}
-            </p>
-          {%- endif -%}
-        </div>
-    {%- endcase -%}
-  {%- endfor -%}
-
-  {%- if section.settings.privacy_text != blank -%}
-    <p class="divine-newsletter__privacy">{{ section.settings.privacy_text }}</p>
-  {%- endif -%}
+    {%- form 'customer', class: 'd-email-form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="d-email-row">
+        {%- if section.settings.show_first_name -%}
+          <input class="d-email-inp" type="text" name="contact[first_name]" placeholder="{{ section.settings.name_placeholder | default: 'First name' }}" aria-label="First name" style="max-width:140px;border-right:1px solid var(--d-border)">
+        {%- endif -%}
+        <input class="d-email-inp" type="email" name="contact[email]" placeholder="{{ section.settings.input_placeholder | default: 'your@email.com' }}" aria-label="Email" required>
+        <button class="d-email-btn" type="submit">{{ section.settings.button_label | default: 'Begin Your Ritual' }}</button>
+      </div>
+      {%- if form.posted_successfully? -%}
+        <p class="d-email-fine" style="color:var(--d-forest)">Thanks! Check your inbox for your welcome offer.</p>
+      {%- elsif form.errors -%}
+        <p class="d-email-fine" style="color:#a83232">{{ form.errors | default_errors }}</p>
+      {%- else -%}
+        <p class="d-email-fine">{{ section.settings.privacy_text | default: 'No spam. Unsubscribe anytime.' }}</p>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
 </section>
 
 {% schema %}
@@ -122,71 +91,68 @@
   "settings": [
     {
       "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "Join the Divine World"
+    },
+    {
+      "type": "text",
       "id": "input_placeholder",
-      "label": "Input placeholder",
-      "default": "Your email address"
+      "label": "Email placeholder",
+      "default": "your@email.com"
     },
     {
       "type": "text",
       "id": "button_label",
       "label": "Button label",
-      "default": "Count Me In"
+      "default": "Begin Your Ritual"
     },
     {
       "type": "text",
       "id": "privacy_text",
-      "label": "Privacy disclaimer",
-      "default": "No spam. No nonsense. Unsubscribe whenever."
+      "label": "Privacy/fine print",
+      "default": "No spam. Unsubscribe anytime."
     },
     {
       "type": "checkbox",
       "id": "show_first_name",
       "label": "Show first name field",
-      "default": true
+      "default": false
     },
     {
       "type": "text",
       "id": "name_placeholder",
-      "label": "Name placeholder",
+      "label": "First name placeholder",
       "default": "First name"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background color",
-      "default": "#1d1d1d"
+      "label": "Background color"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "Text color",
-      "default": "#ffffff"
+      "label": "Text color"
     },
     {
       "type": "color",
       "id": "button_bg",
-      "label": "Button background",
-      "default": "#d4c4d9"
+      "label": "Button background"
     },
     {
       "type": "color",
       "id": "button_color",
-      "label": "Button text color",
-      "default": "#1d1d1d"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background image"
+      "label": "Button text color"
     },
     {
       "type": "range",
       "id": "padding_top",
       "label": "Padding top",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
-      "default": 40,
+      "default": 96,
       "unit": "px"
     },
     {
@@ -194,9 +160,9 @@
       "id": "padding_bottom",
       "label": "Padding bottom",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
-      "default": 52,
+      "default": 96,
       "unit": "px"
     },
     {
@@ -226,7 +192,7 @@
       "min": 12,
       "max": 22,
       "step": 1,
-      "default": 16,
+      "default": 15,
       "unit": "px"
     },
     {
@@ -234,9 +200,9 @@
       "id": "heading_font_size",
       "label": "Heading font size",
       "min": 18,
-      "max": 56,
+      "max": 72,
       "step": 1,
-      "default": 30,
+      "default": 52,
       "unit": "px"
     }
   ],
@@ -246,12 +212,7 @@
       "name": "Heading",
       "limit": 1,
       "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Stay in the Loop"
-        }
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Get 20% off your first order" }
       ]
     },
     {
@@ -259,12 +220,7 @@
       "name": "Subtitle",
       "limit": 1,
       "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Subtitle text",
-          "default": "Get 10% off your first order, plus recipes, wellness inspo, and first dibs on new drops."
-        }
+        { "type": "text", "id": "text", "label": "Subtitle text", "default": "New arrivals, recipes from our community, and seasonal drops. The good stuff only." }
       ]
     },
     {
@@ -272,6 +228,13 @@
       "name": "Email form",
       "limit": 1,
       "settings": []
+    },
+    {
+      "type": "perk",
+      "name": "Perk",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Perk text", "default": "20% off your first order with code WELCOME" }
+      ]
     }
   ],
   "presets": [
@@ -280,7 +243,10 @@
       "blocks": [
         { "type": "heading" },
         { "type": "subtitle" },
-        { "type": "email_form" }
+        { "type": "email_form" },
+        { "type": "perk", "settings": { "text": "20% off your first order with code WELCOME" } },
+        { "type": "perk", "settings": { "text": "Free shipping on orders over $100" } },
+        { "type": "perk", "settings": { "text": "First access to new products & seasonal harvests" } }
       ]
     }
   ]

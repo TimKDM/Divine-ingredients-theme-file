@@ -1,0 +1,197 @@
+{%- comment -%}
+  Divine Discovery Set — dark CTA card with image right
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-discovery{
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .d-disc-body{
+    padding-top: {{ section.settings.padding_top | default: 88 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+  }
+  #shopify-section-{{ section.id }} .d-disc-h{
+    font-size: {{ section.settings.heading_font_size | default: 50 }}px;
+  }
+{%- endstyle -%}
+
+<section class="d-discovery d-reveal">
+  <div class="d-disc-body">
+    {%- if section.settings.caption != blank -%}
+      <div class="d-disc-label">{{ section.settings.caption }}</div>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="d-disc-h">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p class="d-disc-p">{{ section.settings.text }}</p>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="d-disc-includes">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'include' -%}
+            <div class="d-di" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.price != blank -%}
+      <div class="d-disc-price-row">
+        <div class="d-disc-price">{{ section.settings.price }}</div>
+        {%- if section.settings.price_note != blank -%}
+          <div class="d-disc-note">{{ section.settings.price_note }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '/products/discovery-set' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
+    {%- endif -%}
+  </div>
+  <div class="d-disc-img-wrap">
+    {%- if section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 1400 | image_tag:
+        loading: 'lazy', widths: '500, 750, 1000, 1400', sizes: '(min-width: 1100px) 50vw, 100vw',
+        class: 'd-disc-img', alt: section.settings.image.alt | default: section.settings.heading
+      }}
+    {%- else -%}
+      {{ 'product-2' | placeholder_svg_tag: 'd-disc-img placeholder-svg' }}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Discovery",
+  "tag": "section",
+  "class": "divine-discovery-section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Right-side image"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption / kicker",
+      "default": "New to Divine Ingredients?"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>The <em>Discovery Set</em></p>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description",
+      "default": "Three of our most loved teas in one beautifully curated box. The easiest way to find your ritual — without committing to a full size first."
+    },
+    {
+      "type": "text",
+      "id": "price",
+      "label": "Price (display)",
+      "default": "$38"
+    },
+    {
+      "type": "text",
+      "id": "price_note",
+      "label": "Price note",
+      "default": "CAD · Free shipping"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get the Discovery Set"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Left-side background"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 88,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": -48,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 24,
+      "max": 80,
+      "step": 1,
+      "default": 50,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "include",
+      "name": "Included item",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "3 handpicked bestselling teas" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Discovery",
+      "blocks": [
+        { "type": "include", "settings": { "text": "3 handpicked bestselling teas" } },
+        { "type": "include", "settings": { "text": "USDA Organic · Lab tested" } },
+        { "type": "include", "settings": { "text": "Free shipping always included" } },
+        { "type": "include", "settings": { "text": "Perfect as a gift" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

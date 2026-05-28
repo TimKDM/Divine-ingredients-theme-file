@@ -1,0 +1,132 @@
+{%- comment -%}
+  Divine Sticky Nav — Cormorant logo, link list, search + cart icons
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-nav{
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+    height: {{ section.settings.nav_height | default: 64 }}px;
+  }
+  {% if section.settings.text_color != blank %}
+  #shopify-section-{{ section.id }} .d-nav-links a,
+  #shopify-section-{{ section.id }} .d-nav-icon{ color:{{ section.settings.text_color }}; }
+  {% endif %}
+{%- endstyle -%}
+
+<nav class="d-nav" role="navigation" aria-label="Primary">
+  <a href="{{ routes.root_url }}" class="d-nav-logo">
+    {%- if section.settings.logo_text != blank -%}
+      {%- assign parts = section.settings.logo_text | split: '*' -%}
+      {%- for p in parts -%}
+        {%- if forloop.index0 | modulo: 2 == 1 -%}<em>{{ p }}</em>{%- else -%}{{ p }}{%- endif -%}
+      {%- endfor -%}
+    {%- else -%}
+      {{ shop.name }}
+    {%- endif -%}
+  </a>
+
+  {%- if section.settings.menu != blank -%}
+    <ul class="d-nav-links">
+      {%- for link in section.settings.menu.links -%}
+        {%- assign is_highlight = false -%}
+        {%- if link.title contains '*' -%}{%- assign is_highlight = true -%}{%- endif -%}
+        <li>
+          <a href="{{ link.url }}"
+            class="{% if link.active %}d-nav-active{% endif %}{% if is_highlight %} d-nav-hl{% endif %}">
+            {{ link.title | remove: '*' }}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <div class="d-nav-icons">
+    {%- if section.settings.show_search -%}
+      <a href="{{ routes.search_url }}" class="d-nav-icon" aria-label="Search" title="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+      </a>
+    {%- endif -%}
+    {%- if shop.customer_accounts_enabled and section.settings.show_account -%}
+      <a href="{{ routes.account_url }}" class="d-nav-icon" aria-label="Account" title="Account">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </a>
+    {%- endif -%}
+    <a href="{{ routes.cart_url }}" class="d-nav-icon" aria-label="Cart ({{ cart.item_count }} items)" title="Cart">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      {%- if cart.item_count > 0 -%}
+        <span style="position:absolute;background:var(--d-forest);color:var(--d-beige-lt);font-size:9px;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;margin-left:18px;margin-top:-14px;font-family:var(--d-font-sans);font-weight:500;">{{ cart.item_count }}</span>
+      {%- endif -%}
+    </a>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Divine Nav",
+  "tag": "section",
+  "class": "divine-nav-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text (use * around italic portion, e.g. Divine *Ingredients*)",
+      "info": "Wrap a word in asterisks to italicize it",
+      "default": "Divine *Ingredients*"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu",
+      "info": "Add asterisk * to the start or end of a link title to highlight it (e.g. *Wholesale*)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search icon",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_account",
+      "label": "Show account icon",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "range",
+      "id": "nav_height",
+      "label": "Nav height",
+      "min": 48,
+      "max": 96,
+      "step": 4,
+      "default": 64,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Nav"
+    }
+  ]
+}
+{% endschema %}

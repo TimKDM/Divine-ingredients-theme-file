@@ -1,214 +1,43 @@
 {%- style -%}
-  .divine-cert-bar-section {
-    --body-font-size: {{ section.settings.body_font_size | default: 10 }}px;
-    --heading-font-size: {{ section.settings.heading_font_size | default: 11 }}px;
-  }
-  .divine-cert-bar__heading {
-    font-size: var(--heading-font-size) !important;
-  }
-  .divine-cert-bar-section {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  #shopify-section-{{ section.id }} .d-certs{
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
-    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-      background-color: {{ section.settings.background_color }};
-    {% endif %}
+    padding-top: {{ section.settings.padding_top | default: 28 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 28 }}px;
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
   }
-  @media screen and (min-width: 768px) {
-    .divine-cert-bar-section {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+  #shopify-section-{{ section.id }} .d-cert{
+    font-size: {{ section.settings.body_font_size | default: 11 }}px;
+  }
+  #shopify-section-{{ section.id }} .d-certs-label{
+    font-size: {{ section.settings.heading_font_size | default: 10 }}px;
   }
 {%- endstyle -%}
 
-<section class="divine-cert-bar{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+<div class="d-certs d-reveal">
   {%- if section.settings.heading != blank -%}
-    <p class="divine-cert-bar__heading">{{ section.settings.heading }}</p>
+    <div class="d-certs-label">{{ section.settings.heading }}</div>
   {%- endif -%}
-
-  <div class="divine-cert-bar__icons">
-    {%- for block in section.blocks -%}
-      <div class="divine-cert-bar__item" {{ block.shopify_attributes }}>
-        {%- if block.settings.image != blank -%}
-          {{
-            block.settings.image
-            | image_url: width: 120
-            | image_tag:
-              loading: 'lazy',
-              width: 60,
-              height: 60,
-              class: 'divine-cert-bar__logo'
-          }}
-        {%- else -%}
-          <div class="divine-cert-bar__icon">
-            {%- case block.settings.icon -%}
-              {%- when 'usda' -%}
-                {%- comment -%} USDA Organic seal — outer ring + inner shield shape + text {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <circle cx="32" cy="32" r="26"/>
-                  <path d="M32 10c-4 4-12 7-18 8 1 14 7 24 18 34 11-10 17-20 18-34-6-1-14-4-18-8z" stroke-width="1.2" fill="none"/>
-                  <text x="32" y="30" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">USDA</text>
-                  <text x="32" y="40" text-anchor="middle" font-size="6" font-weight="400" fill="currentColor" stroke="none" font-family="sans-serif">ORGANIC</text>
-                </svg>
-              {%- when 'ccof' -%}
-                {%- comment -%} CCOF Certified — circle with leaf arc + text {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <path d="M20 44c2-12 8-20 20-26-2 10-6 18-14 22" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M26 40c1-6 4-12 10-16" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-                  <text x="32" y="23" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">CCOF</text>
-                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="500" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.5">CERTIFIED</text>
-                </svg>
-              {%- when 'non-gmo' -%}
-                {%- comment -%} Non-GMO Project Verified — butterfly outline {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <path d="M32 22c-6-8-16-10-18-4s4 14 18 20c14-6 20-14 18-20s-12-4-18 4z" stroke-width="1.3" stroke-linejoin="round"/>
-                  <line x1="32" y1="18" x2="32" y2="42" stroke-width="1.2"/>
-                  <path d="M28 16l4-4 4 4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                  <text x="32" y="52" text-anchor="middle" font-size="5.5" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">NON-GMO</text>
-                </svg>
-              {%- when 'lab-tested' -%}
-                {%- comment -%} Lab Tested — Erlenmeyer flask with checkmark {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <path d="M25 14h14M27 14v14l-8 14a2 2 0 001.7 3h22.6a2 2 0 001.7-3l-8-14V14" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <line x1="22" y1="37" x2="42" y2="37" stroke-width="0.8" opacity="0.4"/>
-                  <polyline points="28,39 31,42 37,35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.3">LAB TESTED</text>
-                </svg>
-              {%- when 'vegan' -%}
-                {%- comment -%} Vegan — V with leaf sprouting from it {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <path d="M20 16l12 28 12-28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M36 28c2-6 6-10 12-12-1 8-5 14-12 16" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M40 24c1-3 3-6 6-7" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
-                  <text x="32" y="56" text-anchor="middle" font-size="5.5" font-weight="700" fill="currentColor" stroke="none" font-family="sans-serif">VEGAN</text>
-                </svg>
-              {%- when 'fair-trade' -%}
-                {%- comment -%} Fair Trade — person figure with bowl/globe {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <circle cx="32" cy="18" r="4" stroke-width="1.3"/>
-                  <path d="M24 28c2-2 5-4 8-4s6 2 8 4" stroke-width="1.3" stroke-linecap="round"/>
-                  <path d="M26 28l-4 8M38 28l4 8" stroke-width="1.3" stroke-linecap="round"/>
-                  <path d="M28 36h8" stroke-width="1.3" stroke-linecap="round"/>
-                  <text x="32" y="52" text-anchor="middle" font-size="4.5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.3">FAIR TRADE</text>
-                </svg>
-              {%- when 'rainforest' -%}
-                {%- comment -%} Rainforest Alliance — frog on leaf outline {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <path d="M18 42c4-2 10-3 16-2 6 1 10 4 14 2" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M22 40c2-4 4-10 4-16" stroke-width="1.3" stroke-linecap="round"/>
-                  <path d="M26 24c0-4 2-6 6-6s6 2 6 6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="28" cy="20" r="1.5" fill="currentColor" stroke="none"/>
-                  <circle cx="36" cy="20" r="1.5" fill="currentColor" stroke="none"/>
-                  <path d="M32 24c-2 2-4 6-4 10 0 3 2 6 6 6s6-2 7-5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M36 28c2-1 5-1 7 1" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-                  <path d="M37 32c2 0 4 0 6 1" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-                  <text x="32" y="56" text-anchor="middle" font-size="4" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif" letter-spacing="0.2">RAINFOREST</text>
-                </svg>
-              {%- when 'kosher' -%}
-                {%- comment -%} Kosher — circle-K mark {%- endcomment -%}
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="32" cy="32" r="30"/>
-                  <circle cx="32" cy="30" r="16" stroke-width="1.3"/>
-                  <path d="M27 20v20M27 30l10-10M27 30l10 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <text x="32" y="56" text-anchor="middle" font-size="5" font-weight="600" fill="currentColor" stroke="none" font-family="sans-serif">KOSHER</text>
-                </svg>
-            {%- endcase -%}
-          </div>
-        {%- endif -%}
-        {%- if block.settings.label != blank -%}
-          <span class="divine-cert-bar__label">{{ block.settings.label }}</span>
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
-  </div>
-</section>
-
-<style>
-  .divine-cert-bar {
-    text-align: center;
-    padding: 32px 20px;
-  }
-  .divine-cert-bar__heading {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-text-muted, #888);
-    margin: 0 0 20px;
-  }
-  .divine-cert-bar__icons {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 749px) {
-    .divine-cert-bar__icons {
-      gap: 20px;
-    }
-  }
-  .divine-cert-bar__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-  .divine-cert-bar__logo {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
-  }
-  .divine-cert-bar__logo:hover {
-    opacity: 1;
-  }
-  .divine-cert-bar__icon {
-    width: 60px;
-    height: 60px;
-    color: var(--color-text-muted, #888);
-    transition: color 0.2s ease;
-  }
-  .divine-cert-bar__icon:hover {
-    color: var(--color-text, #333);
-  }
-  .divine-cert-bar__icon svg {
-    width: 100%;
-    height: 100%;
-  }
-  .divine-cert-bar__label {
-    font-size: var(--body-font-size);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-text-muted, #888);
-  }
-</style>
+  {%- for block in section.blocks -%}
+    <div class="d-cert" {{ block.shopify_attributes }}>
+      <div class="d-cert-dot"></div>
+      {{- block.settings.label -}}
+    </div>
+  {%- endfor -%}
+</div>
 
 {% schema %}
 {
-  "name": "Divine Certifications",
+  "name": "Divine Cert Bar",
   "tag": "section",
   "class": "divine-cert-bar-section",
-  "max_blocks": 8,
+  "max_blocks": 16,
   "settings": [
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "default": "Trusted & Certified"
+      "label": "Heading / label",
+      "default": "Certified by"
     },
     {
       "type": "checkbox",
@@ -226,9 +55,9 @@
       "id": "padding_top",
       "label": "Padding top",
       "min": 0,
-      "max": 60,
+      "max": 100,
       "step": 4,
-      "default": 32,
+      "default": 28,
       "unit": "px"
     },
     {
@@ -236,9 +65,9 @@
       "id": "padding_bottom",
       "label": "Padding bottom",
       "min": 0,
-      "max": 60,
+      "max": 100,
       "step": 4,
-      "default": 32,
+      "default": 28,
       "unit": "px"
     },
     {
@@ -264,21 +93,21 @@
     {
       "type": "range",
       "id": "body_font_size",
-      "label": "Body font size",
+      "label": "Pill text size",
       "min": 8,
-      "max": 22,
+      "max": 18,
       "step": 1,
-      "default": 10,
+      "default": 11,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "heading_font_size",
-      "label": "Heading font size",
+      "label": "Label size",
       "min": 8,
-      "max": 32,
+      "max": 18,
       "step": 1,
-      "default": 11,
+      "default": 10,
       "unit": "px"
     }
   ],
@@ -287,46 +116,33 @@
       "type": "cert",
       "name": "Certification",
       "settings": [
-        {
-          "type": "select",
-          "id": "icon",
-          "label": "Icon",
+        { "type": "text", "id": "label", "label": "Label", "default": "USDA Organic" },
+        { "type": "image_picker", "id": "image", "label": "Logo (legacy, unused)" },
+        { "type": "select", "id": "icon", "label": "Icon (legacy, unused)",
           "options": [
-            { "value": "usda", "label": "USDA Organic" },
-            { "value": "ccof", "label": "CCOF Certified" },
+            { "value": "usda", "label": "USDA" },
+            { "value": "ccof", "label": "CCOF" },
             { "value": "non-gmo", "label": "Non-GMO" },
             { "value": "lab-tested", "label": "Lab Tested" },
             { "value": "vegan", "label": "Vegan" },
             { "value": "fair-trade", "label": "Fair Trade" },
             { "value": "rainforest", "label": "Rainforest Alliance" },
             { "value": "kosher", "label": "Kosher" }
-          ],
-          "default": "usda"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Custom logo (overrides icon)",
-          "info": "Upload actual cert logos for best results. 120x120px recommended."
-        },
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Label (optional)",
-          "info": "Short text below the icon"
-        }
+          ], "default": "usda" }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Divine Certifications",
+      "name": "Divine Cert Bar",
       "blocks": [
-        { "type": "cert", "settings": { "icon": "usda", "label": "USDA Organic" } },
-        { "type": "cert", "settings": { "icon": "ccof", "label": "CCOF Certified" } },
-        { "type": "cert", "settings": { "icon": "non-gmo", "label": "Non-GMO" } },
-        { "type": "cert", "settings": { "icon": "lab-tested", "label": "Lab Tested" } },
-        { "type": "cert", "settings": { "icon": "vegan", "label": "Vegan" } }
+        { "type": "cert", "settings": { "label": "USDA Organic" } },
+        { "type": "cert", "settings": { "label": "CCOF Certified" } },
+        { "type": "cert", "settings": { "label": "Lab Tested Every Batch" } },
+        { "type": "cert", "settings": { "label": "Non-GMO" } },
+        { "type": "cert", "settings": { "label": "Fair Trade" } },
+        { "type": "cert", "settings": { "label": "Rainforest Alliance" } },
+        { "type": "cert", "settings": { "label": "Woman Owned" } }
       ]
     }
   ]

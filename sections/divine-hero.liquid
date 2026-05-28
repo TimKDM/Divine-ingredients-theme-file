@@ -1,99 +1,79 @@
+{%- liquid
+  assign kicker_text = ''
+  assign btn1_label = ''
+  assign btn1_link = ''
+  assign btn2_label = ''
+  assign btn2_link = ''
+  for block in section.blocks
+    case block.type
+      when 'badge'
+        assign kicker_text = block.settings.text
+      when 'buttons'
+        assign btn1_label = block.settings.button_label_1
+        assign btn1_link = block.settings.button_link_1
+        assign btn2_label = block.settings.button_label_2
+        assign btn2_link = block.settings.button_link_2
+    endcase
+  endfor
+-%}
+
 {%- style -%}
-  #shopify-section-{{ section.id }} {
+  #shopify-section-{{ section.id }} .d-hero{
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
+    {% if section.settings.image_height != blank and section.settings.image_height != 0 %}
+      height: {{ section.settings.image_height }}vh;
+    {% endif %}
   }
-  #shopify-section-{{ section.id }} .divine-hero__subtitle {
-    font-size: {{ section.settings.body_font_size | default: 16 }}px;
-  }
-  #shopify-section-{{ section.id }} .divine-hero h1 {
-    font-size: {{ section.settings.heading_font_size | default: 32 }}px;
-    max-width: 16em;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
-  }
-  @media screen and (min-width: 1440px) {
-    #shopify-section-{{ section.id }} .divine-hero h1 {
-      max-width: 18em;
-    }
-  }
-  #shopify-section-{{ section.id }} .divine-hero__badge {
-    font-size: {{ section.settings.badge_font_size | default: 10 }}px;
-  }
-  {% if section.settings.image_height != blank and section.settings.image_height != 0 %}
-    #shopify-section-{{ section.id }} .divine-hero,
-    #shopify-section-{{ section.id }} .divine-hero__content {
-      min-height: {{ section.settings.image_height }}vh;
-    }
-  {% endif %}
   {% if section.settings.overlay_opacity != blank %}
-    #shopify-section-{{ section.id }} .divine-hero::after {
+    #shopify-section-{{ section.id }} .d-hero-overlay{
       opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     }
   {% endif %}
 {%- endstyle -%}
 
-<section class="divine-hero">
+<section class="d-hero">
   {%- if section.settings.video_url != blank -%}
-    {%- assign hero_autoplay = section.settings.autoplay -%}
-    {%- assign hero_loop = section.settings.loop -%}
-    {%- assign hero_muted = section.settings.muted -%}
-    <div class="divine-hero__image divine-hero__image--video">
-      {{
-        section.settings.video_url
-        | external_video_url: autoplay: hero_autoplay, loop: hero_loop, muted: hero_muted
-        | external_video_tag: loading: 'lazy'
-      }}
+    <div class="d-hero-media">
+      {{ section.settings.video_url | external_video_url: autoplay: true, loop: true, muted: true | external_video_tag: loading: 'lazy', class: 'd-hero-media' }}
     </div>
+  {%- elsif section.settings.image != blank -%}
+    {{ section.settings.image | image_url: width: 2000 | image_tag:
+      loading: 'eager',
+      widths: '750, 1000, 1500, 2000',
+      sizes: '100vw',
+      class: 'd-hero-media',
+      alt: section.settings.image.alt | default: shop.name
+    }}
   {%- else -%}
-    <div class="divine-hero__image">
-      {%- if section.settings.image != blank -%}
-        {{
-          section.settings.image
-          | image_url: width: 1200
-          | image_tag:
-            loading: 'eager',
-            widths: '375, 550, 750, 1000, 1200',
-            sizes: '100vw'
-        }}
-      {%- else -%}
-        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
+    <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
   {%- endif -%}
 
-  <div class="divine-hero__content">
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when 'badge' -%}
-          {%- if block.settings.text != blank -%}
-            <span class="divine-hero__badge" style="{% if block.settings.badge_bg != blank and block.settings.badge_bg != 'rgba(0,0,0,0)' %}background:{{ block.settings.badge_bg }};{% endif %}{% if block.settings.badge_color != blank and block.settings.badge_color != 'rgba(0,0,0,0)' %}color:{{ block.settings.badge_color }};{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
-          {%- endif -%}
+  <div class="d-hero-overlay"></div>
 
-        {%- when 'heading' -%}
-          <h1 {{ block.shopify_attributes }}>{{ section.settings.heading }}</h1>
+  <div class="d-hero-content">
+    {%- if kicker_text != blank -%}
+      <div class="d-hero-kicker">{{ kicker_text }}</div>
+    {%- endif -%}
 
-        {%- when 'subtitle' -%}
-          {%- if section.settings.subtitle != blank -%}
-            <p class="divine-hero__subtitle" {{ block.shopify_attributes }}>{{ section.settings.subtitle }}</p>
-          {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h1 class="d-hero-h1">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h1>
+    {%- endif -%}
 
-        {%- when 'buttons' -%}
-          <div class="divine-hero__cta" {{ block.shopify_attributes }}>
-            {%- if block.settings.button_label_1 != blank -%}
-              <a href="{{ block.settings.button_link_1 }}" class="divine-btn divine-btn-primary" style="{% if block.settings.btn1_bg != blank and block.settings.btn1_bg != 'rgba(0,0,0,0)' %}background:{{ block.settings.btn1_bg }};{% endif %}{% if block.settings.btn1_color != blank and block.settings.btn1_color != 'rgba(0,0,0,0)' %}color:{{ block.settings.btn1_color }};{% endif %}">
-                {{ block.settings.button_label_1 }}
-              </a>
-            {%- endif -%}
-            {%- if block.settings.button_label_2 != blank -%}
-              <a href="{{ block.settings.button_link_2 }}" class="divine-btn divine-btn-secondary" style="{% if block.settings.btn2_color != blank and block.settings.btn2_color != 'rgba(0,0,0,0)' %}color:{{ block.settings.btn2_color }};border-color:{{ block.settings.btn2_color }};{% endif %}">
-                {{ block.settings.button_label_2 }}
-              </a>
-            {%- endif -%}
-          </div>
-      {%- endcase -%}
-    {%- endfor -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="d-hero-p">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+
+    {%- if btn1_label != blank or btn2_label != blank -%}
+      <div class="d-hero-btns">
+        {%- if btn1_label != blank -%}
+          <a href="{{ btn1_link | default: '#' }}" class="d-btn-hp">{{ btn1_label }}</a>
+        {%- endif -%}
+        {%- if btn2_label != blank -%}
+          <a href="{{ btn2_link | default: '#' }}" class="d-btn-hg">{{ btn2_label }} →</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
 </section>
 
@@ -104,88 +84,65 @@
   "class": "divine-hero-section",
   "settings": [
     {
-      "type": "header",
-      "content": "Image"
-    },
-    {
       "type": "image_picker",
       "id": "image",
-      "label": "Hero image"
+      "label": "Background image"
     },
     {
-      "type": "range",
-      "id": "image_height",
-      "label": "Hero height (vh)",
-      "min": 40,
-      "max": 100,
-      "step": 5,
-      "default": 70,
-      "unit": "vh"
-    },
-    {
-      "type": "header",
-      "content": "Video"
-    },
-    {
-      "type": "video_url",
+      "type": "url",
       "id": "video_url",
-      "label": "Video URL (YouTube or Vimeo)",
-      "accept": ["youtube", "vimeo"],
-      "info": "When set, the video replaces the hero image."
+      "label": "Background video URL (YouTube/Vimeo)",
+      "info": "Overrides image when provided"
     },
     {
       "type": "checkbox",
       "id": "autoplay",
-      "label": "Autoplay",
+      "label": "Autoplay video",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "loop",
-      "label": "Loop",
+      "label": "Loop video",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "muted",
-      "label": "Muted",
-      "default": true,
-      "info": "Video must be muted to autoplay on most browsers."
-    },
-    {
-      "type": "header",
-      "content": "Text"
+      "label": "Mute video",
+      "default": true
     },
     {
       "type": "richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "<p>What You Put In <em>Matters</em>.</p>"
+      "default": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "subtitle",
       "label": "Subtitle",
-      "default": "Organic teas, matcha, superfoods, and spices — sourced from farms we trust, tested with precision, and crafted for people who believe what goes in matters."
+      "default": "Teas, superfoods, and botanicals sourced directly from the farms we know — tested before they reach you. No filters, no synthetics, no guesswork."
     },
     {
-      "type": "header",
-      "content": "Overlay"
+      "type": "range",
+      "id": "image_height",
+      "label": "Hero height (vh)",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "default": 95,
+      "unit": "vh"
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Gradient overlay strength",
-      "info": "Controls how dark the gradient is over the image for text readability",
+      "label": "Overlay opacity",
       "min": 0,
       "max": 100,
       "step": 5,
       "default": 100,
       "unit": "%"
-    },
-    {
-      "type": "header",
-      "content": "Spacing"
     },
     {
       "type": "range",
@@ -208,10 +165,6 @@
       "unit": "px"
     },
     {
-      "type": "header",
-      "content": "Typography"
-    },
-    {
       "type": "range",
       "id": "body_font_size",
       "label": "Body font size",
@@ -226,9 +179,9 @@
       "id": "heading_font_size",
       "label": "Heading font size",
       "min": 18,
-      "max": 72,
+      "max": 120,
       "step": 1,
-      "default": 32,
+      "default": 88,
       "unit": "px"
     },
     {
@@ -238,7 +191,7 @@
       "min": 8,
       "max": 22,
       "step": 1,
-      "default": 10,
+      "default": 11,
       "unit": "px"
     }
   ],
@@ -252,7 +205,7 @@
           "type": "text",
           "id": "text",
           "label": "Badge text",
-          "default": "Where Purity Meets Performance · Organic · Lab-Tested · No Fillers"
+          "default": "USDA Organic · CCOF Certified · Lab Tested Every Batch"
         },
         {
           "type": "color",
@@ -287,7 +240,7 @@
           "type": "text",
           "id": "button_label_1",
           "label": "Primary button label",
-          "default": "Shop Best Sellers"
+          "default": "Shop Now"
         },
         {
           "type": "url",
@@ -308,7 +261,7 @@
           "type": "text",
           "id": "button_label_2",
           "label": "Secondary button label",
-          "default": "Go Wholesale"
+          "default": "Find Your Blend"
         },
         {
           "type": "url",

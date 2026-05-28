@@ -1,72 +1,42 @@
+{%- comment -%}
+  Divine Ticker — forest green marquee bar
+  Repurposed from the previous trust-bar block list so existing JSON keeps working.
+{%- endcomment -%}
+
 {%- style -%}
-  .divine-trust-bar-section .divine-trust-bar {
-    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-      background-color: {{ section.settings.background_color }};
-    {% endif %}
-    {% if section.settings.border_color != blank and section.settings.border_color != 'rgba(0,0,0,0)' %}
-      border-color: {{ section.settings.border_color }};
-    {% endif %}
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
+  #shopify-section-{{ section.id }} .d-ticker{
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top | default: 11 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 11 }}px;
+    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
   }
-  {% if section.settings.icon_color != blank and section.settings.icon_color != 'rgba(0,0,0,0)' %}
-    .divine-trust-bar-section .divine-trust-item svg { stroke: {{ section.settings.icon_color }}; }
-  {% endif %}
-  {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    .divine-trust-bar-section .divine-trust-item span { color: {{ section.settings.text_color }}; }
-    .divine-trust-bar-section .divine-trust-item strong { color: {{ section.settings.text_color }}; }
-  {% endif %}
-  .divine-trust-bar-section .divine-trust-item span {
-    font-size: {{ section.settings.body_font_size | default: 16 }}px;
+  #shopify-section-{{ section.id }} .d-ti{
+    font-size: {{ section.settings.body_font_size | default: 11 }}px;
+    {% if section.settings.text_color != blank %}color:{{ section.settings.text_color }};{% endif %}
   }
 {%- endstyle -%}
 
-<section class="divine-trust-bar">
-  <div class="divine-trust-bar__inner">
-    {%- for block in section.blocks -%}
-      <div class="divine-trust-item" {{ block.shopify_attributes }}>
-        {%- if block.settings.custom_image != blank -%}
-          {{ block.settings.custom_image | image_url: width: 64 | image_tag: loading: 'lazy', width: 32, height: 32 }}
-        {%- elsif block.settings.icon == 'shield' -%}
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-        {%- elsif block.settings.icon == 'package' -%}
-          <svg viewBox="0 0 24 24"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-        {%- elsif block.settings.icon == 'star' -%}
-          <svg viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-        {%- elsif block.settings.icon == 'dollar' -%}
-          <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        {%- elsif block.settings.icon == 'leaf' -%}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-        {%- elsif block.settings.icon == 'truck' -%}
-          <svg viewBox="0 0 24 24"><path d="M1 3h15v13H1V3zm15 6h4l3 3v4h-7V9zm-3 10a2 2 0 100-4 2 2 0 000 4zm10 0a2 2 0 100-4 2 2 0 000 4z"></path></svg>
-        {%- elsif block.settings.icon == 'check' -%}
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        {%- elsif block.settings.icon == 'woman' -%}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"></circle><line x1="12" y1="14" x2="12" y2="21"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
-        {%- endif -%}
-        {%- if block.settings.link != blank -%}
-          <a href="{{ block.settings.link }}" style="color:inherit;text-decoration:none;"><span>{{ block.settings.text }}</span></a>
-        {%- else -%}
-          <span>{{ block.settings.text }}</span>
-        {%- endif -%}
-      </div>
+<div class="d-ticker" aria-hidden="true">
+  <div class="d-ticker-inner">
+    {%- for pass in (1..2) -%}
+      {%- for block in section.blocks -%}
+        <div class="d-ti" {{ block.shopify_attributes }}>
+          <span class="d-ti-dot"></span>
+          {{- block.settings.text | replace: '<strong>', '' | replace: '</strong>', '' | strip_html | strip -}}
+        </div>
+      {%- endfor -%}
     {%- endfor -%}
   </div>
-</section>
+</div>
 
 {% schema %}
 {
-  "name": "Divine Trust Bar",
+  "name": "Divine Ticker",
   "tag": "section",
-  "class": "divine-trust-bar-section",
-  "max_blocks": 6,
+  "class": "divine-ticker-section",
+  "max_blocks": 12,
   "settings": [
-    {
-      "type": "header",
-      "content": "Colors"
-    },
     {
       "type": "color",
       "id": "background_color",
@@ -88,17 +58,13 @@
       "label": "Border color"
     },
     {
-      "type": "header",
-      "content": "Spacing"
-    },
-    {
       "type": "range",
       "id": "padding_top",
       "label": "Padding top",
       "min": 0,
       "max": 60,
-      "step": 4,
-      "default": 20,
+      "step": 1,
+      "default": 11,
       "unit": "px"
     },
     {
@@ -107,8 +73,8 @@
       "label": "Padding bottom",
       "min": 0,
       "max": 60,
-      "step": 4,
-      "default": 20,
+      "step": 1,
+      "default": 11,
       "unit": "px"
     },
     {
@@ -134,18 +100,18 @@
     {
       "type": "range",
       "id": "body_font_size",
-      "label": "Body font size",
-      "min": 12,
-      "max": 22,
+      "label": "Text size",
+      "min": 8,
+      "max": 18,
       "step": 1,
-      "default": 16,
+      "default": 11,
       "unit": "px"
     }
   ],
   "blocks": [
     {
       "type": "trust_item",
-      "name": "Trust item",
+      "name": "Ticker item",
       "settings": [
         {
           "type": "select",
@@ -166,13 +132,13 @@
         {
           "type": "image_picker",
           "id": "custom_image",
-          "label": "Custom icon image (overrides icon)"
+          "label": "Custom icon image"
         },
         {
           "type": "html",
           "id": "text",
-          "label": "Text (supports <strong> tags)",
-          "default": "<strong>USDA</strong> Certified Organic"
+          "label": "Text",
+          "default": "USDA Organic"
         },
         {
           "type": "url",
@@ -184,12 +150,16 @@
   ],
   "presets": [
     {
-      "name": "Divine Trust Bar",
+      "name": "Divine Ticker",
       "blocks": [
-        { "type": "trust_item", "settings": { "icon": "shield", "text": "<strong>USDA</strong> Certified Organic" } },
-        { "type": "trust_item", "settings": { "icon": "package", "text": "<strong>Free Ship</strong> on $75+" } },
-        { "type": "trust_item", "settings": { "icon": "leaf", "text": "<strong>Zero</strong> Additives. Ever." } },
-        { "type": "trust_item", "settings": { "icon": "check", "text": "<strong>Every Batch</strong> Lab Tested" } }
+        { "type": "trust_item", "settings": { "text": "USDA Organic" } },
+        { "type": "trust_item", "settings": { "text": "CCOF Certified" } },
+        { "type": "trust_item", "settings": { "text": "Every Batch Lab Tested" } },
+        { "type": "trust_item", "settings": { "text": "Non-GMO" } },
+        { "type": "trust_item", "settings": { "text": "Fair Trade" } },
+        { "type": "trust_item", "settings": { "text": "Rainforest Alliance" } },
+        { "type": "trust_item", "settings": { "text": "Woman Owned & Operated" } },
+        { "type": "trust_item", "settings": { "text": "Free Shipping Over $100" } }
       ]
     }
   ]

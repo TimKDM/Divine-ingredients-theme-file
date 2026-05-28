@@ -1,380 +1,108 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "advanced_slider": {
-      "type": "advanced-slider",
-      "blocks": {
-        "slide_1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/IMG_6326.jpg",
-            "heading": "We're Divine Ingredients",
-            "caption": "Sourcing experts, wellness obsessives, and quality nerds on a mission to bring the cleanest organic ingredients to your kitchen — whether you're running a café, building a brand, or making something extraordinary at home.",
-            "button_label": "Shop Collections",
-            "link": "shopify://collections",
-            "button_style_secondary": false
-          }
-        },
-        "slide_2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/teas2024.jpg",
-            "heading": "Clean Ingredients. No Compromises.",
-            "caption": "Everything we sell is USDA certified organic and independently lab-tested. No synthetic additives, no fillers, no fine print. Full transparency, always.",
-            "button_label": "Our Story",
-            "link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": ["slide_1", "slide_2"],
-      "settings": {
-        "auto_rotate": false,
-        "slider_direction": "horizontal",
-        "slider_loop": true,
-        "slider_interval": 5,
-        "slider_height": 50,
-        "full_width": false,
-        "content_height": 140,
-        "content_position": 3,
-        "content_size": 40,
-        "content_align": "left",
-        "content_box": true,
-        "content_opacity": 0.7,
-        "heading_size": 3.2,
-        "heading_tag": "h2",
-        "heading_style": "none",
-        "caption_size": 1.5,
-        "caption_style": "none",
-        "color_scheme": "",
-        "color_scheme_1": "option-3",
-        "mobile_heading_size": 2.2,
-        "mobile_caption_size": 1.4,
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "mobile_height": 40,
-        "mobile_content_height": 20,
-        "mobile_content_size": 70,
         "padding_top": 0,
-        "padding_bottom": 0,
-        "ignore_spacing": false
+        "padding_bottom": 0
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "divine_about": {
+      "type": "divine-story-page",
       "blocks": {
-        "image": {
-          "type": "image",
+        "intro": {
+          "type": "intro",
           "settings": {
-            "image": ""
+            "kicker": "About Divine Ingredients",
+            "heading": "<p>When you know better, you <em>choose better.</em></p>",
+            "text": "<p>The story of a microbiologist who turned a habit of reading labels into a brand built entirely on the truth of what's inside.</p>",
+            "image": "shopify://shop_images/Preet-hero-image.jpg",
+            "placeholder_text": "Preet's photo coming soon",
+            "cap_name": "Preet Bhullar",
+            "cap_role": "Founder · Microbiologist"
           }
         },
-        "heading": {
-          "type": "heading",
+        "pull_quote": {
+          "type": "pull_quote",
           "settings": {
-            "heading": "<p>Where purity meets performance — that's not a tagline, it's just <em>science</em>.</p>",
-            "heading_size": "large",
-            "heading_style": "default",
-            "heading_tag": "h2",
-            "highlight_option": "underline-hand",
-            "word_animation_color": "#d4c4d9"
+            "quote": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>",
+            "attribution": "Preet Bhullar, Founder"
           }
         },
-        "text": {
-          "type": "text",
+        "story_body": {
+          "type": "story_body",
           "settings": {
-            "text": "<p>We built Divine Ingredients for people who want to know what's in their food — and who's behind it. We work directly with organic farms across Japan, India, Sri Lanka, and beyond because the relationship between grower and maker matters as much as the ingredient itself.</p>"
+            "text": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for — and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. Every ingredient at Divine is sourced with intention, tested with rigour, and chosen because it earns its place — not because it sounds good on a label. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
+            "card_1_label": "Background",
+            "card_1_value": "<p><em>Microbiology</em></p>",
+            "card_1_desc": "Quality control expertise. She knows exactly what belongs — and what doesn't.",
+            "card_2_label": "Founded on",
+            "card_2_value": "<p><em>Honesty</em></p>",
+            "card_2_desc": "Not marketing. Not buzzwords. What's on the label is exactly what's inside."
+          }
+        },
+        "values": {
+          "type": "values",
+          "settings": {
+            "kicker": "What we stand for",
+            "heading": "<p>Our <em>values</em></p>",
+            "value_1_title": "<p><em>Honesty</em> over marketing</p>",
+            "value_1_body": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less. That's not a promise. It's a standard we built the entire company around.</p>",
+            "value_2_title": "<p>Rigour without <em>compromise</em></p>",
+            "value_2_body": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO. These aren't badges we collect — they're the minimum we accept before anything leaves the warehouse.</p>",
+            "value_3_title": "<p>Sourcing with <em>intention</em></p>",
+            "value_3_body": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. We build real relationships with the people who grow what you consume. No brokers. No mystery. Full traceability, every time.</p>"
+          }
+        },
+        "certs_grid": {
+          "type": "certs_grid",
+          "settings": {
+            "kicker": "Certifications & standards",
+            "heading": "<p>Every claim, <em>verified.</em></p>",
+            "cert_1_title": "USDA Organic",
+            "cert_1_body": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>",
+            "cert_2_title": "CCOF Certified",
+            "cert_2_body": "<p>California Certified Organic Farmers — one of the most rigorous organic certifications in North America.</p>",
+            "cert_3_title": "Lab Tested Every Batch",
+            "cert_3_body": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>",
+            "cert_4_title": "Non-GMO · Fair Trade · Rainforest Alliance",
+            "cert_4_body": "<p>Sourced responsibly, from farms that treat people and land with the same care we put into every product.</p>"
+          }
+        },
+        "cta": {
+          "type": "cta",
+          "settings": {
+            "kicker": "Ready to explore?",
+            "heading": "<p>Taste the<br><em>difference honesty makes.</em></p>",
+            "text": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard. Start exploring.</p>",
+            "button_label_1": "Shop All Products",
+            "button_link_1": "shopify://collections",
+            "button_label_2": "Try the Discovery Set — $38",
+            "button_link_2": "shopify://products/discovery-set",
+            "button_label_3": "Wholesale enquiries",
+            "button_link_3": "shopify://pages/wholesale"
           }
         }
       },
-      "block_order": ["image", "heading", "text"],
+      "block_order": [
+        "intro",
+        "pull_quote",
+        "story_body",
+        "values",
+        "certs_grid",
+        "cta"
+      ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 32,
-        "padding_bottom": 16,
-        "ignore_spacing": false,
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "mobile_content_alignment": "left"
-      }
-    },
-    "two_images_text": {
-      "type": "two-images-text",
-      "blocks": {
-        "caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "How We Source",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Farm to Kitchen, Nothing to Hide",
-            "heading_size": "medium",
-            "heading_style": "default",
-            "heading_tag": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We go direct. We visit farms, build long-term relationships with growers, and maintain full traceability on every ingredient. Every batch is independently lab-tested for purity and safety. No middlemen padding things out, no mystery ingredients sneaking in. What you see is what you get — and what you get is really, really good.</p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Explore Collections",
-            "button_link": "shopify://collections"
-          }
-        }
-      },
-      "block_order": ["caption", "heading", "text", "button"],
-      "settings": {
-        "image": "shopify://shop_images/IMG_3518.jpg",
-        "image_2": "shopify://shop_images/IMG_3309.jpg",
-        "layout": "image_first",
-        "color_scheme": "option-2",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "ignore_spacing": false,
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "layout_mobile": "image_first"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Organic4colorsealJPG.jpg",
-            "hide_image": false,
-            "title": "USDA Organic · CCOF Certified",
-            "text": "<p>Every product is USDA certified organic and CCOF certified — no pesticides, no GMOs, no synthetics. Full documentation, always available.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/labtested.jpg",
-            "hide_image": false,
-            "title": "Independently Lab Tested",
-            "text": "<p>Every batch gets tested by third-party labs for purity, potency, heavy metals, and allergens. Facts matter — and so does your trust.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/About_us_image_2.jpg",
-            "hide_image": false,
-            "title": "Trusted by People Who Care",
-            "text": "<p>Home kitchens, professional cafés, wellness brands — our community is made up of people who refuse to settle. We're proud to be their go-to.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": ["column_1", "column_2", "column_3"],
-      "settings": {
-        "multicolumn_style": "style-two",
-        "enable_card_background": false,
-        "caption": "",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "",
-        "heading_size": "large",
-        "heading_style": "default",
-        "heading_tag": "h2",
-        "image_width": "fourth",
-        "image_ratio": "circle",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "color_scheme_1": "",
-        "padding_top": 48,
-        "padding_bottom": 36,
-        "ignore_spacing": true,
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "disable_arrow_mobile": true
-      }
-    },
-    "certification_logos": {
-      "type": "image-gallery",
-      "blocks": {
-        "logo_1": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_2": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_3": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_4": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_5": {
-          "type": "text",
-          "settings": {}
-        },
-        "logo_6": {
-          "type": "text",
-          "settings": {}
-        }
-      },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
-      "settings": {
-        "caption": "Committed to Quality",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "title": "Certified for Your Confidence",
-        "heading_size": "medium",
-        "heading_style": "default",
-        "heading_tag": "h2",
-        "scroll_direction": "ltc",
-        "scroll_speed": 60,
-        "scroll_height": 200,
-        "hover_stop": true,
-        "color_scheme": "option-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "ignore_spacing": true,
-        "scroll_height_mobile": 120,
-        "margin_spacing": "negative",
-        "margin_top": 0
-      }
-    },
-    "image_with_text": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Heart Behind the Brand",
-            "heading_size": "large",
-            "heading_style": "default",
-            "heading_tag": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We're the team that obsesses over soil quality, pores over lab results, and genuinely celebrates when our partners create something exceptional with our ingredients. Whether you're perfecting a signature latte, formulating your next product line, or elevating your home cooking, we're here for the journey.</p>",
-            "text_style": "body"
-          }
-        },
-        "image": {
-          "type": "image",
-          "settings": {
-            "image": "",
-            "mobile_disable_image": false
-          }
-        }
-      },
-      "block_order": ["heading", "text", "image"],
-      "settings": {
-        "image": "shopify://shop_images/About_us_image.jpg",
-        "caption": "Why We Do This",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "full_width": true,
-        "color_scheme": "option-1",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "ignore_spacing": true,
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "mobile_content_alignment": "left"
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Let's Work Together</p>",
-            "heading_size": "extra-large",
-            "heading_style": "default",
-            "heading_tag": "h2",
-            "highlight_option": "underline-hand",
-            "word_animation_color": "#ffffff"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Running a café, building a wellness brand, or producing at scale? We offer bulk pricing, dedicated support, and the kind of consistency your business can actually rely on.</p>",
-            "text_style": "body"
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Explore Wholesale",
-            "button_link_1": "shopify://collections/shop-wholesale-with-divine",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": ["heading", "text", "buttons"],
-      "settings": {
-        "image": "shopify://shop_images/teas2024.jpg",
-        "image_overlay_opacity": 50,
-        "image_height": "medium",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "ignore_spacing": false,
-        "color_scheme_1": "",
-        "margin_spacing": "negative",
-        "margin_top": 0,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "body_font_size": 16,
+        "heading_font_size": 88,
+        "caption_font_size": 11,
+        "item_heading_font_size": 24
       }
     }
   },
-  "order": ["main", "advanced_slider", "rich_text", "two_images_text", "multicolumn", "certification_logos", "image_with_text", "image_banner"]
+  "order": [
+    "main",
+    "divine_about"
+  ]
 }

@@ -1,94 +1,104 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-section {
-    background-color: {{ section.settings.background_color }};
+  #shopify-section-{{ section.id }} .d-ritual{
+    {% if section.settings.background_color != blank %}background-color: {{ section.settings.background_color }};{% endif %}
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
-    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
+    padding-top: {{ section.settings.padding_top | default: 96 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-category-card__content p {
-    font-size: {{ section.settings.body_font_size | default: 14 }}px;
+  #shopify-section-{{ section.id }} .d-rc-teas{
+    font-size: {{ section.settings.body_font_size | default: 12 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-section-title {
-    font-size: {{ section.settings.heading_font_size | default: 26 }}px;
+  #shopify-section-{{ section.id }} .d-sec-h{
+    font-size: {{ section.settings.heading_font_size | default: 52 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-category-card__content h3 {
-    font-size: {{ section.settings.item_heading_font_size | default: 18 }}px;
+  #shopify-section-{{ section.id }} .d-rc-title{
+    font-size: {{ section.settings.item_heading_font_size | default: 22 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-section-label {
-    font-size: {{ section.settings.caption_font_size | default: 14 }}px;
+  #shopify-section-{{ section.id }} .d-sec-label{
+    font-size: {{ section.settings.caption_font_size | default: 11 }}px;
+    {% if section.settings.accent_color != blank %}color: {{ section.settings.accent_color }};{% endif %}
   }
-
-  #shopify-section-{{ section.id }} .divine-section-label {
-    color: {{ section.settings.accent_color }};
-  }
-
-  #shopify-section-{{ section.id }} .divine-section-title {
+  {% if section.settings.text_color != blank %}
+  #shopify-section-{{ section.id }} .d-sec-h,
+  #shopify-section-{{ section.id }} .d-rc-title{
     color: {{ section.settings.text_color }};
   }
-
-  {%- if section.settings.text_color != blank -%}
-  #shopify-section-{{ section.id }} .divine-category-card__content h3,
-  #shopify-section-{{ section.id }} .divine-category-card__content p {
-    color: {{ section.settings.text_color }};
+  {% endif %}
+  #shopify-section-{{ section.id }} .d-ritual-grid{
+    grid-template-columns: repeat({{ section.blocks.size | at_least: 1 | at_most: 5 }}, 1fr);
   }
-  {%- endif -%}
-
-  @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .divine-section {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+  @media (max-width: 1100px){
+    #shopify-section-{{ section.id }} .d-ritual-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px){
+    #shopify-section-{{ section.id }} .d-ritual-grid{ grid-template-columns: 1fr; }
   }
 {%- endstyle -%}
 
-<section class="divine-section{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
-  <div class="divine-section-header">
-    {%- if section.settings.caption != blank -%}
-      <span class="divine-section-label">{{ section.settings.caption }}</span>
-    {%- endif -%}
-    {%- if section.settings.title != blank -%}
-      <h2 class="divine-section-title">{{ section.settings.title }}</h2>
+<section class="d-ritual d-reveal">
+  <div class="d-ritual-header">
+    <div>
+      {%- if section.settings.caption != blank -%}
+        <div class="d-sec-label">{{ section.settings.caption }}</div>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="d-sec-h">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtitle != blank -%}
+        <p class="d-sec-p" style="max-width:420px;margin-top:12px;">{{ section.settings.subtitle }}</p>
+      {%- endif -%}
+    </div>
+    {%- if section.settings.cta_label != blank -%}
+      <a href="{{ section.settings.cta_link | default: '/collections' }}" class="d-btn-t" style="flex-shrink:0;margin-bottom:8px">{{ section.settings.cta_label }} →</a>
     {%- endif -%}
   </div>
 
-  <div class="divine-category-grid{% if section.blocks.size > 4 %} divine-category-grid--{{ section.blocks.size }}{% endif %}">
+  <div class="d-ritual-grid">
     {%- for block in section.blocks -%}
-      {%- assign collection = block.settings.collection -%}
-      {%- if block.settings.link != blank -%}
-        {%- assign card_url = block.settings.link -%}
-      {%- elsif collection != blank -%}
-        {%- assign card_url = collection.url -%}
-      {%- else -%}
-        {%- assign card_url = '#' -%}
-      {%- endif -%}
-      <a href="{{ card_url }}" class="divine-category-card" {{ block.shopify_attributes }}>
-        {%- if block.settings.image != blank -%}
-          {%- assign card_image = block.settings.image -%}
-        {%- elsif collection.image != blank -%}
-          {%- assign card_image = collection.image -%}
-        {%- elsif collection.products.first.featured_image != blank -%}
-          {%- assign card_image = collection.products.first.featured_image -%}
-        {%- else -%}
-          {%- assign card_image = blank -%}
-        {%- endif -%}
-
+      {%- liquid
+        assign collection = block.settings.collection
+        if block.settings.link != blank
+          assign card_url = block.settings.link
+        elsif collection != blank
+          assign card_url = collection.url
+        else
+          assign card_url = '#'
+        endif
+        if block.settings.image != blank
+          assign card_image = block.settings.image
+        elsif collection.image != blank
+          assign card_image = collection.image
+        elsif collection.products.first.featured_image != blank
+          assign card_image = collection.products.first.featured_image
+        else
+          assign card_image = blank
+        endif
+      -%}
+      <a href="{{ card_url }}" class="d-rc" {{ block.shopify_attributes }}>
         {%- if card_image != blank -%}
-          {{
-            card_image
-            | image_url: width: 600
-            | image_tag:
-              loading: 'lazy',
-              widths: '200, 300, 400, 600',
-              sizes: '(min-width: 768px) 25vw, 50vw'
+          {{ card_image | image_url: width: 800 | image_tag:
+            loading: 'lazy',
+            widths: '300, 500, 700, 900',
+            sizes: '(min-width: 1100px) 20vw, 50vw',
+            class: 'd-rc-img',
+            alt: card_image.alt | default: block.settings.heading | default: ''
           }}
         {%- else -%}
-          {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+          <div class="d-rc-img" style="background:linear-gradient(135deg,#0e1208,#1F3018);"></div>
         {%- endif -%}
-        <div class="divine-category-card__content">
-          <h3>{{ block.settings.heading | default: collection.title }}</h3>
+        <div class="d-rc-grad"></div>
+        <div class="d-rc-content">
+          {%- if block.settings.tag != blank -%}
+            <div class="d-rc-tag">{{ block.settings.tag }}</div>
+          {%- endif -%}
+          {%- if block.settings.heading != blank or collection.title != blank -%}
+            <div class="d-rc-title">{{ block.settings.heading | default: collection.title }}</div>
+          {%- endif -%}
           {%- if block.settings.subtitle != blank -%}
-            <p>{{ block.settings.subtitle }}</p>
+            <div class="d-rc-teas">{{ block.settings.subtitle }}</div>
+          {%- endif -%}
+          {%- if block.settings.cta != blank -%}
+            <div class="d-rc-cta">{{ block.settings.cta }} →</div>
           {%- endif -%}
         </div>
       </a>
@@ -101,25 +111,42 @@
   "name": "Divine Categories",
   "tag": "section",
   "class": "divine-categories-section",
-  "max_blocks": 8,
+  "max_blocks": 5,
   "settings": [
     {
       "type": "text",
       "id": "caption",
       "label": "Caption",
-      "default": "Find Your Thing"
+      "default": "Shop Teas"
     },
     {
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "Shop by Category"
+      "default": "Find your perfect cup"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "36 teas — browse by mood or moment. Find what fits your day."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Header CTA label",
+      "default": "Browse all teas"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Header CTA link"
     },
     {
       "type": "checkbox",
       "id": "use_alt_bg",
       "label": "Use alternate background",
-      "default": true
+      "default": false
     },
     {
       "type": "color",
@@ -141,9 +168,9 @@
       "id": "padding_top",
       "label": "Padding top",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
-      "default": 32,
+      "default": 96,
       "unit": "px"
     },
     {
@@ -151,9 +178,9 @@
       "id": "padding_bottom",
       "label": "Padding bottom",
       "min": 0,
-      "max": 100,
+      "max": 160,
       "step": 4,
-      "default": 32,
+      "default": 0,
       "unit": "px"
     },
     {
@@ -180,10 +207,10 @@
       "type": "range",
       "id": "body_font_size",
       "label": "Body font size",
-      "min": 12,
+      "min": 10,
       "max": 22,
       "step": 1,
-      "default": 14,
+      "default": 12,
       "unit": "px"
     },
     {
@@ -191,9 +218,9 @@
       "id": "heading_font_size",
       "label": "Heading font size",
       "min": 18,
-      "max": 56,
+      "max": 80,
       "step": 1,
-      "default": 26,
+      "default": 52,
       "unit": "px"
     },
     {
@@ -201,26 +228,26 @@
       "id": "caption_font_size",
       "label": "Caption font size",
       "min": 8,
-      "max": 24,
+      "max": 18,
       "step": 1,
-      "default": 14,
+      "default": 11,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "item_heading_font_size",
-      "label": "Item/card title font size",
+      "label": "Card title font size",
       "min": 12,
       "max": 36,
       "step": 1,
-      "default": 18,
+      "default": 22,
       "unit": "px"
     }
   ],
   "blocks": [
     {
       "type": "category",
-      "name": "Category",
+      "name": "Ritual card",
       "settings": [
         {
           "type": "collection",
@@ -230,23 +257,35 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Custom image (optional)"
+          "label": "Card image"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Top tag",
+          "default": "Morning"
         },
         {
           "type": "text",
           "id": "heading",
-          "label": "Custom heading (optional)"
+          "label": "Card title",
+          "default": "Morning Ritual"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle",
-          "default": "Explore"
+          "label": "Description / featured items"
+        },
+        {
+          "type": "text",
+          "id": "cta",
+          "label": "CTA label",
+          "default": "Shop Morning"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Custom link (overrides collection)"
+          "label": "Custom link"
         }
       ]
     }
@@ -255,10 +294,11 @@
     {
       "name": "Divine Categories",
       "blocks": [
-        { "type": "category", "settings": { "heading": "Matcha", "subtitle": "Ceremonial to everyday — all grades, all good" } },
-        { "type": "category", "settings": { "heading": "Loose Leaf Tea", "subtitle": "Black, green, oolong, herbal — pick your mood" } },
-        { "type": "category", "settings": { "heading": "Superfood Powders", "subtitle": "Mushroom, fruit, adaptogens — the good stuff" } },
-        { "type": "category", "settings": { "heading": "Herbs & Spices", "subtitle": "Single origin, organic, honestly incredible" } }
+        { "type": "category", "settings": { "tag": "Morning", "heading": "Morning Ritual", "subtitle": "Ceremonial Matcha · Sencha · English Breakfast · Earl Grey · Masala Chai", "cta": "Shop Morning" } },
+        { "type": "category", "settings": { "tag": "Wind Down", "heading": "Calm & Restore", "subtitle": "Chamomile Care · Serenity · Relax Hemp · Heart Hemp · Ginger Turmeric", "cta": "Shop Calm" } },
+        { "type": "category", "settings": { "tag": "Caffeine Free", "heading": "Botanical Garden", "subtitle": "Hibiscus Punch · Jasmine Green · Mellow Mint · Wine Berry · Chamomile", "cta": "Shop Botanicals" } },
+        { "type": "category", "settings": { "tag": "Iced & Light", "heading": "Cool & Refresh", "subtitle": "Tangy Lemon · Moroccan Mint · Passion Berry · Ruby Red · Peach Oolong", "cta": "Shop Iced" } },
+        { "type": "category", "settings": { "tag": "Focus & Energy", "heading": "Focus & Energy", "subtitle": "Think Hemp · Energize Hemp · Sencha · Genmaicha · Lemon Ginger Circus", "cta": "Shop Focus" } }
       ]
     }
   ]

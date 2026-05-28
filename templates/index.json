@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "divine_hero": {
@@ -15,9 +6,7 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "USDA Organic · CCOF Certified · Lab Tested",
-            "badge_bg": "",
-            "badge_color": ""
+            "text": "USDA Organic · CCOF Certified · Lab Tested Every Batch"
           }
         },
         "heading": {
@@ -31,238 +20,213 @@
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Superfoods",
-            "button_link_1": "shopify://collections/powder",
-            "btn1_bg": "",
-            "btn1_color": "",
-            "button_label_2": "Explore Tea Rituals",
-            "button_link_2": "shopify://collections/zen-greens-green-tea",
-            "btn2_color": ""
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections",
+            "button_label_2": "Find Your Blend",
+            "button_link_2": "shopify://collections/zen-greens-green-tea"
           }
         }
       },
-      "block_order": [
-        "badge",
-        "heading",
-        "subtitle",
-        "buttons"
-      ],
+      "block_order": ["badge", "heading", "subtitle", "buttons"],
       "settings": {
         "image": "shopify://shop_images/iStock-1298434383.jpg",
-        "image_height": 70,
-        "video_url": "",
-        "autoplay": true,
-        "loop": true,
-        "muted": true,
-        "heading": "<p>Pure Organic Ingredients for <em>Everyday Wellness</em></p>",
-        "subtitle": "Farm-sourced teas, superfoods, and botanicals — every batch tested, every ingredient real. Built for the people who read the label.",
+        "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
+        "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know — tested before they reach you. No filters, no synthetics, no guesswork.",
+        "image_height": 95,
         "overlay_opacity": 100,
         "margin_top": 0,
         "margin_bottom": 0,
-        "body_font_size": 22,
-        "heading_font_size": 48,
-        "badge_font_size": 10
+        "heading_font_size": 88,
+        "badge_font_size": 11
       }
     },
-    "divine_trust_bar": {
+    "divine_ticker": {
       "type": "divine-trust-bar",
       "blocks": {
-        "trust_1": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "shield",
-            "text": "<strong>100%</strong> Organic Ingredients",
-            "link": ""
-          }
-        },
-        "trust_2": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "globe",
-            "text": "<strong>Ethically</strong> Sourced Worldwide",
-            "link": ""
-          }
-        },
-        "trust_3": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "check",
-            "text": "<strong>Every Batch</strong> Lab Tested",
-            "link": ""
-          }
-        },
-        "trust_4": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "package",
-            "text": "<strong>Free Shipping</strong> Over $100",
-            "link": ""
-          }
-        },
-        "trust_5": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "woman",
-            "text": "<strong>Woman Owned</strong> &amp; Operated",
-            "link": ""
-          }
-        }
+        "t_1": { "type": "trust_item", "settings": { "text": "USDA Organic" } },
+        "t_2": { "type": "trust_item", "settings": { "text": "CCOF Certified" } },
+        "t_3": { "type": "trust_item", "settings": { "text": "Every Batch Lab Tested" } },
+        "t_4": { "type": "trust_item", "settings": { "text": "Non-GMO" } },
+        "t_5": { "type": "trust_item", "settings": { "text": "Fair Trade" } },
+        "t_6": { "type": "trust_item", "settings": { "text": "Rainforest Alliance" } },
+        "t_7": { "type": "trust_item", "settings": { "text": "Woman Owned & Operated" } },
+        "t_8": { "type": "trust_item", "settings": { "text": "Free Shipping Over $100" } }
       },
-      "block_order": [
-        "trust_1",
-        "trust_2",
-        "trust_3",
-        "trust_4",
-        "trust_5"
-      ],
+      "block_order": ["t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8"],
       "settings": {
-        "background_color": "",
-        "text_color": "",
-        "icon_color": "",
-        "border_color": "",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 14
+        "padding_top": 11,
+        "padding_bottom": 11,
+        "body_font_size": 11
       }
     },
-    "divine_lifestyle": {
+    "divine_rituals": {
       "type": "divine-categories",
       "blocks": {
-        "lifestyle_morning": {
+        "ritual_morning": {
           "type": "category",
           "settings": {
             "collection": "tea",
             "image": "shopify://shop_images/iStock-1060404954.jpg",
+            "tag": "Morning",
             "heading": "Morning Ritual",
-            "subtitle": "Start your day with calm focus — matcha, sencha, and bold classics",
-            "link": ""
+            "subtitle": "Ceremonial Matcha · Sencha · English Breakfast · Earl Grey · Masala Chai",
+            "cta": "Shop Morning"
           }
         },
-        "lifestyle_calm": {
+        "ritual_calm": {
           "type": "category",
           "settings": {
             "collection": "calm-rituals-hemp-tea",
             "image": "shopify://shop_images/iStock-1144247743.jpg",
+            "tag": "Wind Down",
             "heading": "Calm & Restore",
-            "subtitle": "Wind down with wellness blends, hemp teas, and herbal adaptogens",
-            "link": ""
+            "subtitle": "Chamomile Care · Serenity · Relax Hemp · Heart Hemp · Ginger Turmeric",
+            "cta": "Shop Calm"
           }
         },
-        "lifestyle_botanical": {
+        "ritual_botanical": {
           "type": "category",
           "settings": {
             "collection": "botanical-bliss-herbal-tea",
             "image": "shopify://shop_images/iStock-496610026.jpg",
+            "tag": "Caffeine Free",
             "heading": "Botanical Garden",
-            "subtitle": "Caffeine-free florals, herbs, and organic botanicals",
-            "link": ""
+            "subtitle": "Hibiscus Punch · Jasmine Green · Mellow Mint · Wine Berry · Chamomile",
+            "cta": "Shop Botanicals"
           }
         },
-        "lifestyle_refresh": {
+        "ritual_refresh": {
           "type": "category",
           "settings": {
             "collection": "cool-brews-iced-tea",
             "image": "shopify://shop_images/iStock-1320143694.jpg",
+            "tag": "Iced & Light",
             "heading": "Cool & Refresh",
-            "subtitle": "Iced teas and light oolongs for bright, easy moments",
-            "link": ""
+            "subtitle": "Tangy Lemon · Moroccan Mint · Passion Berry · Ruby Red · Peach Oolong",
+            "cta": "Shop Iced"
+          }
+        },
+        "ritual_focus": {
+          "type": "category",
+          "settings": {
+            "collection": "calm-rituals-hemp-tea",
+            "image": "shopify://shop_images/iStock-2252738400.jpg",
+            "tag": "Focus & Energy",
+            "heading": "Focus & Energy",
+            "subtitle": "Think Hemp · Energize Hemp · Sencha · Genmaicha · Lemon Ginger Circus",
+            "cta": "Shop Focus"
           }
         }
       },
-      "block_order": [
-        "lifestyle_morning",
-        "lifestyle_calm",
-        "lifestyle_botanical",
-        "lifestyle_refresh"
-      ],
+      "block_order": ["ritual_morning", "ritual_calm", "ritual_botanical", "ritual_refresh", "ritual_focus"],
       "settings": {
-        "caption": "Shop by Lifestyle",
-        "title": "Find Your Ritual",
-        "use_alt_bg": true,
-        "background_color": "#f0ebf2",
-        "text_color": "",
-        "accent_color": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 14,
-        "heading_font_size": 40,
-        "caption_font_size": 18,
-        "item_heading_font_size": 24
+        "caption": "Shop Teas",
+        "title": "Find your perfect cup",
+        "subtitle": "36 teas — browse by mood or moment. Find what fits your day.",
+        "cta_label": "Browse all teas",
+        "cta_link": "shopify://collections/tea",
+        "padding_top": 96,
+        "padding_bottom": 0,
+        "heading_font_size": 52
       }
     },
-    "divine_best_sellers": {
+    "divine_powders": {
+      "type": "divine-powders",
+      "blocks": {
+        "p_1": {
+          "type": "powder",
+          "settings": {
+            "title": "Mushroom Powders",
+            "description": "Lion's Mane · Reishi · Cordyceps",
+            "link": "shopify://collections/organic-superfood-powders"
+          }
+        },
+        "p_2": {
+          "type": "powder",
+          "settings": {
+            "title": "Fruit Powders",
+            "description": "Blueberry · Taro · Tart Cherries · Rose Petals · Date",
+            "link": "shopify://collections/organic-fruit-powders"
+          }
+        },
+        "p_3": {
+          "type": "powder",
+          "settings": {
+            "title": "Superfood Blends",
+            "description": "Ashwagandha · Rhodiola · Coconut Milk · Molasses · Coffee Cherry",
+            "link": "shopify://collections/organic-superfood-powders"
+          }
+        }
+      },
+      "block_order": ["p_1", "p_2", "p_3"],
+      "settings": {
+        "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
+        "caption": "14 Products",
+        "title": "<p>Superfood<br><em>powders</em></p>",
+        "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
+        "button_label": "Browse all powders",
+        "button_link": "shopify://collections/organic-superfood-powders",
+        "padding_top": 88,
+        "padding_bottom": 88,
+        "heading_font_size": 52
+      }
+    },
+    "divine_bestsellers": {
       "type": "divine-products",
       "settings": {
         "caption": "Customer Favorites",
-        "title": "Our Most Loved Ingredients",
+        "title": "The ones people keep coming back for",
         "collection": "favorite-products",
         "products_to_show": 4,
-        "show_rating": true,
-        "show_tags": false,
         "show_view_all": true,
-        "view_all_label": "Shop All Best Sellers",
-        "view_all_link": "",
-        "use_alt_bg": false,
-        "background_color": "",
-        "text_color": "",
-        "accent_color": "",
-        "card_background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 19,
-        "heading_font_size": 35,
-        "caption_font_size": 14
+        "view_all_label": "View all products",
+        "view_all_link": "shopify://collections",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "heading_font_size": 52,
+        "body_font_size": 20
       }
     },
-    "divine_brand_story": {
+    "divine_story": {
       "type": "divine-brand-story",
-      "blocks": {
-        "value_1": {
-          "type": "value",
-          "settings": {
-            "icon": "shield",
-            "title": "No Shortcuts",
-            "description": "USDA Organic, CCOF certified, and every batch independently lab tested. We don't cut corners."
-          }
-        },
-        "value_2": {
-          "type": "value",
-          "settings": {
-            "icon": "globe",
-            "title": "We Know Our Farms",
-            "description": "Direct relationships with growers in Japan, India, and Sri Lanka. Full traceability, always."
-          }
-        }
-      },
-      "block_order": [
-        "value_1",
-        "value_2"
-      ],
       "settings": {
         "image": "shopify://shop_images/Preet-hero-image.jpg",
-        "heading": "Real Ingredients, From Farms We Actually Know",
-        "text": "Divine started because our founder couldn't find ingredients she trusted. So she went direct — to the farms in Japan, India, Sri Lanka, and beyond. Built real relationships with the growers. Now every batch is independently lab tested for purity and safety. No fillers, no synthetics, no shortcuts. Just honest ingredients for people who care about what goes in.",
-        "button_label": "Our Story",
+        "caption": "Our Story",
+        "pull_quote": "\"…turning the label over and asking,<br>'but what's really in this?'\"",
+        "heading": "",
+        "text": "<p>Divine Ingredients began, as many good things do, with a simple habit. For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for — and more importantly, what didn't belong.</p><p>So she set a new standard. One rooted in honesty, not marketing. Every ingredient is sourced with intention, tested with rigour, and chosen because it earns its place — not because it sounds good on a label.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence — precise, uncompromising, yet deeply personal. Because when you know better, you choose better.</p>",
+        "signature": "— <em>Preet Bhullar,</em> Founder",
+        "button_label": "Read our story",
         "button_link": "shopify://pages/about-us",
-        "button_bg": "#2c2420",
-        "button_color": "",
-        "use_alt_bg": false,
-        "background_color": "#f0ebf2",
-        "text_color": "",
-        "accent_color": "",
-        "padding_top": 20,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 18,
-        "heading_font_size": 36,
+        "cap_label": "Founded by",
+        "cap_name": "Preet Bhullar",
+        "cap_role": "Microbiologist & Founder",
+        "padding_top": 96,
+        "padding_bottom": 96,
         "item_heading_font_size": 22
+      }
+    },
+    "divine_discovery": {
+      "type": "divine-discovery",
+      "blocks": {
+        "i_1": { "type": "include", "settings": { "text": "3 handpicked bestselling teas" } },
+        "i_2": { "type": "include", "settings": { "text": "USDA Organic · Lab tested" } },
+        "i_3": { "type": "include", "settings": { "text": "Free shipping always included" } },
+        "i_4": { "type": "include", "settings": { "text": "Perfect as a gift" } }
+      },
+      "block_order": ["i_1", "i_2", "i_3", "i_4"],
+      "settings": {
+        "image": "shopify://shop_images/herbal_tea_subscription_box.jpg",
+        "caption": "New to Divine Ingredients?",
+        "heading": "<p>The <em>Discovery Set</em></p>",
+        "text": "Three of our most loved teas in one beautifully curated box. The easiest way to find your ritual — without committing to a full size first.",
+        "price": "$38",
+        "price_note": "CAD · Free shipping",
+        "button_label": "Get the Discovery Set",
+        "button_link": "shopify://products/discovery-set",
+        "padding_top": 88,
+        "padding_bottom": 88,
+        "heading_font_size": 50
       }
     },
     "divine_newsletter": {
@@ -271,410 +235,80 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Join the Divine Wellness Community"
+            "heading": "Get 20% off your first order"
           }
         },
         "subtitle": {
           "type": "subtitle",
           "settings": {
-            "text": "Get 15% off your first order. Plus recipes, new arrivals, and wellness tips — no fluff."
+            "text": "New arrivals, recipes from our community, and seasonal drops. The good stuff only."
           }
         },
-        "email_form": {
-          "type": "email_form",
-          "settings": {}
-        }
+        "perk_1": { "type": "perk", "settings": { "text": "20% off your first order with code WELCOME" } },
+        "perk_2": { "type": "perk", "settings": { "text": "Free shipping on orders over $100" } },
+        "perk_3": { "type": "perk", "settings": { "text": "First access to new products & seasonal harvests" } }
       },
-      "block_order": [
-        "heading",
-        "subtitle",
-        "email_form"
-      ],
+      "block_order": ["heading", "subtitle", "perk_1", "perk_2", "perk_3"],
       "settings": {
-        "input_placeholder": "Your email address",
-        "button_label": "Join the Ritual",
+        "caption": "Join the Divine World",
+        "input_placeholder": "your@email.com",
+        "button_label": "Begin Your Ritual",
         "privacy_text": "No spam. Unsubscribe anytime.",
-        "show_first_name": true,
-        "name_placeholder": "First name",
-        "background_color": "#1d1d1d",
-        "text_color": "#ffffff",
-        "button_bg": "#d4c4d9",
-        "button_color": "#1d1d1d",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 20,
-        "heading_font_size": 30
-      }
-    },
-    "divine_subscription": {
-      "type": "divine-subscription",
-      "blocks": {
-        "plan_tea": {
-          "type": "plan",
-          "settings": {
-            "image": "shopify://shop_images/herbal_tea_subscription_box.jpg",
-            "title": "Monthly Tea Box",
-            "description": "A curated selection of organic teas delivered to your door every month. Discover new favorites and seasonal blends.",
-            "price": "From $29/mo",
-            "button_label": "Start My Subscription",
-            "button_link": ""
-          }
-        },
-        "plan_superfood": {
-          "type": "plan",
-          "settings": {
-            "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
-            "title": "Superfood Powder Box",
-            "description": "Premium organic superfood powders — matcha, turmeric, adaptogens, and more. Perfect for smoothies, lattes, and daily rituals.",
-            "price": "From $34/mo",
-            "button_label": "Start My Subscription",
-            "button_link": ""
-          }
-        },
-        "plan_matcha": {
-          "type": "plan",
-          "settings": {
-            "image": "shopify://shop_images/matcha_ritual_subscription_box.jpg",
-            "title": "Matcha Discovery Box",
-            "description": "Explore Japan's finest organic matcha varieties. Each month features a different origin, grade, or seasonal harvest.",
-            "price": "From $32/mo",
-            "button_label": "Start My Subscription",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "plan_tea",
-        "plan_superfood",
-        "plan_matcha"
-      ],
-      "disabled": true,
-      "settings": {
-        "caption": "Subscribe & Save",
-        "heading": "Join a Wellness Ritual That Comes to You",
-        "subheading": "Save 15% on every order. Pause or cancel anytime. Free shipping on all subscriptions.",
-        "cta_label": "View All Subscription Options",
-        "cta_link": "",
-        "use_alt_bg": true,
-        "background_color": "#ffffff",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 18,
-        "heading_font_size": 39,
-        "caption_font_size": 22,
-        "item_heading_font_size": 24
-      }
-    },
-    "divine_wholesale_wqQPLT": {
-      "type": "divine-wholesale",
-      "blocks": {
-        "feature_feVXGY": {
-          "type": "feature",
-          "settings": {
-            "text": "Low minimum order quantities"
-          }
-        },
-        "feature_hchQY4": {
-          "type": "feature",
-          "settings": {
-            "text": "Custom private label packaging"
-          }
-        },
-        "feature_twC8eH": {
-          "type": "feature",
-          "settings": {
-            "text": "All products USDA Organic certified"
-          }
-        },
-        "feature_xUtbYr": {
-          "type": "feature",
-          "settings": {
-            "text": "Dedicated account support"
-          }
-        }
-      },
-      "block_order": [
-        "feature_feVXGY",
-        "feature_hchQY4",
-        "feature_twC8eH",
-        "feature_xUtbYr"
-      ],
-      "name": "Divine Wholesale",
-      "settings": {
-        "image": "shopify://shop_images/iStock-2252738400.jpg",
-        "caption": "B2B & Private Label",
-        "heading": "Launch Your Own Organic Tea or Superfood Brand",
-        "text": "<p>Partner with Divine Ingredients for wholesale pricing, private label solutions, and custom blending. We supply cafés, wellness brands, retailers, and entrepreneurs with premium organic ingredients.</p>",
-        "button_label_1": "Start a Private Label Project",
-        "button_link_1": "",
-        "button_label_2": "Request Wholesale Pricing",
-        "button_link_2": "",
-        "background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 15,
-        "heading_font_size": 30,
-        "caption_font_size": 14,
-        "feature_font_size": 14
-      }
-    },
-    "divine_why_us": {
-      "type": "divine-why-us",
-      "blocks": {
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "icon": "leaf",
-            "title": "100% Organic Ingredients",
-            "description": "No fillers. No additives. No artificial flavors. Just the ingredient on the label — nothing else."
-          }
-        },
-        "feature_2": {
-          "type": "feature",
-          "settings": {
-            "icon": "globe",
-            "title": "Ethically Sourced",
-            "description": "Direct relationships with farms across Japan, India, and Sri Lanka. We know where everything comes from."
-          }
-        },
-        "feature_3": {
-          "type": "feature",
-          "settings": {
-            "icon": "shield",
-            "title": "Tested for Purity",
-            "description": "Every batch is independently tested by a third-party lab for purity, potency, and safety. No exceptions."
-          }
-        }
-      },
-      "block_order": [
-        "feature_1",
-        "feature_2",
-        "feature_3"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Why Divine Ingredients",
-        "cta_label": "Learn About Our Ingredients",
-        "cta_link": "shopify://pages/about-us",
-        "use_alt_bg": false,
-        "background_color": "#f0ebf2",
-        "text_color": "",
-        "accent_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 20,
-        "heading_font_size": 46,
-        "caption_font_size": 21,
-        "item_heading_font_size": 26
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "heading_font_size": 52
       }
     },
     "divine_certs": {
       "type": "divine-cert-bar",
       "blocks": {
-        "cert_usda": {
-          "type": "cert",
-          "settings": {
-            "icon": "usda",
-            "image": "shopify://shop_images/Organic4colorsealJPG.jpg",
-            "label": "USDA Organic"
-          }
-        },
-        "cert_ccof": {
-          "type": "cert",
-          "settings": {
-            "icon": "ccof",
-            "image": "shopify://shop_images/ccof_logo_4color_0.jpg",
-            "label": "CCOF Certified"
-          }
-        },
-        "cert_nongmo": {
-          "type": "cert",
-          "settings": {
-            "icon": "non-gmo",
-            "image": "shopify://shop_images/iStock-2149233054_18436a45-c68b-48cf-bd1d-e059cc1adec8.jpg",
-            "label": "Non-GMO"
-          }
-        },
-        "cert_lab": {
-          "type": "cert",
-          "settings": {
-            "icon": "lab-tested",
-            "image": "shopify://shop_images/labtested.jpg",
-            "label": "Lab Tested"
-          }
-        },
-        "cert_vegan": {
-          "type": "cert",
-          "settings": {
-            "icon": "vegan",
-            "image": "shopify://shop_images/iStock-2263118530_b1e8a4eb-7851-4276-a3b0-7509cbc04fb7.jpg",
-            "label": "Vegan"
-          }
-        },
-        "cert_fairtrade": {
-          "type": "cert",
-          "settings": {
-            "icon": "fair-trade",
-            "image": "shopify://shop_images/Asset_1.png",
-            "label": "Fair Trade"
-          }
-        },
-        "cert_rainforest": {
-          "type": "cert",
-          "settings": {
-            "icon": "rainforest",
-            "image": "shopify://shop_images/iStock-2245960744.jpg",
-            "label": "Rainforest Alliance"
-          }
-        },
-        "cert_kosher": {
-          "type": "cert",
-          "settings": {
-            "icon": "kosher",
-            "image": "shopify://shop_images/KosherCheck-tag_3c_300.jpg",
-            "label": "Kosher"
-          }
-        }
+        "c_1": { "type": "cert", "settings": { "label": "USDA Organic" } },
+        "c_2": { "type": "cert", "settings": { "label": "CCOF Certified" } },
+        "c_3": { "type": "cert", "settings": { "label": "Lab Tested Every Batch" } },
+        "c_4": { "type": "cert", "settings": { "label": "Non-GMO" } },
+        "c_5": { "type": "cert", "settings": { "label": "Fair Trade" } },
+        "c_6": { "type": "cert", "settings": { "label": "Rainforest Alliance" } },
+        "c_7": { "type": "cert", "settings": { "label": "Woman Owned" } }
       },
-      "block_order": [
-        "cert_usda",
-        "cert_ccof",
-        "cert_nongmo",
-        "cert_lab",
-        "cert_vegan",
-        "cert_fairtrade",
-        "cert_rainforest",
-        "cert_kosher"
-      ],
+      "block_order": ["c_1", "c_2", "c_3", "c_4", "c_5", "c_6", "c_7"],
       "settings": {
-        "heading": "We test what we put on the label",
-        "use_alt_bg": false,
-        "background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 10,
-        "heading_font_size": 21
+        "heading": "Certified by",
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
-    "divine_testimonials": {
-      "type": "divine-testimonials",
+    "divine_b2b": {
+      "type": "divine-wholesale",
       "blocks": {
-        "testimonial_1": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "I switched to Divine's ceremonial matcha six months ago and I'm picky about everything else now. Bright, grassy, never bitter — you can tell it hasn't been sitting on a shelf for a year. Mornings actually feel different.",
-            "author": "Maya R.",
-            "role": "Daily Matcha Drinker, Seattle WA",
-            "source": "Google Review",
-            "link": ""
-          }
-        },
-        "testimonial_2": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "Their turmeric is the only one I've tried that actually shows up in my joints. Bright, peppery, stains the spoon — the way real turmeric should. I take it daily after lifting and I can taste why it's a different product.",
-            "author": "Marcus T.",
-            "role": "Strength Athlete, Brooklyn NY",
-            "source": "Google Review",
-            "link": ""
-          }
-        },
-        "testimonial_3": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "The chamomile-lavender blend is the closest thing to a sleep aid that actually works for me. Soft, real flowers in the cup — no perfume taste, no dust. I keep one tin on my nightstand and one at the office.",
-            "author": "Olivia K.",
-            "role": "Tea Ritualist, Madison WI",
-            "source": "Google Review",
-            "link": ""
-          }
-        },
-        "testimonial_4": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "Finally — a brand where I don't have to second-guess the ingredient list. The chamomile and lavender blend is part of my nightly routine now. Simple, honest, and it actually works.",
-            "author": "David L.",
-            "role": "Wellness Coach & Yoga Instructor",
-            "source": "Google Review",
-            "link": ""
-          }
-        },
-        "testimonial_5": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "I make a smoothie every morning and I've gone through every adaptogen brand on Amazon. Divine's ashwagandha and moringa are the first I trust — third-party tested, no metallic finish, and they actually blend in instead of clumping at the bottom.",
-            "author": "Priya S.",
-            "role": "Daily Smoothie Maker, Oakland CA",
-            "source": "Google Review",
-            "link": ""
-          }
-        },
-        "testimonial_6": {
-          "type": "testimonial",
-          "settings": {
-            "rating": 5,
-            "text": "Switched from a big grocery brand to Divine for all my baking — the cinnamon, the vanilla, the turmeric. Night and day. Everything just tastes more like the real thing because it is.",
-            "author": "Michelle T.",
-            "role": "Recipe Creator & Home Baker",
-            "source": "Google Review",
-            "link": ""
-          }
-        }
+        "f_1": { "type": "feature", "settings": { "text": "Wholesale pricing" } },
+        "f_2": { "type": "feature", "settings": { "text": "Flexible MOQs" } },
+        "f_3": { "type": "feature", "settings": { "text": "Private label available" } },
+        "f_4": { "type": "feature", "settings": { "text": "COA with every order" } },
+        "f_5": { "type": "feature", "settings": { "text": "Dedicated account manager" } }
       },
-      "block_order": [
-        "testimonial_1",
-        "testimonial_2",
-        "testimonial_3",
-        "testimonial_4",
-        "testimonial_5",
-        "testimonial_6"
-      ],
+      "block_order": ["f_1", "f_2", "f_3", "f_4", "f_5"],
       "settings": {
-        "caption": "",
-        "title": "Trusted by Wellness Lovers & Business Owners",
-        "use_alt_bg": false,
-        "background_color": "#f0ebf2",
-        "text_color": "",
-        "accent_color": "",
-        "card_background_color": "",
-        "card_border_color": "",
-        "star_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 19,
-        "heading_font_size": 26,
-        "caption_font_size": 14
+        "caption": "For Cafés, Spas & Studios",
+        "heading": "Wholesale & trade accounts",
+        "text": "<p>Trusted by wellness businesses across North America. Same quality you love — wholesale pricing, flexible minimums, and a Certificate of Analysis with every shipment.</p>",
+        "button_label_1": "Enquire about wholesale",
+        "button_link_1": "shopify://pages/wholesale",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "heading_font_size": 28
       }
     }
   },
   "order": [
     "divine_hero",
-    "divine_trust_bar",
-    "divine_lifestyle",
-    "divine_best_sellers",
-    "divine_brand_story",
+    "divine_ticker",
+    "divine_rituals",
+    "divine_powders",
+    "divine_bestsellers",
+    "divine_story",
+    "divine_discovery",
     "divine_newsletter",
     "divine_certs",
-    "divine_subscription",
-    "divine_why_us",
-    "divine_testimonials",
-    "divine_wholesale_wqQPLT"
+    "divine_b2b"
   ]
 }
