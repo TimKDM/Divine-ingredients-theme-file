@@ -38,50 +38,86 @@
         "padding_bottom": 10
       }
     },
-    "divine_nav": {
-      "type": "divine-nav",
-      "settings": {
-        "logo_text": "Divine *Ingredients*",
-        "menu": "divine-mega-menu",
-        "show_search": true,
-        "show_account": false,
-        "nav_height": 64
-      }
-    },
-    "announcement_bar_MMYfNc": {
-      "type": "announcement-bar",
-      "disabled": true,
+    "header": {
+      "type": "header",
       "blocks": {
-        "announcement_1": {
-          "type": "announcement",
+        "mega-promotion": {
+          "type": "mega_promotion",
+          "disabled": true,
           "settings": {
-            "slider-text": "<p>Free Shipping on Orders Over $100 · USDA Certified Organic</p>"
+            "mega_promotion_item": "Tea",
+            "mega_promotion_image": "shopify://shop_images/iced_matcha.jpg",
+            "mega_promotion_caption": "Ceremonial Grade",
+            "mega_promotion_title": "Organic Matcha",
+            "mega_promotion_link_label": "Shop Matcha",
+            "mega_promotion_link": "/collections/matcha-tea-powders"
+          }
+        },
+        "mega_image_menu": {
+          "type": "mega_image_menu",
+          "settings": {
+            "mega_image_menu_item": "Powders",
+            "mega_image_columns": 2,
+            "mega_image_menu_caption_1": "Adaptogenic",
+            "mega_image_menu_title_1": "Mushroom Powders",
+            "mega_image_menu_link_label_1": "Shop Now",
+            "mega_image_menu_link_1": "/collections/organic-superfood-powders",
+            "mega_image_menu_caption_2": "Antioxidant Rich",
+            "mega_image_menu_title_2": "Fruit Powders",
+            "mega_image_menu_link_label_2": "Shop Now",
+            "mega_image_menu_link_2": "/collections/organic-fruit-powders"
           }
         }
       },
-      "block_order": ["announcement_1"],
-      "name": "t:sections.announcement-bar.presets.name",
-      "settings": {
-        "announcement_position": "position-top",
-        "color_scheme": "option-1"
-      }
-    },
-    "header": {
-      "type": "header",
-      "disabled": true,
-      "blocks": {},
-      "block_order": [],
+      "block_order": [
+        "mega-promotion",
+        "mega_image_menu"
+      ],
       "settings": {
         "menu": "divine-mega-menu",
         "menu_type_desktop": "mega",
-        "color_scheme": "option-1"
+        "all_items_mega": false,
+        "enable_links": false,
+        "desktop_header_layout": "logo-centermenu-icons",
+        "show_search_icon": true,
+        "enable_header_full_width": true,
+        "sticky_header_type": "on-scroll-up",
+        "enable_fixed_header_type": false,
+        "enable_fixed_header_type_collection": false,
+        "enable_fixed_header_type_all": false,
+        "transparent_menu": "",
+        "enable_fixed_header_transparent": false,
+        "fixed_header_type_margin": 0,
+        "fixed_header_type_margin_mobile": 0,
+        "button_label": "",
+        "button_link": "",
+        "button_label_one": "",
+        "button_link_one": "",
+        "image_size": "small",
+        "disable_additional_links": false,
+        "enable_mobile_menu_links": false,
+        "enable_item_highlight": false,
+        "item_highlight_text": "",
+        "item_highlight_position": "nth-child(2)",
+        "adjust_item_highlight_position": 9,
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "header_icons_decoration": "line",
+        "color_scheme": "option-1",
+        "item_highlight_background_color": "#f0ebf2",
+        "item_highlight_color": "#1d1d1d",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "enable_country_selector_mobile": true,
+        "enable_language_selector_mobile": true,
+        "featured_collection_1": "",
+        "featured_collection_2": "",
+        "mobile_desktop_header_layout": "center"
       }
     }
   },
   "order": [
     "divine_announce",
-    "divine_nav",
-    "announcement_bar_MMYfNc",
     "header"
   ]
 }

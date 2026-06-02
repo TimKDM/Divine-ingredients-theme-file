@@ -19,7 +19,8 @@
         {%- if section.settings.logo_text != blank -%}
           {%- assign parts = section.settings.logo_text | split: '*' -%}
           {%- for p in parts -%}
-            {%- if forloop.index0 | modulo: 2 == 1 -%}<em>{{ p }}</em>{%- else -%}{{ p }}{%- endif -%}
+            {%- assign p_mod = forloop.index0 | modulo: 2 -%}
+            {%- if p_mod == 1 -%}<em>{{ p }}</em>{%- else -%}{{ p }}{%- endif -%}
           {%- endfor -%}
         {%- else -%}
           {{ shop.name }}

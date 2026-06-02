@@ -46,27 +46,24 @@
         "padding_bottom": 36
       }
     },
-    "popup": {
-      "type": "popup",
-      "disabled": true,
+    "divine_popup": {
+      "type": "divine-popup",
       "settings": {
-        "enable_popup": false,
-        "color_scheme": "option-2"
-      }
-    },
-    "footer": {
-      "type": "footer",
-      "disabled": true,
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "color_scheme": "option-3"
+        "enabled": true,
+        "kicker": "Welcome to Divine",
+        "heading": "<p>20% off your <em>first order.</em></p>",
+        "text": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send your 20% off code — plus first looks at new arrivals.",
+        "input_placeholder": "your@email.com",
+        "button_label": "Send My 20% Off Code",
+        "fine_print": "By signing up you agree to receive marketing emails. Unsubscribe any time.",
+        "success_message": "Thanks — your 20% off code is on its way. Welcome to <em>Divine</em>.",
+        "delay": 5,
+        "cookie_days": 14
       }
     }
   },
   "order": [
     "divine_footer",
-    "popup",
-    "footer"
+    "divine_popup"
   ]
 }
