@@ -1,0 +1,444 @@
+{%- comment -%}
+  Divine Collection — sidebar filters + product grid.
+  Matches the all-collections mockup.
+
+  Filter data model:
+    data-cat   ← product.type | downcase | handleize          (single value)
+    data-type  ← first tag prefixed "type:" with prefix stripped  (single value)
+    data-func  ← tags prefixed "function:" with prefix stripped   (space-joined)
+    data-name  ← product.title                                (sort key)
+    data-price ← product.price as decimal                     (sort key)
+
+  Filter option blocks declare {group_key, group_title, label, value}.
+    group_key=cat   matches data-cat
+    group_key=type  matches data-type
+    group_key=func  matches one of data-func
+  Counts are computed in Liquid against the rendered products list.
+{%- endcomment -%}
+
+{%- paginate collection.products by: 250 -%}
+
+{%- assign products = collection.products -%}
+
+{%- comment -%} Build group_title map by first-seen group_key {%- endcomment -%}
+{%- assign group_keys = '' -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'filter_option' -%}
+    {%- assign gk = block.settings.group_key | strip -%}
+    {%- unless group_keys contains gk -%}
+      {%- assign group_keys = group_keys | append: gk | append: '|' -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign group_key_list = group_keys | split: '|' | uniq -%}
+
+<section class="d-coll" id="DColl-{{ section.id }}">
+
+  {%- if section.settings.show_breadcrumb -%}
+    <nav class="d-breadcrumb d-coll-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a>
+      <span class="d-breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{{ collection.title | default: 'All Collections' }}</span>
+    </nav>
+  {%- endif -%}
+
+  <header class="d-coll-header">
+    <div>
+      {%- if section.settings.caption != blank -%}
+        <div class="d-ph-label">{{ section.settings.caption }}</div>
+      {%- endif -%}
+      <h1 class="d-ph-h1">
+        {%- if section.settings.title != blank -%}
+          {{ section.settings.title | replace: '<p>', '' | replace: '</p>', '' }}
+        {%- else -%}
+          {{ collection.title }}
+        {%- endif -%}
+      </h1>
+    </div>
+    <div class="d-coll-header-right">
+      <span class="d-ph-count" id="DCollCount-{{ section.id }}">{{ products.size }} {{ products.size | pluralize: 'product', 'products' }}</span>
+      {%- if section.settings.show_sort -%}
+        <label class="d-sr-only" for="DCollSort-{{ section.id }}">Sort by</label>
+        <select class="d-sort-select" id="DCollSort-{{ section.id }}" data-coll-sort>
+          <option value="default">Sort: Featured</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="name-desc">Name Z–A</option>
+          <option value="price-asc">Price: Low–High</option>
+          <option value="price-desc">Price: High–Low</option>
+        </select>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="d-coll-layout">
+
+    <aside class="d-coll-sidebar" aria-label="Filters">
+
+      {%- for gk in group_key_list -%}
+        {%- if gk == '' -%}{%- continue -%}{%- endif -%}
+        {%- assign group_title = '' -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'filter_option' and block.settings.group_key == gk and group_title == '' -%}
+            {%- assign group_title = block.settings.group_title -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <div class="d-filter-section">
+          <div class="d-filter-title">
+            {{ group_title | default: gk }}
+            <button type="button" class="d-filter-clear" data-coll-clear-group="{{ gk }}">Clear</button>
+          </div>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'filter_option' and block.settings.group_key == gk -%}
+              {%- assign val = block.settings.value -%}
+              {%- assign count = 0 -%}
+              {%- for p in products -%}
+                {%- liquid
+                  if gk == 'cat'
+                    assign p_cat = p.type | downcase | handleize
+                    if p_cat == val
+                      assign count = count | plus: 1
+                    endif
+                  elsif gk == 'type'
+                    assign p_type = ''
+                    for t in p.tags
+                      assign t_str = t | downcase
+                      if t_str contains 'type:'
+                        assign p_type = t_str | remove_first: 'type:'
+                        break
+                      endif
+                    endfor
+                    if p_type == val
+                      assign count = count | plus: 1
+                    endif
+                  elsif gk == 'func'
+                    for t in p.tags
+                      assign t_str = t | downcase
+                      if t_str contains 'function:'
+                        assign t_val = t_str | remove_first: 'function:'
+                        if t_val == val
+                          assign count = count | plus: 1
+                          break
+                        endif
+                      endif
+                    endfor
+                  endif
+                -%}
+              {%- endfor -%}
+              <button
+                type="button"
+                class="d-filter-option"
+                data-coll-filter
+                data-group="{{ gk }}"
+                data-val="{{ val }}"
+                aria-pressed="false"
+                {{ block.shopify_attributes }}
+              >
+                <span class="d-fo-check" aria-hidden="true"></span>
+                <span class="d-fo-label">{{ block.settings.label }}</span>
+                <span class="d-fo-count">{{ count }}</span>
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+
+      <button type="button" class="d-sidebar-clear" data-coll-clear-all>Clear all filters</button>
+    </aside>
+
+    <div class="d-coll-grid-area">
+      <div class="d-active-tags" id="DCollActiveTags-{{ section.id }}" aria-live="polite"></div>
+
+      <div class="d-prod-grid d-coll-grid" id="DCollGrid-{{ section.id }}">
+        {%- for p in products -%}
+          {%- liquid
+            assign p_cat = p.type | downcase | handleize
+            assign p_type = ''
+            assign p_funcs = ''
+            for t in p.tags
+              assign t_str = t | downcase
+              if t_str contains 'type:' and p_type == ''
+                assign p_type = t_str | remove_first: 'type:'
+              endif
+              if t_str contains 'function:'
+                assign fn = t_str | remove_first: 'function:'
+                assign p_funcs = p_funcs | append: fn | append: ' '
+              endif
+            endfor
+            assign p_funcs = p_funcs | strip
+            assign p_price_decimal = p.price | money_without_currency | replace: ',', ''
+          -%}
+
+          <a
+            href="{{ p.url }}"
+            class="d-coll-card"
+            data-coll-card
+            data-cat="{{ p_cat }}"
+            data-type="{{ p_type }}"
+            data-func="{{ p_funcs }}"
+            data-name="{{ p.title | escape }}"
+            data-price="{{ p_price_decimal }}"
+          >
+            <div class="d-coll-card-img">
+              {%- if p.featured_image != blank -%}
+                {{ p.featured_image | image_url: width: 600 | image_tag:
+                  loading: 'lazy', widths: '300, 500, 700', sizes: '(min-width:1100px) 25vw, 50vw',
+                  alt: p.featured_image.alt | default: p.title
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+              {%- assign tag_lc = p.tags | join: ',' | downcase -%}
+              <div class="d-coll-badges">
+                {%- if tag_lc contains 'best-seller' or tag_lc contains 'best seller' -%}
+                  <div class="d-coll-badge d-coll-badge--best">Best Seller</div>
+                {%- endif -%}
+                {%- if tag_lc contains 'new' -%}
+                  <div class="d-coll-badge d-coll-badge--new">New</div>
+                {%- endif -%}
+                {%- if tag_lc contains 'customer-fav' or tag_lc contains 'customer favorite' -%}
+                  <div class="d-coll-badge d-coll-badge--fav">Customer Fav</div>
+                {%- elsif tag_lc contains 'founder' -%}
+                  <div class="d-coll-badge d-coll-badge--fav">Founder's Fav</div>
+                {%- endif -%}
+                {%- if p.compare_at_price > p.price -%}
+                  <div class="d-coll-badge d-coll-badge--sale">Sale</div>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="d-coll-card-body">
+              <div class="d-coll-card-type">{{ p.type }}</div>
+              <div class="d-coll-card-name">{{ p.title }}</div>
+              <div class="d-coll-card-foot">
+                <div>
+                  <div class="d-coll-card-price">
+                    {%- if p.price_varies %}From {% endif -%}
+                    {{ p.price_min | money_without_trailing_zeros }}
+                  </div>
+                  <div class="d-coll-card-from">{{ cart.currency.iso_code }}</div>
+                </div>
+                <span class="d-coll-card-add" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </a>
+        {%- else -%}
+          <div class="d-coll-empty">
+            <div class="d-coll-empty-icon" aria-hidden="true">🍃</div>
+            <div class="d-coll-empty-title">No products in this collection yet</div>
+            <div class="d-coll-empty-sub">Check back soon</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var root = document.getElementById('DColl-{{ section.id }}');
+    if (!root) return;
+
+    var labelMap = {};
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'filter_option' -%}
+        labelMap[{{ block.settings.group_key | json }} + '|' + {{ block.settings.value | json }}] = {{ block.settings.label | json }};
+      {%- endif -%}
+    {%- endfor -%}
+
+    var state = { cat: new Set(), type: new Set(), func: new Set() };
+    var cards = Array.from(root.querySelectorAll('[data-coll-card]'));
+    var grid  = document.getElementById('DCollGrid-{{ section.id }}');
+    var countEl = document.getElementById('DCollCount-{{ section.id }}');
+    var tagsEl  = document.getElementById('DCollActiveTags-{{ section.id }}');
+    var pluralize = function(n){ return n + ' ' + (n === 1 ? 'product' : 'products'); };
+
+    function ensureGroup(g){ if (!state[g]) state[g] = new Set(); }
+
+    function update(){
+      var visible = 0;
+      cards.forEach(function(card){
+        var c = card.dataset.cat || '';
+        var t = card.dataset.type || '';
+        var funcs = (card.dataset.func || '').split(' ').filter(Boolean);
+
+        var catOk  = state.cat.size  === 0 || state.cat.has(c);
+        var typeOk = state.type.size === 0 || state.type.has(t);
+        var funcOk = state.func.size === 0 || funcs.some(function(f){ return state.func.has(f); });
+
+        var show = catOk && typeOk && funcOk;
+        card.classList.toggle('d-coll-hidden', !show);
+        if (show) visible++;
+      });
+      if (countEl) countEl.textContent = pluralize(visible);
+      renderTags();
+      renderEmpty(visible);
+    }
+
+    function renderTags(){
+      if (!tagsEl) return;
+      tagsEl.innerHTML = '';
+      Object.keys(state).forEach(function(g){
+        state[g].forEach(function(v){
+          var label = labelMap[g + '|' + v] || v;
+          var tag = document.createElement('button');
+          tag.type = 'button';
+          tag.className = 'd-atag';
+          tag.setAttribute('data-coll-remove', g + ':' + v);
+          tag.innerHTML = label + ' <span class="d-atag-x" aria-hidden="true">×</span><span class="d-sr-only">Remove filter</span>';
+          tagsEl.appendChild(tag);
+        });
+      });
+    }
+
+    function renderEmpty(visible){
+      var existing = root.querySelector('.d-coll-empty.is-filter-empty');
+      if (existing) existing.remove();
+      if (visible === 0 && cards.length > 0) {
+        var div = document.createElement('div');
+        div.className = 'd-coll-empty is-filter-empty';
+        div.innerHTML = '<div class="d-coll-empty-icon" aria-hidden="true">🍃</div>'
+          + '<div class="d-coll-empty-title">No products match</div>'
+          + '<div class="d-coll-empty-sub">Try adjusting your filters</div>';
+        grid.appendChild(div);
+      }
+    }
+
+    function setOptionActive(g, v, active){
+      var opt = root.querySelector('[data-coll-filter][data-group="' + g + '"][data-val="' + v + '"]');
+      if (opt) {
+        opt.classList.toggle('d-filter-option-active', active);
+        opt.setAttribute('aria-pressed', active ? 'true' : 'false');
+      }
+    }
+
+    function clearGroup(g){
+      ensureGroup(g);
+      state[g].clear();
+      root.querySelectorAll('[data-coll-filter][data-group="' + g + '"]').forEach(function(el){
+        el.classList.remove('d-filter-option-active');
+        el.setAttribute('aria-pressed', 'false');
+      });
+      update();
+    }
+
+    /* Filter clicks */
+    root.querySelectorAll('[data-coll-filter]').forEach(function(opt){
+      opt.addEventListener('click', function(){
+        var g = opt.dataset.group;
+        var v = opt.dataset.val;
+        ensureGroup(g);
+        if (state[g].has(v)) {
+          state[g].delete(v);
+          setOptionActive(g, v, false);
+        } else {
+          state[g].add(v);
+          setOptionActive(g, v, true);
+        }
+        update();
+      });
+    });
+
+    /* Group "Clear" links */
+    root.querySelectorAll('[data-coll-clear-group]').forEach(function(b){
+      b.addEventListener('click', function(){ clearGroup(b.dataset.collClearGroup); });
+    });
+
+    /* Clear all */
+    root.querySelectorAll('[data-coll-clear-all]').forEach(function(b){
+      b.addEventListener('click', function(){
+        Object.keys(state).forEach(function(g){ clearGroup(g); });
+      });
+    });
+
+    /* Active-tag removal */
+    if (tagsEl) {
+      tagsEl.addEventListener('click', function(e){
+        var t = e.target.closest('[data-coll-remove]');
+        if (!t) return;
+        var parts = t.dataset.collRemove.split(':');
+        var g = parts[0], v = parts.slice(1).join(':');
+        ensureGroup(g);
+        state[g].delete(v);
+        setOptionActive(g, v, false);
+        update();
+      });
+    }
+
+    /* Sort */
+    var sortSel = root.querySelector('[data-coll-sort]');
+    if (sortSel) {
+      sortSel.addEventListener('change', function(){
+        var v = sortSel.value;
+        var sorted = cards.slice().sort(function(a, b){
+          if (v === 'name-asc')  return a.dataset.name.localeCompare(b.dataset.name);
+          if (v === 'name-desc') return b.dataset.name.localeCompare(a.dataset.name);
+          if (v === 'price-asc') return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+          if (v === 'price-desc') return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+          return 0;
+        });
+        sorted.forEach(function(c){ grid.appendChild(c); });
+      });
+    }
+  })();
+</script>
+
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Divine Collection",
+  "tag": "section",
+  "class": "divine-collection-section",
+  "max_blocks": 30,
+  "settings": [
+    { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
+    { "type": "checkbox", "id": "show_sort", "label": "Show sort dropdown", "default": true },
+    { "type": "text", "id": "caption", "label": "Header caption", "default": "Divine Ingredients" },
+    { "type": "html", "id": "title", "label": "Header title (HTML allowed)", "default": "<p>All <em>Collections</em></p>" }
+  ],
+  "blocks": [
+    {
+      "type": "filter_option",
+      "name": "Filter option",
+      "settings": [
+        { "type": "text", "id": "group_key", "label": "Group key (cat / type / func)",
+          "info": "Use 'cat' to match product.type, 'type' to match `type:value` tags, 'func' to match `function:value` tags. Same key groups options visually.",
+          "default": "type"
+        },
+        { "type": "text", "id": "group_title", "label": "Group title (shown for the first block of each group_key)", "default": "Tea Type" },
+        { "type": "text", "id": "label", "label": "Option label", "default": "Green Tea" },
+        { "type": "text", "id": "value", "label": "Match value (case-insensitive)",
+          "info": "For 'cat' this is the handleized product.type (e.g. 'tea'). For 'type'/'func' this is the value after the prefix (e.g. 'green-tea' for tag `type:green-tea`).",
+          "default": "green-tea"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Collection",
+      "blocks": [
+        { "type": "filter_option", "settings": { "group_key": "cat",  "group_title": "Category",     "label": "Shop Teas",        "value": "tea" } },
+        { "type": "filter_option", "settings": { "group_key": "cat",  "group_title": "Category",     "label": "Shop Powders",     "value": "powder" } },
+        { "type": "filter_option", "settings": { "group_key": "cat",  "group_title": "Category",     "label": "Spice & Soul",     "value": "spice" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Green Tea",        "value": "green-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Black Tea",        "value": "black-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Herbal Tea",       "value": "herbal-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Chai",             "value": "chai" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Matcha",           "value": "matcha" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Hemp Tea",         "value": "hemp-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Iced Tea",         "value": "iced-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Tea Type",     "label": "Oolong Tea",       "value": "oolong-tea" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Powder Type",  "label": "Mushroom Powders", "value": "mushroom-powder" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Powder Type",  "label": "Fruit Powders",    "value": "fruit-powder" } },
+        { "type": "filter_option", "settings": { "group_key": "type", "group_title": "Powder Type",  "label": "Superfood Blends", "value": "superfood-blend" } },
+        { "type": "filter_option", "settings": { "group_key": "func", "group_title": "By Function",  "label": "Immunity",         "value": "immunity" } },
+        { "type": "filter_option", "settings": { "group_key": "func", "group_title": "By Function",  "label": "Wind Down",        "value": "wind-down" } },
+        { "type": "filter_option", "settings": { "group_key": "func", "group_title": "By Function",  "label": "Gut Reset",        "value": "gut-reset" } },
+        { "type": "filter_option", "settings": { "group_key": "func", "group_title": "By Function",  "label": "Focus & Energy",   "value": "focus" } },
+        { "type": "filter_option", "settings": { "group_key": "func", "group_title": "By Function",  "label": "Detox",            "value": "detox" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
