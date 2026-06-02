@@ -3,7 +3,32 @@
   Block-driven: pair any two of {numbered_uses, numbered_steps, kv_table, prose}.
   - tea PDP → kv_table + numbered_steps (steeping)
   - powder PDP → numbered_uses + kv_table (how-to use)
+
+  PER-PRODUCT OVERRIDES via product metafields (custom namespace):
+    custom.how_to_use            multi-line text, "Title | Description" per line
+                                 → overrides `numbered_uses` block content
+    custom.steeping_instructions multi-line text, "Title | Description" per line
+                                 → overrides `numbered_steps` block content
+                                 (icons fall back to default sequence: kettle, scoop, timer, mug)
+    custom.product_facts         multi-line text, "Key | Value" per line
+                                 → overrides `kv_table` block rows
+    custom.how_to_use_heading    single line, optional heading override
+    custom.steeping_heading      single line, optional heading override
+    custom.product_facts_heading single line, optional heading override
+
+  Setup (one-time, in Shopify admin):
+    Settings → Custom data → Products → Add definition
+      Namespace + key: custom.how_to_use            | Type: Multi-line text
+      Namespace + key: custom.steeping_instructions | Type: Multi-line text
+      Namespace + key: custom.product_facts         | Type: Multi-line text
+      (optional) the three *_heading fields as Single-line text
+
+  Then on each product, the "Metafields" panel exposes these for per-product editing.
+  When a metafield is blank, the section block's default settings are used.
 {%- endcomment -%}
+
+{%- assign nl = '
+' -%}
 
 {%- style -%}
   #shopify-section-{{ section.id }} .d-pdp-details{
@@ -22,22 +47,54 @@
   <div class="d-pdp-details-grid">
     {%- for block in section.blocks -%}
       <div class="d-pdp-details-col" {{ block.shopify_attributes }}>
-        {%- if block.settings.heading != blank -%}
-          <h2 class="d-pdp-details-h">{{ block.settings.heading }}</h2>
+
+        {%- liquid
+          assign block_heading = block.settings.heading
+          if block.type == 'numbered_uses' and product.metafields.custom.how_to_use_heading != blank
+            assign block_heading = product.metafields.custom.how_to_use_heading
+          elsif block.type == 'numbered_steps' and product.metafields.custom.steeping_heading != blank
+            assign block_heading = product.metafields.custom.steeping_heading
+          elsif block.type == 'kv_table' and product.metafields.custom.product_facts_heading != blank
+            assign block_heading = product.metafields.custom.product_facts_heading
+          endif
+        -%}
+
+        {%- if block_heading != blank -%}
+          <h2 class="d-pdp-details-h">{{ block_heading }}</h2>
         {%- endif -%}
 
         {%- case block.type -%}
 
           {%- when 'numbered_uses' -%}
+            {%- liquid
+              assign mf_uses = product.metafields.custom.how_to_use
+              assign uses_lines = ''
+              if mf_uses != blank
+                assign uses_lines = mf_uses | split: nl
+              else
+                assign tmp = ''
+                for i in (1..6)
+                  assign t_key = 'use_' | append: i | append: '_title'
+                  assign d_key = 'use_' | append: i | append: '_desc'
+                  assign t = block.settings[t_key]
+                  assign d = block.settings[d_key]
+                  if t != blank or d != blank
+                    assign tmp = tmp | append: t | append: ' | ' | append: d | append: nl
+                  endif
+                endfor
+                assign uses_lines = tmp | split: nl
+              endif
+            -%}
             <div class="d-how-uses">
-              {%- for i in (1..6) -%}
-                {%- assign t_key = 'use_' | append: i | append: '_title' -%}
-                {%- assign d_key = 'use_' | append: i | append: '_desc' -%}
-                {%- assign t = block.settings[t_key] -%}
-                {%- assign d = block.settings[d_key] -%}
+              {%- assign idx = 0 -%}
+              {%- for line in uses_lines -%}
+                {%- assign parts = line | split: '|' -%}
+                {%- assign t = parts[0] | strip -%}
+                {%- assign d = parts[1] | default: '' | strip -%}
                 {%- if t != blank or d != blank -%}
+                  {%- assign idx = idx | plus: 1 -%}
                   <div class="d-how-use">
-                    <div class="d-how-use-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+                    <div class="d-how-use-num">{{ idx | prepend: '0' | slice: -2, 2 }}</div>
                     <div>
                       {%- if t != blank -%}<div class="d-how-use-title">{{ t }}</div>{%- endif -%}
                       {%- if d != blank -%}<div class="d-how-use-desc">{{ d }}</div>{%- endif -%}
@@ -48,17 +105,45 @@
             </div>
 
           {%- when 'numbered_steps' -%}
+            {%- liquid
+              assign mf_steps = product.metafields.custom.steeping_instructions
+              assign steps_lines = ''
+              assign use_default_icons = false
+              if mf_steps != blank
+                assign steps_lines = mf_steps | split: nl
+                assign use_default_icons = true
+              else
+                assign tmp = ''
+                for i in (1..6)
+                  assign t_key = 'step_' | append: i | append: '_title'
+                  assign d_key = 'step_' | append: i | append: '_desc'
+                  assign t = block.settings[t_key]
+                  assign d = block.settings[d_key]
+                  if t != blank or d != blank
+                    assign tmp = tmp | append: t | append: ' | ' | append: d | append: nl
+                  endif
+                endfor
+                assign steps_lines = tmp | split: nl
+              endif
+              assign default_icons = 'kettle,scoop,timer,mug,kettle,scoop' | split: ','
+            -%}
             <div class="d-steep-steps">
-              {%- for i in (1..6) -%}
-                {%- assign t_key = 'step_' | append: i | append: '_title' -%}
-                {%- assign d_key = 'step_' | append: i | append: '_desc' -%}
-                {%- assign ic_key = 'step_' | append: i | append: '_icon' -%}
-                {%- assign t = block.settings[t_key] -%}
-                {%- assign d = block.settings[d_key] -%}
-                {%- assign ic = block.settings[ic_key] -%}
+              {%- assign idx = 0 -%}
+              {%- for line in steps_lines -%}
+                {%- assign parts = line | split: '|' -%}
+                {%- assign t = parts[0] | strip -%}
+                {%- assign d = parts[1] | default: '' | strip -%}
                 {%- if t != blank or d != blank -%}
+                  {%- assign idx = idx | plus: 1 -%}
+                  {%- if use_default_icons -%}
+                    {%- assign ic_i = idx | minus: 1 -%}
+                    {%- assign ic = default_icons[ic_i] | default: 'kettle' -%}
+                  {%- else -%}
+                    {%- assign ic_key = 'step_' | append: idx | append: '_icon' -%}
+                    {%- assign ic = block.settings[ic_key] -%}
+                  {%- endif -%}
                   <div class="d-steep-step">
-                    <div class="d-step-num">{{ forloop.index }}</div>
+                    <div class="d-step-num">{{ idx }}</div>
                     <div class="d-step-icon" aria-hidden="true">
                       {%- case ic -%}
                         {%- when 'kettle' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 7V5a2 2 0 0 0-4 0v2"/></svg>
@@ -78,16 +163,34 @@
             </div>
 
           {%- when 'kv_table' -%}
+            {%- liquid
+              assign mf_facts = product.metafields.custom.product_facts
+              assign facts_lines = ''
+              if mf_facts != blank
+                assign facts_lines = mf_facts | split: nl
+              else
+                assign tmp = ''
+                for i in (1..8)
+                  assign k_key = 'row_' | append: i | append: '_key'
+                  assign v_key = 'row_' | append: i | append: '_val'
+                  assign k = block.settings[k_key]
+                  assign v = block.settings[v_key]
+                  if k != blank or v != blank
+                    assign tmp = tmp | append: k | append: ' | ' | append: v | append: nl
+                  endif
+                endfor
+                assign facts_lines = tmp | split: nl
+              endif
+            -%}
             <div class="d-things-table">
-              {%- for i in (1..8) -%}
-                {%- assign k = 'row_' | append: i | append: '_key' -%}
-                {%- assign v = 'row_' | append: i | append: '_val' -%}
-                {%- assign key = block.settings[k] -%}
-                {%- assign val = block.settings[v] -%}
-                {%- if key != blank or val != blank -%}
+              {%- for line in facts_lines -%}
+                {%- assign parts = line | split: '|' -%}
+                {%- assign k = parts[0] | strip -%}
+                {%- assign v = parts[1] | default: '' | strip -%}
+                {%- if k != blank or v != blank -%}
                   <div class="d-things-row">
-                    <div class="d-things-key">{{ key }}</div>
-                    <div class="d-things-val">{{ val }}</div>
+                    <div class="d-things-key">{{ k }}</div>
+                    <div class="d-things-val">{{ v }}</div>
                   </div>
                 {%- endif -%}
               {%- endfor -%}
