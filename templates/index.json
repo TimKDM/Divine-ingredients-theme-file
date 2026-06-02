@@ -126,7 +126,7 @@
         "cta_label": "Browse all teas",
         "cta_link": "shopify://collections/tea",
         "padding_top": 96,
-        "padding_bottom": 0,
+        "padding_bottom": 96,
         "heading_font_size": 52
       }
     },
