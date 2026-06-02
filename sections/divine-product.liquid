@@ -102,8 +102,9 @@
         {%- endif -%}
       {%- endif -%}
 
+      {%- assign product_form_id = 'product-form-' | append: section.id -%}
       <product-form class="d-pdp-form" data-section="{{ section.id }}">
-        {%- form 'product', product, id: 'product-form-' | append: section.id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+        {%- form 'product', product, id: product_form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
 
           <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
 
