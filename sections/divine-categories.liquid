@@ -4,6 +4,7 @@
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
     padding-top: {{ section.settings.padding_top | default: 96 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;
   }
   #shopify-section-{{ section.id }} .d-rc-teas{
     font-size: {{ section.settings.body_font_size | default: 12 }}px;
@@ -180,7 +181,7 @@
       "min": 0,
       "max": 160,
       "step": 4,
-      "default": 0,
+      "default": 96,
       "unit": "px"
     },
     {
