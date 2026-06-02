@@ -1,0 +1,246 @@
+{%- comment -%}
+  Divine Product Details — bottom info section.
+  Block-driven: pair any two of {numbered_uses, numbered_steps, kv_table, prose}.
+  - tea PDP → kv_table + numbered_steps (steeping)
+  - powder PDP → numbered_uses + kv_table (how-to use)
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-pdp-details{
+    {% if section.settings.background == 'beige' %}background: var(--d-beige-lt);{% else %}background: var(--d-white);{% endif %}
+    padding-top: {{ section.settings.padding_top | default: 72 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 72 }}px;
+  }
+{%- endstyle -%}
+
+<section class="d-pdp-details d-reveal">
+  {%- if section.settings.kicker != blank -%}
+    <div class="d-pdp-details-title">{{ section.settings.kicker }}</div>
+    <div class="d-pdp-details-line"></div>
+  {%- endif -%}
+
+  <div class="d-pdp-details-grid">
+    {%- for block in section.blocks -%}
+      <div class="d-pdp-details-col" {{ block.shopify_attributes }}>
+        {%- if block.settings.heading != blank -%}
+          <h2 class="d-pdp-details-h">{{ block.settings.heading }}</h2>
+        {%- endif -%}
+
+        {%- case block.type -%}
+
+          {%- when 'numbered_uses' -%}
+            <div class="d-how-uses">
+              {%- for i in (1..6) -%}
+                {%- assign t_key = 'use_' | append: i | append: '_title' -%}
+                {%- assign d_key = 'use_' | append: i | append: '_desc' -%}
+                {%- assign t = block.settings[t_key] -%}
+                {%- assign d = block.settings[d_key] -%}
+                {%- if t != blank or d != blank -%}
+                  <div class="d-how-use">
+                    <div class="d-how-use-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+                    <div>
+                      {%- if t != blank -%}<div class="d-how-use-title">{{ t }}</div>{%- endif -%}
+                      {%- if d != blank -%}<div class="d-how-use-desc">{{ d }}</div>{%- endif -%}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+          {%- when 'numbered_steps' -%}
+            <div class="d-steep-steps">
+              {%- for i in (1..6) -%}
+                {%- assign t_key = 'step_' | append: i | append: '_title' -%}
+                {%- assign d_key = 'step_' | append: i | append: '_desc' -%}
+                {%- assign ic_key = 'step_' | append: i | append: '_icon' -%}
+                {%- assign t = block.settings[t_key] -%}
+                {%- assign d = block.settings[d_key] -%}
+                {%- assign ic = block.settings[ic_key] -%}
+                {%- if t != blank or d != blank -%}
+                  <div class="d-steep-step">
+                    <div class="d-step-num">{{ forloop.index }}</div>
+                    <div class="d-step-icon" aria-hidden="true">
+                      {%- case ic -%}
+                        {%- when 'kettle' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 7V5a2 2 0 0 0-4 0v2"/></svg>
+                        {%- when 'scoop' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        {%- when 'timer' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        {%- when 'mug' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+                        {%- else -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>
+                      {%- endcase -%}
+                    </div>
+                    <div>
+                      {%- if t != blank -%}<div class="d-step-text">{{ t }}</div>{%- endif -%}
+                      {%- if d != blank -%}<div class="d-step-sub">{{ d }}</div>{%- endif -%}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+          {%- when 'kv_table' -%}
+            <div class="d-things-table">
+              {%- for i in (1..8) -%}
+                {%- assign k = 'row_' | append: i | append: '_key' -%}
+                {%- assign v = 'row_' | append: i | append: '_val' -%}
+                {%- assign key = block.settings[k] -%}
+                {%- assign val = block.settings[v] -%}
+                {%- if key != blank or val != blank -%}
+                  <div class="d-things-row">
+                    <div class="d-things-key">{{ key }}</div>
+                    <div class="d-things-val">{{ val }}</div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+          {%- when 'prose' -%}
+            <div class="d-pdp-prose">{{ block.settings.body }}</div>
+
+        {%- endcase -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Product Details",
+  "tag": "section",
+  "class": "divine-product-details-section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Additional Information" },
+    { "type": "select", "id": "background", "label": "Background",
+      "options": [
+        { "value": "white", "label": "White" },
+        { "value": "beige", "label": "Beige" }
+      ],
+      "default": "white"
+    },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 24, "max": 160, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 24, "max": 160, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "numbered_uses",
+      "name": "Numbered uses",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Add it to your daily routine" },
+        { "type": "header", "content": "Use 1" },
+        { "type": "text", "id": "use_1_title", "label": "Title", "default": "Morning coffee or matcha" },
+        { "type": "textarea", "id": "use_1_desc", "label": "Description", "default": "Add ½ tsp to your morning cup. The neutral flavour blends completely." },
+        { "type": "header", "content": "Use 2" },
+        { "type": "text", "id": "use_2_title", "label": "Title", "default": "Smoothies and shakes" },
+        { "type": "textarea", "id": "use_2_desc", "label": "Description", "default": "Blend with fruits, plant milk, and other superfood powders." },
+        { "type": "header", "content": "Use 3" },
+        { "type": "text", "id": "use_3_title", "label": "Title", "default": "Soups and cooking" },
+        { "type": "textarea", "id": "use_3_desc", "label": "Description", "default": "Stir into broths, sauces, or oatmeal. Heat-stable — retains its properties when cooked." },
+        { "type": "header", "content": "Use 4 (optional)" },
+        { "type": "text", "id": "use_4_title", "label": "Title" },
+        { "type": "textarea", "id": "use_4_desc", "label": "Description" },
+        { "type": "header", "content": "Use 5 (optional)" },
+        { "type": "text", "id": "use_5_title", "label": "Title" },
+        { "type": "textarea", "id": "use_5_desc", "label": "Description" },
+        { "type": "header", "content": "Use 6 (optional)" },
+        { "type": "text", "id": "use_6_title", "label": "Title" },
+        { "type": "textarea", "id": "use_6_desc", "label": "Description" }
+      ]
+    },
+    {
+      "type": "numbered_steps",
+      "name": "Numbered steps",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Steeping Instructions" },
+        { "type": "header", "content": "Step 1" },
+        { "type": "select", "id": "step_1_icon", "label": "Icon",
+          "options": [
+            { "value": "kettle", "label": "Kettle" },
+            { "value": "scoop",  "label": "Scoop" },
+            { "value": "timer",  "label": "Timer" },
+            { "value": "mug",    "label": "Mug" }
+          ],
+          "default": "kettle"
+        },
+        { "type": "text", "id": "step_1_title", "label": "Title", "default": "Heat water to 100°C (212°F)" },
+        { "type": "textarea", "id": "step_1_desc", "label": "Description", "default": "Use freshly boiled water for the best flavour extraction" },
+        { "type": "header", "content": "Step 2" },
+        { "type": "select", "id": "step_2_icon", "label": "Icon",
+          "options": [
+            { "value": "kettle", "label": "Kettle" },
+            { "value": "scoop",  "label": "Scoop" },
+            { "value": "timer",  "label": "Timer" },
+            { "value": "mug",    "label": "Mug" }
+          ],
+          "default": "scoop"
+        },
+        { "type": "text", "id": "step_2_title", "label": "Title", "default": "Add 1 tsp per cup (0.07–0.1 oz)" },
+        { "type": "textarea", "id": "step_2_desc", "label": "Description", "default": "Use a tea infuser or strainer" },
+        { "type": "header", "content": "Step 3" },
+        { "type": "select", "id": "step_3_icon", "label": "Icon",
+          "options": [
+            { "value": "kettle", "label": "Kettle" },
+            { "value": "scoop",  "label": "Scoop" },
+            { "value": "timer",  "label": "Timer" },
+            { "value": "mug",    "label": "Mug" }
+          ],
+          "default": "timer"
+        },
+        { "type": "text", "id": "step_3_title", "label": "Title", "default": "Steep for 3–5 minutes" },
+        { "type": "textarea", "id": "step_3_desc", "label": "Description", "default": "Longer steep = bolder, spicier cup" },
+        { "type": "header", "content": "Step 4" },
+        { "type": "select", "id": "step_4_icon", "label": "Icon",
+          "options": [
+            { "value": "kettle", "label": "Kettle" },
+            { "value": "scoop",  "label": "Scoop" },
+            { "value": "timer",  "label": "Timer" },
+            { "value": "mug",    "label": "Mug" }
+          ],
+          "default": "mug"
+        },
+        { "type": "text", "id": "step_4_title", "label": "Title", "default": "Serve and enjoy" },
+        { "type": "textarea", "id": "step_4_desc", "label": "Description", "default": "Try as a latte with steamed milk and a touch of honey" }
+      ]
+    },
+    {
+      "type": "kv_table",
+      "name": "Key/Value table",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "The full story, no fine print" },
+        { "type": "text", "id": "row_1_key", "label": "Row 1 — key", "default": "Product type" },
+        { "type": "textarea", "id": "row_1_val", "label": "Row 1 — value", "default": "Organic Mushroom Powder" },
+        { "type": "text", "id": "row_2_key", "label": "Row 2 — key", "default": "Ingredients" },
+        { "type": "textarea", "id": "row_2_val", "label": "Row 2 — value", "default": "100% Organic Lion's Mane Mushroom (Hericium erinaceus)" },
+        { "type": "text", "id": "row_3_key", "label": "Row 3 — key", "default": "Fillers or carriers" },
+        { "type": "textarea", "id": "row_3_val", "label": "Row 3 — value", "default": "None. Just the mushroom." },
+        { "type": "text", "id": "row_4_key", "label": "Row 4 — key", "default": "Certifications" },
+        { "type": "textarea", "id": "row_4_val", "label": "Row 4 — value", "default": "USDA Organic · CCOF Certified · Third-party lab tested" },
+        { "type": "text", "id": "row_5_key", "label": "Row 5 — key", "default": "Allergens" },
+        { "type": "textarea", "id": "row_5_val", "label": "Row 5 — value", "default": "Mushroom. Processed in a facility that handles nuts and seeds." },
+        { "type": "text", "id": "row_6_key", "label": "Row 6 — key", "default": "Storage" },
+        { "type": "textarea", "id": "row_6_val", "label": "Row 6 — value", "default": "Store in a cool, dry place. Reseal after use." },
+        { "type": "text", "id": "row_7_key", "label": "Row 7 — key" },
+        { "type": "textarea", "id": "row_7_val", "label": "Row 7 — value" },
+        { "type": "text", "id": "row_8_key", "label": "Row 8 — key" },
+        { "type": "textarea", "id": "row_8_val", "label": "Row 8 — value" }
+      ]
+    },
+    {
+      "type": "prose",
+      "name": "Prose / rich text",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "html", "id": "body", "label": "Body" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Product Details",
+      "blocks": [
+        { "type": "numbered_uses" },
+        { "type": "kv_table" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,91 @@
+{%- comment -%}
+  Divine Related Products — 4-up grid below the PDP.
+  Pulls from Shopify's `recommendations` API when available, falls back to
+  the first collection the product belongs to.
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-rel-section{
+    {% if section.settings.background == 'beige' %}background: var(--d-beige-lt);{% else %}background: var(--d-white);{% endif %}
+    padding-top: {{ section.settings.padding_top | default: 72 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 72 }}px;
+  }
+{%- endstyle -%}
+
+<section class="d-rel-section d-reveal">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="d-rel-title">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+
+  {%- assign rec_collection = product.collections | first -%}
+  {%- if recommendations.products_count > 0 -%}
+    {%- assign rel_products = recommendations.products -%}
+  {%- elsif rec_collection != blank -%}
+    {%- assign rel_products = rec_collection.products -%}
+  {%- else -%}
+    {%- assign rel_products = collections.all.products -%}
+  {%- endif -%}
+
+  {%- assign limit = section.settings.limit | default: 4 -%}
+  {%- assign shown = 0 -%}
+
+  <div class="d-rel-grid">
+    {%- for p in rel_products -%}
+      {%- if p.id == product.id -%}{%- continue -%}{%- endif -%}
+      {%- if shown >= limit -%}{%- break -%}{%- endif -%}
+      {%- assign shown = shown | plus: 1 -%}
+
+      <a href="{{ p.url }}" class="d-rp-card">
+        <div class="d-rp-img">
+          {%- if p.tags contains 'best-seller' or p.tags contains 'Best Seller' -%}
+            <div class="d-rp-badge">Best Seller</div>
+          {%- elsif p.tags contains 'new' or p.tags contains 'New' -%}
+            <div class="d-rp-badge">New</div>
+          {%- elsif p.compare_at_price > p.price -%}
+            <div class="d-rp-badge">Sale</div>
+          {%- endif -%}
+          {%- if p.featured_image != blank -%}
+            {{ p.featured_image | image_url: width: 600 | image_tag:
+              loading: 'lazy', widths: '300, 500, 700', sizes: '(min-width: 1100px) 25vw, 50vw',
+              alt: p.featured_image.alt | default: p.title
+            }}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-rp-cat">{{ p.type | default: p.vendor }}</div>
+        <div class="d-rp-name">{{ p.title }}</div>
+        <div class="d-rp-price">
+          {%- if p.price_varies -%}From {% endif -%}
+          {{ p.price_min | money_without_trailing_zeros }}
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Related Products",
+  "tag": "section",
+  "class": "divine-related-products-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "You Might Also Like" },
+    { "type": "select", "id": "background", "label": "Background",
+      "options": [
+        { "value": "white", "label": "White" },
+        { "value": "beige", "label": "Beige" }
+      ],
+      "default": "beige"
+    },
+    { "type": "range", "id": "limit", "label": "Products to show", "min": 2, "max": 8, "step": 1, "default": 4 },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 24, "max": 160, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 24, "max": 160, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "presets": [
+    {
+      "name": "Divine Related Products"
+    }
+  ]
+}
+{% endschema %}
