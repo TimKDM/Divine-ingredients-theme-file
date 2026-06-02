@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "disabled": true,
+      "settings": {}
+    },
+    "divine_product": {
+      "type": "divine-product",
+      "blocks": {
+        "trust_1": {
+          "type": "trust",
+          "settings": {
+            "icon": "check",
+            "text": "USDA Organic"
+          }
+        },
+        "trust_2": {
+          "type": "trust",
+          "settings": {
+            "icon": "lab",
+            "text": "Lab tested"
+          }
+        },
+        "trust_3": {
+          "type": "trust",
+          "settings": {
+            "icon": "shield",
+            "text": "No fillers added"
+          }
+        },
+        "trust_4": {
+          "type": "trust",
+          "settings": {
+            "icon": "truck",
+            "text": "Free shipping over $100"
+          }
+        },
+        "meta_1": {
+          "type": "meta",
+          "settings": {
+            "label": "Function",
+            "value": "Focus & Energy · Cognitive Support"
+          }
+        },
+        "meta_2": {
+          "type": "meta",
+          "settings": {
+            "label": "Best used in",
+            "value": "Coffee · Matcha · Smoothies · Soups · Cooking"
+          }
+        },
+        "meta_3": {
+          "type": "meta",
+          "settings": {
+            "label": "Taste",
+            "value": "Mild, slightly earthy, neutral — blends without affecting flavour"
+          }
+        },
+        "meta_4": {
+          "type": "meta",
+          "settings": {
+            "label": "Certifications",
+            "value": "USDA Organic · CCOF Certified · Lab Tested"
+          }
+        }
+      },
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3",
+        "trust_4",
+        "meta_1",
+        "meta_2",
+        "meta_3",
+        "meta_4"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "show_reviews": true,
+        "show_cert_badge": true,
+        "cert_badge_text": "USDA Organic",
+        "bulk_text": "Buy 8.8 oz+ and save 10%",
+        "price_note": "Free shipping on orders over $100"
+      }
+    },
+    "divine_product_details": {
+      "type": "divine-product-details",
+      "blocks": {
+        "uses": {
+          "type": "numbered_uses",
+          "settings": {
+            "heading": "Add it to your daily routine",
+            "use_1_title": "Morning coffee or matcha",
+            "use_1_desc": "Add ½ tsp to your morning cup. The neutral flavour blends completely — you won't taste it.",
+            "use_2_title": "Smoothies and shakes",
+            "use_2_desc": "Blend with your favourite fruits, plant milk, and other superfood powders. Pairs well with Ashwagandha and Maca.",
+            "use_3_title": "Soups and cooking",
+            "use_3_desc": "Stir into broths, sauces, or oatmeal. Heat-stable — retains its properties when cooked."
+          }
+        },
+        "table": {
+          "type": "kv_table",
+          "settings": {
+            "heading": "The full story, no fine print",
+            "row_1_key": "Product type",
+            "row_1_val": "Organic Mushroom Powder",
+            "row_2_key": "Ingredients",
+            "row_2_val": "100% Organic — whole fruiting body",
+            "row_3_key": "Fillers or carriers",
+            "row_3_val": "None. Just the mushroom.",
+            "row_4_key": "Certifications",
+            "row_4_val": "USDA Organic · CCOF Certified · Third-party lab tested",
+            "row_5_key": "Allergens",
+            "row_5_val": "Processed in a facility that handles nuts and seeds.",
+            "row_6_key": "Storage",
+            "row_6_val": "Store in a cool, dry place. Reseal after use. Best used within 12 months of opening."
+          }
+        }
+      },
+      "block_order": [
+        "uses",
+        "table"
+      ],
+      "settings": {
+        "kicker": "How to Use",
+        "background": "beige",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "divine_related": {
+      "type": "divine-related-products",
+      "settings": {
+        "heading": "You Might Also Like",
+        "background": "white",
+        "limit": 4,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "main",
+    "divine_product",
+    "divine_product_details",
+    "divine_related"
+  ]
+}

@@ -25,7 +25,8 @@
         "fallback_heading": "All Products",
         "padding_top": 6,
         "padding_bottom": 0
-      }
+      },
+      "disabled": true
     },
     "subcollections": {
       "type": "subcollections",
@@ -51,7 +52,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "disable_arrow_mobile": true
-      }
+      },
+      "disabled": true
     },
     "product-grid": {
       "type": "main-collection-product-grid",
@@ -131,7 +133,8 @@
         "padding_top": 20,
         "padding_bottom": 72,
         "ignore_spacing": true
-      }
+      },
+      "disabled": true
     },
     "collection_description": {
       "type": "collection-description",
@@ -139,7 +142,8 @@
         "color_scheme": "option-1",
         "padding_top": 36,
         "padding_bottom": 36
-      }
+      },
+      "disabled": true
     },
     "collection_faq": {
       "type": "collapsible-content",
@@ -215,7 +219,8 @@
         "columns_mobile": "3",
         "margin_spacing": "negative",
         "margin_top": 0
-      }
+      },
+      "disabled": true
     },
     "certification_logos": {
       "type": "image-gallery",
@@ -297,10 +302,215 @@
         "ignore_spacing": true,
         "margin_spacing": "negative",
         "margin_top": 0
+      },
+      "disabled": true
+    },
+    "divine_collection": {
+      "type": "divine-collection",
+      "blocks": {
+        "f_cat_tea": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "cat",
+            "group_title": "Category",
+            "label": "Shop Teas",
+            "value": "tea"
+          }
+        },
+        "f_cat_powder": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "cat",
+            "group_title": "Category",
+            "label": "Shop Powders",
+            "value": "powder"
+          }
+        },
+        "f_cat_spice": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "cat",
+            "group_title": "Category",
+            "label": "Spice & Soul",
+            "value": "spice"
+          }
+        },
+        "f_t_green": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Green Tea",
+            "value": "green-tea"
+          }
+        },
+        "f_t_black": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Black Tea",
+            "value": "black-tea"
+          }
+        },
+        "f_t_herbal": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Herbal Tea",
+            "value": "herbal-tea"
+          }
+        },
+        "f_t_chai": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Chai",
+            "value": "chai"
+          }
+        },
+        "f_t_matcha": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Matcha",
+            "value": "matcha"
+          }
+        },
+        "f_t_hemp": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Hemp Tea",
+            "value": "hemp-tea"
+          }
+        },
+        "f_t_iced": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Iced Tea",
+            "value": "iced-tea"
+          }
+        },
+        "f_t_oolong": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Tea Type",
+            "label": "Oolong Tea",
+            "value": "oolong-tea"
+          }
+        },
+        "f_p_mushroom": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Powder Type",
+            "label": "Mushroom Powders",
+            "value": "mushroom-powder"
+          }
+        },
+        "f_p_fruit": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Powder Type",
+            "label": "Fruit Powders",
+            "value": "fruit-powder"
+          }
+        },
+        "f_p_super": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "type",
+            "group_title": "Powder Type",
+            "label": "Superfood Blends",
+            "value": "superfood-blend"
+          }
+        },
+        "f_fn_immunity": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "func",
+            "group_title": "By Function",
+            "label": "Immunity",
+            "value": "immunity"
+          }
+        },
+        "f_fn_wind": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "func",
+            "group_title": "By Function",
+            "label": "Wind Down",
+            "value": "wind-down"
+          }
+        },
+        "f_fn_gut": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "func",
+            "group_title": "By Function",
+            "label": "Gut Reset",
+            "value": "gut-reset"
+          }
+        },
+        "f_fn_focus": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "func",
+            "group_title": "By Function",
+            "label": "Focus & Energy",
+            "value": "focus"
+          }
+        },
+        "f_fn_detox": {
+          "type": "filter_option",
+          "settings": {
+            "group_key": "func",
+            "group_title": "By Function",
+            "label": "Detox",
+            "value": "detox"
+          }
+        }
+      },
+      "block_order": [
+        "f_cat_tea",
+        "f_cat_powder",
+        "f_cat_spice",
+        "f_t_green",
+        "f_t_black",
+        "f_t_herbal",
+        "f_t_chai",
+        "f_t_matcha",
+        "f_t_hemp",
+        "f_t_iced",
+        "f_t_oolong",
+        "f_p_mushroom",
+        "f_p_fruit",
+        "f_p_super",
+        "f_fn_immunity",
+        "f_fn_wind",
+        "f_fn_gut",
+        "f_fn_focus",
+        "f_fn_detox"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "show_sort": true,
+        "caption": "Divine Ingredients",
+        "title": "<p>All <em>Collections</em></p>"
       }
     }
   },
   "order": [
+    "divine_collection",
     "banner",
     "subcollections",
     "product-grid",
