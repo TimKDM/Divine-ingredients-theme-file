@@ -1,0 +1,443 @@
+{%- comment -%}
+  Divine Product — main product page hero. Image gallery left, info right.
+  Matches the tea + powder mockups. Uses Flux's <product-form> wrapper
+  so cart-drawer / cart-notification integrations keep working.
+{%- endcomment -%}
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign on_sale = false -%}
+{%- if current_variant.compare_at_price > current_variant.price -%}{%- assign on_sale = true -%}{%- endif -%}
+
+<section class="d-pdp" id="DPdp-{{ section.id }}">
+
+  {%- if section.settings.show_breadcrumb -%}
+    <nav class="d-breadcrumb d-pdp-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a>
+      <span class="d-breadcrumb-sep" aria-hidden="true">›</span>
+      {%- if collection != blank -%}
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+        <span class="d-breadcrumb-sep" aria-hidden="true">›</span>
+      {%- elsif product.collections.first != blank -%}
+        <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a>
+        <span class="d-breadcrumb-sep" aria-hidden="true">›</span>
+      {%- endif -%}
+      <span aria-current="page">{{ product.title }}</span>
+    </nav>
+  {%- endif -%}
+
+  <div class="d-product-hero">
+
+    {%- comment -%} LEFT — image gallery {%- endcomment -%}
+    <div class="d-product-images">
+      {%- if product.images.size > 1 -%}
+        <div class="d-thumb-list" role="tablist" aria-label="Product images">
+          {%- for media in product.media limit: 6 -%}
+            <button class="d-thumb {% if forloop.first %}d-thumb-active{% endif %}"
+              type="button"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              data-media-index="{{ forloop.index0 }}"
+              aria-label="Show image {{ forloop.index }}">
+              {{ media.preview_image | image_url: width: 200 | image_tag:
+                loading: 'lazy', widths: '120, 200, 280',
+                alt: media.alt | default: product.title
+              }}
+            </button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      <div class="d-main-img-wrap" id="DMainImg-{{ section.id }}">
+        {%- if section.settings.show_cert_badge -%}
+          <div class="d-cert-badge">{{ section.settings.cert_badge_text | default: 'USDA Organic' }}</div>
+        {%- endif -%}
+        {%- if product.featured_image != blank -%}
+          {%- for media in product.media -%}
+            <img
+              class="d-main-img {% unless forloop.first %}d-hidden{% endunless %}"
+              data-media-index="{{ forloop.index0 }}"
+              src="{{ media.preview_image | image_url: width: 900 }}"
+              srcset="{{ media.preview_image | image_url: width: 500 }} 500w, {{ media.preview_image | image_url: width: 900 }} 900w, {{ media.preview_image | image_url: width: 1400 }} 1400w"
+              sizes="(min-width:1100px) 40vw, 90vw"
+              loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+              alt="{{ media.alt | default: product.title | escape }}"
+              width="{{ media.preview_image.width }}"
+              height="{{ media.preview_image.height }}"
+            >
+          {%- endfor -%}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'd-main-img placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} RIGHT — product info {%- endcomment -%}
+    <div class="d-product-info">
+
+      {%- if product.type != blank or product.vendor != blank -%}
+        <div class="d-product-cat">
+          {%- if product.type != blank -%}{{ product.type }}{%- endif -%}
+          {%- if product.type != blank and product.vendor != blank %} · {% endif -%}
+          {%- if product.vendor != blank -%}{{ product.vendor }}{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <h1 class="d-product-name">{{ product.title }}</h1>
+
+      {%- if section.settings.show_reviews -%}
+        {%- assign rating_value = product.metafields.reviews.rating.value -%}
+        {%- assign rating_count = product.metafields.reviews.rating_count -%}
+        {%- if rating_value != blank or rating_count != blank -%}
+          <div class="d-product-reviews">
+            <div class="d-rv-stars" aria-label="Rated {{ rating_value | default: 5 }} out of 5">
+              {%- assign stars_filled = rating_value | default: 5 | round -%}
+              {%- for i in (1..5) -%}
+                <span class="d-rv-star" aria-hidden="true">{% if i <= stars_filled %}★{% else %}☆{% endif %}</span>
+              {%- endfor -%}
+            </div>
+            <div class="d-rv-count">
+              <a href="#reviews">{{ rating_count | default: 0 }} {{ rating_count | default: 0 | pluralize: 'Review', 'Reviews' }}</a>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+
+      <product-form class="d-pdp-form" data-section="{{ section.id }}">
+        {%- form 'product', product, id: 'product-form-' | append: section.id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+
+          <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
+
+          {%- if product.has_only_default_variant == false -%}
+            {%- for option in product.options_with_values -%}
+              <fieldset class="d-variant-group" data-option-index="{{ forloop.index0 }}">
+                <legend class="d-size-label">{{ option.name }}</legend>
+                <div class="d-size-options" role="radiogroup" aria-label="{{ option.name }}">
+                  {%- for value in option.values -%}
+                    {%- assign opt_id = section.id | append: '-' | append: option.position | append: '-' | append: forloop.index -%}
+                    <input
+                      type="radio"
+                      class="d-sr-only"
+                      id="DVariant-{{ opt_id }}"
+                      name="options[{{ option.name | escape }}]"
+                      value="{{ value | escape }}"
+                      {% if option.selected_value == value %}checked{% endif %}
+                    >
+                    <label class="d-size-btn" for="DVariant-{{ opt_id }}">{{ value }}</label>
+                  {%- endfor -%}
+                </div>
+              </fieldset>
+            {%- endfor -%}
+          {%- endif -%}
+
+          {%- if section.settings.bulk_text != blank -%}
+            <div class="d-bulk-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+              {{ section.settings.bulk_text }}
+            </div>
+          {%- endif -%}
+
+          <div class="d-product-price" id="DPdpPrice-{{ section.id }}">
+            <span class="d-pdp-price-main">{{ current_variant.price | money_without_trailing_zeros }}</span>
+            <span class="d-pdp-price-cur">{{ cart.currency.iso_code }}</span>
+            {%- if on_sale -%}
+              <s class="d-pdp-price-compare">{{ current_variant.compare_at_price | money_without_trailing_zeros }}</s>
+            {%- endif -%}
+          </div>
+          {%- if section.settings.price_note != blank -%}
+            <div class="d-product-price-note">{{ section.settings.price_note }}</div>
+          {%- endif -%}
+
+          {%- if product.description != blank -%}
+            <div class="d-product-desc-wrap">
+              <div class="d-product-desc" id="DDescShort-{{ section.id }}">
+                {{ product.description | strip_html | truncatewords: 50 }}
+              </div>
+              {%- assign desc_word_count = product.description | strip_html | split: ' ' | size -%}
+              {%- if desc_word_count > 50 -%}
+                <div class="d-product-desc d-hidden" id="DDescFull-{{ section.id }}">
+                  {{ product.description }}
+                </div>
+                <button type="button" class="d-show-more" data-toggle="DDescShort-{{ section.id }}" data-toggle-target="DDescFull-{{ section.id }}">Show more</button>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          <div class="d-atc-row">
+            <div class="d-qty-wrap">
+              <button class="d-qty-btn" type="button" data-qty-delta="-1" aria-label="Decrease quantity">−</button>
+              <label class="d-sr-only" for="DQty-{{ section.id }}">Quantity</label>
+              <input class="d-qty-num" id="DQty-{{ section.id }}" type="number" name="quantity" value="1" min="1" max="99">
+              <button class="d-qty-btn" type="button" data-qty-delta="1" aria-label="Increase quantity">+</button>
+            </div>
+            <button
+              type="submit"
+              class="d-btn-atc"
+              name="add"
+              id="ProductSubmitButton-{{ section.id }}"
+              {% if current_variant.available == false %}disabled{% endif %}
+            >
+              <span class="d-btn-atc-text">
+                {%- if current_variant.available -%}
+                  Add to Cart
+                {%- else -%}
+                  Sold Out
+                {%- endif -%}
+              </span>
+              <span class="d-btn-atc-loading" aria-hidden="true">
+                {% render 'loading-overlay' %}
+              </span>
+            </button>
+          </div>
+
+          <div class="d-pdp-error" id="DPdpError-{{ section.id }}" role="alert" hidden></div>
+
+        {%- endform -%}
+      </product-form>
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="d-trust-row">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'trust' -%}
+              <div class="d-trust-item" {{ block.shopify_attributes }}>
+                {%- case block.settings.icon -%}
+                  {%- when 'check' -%}
+                    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  {%- when 'lab' -%}
+                    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  {%- when 'shield' -%}
+                    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  {%- when 'truck' -%}
+                    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                  {%- when 'farm' -%}
+                    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                {%- endcase -%}
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} Meta fields table — supports custom fields via product metafields or manually-defined blocks {%- endcomment -%}
+      {%- assign meta_fields_html = '' -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'meta' -%}
+          {%- capture meta_fields_html -%}
+            {{ meta_fields_html }}
+            <div class="d-meta-row" {{ block.shopify_attributes }}>
+              <div class="d-meta-label">{{ block.settings.label }}</div>
+              <div class="d-meta-val">{{ block.settings.value }}</div>
+            </div>
+          {%- endcapture -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if meta_fields_html != blank -%}
+        <div class="d-meta-fields">{{ meta_fields_html }}</div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var root = document.getElementById('DPdp-{{ section.id }}');
+    if (!root) return;
+
+    /* Image gallery — thumbnail click switches main image */
+    var thumbs = root.querySelectorAll('.d-thumb');
+    var mains = root.querySelectorAll('.d-main-img');
+    thumbs.forEach(function(t){
+      t.addEventListener('click', function(){
+        var i = t.getAttribute('data-media-index');
+        thumbs.forEach(function(x){
+          x.classList.remove('d-thumb-active');
+          x.setAttribute('aria-selected', 'false');
+        });
+        t.classList.add('d-thumb-active');
+        t.setAttribute('aria-selected', 'true');
+        mains.forEach(function(m){
+          m.classList.toggle('d-hidden', m.getAttribute('data-media-index') !== i);
+        });
+      });
+    });
+
+    /* Variant selection — when a radio changes, find the matching variant and
+       update the form's hidden id + the displayed price. Mirrors what Shopify's
+       <variant-selects> custom element does but with our simpler markup. */
+    var productJson = {{ product | json }};
+    var form = root.querySelector('form[data-type="add-to-cart-form"]');
+    var idInput = form ? form.querySelector('input[name="id"]') : null;
+    var priceMain = document.getElementById('DPdpPrice-{{ section.id }}');
+    var submitBtn = document.getElementById('ProductSubmitButton-{{ section.id }}');
+    var optionGroups = root.querySelectorAll('.d-variant-group');
+
+    function getSelectedOptions(){
+      var values = [];
+      optionGroups.forEach(function(g){
+        var checked = g.querySelector('input[type="radio"]:checked');
+        values.push(checked ? checked.value : null);
+      });
+      return values;
+    }
+
+    function findVariant(values){
+      return productJson.variants.find(function(v){
+        return v.options.every(function(o, i){ return o === values[i]; });
+      });
+    }
+
+    function moneyWithoutZeros(cents){
+      var dollars = (cents / 100).toFixed(2);
+      if (dollars.indexOf('.00') === dollars.length - 3) dollars = dollars.slice(0, -3);
+      var fmt = (window.Shopify && Shopify.currency && Shopify.currency.active) || '{{ cart.currency.iso_code }}';
+      return '$' + dollars;
+    }
+
+    function updateForVariant(v){
+      if (!v) {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          var label = submitBtn.querySelector('.d-btn-atc-text');
+          if (label) label.textContent = 'Unavailable';
+        }
+        return;
+      }
+      if (idInput) idInput.value = v.id;
+      if (submitBtn) {
+        submitBtn.disabled = !v.available;
+        var label = submitBtn.querySelector('.d-btn-atc-text');
+        if (label) label.textContent = v.available ? 'Add to Cart' : 'Sold Out';
+      }
+      if (priceMain) {
+        var mainEl = priceMain.querySelector('.d-pdp-price-main');
+        if (mainEl) mainEl.textContent = moneyWithoutZeros(v.price);
+        var oldCompare = priceMain.querySelector('.d-pdp-price-compare');
+        if (oldCompare) oldCompare.remove();
+        if (v.compare_at_price && v.compare_at_price > v.price) {
+          var s = document.createElement('s');
+          s.className = 'd-pdp-price-compare';
+          s.textContent = moneyWithoutZeros(v.compare_at_price);
+          priceMain.appendChild(s);
+        }
+      }
+      /* Update URL so refreshes preserve the selection */
+      if (history && history.replaceState) {
+        var u = new URL(window.location.href);
+        u.searchParams.set('variant', v.id);
+        history.replaceState({}, '', u.toString());
+      }
+      /* Swap main image to the variant's featured image if present */
+      if (v.featured_media) {
+        var idx = productJson.media.findIndex(function(m){ return m.id === v.featured_media.id; });
+        if (idx >= 0) {
+          mains.forEach(function(m){
+            m.classList.toggle('d-hidden', parseInt(m.getAttribute('data-media-index'), 10) !== idx);
+          });
+          thumbs.forEach(function(x, i){
+            var sel = parseInt(x.getAttribute('data-media-index'), 10) === idx;
+            x.classList.toggle('d-thumb-active', sel);
+            x.setAttribute('aria-selected', sel ? 'true' : 'false');
+          });
+        }
+      }
+    }
+
+    root.querySelectorAll('.d-variant-group input[type="radio"]').forEach(function(r){
+      r.addEventListener('change', function(){
+        var v = findVariant(getSelectedOptions());
+        updateForVariant(v);
+      });
+    });
+
+    /* Quantity stepper */
+    root.querySelectorAll('[data-qty-delta]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var delta = parseInt(b.getAttribute('data-qty-delta'), 10);
+        var input = document.getElementById('DQty-{{ section.id }}');
+        var v = Math.max(1, (parseInt(input.value, 10) || 1) + delta);
+        input.value = v;
+      });
+    });
+
+    /* Description "Show more" toggle */
+    var toggle = root.querySelector('.d-show-more');
+    if (toggle) {
+      var shortId = toggle.getAttribute('data-toggle');
+      var fullId = toggle.getAttribute('data-toggle-target');
+      var sEl = document.getElementById(shortId);
+      var fEl = document.getElementById(fullId);
+      toggle.addEventListener('click', function(){
+        var showingFull = !fEl.classList.contains('d-hidden');
+        if (showingFull) {
+          fEl.classList.add('d-hidden');
+          sEl.classList.remove('d-hidden');
+          toggle.textContent = 'Show more';
+        } else {
+          fEl.classList.remove('d-hidden');
+          sEl.classList.add('d-hidden');
+          toggle.textContent = 'Show less';
+        }
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Divine Product",
+  "tag": "section",
+  "class": "divine-product-section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
+    { "type": "checkbox", "id": "show_reviews", "label": "Show review stars", "default": true },
+    { "type": "checkbox", "id": "show_cert_badge", "label": "Show 'USDA Organic' image badge", "default": true },
+    { "type": "text", "id": "cert_badge_text", "label": "Image badge text", "default": "USDA Organic" },
+    { "type": "text", "id": "bulk_text", "label": "Bulk savings badge text", "default": "Buy 8.8 oz+ and save 10%" },
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "Free shipping on orders over $100" }
+  ],
+  "blocks": [
+    {
+      "type": "trust",
+      "name": "Trust item",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon",
+          "options": [
+            { "value": "check", "label": "Check / Certified" },
+            { "value": "lab",   "label": "Lab tested" },
+            { "value": "shield","label": "Shield" },
+            { "value": "truck", "label": "Truck / Shipping" },
+            { "value": "farm",  "label": "Farm / Direct" }
+          ],
+          "default": "check"
+        },
+        { "type": "text", "id": "text", "label": "Text", "default": "USDA Organic" }
+      ]
+    },
+    {
+      "type": "meta",
+      "name": "Meta row",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Function" },
+        { "type": "text", "id": "value", "label": "Value", "default": "Focus & Energy" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divine Product",
+      "blocks": [
+        { "type": "trust", "settings": { "icon": "check", "text": "USDA Organic" } },
+        { "type": "trust", "settings": { "icon": "lab",   "text": "Lab tested" } },
+        { "type": "trust", "settings": { "icon": "shield","text": "No fillers added" } },
+        { "type": "trust", "settings": { "icon": "truck", "text": "Free shipping over $100" } },
+        { "type": "meta",  "settings": { "label": "Function", "value": "Focus & Energy" } },
+        { "type": "meta",  "settings": { "label": "Taste",    "value": "Mild, slightly earthy, neutral" } },
+        { "type": "meta",  "settings": { "label": "Origin",   "value": "Sourced direct from organic farms" } },
+        { "type": "meta",  "settings": { "label": "Certifications", "value": "USDA Organic · CCOF Certified · Lab Tested" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
