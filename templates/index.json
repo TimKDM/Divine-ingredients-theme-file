@@ -62,67 +62,63 @@
     "divine_rituals": {
       "type": "divine-categories",
       "blocks": {
-        "ritual_morning": {
+        "ritual_immunity": {
           "type": "category",
           "settings": {
-            "collection": "tea",
             "image": "shopify://shop_images/iStock-1060404954.jpg",
-            "tag": "Morning",
-            "heading": "Morning Ritual",
-            "subtitle": "Ceremonial Matcha · Sencha · English Breakfast · Earl Grey · Masala Chai",
-            "cta": "Shop Morning"
+            "heading": "Immunity",
+            "description": "Antioxidant-rich blends for daily defence and seasonal support.",
+            "subtitle": "Turmeric Wellness · Ginger Lemon · Elderberry Boost · Tulsi Holy Basil · Echinacea Defence",
+            "cta": "Shop Immunity"
           }
         },
-        "ritual_calm": {
+        "ritual_winddown": {
           "type": "category",
           "settings": {
             "collection": "calm-rituals-hemp-tea",
             "image": "shopify://shop_images/iStock-1144247743.jpg",
-            "tag": "Wind Down",
-            "heading": "Calm & Restore",
-            "subtitle": "Chamomile Care · Serenity · Relax Hemp · Heart Hemp · Ginger Turmeric",
-            "cta": "Shop Calm"
+            "heading": "Wind Down",
+            "description": "Calming botanicals and herbal blends for restful evenings.",
+            "subtitle": "Chamomile Care · Serenity · Relax Hemp · Lavender Calm · Lemon Balm",
+            "cta": "Shop Wind Down"
           }
         },
-        "ritual_botanical": {
+        "ritual_gutreset": {
           "type": "category",
           "settings": {
-            "collection": "botanical-bliss-herbal-tea",
             "image": "shopify://shop_images/iStock-496610026.jpg",
-            "tag": "Caffeine Free",
-            "heading": "Botanical Garden",
-            "subtitle": "Hibiscus Punch · Jasmine Green · Mellow Mint · Wine Berry · Chamomile",
-            "cta": "Shop Botanicals"
-          }
-        },
-        "ritual_refresh": {
-          "type": "category",
-          "settings": {
-            "collection": "cool-brews-iced-tea",
-            "image": "shopify://shop_images/iStock-1320143694.jpg",
-            "tag": "Iced & Light",
-            "heading": "Cool & Refresh",
-            "subtitle": "Tangy Lemon · Moroccan Mint · Passion Berry · Ruby Red · Peach Oolong",
-            "cta": "Shop Iced"
+            "heading": "Gut Reset",
+            "description": "Digestive teas and after-meal botanicals to settle the system.",
+            "subtitle": "Peppermint · Fennel Digestive · Ginger Turmeric · Licorice Root · Triphala Blend",
+            "cta": "Shop Gut Reset"
           }
         },
         "ritual_focus": {
           "type": "category",
           "settings": {
-            "collection": "calm-rituals-hemp-tea",
             "image": "shopify://shop_images/iStock-2252738400.jpg",
-            "tag": "Focus & Energy",
             "heading": "Focus & Energy",
-            "subtitle": "Think Hemp · Energize Hemp · Sencha · Genmaicha · Lemon Ginger Circus",
+            "description": "Bright greens, matcha, and adaptogens for steady, focused energy.",
+            "subtitle": "Ceremonial Matcha · Sencha · Genmaicha · Yerba Mate · Energize Hemp",
             "cta": "Shop Focus"
+          }
+        },
+        "ritual_detox": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/iStock-1320143694.jpg",
+            "heading": "Detox",
+            "description": "Cleansing herbs and bitter botanicals for gentle detoxification.",
+            "subtitle": "Dandelion Root · Milk Thistle · Nettle Cleanse · Burdock · Detox Greens",
+            "cta": "Shop Detox"
           }
         }
       },
-      "block_order": ["ritual_morning", "ritual_calm", "ritual_botanical", "ritual_refresh", "ritual_focus"],
+      "block_order": ["ritual_immunity", "ritual_winddown", "ritual_gutreset", "ritual_focus", "ritual_detox"],
       "settings": {
-        "caption": "Shop Teas",
-        "title": "Find your perfect cup",
-        "subtitle": "36 teas — browse by mood or moment. Find what fits your day.",
+        "caption": "Shop by Function",
+        "title": "Your cup, your ritual.",
+        "subtitle": "Find what fits your day.",
         "cta_label": "Browse all teas",
         "cta_link": "shopify://collections/tea",
         "padding_top": 96,

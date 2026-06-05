@@ -95,6 +95,9 @@
           {%- if block.settings.heading != blank or collection.title != blank -%}
             <div class="d-rc-title">{{ block.settings.heading | default: collection.title }}</div>
           {%- endif -%}
+          {%- if block.settings.description != blank -%}
+            <div class="d-rc-desc">{{ block.settings.description }}</div>
+          {%- endif -%}
           {%- if block.settings.subtitle != blank -%}
             <div class="d-rc-teas">{{ block.settings.subtitle }}</div>
           {%- endif -%}
@@ -274,8 +277,13 @@
         },
         {
           "type": "text",
+          "id": "description",
+          "label": "One-line description"
+        },
+        {
+          "type": "text",
           "id": "subtitle",
-          "label": "Description / featured items"
+          "label": "Featured items / tea list"
         },
         {
           "type": "text",
@@ -294,12 +302,13 @@
   "presets": [
     {
       "name": "Divine Categories",
+      "settings": { "caption": "Shop by Function", "title": "Your cup, your ritual.", "subtitle": "Find what fits your day." },
       "blocks": [
-        { "type": "category", "settings": { "tag": "Morning", "heading": "Morning Ritual", "subtitle": "Ceremonial Matcha · Sencha · English Breakfast · Earl Grey · Masala Chai", "cta": "Shop Morning" } },
-        { "type": "category", "settings": { "tag": "Wind Down", "heading": "Calm & Restore", "subtitle": "Chamomile Care · Serenity · Relax Hemp · Heart Hemp · Ginger Turmeric", "cta": "Shop Calm" } },
-        { "type": "category", "settings": { "tag": "Caffeine Free", "heading": "Botanical Garden", "subtitle": "Hibiscus Punch · Jasmine Green · Mellow Mint · Wine Berry · Chamomile", "cta": "Shop Botanicals" } },
-        { "type": "category", "settings": { "tag": "Iced & Light", "heading": "Cool & Refresh", "subtitle": "Tangy Lemon · Moroccan Mint · Passion Berry · Ruby Red · Peach Oolong", "cta": "Shop Iced" } },
-        { "type": "category", "settings": { "tag": "Focus & Energy", "heading": "Focus & Energy", "subtitle": "Think Hemp · Energize Hemp · Sencha · Genmaicha · Lemon Ginger Circus", "cta": "Shop Focus" } }
+        { "type": "category", "settings": { "heading": "Immunity", "description": "Antioxidant-rich blends for daily defence and seasonal support.", "subtitle": "Turmeric Wellness · Ginger Lemon · Elderberry Boost · Tulsi Holy Basil · Echinacea Defence", "cta": "Shop Immunity" } },
+        { "type": "category", "settings": { "heading": "Wind Down", "description": "Calming botanicals and herbal blends for restful evenings.", "subtitle": "Chamomile Care · Serenity · Relax Hemp · Lavender Calm · Lemon Balm", "cta": "Shop Wind Down" } },
+        { "type": "category", "settings": { "heading": "Gut Reset", "description": "Digestive teas and after-meal botanicals to settle the system.", "subtitle": "Peppermint · Fennel Digestive · Ginger Turmeric · Licorice Root · Triphala Blend", "cta": "Shop Gut Reset" } },
+        { "type": "category", "settings": { "heading": "Focus & Energy", "description": "Bright greens, matcha, and adaptogens for steady, focused energy.", "subtitle": "Ceremonial Matcha · Sencha · Genmaicha · Yerba Mate · Energize Hemp", "cta": "Shop Focus" } },
+        { "type": "category", "settings": { "heading": "Detox", "description": "Cleansing herbs and bitter botanicals for gentle detoxification.", "subtitle": "Dandelion Root · Milk Thistle · Nettle Cleanse · Burdock · Detox Greens", "cta": "Shop Detox" } }
       ]
     }
   ]

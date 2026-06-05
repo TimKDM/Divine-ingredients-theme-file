@@ -274,6 +274,10 @@ html{scroll-behavior:smooth}
   font-family:var(--d-font-serif);font-size:22px;font-weight:400;
   color:var(--d-beige-lt);line-height:1.12;margin:0 0 8px;
 }
+.d-rc-desc{
+  font-size:13px;font-weight:300;color:rgba(232,224,204,.85);line-height:1.45;
+  font-family:var(--d-font-sans);margin:0 0 8px;
+}
 .d-rc-teas{
   font-size:12px;font-weight:300;color:rgba(232,224,204,.7);line-height:1.6;
   font-family:var(--d-font-sans);
