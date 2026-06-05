@@ -556,13 +556,13 @@ html{scroll-behavior:smooth}
   gap:40px;flex-wrap:wrap;
 }
 .d-b2b-h{
-  font-family:var(--d-font-serif);font-size:28px;font-weight:300;
-  color:var(--d-black);line-height:1.18;margin:10px 0 8px;
+  font-family:var(--d-font-serif);font-size:clamp(36px,3.8vw,52px);font-weight:300;
+  color:var(--d-black);line-height:1.06;letter-spacing:-.01em;margin:0 0 12px;
 }
 .d-b2b-h em{font-style:italic;color:var(--d-forest)}
 .d-b2b-p{
-  font-size:14px;font-weight:300;line-height:1.75;color:var(--d-mid);
-  max-width:500px;margin:0;font-family:var(--d-font-sans);
+  font-size:15px;font-weight:300;line-height:1.9;color:var(--d-mid);
+  max-width:520px;margin:0;font-family:var(--d-font-sans);
 }
 .d-b2b-pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
 .d-b2b-pill{
