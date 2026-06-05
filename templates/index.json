@@ -199,6 +199,7 @@
         "cap_role": "Microbiologist & Founder",
         "padding_top": 96,
         "padding_bottom": 96,
+        "margin_bottom": 48,
         "item_heading_font_size": 22
       }
     },
