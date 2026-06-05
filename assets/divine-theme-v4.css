@@ -240,7 +240,7 @@ html{scroll-behavior:smooth}
    RITUAL / CATEGORIES (5-col image grid)
    ============================================ */
 .d-ritual{
-  background:var(--d-white);padding:96px 0 0;border-top:1px solid var(--d-border);
+  background:var(--d-white);padding:96px 0 0;
 }
 .d-ritual-header{
   padding:0 80px 52px;display:flex;align-items:flex-end;
@@ -296,7 +296,6 @@ html{scroll-behavior:smooth}
    ============================================ */
 .d-powders{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
-  border-top:1px solid var(--d-border);
 }
 .d-powders-img-wrap{position:relative;overflow:hidden;min-height:540px}
 .d-powders-img{
@@ -330,7 +329,7 @@ html{scroll-behavior:smooth}
    PRODUCT GRID (Bestsellers)
    ============================================ */
 .d-products{
-  padding:96px 80px;background:var(--d-white);border-top:1px solid var(--d-border);
+  padding:96px 80px;background:var(--d-white);
 }
 .d-prod-header{
   display:flex;align-items:flex-end;justify-content:space-between;
@@ -401,7 +400,6 @@ html{scroll-behavior:smooth}
    ============================================ */
 .d-story{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
-  border-top:1px solid var(--d-border);
 }
 .d-story-left{padding:96px 80px;display:flex;flex-direction:column;justify-content:center}
 .d-story-right{position:relative;overflow:hidden;min-height:600px;padding-left:48px;padding-right:48px;box-sizing:border-box}
@@ -443,7 +441,6 @@ html{scroll-behavior:smooth}
    ============================================ */
 .d-discovery{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
-  border-top:1px solid var(--d-border);
 }
 .d-disc-body{
   padding:88px 72px;display:flex;flex-direction:column;
@@ -489,7 +486,7 @@ html{scroll-behavior:smooth}
    EMAIL / NEWSLETTER (2-col on beige)
    ============================================ */
 .d-email{
-  padding:96px 80px;background:var(--d-beige-lt);border-top:1px solid var(--d-border);
+  padding:96px 80px;background:var(--d-beige-lt);
   display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;
 }
 .d-email .d-sec-h{margin-bottom:12px;color:var(--d-black)}
@@ -554,7 +551,7 @@ html{scroll-behavior:smooth}
    B2B BAND
    ============================================ */
 .d-b2b{
-  padding:56px 80px;background:var(--d-white);border-top:1px solid var(--d-border);
+  padding:56px 80px;background:var(--d-white);
   display:flex;align-items:center;justify-content:space-between;
   gap:40px;flex-wrap:wrap;
 }
@@ -719,7 +716,7 @@ html{scroll-behavior:smooth}
 
 /* About: pull quote */
 .d-pullquote{
-  padding:80px;background:var(--d-beige-lt);border-top:1px solid var(--d-border);
+  padding:80px;background:var(--d-beige-lt);
   display:flex;align-items:center;gap:48px;
 }
 .d-pq-line{width:2px;height:100px;background:var(--d-forest);flex-shrink:0}
@@ -736,7 +733,7 @@ html{scroll-behavior:smooth}
 /* About: story body w sidebar */
 .d-story-section{
   padding:96px 80px;background:var(--d-white);display:grid;
-  grid-template-columns:2fr 1fr;gap:80px;border-top:1px solid var(--d-border);
+  grid-template-columns:2fr 1fr;gap:80px;
 }
 .d-story-body-text p{
   font-size:16px;font-weight:300;line-height:1.95;color:var(--d-mid);
@@ -768,7 +765,7 @@ html{scroll-behavior:smooth}
 
 /* About: values 3-col */
 .d-values{
-  padding:96px 80px;background:var(--d-beige-lt);border-top:1px solid var(--d-border);
+  padding:96px 80px;background:var(--d-beige-lt);
 }
 .d-values-header{margin-bottom:56px}
 .d-values-grid{
@@ -791,7 +788,7 @@ html{scroll-behavior:smooth}
 }
 
 /* About: certs grid 4-col */
-.d-certs-grid-sec{background:var(--d-beige-lt);padding:64px 80px;border-top:1px solid var(--d-border)}
+.d-certs-grid-sec{background:var(--d-beige-lt);padding:64px 80px}
 .d-certs-header{margin-bottom:40px}
 .d-certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
 .d-cert-card{
