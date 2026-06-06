@@ -1,54 +1,54 @@
 {%- style -%}
-  .divine-subscription-section {
+  .d-sub-section {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
   }
-  .divine-subscription .divine-section-title {
+  .d-sub .d-sec-h {
     font-size: var(--heading-font-size);
   }
-  .divine-subscription__card-content h3 {
+  .d-sub-card-content h3 {
     font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
   }
-  .divine-subscription .divine-section-label {
+  .d-sub .d-sec-label {
     font-size: {{ section.settings.caption_font_size | default: 14 }}px;
   }
-  .divine-subscription-section {
+  .d-sub-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   @media screen and (min-width: 768px) {
-    .divine-subscription-section {
+    .d-sub-section {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
   {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-    .divine-subscription {
+    .d-sub {
       background-color: {{ section.settings.background_color }};
     }
   {% endif %}
 {%- endstyle -%}
 
-<section class="divine-subscription{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
-  <div class="divine-section-header">
+<section class="d-sub{% if section.settings.use_alt_bg %} d-sec-alt{% endif %}">
+  <div class="d-sec-header">
     {%- if section.settings.caption != blank -%}
-      <span class="divine-section-label">{{ section.settings.caption }}</span>
+      <span class="d-sec-label">{{ section.settings.caption }}</span>
     {%- endif -%}
     {%- if section.settings.heading != blank -%}
-      <h2 class="divine-section-title">{{ section.settings.heading }}</h2>
+      <h2 class="d-sec-h">{{ section.settings.heading }}</h2>
     {%- endif -%}
     {%- if section.settings.subheading != blank -%}
-      <p class="divine-subscription__subheading">{{ section.settings.subheading }}</p>
+      <p class="d-sub-subheading">{{ section.settings.subheading }}</p>
     {%- endif -%}
   </div>
 
-  <div class="divine-subscription__grid">
+  <div class="d-sub-grid">
     {%- for block in section.blocks -%}
-      <div class="divine-subscription__card" {{ block.shopify_attributes }}>
+      <div class="d-sub-card" {{ block.shopify_attributes }}>
         {%- if block.settings.image != blank -%}
-          <div class="divine-subscription__card-image">
+          <div class="d-sub-card-image">
             {{
               block.settings.image
               | image_url: width: 500
@@ -59,11 +59,11 @@
             }}
           </div>
         {%- else -%}
-          <div class="divine-subscription__card-image divine-subscription__card-image--placeholder">
+          <div class="d-sub-card-image d-sub-card-image--placeholder">
             {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
           </div>
         {%- endif -%}
-        <div class="divine-subscription__card-content">
+        <div class="d-sub-card-content">
           {%- if block.settings.title != blank -%}
             <h3>{{ block.settings.title }}</h3>
           {%- endif -%}
@@ -71,10 +71,10 @@
             <p>{{ block.settings.description }}</p>
           {%- endif -%}
           {%- if block.settings.price != blank -%}
-            <span class="divine-subscription__price">{{ block.settings.price }}</span>
+            <span class="d-sub-price">{{ block.settings.price }}</span>
           {%- endif -%}
           {%- if block.settings.button_label != blank -%}
-            <a href="{{ block.settings.button_link }}" class="divine-btn divine-btn-primary divine-btn--small">{{ block.settings.button_label }}</a>
+            <a href="{{ block.settings.button_link }}" class="d-btn-solid d-btn--sm">{{ block.settings.button_label }}</a>
           {%- endif -%}
         </div>
       </div>
@@ -82,32 +82,32 @@
   </div>
 
   {%- if section.settings.cta_label != blank -%}
-    <div class="divine-subscription__footer-cta">
-      <a href="{{ section.settings.cta_link }}" class="divine-btn divine-btn-secondary">{{ section.settings.cta_label }}</a>
+    <div class="d-sub-footer-cta">
+      <a href="{{ section.settings.cta_link }}" class="d-btn-t">{{ section.settings.cta_label }}</a>
     </div>
   {%- endif -%}
 </section>
 
 <style>
-  .divine-subscription {
+  .d-sub {
     padding: 48px 20px;
     text-align: center;
   }
-  .divine-subscription__subheading {
+  .d-sub-subheading {
     font-size: var(--body-font-size);
     color: var(--color-text-muted, #666);
     max-width: 560px;
     margin: 8px auto 0;
     line-height: 1.6;
   }
-  .divine-subscription__grid {
+  .d-sub-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
     max-width: 1000px;
     margin: 32px auto 0;
   }
-  .divine-subscription__card {
+  .d-sub-card {
     background: var(--color-background-hex, #fff);
     border-radius: var(--radius-md, 10px);
     overflow: hidden;
@@ -115,62 +115,62 @@
     text-align: left;
     transition: box-shadow 0.28s ease, transform 0.28s ease;
   }
-  .divine-subscription__card:hover {
+  .d-sub-card:hover {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
   }
-  .divine-subscription__card-image {
+  .d-sub-card-image {
     aspect-ratio: 16/10;
     overflow: hidden;
   }
-  .divine-subscription__card-image img {
+  .d-sub-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
   }
-  .divine-subscription__card:hover .divine-subscription__card-image img {
+  .d-sub-card:hover .d-sub-card-image img {
     transform: scale(1.03);
   }
-  .divine-subscription__card-image--placeholder {
+  .d-sub-card-image--placeholder {
     background: var(--color-background-alt, #e2d6e6);
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .divine-subscription__card-content {
+  .d-sub-card-content {
     padding: 20px;
   }
-  .divine-subscription__card-content h3 {
-    font-family: var(--font-heading);
+  .d-sub-card-content h3 {
+    font-family: var(--d-font-serif);
     font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
     font-weight: 600;
     margin: 0 0 6px;
   }
-  .divine-subscription__card-content p {
+  .d-sub-card-content p {
     font-size: var(--body-font-size);
     color: var(--color-text-muted, #7a6f64);
     line-height: 1.6;
     margin: 0 0 12px;
   }
-  .divine-subscription__price {
+  .d-sub-price {
     display: block;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 14px;
     color: #5a3a6b;
   }
-  .divine-subscription__card .divine-btn--small {
+  .d-sub-card .d-btn--sm {
     padding: 10px 20px;
     font-size: 13px;
   }
-  .divine-subscription__footer-cta {
+  .d-sub-footer-cta {
     text-align: center;
     margin-top: 28px;
   }
   @media screen and (min-width: 750px) {
-    .divine-subscription__grid {
+    .d-sub-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -180,7 +180,7 @@
 {
   "name": "Divine Subscriptions",
   "tag": "section",
-  "class": "divine-subscription-section",
+  "class": "d-sub-section",
   "max_blocks": 4,
   "settings": [
     {

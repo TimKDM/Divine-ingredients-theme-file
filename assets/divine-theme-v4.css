@@ -33,8 +33,13 @@ body{
 }
 html{scroll-behavior:smooth}
 
+/* Apply the divine serif to every heading so Dawn-default templates
+   (cart, account, search) match the rest of the site. .d-* classes
+   override this where needed via higher specificity. */
+h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
+
 /* Reset for divine sections — we control margins inside our sections */
-.divine-page-wrap{overflow-x:hidden}
+.d-page-wrap{overflow-x:hidden}
 
 /* ----- Shared section utility classes ----- */
 .d-sec-label{
@@ -57,6 +62,20 @@ html{scroll-behavior:smooth}
   font-size:15px;font-weight:300;line-height:1.9;color:var(--d-mid);
   font-family:var(--d-font-sans);
 }
+.d-sec-header{text-align:center;margin-bottom:32px}
+.d-sec-alt{background:var(--d-beige-lt)}
+
+/* Product tag pills (PDP + card) */
+.d-ptag-list{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.d-ptag-list--pdp .d-ptag{font-size:.75rem;padding:4px 12px}
+.d-ptag{
+  display:inline-block;font-family:var(--d-font-sans);
+  font-size:.7rem;font-weight:500;letter-spacing:.03em;
+  padding:2px 8px;border-radius:999px;line-height:1.4;white-space:nowrap;
+}
+.d-ptag--benefit{background:var(--d-beige-lt);color:var(--d-forest)}
+.d-ptag--flavor{background:#fef6e8;color:#a07628}
+.d-ptag--dietary{background:#e8f5e9;color:#4a7c4f}
 
 /* Buttons */
 .d-btn-t{
@@ -91,6 +110,7 @@ html{scroll-behavior:smooth}
   transition:background .18s,transform .12s;border:none;cursor:pointer;
 }
 .d-btn-dark:hover{background:var(--d-forest);transform:translateY(-1px)}
+.d-btn--sm{padding:10px 20px;font-size:11px}
 
 /* Reveal animation */
 .d-reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}

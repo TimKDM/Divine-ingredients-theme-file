@@ -1,39 +1,39 @@
 {%- style -%}
-  .divine-wholesale-form-section {
+  .d-wsf-section {
     --body-font-size: {{ section.settings.body_font_size | default: 20 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 28 }}px;
   }
-  .divine-wholesale-form__intro h1,
-  .divine-wholesale-form__intro h2 {
+  .d-wsf-intro h1,
+  .d-wsf-intro h2 {
     font-size: var(--heading-font-size) !important;
   }
-  .divine-wholesale-form__intro .divine-section-label {
+  .d-wsf-intro .d-sec-label {
     font-size: {{ section.settings.caption_font_size | default: 11 }}px !important;
   }
-  .divine-wholesale-form-section {
+  .d-wsf-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   @media screen and (min-width: 768px) {
-    .divine-wholesale-form-section {
+    .d-wsf-section {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-  .divine-wholesale-form-wrap {
-    font-family: var(--font-body-family), sans-serif;
+  .d-wsf-wrap {
+    font-family: var(--d-font-sans);
     max-width: 860px;
     margin: 0 auto;
     padding: 0 20px;
   }
-  .divine-wholesale-form__intro {
+  .d-wsf-intro {
     text-align: center;
     margin-bottom: 40px;
   }
-  .divine-wholesale-form__intro .divine-section-label {
-    font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  .d-wsf-intro .d-sec-label {
+    font-family: var(--d-font-serif);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -42,16 +42,16 @@
     display: block;
     margin-bottom: 10px;
   }
-  .divine-wholesale-form__intro h1,
-  .divine-wholesale-form__intro h2 {
-    font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  .d-wsf-intro h1,
+  .d-wsf-intro h2 {
+    font-family: var(--d-font-serif);
     font-size: clamp(26px, 4.5vw, 36px);
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 14px;
     letter-spacing: -0.01em;
   }
-  .divine-wholesale-form__intro p {
+  .d-wsf-intro p {
     font-size: 16px;
     line-height: 1.7;
     color: var(--color-text-muted, #7a6f64);
@@ -59,7 +59,7 @@
     margin: 0 auto;
   }
 
-  .divine-wholesale-form-card {
+  .d-wsf-card {
     background: var(--color-background-hex, #ffffff);
     padding: 40px;
     border-radius: 12px;
@@ -67,21 +67,21 @@
     border: 1px solid var(--color-border-hex, #d2c4d7);
   }
   @media screen and (max-width: 767px) {
-    .divine-wholesale-form-card {
+    .d-wsf-card {
       padding: 24px;
     }
   }
 
-  .divine-wholesale-form__fieldset {
+  .d-wsf-fieldset {
     border: none;
     padding: 0;
     margin: 0 0 32px;
   }
-  .divine-wholesale-form__fieldset:last-of-type {
+  .d-wsf-fieldset:last-of-type {
     margin-bottom: 0;
   }
-  .divine-wholesale-form__legend {
-    font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  .d-wsf-legend {
+    font-family: var(--d-font-serif);
     font-size: {{ section.settings.form_header_font_size | default: 13 }}px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -93,27 +93,27 @@
     width: 100%;
   }
 
-  .divine-wholesale-form__row {
+  .d-wsf-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     margin-bottom: 16px;
   }
   @media screen and (min-width: 640px) {
-    .divine-wholesale-form__row--2 {
+    .d-wsf-row--2 {
       grid-template-columns: 1fr 1fr;
     }
-    .divine-wholesale-form__row--3 {
+    .d-wsf-row--3 {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
-  .divine-wholesale-form__field {
+  .d-wsf-field {
     display: flex;
     flex-direction: column;
   }
-  .divine-wholesale-form__label {
-    font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
+  .d-wsf-label {
+    font-family: var(--d-font-serif);
     font-size: {{ section.settings.form_label_font_size | default: 11 }}px;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -121,17 +121,17 @@
     margin-bottom: 8px;
     color: rgb(var(--color-foreground));
   }
-  .divine-wholesale-form__label .req {
+  .d-wsf-label .req {
     color: #c0392b;
     margin-left: 3px;
   }
-  .divine-wholesale-form__input,
-  .divine-wholesale-form__select,
-  .divine-wholesale-form__textarea {
+  .d-wsf-input,
+  .d-wsf-select,
+  .d-wsf-textarea {
     width: 100%;
     padding: 12px 14px;
     font-size: var(--body-font-size);
-    font-family: var(--font-body-family), sans-serif;
+    font-family: var(--d-font-sans);
     border: 1px solid rgba(var(--color-base-border-1));
     border-radius: 6px;
     background: transparent;
@@ -139,33 +139,33 @@
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
   }
-  .divine-wholesale-form__textarea {
+  .d-wsf-textarea {
     min-height: 120px;
     resize: vertical;
-    font-family: var(--font-body-family), sans-serif;
+    font-family: var(--d-font-sans);
   }
-  .divine-wholesale-form__select {
+  .d-wsf-select {
     cursor: pointer;
   }
-  .divine-wholesale-form__input:focus,
-  .divine-wholesale-form__select:focus,
-  .divine-wholesale-form__textarea:focus {
+  .d-wsf-input:focus,
+  .d-wsf-select:focus,
+  .d-wsf-textarea:focus {
     border-color: var(--color-accent-dark, #9b76a7);
     outline: none;
     box-shadow: 0 0 0 3px rgba(155, 118, 167, 0.12);
   }
 
-  .divine-wholesale-form__checks {
+  .d-wsf-checks {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
   }
   @media screen and (min-width: 640px) {
-    .divine-wholesale-form__checks {
+    .d-wsf-checks {
       grid-template-columns: 1fr 1fr;
     }
   }
-  .divine-wholesale-form__check {
+  .d-wsf-check {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -173,24 +173,24 @@
     line-height: 1.4;
     cursor: pointer;
   }
-  .divine-wholesale-form__check input[type="checkbox"] {
+  .d-wsf-check input[type="checkbox"] {
     width: 16px;
     height: 16px;
     accent-color: var(--color-accent-dark, #9b76a7);
   }
 
-  .divine-wholesale-form__submit-row {
+  .d-wsf-submit-row {
     margin-top: 28px;
     text-align: center;
   }
-  .divine-wholesale-form__submit {
+  .d-wsf-submit {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 240px;
     min-height: 48px;
     padding: 14px 36px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--d-font-serif);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -202,45 +202,45 @@
     cursor: pointer;
     transition: background 0.25s ease, transform 0.15s ease;
   }
-  .divine-wholesale-form__submit:hover {
+  .d-wsf-submit:hover {
     background: #7e5b8d;
     transform: translateY(-1px);
   }
-  .divine-wholesale-form__note {
+  .d-wsf-note {
     font-size: 13px;
     color: var(--color-text-muted, #7a6f64);
     margin-top: 14px;
     line-height: 1.5;
   }
 
-  .divine-wholesale-form__status {
+  .d-wsf-status {
     padding: 16px 20px;
     border-radius: 8px;
     margin-bottom: 24px;
     font-size: 15px;
   }
-  .divine-wholesale-form__status--success {
+  .d-wsf-status--success {
     background: #ecf7ed;
     color: #2f6d33;
     border: 1px solid #b8dbb9;
   }
-  .divine-wholesale-form__status--error {
+  .d-wsf-status--error {
     background: #fdecea;
     color: #a0332a;
     border: 1px solid #f1b6b0;
   }
-  .divine-wholesale-form__status ul {
+  .d-wsf-status ul {
     margin: 8px 0 0;
     padding-left: 20px;
   }
 {%- endstyle -%}
 
-<section class="divine-wholesale-form-wrap" id="wholesale-form">
+<section class="d-wsf-wrap" id="wholesale-form">
 
   {%- if section.settings.heading != blank or section.settings.label != blank or section.settings.subtext != blank -%}
-    <div class="divine-wholesale-form__intro">
+    <div class="d-wsf-intro">
       {%- if section.settings.label != blank -%}
-        <span class="divine-section-label">{{ section.settings.label }}</span>
+        <span class="d-sec-label">{{ section.settings.label }}</span>
       {%- endif -%}
       {%- if section.settings.heading != blank -%}
         <h1>{{ section.settings.heading }}</h1>
@@ -251,18 +251,18 @@
     </div>
   {%- endif -%}
 
-  <div class="divine-wholesale-form-card">
+  <div class="d-wsf-card">
     {%- form 'contact', id: 'WholesaleForm' -%}
 
       {%- if form.posted_successfully? -%}
-        <div class="divine-wholesale-form__status divine-wholesale-form__status--success" role="status">
+        <div class="d-wsf-status d-wsf-status--success" role="status">
           <strong>Thank you — your trade inquiry has been received.</strong>
           <div>A member of our wholesale team will be in touch within 1–2 business days.</div>
         </div>
       {%- endif -%}
 
       {%- if form.errors -%}
-        <div class="divine-wholesale-form__status divine-wholesale-form__status--error" role="alert">
+        <div class="d-wsf-status d-wsf-status--error" role="alert">
           <strong>Please correct the following and try again:</strong>
           <ul>
             {%- for field in form.errors -%}
@@ -276,20 +276,20 @@
       <input type="hidden" name="contact[Form Type]" value="Wholesale / Trade Inquiry">
 
       {%- comment -%} Business Information {%- endcomment -%}
-      <fieldset class="divine-wholesale-form__fieldset">
-        <legend class="divine-wholesale-form__legend">Business Information</legend>
+      <fieldset class="d-wsf-fieldset">
+        <legend class="d-wsf-legend">Business Information</legend>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-company">Company / Business name<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-company" name="contact[Company Name]" required>
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-company">Company / Business name<span class="req">*</span></label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-company" name="contact[Company Name]" required>
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-biz-type">Business type<span class="req">*</span></label>
-            <select class="divine-wholesale-form__select" id="WholesaleForm-biz-type" name="contact[Business Type]" required>
+        <div class="d-wsf-row d-wsf-row--2">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-biz-type">Business type<span class="req">*</span></label>
+            <select class="d-wsf-select" id="WholesaleForm-biz-type" name="contact[Business Type]" required>
               <option value="">Select business type…</option>
               <option>Café / Coffee shop</option>
               <option>Restaurant / Bar</option>
@@ -305,9 +305,9 @@
               <option>Other</option>
             </select>
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-years">Years in business</label>
-            <select class="divine-wholesale-form__select" id="WholesaleForm-years" name="contact[Years In Business]">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-years">Years in business</label>
+            <select class="d-wsf-select" id="WholesaleForm-years" name="contact[Years In Business]">
               <option value="">Select…</option>
               <option>Pre-launch / Startup</option>
               <option>Less than 1 year</option>
@@ -318,114 +318,114 @@
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-website">Website</label>
-            <input class="divine-wholesale-form__input" type="url" id="WholesaleForm-website" name="contact[Website]" placeholder="https://">
+        <div class="d-wsf-row d-wsf-row--2">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-website">Website</label>
+            <input class="d-wsf-input" type="url" id="WholesaleForm-website" name="contact[Website]" placeholder="https://">
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-social">Instagram / Social handle</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-social" name="contact[Social Handle]" placeholder="@yourbrand">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-social">Instagram / Social handle</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-social" name="contact[Social Handle]" placeholder="@yourbrand">
           </div>
         </div>
 
       </fieldset>
 
       {%- comment -%} Shipping / Business Address {%- endcomment -%}
-      <fieldset class="divine-wholesale-form__fieldset">
-        <legend class="divine-wholesale-form__legend">Business Address</legend>
+      <fieldset class="d-wsf-fieldset">
+        <legend class="d-wsf-legend">Business Address</legend>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-address">Street address</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-address" name="contact[Street Address]" autocomplete="street-address">
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-address">Street address</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-address" name="contact[Street Address]" autocomplete="street-address">
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--3">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-city">City</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-city" name="contact[City]" autocomplete="address-level2">
+        <div class="d-wsf-row d-wsf-row--3">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-city">City</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-city" name="contact[City]" autocomplete="address-level2">
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-state">State / Province</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-state" name="contact[State Or Province]" autocomplete="address-level1">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-state">State / Province</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-state" name="contact[State Or Province]" autocomplete="address-level1">
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-zip">Zip / Postal code</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-zip" name="contact[Postal Code]" autocomplete="postal-code">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-zip">Zip / Postal code</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-zip" name="contact[Postal Code]" autocomplete="postal-code">
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-country">Country<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-country" name="contact[Country]" autocomplete="country-name" required>
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-country">Country<span class="req">*</span></label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-country" name="contact[Country]" autocomplete="country-name" required>
           </div>
         </div>
       </fieldset>
 
       {%- comment -%} Contact Person {%- endcomment -%}
-      <fieldset class="divine-wholesale-form__fieldset">
-        <legend class="divine-wholesale-form__legend">Primary Contact</legend>
+      <fieldset class="d-wsf-fieldset">
+        <legend class="d-wsf-legend">Primary Contact</legend>
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-first">First name<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-first" name="contact[First Name]" autocomplete="given-name" required>
+        <div class="d-wsf-row d-wsf-row--2">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-first">First name<span class="req">*</span></label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-first" name="contact[First Name]" autocomplete="given-name" required>
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-last">Last name<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-last" name="contact[Last Name]" autocomplete="family-name" required>
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-last">Last name<span class="req">*</span></label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-last" name="contact[Last Name]" autocomplete="family-name" required>
           </div>
         </div>
 
         {%- comment -%} Shopify's contact form expects a 'name' field — combine first + last into the native name {%- endcomment -%}
         <input type="hidden" name="contact[name]" id="WholesaleForm-name" value="">
 
-        <div class="divine-wholesale-form__row divine-wholesale-form__row--2">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-title">Title</label>
-            <input class="divine-wholesale-form__input" type="text" id="WholesaleForm-title" name="contact[Title]">
+        <div class="d-wsf-row d-wsf-row--2">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-title">Title</label>
+            <input class="d-wsf-input" type="text" id="WholesaleForm-title" name="contact[Title]">
           </div>
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-phone">Phone<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="tel" id="WholesaleForm-phone" name="contact[Phone]" autocomplete="tel" required>
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-phone">Phone<span class="req">*</span></label>
+            <input class="d-wsf-input" type="tel" id="WholesaleForm-phone" name="contact[Phone]" autocomplete="tel" required>
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-email">Business email<span class="req">*</span></label>
-            <input class="divine-wholesale-form__input" type="email" id="WholesaleForm-email" name="contact[email]" autocomplete="email" required>
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-email">Business email<span class="req">*</span></label>
+            <input class="d-wsf-input" type="email" id="WholesaleForm-email" name="contact[email]" autocomplete="email" required>
           </div>
         </div>
       </fieldset>
 
       {%- comment -%} Product Interest {%- endcomment -%}
-      <fieldset class="divine-wholesale-form__fieldset">
-        <legend class="divine-wholesale-form__legend">Product Interest</legend>
+      <fieldset class="d-wsf-fieldset">
+        <legend class="d-wsf-legend">Product Interest</legend>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label">Which products are you interested in? (select all that apply)</label>
-            <div class="divine-wholesale-form__checks">
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Matcha]" value="Yes"> Matcha</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Loose Leaf Tea]" value="Yes"> Loose leaf tea</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Superfood Powders]" value="Yes"> Superfood powders</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Herbal Blends]" value="Yes"> Herbal blends</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Private Label]" value="Yes"> Private label / Custom branding</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Custom Blending]" value="Yes"> Custom blending / Formulation</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Bulk Ingredients]" value="Yes"> Bulk ingredients</label>
-              <label class="divine-wholesale-form__check"><input type="checkbox" name="contact[Interest - Other]" value="Yes"> Other / Not sure yet</label>
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label">Which products are you interested in? (select all that apply)</label>
+            <div class="d-wsf-checks">
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Matcha]" value="Yes"> Matcha</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Loose Leaf Tea]" value="Yes"> Loose leaf tea</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Superfood Powders]" value="Yes"> Superfood powders</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Herbal Blends]" value="Yes"> Herbal blends</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Private Label]" value="Yes"> Private label / Custom branding</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Custom Blending]" value="Yes"> Custom blending / Formulation</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Bulk Ingredients]" value="Yes"> Bulk ingredients</label>
+              <label class="d-wsf-check"><input type="checkbox" name="contact[Interest - Other]" value="Yes"> Other / Not sure yet</label>
             </div>
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-timeline">Desired start timeline</label>
-            <select class="divine-wholesale-form__select" id="WholesaleForm-timeline" name="contact[Timeline]">
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-timeline">Desired start timeline</label>
+            <select class="d-wsf-select" id="WholesaleForm-timeline" name="contact[Timeline]">
               <option value="">Select timeline…</option>
               <option>Immediately</option>
               <option>Within 1 month</option>
@@ -436,10 +436,10 @@
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-referral">How did you hear about us?</label>
-            <select class="divine-wholesale-form__select" id="WholesaleForm-referral" name="contact[Referral Source]">
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-referral">How did you hear about us?</label>
+            <select class="d-wsf-select" id="WholesaleForm-referral" name="contact[Referral Source]">
               <option value="">Select…</option>
               <option>Google / Search engine</option>
               <option>Instagram</option>
@@ -453,17 +453,17 @@
           </div>
         </div>
 
-        <div class="divine-wholesale-form__row">
-          <div class="divine-wholesale-form__field">
-            <label class="divine-wholesale-form__label" for="WholesaleForm-notes">Anything else we should know?</label>
-            <textarea class="divine-wholesale-form__textarea" id="WholesaleForm-notes" name="contact[body]" rows="4" placeholder="Questions, special requirements, certifications you need, etc."></textarea>
+        <div class="d-wsf-row">
+          <div class="d-wsf-field">
+            <label class="d-wsf-label" for="WholesaleForm-notes">Anything else we should know?</label>
+            <textarea class="d-wsf-textarea" id="WholesaleForm-notes" name="contact[body]" rows="4" placeholder="Questions, special requirements, certifications you need, etc."></textarea>
           </div>
         </div>
       </fieldset>
 
-      <div class="divine-wholesale-form__submit-row">
-        <button type="submit" class="divine-wholesale-form__submit">Submit Trade Inquiry</button>
-        <p class="divine-wholesale-form__note">{{ section.settings.submit_note }}</p>
+      <div class="d-wsf-submit-row">
+        <button type="submit" class="d-wsf-submit">Submit Trade Inquiry</button>
+        <p class="d-wsf-note">{{ section.settings.submit_note }}</p>
       </div>
 
     {%- endform -%}
@@ -489,7 +489,7 @@
 {
   "name": "Divine Wholesale Form",
   "tag": "section",
-  "class": "divine-wholesale-form-section",
+  "class": "d-wsf-section",
   "settings": [
     {
       "type": "header",

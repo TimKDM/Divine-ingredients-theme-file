@@ -533,10 +533,10 @@
 
                       {%- when 'product_tags' -%}
                         <div
-                          class="section-{{ block.id }}-margin divine-product-detail-tags"
+                          class="section-{{ block.id }}-margin d-ptag-list--pdp"
                           {{ block.shopify_attributes }}
                         >
-                          <div class="divine-product-card__tags" style="justify-content: flex-start;">
+                          <div class="d-ptag-list" style="justify-content: flex-start;">
                             {% render 'divine-product-tags',
                               product: product,
                               max_tags: block.settings.max_tags,

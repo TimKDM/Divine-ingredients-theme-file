@@ -44,13 +44,13 @@
   -%}
 
   {%- if is_benefit and show_benefits != false -%}
-    <span class="divine-tag divine-tag--benefit">{{ tag_label }}</span>
+    <span class="d-ptag d-ptag--benefit">{{ tag_label }}</span>
     {%- assign displayed = displayed | plus: 1 -%}
   {%- elsif is_flavor and show_flavors != false -%}
-    <span class="divine-tag divine-tag--flavor">{{ tag_label }}</span>
+    <span class="d-ptag d-ptag--flavor">{{ tag_label }}</span>
     {%- assign displayed = displayed | plus: 1 -%}
   {%- elsif is_dietary and show_dietary == true -%}
-    <span class="divine-tag divine-tag--dietary">{{ tag_label }}</span>
+    <span class="d-ptag d-ptag--dietary">{{ tag_label }}</span>
     {%- assign displayed = displayed | plus: 1 -%}
   {%- endif -%}
 {%- endfor -%}
