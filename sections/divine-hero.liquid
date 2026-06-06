@@ -33,9 +33,24 @@
 {%- endstyle -%}
 
 <section class="d-hero">
-  {%- if section.settings.video_url != blank -%}
+  {%- if section.settings.video != blank -%}
+    {%- assign poster_url = section.settings.image | image_url: width: 1500 -%}
+    <video
+      class="d-hero-media"
+      {% if section.settings.autoplay %}autoplay{% endif %}
+      {% if section.settings.loop %}loop{% endif %}
+      {% if section.settings.muted %}muted{% endif %}
+      playsinline
+      preload="metadata"
+      {% if poster_url != blank %}poster="{{ poster_url }}"{% endif %}
+    >
+      {%- for source in section.settings.video.sources -%}
+        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+      {%- endfor -%}
+    </video>
+  {%- elsif section.settings.video_url != blank -%}
     <div class="d-hero-media">
-      {{ section.settings.video_url | external_video_url: autoplay: true, loop: true, muted: true | external_video_tag: loading: 'lazy', class: 'd-hero-media' }}
+      {{ section.settings.video_url | external_video_url: autoplay: section.settings.autoplay, loop: section.settings.loop, muted: section.settings.muted | external_video_tag: loading: 'lazy', class: 'd-hero-media' }}
     </div>
   {%- elsif section.settings.image != blank -%}
     {{ section.settings.image | image_url: width: 2000 | image_tag:
@@ -86,13 +101,20 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Background image"
+      "label": "Background image",
+      "info": "Used as poster while the video loads, and as the fallback when no video is set"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Background video (upload)",
+      "info": "Preferred. Plays inline at fullscreen behind the hero copy. Falls back to image."
     },
     {
       "type": "url",
       "id": "video_url",
       "label": "Background video URL (YouTube/Vimeo)",
-      "info": "Overrides image when provided"
+      "info": "Used only when no video file is uploaded above."
     },
     {
       "type": "checkbox",
