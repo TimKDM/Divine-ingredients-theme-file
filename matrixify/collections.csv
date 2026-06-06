@@ -1,0 +1,19 @@
+Handle,Command,Title,Body HTML,Sort Order,Template Suffix,Published,Disjunctive,Rule: Column,Rule: Relation,Rule: Condition,SEO Title,SEO Description
+immunity,MERGE,Immunity,Teas chosen for immunity.,best-selling,,TRUE,FALSE,TAG,EQUALS,Function_Immunity,Immunity,Teas chosen for immunity.
+wind-down,MERGE,Wind down,Teas chosen for wind down.,best-selling,,TRUE,FALSE,TAG,EQUALS,Function_Wind down,Wind down,Teas chosen for wind down.
+gut-reset,MERGE,Gut Reset,Teas chosen for gut reset.,best-selling,,TRUE,FALSE,TAG,EQUALS,Function_Gut Reset,Gut Reset,Teas chosen for gut reset.
+focus-and-energy,MERGE,Focus and Energy,Teas chosen for focus and energy.,best-selling,,TRUE,FALSE,TAG,EQUALS,Function_Focus and Energy,Focus and Energy,Teas chosen for focus and energy.
+detox,MERGE,Detox,Teas chosen for detox.,best-selling,,TRUE,FALSE,TAG,EQUALS,Function_Detox,Detox,Teas chosen for detox.
+green-tea,MERGE,Green Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Green Tea,Green Tea,
+black-tea,MERGE,Black Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Black Tea,Black Tea,
+herbal-tea,MERGE,Herbal Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Herbal Tea,Herbal Tea,
+chai,MERGE,Chai,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Chai,Chai,
+matcha,MERGE,Matcha,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Matcha,Matcha,
+hemp-tea,MERGE,Hemp Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Hemp Tea,Hemp Tea,
+iced-tea,MERGE,Iced Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Iced Tea,Iced Tea,
+oolong-tea,MERGE,Oolong Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Oolong Tea,Oolong Tea,
+all-teas,MERGE,All Teas,Every tea in the Divine catalog.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Tea,All Teas,Every tea in the Divine catalog.
+all-powders,MERGE,All Powders,Superfood powders.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Powder,All Powders,Superfood powders.
+spices-botanicals,MERGE,Spices & Botanicals,Single-ingredient botanicals and culinary spices.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Spices_Botanicals,Spices & Botanicals,Single-ingredient botanicals and culinary spices.
+all-organic,MERGE,All Organic,Every certified-organic product.,best-selling,,TRUE,FALSE,TAG,EQUALS,Organic,All Organic,Every certified-organic product.
+founders-favourites,MERGE,Founders' Favourites,Hand-picked by the Divine team.,best-selling,,TRUE,FALSE,TAG,EQUALS,Founders_Favourite,Founders' Favourites,Hand-picked by the Divine team.
