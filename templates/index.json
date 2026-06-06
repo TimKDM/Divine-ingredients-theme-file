@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "divine_hero": {
@@ -6,7 +15,9 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "USDA Organic · CCOF Certified · Lab Tested Every Batch"
+            "text": "USDA Organic · CCOF Certified · Lab Tested Every Batch",
+            "badge_bg": "",
+            "badge_color": ""
           }
         },
         "heading": {
@@ -22,20 +33,33 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections",
+            "btn1_bg": "",
+            "btn1_color": "",
             "button_label_2": "Find Your Blend",
-            "button_link_2": "shopify://collections/zen-greens-green-tea"
+            "button_link_2": "shopify://collections/zen-greens-green-tea",
+            "btn2_color": ""
           }
         }
       },
-      "block_order": ["badge", "heading", "subtitle", "buttons"],
+      "block_order": [
+        "badge",
+        "heading",
+        "subtitle",
+        "buttons"
+      ],
       "settings": {
         "image": "shopify://shop_images/iStock-1298434383.jpg",
+        "video_url": "",
+        "autoplay": true,
+        "loop": true,
+        "muted": true,
         "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
         "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know — tested before they reach you. No filters, no synthetics, no guesswork.",
         "image_height": 95,
         "overlay_opacity": 100,
         "margin_top": 0,
         "margin_bottom": 0,
+        "body_font_size": 16,
         "heading_font_size": 88,
         "badge_font_size": 11
       }
@@ -43,21 +67,91 @@
     "divine_ticker": {
       "type": "divine-trust-bar",
       "blocks": {
-        "t_1": { "type": "trust_item", "settings": { "text": "USDA Organic" } },
-        "t_2": { "type": "trust_item", "settings": { "text": "CCOF Certified" } },
-        "t_3": { "type": "trust_item", "settings": { "text": "Every Batch Lab Tested" } },
-        "t_4": { "type": "trust_item", "settings": { "text": "Non-GMO" } },
-        "t_5": { "type": "trust_item", "settings": { "text": "Fair Trade" } },
-        "t_6": { "type": "trust_item", "settings": { "text": "Rainforest Alliance" } },
-        "t_7": { "type": "trust_item", "settings": { "text": "Woman Owned & Operated" } },
-        "t_8": { "type": "trust_item", "settings": { "text": "Free Shipping Over $100" } }
+        "t_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "USDA Organic",
+            "link": ""
+          }
+        },
+        "t_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "CCOF Certified",
+            "link": ""
+          }
+        },
+        "t_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Every Batch Lab Tested",
+            "link": ""
+          }
+        },
+        "t_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Non-GMO",
+            "link": ""
+          }
+        },
+        "t_5": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Fair Trade",
+            "link": ""
+          }
+        },
+        "t_6": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Rainforest Alliance",
+            "link": ""
+          }
+        },
+        "t_7": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Woman Owned &amp; Operated",
+            "link": ""
+          }
+        },
+        "t_8": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "shield",
+            "text": "Free Shipping Over $100",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8"],
+      "block_order": [
+        "t_1",
+        "t_2",
+        "t_3",
+        "t_4",
+        "t_5",
+        "t_6",
+        "t_7",
+        "t_8"
+      ],
       "settings": {
+        "background_color": "",
+        "text_color": "",
+        "icon_color": "",
+        "border_color": "",
         "padding_top": 11,
         "padding_bottom": 11,
-        "body_font_size": 11,
-        "margin_bottom": 48
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "body_font_size": 11
       }
     },
     "divine_rituals": {
@@ -66,11 +160,14 @@
         "ritual_immunity": {
           "type": "category",
           "settings": {
+            "collection": "",
             "image": "shopify://shop_images/iStock-1060404954.jpg",
+            "tag": "",
             "heading": "Immunity",
             "description": "Antioxidant-rich blends for daily defence and seasonal support.",
             "subtitle": "Turmeric Wellness · Ginger Lemon · Elderberry Boost · Tulsi Holy Basil · Echinacea Defence",
-            "cta": "Shop Immunity"
+            "cta": "Shop Immunity",
+            "link": ""
           }
         },
         "ritual_winddown": {
@@ -78,54 +175,79 @@
           "settings": {
             "collection": "calm-rituals-hemp-tea",
             "image": "shopify://shop_images/iStock-1144247743.jpg",
+            "tag": "",
             "heading": "Wind Down",
             "description": "Calming botanicals and herbal blends for restful evenings.",
             "subtitle": "Chamomile Care · Serenity · Relax Hemp · Lavender Calm · Lemon Balm",
-            "cta": "Shop Wind Down"
+            "cta": "Shop Wind Down",
+            "link": ""
           }
         },
         "ritual_gutreset": {
           "type": "category",
           "settings": {
+            "collection": "",
             "image": "shopify://shop_images/iStock-496610026.jpg",
+            "tag": "",
             "heading": "Gut Reset",
             "description": "Digestive teas and after-meal botanicals to settle the system.",
             "subtitle": "Peppermint · Fennel Digestive · Ginger Turmeric · Licorice Root · Triphala Blend",
-            "cta": "Shop Gut Reset"
+            "cta": "Shop Gut Reset",
+            "link": ""
           }
         },
         "ritual_focus": {
           "type": "category",
           "settings": {
+            "collection": "",
             "image": "shopify://shop_images/iStock-2252738400.jpg",
+            "tag": "",
             "heading": "Focus & Energy",
             "description": "Bright greens, matcha, and adaptogens for steady, focused energy.",
             "subtitle": "Ceremonial Matcha · Sencha · Genmaicha · Yerba Mate · Energize Hemp",
-            "cta": "Shop Focus"
+            "cta": "Shop Focus",
+            "link": ""
           }
         },
         "ritual_detox": {
           "type": "category",
           "settings": {
+            "collection": "",
             "image": "shopify://shop_images/iStock-1320143694.jpg",
+            "tag": "",
             "heading": "Detox",
             "description": "Cleansing herbs and bitter botanicals for gentle detoxification.",
             "subtitle": "Dandelion Root · Milk Thistle · Nettle Cleanse · Burdock · Detox Greens",
-            "cta": "Shop Detox"
+            "cta": "Shop Detox",
+            "link": ""
           }
         }
       },
-      "block_order": ["ritual_immunity", "ritual_winddown", "ritual_gutreset", "ritual_focus", "ritual_detox"],
+      "block_order": [
+        "ritual_immunity",
+        "ritual_winddown",
+        "ritual_gutreset",
+        "ritual_focus",
+        "ritual_detox"
+      ],
       "settings": {
         "caption": "Shop by Function",
         "title": "Your cup, your ritual.",
         "subtitle": "Find what fits your day.",
         "cta_label": "Browse all teas",
         "cta_link": "shopify://collections/tea",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
         "padding_top": 96,
         "padding_bottom": 96,
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "body_font_size": 12,
         "heading_font_size": 52,
-        "margin_bottom": 48
+        "caption_font_size": 11,
+        "item_heading_font_size": 22
       }
     },
     "divine_powders": {
@@ -134,6 +256,7 @@
         "p_1": {
           "type": "powder",
           "settings": {
+            "collection": "",
             "title": "Mushroom Powders",
             "description": "Lion's Mane · Reishi · Cordyceps",
             "link": "shopify://collections/organic-superfood-powders"
@@ -142,6 +265,7 @@
         "p_2": {
           "type": "powder",
           "settings": {
+            "collection": "",
             "title": "Fruit Powders",
             "description": "Blueberry · Taro · Tart Cherries · Rose Petals · Date",
             "link": "shopify://collections/organic-fruit-powders"
@@ -150,13 +274,18 @@
         "p_3": {
           "type": "powder",
           "settings": {
+            "collection": "",
             "title": "Superfood Blends",
             "description": "Ashwagandha · Rhodiola · Coconut Milk · Molasses · Coffee Cherry",
             "link": "shopify://collections/organic-superfood-powders"
           }
         }
       },
-      "block_order": ["p_1", "p_2", "p_3"],
+      "block_order": [
+        "p_1",
+        "p_2",
+        "p_3"
+      ],
       "settings": {
         "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
         "caption": "14 Products",
@@ -164,10 +293,13 @@
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
         "button_label": "Browse all powders",
         "button_link": "shopify://collections/organic-superfood-powders",
+        "background_color": "",
         "padding_top": 88,
         "padding_bottom": 88,
+        "margin_top": 0,
+        "margin_bottom": 48,
         "heading_font_size": 52,
-        "margin_bottom": 48
+        "caption_font_size": 11
       }
     },
     "divine_bestsellers": {
@@ -177,14 +309,23 @@
         "title": "The ones people keep coming back for",
         "collection": "favorite-products",
         "products_to_show": 4,
+        "show_rating": false,
+        "show_tags": false,
         "show_view_all": true,
         "view_all_label": "View all products",
         "view_all_link": "shopify://collections",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
+        "card_background_color": "",
         "padding_top": 96,
         "padding_bottom": 96,
-        "heading_font_size": 52,
+        "margin_top": 0,
+        "margin_bottom": 48,
         "body_font_size": 20,
-        "margin_bottom": 48
+        "heading_font_size": 52,
+        "caption_font_size": 11
       }
     },
     "divine_story": {
@@ -198,24 +339,58 @@
         "signature": "— <em>Preet Bhullar,</em> Founder",
         "button_label": "Read our story",
         "button_link": "shopify://pages/about-us",
+        "button_bg": "",
+        "button_color": "",
         "cap_label": "Founded by",
         "cap_name": "Preet Bhullar",
         "cap_role": "Microbiologist & Founder",
+        "use_alt_bg": false,
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
         "padding_top": 96,
         "padding_bottom": 96,
+        "margin_top": 0,
         "margin_bottom": 48,
+        "body_font_size": 15,
+        "heading_font_size": 36,
         "item_heading_font_size": 22
       }
     },
     "divine_discovery": {
       "type": "divine-discovery",
       "blocks": {
-        "i_1": { "type": "include", "settings": { "text": "3 handpicked bestselling teas" } },
-        "i_2": { "type": "include", "settings": { "text": "USDA Organic · Lab tested" } },
-        "i_3": { "type": "include", "settings": { "text": "Free shipping always included" } },
-        "i_4": { "type": "include", "settings": { "text": "Perfect as a gift" } }
+        "i_1": {
+          "type": "include",
+          "settings": {
+            "text": "3 handpicked bestselling teas"
+          }
+        },
+        "i_2": {
+          "type": "include",
+          "settings": {
+            "text": "USDA Organic · Lab tested"
+          }
+        },
+        "i_3": {
+          "type": "include",
+          "settings": {
+            "text": "Free shipping always included"
+          }
+        },
+        "i_4": {
+          "type": "include",
+          "settings": {
+            "text": "Perfect as a gift"
+          }
+        }
       },
-      "block_order": ["i_1", "i_2", "i_3", "i_4"],
+      "block_order": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4"
+      ],
       "settings": {
         "image": "shopify://shop_images/herbal_tea_subscription_box.jpg",
         "caption": "New to Divine Ingredients?",
@@ -225,10 +400,12 @@
         "price_note": "CAD · Free shipping",
         "button_label": "Get the Discovery Set",
         "button_link": "shopify://products/discovery-set",
+        "background_color": "",
         "padding_top": 88,
         "padding_bottom": 88,
-        "heading_font_size": 50,
-        "margin_bottom": 48
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "heading_font_size": 50
       }
     },
     "divine_newsletter": {
@@ -246,61 +423,184 @@
             "text": "New arrivals, recipes from our community, and seasonal drops. The good stuff only."
           }
         },
-        "perk_1": { "type": "perk", "settings": { "text": "20% off your first order with code WELCOME" } },
-        "perk_2": { "type": "perk", "settings": { "text": "Free shipping on orders over $100" } },
-        "perk_3": { "type": "perk", "settings": { "text": "First access to new products & seasonal harvests" } }
+        "perk_1": {
+          "type": "perk",
+          "settings": {
+            "text": "20% off your first order with code WELCOME"
+          }
+        },
+        "perk_2": {
+          "type": "perk",
+          "settings": {
+            "text": "Free shipping on orders over $100"
+          }
+        },
+        "perk_3": {
+          "type": "perk",
+          "settings": {
+            "text": "First access to new products & seasonal harvests"
+          }
+        }
       },
-      "block_order": ["heading", "subtitle", "perk_1", "perk_2", "perk_3"],
+      "block_order": [
+        "heading",
+        "subtitle",
+        "perk_1",
+        "perk_2",
+        "perk_3"
+      ],
       "settings": {
         "caption": "Join the Divine World",
         "input_placeholder": "your@email.com",
         "button_label": "Begin Your Ritual",
         "privacy_text": "No spam. Unsubscribe anytime.",
+        "show_first_name": false,
+        "name_placeholder": "First name",
+        "background_color": "",
+        "text_color": "",
+        "button_bg": "",
+        "button_color": "",
         "padding_top": 96,
         "padding_bottom": 96,
-        "heading_font_size": 52,
-        "margin_bottom": 48
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "body_font_size": 15,
+        "heading_font_size": 52
       }
     },
     "divine_certs": {
       "type": "divine-cert-bar",
       "blocks": {
-        "c_1": { "type": "cert", "settings": { "label": "USDA Organic" } },
-        "c_2": { "type": "cert", "settings": { "label": "CCOF Certified" } },
-        "c_3": { "type": "cert", "settings": { "label": "Lab Tested Every Batch" } },
-        "c_4": { "type": "cert", "settings": { "label": "Non-GMO" } },
-        "c_5": { "type": "cert", "settings": { "label": "Fair Trade" } },
-        "c_6": { "type": "cert", "settings": { "label": "Rainforest Alliance" } },
-        "c_7": { "type": "cert", "settings": { "label": "Woman Owned" } }
+        "c_1": {
+          "type": "cert",
+          "settings": {
+            "label": "USDA Organic",
+            "icon": "usda"
+          }
+        },
+        "c_2": {
+          "type": "cert",
+          "settings": {
+            "label": "CCOF Certified",
+            "icon": "usda"
+          }
+        },
+        "c_3": {
+          "type": "cert",
+          "settings": {
+            "label": "Lab Tested Every Batch",
+            "icon": "usda"
+          }
+        },
+        "c_4": {
+          "type": "cert",
+          "settings": {
+            "label": "Non-GMO",
+            "icon": "usda"
+          }
+        },
+        "c_5": {
+          "type": "cert",
+          "settings": {
+            "label": "Fair Trade",
+            "icon": "usda"
+          }
+        },
+        "c_6": {
+          "type": "cert",
+          "settings": {
+            "label": "Rainforest Alliance",
+            "icon": "usda"
+          }
+        },
+        "c_7": {
+          "type": "cert",
+          "settings": {
+            "label": "Woman Owned",
+            "icon": "usda"
+          }
+        }
       },
-      "block_order": ["c_1", "c_2", "c_3", "c_4", "c_5", "c_6", "c_7"],
+      "block_order": [
+        "c_1",
+        "c_2",
+        "c_3",
+        "c_4",
+        "c_5",
+        "c_6",
+        "c_7"
+      ],
+      "disabled": true,
       "settings": {
         "heading": "Certified by",
+        "use_alt_bg": false,
+        "background_color": "",
         "padding_top": 28,
         "padding_bottom": 28,
-        "margin_bottom": 48
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "body_font_size": 11,
+        "heading_font_size": 10
       }
     },
     "divine_b2b": {
       "type": "divine-wholesale",
       "blocks": {
-        "f_1": { "type": "feature", "settings": { "text": "Wholesale pricing" } },
-        "f_2": { "type": "feature", "settings": { "text": "Flexible MOQs" } },
-        "f_3": { "type": "feature", "settings": { "text": "Private label available" } },
-        "f_4": { "type": "feature", "settings": { "text": "COA with every order" } },
-        "f_5": { "type": "feature", "settings": { "text": "Dedicated account manager" } }
+        "f_1": {
+          "type": "feature",
+          "settings": {
+            "text": "Wholesale pricing"
+          }
+        },
+        "f_2": {
+          "type": "feature",
+          "settings": {
+            "text": "Flexible MOQs"
+          }
+        },
+        "f_3": {
+          "type": "feature",
+          "settings": {
+            "text": "Private label available"
+          }
+        },
+        "f_4": {
+          "type": "feature",
+          "settings": {
+            "text": "COA with every order"
+          }
+        },
+        "f_5": {
+          "type": "feature",
+          "settings": {
+            "text": "Dedicated account manager"
+          }
+        }
       },
-      "block_order": ["f_1", "f_2", "f_3", "f_4", "f_5"],
+      "block_order": [
+        "f_1",
+        "f_2",
+        "f_3",
+        "f_4",
+        "f_5"
+      ],
       "settings": {
         "caption": "",
         "heading": "Wholesale & trade accounts",
         "text": "<p>Trusted by wellness businesses across North America. Same quality you love — wholesale pricing, flexible minimums, and a Certificate of Analysis with every shipment.</p>",
         "button_label_1": "Enquire about wholesale",
         "button_link_1": "shopify://pages/wholesale",
+        "button_label_2": "",
+        "button_link_2": "",
+        "background_color": "",
         "padding_top": 56,
         "padding_bottom": 56,
+        "margin_top": 0,
+        "margin_bottom": 48,
+        "body_font_size": 15,
         "heading_font_size": 52,
-        "margin_bottom": 48
+        "caption_font_size": 11,
+        "feature_font_size": 11
       }
     }
   },
