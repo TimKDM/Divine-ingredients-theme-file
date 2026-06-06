@@ -1,25 +1,25 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-filters-section {
+  #shopify-section-{{ section.id }} .d-cfilters-sec {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
   @media screen and (min-width: 768px) {
-    #shopify-section-{{ section.id }} .divine-filters-section {
+    #shopify-section-{{ section.id }} .d-cfilters-sec {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-  #shopify-section-{{ section.id }} .divine-filters-section {
+  #shopify-section-{{ section.id }} .d-cfilters-sec {
     font-size: {{ section.settings.body_font_size | default: 14 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-filter-group__title {
+  #shopify-section-{{ section.id }} .d-cfilter-group-title {
     font-size: {{ section.settings.heading_font_size | default: 16 }}px;
   }
 {%- endstyle -%}
 
-<section class="divine-filters-section page-width">
+<section class="d-cfilters-sec page-width">
   {%- if section.settings.title != blank -%}
-    <h3 class="divine-filter-group__title" style="margin-bottom: var(--spacing-sm);">{{ section.settings.title }}</h3>
+    <h3 class="d-cfilter-group-title" style="margin-bottom: var(--spacing-sm);">{{ section.settings.title }}</h3>
   {%- endif -%}
 
   {% render 'divine-collection-filters',

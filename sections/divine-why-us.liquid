@@ -1,63 +1,63 @@
 {%- style -%}
-  .divine-why-us-section {
+  .d-why-section {
     --body-font-size: {{ section.settings.body_font_size | default: 14 }}px;
     --body-font-size-lg: {{ section.settings.body_font_size | default: 14 | plus: 1 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
   }
-  .divine-why-us .divine-section-title {
+  .d-why .d-sec-h {
     font-size: var(--heading-font-size);
   }
-  .divine-why-us__item h3 {
+  .d-why-item h3 {
     font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
   }
-  .divine-why-us .divine-section-label {
+  .d-why .d-sec-label {
     font-size: {{ section.settings.caption_font_size | default: 14 }}px;
   }
-  .divine-why-us-section {
+  .d-why-section {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   @media screen and (min-width: 768px) {
-    .divine-why-us-section {
+    .d-why-section {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
   {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-    .divine-why-us-section {
+    .d-why-section {
       background-color: {{ section.settings.background_color }};
     }
   {% endif %}
   {% if section.settings.text_color != blank and section.settings.text_color != 'rgba(0,0,0,0)' %}
-    .divine-why-us h2,
-    .divine-why-us h3,
-    .divine-why-us p {
+    .d-why h2,
+    .d-why h3,
+    .d-why p {
       color: {{ section.settings.text_color }};
     }
   {% endif %}
   {% if section.settings.accent_color != blank and section.settings.accent_color != 'rgba(0,0,0,0)' %}
-    .divine-why-us__icon svg {
+    .d-why-icon svg {
       stroke: {{ section.settings.accent_color }};
     }
   {% endif %}
 {%- endstyle -%}
 
-<section class="divine-why-us{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
+<section class="d-why{% if section.settings.use_alt_bg %} d-sec-alt{% endif %}">
   {%- if section.settings.heading != blank -%}
-    <div class="divine-section-header">
+    <div class="d-sec-header">
       {%- if section.settings.caption != blank -%}
-        <span class="divine-section-label">{{ section.settings.caption }}</span>
+        <span class="d-sec-label">{{ section.settings.caption }}</span>
       {%- endif -%}
-      <h2 class="divine-section-title">{{ section.settings.heading }}</h2>
+      <h2 class="d-sec-h">{{ section.settings.heading }}</h2>
     </div>
   {%- endif -%}
 
-  <div class="divine-why-us__grid">
+  <div class="d-why-grid">
     {%- for block in section.blocks -%}
-      <div class="divine-why-us__item" {{ block.shopify_attributes }}>
-        <div class="divine-why-us__icon">
+      <div class="d-why-item" {{ block.shopify_attributes }}>
+        <div class="d-why-icon">
           {%- case block.settings.icon -%}
             {%- when 'leaf' -%}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -93,46 +93,46 @@
   </div>
 
   {%- if section.settings.cta_label != blank -%}
-    <div class="divine-why-us__cta">
-      <a href="{{ section.settings.cta_link }}" class="divine-btn divine-btn-secondary">{{ section.settings.cta_label }}</a>
+    <div class="d-why-cta">
+      <a href="{{ section.settings.cta_link }}" class="d-btn-t">{{ section.settings.cta_label }}</a>
     </div>
   {%- endif -%}
 </section>
 
 <style>
-  .divine-why-us {
+  .d-why {
     padding: 48px 20px;
     text-align: center;
   }
-  .divine-why-us__grid {
+  .d-why-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
     max-width: 1000px;
     margin: 32px auto 0;
   }
-  .divine-why-us__item {
+  .d-why-item {
     text-align: center;
     padding: 24px 16px;
   }
-  .divine-why-us__icon {
+  .d-why-icon {
     margin-bottom: 16px;
   }
-  .divine-why-us__icon svg {
+  .d-why-icon svg {
     width: 48px;
     height: 48px;
     stroke: var(--color-accent-dark, #7c6c5b);
     stroke-width: 1.5;
     fill: none;
   }
-  .divine-why-us__item h3 {
-    font-family: var(--font-heading);
+  .d-why-item h3 {
+    font-family: var(--d-font-serif);
     font-size: {{ section.settings.item_heading_font_size | default: 16 }}px;
     font-weight: 600;
     margin: 0 0 8px;
     letter-spacing: 0.02em;
   }
-  .divine-why-us__item p {
+  .d-why-item p {
     font-size: var(--body-font-size);
     color: var(--color-text-muted, #666);
     line-height: 1.6;
@@ -141,23 +141,23 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .divine-why-us__cta {
+  .d-why-cta {
     text-align: center;
     margin-top: 32px;
   }
   @media screen and (min-width: 750px) {
-    .divine-why-us__grid {
+    .d-why-grid {
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
     }
-    .divine-why-us__icon svg {
+    .d-why-icon svg {
       width: 56px;
       height: 56px;
     }
-    .divine-why-us__item h3 {
+    .d-why-item h3 {
       font-size: {{ section.settings.item_heading_font_size | default: 16 | plus: 2 }}px;
     }
-    .divine-why-us__item p {
+    .d-why-item p {
       font-size: var(--body-font-size-lg);
     }
   }
@@ -167,7 +167,7 @@
 {
   "name": "Why Divine",
   "tag": "section",
-  "class": "divine-why-us-section",
+  "class": "d-why-section",
   "max_blocks": 4,
   "settings": [
     {

@@ -56,7 +56,8 @@
       "settings": {
         "padding_top": 11,
         "padding_bottom": 11,
-        "body_font_size": 11
+        "body_font_size": 11,
+        "margin_bottom": 48
       }
     },
     "divine_rituals": {
@@ -123,7 +124,8 @@
         "cta_link": "shopify://collections/tea",
         "padding_top": 96,
         "padding_bottom": 96,
-        "heading_font_size": 52
+        "heading_font_size": 52,
+        "margin_bottom": 48
       }
     },
     "divine_powders": {
@@ -164,7 +166,8 @@
         "button_link": "shopify://collections/organic-superfood-powders",
         "padding_top": 88,
         "padding_bottom": 88,
-        "heading_font_size": 52
+        "heading_font_size": 52,
+        "margin_bottom": 48
       }
     },
     "divine_bestsellers": {
@@ -180,7 +183,8 @@
         "padding_top": 96,
         "padding_bottom": 96,
         "heading_font_size": 52,
-        "body_font_size": 20
+        "body_font_size": 20,
+        "margin_bottom": 48
       }
     },
     "divine_story": {
@@ -223,7 +227,8 @@
         "button_link": "shopify://products/discovery-set",
         "padding_top": 88,
         "padding_bottom": 88,
-        "heading_font_size": 50
+        "heading_font_size": 50,
+        "margin_bottom": 48
       }
     },
     "divine_newsletter": {
@@ -253,7 +258,8 @@
         "privacy_text": "No spam. Unsubscribe anytime.",
         "padding_top": 96,
         "padding_bottom": 96,
-        "heading_font_size": 52
+        "heading_font_size": 52,
+        "margin_bottom": 48
       }
     },
     "divine_certs": {
@@ -271,7 +277,8 @@
       "settings": {
         "heading": "Certified by",
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "margin_bottom": 48
       }
     },
     "divine_b2b": {
@@ -285,14 +292,15 @@
       },
       "block_order": ["f_1", "f_2", "f_3", "f_4", "f_5"],
       "settings": {
-        "caption": "For Cafés, Spas & Studios",
+        "caption": "",
         "heading": "Wholesale & trade accounts",
         "text": "<p>Trusted by wellness businesses across North America. Same quality you love — wholesale pricing, flexible minimums, and a Certificate of Analysis with every shipment.</p>",
         "button_label_1": "Enquire about wholesale",
         "button_link_1": "shopify://pages/wholesale",
         "padding_top": 56,
         "padding_bottom": 56,
-        "heading_font_size": 28
+        "heading_font_size": 52,
+        "margin_bottom": 48
       }
     }
   },

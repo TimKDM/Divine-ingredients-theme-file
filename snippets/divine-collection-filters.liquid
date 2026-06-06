@@ -47,19 +47,19 @@
   endfor
 -%}
 
-<div class="divine-filters" id="divine-collection-filters">
+<div class="d-cfilters" id="divine-collection-filters">
   {%- if benefit_tags != blank -%}
     {%- assign items = benefit_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Benefits</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Benefits</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Benefit_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--benefit' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--benefit' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--benefit' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--benefit' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -69,16 +69,16 @@
 
   {%- if flavor_tags != blank -%}
     {%- assign items = flavor_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Flavors</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Flavors</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Flavor_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--flavor' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--flavor' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--flavor' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--flavor' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -88,16 +88,16 @@
 
   {%- if caffeine_tags != blank -%}
     {%- assign items = caffeine_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Caffeine Level</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Caffeine Level</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Caffeine_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--caffeine' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--caffeine' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--caffeine' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--caffeine' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -107,16 +107,16 @@
 
   {%- if dietary_tags != blank -%}
     {%- assign items = dietary_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Dietary</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Dietary</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Dietary_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--dietary' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--dietary' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--dietary' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--dietary' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -126,16 +126,16 @@
 
   {%- if origin_tags != blank -%}
     {%- assign items = origin_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Origin</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Origin</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Origin_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--origin' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--origin' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--origin' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--origin' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -145,16 +145,16 @@
 
   {%- if format_tags != blank -%}
     {%- assign items = format_tags | split: '|||' -%}
-    <div class="divine-filter-group">
-      <h4 class="divine-filter-group__title">Format</h4>
-      <div class="divine-filter-group__chips">
+    <div class="d-cfilter-group">
+      <h4 class="d-cfilter-group-title">Format</h4>
+      <div class="d-cfilter-group-chips">
         {%- for item in items -%}
           {%- if item != blank -%}
             {%- assign full_tag = 'Format_' | append: item -%}
             {%- if current_tags contains full_tag -%}
-              {{ full_tag | link_to_remove_tag: full_tag, class: 'divine-chip divine-chip--active divine-chip--format' }}
+              {{ full_tag | link_to_remove_tag: full_tag, class: 'd-chip d-chip--active d-chip--format' }}
             {%- else -%}
-              {{ full_tag | link_to_add_tag: full_tag, class: 'divine-chip divine-chip--format' }}
+              {{ full_tag | link_to_add_tag: full_tag, class: 'd-chip d-chip--format' }}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
@@ -163,8 +163,8 @@
   {%- endif -%}
 
   {%- if current_tags.size > 0 -%}
-    <div class="divine-filter-group divine-filter-group--active">
-      <a href="{{ collection.url }}" class="divine-chip divine-chip--clear">Clear All Filters</a>
+    <div class="d-cfilter-group d-cfilter-group--active">
+      <a href="{{ collection.url }}" class="d-chip d-chip--clear">Clear All Filters</a>
     </div>
   {%- endif -%}
 </div>

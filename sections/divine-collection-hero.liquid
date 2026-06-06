@@ -1,5 +1,5 @@
 {%- style -%}
-  .divine-collection-hero {
+  .d-chero {
     position: relative;
     min-height: 280px;
     display: flex;
@@ -9,22 +9,22 @@
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   @media screen and (min-width: 750px) {
-    .divine-collection-hero {
+    .d-chero {
       min-height: 360px;
     }
   }
-  .divine-collection-hero__bg {
+  .d-chero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
   }
-  .divine-collection-hero__bg img {
+  .d-chero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-  .divine-collection-hero::after {
+  .d-chero::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -35,7 +35,7 @@
     );
     z-index: 1;
   }
-  .divine-collection-hero__content {
+  .d-chero-content {
     position: relative;
     z-index: 2;
     max-width: 700px;
@@ -43,11 +43,11 @@
     color: {{ section.settings.text_color | default: '#ffffff' }};
   }
   @media screen and (min-width: 750px) {
-    .divine-collection-hero__content {
+    .d-chero-content {
       padding: 64px 48px;
     }
   }
-  .divine-collection-hero__label {
+  .d-chero-label {
     display: inline-block;
     font-size: {{ section.settings.caption_font_size | default: 12 }}px;
     font-weight: 600;
@@ -56,26 +56,26 @@
     margin-bottom: 12px;
     opacity: 0.85;
   }
-  .divine-collection-hero__title {
-    font-family: var(--font-heading);
+  .d-chero-title {
+    font-family: var(--d-font-serif);
     font-size: {{ section.settings.heading_font_size | default: 32 }}px;
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 12px;
   }
   @media screen and (min-width: 750px) {
-    .divine-collection-hero__title {
+    .d-chero-title {
       font-size: 44px;
     }
   }
-  .divine-collection-hero__desc {
+  .d-chero-desc {
     font-size: {{ section.settings.body_font_size | default: 16 }}px;
     line-height: 1.7;
     opacity: 0.9;
     margin: 0 0 24px;
     max-width: 560px;
   }
-  .divine-collection-hero__cta {
+  .d-chero-cta {
     display: inline-block;
     padding: 12px 28px;
     font-size: 14px;
@@ -88,13 +88,13 @@
     color: {{ section.settings.button_color | default: '#1d1d1d' }};
     transition: opacity 0.2s ease;
   }
-  .divine-collection-hero__cta:hover {
+  .d-chero-cta:hover {
     opacity: 0.85;
   }
 {%- endstyle -%}
 
-<section class="divine-collection-hero">
-  <div class="divine-collection-hero__bg">
+<section class="d-chero">
+  <div class="d-chero-bg">
     {%- if section.settings.image != blank -%}
       {{
         section.settings.image
@@ -116,23 +116,23 @@
     {%- endif -%}
   </div>
 
-  <div class="divine-collection-hero__content">
+  <div class="d-chero-content">
     {%- if section.settings.label != blank -%}
-      <span class="divine-collection-hero__label">{{ section.settings.label }}</span>
+      <span class="d-chero-label">{{ section.settings.label }}</span>
     {%- endif -%}
 
-    <h1 class="divine-collection-hero__title">
+    <h1 class="d-chero-title">
       {{ section.settings.heading | default: collection.title }}
     </h1>
 
     {%- if section.settings.description != blank -%}
-      <p class="divine-collection-hero__desc">{{ section.settings.description }}</p>
+      <p class="d-chero-desc">{{ section.settings.description }}</p>
     {%- elsif collection.description != blank -%}
-      <div class="divine-collection-hero__desc">{{ collection.description }}</div>
+      <div class="d-chero-desc">{{ collection.description }}</div>
     {%- endif -%}
 
     {%- if section.settings.cta_label != blank -%}
-      <a href="{{ section.settings.cta_link | default: '#shopify-section-product-grid' }}" class="divine-collection-hero__cta">
+      <a href="{{ section.settings.cta_link | default: '#shopify-section-product-grid' }}" class="d-chero-cta">
         {{ section.settings.cta_label }}
       </a>
     {%- endif -%}
@@ -143,7 +143,7 @@
 {
   "name": "Divine Collection Hero",
   "tag": "section",
-  "class": "divine-collection-hero-section",
+  "class": "d-chero-section",
   "settings": [
     {
       "type": "image_picker",

@@ -1,17 +1,17 @@
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-testimonials {
+  #shopify-section-{{ section.id }} .d-tm {
     --body-font-size: {{ section.settings.body_font_size | default: 15 }}px;
     --heading-font-size: {{ section.settings.heading_font_size | default: 26 }}px;
     padding: 48px 20px;
     text-align: center;
   }
-  #shopify-section-{{ section.id }} .divine-testimonials .divine-section-title {
+  #shopify-section-{{ section.id }} .d-tm .d-sec-h {
     font-size: var(--heading-font-size);
   }
-  #shopify-section-{{ section.id }} .divine-testimonials .divine-section-label {
+  #shopify-section-{{ section.id }} .d-tm .d-sec-label {
     font-size: {{ section.settings.caption_font_size | default: 14 }}px;
   }
-  #shopify-section-{{ section.id }} .divine-testimonials {
+  #shopify-section-{{ section.id }} .d-tm {
     padding: 48px 20px;
     text-align: center;
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
@@ -23,74 +23,74 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .divine-testimonials {
+    #shopify-section-{{ section.id }} .d-tm {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
   {% if section.settings.star_color != blank and section.settings.star_color != 'rgba(0,0,0,0)' %}
-    #shopify-section-{{ section.id }} .divine-testimonials__stars svg {
+    #shopify-section-{{ section.id }} .d-tm-stars svg {
       fill: {{ section.settings.star_color }};
     }
   {% endif %}
   {% if section.settings.card_background_color != blank and section.settings.card_background_color != 'rgba(0,0,0,0)' %}
-    #shopify-section-{{ section.id }} .divine-testimonials__card {
+    #shopify-section-{{ section.id }} .d-tm-card {
       background-color: {{ section.settings.card_background_color }};
     }
   {% endif %}
   {% if section.settings.card_border_color != blank and section.settings.card_border_color != 'rgba(0,0,0,0)' %}
-    #shopify-section-{{ section.id }} .divine-testimonials__card {
+    #shopify-section-{{ section.id }} .d-tm-card {
       border-color: {{ section.settings.card_border_color }};
     }
   {% endif %}
 {%- endstyle -%}
 
-<section class="divine-testimonials{% if section.settings.use_alt_bg %} divine-section-alt{% endif %}">
-  <div class="divine-section-header">
+<section class="d-tm{% if section.settings.use_alt_bg %} d-sec-alt{% endif %}">
+  <div class="d-sec-header">
     {%- if section.settings.caption != blank -%}
-      <span class="divine-section-label">{{ section.settings.caption }}</span>
+      <span class="d-sec-label">{{ section.settings.caption }}</span>
     {%- endif -%}
     {%- if section.settings.title != blank -%}
-      <h2 class="divine-section-title">{{ section.settings.title }}</h2>
+      <h2 class="d-sec-h">{{ section.settings.title }}</h2>
     {%- endif -%}
   </div>
 
-  <div class="divine-testimonials__grid">
+  <div class="d-tm-grid">
     {%- for block in section.blocks -%}
-      <div class="divine-testimonials__card" {{ block.shopify_attributes }}>
+      <div class="d-tm-card" {{ block.shopify_attributes }}>
         {%- if block.settings.rating != blank -%}
-          <div class="divine-testimonials__stars">
+          <div class="d-tm-stars">
             {%- assign star_count = block.settings.rating | plus: 0 -%}
             {%- for i in (1..star_count) -%}
               <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             {%- endfor -%}
             {%- if block.settings.source != blank -%}
-              <span class="divine-testimonials__source">{{ block.settings.source }}</span>
+              <span class="d-tm-source">{{ block.settings.source }}</span>
             {%- endif -%}
           </div>
         {%- endif -%}
 
         {%- if block.settings.text != blank -%}
-          <p class="divine-testimonials__text">"{{ block.settings.text }}"</p>
+          <p class="d-tm-text">"{{ block.settings.text }}"</p>
         {%- endif -%}
 
-        <div class="divine-testimonials__footer">
-          <div class="divine-testimonials__avatar">
+        <div class="d-tm-footer">
+          <div class="d-tm-avatar">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: width: 96 | image_tag: loading: 'lazy', widths: '48, 96' }}
             {%- else -%}
-              <span class="divine-testimonials__initial">{{ block.settings.author | slice: 0 }}</span>
+              <span class="d-tm-initial">{{ block.settings.author | slice: 0 }}</span>
             {%- endif -%}
           </div>
-          <div class="divine-testimonials__meta">
+          <div class="d-tm-meta">
             {%- if block.settings.author != blank -%}
-              <p class="divine-testimonials__author">
+              <p class="d-tm-author">
                 {{ block.settings.author }}
-                <svg class="divine-testimonials__badge" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <svg class="d-tm-badge" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
               </p>
             {%- endif -%}
             {%- if block.settings.role != blank -%}
-              <p class="divine-testimonials__role">{{ block.settings.role }}</p>
+              <p class="d-tm-role">{{ block.settings.role }}</p>
             {%- endif -%}
           </div>
         </div>
@@ -100,18 +100,18 @@
 </section>
 
 <style>
-  .divine-testimonials {
+  .d-tm {
     padding: 48px 20px;
     text-align: center;
   }
-  .divine-testimonials__grid {
+  .d-tm-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
     max-width: 1200px;
     margin: 32px auto 0;
   }
-  .divine-testimonials__card {
+  .d-tm-card {
     background: var(--color-background-hex, #fff);
     border-radius: var(--radius-md, 10px);
     border: 1px solid var(--color-border-hex, #d2c4d7);
@@ -121,22 +121,22 @@
     flex-direction: column;
     transition: box-shadow 0.28s ease, transform 0.28s ease;
   }
-  .divine-testimonials__card:hover {
+  .d-tm-card:hover {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
   }
-  .divine-testimonials__stars {
+  .d-tm-stars {
     display: flex;
     align-items: center;
     gap: 2px;
     margin-bottom: 16px;
   }
-  .divine-testimonials__stars svg {
+  .d-tm-stars svg {
     width: 15px;
     height: 15px;
     fill: #e5b94e;
   }
-  .divine-testimonials__source {
+  .d-tm-source {
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -146,21 +146,21 @@
     border-left: 1px solid var(--color-border-hex, #d2c4d7);
     white-space: nowrap;
   }
-  .divine-testimonials__text {
+  .d-tm-text {
     font-size: var(--body-font-size);
     line-height: 1.7;
     color: var(--color-foreground-hex, #1d1917);
     margin: 0 0 20px;
     flex: 1;
   }
-  .divine-testimonials__footer {
+  .d-tm-footer {
     display: flex;
     align-items: center;
     gap: 12px;
     padding-top: 16px;
     border-top: 1px solid var(--color-border-hex, #d2c4d7);
   }
-  .divine-testimonials__avatar {
+  .d-tm-avatar {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -171,24 +171,24 @@
     align-items: center;
     justify-content: center;
   }
-  .divine-testimonials__avatar img {
+  .d-tm-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .divine-testimonials__initial {
-    font-family: var(--font-heading);
+  .d-tm-initial {
+    font-family: var(--d-font-serif);
     font-size: 17px;
     font-weight: 600;
     color: var(--color-accent-dark, #9b76a7);
     text-transform: uppercase;
     line-height: 1;
   }
-  .divine-testimonials__meta {
+  .d-tm-meta {
     min-width: 0;
   }
-  .divine-testimonials__author {
-    font-family: var(--font-heading);
+  .d-tm-author {
+    font-family: var(--d-font-serif);
     font-size: 14px;
     font-weight: 600;
     margin: 0;
@@ -197,20 +197,20 @@
     gap: 4px;
     line-height: 1.3;
   }
-  .divine-testimonials__badge {
+  .d-tm-badge {
     width: 16px;
     height: 16px;
     color: #4a9e6b;
     flex-shrink: 0;
   }
-  .divine-testimonials__role {
+  .d-tm-role {
     font-size: 12px;
     color: var(--color-text-muted, #7a6f64);
     margin: 2px 0 0;
     line-height: 1.3;
   }
   @media screen and (min-width: 750px) {
-    .divine-testimonials__grid {
+    .d-tm-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -220,7 +220,7 @@
 {
   "name": "Divine Testimonials",
   "tag": "section",
-  "class": "divine-testimonials-section",
+  "class": "d-tm-section",
   "max_blocks": 10,
   "settings": [
     {

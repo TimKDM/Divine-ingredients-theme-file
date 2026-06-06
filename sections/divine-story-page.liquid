@@ -10,7 +10,7 @@
 {%- endcomment -%}
 
 {%- style -%}
-  #shopify-section-{{ section.id }} .divine-story-page{
+  #shopify-section-{{ section.id }} .d-story-page{
     {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
   }
   #shopify-section-{{ section.id }} .d-ph-h1{
@@ -18,7 +18,7 @@
   }
 {%- endstyle -%}
 
-<div class="divine-story-page">
+<div class="d-story-page">
 
   <div class="d-breadcrumb">
     <a href="{{ routes.root_url }}">Home</a>
@@ -253,7 +253,7 @@
 {
   "name": "Divine Story Page",
   "tag": "section",
-  "class": "divine-story-page-section",
+  "class": "d-story-page-section",
   "max_blocks": 12,
   "settings": [
     {
