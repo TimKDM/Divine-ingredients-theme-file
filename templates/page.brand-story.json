@@ -97,8 +97,6 @@
           "settings": {
             "heading": "You Read Labels. So Do We.",
             "text": "Everything we sell is organic, independently tested, and fully traceable. No marketing fluff. Just real ingredients for people who care about what goes in.",
-            "button_label": "Start Shopping",
-            "button_link": "shopify://collections",
             "use_dark_bg": false
           }
         }
