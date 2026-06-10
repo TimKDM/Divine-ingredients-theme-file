@@ -14,22 +14,13 @@
     "divine_footer": {
       "type": "divine-footer",
       "blocks": {
-        "menu_teas": {
+        "menu_column_3pixTp": {
           "type": "menu_column",
           "settings": {
-            "heading": "Shop Teas",
-            "menu": "main-menu",
+            "heading": "Shop",
+            "menu": "shop-by-lifestyle",
             "heading_2": "",
             "menu_2": ""
-          }
-        },
-        "menu_powders": {
-          "type": "menu_column",
-          "settings": {
-            "heading": "Shop Powders",
-            "menu": "footer-company",
-            "heading_2": "Company",
-            "menu_2": "footer-company"
           }
         },
         "menu_help": {
@@ -43,8 +34,7 @@
         }
       },
       "block_order": [
-        "menu_teas",
-        "menu_powders",
+        "menu_column_3pixTp",
         "menu_help"
       ],
       "settings": {
