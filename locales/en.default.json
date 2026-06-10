@@ -494,7 +494,7 @@
       "shop_link": "Continue shopping",
       "remaining_html": "Remaining {{ balance }}",
       "add_to_droplet_wallet": "Add to droplet Wallet",
-      "qr_image_alt": "QR code — scan to redeem gift card",
+      "qr_image_alt": "QR code. Scan to redeem gift card",
       "copy_code": "Copy code",
       "expired": "Expired",
       "copy_code_success": "Code copied successfully",
