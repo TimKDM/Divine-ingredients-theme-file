@@ -273,16 +273,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 .d-rc-img{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  filter:brightness(.62) saturate(.88);
+  filter:brightness(.48) saturate(.82);
   transition:transform .5s ease,filter .4s;
 }
-.d-rc:hover .d-rc-img{transform:scale(1.06);filter:brightness(.76) saturate(.95)}
+.d-rc:hover .d-rc-img{transform:scale(1.06);filter:brightness(.55) saturate(.9)}
 .d-rc-grad{
   position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,14,8,.97) 0%,rgba(10,14,8,.28) 55%,transparent 100%);
+  background:linear-gradient(to top,rgba(10,14,8,.95) 0%,rgba(10,14,8,.72) 40%,rgba(10,14,8,.4) 100%);
   transition:opacity .3s;
 }
-.d-rc:hover .d-rc-grad{opacity:.72}
+.d-rc:hover .d-rc-grad{opacity:1}
 .d-rc-content{position:absolute;bottom:0;left:0;right:0;padding:26px 22px}
 .d-rc-tag{
   font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
