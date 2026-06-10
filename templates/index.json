@@ -48,7 +48,8 @@
         "buttons"
       ],
       "settings": {
-        "image": "shopify://shop_images/iStock-1298434383.jpg",
+        "image": "shopify://shop_images/heroposter.jpg",
+        "video": "shopify://files/videos/divineherovideo.mp4",
         "video_url": "",
         "autoplay": true,
         "loop": true,
