@@ -1,4 +1,4 @@
-/* Divine Theme v4 — small interactions */
+/* Divine Theme v4 - small interactions */
 (function () {
   'use strict';
 

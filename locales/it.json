@@ -494,7 +494,7 @@
       "shop_link": "Continua lo shopping",
       "remaining_html": "Saldo rimanente: {{ balance }}",
       "add_to_droplet_wallet": "Aggiungi a Droplet Wallet",
-      "qr_image_alt": "Codice QR — scansiona per riscattare la carta regalo",
+      "qr_image_alt": "Codice QR. Scansiona per riscattare la carta regalo",
       "copy_code": "Copia il codice",
       "expired": "Scaduta",
       "copy_code_success": "Codice copiato con successo",

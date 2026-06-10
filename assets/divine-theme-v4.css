@@ -1,5 +1,5 @@
 /* ============================================
-   DIVINE INGREDIENTS — THEME V4
+   DIVINE INGREDIENTS - THEME V4
    Forest / Beige / Cormorant aesthetic
    Matches Homepage + About-Us mockups
    ============================================ */
@@ -38,7 +38,7 @@ html{scroll-behavior:smooth}
    override this where needed via higher specificity. */
 h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 
-/* Reset for divine sections — we control margins inside our sections */
+/* Reset for divine sections - we control margins inside our sections */
 .d-page-wrap{overflow-x:hidden}
 
 /* ----- Shared section utility classes ----- */
@@ -905,11 +905,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 
 /* ============================================
-   ACCESSIBILITY — WCAG 2.1 AA
+   ACCESSIBILITY - WCAG 2.1 AA
    ============================================ */
 
 /* Visible keyboard focus on every interactive element
-   (browser default outline gets reset by some themes — re-instate explicitly). */
+   (browser default outline gets reset by some themes - re-instate explicitly). */
 .d-announce a:focus-visible,
 .d-nav-logo:focus-visible,
 .d-nav-links a:focus-visible,
@@ -934,7 +934,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   border-radius: 2px;
 }
 
-/* Hero buttons sit on dark imagery — use a light focus ring there */
+/* Hero buttons sit on dark imagery - use a light focus ring there */
 .d-hero-btns .d-btn-hp:focus-visible,
 .d-hero-btns .d-btn-hg:focus-visible,
 .d-cta-band a:focus-visible,
@@ -947,13 +947,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   outline-color: var(--d-beige-lt);
 }
 
-/* Touch-target padding — make small icon-style links reach 44×44 */
+/* Touch-target padding - make small icon-style links reach 44×44 */
 .d-fsoc,
 .d-nav-icon{
   min-width:44px;min-height:44px;
 }
 
-/* Cart-count bubble — accessible name comes from the parent link's aria-label.
+/* Cart-count bubble - accessible name comes from the parent link's aria-label.
    Stop the bubble from being inline-styled in the Liquid (kept here so it
    doesn't overflow / break alignment). */
 .d-nav-cart-count{
@@ -983,7 +983,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 
 /* Underline link text in dense copy areas (helps users who can't
-   rely on color alone to identify links — WCAG 1.4.1) */
+   rely on color alone to identify links - WCAG 1.4.1) */
 .d-story-body-text a,
 .d-cta-p a,
 .d-email-desc a,
@@ -991,12 +991,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   text-decoration:underline;text-underline-offset:2px;
 }
 
-/* Form input — proper field affordance */
+/* Form input - proper field affordance */
 .d-email-inp{min-height:44px}
 .d-email-btn{min-height:44px;cursor:pointer}
 
 /* ============================================
-   STANDARD FLUX HEADER — Divine restyle overlay
+   STANDARD FLUX HEADER - Divine restyle overlay
    We use the stock header.liquid section so we keep all of its
    features (cart drawer trigger, predictive search modal, mobile
    drawer, mega menu, country selector). These overrides repaint
@@ -1021,7 +1021,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   align-items: center;
 }
 
-/* Logo — Cormorant serif, forest green */
+/* Logo - Cormorant serif, forest green */
 .header__heading,
 .header__heading-link,
 .header__heading-link .h2,
@@ -1069,7 +1069,7 @@ nav.header__inline-menu a{
   color: var(--d-mid) !important;
 }
 
-/* Header icons (cart, search, account, hamburger) — make round 44x44 */
+/* Header icons (cart, search, account, hamburger) - make round 44x44 */
 .header__icons,
 .header__icons .header__icon-wrapper,
 .right-block-buttons{
@@ -1133,7 +1133,7 @@ summary.header__icon:hover{
   right: 4px;
 }
 
-/* Country / locale selector — subtle */
+/* Country / locale selector - subtle */
 .header-localization-form,
 .disclosure__button.localization-form__select{
   font-family: var(--d-font-sans) !important;
@@ -1154,7 +1154,7 @@ summary.header__icon:focus-visible,
   border-radius: 2px;
 }
 
-/* Mega menu dropdown — Divine palette */
+/* Mega menu dropdown - Divine palette */
 .mega-menu__content,
 .header__submenu{
   background: var(--d-white) !important;
@@ -1196,7 +1196,7 @@ summary.header__icon:focus-visible,
 }
 
 /* ============================================
-   DIVINE POPUP — email capture modal
+   DIVINE POPUP - email capture modal
    ============================================ */
 
 .d-popup{
@@ -1317,7 +1317,7 @@ summary.header__icon:focus-visible,
 }
 
 /* ============================================
-   PRODUCT PAGE (PDP) — hero + details + related
+   PRODUCT PAGE (PDP) - hero + details + related
    ============================================ */
 
 .d-pdp-breadcrumb{
@@ -1334,7 +1334,7 @@ summary.header__icon:focus-visible,
   background: var(--d-white);
 }
 
-/* LEFT — image gallery */
+/* LEFT - image gallery */
 .d-product-images{
   padding: 48px 48px 48px 0;
   display: flex;
@@ -1397,7 +1397,7 @@ summary.header__icon:focus-visible,
   z-index: 2;
 }
 
-/* RIGHT — product info */
+/* RIGHT - product info */
 .d-product-info{
   padding: 48px 0 48px 48px;
   border-left: 1px solid var(--d-border);
@@ -1939,7 +1939,7 @@ summary.header__icon:focus-visible,
 }
 
 /* ============================================
-   COLLECTION PAGE — filters sidebar + grid
+   COLLECTION PAGE - filters sidebar + grid
    ============================================ */
 
 .d-coll-breadcrumb{ padding-left: 48px; padding-right: 48px }

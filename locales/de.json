@@ -494,7 +494,7 @@
       "shop_link": "Weiter einkaufen",
       "remaining_html": "Verbleibendes Guthaben: {{ balance }}",
       "add_to_droplet_wallet": "Zu Droplet Wallet hinzufügen",
-      "qr_image_alt": "QR-Code — scannen Sie, um die Geschenkkarte einzulösen",
+      "qr_image_alt": "QR-Code. Scannen Sie, um die Geschenkkarte einzulösen",
       "copy_code": "Code kopieren",
       "expired": "Abgelaufen",
       "copy_code_success": "Code erfolgreich kopiert",

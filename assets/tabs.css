@@ -35,7 +35,7 @@
   border-bottom-right-radius: 0;
 }
 
-/* Tab content — Divine body font */
+/* Tab content - Divine body font */
 .tabs .tab-content-wrapper {
   font-family: var(--font-body-family), sans-serif;
   font-size: 16px;
@@ -59,7 +59,7 @@
   display: none;
 }
 
-/* Tab links — Divine heading font */
+/* Tab links - Divine heading font */
 .tabs .tab-item a {
   font-family: 'Josefin Sans', var(--font-heading-family), sans-serif;
   font-size: 13px;
@@ -93,7 +93,7 @@
   border-right: none;
 }
 
-/* Active/hover — Divine lavender underline */
+/* Active/hover - Divine lavender underline */
 .tabs .tab-item a:hover,
 .tabs .tab-item a.active {
   color: #1d1917;
@@ -159,7 +159,7 @@
   align-items: center;
 }
 
-/* Product page tab border — Divine warm parchment */
+/* Product page tab border - Divine warm parchment */
 .product-section .tabs-style-2.remove-border-tabs-false .tab-nav {
   border-bottom: 2px solid var(--color-border-hex, #d2c4d7);
 }
@@ -168,7 +168,7 @@
   justify-content: flex-start;
 }
 
-/* Product page active — Divine lavender accent */
+/* Product page active - Divine lavender accent */
 .product-section .tabs-style-2 .tab-item a:hover,
 .product-section .tabs-style-2 .tab-item a.active {
   box-shadow: inset 0 -3px #9b76a7;

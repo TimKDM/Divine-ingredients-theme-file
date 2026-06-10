@@ -494,7 +494,7 @@
       "shop_link": "Continuar comprando",
       "remaining_html": "Saldo restante {{ balance }}",
       "add_to_droplet_wallet": "Agregar a la billetera Droplet",
-      "qr_image_alt": "Código QR — escanea para canjear la tarjeta de regalo",
+      "qr_image_alt": "Código QR. Escanea para canjear la tarjeta de regalo",
       "copy_code": "Copiar código",
       "expired": "Vencida",
       "copy_code_success": "Código copiado exitosamente",
