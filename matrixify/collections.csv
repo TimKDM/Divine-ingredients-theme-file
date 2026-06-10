@@ -9,9 +9,8 @@ black-tea,MERGE,Black Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Black Tea,Bl
 herbal-tea,MERGE,Herbal Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Herbal Tea,Herbal Tea,
 chai,MERGE,Chai,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Chai,Chai,
 matcha,MERGE,Matcha,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Matcha,Matcha,
-hemp-tea,MERGE,Hemp Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Hemp Tea,Hemp Tea,
 iced-tea,MERGE,Iced Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Iced Tea,Iced Tea,
-oolong-tea,MERGE,Oolong Tea,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Oolong Tea,Oolong Tea,
+boba-boba,MERGE,Boba Boba,,best-selling,,TRUE,FALSE,TAG,EQUALS,Type_Boba Boba,Boba Boba,
 all-teas,MERGE,All Teas,Every tea in the Divine catalog.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Tea,All Teas,Every tea in the Divine catalog.
 all-powders,MERGE,All Powders,Superfood powders.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Powder,All Powders,Superfood powders.
 spices-botanicals,MERGE,Spices & Botanicals,Single-ingredient botanicals and culinary spices.,best-selling,,TRUE,FALSE,TAG,EQUALS,Category_Spices_Botanicals,Spices & Botanicals,Single-ingredient botanicals and culinary spices.
