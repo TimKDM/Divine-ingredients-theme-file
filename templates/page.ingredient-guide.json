@@ -34,7 +34,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Everything you need to know about what goes into our products — where it comes from, how it's sourced, and why it matters.</p>",
+            "text": "<p>Everything you need to know about what goes into our products. Where it comes from, how it's sourced, and why it matters.</p>",
             "text_style": "body"
           }
         }
@@ -72,7 +72,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At Divine Ingredients, we believe you deserve to know exactly what you're putting into your body. Every product we carry is USDA certified organic, independently lab-tested, and free from synthetic additives, fillers, or artificial preservatives. This guide is your resource for understanding our ingredients — their origins, benefits, and the quality standards we uphold.</p>"
+            "text": "<p>At Divine Ingredients, we believe you deserve to know exactly what you're putting into your body. Every product we carry is USDA certified organic, independently lab-tested, and free from synthetic additives, fillers, or artificial preservatives. This guide is your resource for understanding our ingredients. Their origins, benefits, and the quality standards we uphold.</p>"
           }
         }
       },
@@ -99,7 +99,7 @@
             "image": "",
             "hide_image": false,
             "title": "100% Organic",
-            "text": "<p>Every ingredient is USDA certified organic and CCOF certified. No pesticides, no GMOs, no synthetic chemicals — ever.</p>",
+            "text": "<p>Every ingredient is USDA certified organic and CCOF certified. No pesticides, no GMOs, no synthetic chemicals. Ever.</p>",
             "link_label": "",
             "link": ""
           }
@@ -171,7 +171,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Our tea collection spans black, green, oolong, herbal, and wellness varieties — all sourced as whole loose leaf for maximum flavor and aroma. Each tea is carefully selected from organic estates and blended without artificial flavoring. Whether you prefer a bold Assam, a delicate Gyokuro, or a soothing chamomile, our teas are crafted for the ritual of a perfect cup.</p>",
+            "text": "<p>Our tea collection spans black, green, oolong, herbal, and wellness varieties. All sourced as whole loose leaf for maximum flavor and aroma. Each tea is carefully selected from organic estates and blended without artificial flavoring. Whether you prefer a bold Assam, a delicate Gyokuro, or a soothing chamomile, our teas are crafted for the ritual of a perfect cup.</p>",
             "text_style": "body"
           }
         },
@@ -216,7 +216,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>From ceremonial-grade matcha to vibrant blue spirulina and adaptogenic mushroom powders, our superfood range is designed to boost your smoothies, lattes, and recipes. Every powder is single-ingredient or transparently blended — no fillers, no maltodextrin, no hidden additives. Just pure, nutrient-dense goodness.</p>",
+            "text": "<p>From ceremonial-grade matcha to vibrant blue spirulina and adaptogenic mushroom powders, our superfood range is designed to boost your smoothies, lattes, and recipes. Every powder is single-ingredient or transparently blended. No fillers, no maltodextrin, no hidden additives. Just pure, nutrient-dense goodness.</p>",
             "text_style": "body"
           }
         },
@@ -306,7 +306,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skip the refined sugar. Our organic sweeteners — including coconut sugar, maple sugar, date powder, and lucuma — offer natural sweetness with added minerals and a lower glycemic impact. Perfect for baking, beverages, and everyday cooking.</p>",
+            "text": "<p>Skip the refined sugar. Our organic sweeteners. Including coconut sugar, maple sugar, date powder, and lucuma. Offer natural sweetness with added minerals and a lower glycemic impact. Perfect for baking, beverages, and everyday cooking.</p>",
             "text_style": "body"
           }
         },
@@ -353,7 +353,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We're always happy to share more about our sourcing, testing, and quality standards. Reach out anytime — transparency is at the heart of everything we do.</p>",
+            "text": "<p>We're always happy to share more about our sourcing, testing, and quality standards. Reach out anytime. Transparency is at the heart of everything we do.</p>",
             "text_style": "body"
           }
         },

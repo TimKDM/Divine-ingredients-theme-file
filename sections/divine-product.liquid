@@ -1,5 +1,5 @@
 {%- comment -%}
-  Divine Product — main product page hero. Image gallery left, info right.
+  Divine Product. Main product page hero. Image gallery left, info right.
   Matches the tea + powder mockups. Uses Flux's <product-form> wrapper
   so cart-drawer / cart-notification integrations keep working.
 {%- endcomment -%}
@@ -27,7 +27,7 @@
 
   <div class="d-product-hero">
 
-    {%- comment -%} LEFT — image gallery {%- endcomment -%}
+    {%- comment -%} LEFT. Image gallery {%- endcomment -%}
     <div class="d-product-images">
       {%- if product.images.size > 1 -%}
         <div class="d-thumb-list" role="tablist" aria-label="Product images">
@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    {%- comment -%} RIGHT — product info {%- endcomment -%}
+    {%- comment -%} RIGHT. Product info {%- endcomment -%}
     <div class="d-product-info">
 
       {%- if product.type != blank or product.vendor != blank -%}
@@ -219,7 +219,7 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} Meta fields table — supports custom fields via product metafields or manually-defined blocks {%- endcomment -%}
+      {%- comment -%} Meta fields table. Supports custom fields via product metafields or manually-defined blocks {%- endcomment -%}
       {%- assign meta_fields_html = '' -%}
       {%- for block in section.blocks -%}
         {%- if block.type == 'meta' -%}
@@ -245,7 +245,7 @@
     var root = document.getElementById('DPdp-{{ section.id }}');
     if (!root) return;
 
-    /* Image gallery — thumbnail click switches main image */
+    /* Image gallery. Thumbnail click switches main image */
     var thumbs = root.querySelectorAll('.d-thumb');
     var mains = root.querySelectorAll('.d-main-img');
     thumbs.forEach(function(t){
@@ -263,7 +263,7 @@
       });
     });
 
-    /* Variant selection — when a radio changes, find the matching variant and
+    /* Variant selection. When a radio changes, find the matching variant and
        update the form's hidden id + the displayed price. Mirrors what Shopify's
        <variant-selects> custom element does but with our simpler markup. */
     var productJson = {{ product | json }};

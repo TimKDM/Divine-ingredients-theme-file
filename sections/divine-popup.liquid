@@ -1,5 +1,5 @@
 {%- comment -%}
-  Divine Popup — email capture modal that matches the brand aesthetic.
+  Divine Popup. Email capture modal that matches the brand aesthetic.
   Drops in as a footer-group section (renders once per page).
   Trigger logic:
     - waits `delay` seconds
@@ -64,7 +64,7 @@
     {%- endform -%}
 
     <div class="d-popup-success" role="status" aria-live="polite">
-      {{ section.settings.success_message | default: "Thanks — your 20% off code is on its way. Welcome to <em>Divine</em>." }}
+      {{ section.settings.success_message | default: "Thanks. Your 20% off code is on its way. Welcome to <em>Divine</em>." }}
     </div>
   </div>
 </div>
@@ -75,7 +75,7 @@
     if (!root) return;
 
     /* If the form just submitted successfully, Shopify reloads the page and
-       sets form.posted_successfully — we surface that with .is-success. */
+       sets form.posted_successfully. We surface that with .is-success. */
     {%- if form.posted_successfully? -%}
       root.classList.add('is-open', 'is-success');
       root.setAttribute('aria-hidden','false');
@@ -163,7 +163,7 @@
       "type": "textarea",
       "id": "text",
       "label": "Body text",
-      "default": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send your 20% off code — plus first looks at new arrivals."
+      "default": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send your 20% off code. Plus first looks at new arrivals."
     },
     {
       "type": "text",
@@ -187,7 +187,7 @@
       "type": "html",
       "id": "success_message",
       "label": "Success message",
-      "default": "Thanks — your 20% off code is on its way. Welcome to <em>Divine</em>."
+      "default": "Thanks. Your 20% off code is on its way. Welcome to <em>Divine</em>."
     },
     {
       "type": "range",

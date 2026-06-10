@@ -165,7 +165,7 @@
             "icon": "headset",
             "no_padding": true,
             "image": "",
-            "content": "<p>Our ingredients are USDA certified organic, sourced directly from trusted farms worldwide, and rigorously lab-tested for purity. Every product is free from synthetic additives, artificial colors, and preservatives — delivering clean, functional ingredients you can trust for your most important creations.</p>",
+            "content": "<p>Our ingredients are USDA certified organic, sourced directly from trusted farms worldwide, and rigorously lab-tested for purity. Every product is free from synthetic additives, artificial colors, and preservatives. Delivering clean, functional ingredients you can trust for your most important creations.</p>",
             "page": "",
             "custom_liquid": "",
             "open_first_collapsible_row": false,
@@ -270,7 +270,7 @@
             "image": "",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Every Divine Ingredients product is USDA certified organic, sourced directly from trusted farms, and rigorously lab-tested for purity. No synthetic additives, no fillers — just clean, authentic ingredients.</p>",
+            "row_content": "<p>Every Divine Ingredients product is USDA certified organic, sourced directly from trusted farms, and rigorously lab-tested for purity. No synthetic additives, no fillers. Just clean, authentic ingredients.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false
@@ -328,7 +328,7 @@
           "settings": {
             "image": "",
             "heading": "Matcha Masterclass",
-            "caption": "Learn the art of preparing ceremonial matcha — from traditional whisking to café-style latte art.",
+            "caption": "Learn the art of preparing ceremonial matcha. From traditional whisking to café-style latte art.",
             "button_label": "Book Now",
             "link": "",
             "show_link_button": false
@@ -339,7 +339,7 @@
           "settings": {
             "image": "",
             "heading": "Complete Nutrition",
-            "caption": "Discover our premium organic ingredients — from ceremonial matcha to artisan spices, sourced for your best creations.",
+            "caption": "Discover our premium organic ingredients. From ceremonial matcha to artisan spices, sourced for your best creations.",
             "button_label": "Explore Meals",
             "link": "",
             "show_link_button": false
@@ -454,7 +454,7 @@
           "settings": {
             "heading": "Are there any additives in your products?",
             "icon": "check_mark",
-            "row_content": "<p>Absolutely not. We maintain a strict zero additives policy. Our products contain no synthetic fillers, artificial colors, flavors, or preservatives — just pure, clean ingredients as nature intended.</p>",
+            "row_content": "<p>Absolutely not. We maintain a strict zero additives policy. Our products contain no synthetic fillers, artificial colors, flavors, or preservatives. Just pure, clean ingredients as nature intended.</p>",
             "page": ""
           }
         }
@@ -569,7 +569,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>The ceremonial matcha from Divine Ingredients is exceptional. The flavor is smooth, vibrant, and authentic — it's become my daily ritual. You can truly taste the quality and care in every cup.</p>",
+            "text": "<p>The ceremonial matcha from Divine Ingredients is exceptional. The flavor is smooth, vibrant, and authentic. It's become my daily ritual. You can truly taste the quality and care in every cup.</p>",
             "title": "Robin Doe",
             "image": "",
             "hide_image": false,
@@ -581,7 +581,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "4-star",
-            "text": "<p>I've been using Divine Ingredients spices in my restaurant for months now. The turmeric and cinnamon are incredibly aromatic and potent — our customers notice the difference. Wholesale ordering is seamless too.</p>",
+            "text": "<p>I've been using Divine Ingredients spices in my restaurant for months now. The turmeric and cinnamon are incredibly aromatic and potent. Our customers notice the difference. Wholesale ordering is seamless too.</p>",
             "title": "John Smith",
             "image": "",
             "hide_image": false,
@@ -593,7 +593,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "3-star",
-            "text": "<p>The superfood powders from Divine Ingredients have transformed my morning smoothies. The acai and spirulina are so fresh and pure — you can tell they're lab-tested and genuinely organic. Highly recommend.</p>",
+            "text": "<p>The superfood powders from Divine Ingredients have transformed my morning smoothies. The acai and spirulina are so fresh and pure. You can tell they're lab-tested and genuinely organic. Highly recommend.</p>",
             "title": "Liz Lesley",
             "image": "",
             "hide_image": false,

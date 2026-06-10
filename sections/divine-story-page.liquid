@@ -1,5 +1,5 @@
 {%- comment -%}
-  Divine Story Page — About-Us layout
+  Divine Story Page. About-Us layout
   Mirrors the About-Us mockup: breadcrumb, page hero with founder photo,
   pull quote, story body w/ sidebar cards, 3-col values, 4-col certs grid, CTA band.
 
@@ -77,7 +77,7 @@
           <div>
             <div class="d-pq-text">{{ block.settings.quote | replace: '<p>', '' | replace: '</p>', '' }}</div>
             {%- if block.settings.attribution != blank -%}
-              <div class="d-pq-attr">— {{ block.settings.attribution }}</div>
+              <div class="d-pq-attr"> {{ block.settings.attribution }}</div>
             {%- endif -%}
           </div>
         </section>
@@ -204,7 +204,7 @@
         </section>
 
       {%- when 'image_text' -%}
-        {%- comment -%} Legacy block — render as a story section split {%- endcomment -%}
+        {%- comment -%} Legacy block. Render as a story section split {%- endcomment -%}
         <section class="d-story{% if block.settings.layout == 'image_left' %} d-story-rev{% endif %}" style="{% if block.settings.use_alt_bg %}background:var(--d-beige-lt);{% endif %}">
           <div class="d-story-left">
             {%- if block.settings.caption != blank -%}
@@ -332,7 +332,7 @@
       "name": "Pull quote",
       "limit": 2,
       "settings": [
-        { "type": "html", "id": "quote", "label": "Quote", "default": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>" },
+        { "type": "html", "id": "quote", "label": "Quote", "default": "<p>\"Divine Ingredients began, as many good things do, with a simple habit. Turning the label over and asking, 'but what's really in this?'\"</p>" },
         { "type": "text", "id": "attribution", "label": "Attribution", "default": "Preet Bhullar, Founder" }
       ]
     },
@@ -341,12 +341,12 @@
       "name": "Story body",
       "settings": [
         { "type": "html", "id": "text", "label": "Body text",
-          "default": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for — and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
+          "default": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for. And more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>"
         },
         { "type": "header", "content": "Sidebar card 1" },
         { "type": "text", "id": "card_1_label", "label": "Label", "default": "Background" },
         { "type": "html", "id": "card_1_value", "label": "Value", "default": "<p><em>Microbiology</em></p>" },
-        { "type": "text", "id": "card_1_desc", "label": "Description", "default": "Quality control expertise. She knows exactly what belongs — and what doesn't." },
+        { "type": "text", "id": "card_1_desc", "label": "Description", "default": "Quality control expertise. She knows exactly what belongs. And what doesn't." },
         { "type": "header", "content": "Sidebar card 2" },
         { "type": "text", "id": "card_2_label", "label": "Label", "default": "Founded on" },
         { "type": "html", "id": "card_2_value", "label": "Value", "default": "<p><em>Honesty</em></p>" },
@@ -366,13 +366,13 @@
         { "type": "html", "id": "heading", "label": "Heading", "default": "<p>Our <em>values</em></p>" },
         { "type": "header", "content": "Value 1" },
         { "type": "html", "id": "value_1_title", "label": "Title", "default": "<p><em>Honesty</em> over marketing</p>" },
-        { "type": "html", "id": "value_1_body", "label": "Body", "default": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less.</p>" },
+        { "type": "html", "id": "value_1_body", "label": "Body", "default": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag. Nothing more, nothing less.</p>" },
         { "type": "header", "content": "Value 2" },
         { "type": "html", "id": "value_2_title", "label": "Title", "default": "<p>Rigour without <em>compromise</em></p>" },
-        { "type": "html", "id": "value_2_body", "label": "Body", "default": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO — the minimum we accept.</p>" },
+        { "type": "html", "id": "value_2_body", "label": "Body", "default": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO. The minimum we accept.</p>" },
         { "type": "header", "content": "Value 3" },
         { "type": "html", "id": "value_3_title", "label": "Title", "default": "<p>Sourcing with <em>intention</em></p>" },
-        { "type": "html", "id": "value_3_body", "label": "Body", "default": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. No brokers. No mystery. Full traceability, every time.</p>" }
+        { "type": "html", "id": "value_3_body", "label": "Body", "default": "<p>We go directly to the farms. Japan, India, Sri Lanka, and beyond. No brokers. No mystery. Full traceability, every time.</p>" }
       ]
     },
     {
@@ -387,7 +387,7 @@
         { "type": "html", "id": "cert_1_body", "label": "Body", "default": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>" },
         { "type": "header", "content": "Cert 2" },
         { "type": "text", "id": "cert_2_title", "label": "Title", "default": "CCOF Certified" },
-        { "type": "html", "id": "cert_2_body", "label": "Body", "default": "<p>California Certified Organic Farmers — one of the most rigorous certifications in North America.</p>" },
+        { "type": "html", "id": "cert_2_body", "label": "Body", "default": "<p>California Certified Organic Farmers. One of the most rigorous certifications in North America.</p>" },
         { "type": "header", "content": "Cert 3" },
         { "type": "text", "id": "cert_3_title", "label": "Title", "default": "Lab Tested Every Batch" },
         { "type": "html", "id": "cert_3_body", "label": "Body", "default": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>" },
@@ -403,10 +403,10 @@
       "settings": [
         { "type": "text", "id": "kicker", "label": "Kicker", "default": "Ready to explore?" },
         { "type": "html", "id": "heading", "label": "Heading", "default": "<p>Taste the<br><em>difference honesty makes.</em></p>" },
-        { "type": "html", "id": "text", "label": "Body", "default": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard.</p>" },
+        { "type": "html", "id": "text", "label": "Body", "default": "<p>36 teas, 14 superfood powders, spices, and botanicals. All sourced with the same intention and tested to the same standard.</p>" },
         { "type": "text", "id": "button_label_1", "label": "Primary button label", "default": "Shop All Products" },
         { "type": "url", "id": "button_link_1", "label": "Primary button link" },
-        { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Try the Discovery Set — $38" },
+        { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Try the Discovery Set. $38" },
         { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
         { "type": "text", "id": "button_label_3", "label": "Tertiary button label", "default": "Wholesale enquiries" },
         { "type": "url", "id": "button_link_3", "label": "Tertiary button link" },
