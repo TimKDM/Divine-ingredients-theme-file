@@ -1,6 +1,6 @@
 Handle,Command,Title,Tags,Tags Command,Smart Collections,Status,Published
 ceremonial-matcha,MERGE,Organic Ceremonial Matcha Green Tea Powder,"Category_Tea, Function_Focus and Energy, Type_Matcha",MERGE,All Teas; Focus and Energy; Matcha,active,TRUE
-chamomile-care-herbal-tea,MERGE,Organic Chamomile Herbal Tea,"Category_Tea, Type_Herbal Tea",MERGE,All Teas; Herbal Tea,active,TRUE
+chamomile-care-herbal-tea,MERGE,Organic Chamomile Herbal Tea,"Category_Tea, Function_Gut Reset, Function_Wind down, Type_Herbal Tea",MERGE,All Teas; Gut Reset; Herbal Tea; Wind down,active,TRUE
 chinese-jasmine-green-tea,MERGE,Chinese Jasmine Green Tea,"Category_Tea, Type_Green Tea",MERGE,All Teas; Green Tea,active,TRUE
 chocolate-mint-black-tea,MERGE,Chocolate Mint Black Tea,"Category_Tea, Type_Black Tea",MERGE,All Teas; Black Tea,active,TRUE
 classic-english-breakfast-black-tea,MERGE,Classic English Breakfast Black Tea,"Category_Tea, Type_Black Tea",MERGE,All Teas; Black Tea,active,TRUE
