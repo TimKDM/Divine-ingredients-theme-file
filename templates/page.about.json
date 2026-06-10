@@ -26,17 +26,17 @@
         "pull_quote": {
           "type": "pull_quote",
           "settings": {
-            "quote": "<p>\"Divine Ingredients began, as many good things do, with a simple habit — turning the label over and asking, 'but what's really in this?'\"</p>",
+            "quote": "<p>\"Divine Ingredients began, as many good things do, with a simple habit. Turning the label over and asking, 'but what's really in this?'\"</p>",
             "attribution": "Preet Bhullar, Founder"
           }
         },
         "story_body": {
           "type": "story_body",
           "settings": {
-            "text": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for — and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. Every ingredient at Divine is sourced with intention, tested with rigour, and chosen because it earns its place — not because it sounds good on a label. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
+            "text": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for, and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. Every ingredient at Divine is sourced with intention, tested with rigour, and chosen because it earns its place, not because it sounds good on a label. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
             "card_1_label": "Background",
             "card_1_value": "<p><em>Microbiology</em></p>",
-            "card_1_desc": "Quality control expertise. She knows exactly what belongs — and what doesn't.",
+            "card_1_desc": "Quality control expertise. She knows exactly what belongs, and what doesn't.",
             "card_2_label": "Founded on",
             "card_2_value": "<p><em>Honesty</em></p>",
             "card_2_desc": "Not marketing. Not buzzwords. What's on the label is exactly what's inside."
@@ -48,11 +48,11 @@
             "kicker": "What we stand for",
             "heading": "<p>Our <em>values</em></p>",
             "value_1_title": "<p><em>Honesty</em> over marketing</p>",
-            "value_1_body": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag — nothing more, nothing less. That's not a promise. It's a standard we built the entire company around.</p>",
+            "value_1_body": "<p>We don't dress up mediocre ingredients with clever language. What's on the label is exactly what's in the bag. Nothing more, nothing less. That's not a promise. It's a standard we built the entire company around.</p>",
             "value_2_title": "<p>Rigour without <em>compromise</em></p>",
-            "value_2_body": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO. These aren't badges we collect — they're the minimum we accept before anything leaves the warehouse.</p>",
+            "value_2_body": "<p>Every batch is independently tested by a third-party lab before it ships. USDA Organic, CCOF Certified, Non-GMO. These aren't badges we collect. They're the minimum we accept before anything leaves the warehouse.</p>",
             "value_3_title": "<p>Sourcing with <em>intention</em></p>",
-            "value_3_body": "<p>We go directly to the farms — Japan, India, Sri Lanka, and beyond. We build real relationships with the people who grow what you consume. No brokers. No mystery. Full traceability, every time.</p>"
+            "value_3_body": "<p>We go directly to the farms. Japan, India, Sri Lanka, and beyond. We build real relationships with the people who grow what you consume. No brokers. No mystery. Full traceability, every time.</p>"
           }
         },
         "certs_grid": {
@@ -63,7 +63,7 @@
             "cert_1_title": "USDA Organic",
             "cert_1_body": "<p>Certified to the highest US organic standards. Audited, verified, and renewed annually.</p>",
             "cert_2_title": "CCOF Certified",
-            "cert_2_body": "<p>California Certified Organic Farmers — one of the most rigorous organic certifications in North America.</p>",
+            "cert_2_body": "<p>California Certified Organic Farmers. One of the most rigorous organic certifications in North America.</p>",
             "cert_3_title": "Lab Tested Every Batch",
             "cert_3_body": "<p>Third-party independent testing for purity, potency, and safety. Certificate of Analysis available on request.</p>",
             "cert_4_title": "Non-GMO · Fair Trade · Rainforest Alliance",
@@ -75,10 +75,10 @@
           "settings": {
             "kicker": "Ready to explore?",
             "heading": "<p>Taste the<br><em>difference honesty makes.</em></p>",
-            "text": "<p>36 teas, 14 superfood powders, spices, and botanicals — all sourced with the same intention and tested to the same standard. Start exploring.</p>",
+            "text": "<p>36 teas, 14 superfood powders, spices, and botanicals. All sourced with the same intention and tested to the same standard. Start exploring.</p>",
             "button_label_1": "Shop All Products",
             "button_link_1": "shopify://collections",
-            "button_label_2": "Try the Discovery Set — $38",
+            "button_label_2": "Try the Discovery Set. $38",
             "button_link_2": "shopify://products/discovery-set",
             "button_label_3": "Wholesale enquiries",
             "button_link_3": "shopify://pages/wholesale"

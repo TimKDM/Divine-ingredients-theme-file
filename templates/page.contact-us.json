@@ -42,7 +42,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Questions about our sourcing, an order, a sample, or a wholesale partnership? Every email lands in a real inbox — no chatbots, no ticket queues. We reply personally, usually within 24 hours.</p>"
+            "text": "<p>Questions about our sourcing, an order, a sample, or a wholesale partnership? Every email lands in a real inbox. No chatbots, no ticket queues. We reply personally, usually within 24 hours.</p>"
           }
         }
       },
@@ -73,7 +73,7 @@
             "hide_image": true,
             "disable_autoplay": false,
             "title": "Email Us",
-            "text": "<p>orders@divineingredients.com</p><p>Sent to a real person — typically a reply within 24 hours.</p>",
+            "text": "<p>orders@divineingredients.com</p><p>Sent to a real person. Typically a reply within 24 hours.</p>",
             "link_label": "Send an email",
             "link": "mailto:orders@divineingredients.com",
             "open_new_tab_1": false
@@ -306,7 +306,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We partner with cafés, retailers, and private-label brands who want premium organic ingredients at scale — with the same sourcing transparency and lab documentation our retail customers get. Let's build something together.</p>"
+            "text": "<p>We partner with cafés, retailers, and private-label brands who want premium organic ingredients at scale, with the same sourcing transparency and lab documentation our retail customers get. Let's build something together.</p>"
           }
         },
         "button": {

@@ -54,7 +54,7 @@
           "type": "meta",
           "settings": {
             "label": "Taste",
-            "value": "Mild, slightly earthy, neutral — blends without affecting flavour"
+            "value": "Mild, slightly earthy, neutral. Blends without affecting flavour"
           }
         },
         "meta_4": {
@@ -92,11 +92,11 @@
           "settings": {
             "heading": "Add it to your daily routine",
             "use_1_title": "Morning coffee or matcha",
-            "use_1_desc": "Add ½ tsp to your morning cup. The neutral flavour blends completely — you won't taste it.",
+            "use_1_desc": "Add ½ tsp to your morning cup. The neutral flavour blends completely. You won't taste it.",
             "use_2_title": "Smoothies and shakes",
             "use_2_desc": "Blend with your favourite fruits, plant milk, and other superfood powders. Pairs well with Ashwagandha and Maca.",
             "use_3_title": "Soups and cooking",
-            "use_3_desc": "Stir into broths, sauces, or oatmeal. Heat-stable — retains its properties when cooked."
+            "use_3_desc": "Stir into broths, sauces, or oatmeal. Heat-stable. Retains its properties when cooked."
           }
         },
         "table": {
@@ -106,7 +106,7 @@
             "row_1_key": "Product type",
             "row_1_val": "Organic Mushroom Powder",
             "row_2_key": "Ingredients",
-            "row_2_val": "100% Organic — whole fruiting body",
+            "row_2_val": "100% Organic. Whole fruiting body",
             "row_3_key": "Fillers or carriers",
             "row_3_val": "None. Just the mushroom.",
             "row_4_key": "Certifications",

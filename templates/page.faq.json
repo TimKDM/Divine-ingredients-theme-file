@@ -38,7 +38,7 @@
             "hide_image": false,
             "disable_autoplay": false,
             "title": "Shipping & Returns",
-            "text": "<p>We ship fast, pack with care, and make returns painless. Your organic teas and powders arrive fresh — and if something's off, we make it right. Simple as that.</p>",
+            "text": "<p>We ship fast, pack with care, and make returns painless. Your organic teas and powders arrive fresh. And if something's off, we make it right. Simple as that.</p>",
             "link_label": "View FAQ",
             "link": "#shipping",
             "open_new_tab_1": false
@@ -101,7 +101,7 @@
           "settings": {
             "heading": "What payment methods do you accept?",
             "icon": "question_mark",
-            "row_content": "<p>Visa, Mastercard, American Express, PayPal, and other secure payment platforms. Everything is encrypted and protected — your info stays safe with us.</p>",
+            "row_content": "<p>Visa, Mastercard, American Express, PayPal, and other secure payment platforms. Everything is encrypted and protected. Your info stays safe with us.</p>",
             "page": ""
           }
         },
@@ -119,7 +119,7 @@
           "settings": {
             "heading": "Can I track my order?",
             "icon": "question_mark",
-            "row_content": "<p>Absolutely. Once your order ships, you'll get a tracking number by email. Follow along and know exactly when your ingredients are arriving. If anything looks off, reach out — we're on it.</p>",
+            "row_content": "<p>Absolutely. Once your order ships, you'll get a tracking number by email. Follow along and know exactly when your ingredients are arriving. If anything looks off, reach out. We're on it.</p>",
             "page": ""
           }
         },
@@ -137,7 +137,7 @@
           "settings": {
             "heading": "How do I get in touch with you?",
             "icon": "question_mark",
-            "row_content": "<p>Drop us a line through our contact form and we'll get back to you within 24 hours on business days. Product questions, order issues, partnership ideas — whatever it is, we want to hear it.</p>",
+            "row_content": "<p>Drop us a line through our contact form and we'll get back to you within 24 hours on business days. Product questions, order issues, partnership ideas. Whatever it is, we want to hear it.</p>",
             "page": ""
           }
         }
@@ -202,7 +202,7 @@
           "settings": {
             "heading": "How much is shipping?",
             "icon": "question_mark",
-            "row_content": "<p>It depends on your location and order size — you'll see all the options and costs at checkout. Pro tip: orders over $100 ship free.</p>",
+            "row_content": "<p>It depends on your location and order size. You'll see all the options and costs at checkout. Pro tip: orders over $100 ship free.</p>",
             "page": ""
           }
         },
@@ -220,7 +220,7 @@
           "settings": {
             "heading": "How do I start a return?",
             "icon": "question_mark",
-            "row_content": "<p>Just contact our support team with your order details and let us know what happened. We'll walk you through it and make the process as smooth as possible — that's what we're here for.</p>",
+            "row_content": "<p>Just contact our support team with your order details and let us know what happened. We'll walk you through it and make the process as smooth as possible. That's what we're here for.</p>",
             "page": ""
           }
         },
@@ -285,7 +285,7 @@
           "settings": {
             "heading": "Is everything actually organic?",
             "icon": "question_mark",
-            "row_content": "<p>Yes — and we can prove it. Every product is USDA certified organic and CCOF certified, sourced from farms that meet strict quality and sustainability standards. We don't use the word lightly.</p>",
+            "row_content": "<p>Yes. And we can prove it. Every product is USDA certified organic and CCOF certified, sourced from farms that meet strict quality and sustainability standards. We don't use the word lightly.</p>",
             "page": ""
           }
         },
@@ -294,7 +294,7 @@
           "settings": {
             "heading": "What makes your matcha different?",
             "icon": "question_mark",
-            "row_content": "<p>Our matcha is sourced from premium organic farms and stone-ground to preserve flavor, color, and nutrients. We carry different grades for different uses — ceremonial for sipping, culinary for cooking and lattes. It's tested, it's real, and it's seriously good.</p>",
+            "row_content": "<p>Our matcha is sourced from premium organic farms and stone-ground to preserve flavor, color, and nutrients. We carry different grades for different uses. Ceremonial for sipping, culinary for cooking and lattes. It's tested, it's real, and it's seriously good.</p>",
             "page": ""
           }
         },
@@ -303,7 +303,7 @@
           "settings": {
             "heading": "How should I store my teas and powders?",
             "icon": "question_mark",
-            "row_content": "<p>Cool, dry, away from sunlight and strong smells. Matcha does best in the fridge once opened. Always reseal tightly. Check individual product pages for specifics — we include storage tips on everything.</p>",
+            "row_content": "<p>Cool, dry, away from sunlight and strong smells. Matcha does best in the fridge once opened. Always reseal tightly. Check individual product pages for specifics. We include storage tips on everything.</p>",
             "page": ""
           }
         },
@@ -321,7 +321,7 @@
           "settings": {
             "heading": "How do I use superfood powders?",
             "icon": "question_mark",
-            "row_content": "<p>The possibilities are wide open — smoothies, lattes, baking, cooking. Each product page has usage ideas, and our blog is packed with recipes if you're looking for inspiration. We encourage you to experiment and make them your own.</p>",
+            "row_content": "<p>The possibilities are wide open. Smoothies, lattes, baking, cooking. Each product page has usage ideas, and our blog is packed with recipes if you're looking for inspiration. We encourage you to experiment and make them your own.</p>",
             "page": ""
           }
         }
@@ -400,7 +400,7 @@
         "heading_size": "extra-large",
         "heading_style": "default",
         "heading_tag": "h2",
-        "text": "<p><strong>Have a question we didn't cover? We'd love to hear from you — reach out and we'll get back to you personally.</strong></p>",
+        "text": "<p><strong>Have a question we didn't cover? We'd love to hear from you. Reach out and we'll get back to you personally.</strong></p>",
         "button_label_1": "",
         "button_link_1": "",
         "open_new_tab_1": false,

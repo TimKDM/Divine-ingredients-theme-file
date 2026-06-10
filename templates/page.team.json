@@ -51,7 +51,7 @@
             "image": "",
             "hide_image": false,
             "title": "Sourcing & Quality",
-            "text": "<p>Our sourcing team goes to the farms — literally. We build direct, long-term relationships with certified organic growers across Japan, India, Sri Lanka, and beyond. Every partnership is built on trust, fair trade, and a shared obsession with quality.</p><p><strong>Email:</strong> sourcing@divineingredients.com</p>",
+            "text": "<p>Our sourcing team goes to the farms. Literally. We build direct, long-term relationships with certified organic growers across Japan, India, Sri Lanka, and beyond. Every partnership is built on trust, fair trade, and a shared obsession with quality.</p><p><strong>Email:</strong> sourcing@divineingredients.com</p>",
             "link_label": "",
             "link": ""
           }
@@ -73,7 +73,7 @@
             "image": "",
             "hide_image": false,
             "title": "Customer Success",
-            "text": "<p>Whether you're placing your first order or your hundredth, our customer team is here to make the experience seamless. Questions, recommendations, wholesale setup — whatever you need, we're on it.</p><p><strong>Email:</strong> hello@divineingredients.com</p>",
+            "text": "<p>Whether you're placing your first order or your hundredth, our customer team is here to make the experience seamless. Questions, recommendations, wholesale setup. Whatever you need, we're on it.</p><p><strong>Email:</strong> hello@divineingredients.com</p>",
             "link_label": "",
             "link": ""
           }
@@ -121,7 +121,7 @@
             "heading": "Global Farm Partnerships",
             "heading_size": "medium",
             "heading_tag": "h2",
-            "subheading": "We travel to meet our growers face-to-face. From matcha fields in Uji, Japan to spice farms in Kerala, India — every relationship is built on trust, transparency, and mutual respect.",
+            "subheading": "We travel to meet our growers face-to-face. From matcha fields in Uji, Japan to spice farms in Kerala, India. Every relationship is built on trust, transparency, and mutual respect.",
             "link_label": "",
             "link": "",
             "show_text_box": false,
@@ -138,7 +138,7 @@
             "heading": "Lab-Tested Purity",
             "heading_size": "medium",
             "heading_tag": "h2",
-            "subheading": "Every batch is independently tested for purity, potency, heavy metals, and allergens. We don't guess — we verify. Because facts matter more than marketing claims.",
+            "subheading": "Every batch is independently tested for purity, potency, heavy metals, and allergens. We don't guess. We verify, because facts matter more than marketing claims.",
             "link_label": "",
             "link": "",
             "show_text_box": false,
@@ -222,7 +222,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>From a frustration with what was available to a trusted source for creators worldwide — here's how Divine Ingredients grew while staying true to what we believe: quality over everything, transparency always, and the people who use our ingredients matter just as much as the ingredients themselves.</p>"
+            "text": "<p>From a frustration with what was available to a trusted source for creators worldwide. Here's how Divine Ingredients grew while staying true to what we believe: quality over everything, transparency always, and the people who use our ingredients matter just as much as the ingredients themselves.</p>"
           }
         },
         "button": {
@@ -263,7 +263,7 @@
             "heading": "Origins",
             "image": "",
             "hide_image": false,
-            "row_content": "<h2>It Started with a Problem</h2><p>We wanted clean, traceable organic ingredients — and couldn't find them. Not the way we needed them. So we did what felt natural: we went straight to the source. Visited farms. Built relationships. And created the supply chain we wished had existed all along.</p>",
+            "row_content": "<h2>It Started with a Problem</h2><p>We wanted clean, traceable organic ingredients, and we couldn't find them, not the way we needed them. So we did what felt natural: we went straight to the source. Visited farms, built relationships, and created the supply chain we wished had existed all along.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false
@@ -275,7 +275,7 @@
             "heading": "Growth",
             "image": "",
             "hide_image": false,
-            "row_content": "<h2>Word Got Around</h2><p>Turns out, a lot of people were looking for the same thing. Chefs, café owners, wellness brands — they tried our matcha, our spices, our superfood powders, and kept coming back. We grew by being the brand people actually recommended to each other.</p>",
+            "row_content": "<h2>Word Got Around</h2><p>Turns out, a lot of people were looking for the same thing. Chefs, café owners, wellness brands. They tried our matcha, our spices, our superfood powders, and kept coming back. We grew by being the brand people actually recommended to each other.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false
@@ -287,7 +287,7 @@
             "heading": "Quality",
             "image": "",
             "hide_image": false,
-            "row_content": "<h2>We Raised the Bar (Then Raised It Again)</h2><p>We invested in independent lab testing for every single batch. Purity, potency, heavy metals, allergens — if it doesn't pass, it doesn't ship. Our USDA organic certification and zero-additive promise aren't marketing. They're the foundation.</p>",
+            "row_content": "<h2>We Raised the Bar (Then Raised It Again)</h2><p>We invested in independent lab testing for every single batch. Purity, potency, heavy metals, allergens. If it doesn't pass, it doesn't ship. Our USDA organic certification and zero-additive promise aren't marketing. They're the foundation.</p>",
             "button_label": "",
             "button_link": "",
             "button_style_secondary": false

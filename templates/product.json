@@ -268,7 +268,7 @@
             "image": "shopify://shop_images/BT.Breakis1.jpg",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>Every product page includes specific usage instructions, but here are a few general tips:</p><ul><li><strong>Powders &amp; Superfoods</strong> — Start with ½ to 1 tsp. Mix into smoothies, lattes, oatmeal, or baked goods.</li><li><strong>Loose Leaf Teas</strong> — Use 1–2 tsp per 8 oz of water. Steep at the recommended temperature for the best flavor.</li><li><strong>Spices &amp; Seasonings</strong> — Add to taste during cooking or as a finishing touch. A little goes a long way with high-quality ingredients.</li></ul><p>Store in a cool, dry place away from direct sunlight to preserve freshness and potency.</p>",
+            "row_content": "<p>Every product page includes specific usage instructions, but here are a few general tips:</p><ul><li><strong>Powders &amp; Superfoods</strong>. Start with ½ to 1 tsp. Mix into smoothies, lattes, oatmeal, or baked goods.</li><li><strong>Loose Leaf Teas</strong>. Use 1–2 tsp per 8 oz of water. Steep at the recommended temperature for the best flavor.</li><li><strong>Spices &amp; Seasonings</strong>. Add to taste during cooking or as a finishing touch. A little goes a long way with high-quality ingredients.</li></ul><p>Store in a cool, dry place away from direct sunlight to preserve freshness and potency.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -283,7 +283,7 @@
             "product_metafield_image": "",
             "tab_image_width": 1000,
             "hide_image": false,
-            "row_content": "<p>We source every ingredient directly from certified organic farms we know and trust — no middlemen, no compromises.</p><ul><li><strong>Certifications</strong> — USDA Organic, CCOF Certified</li><li><strong>Testing</strong> — Every batch independently lab-verified for purity, potency, heavy metals, and allergen safety</li><li><strong>Traceability</strong> — Full farm-to-shelf transparency on every product</li><li><strong>Free from</strong> — Synthetic additives, artificial colors, preservatives, fillers, and GMOs</li></ul><p>Check individual product listings for origin country, farm details, and batch-specific certifications.</p>",
+            "row_content": "<p>We source every ingredient directly from certified organic farms we know and trust. No middlemen, no compromises.</p><ul><li><strong>Certifications</strong>. USDA Organic, CCOF Certified</li><li><strong>Testing</strong>. Every batch independently lab-verified for purity, potency, heavy metals, and allergen safety</li><li><strong>Traceability</strong>. Full farm-to-shelf transparency on every product</li><li><strong>Free from</strong>. Synthetic additives, artificial colors, preservatives, fillers, and GMOs</li></ul><p>Check individual product listings for origin country, farm details, and batch-specific certifications.</p>",
             "button_label": "",
             "button_link": "",
             "open_new_tab_1": false,
@@ -337,7 +337,7 @@
           "settings": {
             "heading": "Are Divine Ingredients products organic?",
             "icon": "question_mark",
-            "row_content": "<p>Every single one. USDA certified organic and CCOF certified, sourced from certified farms, and independently lab-tested. We don't use the word \"organic\" lightly — we can back it up.</p>",
+            "row_content": "<p>Every single one. USDA certified organic and CCOF certified, sourced from certified farms, and independently lab-tested. We don't use the word \"organic\" lightly. We can back it up.</p>",
             "page": ""
           }
         },
@@ -346,7 +346,7 @@
           "settings": {
             "heading": "Where do you source your ingredients?",
             "icon": "question_mark",
-            "row_content": "<p>Direct from certified organic farms across Japan, India, Sri Lanka, and beyond. We know our growers personally — every partnership is built on trust, fair trade, and a shared commitment to doing things right.</p>",
+            "row_content": "<p>Direct from certified organic farms across Japan, India, Sri Lanka, and beyond. We know our growers personally. Every partnership is built on trust, fair trade, and a shared commitment to doing things right.</p>",
             "page": ""
           }
         },
@@ -355,7 +355,7 @@
           "settings": {
             "heading": "Do you offer bulk or wholesale pricing?",
             "icon": "question_mark",
-            "row_content": "<p>We do! Cafés, restaurants, wellness brands, food manufacturers — if you're buying in volume, we've got you. Check out our wholesale collection or reach out for custom pricing.</p>",
+            "row_content": "<p>We do! Cafés, restaurants, wellness brands, food manufacturers. If you're buying in volume, we've got you. Check out our wholesale collection or reach out for custom pricing.</p>",
             "page": ""
           }
         },
@@ -364,7 +364,7 @@
           "settings": {
             "heading": "How do you ensure product quality?",
             "icon": "question_mark",
-            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims — that's how we operate.</p>",
+            "row_content": "<p>Every batch is independently lab-tested for purity, potency, heavy metals, and allergen safety. Full traceability from farm to your kitchen. Facts over claims. That's how we operate.</p>",
             "page": ""
           }
         },
@@ -373,7 +373,7 @@
           "settings": {
             "heading": "Are there any additives or preservatives in your products?",
             "icon": "question_mark",
-            "row_content": "<p>Never. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Clean ingredients — nothing more, nothing less.</p>",
+            "row_content": "<p>Never. Everything we sell is free from synthetic additives, artificial colors, preservatives, fillers, and GMOs. Clean ingredients. Nothing more, nothing less.</p>",
             "page": ""
           }
         }
@@ -414,7 +414,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>This ceremonial matcha is unreal — best I've found outside Japan. Our regulars literally ask what brand we use.</p>",
+            "text": "<p>This ceremonial matcha is unreal. Best I've found outside Japan. Our regulars literally ask what brand we use.</p>",
             "title": "Sarah M.",
             "hide_image": true,
             "product": "supreme-matcha"
@@ -436,7 +436,7 @@
           "settings": {
             "rating": true,
             "rating_stars": "5-star",
-            "text": "<p>Switched all my baking ingredients to Divine and honestly — night and day. Everything just tastes more real.</p>",
+            "text": "<p>Switched all my baking ingredients to Divine and honestly. Night and day. Everything just tastes more real.</p>",
             "title": "Michelle T.",
             "hide_image": true,
             "product": "mumbai-chai"
@@ -687,15 +687,15 @@
             "row_1_key": "Tea type",
             "row_1_val": "See product description",
             "row_2_key": "Ingredients",
-            "row_2_val": "100% Organic — see product description for the full ingredient list",
+            "row_2_val": "100% Organic. See product description for the full ingredient list",
             "row_3_key": "Aroma",
-            "row_3_val": "Distinctive — see product description",
+            "row_3_val": "Distinctive. See product description",
             "row_4_key": "Liquor colour",
             "row_4_val": "Varies by blend",
             "row_5_key": "Certifications",
             "row_5_val": "USDA Organic · CCOF Certified · Lab Tested",
             "row_6_key": "Contains caffeine",
-            "row_6_val": "Varies by blend — see product description"
+            "row_6_val": "Varies by blend. See product description"
           }
         },
         "steps": {
