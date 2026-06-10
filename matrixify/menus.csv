@@ -1,0 +1,18 @@
+Handle,Command,Title,Menu Item: Title,Menu Item: Type,Menu Item: Resource,Menu Item: Position,Menu Item: Parent
+main-menu,MERGE,Main menu,Shop by Function,Link,,1,
+main-menu,MERGE,Main menu,Immunity,Collection,immunity,2,Shop by Function
+main-menu,MERGE,Main menu,Wind down,Collection,wind-down,3,Shop by Function
+main-menu,MERGE,Main menu,Gut Reset,Collection,gut-reset,4,Shop by Function
+main-menu,MERGE,Main menu,Focus and Energy,Collection,focus-and-energy,5,Shop by Function
+main-menu,MERGE,Main menu,Detox,Collection,detox,6,Shop by Function
+main-menu,MERGE,Main menu,Shop by Type,Link,,7,
+main-menu,MERGE,Main menu,Green Tea,Collection,green-tea,8,Shop by Type
+main-menu,MERGE,Main menu,Black Tea,Collection,black-tea,9,Shop by Type
+main-menu,MERGE,Main menu,Herbal Tea,Collection,herbal-tea,10,Shop by Type
+main-menu,MERGE,Main menu,Chai,Collection,chai,11,Shop by Type
+main-menu,MERGE,Main menu,Matcha,Collection,matcha,12,Shop by Type
+main-menu,MERGE,Main menu,Iced Tea,Collection,iced-tea,13,Shop by Type
+main-menu,MERGE,Main menu,Boba Boba,Collection,boba-boba,14,Shop by Type
+main-menu,MERGE,Main menu,Powders,Collection,all-powders,15,
+main-menu,MERGE,Main menu,Spices & Botanicals,Collection,spices-botanicals,16,
+main-menu,MERGE,Main menu,Founders' Favourites,Collection,founders-favourites,17,
