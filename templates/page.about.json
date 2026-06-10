@@ -33,10 +33,10 @@
         "story_body": {
           "type": "story_body",
           "settings": {
-            "text": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for. And more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. Every ingredient at Divine is sourced with intention, tested with rigour, and chosen because it earns its place. Not because it sounds good on a label. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
+            "text": "<p>For me, that question wasn't fleeting curiosity. With a background in microbiology and quality control, I knew exactly what to look for, and more importantly, what didn't belong.</p><p>So I set a new standard. One rooted in honesty, not marketing. Every ingredient at Divine is sourced with intention, tested with rigour, and chosen because it earns its place, not because it sounds good on a label. <strong>No filters, no shortcuts.</strong> Just what nature meant, thoughtfully refined.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
             "card_1_label": "Background",
             "card_1_value": "<p><em>Microbiology</em></p>",
-            "card_1_desc": "Quality control expertise. She knows exactly what belongs. And what doesn't.",
+            "card_1_desc": "Quality control expertise. She knows exactly what belongs, and what doesn't.",
             "card_2_label": "Founded on",
             "card_2_value": "<p><em>Honesty</em></p>",
             "card_2_desc": "Not marketing. Not buzzwords. What's on the label is exactly what's inside."

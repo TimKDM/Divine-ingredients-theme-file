@@ -24,7 +24,7 @@
           "type": "intro",
           "settings": {
             "heading": "Our Story",
-            "text": "<p>Divine Ingredients was built on a single question. <em>but what's really in this?</em> Here's the story behind that question, the standards it created, and the people who hold us to them every day.</p>"
+            "text": "<p>Divine Ingredients was built on a single question: <em>but what's really in this?</em> Here's the story behind that question, the standards it created, and the people who hold us to them every day.</p>"
           }
         },
         "intro": {
@@ -33,7 +33,7 @@
             "image": "shopify://shop_images/Preet-hero-image.jpg",
             "caption": "Meet the Founder",
             "heading": "Divine Ingredients began, as many good things do, with a simple habit. Turning the label over and asking, \"but what's really in this?\"",
-            "text": "<p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for. And more importantly, what didn't belong.</p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place. Not because it sounds good on a label. No fillers, no shortcuts. Just what nature meant, thoughtfully refined.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence. Precise, uncompromising, yet deeply personal.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
+            "text": "<p>For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for, and more importantly, what didn't belong.</p><p>So, she set a new standard. One rooted in honesty, not marketing.</p><p>Every ingredient is sourced with intention, tested with rigor, and chosen because it earns its place, not because it sounds good on a label. No fillers, no shortcuts. Just what nature meant, thoughtfully refined.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence. Precise, uncompromising, yet deeply personal.</p><p>Because when you know better, you choose better. And once you taste the difference, there's no going back.</p>",
             "button_label": "",
             "button_link": "",
             "layout": "image_right",
@@ -59,7 +59,7 @@
             "image": "shopify://shop_images/iStock-2251805765.jpg",
             "caption": "The Fix",
             "heading": "Direct to the Farms. Tested in the Lab.",
-            "text": "<p>We work directly with organic farms in Japan, India, Sri Lanka, and beyond. Not through brokers or distributors, but with the actual growers. We know their methods, we trust their practices, and we maintain full traceability on every ingredient.</p><p>Every batch that comes through Divine is independently lab tested for purity, potency, heavy metals, and microbial safety. It's the standard we set from day one, and it's the one thing we'll never compromise on.</p>",
+            "text": "<p>We work directly with organic farms in Japan, India, Sri Lanka, and beyond, not through brokers or distributors, but with the actual growers. We know their methods, we trust their practices, and we maintain full traceability on every ingredient.</p><p>Every batch that comes through Divine is independently lab tested for purity, potency, heavy metals, and microbial safety. It's the standard we set from day one, and it's the one thing we'll never compromise on.</p>",
             "button_label": "",
             "button_link": "",
             "layout": "image_right",
