@@ -54,6 +54,39 @@ Created with `Status: draft` and `Published: FALSE` — they won't appear on the
 | `Organic` | All Organic |
 | `Founders_Favourite` | Founders' Favourites |
 
+## Product detail metafields (NEW)
+
+Both `products-update.csv` and `products-new.csv` now include 9 empty metafield
+columns that drive the PDP "Additional Information" table. Fill them in
+per product to override the section-block defaults.
+
+| Metafield key | Type | Drives PDP row | Example value |
+|---|---|---|---|
+| `custom.tea_type` | single line | Tea type | "Premium ceremonial-grade Japanese matcha" |
+| `custom.ingredients` | multi line | Ingredients | "100% organic Camellia sinensis (green tea)" |
+| `custom.aroma` | single line | Aroma | "Grassy, vegetal, with a sweet finish" |
+| `custom.liquor_colour` | single line | Liquor colour | "Vibrant jade green" |
+| `custom.certifications` | single line | Certifications | "USDA Organic · CCOF Certified · Lab Tested" |
+| `custom.contains_caffeine` | single line | Contains caffeine | "Yes — ~70 mg per 8 oz cup" |
+| `custom.origin` | single line | Origin | "Uji, Japan" |
+| `custom.allergens` | multi line | Allergens | "None. Processed in a facility free of nuts and dairy." |
+| `custom.storage` | single line | Storage | "Cool, dry place. Reseal after use." |
+
+**One-time setup in Shopify admin** (before the first import):
+1. Settings → **Custom data** → **Products** → **Add definition**.
+2. For each metafield above, create a definition with namespace `custom`,
+   key matching the column (e.g. `tea_type`), and the matching type.
+3. After all 9 definitions exist, the Matrixify import will populate them.
+
+**Lookup priority in the PDP template**:
+1. Individual metafield (above) — preferred.
+2. `custom.product_facts` (legacy newline + pipe format) — kept for back-compat.
+3. Section block defaults set in Theme Editor.
+
+If any single individual metafield is set, ALL rows render from individual
+metafields (others fall back to "—" if blank). Set them per product for
+clean, granular control.
+
 ## Notes
 
 - **Boba Boba** is set up as its own type/collection per client direction. No products tagged yet; tag any future Boba product with `Type_Boba Boba` and it auto-populates.
