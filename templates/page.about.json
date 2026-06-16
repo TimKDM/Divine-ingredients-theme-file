@@ -26,7 +26,7 @@
             "kicker": "About Divine Ingredients",
             "heading": "<p>When you know better, you <em>choose better.</em></p>",
             "text": "<p>The story of a microbiologist who turned a habit of reading labels into a brand built entirely on the truth of what's inside.</p>",
-            "image": "shopify://shop_images/Preet-hero-image.jpg",
+            "image": "shopify://shop_images/preet-about-us-page.png",
             "placeholder_text": "Preet's photo coming soon",
             "cap_name": "Preet Bhullar",
             "cap_role": "Founder · Microbiologist"
@@ -48,7 +48,10 @@
             "card_1_desc": "Quality control expertise. She knows exactly what belongs, and what doesn't.",
             "card_2_label": "Founded on",
             "card_2_value": "<p><em>Honesty</em></p>",
-            "card_2_desc": "Not marketing. Not buzzwords. What's on the label is exactly what's inside."
+            "card_2_desc": "Not marketing. Not buzzwords. What's on the label is exactly what's inside.",
+            "card_3_label": "",
+            "card_3_value": "",
+            "card_3_desc": ""
           }
         },
         "values": {
@@ -90,7 +93,8 @@
             "button_label_2": "Try the Discovery Set. $38",
             "button_link_2": "shopify://products/discovery-set",
             "button_label_3": "Wholesale enquiries",
-            "button_link_3": "shopify://pages/wholesale"
+            "button_link_3": "shopify://pages/wholesale",
+            "use_dark_bg": true
           }
         }
       },
@@ -103,6 +107,9 @@
         "cta"
       ],
       "settings": {
+        "background_color": "",
+        "text_color": "",
+        "accent_color": "",
         "body_font_size": 16,
         "heading_font_size": 88,
         "caption_font_size": 11,
