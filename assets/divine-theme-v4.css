@@ -376,6 +376,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   width:100%;
   height:100%;
 }
+.d-powders-collage--9{
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+}
 .d-powders-tile{
   position:relative;
   overflow:hidden;
