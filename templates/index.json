@@ -288,7 +288,10 @@
         "p_3"
       ],
       "settings": {
-        "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
+        "image": "shopify://shop_images/blue_spirulina_powder.jpg",
+        "image_2": "shopify://shop_images/Firefly_Gemini_Flash_make_this_exactly_match_the_color_and_texture_of_the_secondary_image._881920.png",
+        "image_3": "shopify://shop_images/Firefly_Gemini_Flash_make_the_powder_in_the_bowl_the_same_color_as_the_image_without_the_bowl_617172.png",
+        "image_4": "shopify://shop_images/cocoa_powder.jpg",
         "caption": "Daily superfoods",
         "title": "<p>Superfood<br><em>powders</em></p>",
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
@@ -306,12 +309,37 @@
     "divine_bestsellers": {
       "type": "divine-products",
       "blocks": {
-        "pick_tea": { "type": "product", "settings": { "product": "mumbai-chai" } },
-        "pick_powder": { "type": "product", "settings": { "product": "organic-taro-powder" } },
-        "pick_spice": { "type": "product", "settings": { "product": "organic-turmeric-spice" } },
-        "pick_matcha": { "type": "product", "settings": { "product": "supreme-matcha" } }
+        "pick_tea": {
+          "type": "product",
+          "settings": {
+            "product": "mumbai-chai"
+          }
+        },
+        "pick_powder": {
+          "type": "product",
+          "settings": {
+            "product": "organic-taro-powder"
+          }
+        },
+        "pick_spice": {
+          "type": "product",
+          "settings": {
+            "product": "organic-turmeric-spice"
+          }
+        },
+        "pick_matcha": {
+          "type": "product",
+          "settings": {
+            "product": "supreme-matcha"
+          }
+        }
       },
-      "block_order": ["pick_tea", "pick_powder", "pick_spice", "pick_matcha"],
+      "block_order": [
+        "pick_tea",
+        "pick_powder",
+        "pick_spice",
+        "pick_matcha"
+      ],
       "settings": {
         "caption": "Customer Favorites",
         "title": "The ones people keep coming back for",
