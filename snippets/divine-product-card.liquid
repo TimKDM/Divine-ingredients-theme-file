@@ -1,0 +1,61 @@
+{%- comment -%}
+  Divine product card. Shared by the Divine Products section for both
+  collection-driven and hand-picked (product block) rendering.
+  Params:
+    product            (required) - product object
+    show_price         (optional) - false to hide price
+    shopify_attributes (optional) - block attributes for theme editor
+{%- endcomment -%}
+{%- assign subtitle_meta = product.metafields.custom.subtitle | default: product.type -%}
+<a href="{{ product.url }}" class="d-pcard" {{ shopify_attributes }}>
+  <div class="d-pcard-img-wrap">
+    {%- if product.featured_image != blank -%}
+      {{ product.featured_image | image_url: width: 800 | image_tag:
+        loading: 'lazy', widths: '300, 500, 700', sizes: '(min-width: 1100px) 25vw, 50vw',
+        class: 'd-pcard-img', alt: product.featured_image.alt | default: product.title
+      }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'd-pcard-img placeholder-svg' }}
+    {%- endif -%}
+    {%- if product.compare_at_price > product.price -%}
+      <div class="d-pbadge d-pbadge-sale">Sale</div>
+    {%- elsif product.tags contains 'best-seller' or product.tags contains 'Best Seller' -%}
+      <div class="d-pbadge d-pbadge-dk">Best Seller</div>
+    {%- elsif product.tags contains 'customer-favorite' or product.tags contains 'Customer Fav' -%}
+      <div class="d-pbadge d-pbadge-gd">Customer Fav</div>
+    {%- elsif product.tags contains 'new' or product.tags contains 'New' -%}
+      <div class="d-pbadge d-pbadge-dk">New</div>
+    {%- endif -%}
+  </div>
+  <div class="d-pcard-body">
+    {%- if subtitle_meta != blank -%}
+      <div class="d-pcard-cat">{{ subtitle_meta }}</div>
+    {%- endif -%}
+    <h3 class="d-pcard-name">{{ product.title }}</h3>
+    <div class="d-pcard-note">
+      {%- if product.metafields.custom.tagline != blank -%}
+        {{ product.metafields.custom.tagline }}
+      {%- else -%}
+        <span class="d-hi">USDA Organic · Lab tested</span>
+      {%- endif -%}
+    </div>
+    <div class="d-pcard-foot">
+      {%- if show_price != false -%}
+        <div>
+          <div class="d-pcard-price">
+            {%- if product.price_varies -%}
+              From {{ product.price_min | money_without_trailing_zeros }}
+            {%- else -%}
+              {{ product.price | money_without_trailing_zeros }}
+            {%- endif -%}
+            {%- if product.compare_at_price > product.price -%}
+              <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+            {%- endif -%}
+          </div>
+          <div class="d-pcard-sz">{{ cart.currency.iso_code }}</div>
+        </div>
+      {%- endif -%}
+      <span class="d-pcard-add" aria-hidden="true">+</span>
+    </div>
+  </div>
+</a>
