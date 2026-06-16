@@ -1,28 +1,28 @@
-Handle,Command,Title,Menu Item: Title,Menu Item: Type,Menu Item: Resource,Menu Item: Position,Menu Item: Parent
-main-menu,MERGE,Main menu,Shop by Function,Link,,1,
-main-menu,MERGE,Main menu,Immunity,Collection,immunity,2,Shop by Function
-main-menu,MERGE,Main menu,Wind down,Collection,wind-down,3,Shop by Function
-main-menu,MERGE,Main menu,Gut Reset,Collection,gut-reset,4,Shop by Function
-main-menu,MERGE,Main menu,Focus and Energy,Collection,focus-and-energy,5,Shop by Function
-main-menu,MERGE,Main menu,Detox,Collection,detox,6,Shop by Function
-main-menu,MERGE,Main menu,Shop by Type,Link,,7,
-main-menu,MERGE,Main menu,Green Tea,Collection,green-tea,8,Shop by Type
-main-menu,MERGE,Main menu,Black Tea,Collection,black-tea,9,Shop by Type
-main-menu,MERGE,Main menu,Herbal Tea,Collection,herbal-tea,10,Shop by Type
-main-menu,MERGE,Main menu,Chai,Collection,chai,11,Shop by Type
-main-menu,MERGE,Main menu,Matcha,Collection,matcha,12,Shop by Type
-main-menu,MERGE,Main menu,Iced Tea,Collection,iced-tea,13,Shop by Type
-main-menu,MERGE,Main menu,Boba Boba,Collection,boba-boba,14,Shop by Type
-main-menu,MERGE,Main menu,Powders,Collection,all-powders,15,
-main-menu,MERGE,Main menu,Spices & Botanicals,Collection,spices-botanicals,16,
-main-menu,MERGE,Main menu,Founders' Favourites,Collection,founders-favourites,17,
-footer-by-function,MERGE,Footer: Shop by Function,Immunity,Collection,immunity,1,
-footer-by-function,MERGE,Footer: Shop by Function,Wind Down,Collection,wind-down,2,
-footer-by-function,MERGE,Footer: Shop by Function,Gut Reset,Collection,gut-reset,3,
-footer-by-function,MERGE,Footer: Shop by Function,Focus & Energy,Collection,focus-and-energy,4,
-footer-by-function,MERGE,Footer: Shop by Function,Detox,Collection,detox,5,
-footer-by-category,MERGE,Footer: Shop,All Teas,Collection,all-teas,1,
-footer-by-category,MERGE,Footer: Shop,Powders,Collection,all-powders,2,
-footer-by-category,MERGE,Footer: Shop,Spices & Botanicals,Collection,spices-botanicals,3,
-footer-by-category,MERGE,Footer: Shop,All Organic,Collection,all-organic,4,
-footer-by-category,MERGE,Footer: Shop,Founders' Favourites,Collection,founders-favourites,5,
+Handle,Command,Title,Menu Item: Title,Menu Item: Command,Menu Item: Resource Type,Menu Item: Resource Handle,Menu Item: URL,Menu Item: Parent Title,Menu Item: Position
+main-menu,MERGE,Main menu,Shop by Function,MERGE,HTTP,,/collections,,1
+main-menu,MERGE,Main menu,Immunity,MERGE,COLLECTION,immunity,/collections/immunity,Shop by Function,1
+main-menu,MERGE,Main menu,Wind Down,MERGE,COLLECTION,wind-down,/collections/wind-down,Shop by Function,2
+main-menu,MERGE,Main menu,Gut Reset,MERGE,COLLECTION,gut-reset,/collections/gut-reset,Shop by Function,3
+main-menu,MERGE,Main menu,Focus & Energy,MERGE,COLLECTION,focus-and-energy,/collections/focus-and-energy,Shop by Function,4
+main-menu,MERGE,Main menu,Detox,MERGE,COLLECTION,detox,/collections/detox,Shop by Function,5
+main-menu,MERGE,Main menu,Shop by Type,MERGE,HTTP,,/collections,,2
+main-menu,MERGE,Main menu,Green Tea,MERGE,COLLECTION,green-teas,/collections/green-teas,Shop by Type,1
+main-menu,MERGE,Main menu,Black Tea,MERGE,COLLECTION,black-teas,/collections/black-teas,Shop by Type,2
+main-menu,MERGE,Main menu,Herbal Tea,MERGE,COLLECTION,herbal-tea,/collections/herbal-tea,Shop by Type,3
+main-menu,MERGE,Main menu,Chai,MERGE,COLLECTION,chai,/collections/chai,Shop by Type,4
+main-menu,MERGE,Main menu,Matcha,MERGE,COLLECTION,matcha,/collections/matcha,Shop by Type,5
+main-menu,MERGE,Main menu,Iced Tea,MERGE,COLLECTION,iced-teas,/collections/iced-teas,Shop by Type,6
+main-menu,MERGE,Main menu,Boba Boba,MERGE,COLLECTION,boba-boba,/collections/boba-boba,Shop by Type,7
+main-menu,MERGE,Main menu,Powders,MERGE,COLLECTION,all-powders,/collections/all-powders,,3
+main-menu,MERGE,Main menu,Spices & Botanicals,MERGE,COLLECTION,spices-botanicals,/collections/spices-botanicals,,4
+main-menu,MERGE,Main menu,Founders' Favourites,MERGE,COLLECTION,founders-favourites,/collections/founders-favourites,,5
+footer-by-function,MERGE,Footer: Shop by Function,Immunity,MERGE,COLLECTION,immunity,/collections/immunity,,1
+footer-by-function,MERGE,Footer: Shop by Function,Wind Down,MERGE,COLLECTION,wind-down,/collections/wind-down,,2
+footer-by-function,MERGE,Footer: Shop by Function,Gut Reset,MERGE,COLLECTION,gut-reset,/collections/gut-reset,,3
+footer-by-function,MERGE,Footer: Shop by Function,Focus & Energy,MERGE,COLLECTION,focus-and-energy,/collections/focus-and-energy,,4
+footer-by-function,MERGE,Footer: Shop by Function,Detox,MERGE,COLLECTION,detox,/collections/detox,,5
+footer-by-category,MERGE,Footer: Shop,All Teas,MERGE,COLLECTION,all-teas,/collections/all-teas,,1
+footer-by-category,MERGE,Footer: Shop,Powders,MERGE,COLLECTION,all-powders,/collections/all-powders,,2
+footer-by-category,MERGE,Footer: Shop,Spices & Botanicals,MERGE,COLLECTION,spices-botanicals,/collections/spices-botanicals,,3
+footer-by-category,MERGE,Footer: Shop,All Organic,MERGE,COLLECTION,all-organic,/collections/all-organic,,4
+footer-by-category,MERGE,Footer: Shop,Founders' Favourites,MERGE,COLLECTION,founders-favourites,/collections/founders-favourites,,5
