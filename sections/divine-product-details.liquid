@@ -177,6 +177,12 @@
               if product.metafields.custom.ingredients != blank
                 assign individual_facts = individual_facts | append: 'Ingredients | ' | append: product.metafields.custom.ingredients | append: nl
               endif
+              if product.metafields.custom.tasting_notes != blank
+                assign individual_facts = individual_facts | append: 'Tasting notes | ' | append: product.metafields.custom.tasting_notes | append: nl
+              endif
+              if product.metafields.custom.best_enjoyed != blank
+                assign individual_facts = individual_facts | append: 'Best enjoyed | ' | append: product.metafields.custom.best_enjoyed | append: nl
+              endif
               if product.metafields.custom.aroma != blank
                 assign individual_facts = individual_facts | append: 'Aroma | ' | append: product.metafields.custom.aroma | append: nl
               endif
