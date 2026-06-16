@@ -8,13 +8,13 @@
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
   #shopify-section-{{ section.id }} .d-disc-body{
-    padding-top: {{ section.settings.padding_top | default: 56 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | default: 56 }}px;
+    padding-top: {{ section.settings.padding_top | default: 40 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 40 }}px;
     {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}background:{{ section.settings.background_color }};{% endif %}
   }
   #shopify-section-{{ section.id }} .d-disc-img-wrap{
-    padding-top: {{ section.settings.padding_top | default: 56 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | default: 56 }}px;
+    padding-top: {{ section.settings.padding_top | default: 40 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: 40 }}px;
   }
   #shopify-section-{{ section.id }} .d-disc-h{
     font-size: {{ section.settings.heading_font_size | default: 50 }}px;
@@ -87,6 +87,15 @@
     {%- endif -%}
   </div>
   <div class="d-disc-body">
+    {%- if section.settings.side_image != blank -%}
+      <div class="d-disc-side-img-wrap">
+        {{ section.settings.side_image | image_url: width: 280 | image_tag:
+          loading: 'lazy', widths: '140, 200, 280',
+          sizes: '140px',
+          class: 'd-disc-side-img', alt: section.settings.side_image.alt | default: section.settings.heading
+        }}
+      </div>
+    {%- endif -%}
     {%- if section.settings.caption != blank -%}
       <div class="d-disc-label">{{ section.settings.caption }}</div>
     {%- endif -%}
@@ -150,6 +159,11 @@
       "label": "Image 4 (bottom-right tile)"
     },
     {
+      "type": "image_picker",
+      "id": "side_image",
+      "label": "Side accent image (top of copy column — small badge/logo)"
+    },
+    {
       "type": "text",
       "id": "caption",
       "label": "Caption / kicker",
@@ -202,7 +216,7 @@
       "min": 0,
       "max": 160,
       "step": 4,
-      "default": 88,
+      "default": 40,
       "unit": "px"
     },
     {
@@ -212,7 +226,7 @@
       "min": 0,
       "max": 160,
       "step": 4,
-      "default": 88,
+      "default": 40,
       "unit": "px"
     },
     {
