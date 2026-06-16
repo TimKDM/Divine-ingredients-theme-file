@@ -10,7 +10,7 @@
   #shopify-section-{{ section.id }} .d-powders-body{
     padding-top: {{ section.settings.padding_top | default: 88 }}px;
     padding-bottom: {{ section.settings.padding_bottom | default: 88 }}px;
-    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}background:{{ section.settings.background_color }};{% endif %}
   }
   #shopify-section-{{ section.id }} .d-sec-h{
     font-size: {{ section.settings.heading_font_size | default: 52 }}px;

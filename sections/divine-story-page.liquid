@@ -11,7 +11,7 @@
 
 {%- style -%}
   #shopify-section-{{ section.id }} .d-story-page{
-    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}background:{{ section.settings.background_color }};{% endif %}
   }
   #shopify-section-{{ section.id }} .d-ph-h1{
     font-size: {{ section.settings.heading_font_size | default: 88 }}px;
