@@ -84,11 +84,7 @@
           {%- endif -%}
         {%- endfor -%}
 
-        <div class="d-filter-section">
-          <div class="d-filter-title">
-            {{ group_title | default: gk }}
-            <button type="button" class="d-filter-clear" data-coll-clear-group="{{ gk }}">Clear</button>
-          </div>
+        {%- capture group_options -%}
           {%- for block in section.blocks -%}
             {%- if block.type == 'filter_option' and block.settings.group_key == gk -%}
               {%- assign val = block.settings.value -%}
@@ -136,22 +132,34 @@
                   endif
                 -%}
               {%- endfor -%}
-              <button
-                type="button"
-                class="d-filter-option"
-                data-coll-filter
-                data-group="{{ gk }}"
-                data-val="{{ val }}"
-                aria-pressed="false"
-                {{ block.shopify_attributes }}
-              >
-                <span class="d-fo-check" aria-hidden="true"></span>
-                <span class="d-fo-label">{{ block.settings.label }}</span>
-                <span class="d-fo-count">{{ count }}</span>
-              </button>
+              {%- if count > 0 -%}
+                <button
+                  type="button"
+                  class="d-filter-option"
+                  data-coll-filter
+                  data-group="{{ gk }}"
+                  data-val="{{ val }}"
+                  aria-pressed="false"
+                  {{ block.shopify_attributes }}
+                >
+                  <span class="d-fo-check" aria-hidden="true"></span>
+                  <span class="d-fo-label">{{ block.settings.label }}</span>
+                  <span class="d-fo-count">{{ count }}</span>
+                </button>
+              {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
-        </div>
+        {%- endcapture -%}
+
+        {%- if group_options != blank -%}
+          <div class="d-filter-section">
+            <div class="d-filter-title">
+              {{ group_title | default: gk }}
+              <button type="button" class="d-filter-clear" data-coll-clear-group="{{ gk }}">Clear</button>
+            </div>
+            {{ group_options }}
+          </div>
+        {%- endif -%}
       {%- endfor -%}
 
       <button type="button" class="d-sidebar-clear" data-coll-clear-all>Clear all filters</button>

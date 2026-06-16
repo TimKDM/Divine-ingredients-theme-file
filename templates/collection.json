@@ -332,7 +332,7 @@
             "group_key": "cat",
             "group_title": "Category",
             "label": "Spice & Soul",
-            "value": "spice"
+            "value": "spices-botanicals"
           }
         },
         "f_t_green": {
@@ -467,7 +467,7 @@
             "group_key": "func",
             "group_title": "By Function",
             "label": "Focus & Energy",
-            "value": "focus"
+            "value": "focus-and-energy"
           }
         },
         "f_fn_detox": {
