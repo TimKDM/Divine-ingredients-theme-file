@@ -310,6 +310,7 @@
         "title": "The ones people keep coming back for",
         "collection": "favorite-products",
         "products_to_show": 4,
+        "show_price": false,
         "show_rating": false,
         "show_tags": false,
         "show_view_all": true,
@@ -373,12 +374,6 @@
             "text": "USDA Organic · Lab tested"
           }
         },
-        "i_3": {
-          "type": "include",
-          "settings": {
-            "text": "Free shipping always included"
-          }
-        },
         "i_4": {
           "type": "include",
           "settings": {
@@ -389,7 +384,6 @@
       "block_order": [
         "i_1",
         "i_2",
-        "i_3",
         "i_4"
       ],
       "settings": {
@@ -398,7 +392,7 @@
         "heading": "<p>The <em>Discovery Set</em></p>",
         "text": "Three of our most loved teas in one beautifully curated box. The easiest way to find your ritual. Without committing to a full size first.",
         "price": "$38",
-        "price_note": "CAD · Free shipping",
+        "price_note": "CAD",
         "button_label": "Get the Discovery Set",
         "button_link": "shopify://products/discovery-set",
         "background_color": "",

@@ -393,10 +393,10 @@
   "settings": [
     { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
     { "type": "checkbox", "id": "show_reviews", "label": "Show review stars", "default": true },
-    { "type": "checkbox", "id": "show_cert_badge", "label": "Show 'USDA Organic' image badge", "default": true },
+    { "type": "checkbox", "id": "show_cert_badge", "label": "Show 'USDA Organic' image badge", "default": false },
     { "type": "text", "id": "cert_badge_text", "label": "Image badge text", "default": "USDA Organic" },
     { "type": "text", "id": "bulk_text", "label": "Bulk savings badge text", "default": "Buy 8.8 oz+ and save 10%" },
-    { "type": "text", "id": "price_note", "label": "Price note", "default": "Free shipping on orders over $100" }
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "" }
   ],
   "blocks": [
     {
@@ -429,14 +429,9 @@
     {
       "name": "Divine Product",
       "blocks": [
-        { "type": "trust", "settings": { "icon": "check", "text": "USDA Organic" } },
-        { "type": "trust", "settings": { "icon": "lab",   "text": "Lab tested" } },
-        { "type": "trust", "settings": { "icon": "shield","text": "No fillers added" } },
-        { "type": "trust", "settings": { "icon": "truck", "text": "Free shipping over $100" } },
-        { "type": "meta",  "settings": { "label": "Function", "value": "Focus & Energy" } },
-        { "type": "meta",  "settings": { "label": "Taste",    "value": "Mild, slightly earthy, neutral" } },
-        { "type": "meta",  "settings": { "label": "Origin",   "value": "Sourced direct from organic farms" } },
-        { "type": "meta",  "settings": { "label": "Certifications", "value": "USDA Organic · CCOF Certified · Lab Tested" } }
+        { "type": "meta", "settings": { "label": "Function", "value": "Focus & Energy" } },
+        { "type": "meta", "settings": { "label": "Taste",    "value": "Mild, slightly earthy, neutral" } },
+        { "type": "meta", "settings": { "label": "Origin",   "value": "Sourced direct from organic farms" } }
       ]
     }
   ]

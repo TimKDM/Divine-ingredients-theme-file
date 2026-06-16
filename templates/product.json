@@ -601,27 +601,6 @@
     "divine_product": {
       "type": "divine-product",
       "blocks": {
-        "trust_1": {
-          "type": "trust",
-          "settings": {
-            "icon": "check",
-            "text": "USDA Organic"
-          }
-        },
-        "trust_2": {
-          "type": "trust",
-          "settings": {
-            "icon": "lab",
-            "text": "Lab tested"
-          }
-        },
-        "trust_3": {
-          "type": "trust",
-          "settings": {
-            "icon": "truck",
-            "text": "Free shipping over $100"
-          }
-        },
         "trust_4": {
           "type": "trust",
           "settings": {
@@ -659,9 +638,6 @@
         }
       },
       "block_order": [
-        "trust_1",
-        "trust_2",
-        "trust_3",
         "trust_4",
         "meta_1",
         "meta_2",
@@ -671,10 +647,10 @@
       "settings": {
         "show_breadcrumb": true,
         "show_reviews": true,
-        "show_cert_badge": true,
+        "show_cert_badge": false,
         "cert_badge_text": "USDA Organic",
         "bulk_text": "Buy 8.8 oz+ and save 10%",
-        "price_note": "Free shipping on orders over $100"
+        "price_note": ""
       }
     },
     "divine_product_details": {
@@ -692,10 +668,8 @@
             "row_3_val": "Distinctive. See product description",
             "row_4_key": "Liquor colour",
             "row_4_val": "Varies by blend",
-            "row_5_key": "Certifications",
-            "row_5_val": "USDA Organic · CCOF Certified · Lab Tested",
-            "row_6_key": "Contains caffeine",
-            "row_6_val": "Varies by blend. See product description"
+            "row_5_key": "Contains caffeine",
+            "row_5_val": "Varies by blend. See product description"
           }
         },
         "steps": {
