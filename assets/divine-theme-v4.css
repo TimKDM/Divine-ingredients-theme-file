@@ -610,7 +610,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 .d-disc-h em{font-style:italic;color:var(--d-beige)}
 .d-disc-p{
-  font-size:15px;font-weight:300;line-height:1.85;color:rgba(232,224,204,.75);
+  font-size:15px;font-weight:300;line-height:1.6;color:rgba(232,224,204,.75);
   max-width:380px;margin-bottom:28px;font-family:var(--d-font-sans);
 }
 .d-disc-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
