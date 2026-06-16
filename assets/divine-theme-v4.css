@@ -24,6 +24,58 @@
   --d-font-sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
 }
 
+/* ============================================
+   NUMBERS ALWAYS IN JOST
+   Re-declares every number-bearing family with a unicode-range
+   limited to the digits 0-9, pointing the glyphs at Jost. Because
+   this stylesheet loads AFTER the Google Fonts CSS, these faces win
+   for 0-9 while the original family still renders all other text.
+   Covers serif headings/prices (Cormorant) and the stock Shopify
+   header font (Josefin Sans). Body text is already Jost.
+   ============================================ */
+@font-face{
+  font-family:"Cormorant";
+  font-style:normal;font-weight:100 900;font-display:swap;
+  src:local("Jost"),local("Jost-Regular"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJTVBNIg.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Cormorant";
+  font-style:italic;font-weight:100 900;font-display:swap;
+  src:local("Jost Italic"),local("Jost-Italic"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zJtBhPNqw73oHH7BbQp4-B6XlrZu0FBIokng.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Cormorant Garamond";
+  font-style:normal;font-weight:100 900;font-display:swap;
+  src:local("Jost"),local("Jost-Regular"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJTVBNIg.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Cormorant Garamond";
+  font-style:italic;font-weight:100 900;font-display:swap;
+  src:local("Jost Italic"),local("Jost-Italic"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zJtBhPNqw73oHH7BbQp4-B6XlrZu0FBIokng.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Josefin Sans";
+  font-style:normal;font-weight:100 900;font-display:swap;
+  src:local("Jost"),local("Jost-Regular"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJTVBNIg.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Josefin Sans";
+  font-style:italic;font-weight:100 900;font-display:swap;
+  src:local("Jost Italic"),local("Jost-Italic"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zJtBhPNqw73oHH7BbQp4-B6XlrZu0FBIokng.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+
 /* Apply globally to the body so the entire theme inherits the divine aesthetic */
 body{
   font-family: var(--d-font-sans);
