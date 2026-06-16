@@ -2,6 +2,9 @@
   Divine Product. Main product page hero. Image gallery left, info right.
   Matches the tea + powder mockups. Uses Flux's <product-form> wrapper
   so cart-drawer / cart-notification integrations keep working.
+
+  Facts table: rendered from the divine-product-facts snippet (metafields →
+  product_facts → section default_facts fallback). See snippet for the lookup.
 {%- endcomment -%}
 
 {%- assign current_variant = product.selected_or_first_available_variant -%}
