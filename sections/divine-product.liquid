@@ -3,8 +3,8 @@
   Matches the tea + powder mockups. Uses Flux's <product-form> wrapper
   so cart-drawer / cart-notification integrations keep working.
 
-  Facts table: rendered from the divine-product-facts snippet (metafields →
-  product_facts → section default_facts fallback). See snippet for the lookup.
+  Facts table lives in the Divine Product Details section below (2-column with
+  the how-to-use / steeping block), not in this hero.
 {%- endcomment -%}
 
 {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -221,9 +221,6 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-
-      {%- comment -%} Per-product facts, driven by custom metafields (see snippet) {%- endcomment -%}
-      {% render 'divine-product-facts', product: product, fallback: section.settings.default_facts, style: 'meta' %}
 
     </div>
   </div>
