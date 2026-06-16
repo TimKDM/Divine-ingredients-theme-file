@@ -365,19 +365,19 @@
         "i_1": {
           "type": "include",
           "settings": {
-            "text": "3 handpicked bestselling teas"
+            "text": "Mumbai Masala Chai · Bold & spiced black tea"
           }
         },
         "i_2": {
           "type": "include",
           "settings": {
-            "text": "USDA Organic · Lab tested"
+            "text": "Tulsi Chai · Holy basil infusion, soothing & refreshing"
           }
         },
         "i_4": {
           "type": "include",
           "settings": {
-            "text": "Perfect as a gift"
+            "text": "Herbal Chai · Caffeine-free, calm & comforting"
           }
         }
       },
@@ -387,14 +387,14 @@
         "i_4"
       ],
       "settings": {
-        "image": "shopify://shop_images/herbal_tea_subscription_box.jpg",
-        "caption": "New to Divine Ingredients?",
-        "heading": "<p>The <em>Discovery Set</em></p>",
-        "text": "Three of our most loved teas in one beautifully curated box. The easiest way to find your ritual. Without committing to a full size first.",
+        "image": "shopify://shop_images/chai-edit-box.jpg",
+        "caption": "New from Divine Ingredients",
+        "heading": "<p>The <em>Chai Edit</em></p>",
+        "text": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
         "price": "$38",
         "price_note": "CAD",
-        "button_label": "Get the Discovery Set",
-        "button_link": "shopify://products/discovery-set",
+        "button_label": "Get the Chai Edit",
+        "button_link": "shopify://products/the-chai-edit",
         "background_color": "",
         "padding_top": 56,
         "padding_bottom": 56,
