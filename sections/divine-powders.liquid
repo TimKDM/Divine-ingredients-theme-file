@@ -39,7 +39,8 @@
           {%- if i == 1 -%}
             {%- assign img = section.settings.image -%}
           {%- else -%}
-            {%- assign img = section.settings['image_' | append: i] -%}
+            {%- assign img_key = 'image_' | append: i -%}
+            {%- assign img = section.settings[img_key] -%}
           {%- endif -%}
           <div class="d-powders-tile">
             {%- if img != blank -%}
