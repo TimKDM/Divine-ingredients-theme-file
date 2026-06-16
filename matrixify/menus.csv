@@ -11,7 +11,7 @@ main-menu,MERGE,Main menu,Black Tea,MERGE,COLLECTION,black-teas,/collections/bla
 main-menu,MERGE,Main menu,Herbal Tea,MERGE,COLLECTION,herbal-tea,/collections/herbal-tea,Shop by Type,3
 main-menu,MERGE,Main menu,Chai,MERGE,COLLECTION,chai,/collections/chai,Shop by Type,4
 main-menu,MERGE,Main menu,Matcha,MERGE,COLLECTION,matcha,/collections/matcha,Shop by Type,5
-main-menu,MERGE,Main menu,Iced Tea,MERGE,COLLECTION,iced-teas,/collections/iced-teas,Shop by Type,6
+main-menu,MERGE,Main menu,Iced Tea,MERGE,COLLECTION,iced-tea-collection,/collections/iced-tea-collection,Shop by Type,6
 main-menu,MERGE,Main menu,Boba Boba,MERGE,COLLECTION,boba-boba,/collections/boba-boba,Shop by Type,7
 main-menu,MERGE,Main menu,Powders,MERGE,COLLECTION,all-powders,/collections/all-powders,,3
 main-menu,MERGE,Main menu,Spices & Botanicals,MERGE,COLLECTION,spices-botanicals,/collections/spices-botanicals,,4
