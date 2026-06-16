@@ -161,7 +161,7 @@
         "ritual_immunity": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "immunity",
             "image": "shopify://shop_images/IMG_5095-2_7ad0e501-ece7-4c6e-8da7-f290c1369e45.jpg",
             "tag": "",
             "heading": "Immunity",
@@ -174,7 +174,7 @@
         "ritual_winddown": {
           "type": "category",
           "settings": {
-            "collection": "calm-rituals-hemp-tea",
+            "collection": "wind-down",
             "image": "shopify://shop_images/WT.Sereny1.jpg",
             "tag": "",
             "heading": "Wind Down",
@@ -187,7 +187,7 @@
         "ritual_gutreset": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "gut-reset",
             "image": "shopify://shop_images/WT.Gingess1.jpg",
             "tag": "",
             "heading": "Gut Reset",
@@ -200,7 +200,7 @@
         "ritual_focus": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "focus-and-energy",
             "image": "shopify://shop_images/ST.Genamha1.jpg",
             "tag": "",
             "heading": "Focus & Energy",
@@ -213,7 +213,7 @@
         "ritual_detox": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "detox",
             "image": "shopify://shop_images/HT.Magices1_1.jpg",
             "tag": "",
             "heading": "Detox",
