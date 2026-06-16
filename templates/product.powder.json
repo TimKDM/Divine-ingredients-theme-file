@@ -58,7 +58,8 @@
         "show_cert_badge": true,
         "cert_badge_text": "USDA Organic",
         "bulk_text": "Buy 8.8 oz+ and save 10%",
-        "price_note": "Free shipping on orders over $100"
+        "price_note": "Free shipping on orders over $100",
+        "default_facts": "Product type | Organic Mushroom Powder\nIngredients | 100% Organic. Whole fruiting body\nFillers or carriers | None. Just the mushroom.\nCertifications | USDA Organic · CCOF Certified · Third-party lab tested\nAllergens | Processed in a facility that handles nuts and seeds.\nStorage | Store in a cool, dry place. Reseal after use. Best used within 12 months of opening."
       }
     },
     "divine_product_details": {

@@ -948,27 +948,32 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 
 /* About: CTA band forest */
 .d-cta-band{
-  background:var(--d-forest);padding:72px 80px;display:grid;
+  background:var(--d-beige-lt);padding:72px 80px;display:grid;
   grid-template-columns:1fr 1fr;gap:80px;align-items:center;
 }
 .d-cta-label{
   font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--d-beige-dk);margin-bottom:14px;display:flex;align-items:center;
+  color:var(--d-muted);margin-bottom:14px;display:flex;align-items:center;
   gap:12px;font-family:var(--d-font-sans);
 }
 /* .d-cta-label::before dash decoration removed */
 .d-cta-h{
   font-family:var(--d-font-serif);font-size:clamp(36px,3.6vw,50px);font-weight:300;
-  color:var(--d-beige-lt);line-height:1.06;letter-spacing:-.01em;margin:0 0 14px;
+  color:var(--d-black);line-height:1.06;letter-spacing:-.01em;margin:0 0 14px;
 }
-.d-cta-h em{font-style:italic;color:var(--d-beige)}
+.d-cta-h em{font-style:italic;color:var(--d-forest)}
 .d-cta-p{
-  font-size:15px;font-weight:300;line-height:1.85;color:rgba(232,224,204,.75);
+  font-size:15px;font-weight:300;line-height:1.85;color:var(--d-mid);
   font-family:var(--d-font-sans);
 }
 .d-cta-buttons{
   display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:center;
 }
+/* Off-white band: darken the buttons (scoped so other uses stay light) */
+.d-cta-band .d-btn-hp{background:var(--d-forest);color:var(--d-beige-lt)}
+.d-cta-band .d-btn-hp:hover{background:var(--d-black)}
+.d-cta-band .d-btn-t-lt{color:var(--d-forest);border-bottom-color:rgba(31,48,24,.3)}
+.d-cta-band .d-btn-t-lt:hover{color:var(--d-black)}
 
 /* ============================================
    RESPONSIVE
