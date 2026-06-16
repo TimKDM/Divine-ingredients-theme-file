@@ -11,7 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/Divine-logo-rebrand.png",
     "logo_h1": true,
-    "logo_width": 100,
+    "logo_width": 150,
     "logo_width_mobile": 80,
     "favicon": "shopify://shop_images/Logo_1.svg",
     "show_breadcrumb_nav": true,
@@ -170,8 +170,8 @@
           "background_color": "#ffffff",
           "background_gradient": "",
           "text_color": "#1d1d1d",
-          "button_primary_background_color": "#1F3018",
-          "button_primary_text_color": "#F2EDE0",
+          "button_primary_background_color": "#1f3018",
+          "button_primary_text_color": "#f2ede0",
           "button_secondary_color": "#1d1d1d",
           "color_link": "#1d1d1d"
         }
@@ -200,7 +200,7 @@
       },
       "option-4": {
         "settings": {
-          "background_color": "#D4CAAE",
+          "background_color": "#d4caae",
           "background_gradient": "",
           "text_color": "#1d1d1d",
           "button_primary_background_color": "#1d1d1d",
@@ -211,11 +211,11 @@
       },
       "scheme-22c141e6-ed88-4fad-8ed7-c55e3d604b33": {
         "settings": {
-          "background_color": "#F2EDE0",
+          "background_color": "#f2ede0",
           "background_gradient": "",
           "text_color": "#1d1d1d",
-          "button_primary_background_color": "#1F3018",
-          "button_primary_text_color": "#F2EDE0",
+          "button_primary_background_color": "#1f3018",
+          "button_primary_text_color": "#f2ede0",
           "button_secondary_color": "#1d1d1d",
           "color_link": "#1d1d1d"
         }
