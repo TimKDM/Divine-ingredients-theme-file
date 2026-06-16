@@ -5,6 +5,14 @@ a live Matrixify product export from the store.
 
 ## Files
 
+### One-shot bulk import (recommended)
+
+| File | What it does |
+|---|---|
+| **`divine-bulk-import.xlsx`** | **One XLSX, three sheets.** Merges every change into a single uploadable file: Products (76 rows — all tag updates, descriptions, new drafts, and metafields combined), Smart Collections (17), Menus (17). Upload once via Matrixify → Import → drop the file → Matrixify auto-detects each sheet. |
+
+### Individual CSVs (if you'd rather upload piece-by-piece)
+
 | File | What it does |
 |---|---|
 | `products-update.csv` | **36** existing products. `Command: MERGE` + `Tags Command: MERGE`. Adds Function_* / Type_* / Category_* tags + Body HTML descriptions + metafields for the 24 teas that exist in both the tag and description spreadsheets. |
