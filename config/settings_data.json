@@ -12,7 +12,7 @@
     "logo": "shopify://shop_images/updated-logo-v2.png",
     "logo_h1": true,
     "logo_width": 150,
-    "logo_width_mobile": 80,
+    "logo_width_mobile": 150,
     "favicon": "shopify://shop_images/Logo_1.svg",
     "show_breadcrumb_nav": true,
     "deactivate_animation": false,
