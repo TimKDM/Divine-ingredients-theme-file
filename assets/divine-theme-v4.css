@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 .d-story-sig em{font-style:italic;color:var(--d-forest)}
 
 /* ============================================
-   DISCOVERY SET (dark CTA + image)
+   CHAI EDIT (dark CTA + image)
    ============================================ */
 .d-discovery{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
