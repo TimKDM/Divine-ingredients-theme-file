@@ -305,6 +305,13 @@
     },
     "divine_bestsellers": {
       "type": "divine-products",
+      "blocks": {
+        "pick_tea": { "type": "product", "settings": { "product": "mumbai-chai" } },
+        "pick_powder": { "type": "product", "settings": { "product": "organic-taro-powder" } },
+        "pick_spice": { "type": "product", "settings": { "product": "organic-turmeric-spice" } },
+        "pick_matcha": { "type": "product", "settings": { "product": "supreme-matcha" } }
+      },
+      "block_order": ["pick_tea", "pick_powder", "pick_spice", "pick_matcha"],
       "settings": {
         "caption": "Customer Favorites",
         "title": "The ones people keep coming back for",
