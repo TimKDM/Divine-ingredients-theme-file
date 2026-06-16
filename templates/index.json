@@ -144,7 +144,7 @@
         "t_8"
       ],
       "settings": {
-        "background_color": "#1F3018",
+        "background_color": "",
         "text_color": "",
         "icon_color": "",
         "border_color": "",
@@ -238,7 +238,7 @@
         "cta_label": "Browse all teas",
         "cta_link": "shopify://collections/tea",
         "use_alt_bg": false,
-        "background_color": "#FDFCF8",
+        "background_color": "",
         "text_color": "",
         "accent_color": "",
         "padding_top": 96,
@@ -294,7 +294,7 @@
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
         "button_label": "Browse all powders",
         "button_link": "shopify://collections/organic-superfood-powders",
-        "background_color": "#F2EDE0",
+        "background_color": "",
         "padding_top": 88,
         "padding_bottom": 88,
         "margin_top": 0,
@@ -307,7 +307,7 @@
       "type": "divine-products",
       "settings": {
         "caption": "Customer Favorites",
-        "title": "Our divine bestsellers",
+        "title": "The ones people keep coming back for",
         "collection": "favorite-products",
         "products_to_show": 4,
         "show_price": false,
@@ -317,7 +317,7 @@
         "view_all_label": "View all products",
         "view_all_link": "shopify://collections",
         "use_alt_bg": false,
-        "background_color": "#FDFCF8",
+        "background_color": "",
         "text_color": "",
         "accent_color": "",
         "card_background_color": "",
@@ -347,7 +347,7 @@
         "cap_name": "Preet Bhullar",
         "cap_role": "Microbiologist & Founder",
         "use_alt_bg": false,
-        "background_color": "#FDFCF8",
+        "background_color": "",
         "text_color": "",
         "accent_color": "",
         "padding_top": 96,
@@ -362,6 +362,18 @@
     "divine_discovery": {
       "type": "divine-discovery",
       "blocks": {
+        "include_y9tppw": {
+          "type": "include",
+          "settings": {
+            "text": "3 handpicked bestselling teas"
+          }
+        },
+        "include_x7zAb6": {
+          "type": "include",
+          "settings": {
+            "text": "3 handpicked bestselling teas"
+          }
+        },
         "i_1": {
           "type": "include",
           "settings": {
@@ -382,17 +394,18 @@
         }
       },
       "block_order": [
+        "include_y9tppw",
+        "include_x7zAb6",
         "i_1",
         "i_2",
         "i_4"
       ],
       "settings": {
-        "image": "shopify://shop_images/the-chai-edit.jpg",
-        "image_2": "shopify://shop_images/chai-box.jpg",
-        "image_3": "shopify://shop_images/iStock-1257446225.jpg",
+        "image": "shopify://shop_images/chai-box.jpg",
+        "image_2": "shopify://shop_images/tea-chai-gift.png",
+        "image_3": "shopify://shop_images/tea-chai-gift3.png",
         "image_4": "shopify://shop_images/iStock-1464850035.jpg",
-        "side_image": "shopify://shop_images/logo-divine-ingredients-2026.png",
-        "caption": "The best way to start your Divine journey.",
+        "caption": "New from Divine Ingredients",
         "heading": "<p>The <em>Chai Edit</em></p>",
         "text": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
         "price": "",
@@ -400,8 +413,8 @@
         "button_label": "Get the Chai Edit",
         "button_link": "shopify://products/the-chai-edit",
         "background_color": "#1F3018",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 56,
+        "padding_bottom": 56,
         "margin_top": 0,
         "margin_bottom": 48,
         "heading_font_size": 50
@@ -455,7 +468,7 @@
         "privacy_text": "No spam. Unsubscribe anytime.",
         "show_first_name": false,
         "name_placeholder": "First name",
-        "background_color": "#F2EDE0",
+        "background_color": "",
         "text_color": "",
         "button_bg": "",
         "button_color": "",
@@ -533,7 +546,7 @@
       "settings": {
         "heading": "Certified by",
         "use_alt_bg": false,
-        "background_color": "#111410",
+        "background_color": "",
         "padding_top": 28,
         "padding_bottom": 28,
         "margin_top": 0,
@@ -591,7 +604,7 @@
         "button_link_1": "shopify://pages/wholesale",
         "button_label_2": "",
         "button_link_2": "",
-        "background_color": "#FDFCF8",
+        "background_color": "",
         "padding_top": 56,
         "padding_bottom": 56,
         "margin_top": 0,
