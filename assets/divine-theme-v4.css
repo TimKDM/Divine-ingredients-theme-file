@@ -316,11 +316,44 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    ============================================ */
 .d-powders{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
+  align-items:stretch;
 }
 .d-powders-img-wrap{position:relative;overflow:hidden;min-height:540px}
 .d-powders-img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.8) saturate(.9);
+}
+
+/* Powders collage layout - 2x2 equal square tiles, mirrors discovery collage */
+.d-powders--collage .d-powders-img-wrap{
+  min-height:0;
+  background:var(--d-white);
+}
+.d-powders-collage{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:4px;
+  width:100%;
+  height:100%;
+}
+.d-powders-tile{
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:1 / 1;
+  background:var(--d-beige-lt);
+}
+.d-powders-tile-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:brightness(.92) saturate(.95);
+  transition:transform .5s ease,filter .4s;
+}
+.d-powders-tile:hover .d-powders-tile-img{
+  transform:scale(1.04);
+  filter:brightness(1) saturate(1);
 }
 .d-powders-body{
   padding:88px 72px;display:flex;flex-direction:column;
@@ -465,9 +498,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 .d-disc-body{
   padding:60px 56px;display:flex;flex-direction:column;
-  justify-content:center;background:var(--d-black);order:2;
+  justify-content:center;background:var(--d-black);order:1;
 }
-.d-disc-img-wrap{position:relative;overflow:hidden;min-height:270px;order:1;box-sizing:border-box}
+.d-disc-img-wrap{position:relative;overflow:hidden;min-height:270px;order:2;box-sizing:border-box}
 .d-disc-side-img-wrap{margin-bottom:24px;display:flex;align-items:center}
 .d-disc-side-img{
   display:block;width:auto;height:auto;

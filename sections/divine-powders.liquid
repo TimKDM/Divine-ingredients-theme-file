@@ -20,9 +20,63 @@
   }
 {%- endstyle -%}
 
-<section class="d-powders d-reveal">
+{%- liquid
+  assign use_collage = false
+  if section.settings.image_2 != blank or section.settings.image_3 != blank or section.settings.image_4 != blank
+    assign use_collage = true
+  endif
+-%}
+
+<section class="d-powders d-reveal{% if use_collage %} d-powders--collage{% endif %}">
   <div class="d-powders-img-wrap">
-    {%- if section.settings.image != blank -%}
+    {%- if use_collage -%}
+      <div class="d-powders-collage">
+        <div class="d-powders-tile">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-powders-tile-img', alt: section.settings.image.alt | default: section.settings.title
+            }}
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'd-powders-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-powders-tile">
+          {%- if section.settings.image_2 != blank -%}
+            {{ section.settings.image_2 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-powders-tile-img', alt: section.settings.image_2.alt
+            }}
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'd-powders-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-powders-tile">
+          {%- if section.settings.image_3 != blank -%}
+            {{ section.settings.image_3 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-powders-tile-img', alt: section.settings.image_3.alt
+            }}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'd-powders-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-powders-tile">
+          {%- if section.settings.image_4 != blank -%}
+            {{ section.settings.image_4 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-powders-tile-img', alt: section.settings.image_4.alt
+            }}
+          {%- else -%}
+            {{ 'product-2' | placeholder_svg_tag: 'd-powders-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    {%- elsif section.settings.image != blank -%}
       {{ section.settings.image | image_url: width: 1400 | image_tag:
         loading: 'lazy', widths: '500, 750, 1000, 1400', sizes: '(min-width: 1100px) 50vw, 100vw',
         class: 'd-powders-img', alt: section.settings.image.alt | default: section.settings.title
@@ -75,7 +129,22 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Left-side image"
+      "label": "Image 1 (single image, or top-left collage tile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2 (top-right tile) — adding this triggers 2×2 collage layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3 (bottom-left tile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4 (bottom-right tile)"
     },
     {
       "type": "text",
