@@ -14,11 +14,20 @@
     "divine_footer": {
       "type": "divine-footer",
       "blocks": {
-        "menu_column_3pixTp": {
+        "menu_by_function": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Shop by Function",
+            "menu": "footer-by-function",
+            "heading_2": "",
+            "menu_2": ""
+          }
+        },
+        "menu_shop": {
           "type": "menu_column",
           "settings": {
             "heading": "Shop",
-            "menu": "shop-by-lifestyle",
+            "menu": "footer-by-category",
             "heading_2": "",
             "menu_2": ""
           }
@@ -34,7 +43,8 @@
         }
       },
       "block_order": [
-        "menu_column_3pixTp",
+        "menu_by_function",
+        "menu_shop",
         "menu_help"
       ],
       "settings": {
