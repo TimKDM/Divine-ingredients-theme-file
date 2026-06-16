@@ -44,11 +44,14 @@
         "tiktok": "https://tiktok.com",
         "pinterest": "https://pinterest.com",
         "facebook": "https://facebook.com",
+        "youtube": "",
+        "linkedin": "",
+        "x_twitter": "",
         "privacy_link": "",
         "terms_link": "",
         "contact_link": "",
         "locale_text": "CA ($) · US ($)",
-        "background_color": "",
+        "background_color": "#1F3018",
         "padding_top": 72,
         "padding_bottom": 36
       }
