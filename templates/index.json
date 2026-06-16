@@ -307,7 +307,7 @@
       "type": "divine-products",
       "settings": {
         "caption": "Customer Favorites",
-        "title": "The ones people keep coming back for",
+        "title": "Our divine bestsellers",
         "collection": "favorite-products",
         "products_to_show": 4,
         "show_price": false,
@@ -388,9 +388,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/chai-edit-box.jpg",
-        "caption": "New from Divine Ingredients",
+        "caption": "The best way to start your Divine journey.",
         "heading": "<p>The <em>Chai Edit</em></p>",
-        "text": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
+        "text": "Three of our most loved chai and herbal blends in one beautifully curated box. The easiest way to find your ritual.",
         "price": "$38",
         "price_note": "CAD",
         "button_label": "Get the Chai Edit",

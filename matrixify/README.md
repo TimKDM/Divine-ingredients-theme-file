@@ -7,8 +7,9 @@ a live Matrixify product export from the store.
 
 | File | What it does |
 |---|---|
-| `products-update.csv` | **36** existing products. `Command: MERGE` + `Tags Command: MERGE`. Adds Function_* / Type_* / Category_* tags. Existing tags preserved. |
-| `products-new.csv` | **8** new tea products created in `draft` mode with blank Body HTML / SKU / Price. Tags + smart collection memberships are pre-filled from the spreadsheets. |
+| `products-update.csv` | **36** existing products. `Command: MERGE` + `Tags Command: MERGE`. Adds Function_* / Type_* / Category_* tags + Body HTML descriptions + metafields for the 24 teas that exist in both the tag and description spreadsheets. |
+| `products-descriptions.csv` | **62** products with full Body HTML descriptions + 4 metafields (`tasting_notes`, `best_enjoyed`, `origin`, `tea_type`) from Alisha's Product Descriptions sheet. Covers teas, powders, and spices/botanicals. Upload separately if you only want descriptions without tag changes. |
+| `products-new.csv` | **8** new tea products created in `draft` mode. 6 of them now have body copy + metafields from the descriptions sheet. The remaining 2 need merchant input. |
 | `collections.csv` | **17** smart collections (5 By Function, 7 By Type incl. Boba Boba, 5 category-level). |
 | `menus.csv` | Main menu: Shop by Function submenu, Shop by Type submenu (Hemp/Oolong hidden), Powders / Spices / Founders' top-level. |
 | `products.csv` | Original full import file from the very first generation. Kept for reference only. |
@@ -64,6 +65,8 @@ per product to override the section-block defaults.
 |---|---|---|---|
 | `custom.tea_type` | single line | Tea type | "Premium ceremonial-grade Japanese matcha" |
 | `custom.ingredients` | multi line | Ingredients | "100% organic Camellia sinensis (green tea)" |
+| `custom.tasting_notes` | single line | Tasting notes | "Fresh, grassy, lightly sweet with a clean finish" |
+| `custom.best_enjoyed` | single line | Best enjoyed | "Morning or afternoon, on its own, never with milk" |
 | `custom.aroma` | single line | Aroma | "Grassy, vegetal, with a sweet finish" |
 | `custom.liquor_colour` | single line | Liquor colour | "Vibrant jade green" |
 | `custom.certifications` | single line | Certifications | "USDA Organic · CCOF Certified · Lab Tested" |
