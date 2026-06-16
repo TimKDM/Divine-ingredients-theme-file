@@ -1004,15 +1004,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    ============================================ */
 
 /* Outer wrapper background + bottom border.
-   Forest-green header. The merchant's logo PNG has a solid white card, so
-   placing it on this dark band makes it pop dramatically. Menu links and
-   icons flip to beige-lt so they read against the dark wrapper. */
+   The merchant's logo PNG is transparent (forest-green DIVINE letters,
+   gold INGREDIENTS, no solid card). So the header needs to be LIGHT to
+   keep both colors readable. A near-white cream gives the dark green
+   letters max contrast; gold also stays legible. */
 .shopify-section-header-sticky .header-wrapper,
 .header-wrapper{
-  background: rgba(31,48,24,.97) !important;
+  background: rgba(253,252,248,.97) !important;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(232,224,204,.18) !important;
+  border-bottom: 1px solid var(--d-beige-dk) !important;
   box-shadow: none !important;
 }
 
@@ -1024,7 +1025,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   align-items: center;
 }
 
-/* Logo (text fallback when no image is set) - Cormorant serif, light cream */
+/* Logo (text fallback when no image is set) - Cormorant serif, forest green */
 .header__heading,
 .header__heading-link,
 .header__heading-link .h2,
@@ -1032,13 +1033,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   font-family: var(--d-font-serif) !important;
   font-size: 21px !important;
   font-weight: 400 !important;
-  color: var(--d-beige-lt) !important;
+  color: var(--d-forest) !important;
   letter-spacing: .03em !important;
   text-transform: none !important;
   line-height: 1 !important;
 }
 .header__heading-link em{font-style: italic}
-.header__heading-link:hover{color: var(--d-beige) !important}
+.header__heading-link:hover{color: var(--d-black) !important}
 
 /* Inline desktop menu links */
 .header__inline-menu .list-menu__item,
@@ -1051,16 +1052,16 @@ nav.header__inline-menu a{
   font-size: 13px !important;
   font-weight: 400 !important;
   letter-spacing: .03em !important;
-  color: rgba(232,224,204,.85) !important;
+  color: var(--d-mid) !important;
   text-transform: none !important;
   padding: 8px 0 !important;
 }
 .header__inline-menu a:hover,
 .header__menu-item:hover{
-  color: var(--d-beige-lt) !important;
+  color: var(--d-black) !important;
 }
 .header__active-menu-item{
-  color: var(--d-beige-lt) !important;
+  color: var(--d-black) !important;
   font-weight: 500 !important;
   border-bottom: none !important;
   text-decoration: none !important;
@@ -1069,7 +1070,7 @@ nav.header__inline-menu a{
 /* Mega menu trigger arrow color */
 .header__menu-item .icon-caret,
 .header__inline-menu .icon-caret{
-  color: rgba(232,224,204,.7) !important;
+  color: var(--d-mid) !important;
 }
 
 /* Header icons (cart, search, account, hamburger) - make round 44x44 */
@@ -1093,7 +1094,7 @@ summary.header__icon{
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: var(--d-beige-lt) !important;
+  color: var(--d-mid) !important;
   background: transparent !important;
   transition: background .18s, color .18s !important;
 }
@@ -1103,8 +1104,8 @@ summary.header__icon{
 .header__icon--cart:hover,
 .header__icon--menu:hover,
 summary.header__icon:hover{
-  background: rgba(232,224,204,.12) !important;
-  color: var(--d-beige-lt) !important;
+  background: var(--d-beige) !important;
+  color: var(--d-black) !important;
 }
 .header__icon svg,
 .header__icon--cart svg,
@@ -1141,7 +1142,7 @@ summary.header__icon:hover{
 .disclosure__button.localization-form__select{
   font-family: var(--d-font-sans) !important;
   font-size: 12px !important;
-  color: rgba(232,224,204,.7) !important;
+  color: var(--d-muted) !important;
   text-transform: uppercase !important;
   letter-spacing: .06em !important;
 }
