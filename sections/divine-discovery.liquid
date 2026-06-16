@@ -21,7 +21,71 @@
   }
 {%- endstyle -%}
 
-<section class="d-discovery d-reveal">
+{%- liquid
+  assign use_collage = false
+  if section.settings.image_2 != blank or section.settings.image_3 != blank or section.settings.image_4 != blank
+    assign use_collage = true
+  endif
+-%}
+
+<section class="d-discovery d-reveal{% if use_collage %} d-discovery--collage{% endif %}">
+  <div class="d-disc-img-wrap">
+    {%- if use_collage -%}
+      <div class="d-disc-collage">
+        <div class="d-disc-tile">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-disc-tile-img', alt: section.settings.image.alt | default: section.settings.heading
+            }}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'd-disc-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-disc-tile">
+          {%- if section.settings.image_2 != blank -%}
+            {{ section.settings.image_2 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-disc-tile-img', alt: section.settings.image_2.alt
+            }}
+          {%- else -%}
+            {{ 'product-2' | placeholder_svg_tag: 'd-disc-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-disc-tile">
+          {%- if section.settings.image_3 != blank -%}
+            {{ section.settings.image_3 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-disc-tile-img', alt: section.settings.image_3.alt
+            }}
+          {%- else -%}
+            {{ 'product-3' | placeholder_svg_tag: 'd-disc-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        <div class="d-disc-tile">
+          {%- if section.settings.image_4 != blank -%}
+            {{ section.settings.image_4 | image_url: width: 700 | image_tag:
+              loading: 'lazy', widths: '350, 500, 700',
+              sizes: '(min-width: 1100px) 25vw, 50vw',
+              class: 'd-disc-tile-img', alt: section.settings.image_4.alt
+            }}
+          {%- else -%}
+            {{ 'product-4' | placeholder_svg_tag: 'd-disc-tile-img placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    {%- elsif section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 1400 | image_tag:
+        loading: 'lazy', widths: '500, 750, 1000, 1400', sizes: '(min-width: 1100px) 50vw, 100vw',
+        class: 'd-disc-img', alt: section.settings.image.alt | default: section.settings.heading
+      }}
+    {%- else -%}
+      {{ 'product-2' | placeholder_svg_tag: 'd-disc-img placeholder-svg' }}
+    {%- endif -%}
+  </div>
   <div class="d-disc-body">
     {%- if section.settings.caption != blank -%}
       <div class="d-disc-label">{{ section.settings.caption }}</div>
@@ -56,16 +120,6 @@
       <a href="{{ section.settings.button_link | default: '/products/discovery-set' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
     {%- endif -%}
   </div>
-  <div class="d-disc-img-wrap">
-    {%- if section.settings.image != blank -%}
-      {{ section.settings.image | image_url: width: 1400 | image_tag:
-        loading: 'lazy', widths: '500, 750, 1000, 1400', sizes: '(min-width: 1100px) 50vw, 100vw',
-        class: 'd-disc-img', alt: section.settings.image.alt | default: section.settings.heading
-      }}
-    {%- else -%}
-      {{ 'product-2' | placeholder_svg_tag: 'd-disc-img placeholder-svg' }}
-    {%- endif -%}
-  </div>
 </section>
 
 {% schema %}
@@ -78,7 +132,22 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Right-side image"
+      "label": "Image 1 (single image, or top-left collage tile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2 (top-right tile) — adding this triggers 2×2 collage layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3 (bottom-left tile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4 (bottom-right tile)"
     },
     {
       "type": "text",

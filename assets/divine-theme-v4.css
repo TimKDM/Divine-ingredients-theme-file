@@ -461,15 +461,49 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    ============================================ */
 .d-discovery{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
+  align-items:stretch;
 }
 .d-disc-body{
   padding:88px 72px;display:flex;flex-direction:column;
-  justify-content:center;background:var(--d-black);order:1;
+  justify-content:center;background:var(--d-black);order:2;
 }
-.d-disc-img-wrap{position:relative;overflow:hidden;min-height:380px;order:2;box-sizing:border-box}
+.d-disc-img-wrap{position:relative;overflow:hidden;min-height:380px;order:1;box-sizing:border-box}
 .d-disc-img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.82) saturate(.9);
+}
+
+/* Collage layout - 2x2 equal square tiles on the left */
+.d-discovery--collage .d-disc-img-wrap{
+  min-height:0;
+  padding:0;
+  background:var(--d-white);
+}
+.d-disc-collage{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:4px;
+  width:100%;
+  height:100%;
+}
+.d-disc-tile{
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:1 / 1;
+  background:var(--d-beige-lt);
+}
+.d-disc-tile-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:brightness(.92) saturate(.95);
+  transition:transform .5s ease,filter .4s;
+}
+.d-disc-tile:hover .d-disc-tile-img{
+  transform:scale(1.04);
+  filter:brightness(1) saturate(1);
 }
 .d-disc-label{
   font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
