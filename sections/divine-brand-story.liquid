@@ -1,6 +1,6 @@
 {%- style -%}
   #shopify-section-{{ section.id }} .d-story{
-    {% if section.settings.background_color != blank %}background-color: {{ section.settings.background_color }};{% endif %}
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}background-color: {{ section.settings.background_color }};{% endif %}
     padding-top: 0;
     padding-bottom: 0;
     margin-top: {{ section.settings.margin_top }}px;

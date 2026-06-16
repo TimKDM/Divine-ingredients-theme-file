@@ -4,7 +4,7 @@
 
 {%- style -%}
   #shopify-section-{{ section.id }} .d-nav{
-    {% if section.settings.background_color != blank %}background:{{ section.settings.background_color }};{% endif %}
+    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}background:{{ section.settings.background_color }};{% endif %}
     height: {{ section.settings.nav_height | default: 64 }}px;
   }
   {% if section.settings.text_color != blank %}
