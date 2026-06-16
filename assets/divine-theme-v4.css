@@ -45,6 +45,23 @@
       url("https://fonts.gstatic.com/s/jost/v20/92zJtBhPNqw73oHH7BbQp4-B6XlrZu0FBIokng.woff2") format("woff2");
   unicode-range:U+0030-0039;
 }
+/* Josefin Sans is the active Shopify body/heading font, so it renders
+   numbers on stock pages (cart, collection grids, search). Remap those
+   digits to Jost too, so every number across the site matches. */
+@font-face{
+  font-family:"Josefin Sans";
+  font-style:normal;font-weight:100 900;font-display:swap;
+  src:local("Jost"),local("Jost-Regular"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJTVBNIg.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
+@font-face{
+  font-family:"Josefin Sans";
+  font-style:italic;font-weight:100 900;font-display:swap;
+  src:local("Jost Italic"),local("Jost-Italic"),
+      url("https://fonts.gstatic.com/s/jost/v20/92zJtBhPNqw73oHH7BbQp4-B6XlrZu0FBIokng.woff2") format("woff2");
+  unicode-range:U+0030-0039;
+}
 
 /* Apply globally to the body so the entire theme inherits the divine aesthetic */
 body{
