@@ -379,6 +379,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 .d-powders-collage--9{
   grid-template-columns:repeat(3, 1fr);
   grid-template-rows:repeat(3, 1fr);
+  background:var(--d-forest);
+  gap:6px;
+  padding:6px;
+  box-sizing:border-box;
 }
 .d-powders-tile{
   position:relative;
