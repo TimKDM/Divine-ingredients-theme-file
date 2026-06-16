@@ -1004,14 +1004,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    ============================================ */
 
 /* Outer wrapper background + bottom border.
-   Slightly darker beige than the section bg so the logo (which sits on its
-   own near-white square) stands out instead of blending into the header. */
+   Forest-green header. The merchant's logo PNG has a solid white card, so
+   placing it on this dark band makes it pop dramatically. Menu links and
+   icons flip to beige-lt so they read against the dark wrapper. */
 .shopify-section-header-sticky .header-wrapper,
 .header-wrapper{
-  background: rgba(232,224,204,.97) !important;
+  background: rgba(31,48,24,.97) !important;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--d-beige-dk) !important;
+  border-bottom: 1px solid rgba(232,224,204,.18) !important;
   box-shadow: none !important;
 }
 
@@ -1023,7 +1024,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   align-items: center;
 }
 
-/* Logo - Cormorant serif, forest green */
+/* Logo (text fallback when no image is set) - Cormorant serif, light cream */
 .header__heading,
 .header__heading-link,
 .header__heading-link .h2,
@@ -1031,13 +1032,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   font-family: var(--d-font-serif) !important;
   font-size: 21px !important;
   font-weight: 400 !important;
-  color: var(--d-forest) !important;
+  color: var(--d-beige-lt) !important;
   letter-spacing: .03em !important;
   text-transform: none !important;
   line-height: 1 !important;
 }
 .header__heading-link em{font-style: italic}
-.header__heading-link:hover{color: var(--d-black) !important}
+.header__heading-link:hover{color: var(--d-beige) !important}
 
 /* Inline desktop menu links */
 .header__inline-menu .list-menu__item,
@@ -1050,16 +1051,16 @@ nav.header__inline-menu a{
   font-size: 13px !important;
   font-weight: 400 !important;
   letter-spacing: .03em !important;
-  color: var(--d-mid) !important;
+  color: rgba(232,224,204,.85) !important;
   text-transform: none !important;
   padding: 8px 0 !important;
 }
 .header__inline-menu a:hover,
 .header__menu-item:hover{
-  color: var(--d-black) !important;
+  color: var(--d-beige-lt) !important;
 }
 .header__active-menu-item{
-  color: var(--d-black) !important;
+  color: var(--d-beige-lt) !important;
   font-weight: 500 !important;
   border-bottom: none !important;
   text-decoration: none !important;
@@ -1068,7 +1069,7 @@ nav.header__inline-menu a{
 /* Mega menu trigger arrow color */
 .header__menu-item .icon-caret,
 .header__inline-menu .icon-caret{
-  color: var(--d-mid) !important;
+  color: rgba(232,224,204,.7) !important;
 }
 
 /* Header icons (cart, search, account, hamburger) - make round 44x44 */
@@ -1092,7 +1093,7 @@ summary.header__icon{
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: var(--d-mid) !important;
+  color: var(--d-beige-lt) !important;
   background: transparent !important;
   transition: background .18s, color .18s !important;
 }
@@ -1102,8 +1103,8 @@ summary.header__icon{
 .header__icon--cart:hover,
 .header__icon--menu:hover,
 summary.header__icon:hover{
-  background: var(--d-beige) !important;
-  color: var(--d-black) !important;
+  background: rgba(232,224,204,.12) !important;
+  color: var(--d-beige-lt) !important;
 }
 .header__icon svg,
 .header__icon--cart svg,
@@ -1140,7 +1141,7 @@ summary.header__icon:hover{
 .disclosure__button.localization-form__select{
   font-family: var(--d-font-sans) !important;
   font-size: 12px !important;
-  color: var(--d-muted) !important;
+  color: rgba(232,224,204,.7) !important;
   text-transform: uppercase !important;
   letter-spacing: .06em !important;
 }
