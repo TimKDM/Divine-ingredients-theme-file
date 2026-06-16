@@ -607,42 +607,10 @@
             "icon": "farm",
             "text": "Direct from farm"
           }
-        },
-        "meta_1": {
-          "type": "meta",
-          "settings": {
-            "label": "Flavours",
-            "value": "See product description"
-          }
-        },
-        "meta_2": {
-          "type": "meta",
-          "settings": {
-            "label": "Best enjoyed",
-            "value": "Morning · Afternoon"
-          }
-        },
-        "meta_3": {
-          "type": "meta",
-          "settings": {
-            "label": "Caffeine",
-            "value": "Varies by blend"
-          }
-        },
-        "meta_4": {
-          "type": "meta",
-          "settings": {
-            "label": "Origin",
-            "value": "Sourced direct from organic farms"
-          }
         }
       },
       "block_order": [
-        "trust_4",
-        "meta_1",
-        "meta_2",
-        "meta_3",
-        "meta_4"
+        "trust_4"
       ],
       "settings": {
         "show_breadcrumb": true,
