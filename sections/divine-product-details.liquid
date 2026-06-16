@@ -25,6 +25,12 @@
 
   Then on each product, the "Metafields" panel exposes these for per-product editing.
   When a metafield is blank, the section block's default settings are used.
+
+  KV TABLE per-product rows are driven by individual custom metafields when present
+  (preferred over product_facts / block defaults). Recognised keys:
+    tea  : tea_type, tasting_notes, best_enjoyed, aroma, liquor_colour, contains_caffeine
+    powder: product_type, active_compounds, fillers, serving
+    shared: ingredients, certifications, origin, allergens, storage
 {%- endcomment -%}
 
 {%- assign nl = '
@@ -174,8 +180,14 @@
               if product.metafields.custom.tea_type != blank
                 assign individual_facts = individual_facts | append: 'Tea type | ' | append: product.metafields.custom.tea_type | append: nl
               endif
+              if product.metafields.custom.product_type != blank
+                assign individual_facts = individual_facts | append: 'Product type | ' | append: product.metafields.custom.product_type | append: nl
+              endif
               if product.metafields.custom.ingredients != blank
                 assign individual_facts = individual_facts | append: 'Ingredients | ' | append: product.metafields.custom.ingredients | append: nl
+              endif
+              if product.metafields.custom.active_compounds != blank
+                assign individual_facts = individual_facts | append: 'Active compounds | ' | append: product.metafields.custom.active_compounds | append: nl
               endif
               if product.metafields.custom.tasting_notes != blank
                 assign individual_facts = individual_facts | append: 'Tasting notes | ' | append: product.metafields.custom.tasting_notes | append: nl
@@ -188,6 +200,12 @@
               endif
               if product.metafields.custom.liquor_colour != blank
                 assign individual_facts = individual_facts | append: 'Liquor colour | ' | append: product.metafields.custom.liquor_colour | append: nl
+              endif
+              if product.metafields.custom.fillers != blank
+                assign individual_facts = individual_facts | append: 'Fillers or carriers | ' | append: product.metafields.custom.fillers | append: nl
+              endif
+              if product.metafields.custom.serving != blank
+                assign individual_facts = individual_facts | append: 'Serving | ' | append: product.metafields.custom.serving | append: nl
               endif
               if product.metafields.custom.certifications != blank
                 assign individual_facts = individual_facts | append: 'Certifications | ' | append: product.metafields.custom.certifications | append: nl
