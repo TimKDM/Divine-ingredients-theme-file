@@ -466,7 +466,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   padding:88px 72px;display:flex;flex-direction:column;
   justify-content:center;background:var(--d-black);order:1;
 }
-.d-disc-img-wrap{position:relative;overflow:hidden;min-height:520px;order:2;box-sizing:border-box}
+.d-disc-img-wrap{position:relative;overflow:hidden;min-height:380px;order:2;box-sizing:border-box}
 .d-disc-img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.82) saturate(.9);
@@ -1003,13 +1003,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    it to match the divine-nav mockup design.
    ============================================ */
 
-/* Outer wrapper background + bottom border */
+/* Outer wrapper background + bottom border.
+   Slightly darker beige than the section bg so the logo (which sits on its
+   own near-white square) stands out instead of blending into the header. */
 .shopify-section-header-sticky .header-wrapper,
 .header-wrapper{
-  background: rgba(242,237,224,.97) !important;
+  background: rgba(232,224,204,.97) !important;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--d-border) !important;
+  border-bottom: 1px solid var(--d-beige-dk) !important;
   box-shadow: none !important;
 }
 
