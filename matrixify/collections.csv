@@ -1,18 +1,18 @@
-Handle,Command,Title,Body HTML,Sort Order,Template Suffix,Published,Disjunctive,Rule: Product Column,Rule: Relation,Rule: Condition,SEO Title,SEO Description
-immunity,MERGE,Immunity,Teas chosen for immunity.,best-selling,,TRUE,FALSE,Tag,Equals,Function_Immunity,Immunity,Teas chosen for immunity.
-wind-down,MERGE,Wind down,Teas chosen for wind down.,best-selling,,TRUE,FALSE,Tag,Equals,Function_Wind down,Wind down,Teas chosen for wind down.
-gut-reset,MERGE,Gut Reset,Teas chosen for gut reset.,best-selling,,TRUE,FALSE,Tag,Equals,Function_Gut Reset,Gut Reset,Teas chosen for gut reset.
-focus-and-energy,MERGE,Focus and Energy,Teas chosen for focus and energy.,best-selling,,TRUE,FALSE,Tag,Equals,Function_Focus and Energy,Focus and Energy,Teas chosen for focus and energy.
-detox,MERGE,Detox,Teas chosen for detox.,best-selling,,TRUE,FALSE,Tag,Equals,Function_Detox,Detox,Teas chosen for detox.
-green-tea,MERGE,Green Tea,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Green Tea,Green Tea,
-black-tea,MERGE,Black Tea,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Black Tea,Black Tea,
-herbal-tea,MERGE,Herbal Tea,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Herbal Tea,Herbal Tea,
-chai,MERGE,Chai,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Chai,Chai,
-matcha,MERGE,Matcha,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Matcha,Matcha,
-iced-tea,MERGE,Iced Tea,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Iced Tea,Iced Tea,
-boba-boba,MERGE,Boba Boba,,best-selling,,TRUE,FALSE,Tag,Equals,Type_Boba Boba,Boba Boba,
-all-teas,MERGE,All Teas,Every tea in the Divine catalog.,best-selling,,TRUE,FALSE,Tag,Equals,Category_Tea,All Teas,Every tea in the Divine catalog.
-all-powders,MERGE,All Powders,Superfood powders.,best-selling,,TRUE,FALSE,Tag,Equals,Category_Powder,All Powders,Superfood powders.
-spices-botanicals,MERGE,Spices & Botanicals,Single-ingredient botanicals and culinary spices.,best-selling,,TRUE,FALSE,Tag,Equals,Category_Spices_Botanicals,Spices & Botanicals,Single-ingredient botanicals and culinary spices.
-all-organic,MERGE,All Organic,Every certified-organic product.,best-selling,,TRUE,FALSE,Tag,Equals,Organic,All Organic,Every certified-organic product.
-founders-favourites,MERGE,Founders' Favourites,Hand-picked by the Divine team.,best-selling,,TRUE,FALSE,Tag,Equals,Founders_Favourite,Founders' Favourites,Hand-picked by the Divine team.
+Handle,Command,Title,Body HTML,Sort Order,Template Suffix,Published,Must Match,Rule: Product Column,Rule: Relation,Rule: Condition,SEO Title,SEO Description
+immunity,MERGE,Immunity,Teas chosen for immunity.,Best Selling,,True,all conditions,Tag,Equals,Function_Immunity,Immunity,Teas chosen for immunity.
+wind-down,MERGE,Wind down,Teas chosen for wind down.,Best Selling,,True,all conditions,Tag,Equals,Function_Wind down,Wind down,Teas chosen for wind down.
+gut-reset,MERGE,Gut Reset,Teas chosen for gut reset.,Best Selling,,True,all conditions,Tag,Equals,Function_Gut Reset,Gut Reset,Teas chosen for gut reset.
+focus-and-energy,MERGE,Focus and Energy,Teas chosen for focus and energy.,Best Selling,,True,all conditions,Tag,Equals,Function_Focus and Energy,Focus and Energy,Teas chosen for focus and energy.
+detox,MERGE,Detox,Teas chosen for detox.,Best Selling,,True,all conditions,Tag,Equals,Function_Detox,Detox,Teas chosen for detox.
+green-tea,MERGE,Green Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Green Tea,Green Tea,
+black-tea,MERGE,Black Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Black Tea,Black Tea,
+herbal-tea,MERGE,Herbal Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Herbal Tea,Herbal Tea,
+chai,MERGE,Chai,,Best Selling,,True,all conditions,Tag,Equals,Type_Chai,Chai,
+matcha,MERGE,Matcha,,Best Selling,,True,all conditions,Tag,Equals,Type_Matcha,Matcha,
+iced-tea,MERGE,Iced Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Iced Tea,Iced Tea,
+boba-boba,MERGE,Boba Boba,,Best Selling,,True,all conditions,Tag,Equals,Type_Boba Boba,Boba Boba,
+all-teas,MERGE,All Teas,Every tea in the Divine catalog.,Best Selling,,True,all conditions,Tag,Equals,Category_Tea,All Teas,Every tea in the Divine catalog.
+all-powders,MERGE,All Powders,Superfood powders.,Best Selling,,True,all conditions,Tag,Equals,Category_Powder,All Powders,Superfood powders.
+spices-botanicals,MERGE,Spices & Botanicals,Single-ingredient botanicals and culinary spices.,Best Selling,,True,all conditions,Tag,Equals,Category_Spices_Botanicals,Spices & Botanicals,Single-ingredient botanicals and culinary spices.
+all-organic,MERGE,All Organic,Every certified-organic product.,Best Selling,,True,all conditions,Tag,Equals,Organic,All Organic,Every certified-organic product.
+founders-favourites,MERGE,Founders' Favourites,Hand-picked by the Divine team.,Best Selling,,True,all conditions,Tag,Equals,Founders_Favourite,Founders' Favourites,Hand-picked by the Divine team.
