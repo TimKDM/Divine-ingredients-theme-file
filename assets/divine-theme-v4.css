@@ -379,6 +379,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 .d-powders-collage--9{
   grid-template-columns:repeat(3, 1fr);
   grid-template-rows:repeat(3, 1fr);
+  background:var(--d-forest);
+  gap:6px;
+  padding:6px;
+  box-sizing:border-box;
 }
 .d-powders-tile{
   position:relative;
@@ -1839,6 +1843,9 @@ summary.header__icon:focus-visible,
   background: var(--d-forest);
   margin-bottom: 40px;
 }
+/* Single centered block: center the kicker + accent line above it */
+.d-pdp-details--single .d-pdp-details-title{ text-align: center; }
+.d-pdp-details--single .d-pdp-details-line{ margin-left: auto; margin-right: auto; }
 .d-pdp-details-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;

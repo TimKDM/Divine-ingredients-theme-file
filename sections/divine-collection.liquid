@@ -2,10 +2,11 @@
   Divine Collection. Sidebar filters + product grid.
   Matches the all-collections mockup.
 
-  Filter data model:
-    data-cat   ← product.type | downcase | handleize          (single value)
-    data-type  ← first tag prefixed "type:" with prefix stripped  (single value)
-    data-func  ← tags prefixed "function:" with prefix stripped   (space-joined)
+  Filter data model (tags use the Matrixify taxonomy: Category_*, Type_*, Function_*,
+  prefix stripped + handleized; falls back to product.type for cat):
+    data-cat   ← "Category_*" tag handleized (else product.type)  (single value)
+    data-type  ← first "Type_*" tag, handleized                   (single value)
+    data-func  ← all "Function_*" tags, handleized                (space-joined)
     data-name  ← product.title                                (sort key)
     data-price ← product.price as decimal                     (sort key)
 
@@ -95,7 +96,17 @@
               {%- for p in products -%}
                 {%- liquid
                   if gk == 'cat'
-                    assign p_cat = p.type | downcase | handleize
+                    assign p_cat = ''
+                    for t in p.tags
+                      assign t_str = t | downcase
+                      if t_str contains 'category_'
+                        assign p_cat = t_str | remove_first: 'category_' | handleize
+                        break
+                      endif
+                    endfor
+                    if p_cat == ''
+                      assign p_cat = p.type | downcase | handleize
+                    endif
                     if p_cat == val
                       assign count = count | plus: 1
                     endif
@@ -103,8 +114,8 @@
                     assign p_type = ''
                     for t in p.tags
                       assign t_str = t | downcase
-                      if t_str contains 'type:'
-                        assign p_type = t_str | remove_first: 'type:'
+                      if t_str contains 'type_'
+                        assign p_type = t_str | remove_first: 'type_' | handleize
                         break
                       endif
                     endfor
@@ -114,8 +125,8 @@
                   elsif gk == 'func'
                     for t in p.tags
                       assign t_str = t | downcase
-                      if t_str contains 'function:'
-                        assign t_val = t_str | remove_first: 'function:'
+                      if t_str contains 'function_'
+                        assign t_val = t_str | remove_first: 'function_' | handleize
                         if t_val == val
                           assign count = count | plus: 1
                           break
@@ -152,19 +163,25 @@
       <div class="d-prod-grid d-coll-grid" id="DCollGrid-{{ section.id }}">
         {%- for p in products -%}
           {%- liquid
-            assign p_cat = p.type | downcase | handleize
+            assign p_cat = ''
             assign p_type = ''
             assign p_funcs = ''
             for t in p.tags
               assign t_str = t | downcase
-              if t_str contains 'type:' and p_type == ''
-                assign p_type = t_str | remove_first: 'type:'
+              if t_str contains 'category_' and p_cat == ''
+                assign p_cat = t_str | remove_first: 'category_' | handleize
               endif
-              if t_str contains 'function:'
-                assign fn = t_str | remove_first: 'function:'
+              if t_str contains 'type_' and p_type == ''
+                assign p_type = t_str | remove_first: 'type_' | handleize
+              endif
+              if t_str contains 'function_'
+                assign fn = t_str | remove_first: 'function_' | handleize
                 assign p_funcs = p_funcs | append: fn | append: ' '
               endif
             endfor
+            if p_cat == ''
+              assign p_cat = p.type | downcase | handleize
+            endif
             assign p_funcs = p_funcs | strip
             assign p_price_decimal = p.price | money_without_currency | replace: ',', ''
           -%}
