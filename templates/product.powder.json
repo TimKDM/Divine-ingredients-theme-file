@@ -44,45 +44,13 @@
             "icon": "truck",
             "text": "Free shipping over $100"
           }
-        },
-        "meta_1": {
-          "type": "meta",
-          "settings": {
-            "label": "Function",
-            "value": "Focus & Energy · Cognitive Support"
-          }
-        },
-        "meta_2": {
-          "type": "meta",
-          "settings": {
-            "label": "Best used in",
-            "value": "Coffee · Matcha · Smoothies · Soups · Cooking"
-          }
-        },
-        "meta_3": {
-          "type": "meta",
-          "settings": {
-            "label": "Taste",
-            "value": "Mild, slightly earthy, neutral. Blends without affecting flavour"
-          }
-        },
-        "meta_4": {
-          "type": "meta",
-          "settings": {
-            "label": "Certifications",
-            "value": "USDA Organic · CCOF Certified · Lab Tested"
-          }
         }
       },
       "block_order": [
         "trust_1",
         "trust_2",
         "trust_3",
-        "trust_4",
-        "meta_1",
-        "meta_2",
-        "meta_3",
-        "meta_4"
+        "trust_4"
       ],
       "settings": {
         "show_breadcrumb": true,
