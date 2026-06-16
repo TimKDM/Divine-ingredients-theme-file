@@ -44,7 +44,7 @@
   }
 {%- endstyle -%}
 
-<section class="d-pdp-details d-reveal">
+<section class="d-pdp-details d-reveal{% if section.blocks.size == 1 %} d-pdp-details--single{% endif %}">
   {%- if section.settings.kicker != blank -%}
     <div class="d-pdp-details-title">{{ section.settings.kicker }}</div>
     <div class="d-pdp-details-line"></div>
