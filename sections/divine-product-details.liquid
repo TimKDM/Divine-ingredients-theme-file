@@ -50,7 +50,7 @@
     <div class="d-pdp-details-line"></div>
   {%- endif -%}
 
-  <div class="d-pdp-details-grid">
+  <div class="d-pdp-details-grid{% if section.blocks.size == 1 %} d-pdp-details-grid--single{% endif %}">
     {%- for block in section.blocks -%}
       <div class="d-pdp-details-col" {{ block.shopify_attributes }}>
 
@@ -169,93 +169,21 @@
             </div>
 
           {%- when 'kv_table' -%}
+            {%- comment -%} Build the section block row defaults as the fallback, then
+              defer to the shared snippet (metafields → product_facts → fallback). {%- endcomment -%}
             {%- liquid
-              comment
-                Lookup priority for the additional-info table:
-                1. Individual metafields (custom.tea_type, custom.ingredients, etc.) — preferred per-product.
-                2. custom.product_facts metafield (legacy newline+pipe format).
-                3. Section block row_N_key / row_N_val defaults.
-              endcomment
-              assign individual_facts = ''
-              if product.metafields.custom.tea_type != blank
-                assign individual_facts = individual_facts | append: 'Tea type | ' | append: product.metafields.custom.tea_type | append: nl
-              endif
-              if product.metafields.custom.product_type != blank
-                assign individual_facts = individual_facts | append: 'Product type | ' | append: product.metafields.custom.product_type | append: nl
-              endif
-              if product.metafields.custom.ingredients != blank
-                assign individual_facts = individual_facts | append: 'Ingredients | ' | append: product.metafields.custom.ingredients | append: nl
-              endif
-              if product.metafields.custom.active_compounds != blank
-                assign individual_facts = individual_facts | append: 'Active compounds | ' | append: product.metafields.custom.active_compounds | append: nl
-              endif
-              if product.metafields.custom.tasting_notes != blank
-                assign individual_facts = individual_facts | append: 'Tasting notes | ' | append: product.metafields.custom.tasting_notes | append: nl
-              endif
-              if product.metafields.custom.best_enjoyed != blank
-                assign individual_facts = individual_facts | append: 'Best enjoyed | ' | append: product.metafields.custom.best_enjoyed | append: nl
-              endif
-              if product.metafields.custom.aroma != blank
-                assign individual_facts = individual_facts | append: 'Aroma | ' | append: product.metafields.custom.aroma | append: nl
-              endif
-              if product.metafields.custom.liquor_colour != blank
-                assign individual_facts = individual_facts | append: 'Liquor colour | ' | append: product.metafields.custom.liquor_colour | append: nl
-              endif
-              if product.metafields.custom.fillers != blank
-                assign individual_facts = individual_facts | append: 'Fillers or carriers | ' | append: product.metafields.custom.fillers | append: nl
-              endif
-              if product.metafields.custom.serving != blank
-                assign individual_facts = individual_facts | append: 'Serving | ' | append: product.metafields.custom.serving | append: nl
-              endif
-              if product.metafields.custom.certifications != blank
-                assign individual_facts = individual_facts | append: 'Certifications | ' | append: product.metafields.custom.certifications | append: nl
-              endif
-              if product.metafields.custom.contains_caffeine != blank
-                assign individual_facts = individual_facts | append: 'Contains caffeine | ' | append: product.metafields.custom.contains_caffeine | append: nl
-              endif
-              if product.metafields.custom.origin != blank
-                assign individual_facts = individual_facts | append: 'Origin | ' | append: product.metafields.custom.origin | append: nl
-              endif
-              if product.metafields.custom.allergens != blank
-                assign individual_facts = individual_facts | append: 'Allergens | ' | append: product.metafields.custom.allergens | append: nl
-              endif
-              if product.metafields.custom.storage != blank
-                assign individual_facts = individual_facts | append: 'Storage | ' | append: product.metafields.custom.storage | append: nl
-              endif
-
-              assign mf_facts = product.metafields.custom.product_facts
-              assign facts_lines = ''
-              if individual_facts != blank
-                assign facts_lines = individual_facts | split: nl
-              elsif mf_facts != blank
-                assign facts_lines = mf_facts | split: nl
-              else
-                assign tmp = ''
-                for i in (1..8)
-                  assign k_key = 'row_' | append: i | append: '_key'
-                  assign v_key = 'row_' | append: i | append: '_val'
-                  assign k = block.settings[k_key]
-                  assign v = block.settings[v_key]
-                  if k != blank or v != blank
-                    assign tmp = tmp | append: k | append: ' | ' | append: v | append: nl
-                  endif
-                endfor
-                assign facts_lines = tmp | split: nl
-              endif
+              assign tmp = ''
+              for i in (1..8)
+                assign k_key = 'row_' | append: i | append: '_key'
+                assign v_key = 'row_' | append: i | append: '_val'
+                assign k = block.settings[k_key]
+                assign v = block.settings[v_key]
+                if k != blank or v != blank
+                  assign tmp = tmp | append: k | append: ' | ' | append: v | append: nl
+                endif
+              endfor
             -%}
-            <div class="d-things-table">
-              {%- for line in facts_lines -%}
-                {%- assign parts = line | split: '|' -%}
-                {%- assign k = parts[0] | strip -%}
-                {%- assign v = parts[1] | default: '' | strip -%}
-                {%- if k != blank or v != blank -%}
-                  <div class="d-things-row">
-                    <div class="d-things-key">{{ k }}</div>
-                    <div class="d-things-val">{{ v }}</div>
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-            </div>
+            {% render 'divine-product-facts', product: product, fallback: tmp, style: 'things' %}
 
           {%- when 'prose' -%}
             <div class="d-pdp-prose">{{ block.settings.body }}</div>

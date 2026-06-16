@@ -83,11 +83,25 @@ per product to override the section-block defaults.
 | `custom.allergens` | multi line | Allergens | "None. Processed in a facility free of nuts and dairy." |
 | `custom.storage` | single line | Storage | "Cool, dry place. Reseal after use." |
 
+**Powder-specific** (used by products on the `powder` template — the same
+PDP facts table also reads the shared keys above: ingredients, certifications,
+origin, allergens, storage):
+
+| Metafield key | Type | Drives PDP row | Example value |
+|---|---|---|---|
+| `custom.product_type` | single line | Product type | "Organic Lion's Mane Mushroom Powder" |
+| `custom.active_compounds` | single line | Active compounds | "Hericenones & erinacines (whole fruiting body)" |
+| `custom.fillers` | single line | Fillers or carriers | "None. Just the mushroom." |
+| `custom.serving` | single line | Serving | "½–1 tsp (1–2 g) daily" |
+
 **One-time setup in Shopify admin** (before the first import):
 1. Settings → **Custom data** → **Products** → **Add definition**.
 2. For each metafield above, create a definition with namespace `custom`,
    key matching the column (e.g. `tea_type`), and the matching type.
-3. After all 9 definitions exist, the Matrixify import will populate them.
+3. After all definitions exist (11 tea/shared + 4 powder-specific), the
+   Matrixify import will populate them. The 4 powder keys
+   (`product_type`, `active_compounds`, `fillers`, `serving`) only need filling
+   for products on the `powder` template.
 
 **Lookup priority in the PDP template**:
 1. Individual metafield (above) — preferred.

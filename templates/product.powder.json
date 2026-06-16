@@ -75,29 +75,10 @@
             "use_3_title": "Soups and cooking",
             "use_3_desc": "Stir into broths, sauces, or oatmeal. Heat-stable. Retains its properties when cooked."
           }
-        },
-        "table": {
-          "type": "kv_table",
-          "settings": {
-            "heading": "The full story, no fine print",
-            "row_1_key": "Product type",
-            "row_1_val": "Organic Mushroom Powder",
-            "row_2_key": "Ingredients",
-            "row_2_val": "100% Organic. Whole fruiting body",
-            "row_3_key": "Fillers or carriers",
-            "row_3_val": "None. Just the mushroom.",
-            "row_4_key": "Certifications",
-            "row_4_val": "USDA Organic · CCOF Certified · Third-party lab tested",
-            "row_5_key": "Allergens",
-            "row_5_val": "Processed in a facility that handles nuts and seeds.",
-            "row_6_key": "Storage",
-            "row_6_val": "Store in a cool, dry place. Reseal after use. Best used within 12 months of opening."
-          }
         }
       },
       "block_order": [
-        "uses",
-        "table"
+        "uses"
       ],
       "settings": {
         "kicker": "How to Use",

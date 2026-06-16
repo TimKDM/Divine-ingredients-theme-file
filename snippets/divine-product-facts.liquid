@@ -1,0 +1,106 @@
+{%- comment -%}
+  Renders the per-product "facts" table from custom metafields.
+  Single source of truth for the PDP hero (style: 'meta') and the
+  Divine Product Details section's kv_table block (style: 'things').
+
+  Lookup priority:
+    1. Individual custom.* metafields (preferred, per-product)
+    2. custom.product_facts metafield (legacy "Key | Value" per line)
+    3. `fallback` param (e.g. section block row defaults)
+
+  Params:
+    product  (required) - the product object
+    fallback (optional) - "Key | Value" lines used when no metafields are set
+    style    (optional) - 'meta' (hero, default) or 'things' (details section)
+{%- endcomment -%}
+{%- assign nl = '
+' -%}
+{%- liquid
+  assign f = ''
+  if product.metafields.custom.tea_type != blank
+    assign f = f | append: 'Tea type | ' | append: product.metafields.custom.tea_type | append: nl
+  endif
+  if product.metafields.custom.product_type != blank
+    assign f = f | append: 'Product type | ' | append: product.metafields.custom.product_type | append: nl
+  endif
+  if product.metafields.custom.ingredients != blank
+    assign f = f | append: 'Ingredients | ' | append: product.metafields.custom.ingredients | append: nl
+  endif
+  if product.metafields.custom.active_compounds != blank
+    assign f = f | append: 'Active compounds | ' | append: product.metafields.custom.active_compounds | append: nl
+  endif
+  if product.metafields.custom.tasting_notes != blank
+    assign f = f | append: 'Tasting notes | ' | append: product.metafields.custom.tasting_notes | append: nl
+  endif
+  if product.metafields.custom.best_enjoyed != blank
+    assign f = f | append: 'Best enjoyed | ' | append: product.metafields.custom.best_enjoyed | append: nl
+  endif
+  if product.metafields.custom.aroma != blank
+    assign f = f | append: 'Aroma | ' | append: product.metafields.custom.aroma | append: nl
+  endif
+  if product.metafields.custom.liquor_colour != blank
+    assign f = f | append: 'Liquor colour | ' | append: product.metafields.custom.liquor_colour | append: nl
+  endif
+  if product.metafields.custom.fillers != blank
+    assign f = f | append: 'Fillers or carriers | ' | append: product.metafields.custom.fillers | append: nl
+  endif
+  if product.metafields.custom.serving != blank
+    assign f = f | append: 'Serving | ' | append: product.metafields.custom.serving | append: nl
+  endif
+  if product.metafields.custom.certifications != blank
+    assign f = f | append: 'Certifications | ' | append: product.metafields.custom.certifications | append: nl
+  endif
+  if product.metafields.custom.contains_caffeine != blank
+    assign f = f | append: 'Contains caffeine | ' | append: product.metafields.custom.contains_caffeine | append: nl
+  endif
+  if product.metafields.custom.origin != blank
+    assign f = f | append: 'Origin | ' | append: product.metafields.custom.origin | append: nl
+  endif
+  if product.metafields.custom.allergens != blank
+    assign f = f | append: 'Allergens | ' | append: product.metafields.custom.allergens | append: nl
+  endif
+  if product.metafields.custom.storage != blank
+    assign f = f | append: 'Storage | ' | append: product.metafields.custom.storage | append: nl
+  endif
+
+  assign facts_source = ''
+  if f != blank
+    assign facts_source = f
+  elsif product.metafields.custom.product_facts != blank
+    assign facts_source = product.metafields.custom.product_facts
+  else
+    assign facts_source = fallback
+  endif
+  assign facts_lines = facts_source | split: nl
+-%}
+{%- if facts_source != blank -%}
+  {%- if style == 'things' -%}
+    <div class="d-things-table">
+      {%- for line in facts_lines -%}
+        {%- assign parts = line | split: '|' -%}
+        {%- assign k = parts[0] | strip -%}
+        {%- assign v = parts[1] | default: '' | strip -%}
+        {%- if k != blank or v != blank -%}
+          <div class="d-things-row">
+            <div class="d-things-key">{{ k }}</div>
+            <div class="d-things-val">{{ v }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <div class="d-meta-fields">
+      {%- for line in facts_lines -%}
+        {%- assign parts = line | split: '|' -%}
+        {%- assign k = parts[0] | strip -%}
+        {%- assign v = parts[1] | default: '' | strip -%}
+        {%- if k != blank or v != blank -%}
+          <div class="d-meta-row">
+            <div class="d-meta-label">{{ k }}</div>
+            <div class="d-meta-val">{{ v }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endif -%}

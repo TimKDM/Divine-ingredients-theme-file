@@ -219,22 +219,8 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} Meta fields table. Supports custom fields via product metafields or manually-defined blocks {%- endcomment -%}
-      {%- assign meta_fields_html = '' -%}
-      {%- for block in section.blocks -%}
-        {%- if block.type == 'meta' -%}
-          {%- capture meta_fields_html -%}
-            {{ meta_fields_html }}
-            <div class="d-meta-row" {{ block.shopify_attributes }}>
-              <div class="d-meta-label">{{ block.settings.label }}</div>
-              <div class="d-meta-val">{{ block.settings.value }}</div>
-            </div>
-          {%- endcapture -%}
-        {%- endif -%}
-      {%- endfor -%}
-      {%- if meta_fields_html != blank -%}
-        <div class="d-meta-fields">{{ meta_fields_html }}</div>
-      {%- endif -%}
+      {%- comment -%} Per-product facts, driven by custom metafields (see snippet) {%- endcomment -%}
+      {% render 'divine-product-facts', product: product, style: 'meta' %}
 
     </div>
   </div>

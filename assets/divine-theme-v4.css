@@ -1837,6 +1837,15 @@ summary.header__icon:focus-visible,
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
+/* Single block left (e.g. only steeping/uses) — center it on the page */
+.d-pdp-details-grid--single{
+  grid-template-columns: 1fr;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.d-pdp-details-grid--single .d-pdp-details-h{ text-align: center; }
+.d-pdp-details-grid--single .d-steep-steps,
+.d-pdp-details-grid--single .d-how-uses{ max-width: 440px; margin: 0 auto; }
 .d-pdp-details-h{
   font-family: var(--d-font-serif);
   font-size: 22px; font-weight: 400;
@@ -2359,8 +2368,10 @@ summary.header__icon:focus-visible,
   border-top: 1px solid var(--d-border);
 }
 .d-coll-card-price{
-  font-family: var(--d-font-serif);
-  font-size: 19px;
+  font-family: var(--d-font-sans);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: .01em;
   color: var(--d-black);
 }
 .d-coll-card-from{
