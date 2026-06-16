@@ -296,7 +296,7 @@
         "title": "<p>Superfood<br><em>powders</em></p>",
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
         "button_label": "Browse all powders",
-        "button_link": "shopify://collections/organic-superfood-powders",
+        "button_link": "shopify://collections/all-powders",
         "background_color": "",
         "padding_top": 68,
         "padding_bottom": 68,
