@@ -1845,7 +1845,9 @@ summary.header__icon:focus-visible,
 .d-pdp-details-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* Single block left (e.g. only steeping/uses) — center it on the page */
 .d-pdp-details-grid--single{
