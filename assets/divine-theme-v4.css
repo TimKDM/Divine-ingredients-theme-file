@@ -494,7 +494,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    ============================================ */
 .d-discovery{
   display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
-  align-items:stretch;
+  align-items:stretch;gap:12px;
 }
 .d-disc-body{
   padding:60px 56px;display:flex;flex-direction:column;
@@ -513,8 +513,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   flex-shrink:0;
   width:auto;
   height:auto;
-  max-width:72px;
-  max-height:72px;
+  max-width:144px;
+  max-height:144px;
   object-fit:contain;
 }
 .d-disc-h-row .d-disc-h{margin:0}
