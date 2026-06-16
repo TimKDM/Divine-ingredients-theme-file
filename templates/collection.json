@@ -339,7 +339,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Green Tea",
             "value": "green-tea"
           }
@@ -348,7 +348,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Black Tea",
             "value": "black-tea"
           }
@@ -357,7 +357,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Herbal Tea",
             "value": "herbal-tea"
           }
@@ -366,7 +366,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Chai",
             "value": "chai"
           }
@@ -375,7 +375,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Matcha",
             "value": "matcha"
           }
@@ -384,7 +384,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Hemp Tea",
             "value": "hemp-tea"
           }
@@ -393,7 +393,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Iced Tea",
             "value": "iced-tea"
           }
@@ -402,7 +402,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Tea Type",
+            "group_title": "Type",
             "label": "Oolong Tea",
             "value": "oolong-tea"
           }
@@ -411,7 +411,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Powder Type",
+            "group_title": "Type",
             "label": "Mushroom Powders",
             "value": "mushroom-powder"
           }
@@ -420,7 +420,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Powder Type",
+            "group_title": "Type",
             "label": "Fruit Powders",
             "value": "fruit-powder"
           }
@@ -429,7 +429,7 @@
           "type": "filter_option",
           "settings": {
             "group_key": "type",
-            "group_title": "Powder Type",
+            "group_title": "Type",
             "label": "Superfood Blends",
             "value": "superfood-blend"
           }
@@ -505,7 +505,7 @@
         "show_breadcrumb": true,
         "show_sort": true,
         "caption": "Divine Ingredients",
-        "title": "<p>All <em>Collections</em></p>"
+        "title": ""
       }
     }
   },
