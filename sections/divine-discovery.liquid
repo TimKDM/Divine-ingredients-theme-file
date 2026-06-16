@@ -87,20 +87,22 @@
     {%- endif -%}
   </div>
   <div class="d-disc-body">
-    {%- if section.settings.side_image != blank -%}
-      <div class="d-disc-side-img-wrap">
-        {{ section.settings.side_image | image_url: width: 280 | image_tag:
-          loading: 'lazy', widths: '140, 200, 280',
-          sizes: '140px',
-          class: 'd-disc-side-img', alt: section.settings.side_image.alt | default: section.settings.heading
-        }}
-      </div>
-    {%- endif -%}
     {%- if section.settings.caption != blank -%}
       <div class="d-disc-label">{{ section.settings.caption }}</div>
     {%- endif -%}
-    {%- if section.settings.heading != blank -%}
-      <h2 class="d-disc-h">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+    {%- if section.settings.heading != blank or section.settings.side_image != blank -%}
+      <div class="d-disc-h-row">
+        {%- if section.settings.side_image != blank -%}
+          {{ section.settings.side_image | image_url: width: 200 | image_tag:
+            loading: 'lazy', widths: '100, 150, 200',
+            sizes: '80px',
+            class: 'd-disc-side-img', alt: section.settings.side_image.alt | default: section.settings.heading
+          }}
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="d-disc-h">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+        {%- endif -%}
+      </div>
     {%- endif -%}
     {%- if section.settings.text != blank -%}
       <p class="d-disc-p">{{ section.settings.text }}</p>
