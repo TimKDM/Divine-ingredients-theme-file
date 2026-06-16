@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   margin-bottom:56px;gap:24px;flex-wrap:wrap;
 }
 .d-prod-grid{
-  display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:1px;background:var(--d-border);
+  display:grid;grid-template-columns:repeat(4, 1fr);gap:1px;background:var(--d-border);
 }
 .d-pcard{
   background:var(--d-white);position:relative;display:flex;flex-direction:column;
@@ -437,7 +437,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 .d-pcard:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(20,30,16,.09)}
 .d-pcard-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;}
-.d-pcard:first-child .d-pcard-img-wrap{aspect-ratio:2/3}
 .d-pcard-img{
   width:100%;height:100%;object-fit:cover;display:block;
   transition:transform .5s ease;filter:brightness(.86);
@@ -991,7 +990,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-ritual-grid{grid-template-columns:1fr 1fr}
   .d-rc{min-height:300px}
   .d-prod-grid{grid-template-columns:1fr 1fr}
-  .d-pcard:first-child .d-pcard-img-wrap{aspect-ratio:3/2}
   .d-ft{grid-template-columns:1fr 1fr;gap:32px}
   .d-breadcrumb{padding:14px 40px}
   .d-page-hero{padding:60px 40px 0;grid-template-columns:1fr}
