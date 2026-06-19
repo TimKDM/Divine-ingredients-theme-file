@@ -494,10 +494,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    STORY SPLIT (homepage founder story)
    ============================================ */
 .d-story{
-  display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
+  display:grid;grid-template-columns:1fr 1fr;
+  grid-template-areas:"head media" "body media";
+  background:var(--d-white);
 }
-.d-story-left{padding:96px 80px;display:flex;flex-direction:column;justify-content:center}
-.d-story-right{position:relative;overflow:hidden;min-height:600px;padding-left:48px;padding-right:48px;box-sizing:border-box}
+.d-story-head{grid-area:head;padding:96px 80px 0;display:flex;flex-direction:column;justify-content:flex-end}
+.d-story-body-col{grid-area:body;padding:0 80px 96px;display:flex;flex-direction:column;justify-content:flex-start}
+.d-story-right{grid-area:media;position:relative;overflow:hidden;min-height:600px;padding-left:48px;padding-right:48px;box-sizing:border-box}
 .d-story-img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.82) saturate(.95);
@@ -986,11 +989,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-nav-links{gap:20px}
   .d-hero-content{padding:0 48px 60px}
   .d-story,.d-powders,.d-discovery,.d-email{grid-template-columns:1fr}
+  /* #9 brand story stacks heading -> photo -> body (photo in the middle) */
+  .d-story{grid-template-areas:"head" "media" "body"}
+  .d-story-head{padding-left:48px;padding-right:48px;padding-bottom:0}
+  .d-story-body-col{padding-left:48px;padding-right:48px;padding-top:32px}
   .d-story-right,.d-powders-img-wrap,.d-disc-img-wrap{min-height:340px;order:0}
   .d-disc-body{order:0}
   .d-products,.d-certs,.d-b2b{padding:72px 40px}
   .d-ritual-header{padding:0 40px 48px}
-  .d-story-left,.d-powders-body,.d-disc-body,.d-email{padding:72px 48px}
+  .d-powders-body,.d-disc-body,.d-email{padding:72px 48px}
   .d-ritual-grid{grid-template-columns:1fr 1fr}
   .d-rc{min-height:300px}
   .d-prod-grid{grid-template-columns:1fr 1fr}
@@ -1013,7 +1020,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-nav-icons{margin-left:auto}
   .d-hero-content{padding:0 24px 52px}
   .d-products,.d-certs,.d-b2b{padding:60px 24px}
-  .d-story-left,.d-powders-body,.d-disc-body,.d-email{padding:60px 28px}
+  .d-powders-body,.d-disc-body,.d-email{padding:60px 28px}
+  .d-story-head,.d-story-body-col{padding-left:28px;padding-right:28px}
   .d-ritual{padding:60px 0 0}
   .d-ritual-header{padding:0 24px 40px;flex-direction:column;align-items:flex-start;gap:16px}
   .d-ritual-grid{grid-template-columns:1fr}
@@ -1032,6 +1040,30 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-values-grid{grid-template-columns:1fr}
   .d-certs-grid{grid-template-columns:1fr 1fr}
   .d-breadcrumb{padding:12px 24px}
+}
+
+/* ============================================
+   CLIENT MOBILE REVISIONS
+   ============================================ */
+/* #6 Center the logo 50/50 on mobile (equal side columns) */
+@media(max-width:990px){
+  .header-wrapper .header{ grid-template-columns: 1fr auto 1fr !important; }
+  .header__heading, .header__heading-link{ justify-self: center !important; text-align: center !important; margin: 0 auto !important; }
+}
+@media(max-width:720px){
+  /* #8 Bestsellers stack 2x2 on mobile */
+  .d-prod-grid{ grid-template-columns: 1fr 1fr !important; }
+
+  /* #7 Powders: keep image-left / content-right (don't stack), narrower image column, cap at 3 */
+  .d-powders{ grid-template-columns: 0.72fr 1.28fr !important; }
+  .d-powders-img-wrap{ min-height: 0 !important; order: 0 !important; }
+  .d-powders-body{ padding: 32px 20px !important; }
+  .d-powders .d-sec-h{ font-size: 30px !important; }
+  .d-powder-row:nth-child(n+4){ display: none !important; }
+
+  /* #9 Preet photo centered on mobile (full-width band, face centered) */
+  .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
+  .d-story-img{ object-position: center top; }
 }
 
 /* ============================================
@@ -1304,6 +1336,22 @@ summary.header__icon:focus-visible,
 .mega-menu__list a:hover,
 .header__submenu a:hover{
   color: var(--d-black) !important;
+}
+
+/* #1 Force brand sans (Jost) across the whole header nav + mega menu
+   (stock theme was falling back to a system/Arial-style font) */
+.main-navigation, .main-navigation *,
+.main-navigation-mega, .main-navigation-mega *,
+.menu-drawer, .menu-drawer *,
+.mega-menu__content, .mega-menu__content *,
+.mega-image-menu__list, .mega-image-menu__list *{
+  font-family: var(--d-font-sans) !important;
+}
+
+/* #2 Forms -> Jost (inputs, textareas, selects, buttons across the site) */
+input, textarea, select, button,
+.field__input, .form__label, .field__label, .select__select{
+  font-family: var(--d-font-sans) !important;
 }
 
 /* Mobile drawer (when header-drawer opens) */

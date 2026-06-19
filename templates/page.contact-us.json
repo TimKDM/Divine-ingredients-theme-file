@@ -185,34 +185,16 @@
       }
     },
     "contact-form": {
-      "type": "contact-form",
+      "type": "divine-contact",
       "settings": {
-        "contact_style": "column",
-        "image_height": "adapt",
-        "hide_image": true,
-        "caption": "",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "heading": "Send Us a Message",
-        "heading_size": "medium",
-        "heading_style": "default",
-        "heading_tag": "h2",
-        "text": "<p>Tell us about your order, a question on sourcing, a sample request, or anything else. The more detail, the faster we can help.</p>",
-        "button_label_1": "Button label",
-        "button_link_1": "",
-        "open_new_tab_1": false,
-        "button_style_secondary_1": false,
-        "full_width": false,
-        "hide_phone_field": false,
-        "all_fields_required": false,
-        "color_scheme": "option-2",
-        "color_scheme_1": "",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "ignore_spacing": false,
-        "image_height_mobile": "small",
-        "margin_spacing": "negative",
-        "margin_top": 0
+        "kicker": "Get in touch",
+        "heading": "<p>Send us a <em>message</em></p>",
+        "subtext": "Tell us about your order, a question on sourcing, a sample request, or anything else. The more detail, the faster we can help.",
+        "button_label": "Send Message",
+        "success_message": "Thank you. Your message is on its way. We'll be in touch within one business day.",
+        "background": "white",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "quick-help": {

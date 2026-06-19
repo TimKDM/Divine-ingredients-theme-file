@@ -617,8 +617,9 @@
         "show_reviews": true,
         "show_cert_badge": false,
         "cert_badge_text": "USDA Organic",
-        "bulk_text": "Buy 8.8 oz+ and save 10%",
-        "price_note": ""
+        "bulk_text": "",
+        "price_note": "",
+        "default_facts": "Tea type | See product description\nIngredients | 100% Organic. See product description for the full ingredient list\nAroma | Distinctive. See product description\nLiquor colour | Varies by blend\nContains caffeine | Varies by blend. See product description"
       }
     },
     "divine_product_details": {

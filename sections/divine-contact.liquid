@@ -1,0 +1,108 @@
+{%- comment -%}
+  Divine Contact. Simple, on-brand contact form (Name / Email / Message).
+  Uses Shopify's native {% form 'contact' %} so submissions email the store.
+{%- endcomment -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .d-contact{
+    {% if section.settings.background == 'beige' %}background:var(--d-beige-lt);{% else %}background:var(--d-white);{% endif %}
+    padding-top:{{ section.settings.padding_top | default: 88 }}px;
+    padding-bottom:{{ section.settings.padding_bottom | default: 88 }}px;
+  }
+  #shopify-section-{{ section.id }} .d-contact-inner{max-width:600px;margin:0 auto;padding:0 24px}
+  #shopify-section-{{ section.id }} .d-contact-kicker{
+    font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--d-muted);margin-bottom:14px;text-align:center;font-family:var(--d-font-sans);
+  }
+  #shopify-section-{{ section.id }} .d-contact-h{
+    font-family:var(--d-font-serif);font-size:clamp(32px,4vw,46px);font-weight:300;
+    color:var(--d-black);line-height:1.08;letter-spacing:-.01em;margin:0 0 12px;text-align:center;
+  }
+  #shopify-section-{{ section.id }} .d-contact-h em{font-style:italic;color:var(--d-forest)}
+  #shopify-section-{{ section.id }} .d-contact-sub{
+    font-size:15px;font-weight:300;line-height:1.65;color:var(--d-mid);
+    text-align:center;margin:0 auto 36px;max-width:460px;font-family:var(--d-font-sans);
+  }
+  #shopify-section-{{ section.id }} .d-contact-row{margin-bottom:16px}
+  #shopify-section-{{ section.id }} .d-contact-input{
+    width:100%;box-sizing:border-box;padding:15px 16px;
+    border:1px solid var(--d-border);border-radius:2px;background:var(--d-white);
+    font-family:var(--d-font-sans);font-size:15px;font-weight:300;color:var(--d-ink);
+    transition:border-color .18s;
+  }
+  #shopify-section-{{ section.id }} .d-contact-input::placeholder{color:var(--d-muted)}
+  #shopify-section-{{ section.id }} .d-contact-input:focus{outline:none;border-color:var(--d-forest)}
+  #shopify-section-{{ section.id }} .d-contact-textarea{resize:vertical;min-height:140px;line-height:1.6}
+  #shopify-section-{{ section.id }} .d-contact-btn{
+    width:100%;padding:16px 32px;border:none;border-radius:2px;cursor:pointer;
+    background:var(--d-forest);color:var(--d-beige-lt);
+    font-family:var(--d-font-sans);font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+    transition:background .18s,transform .12s;margin-top:6px;
+  }
+  #shopify-section-{{ section.id }} .d-contact-btn:hover{background:var(--d-black);transform:translateY(-1px)}
+  #shopify-section-{{ section.id }} .d-contact-success{
+    background:var(--d-beige-lt);border-left:3px solid var(--d-forest);
+    padding:20px 24px;border-radius:2px;color:var(--d-forest);
+    font-family:var(--d-font-sans);font-size:15px;text-align:center;
+  }
+  #shopify-section-{{ section.id }} .d-contact-error{
+    background:#fdecea;border-left:3px solid #c0392b;padding:14px 18px;border-radius:2px;
+    margin-bottom:18px;color:#a33;font-family:var(--d-font-sans);font-size:14px;
+  }
+{%- endstyle -%}
+
+<section class="d-contact d-reveal">
+  <div class="d-contact-inner">
+    {%- if section.settings.kicker != blank -%}
+      <div class="d-contact-kicker">{{ section.settings.kicker }}</div>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="d-contact-h">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subtext != blank -%}
+      <p class="d-contact-sub">{{ section.settings.subtext }}</p>
+    {%- endif -%}
+
+    {%- form 'contact', id: 'DivineContactForm', class: 'd-contact-form' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="d-contact-success">{{ section.settings.success_message | default: "Thank you. Your message is on its way. We'll be in touch shortly." }}</div>
+      {%- else -%}
+        {%- if form.errors -%}
+          <div class="d-contact-error">{{ form.errors | default_errors }}</div>
+        {%- endif -%}
+        <div class="d-contact-row">
+          <label class="d-sr-only" for="DContactName-{{ section.id }}">Name</label>
+          <input class="d-contact-input" type="text" id="DContactName-{{ section.id }}" name="contact[name]" placeholder="Your name" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" autocomplete="name">
+        </div>
+        <div class="d-contact-row">
+          <label class="d-sr-only" for="DContactEmail-{{ section.id }}">Email</label>
+          <input class="d-contact-input" type="email" id="DContactEmail-{{ section.id }}" name="contact[email]" placeholder="Your email" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" required autocomplete="email">
+        </div>
+        <div class="d-contact-row">
+          <label class="d-sr-only" for="DContactBody-{{ section.id }}">Message</label>
+          <textarea class="d-contact-input d-contact-textarea" id="DContactBody-{{ section.id }}" name="contact[body]" placeholder="How can we help?" required>{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        </div>
+        <button type="submit" class="d-contact-btn">{{ section.settings.button_label | default: 'Send Message' }}</button>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Divine Contact",
+  "tag": "section",
+  "class": "divine-contact-section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Get in touch" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "<p>We'd love to <em>hear from you</em></p>" },
+    { "type": "textarea", "id": "subtext", "label": "Subtext", "default": "Questions about an order, a product, or wholesale? Drop us a note and we'll get back to you within one business day." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Send Message" },
+    { "type": "textarea", "id": "success_message", "label": "Success message", "default": "Thank you. Your message is on its way. We'll be in touch shortly." },
+    { "type": "select", "id": "background", "label": "Background", "options": [ { "value": "white", "label": "White" }, { "value": "beige", "label": "Beige" } ], "default": "white" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 24, "max": 160, "step": 4, "default": 88, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 24, "max": 160, "step": 4, "default": 88, "unit": "px" }
+  ],
+  "presets": [ { "name": "Divine Contact" } ]
+}
+{% endschema %}
