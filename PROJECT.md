@@ -1,194 +1,109 @@
 # Divine Ingredients Theme — Project Status
 
-Quick-start brief for resuming work in a new conversation. Last updated end of session 2026-06-16.
+Quick-start brief for resuming work in a new conversation. Last updated end of session 2026-06-19.
 
 ---
 
 ## What this is
 
-Shopify theme rebuild for **Divine Ingredients** (organic tea + superfood + botanicals brand). Base is the **Flux v2.2.0** premium theme by Mana Themes; we've layered a custom design system on top.
+Shopify theme rebuild for **Divine Ingredients** (organic tea + superfood + botanicals brand). Base is the **Flux** premium theme by Mana Themes; we've layered a custom `.d-*` design system on top.
 
 - **Brand**: Forest green + beige palette. Cormorant serif + Jost sans. "Honest ingredients. Nothing more."
 - **Repo**: `TimKDM/Divine-ingredients-theme-file`
-- **Working branch**: `claude/dazzling-feynman-HfoxL`
-- **Two-way sync**: Theme Editor edits auto-commit to `main` (via Shopify GitHub integration); pushes to `main` auto-pull into the live theme within ~30–90s. Auto-PRs (#142 onward) usually self-merge.
-- **PR-only workflow** per user — every change goes through a PR, never push directly to `main`.
+- **Working branch**: `claude/gracious-sagan-ff3uf5` (current HEAD `e8f4632`). All work happens here; auto-PRs merge it to `main`, and Shopify two-way-syncs `main` back.
+- **Store**: Divine Organic Ingredients — `divine-organic-tea.myshopify.com`. Custom domain `divineingredients.com`.
+- **GitHub-connected theme**: "Divine-ingredients-theme-file/main" (UNPUBLISHED draft, theme id `149418803375`). The *published* (MAIN) theme is still an old "Updated copy of Flux" — we preview the GitHub draft.
 
 ## People
 
-- **Tim** (`tim@kingdigitalmarketers.com`) — the engineer running this session.
-- **Alisha** — the brand owner / decision maker. Final say on copy + product structure.
-- **Preet Bhullar** — Divine's founder, microbiologist (mentioned in the brand story).
+- **Tim** (`tim@kingdigitalmarketers.com`) — engineer running the session.
+- **Alisha** — brand owner / decision maker. Final say on copy + product structure.
+- **Preet Bhullar** — founder, microbiologist (in the brand story).
 
-## Tech stack
+## Tech stack & conventions
 
 | Layer | What |
 |---|---|
-| Theme base | Flux v2.2.0 (Mana Themes). Latest is 2.6.0 — see "Open: Flux upgrade" below. |
-| Custom CSS | `assets/divine-theme-v4.css` — single ~2.5k-line stylesheet using `.d-*` class convention. Loads **after** Flux base CSS via `layout/theme.liquid` line 311. |
+| Custom CSS | `assets/divine-theme-v4.css` — single ~2.6k-line stylesheet, `.d-*` classes. Loads **after** Flux base via `layout/theme.liquid:310`. |
 | Custom JS | `assets/divine-theme-v4.js` — small reveal observer. |
-| Old v3 stylesheet | **Deleted.** All sections migrated to v4 class naming. |
-| Section files | `sections/divine-*.liquid` — every custom section is prefixed `divine-`. Stock Flux sections (header.liquid, footer.liquid, contact-form.liquid, main-product.liquid) are mostly untouched and restyled via CSS overlay. |
-| Liquid template JSON | `templates/index.json`, `templates/product.json`, `templates/page.*.json`. Each starts with the auto-generated Shopify comment header (`/* * IMPORTANT ... */`) — use a comment-stripping JSON parser for validation. |
+| Section files | `sections/divine-*.liquid` — every custom section is `divine-` prefixed. Stock Flux sections (`header.liquid`, `footer.liquid`, `main-product.liquid`) restyled via CSS overlay. |
+| Template JSON | `templates/*.json` start with the auto-generated Shopify comment header (`/* IMPORTANT ... */`) — strip the comment before JSON-parsing/validating. |
 
-## Color palette (CSS variables in v4 root)
+**Critical rules learned this project:**
+1. **PR-only / branch workflow** — never push direct to `main`. Push to `claude/gracious-sagan-ff3uf5`; auto-PR merges it.
+2. **Shopify schema validation is strict** — a text setting with `"default": ""` (blank) **fails the whole file's sync** ("default can't be blank"). Keep schema defaults non-blank; blank the *instance* value in the template JSON instead. This silently blocked `divine-product.liquid` from syncing for a while.
+3. **Liquid: no filters inside `[ ]` access.** `section.settings['image_' | append: i]` is a syntax error → rejects the file on sync. Assign the key to a variable first. (Broke the powders 3×3.)
+4. **`rgba(0,0,0,0)` bg-bug**: Shopify color picker returns `rgba(0,0,0,0)` not blank. Sections consuming `background_color` use the `!= blank and != 'rgba(0,0,0,0)'` pattern.
+5. **Em dashes banned** from customer copy (Alisha). Use periods/commas.
+6. **Numbers render in Jost everywhere** via a `unicode-range` `@font-face` digit remap on Cormorant/Josefin (top of `divine-theme-v4.css`).
+7. **`matrixify/` files are NOT theme files** — the GitHub→theme sync logs them as "ignored" (expected/harmless). They only do anything when **imported in the Matrixify app**.
+8. **Shopify MCP writes are blocked** in this environment (every `productUpdate`/`tagsAdd`/theme write returns "requires approval"). So all store data changes go through **Matrixify CSV/XLSX imports** the merchant runs. Reads work (when on the right store).
+9. **Matrixify CSV comma bug**: multi-tag cells (`"a, b, c"`) can get split on import → only the first tag lands. **Use the `.xlsx` versions** for anything with multiple tags. `openpyxl` is pip-installable here to generate them.
 
-```css
---d-black:    #111410
---d-forest:   #1F3018
---d-mid:      #3C4C30
---d-beige:    #E8E0CC
---d-beige-lt: #F2EDE0
---d-beige-dk: #D4CAAE
---d-white:    #FDFCF8
+## Fonts
+- Body = **Jost**, headings = **Cormorant**. Shopify's `--font-body-family`/`--font-heading-family` (set to Josefin Sans in settings) are **overridden in our `:root`** so all stock sections inherit the brand fonts. Plus targeted `!important` overrides for the mega menu (`.main-navigation*`, `.mega-menu*`) and all form elements.
+
+## Color palette (CSS vars in v4 `:root`)
+```
+--d-black #111410 · --d-forest #1F3018 · --d-mid #3C4C30
+--d-beige #E8E0CC · --d-beige-lt #F2EDE0 · --d-beige-dk #D4CAAE · --d-white #FDFCF8
+--d-font-serif: Cormorant · --d-font-sans: Jost
 ```
 
-Fonts: `--d-font-serif: Cormorant`, `--d-font-sans: Jost`.
+## Homepage sections (render order, `templates/index.json`)
+`divine_hero` (video+poster) · `divine_ticker` (forest trust bar) · `divine_rituals` (divine-categories, 5 By-Function tiles → now linked to `immunity`/`wind-down`/`gut-reset`/`focus-and-energy`/`detox` collections) · `divine_powders` (divine-powders; supports 2×2 **and 3×3 9-image collage**) · `divine_bestsellers` (divine-products; **hand-picked product blocks** = Mumbai Chai / Taro Powder / Turmeric Spice / Supreme Matcha; prices hidden) · `divine_story` (brand story, Preet) · `divine_discovery` (**The Chai Edit**) · `divine_newsletter` · `divine_certs` (disabled) · `divine_b2b` (wholesale).
+Homepage section padding trimmed ~25% for a tighter page.
 
-## Homepage section inventory (in render order)
+## Product pages (PDP)
+- Templates: **`product.json`** (tea, default) uses `divine_product` + `divine_product_details` (kv_table facts + **numbered_steps "Steeping"**). **`product.powder.json`** uses `divine_product` + `divine_product_details` (kv_table + **numbered_uses "How to Use"**).
+- **Facts table** is metafield-driven via snippet **`snippets/divine-product-facts.liquid`** (lookup: individual `custom.*` metafields → `custom.product_facts` → section/template default rows). Rendered in the bottom **2-column** "Additional Information" section (facts left, steeping/how-to-use right) — gap tightened to 48px + centered max-width 1200px.
+- Hero (`divine-product.liquid`): image frame is **4:3**, tightened spacing; **8.8oz bulk badge removed** (blanked `bulk_text` in both templates).
+- Steeping/How-to-Use steps are **card-styled** (white card + border) on both.
 
-| Section ID | File | Notes |
-|---|---|---|
-| `divine_hero` | divine-hero.liquid | Full-bleed image **+ uploaded video** (faststart re-encode). Side video uploads land in `divineherovideo.mp4`. |
-| `divine_ticker` | divine-trust-bar.liquid | Forest green band — USDA/CCOF/Lab Tested etc. |
-| `divine_rituals` | divine-categories.liquid | "Your cup, your ritual." 5 By-Function tiles (Immunity / Wind Down / Gut Reset / Focus & Energy / Detox). Text clamp to 2 lines + heavy gradient overlay for contrast. |
-| `divine_powders` | divine-powders.liquid | Daily superfoods split. **Now supports 2×2 collage** (image_2/3/4 fields). |
-| `divine_bestsellers` | divine-products.liquid | Customer Favorites. **Prices hidden** (`show_price: false`). |
-| `divine_story` | divine-brand-story.liquid | Founder story with Preet photo. |
-| `divine_discovery` | divine-discovery.liquid | **The Chai Edit**. Content-LEFT, **2×2 collage RIGHT**, side_image (Chai seal/logo) sits inline with the heading. |
-| `divine_newsletter` | divine-newsletter.liquid | 20% off signup. |
-| `divine_certs` | divine-cert-bar.liquid | Black band with 8 cert logos. |
-| `divine_b2b` | divine-wholesale.liquid | Wholesale & trade accounts pills. |
+### PDP metafields (custom namespace)
+- **Tea/shared**: `tea_type, ingredients, tasting_notes, best_enjoyed, aroma, liquor_colour, certifications, contains_caffeine, origin, allergens, storage`
+- **Powder-specific** (wired into the facts snippet): `product_type, active_compounds, fillers, serving`
+- One-time: these need definitions in Settings → Custom data → Products. Populated via Matrixify.
 
-All sections have **explicit `background_color`** values set in `templates/index.json` (not transparent) — see the bg-bug note below.
+## Collection filter (`sections/divine-collection.liquid`)
+- Client-side JS filter, paginate `by:250` (whole collection on one page). Parses the **Matrixify tag taxonomy**: `Category_*`, `Type_*`, `Function_*` (prefix stripped + handleized). Falls back to `product.type` for category.
+- **Auto-hides** any filter option with 0 matches and any empty group.
+- Tea + Powder types share one **"Type"** group (so OR-within-group works). H1 uses the real collection name.
+- Real store tags: Category_(Tea/Powder/Spices_Botanicals); Type_(Black/Green/Herbal/Chai/Iced Tea, Matcha, Mushroom/Fruit Powder, Superfood Blend); Function_(Immunity/Wind down/Gut Reset/Focus and Energy/Detox); Caffeine_*; Format_*; Organic.
+- **By-Function collections are tea-only** (Alisha's curated lists). Powders must NOT carry `Function_` tags.
 
-## Working PRs / branch state
+## Tagging state (the saga)
+- Powders were untagged. Imported `products-powder-tags.xlsx` → added `Category_`/`Type_` (and originally `Function_`, since removed). **Spices** (Ginger/Black Pepper/Cinnamon/Cardamom/Turmeric) = `Category_Spices_Botanicals`, no Type.
+- Powder **template** assigned via `products-set-powder-template.csv` (38 non-matcha powders → `template_suffix: powder`). Matcha stays tea per Alisha.
+- ⚠️ **OPEN**: `products-powder-remove-function-tags.xlsx` strips `Function_` off 11 powders (Reishi/Chaga/Cordyceps/Lion's Mane/Maca/Rhodiola/Spirulina×2/Moringa/Theanine/Ashwagandha). Merchant imported it but **not yet verified** (connection was on wrong store). The junk `$0` Rhodiola dup (id `8616074084527`) still has its function tag — should be **deleted** in admin.
+- `products-organic-tag.xlsx` adds **Organic** to 133 products (excludes the 5 "Conventional" items + teapot/subscriptions/consultation). **Not yet confirmed imported.**
 
-- Branch `claude/dazzling-feynman-HfoxL` is the source of truth. Latest commit at end of session: `372652a`.
-- Recent merged PRs: #141 (PDP form + spacing fixes), #143 (homepage polish + v3→v4 migration + hero video), #146 (v3 delete + Matrixify v1), plus a long string of `Update from Shopify for theme` auto-sync commits.
-- **Open work since last merge**: tons of small commits accumulated on the branch. Consider opening a PR to roll them into `main` early in the new thread.
-
-## Critical conventions to remember
-
-1. **Always use a PR** — user said "always do a PR push." Never `git push` directly to `main`.
-2. **Shopify auto-syncs back to GitHub.** If you edit a file then Shopify also pushes a new commit, you'll hit a merge conflict on push. Standard fix: `git pull --rebase origin claude/dazzling-feynman-HfoxL`, resolve any conflict, re-push.
-3. **Background-color setting bug**: Shopify color picker returns `rgba(0,0,0,0)` (not blank) when no color is chosen. Every section that consumes `section.settings.background_color` uses the `!= blank and != 'rgba(0,0,0,0)'` pattern — keep that pattern in mind when adding new sections.
-4. **Em dashes are banned** from customer-visible copy per Alisha. Use periods or commas. Mac autocorrect re-inserts them silently; merchant was told to disable "smart dashes" in System Settings.
-5. **PNG logo is transparent**, not a white card. Light backgrounds only for the header — dark green header makes the DIVINE letters disappear.
-
-## Matrixify bulk-import files (in `matrixify/`)
-
-| File | Purpose |
-|---|---|
-| **`divine-bulk-import.xlsx`** | **Recommended.** One file, 3 sheets (Products 76 / Smart Collections 17 / Menus 17). Drop into Matrixify Import. |
-| `products-update.csv` | 36 tag-only MERGE rows for existing products |
-| `products-descriptions.csv` | 62 products with Body HTML + 4 metafields (tasting_notes, best_enjoyed, origin, tea_type) |
-| `products-new.csv` | 8 new draft products (Pumpkin Chai, Tulsi Chai, Herbal Chai, Kashmiri Green Chai, Sweetened Matcha, Ube Matcha, Unflavoured Black Iced Tea, Crimsonberry Tea) |
-| `collections.csv` | 17 smart collections (5 By Function, 7 By Type incl. legacy Hemp/Oolong + Boba Boba, 5 category-level) |
-| `menus.csv` | Main menu structure |
-
-**Before importing**: Alisha needs to create 11 metafield definitions in Shopify admin (Settings → Custom data → Products). Listed in `matrixify/README.md`.
-
-## PDP metafields (full list)
-
-Custom namespace, populated by Matrixify import:
-
-- `tea_type` (single line)
-- `ingredients` (multi line)
-- `tasting_notes` (single line)
-- `best_enjoyed` (single line)
-- `aroma` (single line)
-- `liquor_colour` (single line)
-- `certifications` (single line)
-- `contains_caffeine` (single line)
-- `origin` (single line)
-- `allergens` (multi line)
-- `storage` (single line)
-
-Rendered in `sections/divine-product-details.liquid` kv_table block. Fallback chain: individual metafields → `custom.product_facts` legacy → section block defaults.
-
-## What's done (highlights)
-
-- Full v3 → v4 class migration. v3 CSS file deleted.
-- Homepage rebuilt with all 10 sections matching the mockup direction.
-- Hero gains local video upload (re-encoded from 4K fragmented MP4 → 1080p H.264 with faststart).
-- Header → light cream with dark menu text (logo PNG is transparent).
-- All 13 sections fixed for the `rgba(0,0,0,0)` transparent-bg bug.
-- All sections have explicit background_color values for editor visibility.
-- All em dashes removed (166 across 34 files); CSS comments included.
-- Purple/lavender → forest green/beige palette (42 swaps across 10 files).
-- Header social icons rebuilt as SVG (Instagram, TikTok, Pinterest, Facebook, YouTube, LinkedIn, X).
-- Discovery section now: content-LEFT, 2×2 collage RIGHT, side image inline with heading, 30% smaller padding.
-- Powders section: collage option matching Discovery.
-- Bestsellers section: prices hidden via `show_price: false`.
-- Rituals tiles: balanced via line-clamp + min-height; strong contrast overlay for bright tea-leaf images.
-- Contact form: stock Flux restyled via CSS overlay in v4.
-- PDP: certs removed from description blocks; metafields integrated.
-- Wholesale section: typography matches other sections; caption removed; "organic" dropped from copy.
-- Body copy for 62 products integrated from Alisha's Product Descriptions sheet.
+## Done this session (highlights)
+Numbers→Jost · footer Help→**Company** · removed 8.8oz badge · contact page now uses simple **`divine-contact`** section · "Discovery Set"→"Chai Edit" swept · collection filter rebuilt (real tags + auto-hide + Type group) · powders 9-image collage · bestsellers hand-picked + 2×2 mobile · PDP facts moved to bottom 2-col + card steps · Preet photo centers in content on mobile · mega-menu + global font sweep to Jost/Cormorant · mobile logo centering, powders 2-col mobile.
 
 ## Open / waiting on
-
 | Item | Status |
 |---|---|
-| **Flux 2.6.0 upgrade** | Need merchant to download the 2.6.0 ZIP from Mana Themes (their license) and provide it. Then three-way merge: 2.2.0 → 2.6.0 → our customizations. See conversation 2026-06-16 for detailed merge plan. |
-| **2 of 8 draft products** | Pumpkin Chai BT and Kashmiri Green Chai — drafts created, body copy still needed |
-| **Boba Boba** | Type/collection exists, no products tagged yet |
-| **Hemp Tea / Oolong Tea collections** | Kept with "planned for removal" note. Delete in future cleanup. |
-| **Logo placeholder filename** | `side_image` in templates/index.json points to `logo-divine-ingredients-2026.png`. If merchant uploaded under a different name, fix in Theme Editor or update the JSON. |
-| **Matrixify metafield definitions** | Alisha needs to create the 11 `custom.*` definitions in Shopify admin before the bulk import. |
+| **Shopify MCP on wrong store** | Connection is on **`euphree-dealer.myshopify.com`** (a different store). Must switch back to `divine-organic-tea` before any reads/audit. `switch-shop` revokes token → next call prompts re-auth (merchant selects Divine). |
+| **Content audit** | NOT done — blocked by wrong-store connection. Sweep active products for missing `descriptionHtml` and missing facts metafields, produce a list. |
+| **Verify powder Function_ removal** | Confirm the 11 powders dropped out of By-Function collections after the Matrixify import. |
+| **Delete `$0` Rhodiola dup** | id `8616074084527`, no image, $0 — junk duplicate. Merchant deletes in admin. |
+| **Footer menus** | `footer-by-function` / `footer-by-category` exist in store + referenced correctly. Should be populated. |
+| **Mobile verification** | #6–9 (logo center, powders 2-col, bestsellers 2×2, Preet middle) can't be seen rendered here — verify on device. Header logo centering depends on stock layout. |
+| **Possible duplicate products** | Spotted dupes (2× Mellow Mint, Wine Berry Iced Tea, Chamomile, Sweetened Matcha, Conventional Jasmine/Rose, Coffee Cherry). Merchant cleanup. |
 
-## File structure cheat sheet
-
-```
-assets/
-  divine-theme-v4.css       <- master stylesheet, .d-* classes
-  divine-theme-v4.js        <- reveal observer
-  base.css                  <- Flux base (untouched)
-config/
-  settings_data.json        <- theme settings + color schemes
-  settings_schema.json      <- theme settings panel definition
-layout/
-  theme.liquid              <- main wrapper; loads CSS in order: base → v4
-locales/
-  en.default.json + de/es/it
-matrixify/
-  divine-bulk-import.xlsx   <- one-shot upload
-  *.csv                     <- individual sheets
-  README.md                 <- upload instructions
-sections/
-  divine-*.liquid           <- all custom sections (15+ files)
-  header.liquid             <- stock Flux, restyled via CSS
-  footer.liquid             <- stock Flux, restyled via CSS
-  contact-form.liquid       <- stock Flux, restyled via CSS
-  main-product.liquid       <- stock Flux PDP
-  divine-product.liquid     <- our PDP hero
-  divine-product-details.liquid  <- our PDP additional info (kv_table)
-snippets/
-  divine-*.liquid           <- product tags, collection filters
-templates/
-  index.json                <- homepage composition
-  product.json              <- active PDP template (uses divine_product + divine_product_details)
-  page.*.json               <- about, wholesale, etc.
-PROJECT.md                  <- this file
-```
+## Matrixify files (`matrixify/`) — import in the Matrixify APP, not GitHub
+| File | Purpose |
+|---|---|
+| `divine-bulk-import.xlsx` | Original all-in-one (products/collections/menus). |
+| `products-powder-tags.xlsx` / `.csv` | Powder Category_/Type_ tags (Function_ already stripped from source). |
+| `products-powder-remove-function-tags.xlsx` | REPLACE tags on 11 powders to drop Function_. **Pending verify.** |
+| `products-set-powder-template.csv` | Sets `template_suffix: powder` on 38 powders. |
+| `products-organic-tag.xlsx` / `.csv` | Adds `Organic` to 133 products. **Pending import confirm.** |
+| `products-update.csv`, `products-descriptions.csv`, `products-new.csv`, `collections.csv`, `menus.csv`, `menus-cleanup.csv` | Earlier tea tagging/descriptions/collections/menus. |
 
 ## How to resume
-
-1. New thread, point at this repo + branch `claude/dazzling-feynman-HfoxL`.
-2. Skim this file. Most context is here.
-3. If diving into PDPs, also skim `sections/divine-product-details.liquid` for the metafield fallback chain.
-4. If diving into homepage sections, skim `templates/index.json` first to see current bg colors + image references.
-5. Default model behavior: small commits, PR for each, push to feature branch, let Shopify auto-merge OR explicitly merge via GitHub MCP.
-
-## Last actions in previous session (2026-06-16 17:30–18:00 UTC)
-
-1. Replaced Discovery Set with The Chai Edit (commit `fc2e147`)
-2. Fixed the `rgba(0,0,0,0)` transparent-bg bug across 13 sections (commit `97165b0`)
-3. Reverted header from forest green back to light cream (logo is transparent PNG, dark green letters disappeared on dark bg) (commit `e1e73f8`)
-4. Added 2×2 collage layout to Discovery section, flipped to content-LEFT image-RIGHT (commits `409f1ef`, then later flipped again — content-LEFT in `99885df`)
-5. Set explicit hex bg colors for every homepage section in templates/index.json (commit `7745c3b`)
-6. Integrated 62 product descriptions + 2 new metafields (tasting_notes, best_enjoyed) (commit `f3dcce3`)
-7. Added Discovery side_image slot (Chai seal/logo), shrunk section ~30% (commit `c040d8f`)
-8. Added matching 2×2 collage option to Powders section (commit `99885df`)
-9. Moved Discovery side image inline with heading + built consolidated `divine-bulk-import.xlsx` (commit `372652a`)
+1. New thread → this repo + branch `claude/gracious-sagan-ff3uf5`. Skim this file.
+2. **Check the Shopify MCP store first** (`get-shop-info`) — if it's Euphree, get the merchant to switch to Divine before any audit/verify.
+3. Small commits, push to the feature branch, let auto-PR + Shopify sync handle deploy. Validate JSON (strip comment header) and Liquid `if/for` balance + no blank schema defaults before pushing.
+4. Store data changes = generate Matrixify **.xlsx** (commas-safe) for the merchant to import.
