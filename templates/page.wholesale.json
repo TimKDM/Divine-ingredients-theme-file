@@ -169,6 +169,7 @@
         "testimonial_4",
         "testimonial_5"
       ],
+      "disabled": true,
       "settings": {
         "caption": "Trusted Partners",
         "title": "What Our Wholesale Clients Say",

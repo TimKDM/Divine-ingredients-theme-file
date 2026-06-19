@@ -9,7 +9,7 @@ black-teas,MERGE,Black Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Bl
 herbal-tea,MERGE,Herbal Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Herbal Tea,Herbal Tea,
 chai,MERGE,Chai,,Best Selling,,True,all conditions,Tag,Equals,Type_Chai,Chai,
 matcha,MERGE,Matcha,,Best Selling,,True,all conditions,Tag,Equals,Type_Matcha,Matcha,
-iced-teas,MERGE,Iced Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Iced Tea,Iced Tea,
+iced-tea-collection,MERGE,Iced Tea,,Best Selling,,True,all conditions,Tag,Equals,Type_Iced Tea,Iced Tea,
 boba-boba,MERGE,Boba Boba,,Best Selling,,True,all conditions,Tag,Equals,Type_Boba Boba,Boba Boba,
 all-teas,MERGE,All Teas,Every tea in the Divine catalog.,Best Selling,,True,all conditions,Tag,Equals,Category_Tea,All Teas,Every tea in the Divine catalog.
 all-powders,MERGE,All Powders,Superfood powders.,Best Selling,,True,all conditions,Tag,Equals,Category_Powder,All Powders,Superfood powders.

@@ -201,6 +201,7 @@
         "payment_enable_2",
         "complementary"
       ],
+      "disabled": true,
       "settings": {
         "enable_full_width": false,
         "enable_sticky_info": true,
@@ -224,11 +225,11 @@
         "product_title_font_size": 32,
         "price_font_size": 36,
         "description_font_size": 20
-      },
-      "disabled": true
+      }
     },
     "custom_schema": {
       "type": "custom-schema",
+      "disabled": true,
       "settings": {
         "enable_schema": true,
         "schema_type": "product",
@@ -238,8 +239,7 @@
         "category": "Food, Beverages & Tobacco > Beverages > Tea & Infusions",
         "additional_type": "",
         "custom_json": ""
-      },
-      "disabled": true
+      }
     },
     "product_trust_bar": {
       "type": "divine-trust-bar",
@@ -448,6 +448,7 @@
         "column_2",
         "column_3"
       ],
+      "disabled": true,
       "settings": {
         "title": "Hear It From the Community",
         "heading_size": "medium",
@@ -470,11 +471,11 @@
         "margin_top": 0,
         "swipe_on_mobile": true,
         "disable_arrow_mobile": true
-      },
-      "disabled": true
+      }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "caption": "",
         "text_style": "caption-with-letter-spacing",
@@ -499,11 +500,11 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "disable_arrow_mobile": true
-      },
-      "disabled": true
+      }
     },
     "recently_viewed_products": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "caption": "",
         "text_style": "caption-with-letter-spacing",
@@ -519,8 +520,7 @@
         "columns_mobile": "3",
         "margin_spacing": "negative",
         "margin_top": 0
-      },
-      "disabled": true
+      }
     },
     "certification_logos": {
       "type": "image-gallery",
@@ -582,6 +582,7 @@
     },
     "sticky_add_to_cart": {
       "type": "sticky-add-to-cart",
+      "disabled": true,
       "settings": {
         "enable_section": true,
         "hide_desktop": false,
@@ -595,8 +596,7 @@
         "color_scheme": "option-2",
         "padding_top": 8,
         "padding_bottom": 8
-      },
-      "disabled": true
+      }
     },
     "divine_product": {
       "type": "divine-product",

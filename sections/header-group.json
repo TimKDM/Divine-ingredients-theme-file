@@ -47,8 +47,8 @@
         "link_1"
       ],
       "settings": {
-        "background_color": "#1F3018",
-        "text_color": "#FFFFFF",
+        "background_color": "#1f3018",
+        "text_color": "#ffffff",
         "font_size": 12,
         "padding_top": 10,
         "padding_bottom": 10
@@ -74,7 +74,7 @@
         "mega-promotion"
       ],
       "settings": {
-        "menu": "divine-mega-menu",
+        "menu": "main-menu",
         "menu_type_desktop": "mega",
         "all_items_mega": false,
         "enable_links": false,

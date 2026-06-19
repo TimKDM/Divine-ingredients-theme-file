@@ -161,7 +161,7 @@
         "ritual_immunity": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "immunity",
             "image": "shopify://shop_images/IMG_5095-2_7ad0e501-ece7-4c6e-8da7-f290c1369e45.jpg",
             "tag": "",
             "heading": "Immunity",
@@ -174,7 +174,7 @@
         "ritual_winddown": {
           "type": "category",
           "settings": {
-            "collection": "calm-rituals-hemp-tea",
+            "collection": "wind-down",
             "image": "shopify://shop_images/WT.Sereny1.jpg",
             "tag": "",
             "heading": "Wind Down",
@@ -187,7 +187,7 @@
         "ritual_gutreset": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "gut-reset",
             "image": "shopify://shop_images/WT.Gingess1.jpg",
             "tag": "",
             "heading": "Gut Reset",
@@ -200,7 +200,7 @@
         "ritual_focus": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "focus-and-energy",
             "image": "shopify://shop_images/ST.Genamha1.jpg",
             "tag": "",
             "heading": "Focus & Energy",
@@ -213,7 +213,7 @@
         "ritual_detox": {
           "type": "category",
           "settings": {
-            "collection": "",
+            "collection": "detox",
             "image": "shopify://shop_images/HT.Magices1_1.jpg",
             "tag": "",
             "heading": "Detox",
@@ -288,13 +288,21 @@
         "p_3"
       ],
       "settings": {
-        "image": "shopify://shop_images/superfood_boost_subscription_box.jpg",
+        "image": "shopify://shop_images/blue_spirulina_powder.jpg",
+        "image_2": "shopify://shop_images/Firefly_Gemini_Flash_make_this_exactly_match_the_color_and_texture_of_the_secondary_image._881920.png",
+        "image_3": "shopify://shop_images/Firefly_Gemini_Flash_make_the_powder_in_the_bowl_the_same_color_as_the_image_without_the_bowl_617172.png",
+        "image_4": "shopify://shop_images/cocoa_powder.jpg",
+        "image_5": "shopify://shop_images/Firefly_Gemini_Flash_make_the_powder_in_the_bowl_the_same_color_as_the_image_without_the_bowl._651357.png",
+        "image_6": "shopify://shop_images/molasses_powder.jpg",
+        "image_7": "shopify://shop_images/lucuma_powder.jpg",
+        "image_8": "shopify://shop_images/rose_petals_powder.jpg",
+        "image_9": "shopify://shop_images/coconut_milk_powder.jpg",
         "caption": "Daily superfoods",
         "title": "<p>Superfood<br><em>powders</em></p>",
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
         "button_label": "Browse all powders",
-        "button_link": "shopify://collections/organic-superfood-powders",
-        "background_color": "",
+        "button_link": "shopify://collections/all-powders",
+        "background_color": "#D4CAAE",
         "padding_top": 68,
         "padding_bottom": 68,
         "margin_top": 0,
@@ -306,15 +314,40 @@
     "divine_bestsellers": {
       "type": "divine-products",
       "blocks": {
-        "pick_tea": { "type": "product", "settings": { "product": "mumbai-chai" } },
-        "pick_powder": { "type": "product", "settings": { "product": "organic-taro-powder" } },
-        "pick_spice": { "type": "product", "settings": { "product": "organic-turmeric-spice" } },
-        "pick_matcha": { "type": "product", "settings": { "product": "supreme-matcha" } }
+        "pick_tea": {
+          "type": "product",
+          "settings": {
+            "product": "mumbai-chai"
+          }
+        },
+        "pick_powder": {
+          "type": "product",
+          "settings": {
+            "product": "organic-taro-powder"
+          }
+        },
+        "pick_spice": {
+          "type": "product",
+          "settings": {
+            "product": "organic-turmeric-spice"
+          }
+        },
+        "pick_matcha": {
+          "type": "product",
+          "settings": {
+            "product": "supreme-matcha"
+          }
+        }
       },
-      "block_order": ["pick_tea", "pick_powder", "pick_spice", "pick_matcha"],
+      "block_order": [
+        "pick_tea",
+        "pick_powder",
+        "pick_spice",
+        "pick_matcha"
+      ],
       "settings": {
         "caption": "Customer Favorites",
-        "title": "The ones people keep coming back for",
+        "title": "Meet our Divine Bestsellers!",
         "collection": "favorite-products",
         "products_to_show": 4,
         "show_price": false,
@@ -327,7 +360,7 @@
         "background_color": "",
         "text_color": "",
         "accent_color": "",
-        "card_background_color": "",
+        "card_background_color": "#D4CAAE",
         "padding_top": 72,
         "padding_bottom": 72,
         "margin_top": 0,
