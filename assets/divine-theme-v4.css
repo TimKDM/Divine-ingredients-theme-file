@@ -991,13 +991,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-story,.d-powders,.d-discovery,.d-email{grid-template-columns:1fr}
   /* #9 brand story stacks heading -> photo -> body (photo in the middle) */
   .d-story{grid-template-areas:"head" "media" "body"}
-  .d-story-head{padding-bottom:0}
-  .d-story-body-col{padding-top:32px}
+  .d-story-head{padding-left:48px;padding-right:48px;padding-bottom:0}
+  .d-story-body-col{padding-left:48px;padding-right:48px;padding-top:32px}
   .d-story-right,.d-powders-img-wrap,.d-disc-img-wrap{min-height:340px;order:0}
   .d-disc-body{order:0}
   .d-products,.d-certs,.d-b2b{padding:72px 40px}
   .d-ritual-header{padding:0 40px 48px}
-  .d-story-left,.d-powders-body,.d-disc-body,.d-email{padding:72px 48px}
+  .d-powders-body,.d-disc-body,.d-email{padding:72px 48px}
   .d-ritual-grid{grid-template-columns:1fr 1fr}
   .d-rc{min-height:300px}
   .d-prod-grid{grid-template-columns:1fr 1fr}
@@ -1020,7 +1020,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-nav-icons{margin-left:auto}
   .d-hero-content{padding:0 24px 52px}
   .d-products,.d-certs,.d-b2b{padding:60px 24px}
-  .d-story-left,.d-powders-body,.d-disc-body,.d-email{padding:60px 28px}
+  .d-powders-body,.d-disc-body,.d-email{padding:60px 28px}
+  .d-story-head,.d-story-body-col{padding-left:28px;padding-right:28px}
   .d-ritual{padding:60px 0 0}
   .d-ritual-header{padding:0 24px 40px;flex-direction:column;align-items:flex-start;gap:16px}
   .d-ritual-grid{grid-template-columns:1fr}
