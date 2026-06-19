@@ -494,10 +494,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
    STORY SPLIT (homepage founder story)
    ============================================ */
 .d-story{
-  display:grid;grid-template-columns:1fr 1fr;background:var(--d-white);
+  display:grid;grid-template-columns:1fr 1fr;
+  grid-template-areas:"head media" "body media";
+  background:var(--d-white);
 }
-.d-story-left{padding:96px 80px;display:flex;flex-direction:column;justify-content:center}
-.d-story-right{position:relative;overflow:hidden;min-height:600px;padding-left:48px;padding-right:48px;box-sizing:border-box}
+.d-story-head{grid-area:head;padding:96px 80px 0;display:flex;flex-direction:column;justify-content:flex-end}
+.d-story-body-col{grid-area:body;padding:0 80px 96px;display:flex;flex-direction:column;justify-content:flex-start}
+.d-story-right{grid-area:media;position:relative;overflow:hidden;min-height:600px;padding-left:48px;padding-right:48px;box-sizing:border-box}
 .d-story-img{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:brightness(.82) saturate(.95);
@@ -986,6 +989,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   .d-nav-links{gap:20px}
   .d-hero-content{padding:0 48px 60px}
   .d-story,.d-powders,.d-discovery,.d-email{grid-template-columns:1fr}
+  /* #9 brand story stacks heading -> photo -> body (photo in the middle) */
+  .d-story{grid-template-areas:"head" "media" "body"}
+  .d-story-head{padding-bottom:0}
+  .d-story-body-col{padding-top:32px}
   .d-story-right,.d-powders-img-wrap,.d-disc-img-wrap{min-height:340px;order:0}
   .d-disc-body{order:0}
   .d-products,.d-certs,.d-b2b{padding:72px 40px}

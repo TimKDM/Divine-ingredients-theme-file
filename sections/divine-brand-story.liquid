@@ -6,7 +6,12 @@
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
-  #shopify-section-{{ section.id }} .d-story-left,
+  #shopify-section-{{ section.id }} .d-story-head{
+    padding-top: {{ section.settings.padding_top | default: 96 }}px;
+  }
+  #shopify-section-{{ section.id }} .d-story-body-col{
+    padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;
+  }
   #shopify-section-{{ section.id }} .d-story-right{
     padding-top: {{ section.settings.padding_top | default: 96 }}px;
     padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;
@@ -23,7 +28,7 @@
 {%- endstyle -%}
 
 <section class="d-story d-reveal">
-  <div class="d-story-left">
+  <div class="d-story-head">
     {%- if section.settings.caption != blank -%}
       <div class="d-sec-label">{{ section.settings.caption }}</div>
     {%- endif -%}
@@ -32,17 +37,6 @@
     {%- endif -%}
     {%- if section.settings.heading != blank -%}
       <h2 class="d-sec-h" style="margin-bottom:24px">{{ section.settings.heading }}</h2>
-    {%- endif -%}
-    {%- if section.settings.text != blank -%}
-      <div class="d-story-body-wrap">
-        {{ section.settings.text | replace: '<p>', '<p class="d-story-body">' }}
-      </div>
-    {%- endif -%}
-    {%- if section.settings.signature != blank -%}
-      <div class="d-story-sig">{{ section.settings.signature }}</div>
-    {%- endif -%}
-    {%- if section.settings.button_label != blank -%}
-      <a href="{{ section.settings.button_link | default: '/pages/about-us' }}" class="d-btn-t">{{ section.settings.button_label }} →</a>
     {%- endif -%}
   </div>
   <div class="d-story-right">
@@ -66,6 +60,19 @@
           </div>
         {%- endif -%}
       </div>
+    {%- endif -%}
+  </div>
+  <div class="d-story-body-col">
+    {%- if section.settings.text != blank -%}
+      <div class="d-story-body-wrap">
+        {{ section.settings.text | replace: '<p>', '<p class="d-story-body">' }}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.signature != blank -%}
+      <div class="d-story-sig">{{ section.settings.signature }}</div>
+    {%- endif -%}
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link | default: '/pages/about-us' }}" class="d-btn-t">{{ section.settings.button_label }} →</a>
     {%- endif -%}
   </div>
 </section>
