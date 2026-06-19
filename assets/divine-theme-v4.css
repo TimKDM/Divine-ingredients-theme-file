@@ -22,6 +22,11 @@
   --d-border:   rgba(30,48,20,.09);
   --d-font-serif: "Cormorant", "Cormorant Garamond", Georgia, serif;
   --d-font-sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+  /* Font sweep: remap Shopify's stock font variables to the brand fonts so
+     every stock section (cart, account, search, breadcrumbs, etc.) inherits
+     Jost / Cormorant instead of the theme's Josefin Sans. */
+  --font-body-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --font-heading-family: "Cormorant", "Cormorant Garamond", Georgia, serif;
 }
 
 /* ============================================
