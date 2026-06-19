@@ -35,7 +35,7 @@
         "menu_help": {
           "type": "menu_column",
           "settings": {
-            "heading": "Help",
+            "heading": "Company",
             "menu": "footer-company",
             "heading_2": "",
             "menu_2": ""

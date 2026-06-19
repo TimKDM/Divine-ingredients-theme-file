@@ -1035,6 +1035,30 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
 }
 
 /* ============================================
+   CLIENT MOBILE REVISIONS
+   ============================================ */
+/* #6 Center the logo 50/50 on mobile (equal side columns) */
+@media(max-width:990px){
+  .header-wrapper .header{ grid-template-columns: 1fr auto 1fr !important; }
+  .header__heading, .header__heading-link{ justify-self: center !important; text-align: center !important; margin: 0 auto !important; }
+}
+@media(max-width:720px){
+  /* #8 Bestsellers stack 2x2 on mobile */
+  .d-prod-grid{ grid-template-columns: 1fr 1fr !important; }
+
+  /* #7 Powders: keep image-left / content-right (don't stack), narrower image column, cap at 3 */
+  .d-powders{ grid-template-columns: 0.72fr 1.28fr !important; }
+  .d-powders-img-wrap{ min-height: 0 !important; order: 0 !important; }
+  .d-powders-body{ padding: 32px 20px !important; }
+  .d-powders .d-sec-h{ font-size: 30px !important; }
+  .d-powder-row:nth-child(n+4){ display: none !important; }
+
+  /* #9 Preet photo centered on mobile (full-width band, face centered) */
+  .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
+  .d-story-img{ object-position: center top; }
+}
+
+/* ============================================
    ACCESSIBILITY - WCAG 2.1 AA
    ============================================ */
 
@@ -1304,6 +1328,22 @@ summary.header__icon:focus-visible,
 .mega-menu__list a:hover,
 .header__submenu a:hover{
   color: var(--d-black) !important;
+}
+
+/* #1 Force brand sans (Jost) across the whole header nav + mega menu
+   (stock theme was falling back to a system/Arial-style font) */
+.main-navigation, .main-navigation *,
+.main-navigation-mega, .main-navigation-mega *,
+.menu-drawer, .menu-drawer *,
+.mega-menu__content, .mega-menu__content *,
+.mega-image-menu__list, .mega-image-menu__list *{
+  font-family: var(--d-font-sans) !important;
+}
+
+/* #2 Forms -> Jost (inputs, textareas, selects, buttons across the site) */
+input, textarea, select, button,
+.field__input, .form__label, .field__label, .select__select{
+  font-family: var(--d-font-sans) !important;
 }
 
 /* Mobile drawer (when header-drawer opens) */
