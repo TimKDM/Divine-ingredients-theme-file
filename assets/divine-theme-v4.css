@@ -1624,7 +1624,7 @@ input, textarea, select, button,
   font-family: var(--d-font-sans);
 }
 .d-product-name{
-  font-family: var(--d-font-serif);
+  font-family: var(--d-font-sans);
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 400;
   color: var(--d-black);
