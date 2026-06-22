@@ -190,7 +190,7 @@
         "kicker": "Get in touch",
         "heading": "<p>Send us a <em>message</em></p>",
         "subtext": "Tell us about your order, a question on sourcing, a sample request, or anything else. The more detail, the faster we can help.",
-        "button_label": "Send Message",
+        "button_label": "Send message",
         "success_message": "Thank you. Your message is on its way. We'll be in touch within one business day.",
         "background": "white",
         "padding_top": 80,
