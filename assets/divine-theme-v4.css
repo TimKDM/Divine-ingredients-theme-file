@@ -29,6 +29,9 @@
      Headings now use Jost too (serif retired from headings site-wide). */
   --font-heading-family: var(--d-font-sans);
   --font-body-family:    var(--d-font-sans);
+  /* Jost headings read heavier than Cormorant, so the stock heading weight
+     (Josefin n7 = 700) is too bold. Match the custom headings at 400. */
+  --font-heading-weight: 400;
 }
 
 /* ============================================
@@ -269,7 +272,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
 }
 .d-hero-h1{
   font-family:var(--d-font-serif);
-  font-size:clamp(54px,7vw,98px);font-weight:300;line-height:.98;
+  font-size:clamp(44px,5.4vw,78px);font-weight:400;line-height:1.02;
   color:var(--d-beige-lt);letter-spacing:-.015em;margin:0 0 22px;
   opacity:0;animation:d-up .7s .2s forwards;
 }
@@ -852,8 +855,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
 }
 .d-ph-kicker::before{content:"";width:24px;height:1px;background:var(--d-muted)}
 .d-ph-h1{
-  font-family:var(--d-font-serif);font-size:clamp(52px,6vw,88px);font-weight:300;
-  color:var(--d-black);line-height:.98;letter-spacing:-.02em;margin:0 0 28px;
+  font-family:var(--d-font-serif);font-size:clamp(44px,5vw,72px);font-weight:400;
+  color:var(--d-black);line-height:1.02;letter-spacing:-.02em;margin:0 0 28px;
 }
 .d-ph-h1 em{font-style:italic;color:var(--d-forest)}
 .d-ph-intro{
@@ -2747,4 +2750,5 @@ input, textarea, select, button,
 .d-contact-h, .d-chero-title, .d-why-item h3, .d-sub-card-content h3,
 .contact-form-section .title-wrapper--no-top-margin .title {
   font-family: var(--d-font-sans) !important;
+  font-weight: 400 !important;
 }
