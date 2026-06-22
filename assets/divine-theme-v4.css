@@ -913,6 +913,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   font-size:13px;font-weight:400;color:var(--d-muted);margin-top:16px;
   letter-spacing:.04em;font-family:var(--d-font-sans);
 }
+/* The story hero photo (right column) bleeds ~320px down into this quote.
+   On desktop, reserve the photo's right-half column and keep the section tall
+   enough to contain the bleed, so the image never covers the quote text. */
+@media(min-width:1101px){
+  .d-pullquote{padding-right:calc(50% + 32px);min-height:360px}
+}
 
 /* About: story body w sidebar */
 .d-story-section{
@@ -1105,7 +1111,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
      (don't stack), narrower image column, collage as a single column */
   .d-discovery{ grid-template-columns: 1.28fr 0.72fr !important; }
   .d-disc-body{ order: 1 !important; padding: 32px 20px !important; }
-  .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; }
+  /* drop the white framing padding so the image strip sits flush (no gap) */
+  .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; padding: 0 !important; }
   .d-disc-h{ font-size: 30px !important; }
   /* Image collage: single column of the 3 single-tea images (hide the set image) */
   .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
