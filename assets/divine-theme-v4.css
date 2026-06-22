@@ -493,7 +493,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-serif); }
   color:var(--d-muted);margin-bottom:7px;font-family:var(--d-font-sans);
 }
 .d-pcard-name{
-  font-family:var(--d-font-serif);font-size:20px;font-weight:400;
+  font-family:var(--d-font-sans);font-size:20px;font-weight:400;
   color:var(--d-black);line-height:1.2;margin:0 0 8px;
 }
 .d-pcard:first-child .d-pcard-name{font-size:24px}
@@ -1624,7 +1624,7 @@ input, textarea, select, button,
   font-family: var(--d-font-sans);
 }
 .d-product-name{
-  font-family: var(--d-font-serif);
+  font-family: var(--d-font-sans);
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 400;
   color: var(--d-black);
@@ -2116,11 +2116,20 @@ input, textarea, select, button,
   font-family: var(--d-font-sans);
 }
 .d-rp-name{
-  font-family: var(--d-font-serif);
+  font-family: var(--d-font-sans);
   font-size: 18px; font-weight: 400;
   color: var(--d-black);
   line-height: 1.2;
   margin-bottom: 6px;
+}
+
+/* Product titles render in Jost everywhere, including stock surfaces (cart,
+   add-to-cart notification, predictive search) where they carry Flux .h4/.h5
+   heading classes that would otherwise pull Cormorant. */
+.cart-item-name,
+.cart-notification-product__name,
+.predictive-search__item-heading{
+  font-family: var(--d-font-sans) !important;
 }
 .d-rp-price{
   font-family: var(--d-font-serif);
@@ -2447,7 +2456,7 @@ input, textarea, select, button,
   font-family: var(--d-font-sans);
 }
 .d-coll-card-name{
-  font-family: var(--d-font-serif);
+  font-family: var(--d-font-sans);
   font-size: 17px; font-weight: 400;
   color: var(--d-black);
   line-height: 1.2;
