@@ -1092,6 +1092,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-powders-body{ padding: 32px 20px !important; }
   .d-powders .d-sec-h{ font-size: 30px !important; }
   .d-powder-row:nth-child(n+4){ display: none !important; }
+  /* Image collage: single column of 3 (one image per row) on mobile */
+  .d-powders-collage--9{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
+  .d-powders-collage--9 .d-powders-tile{ aspect-ratio: auto !important; }
+  .d-powders-collage--9 .d-powders-tile:nth-child(n+4){ display: none !important; }
 
   /* #9 Preet photo centered on mobile (full-width band, face centered) */
   .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
