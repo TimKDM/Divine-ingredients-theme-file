@@ -22,6 +22,14 @@
   --d-border:   rgba(30,48,20,.09);
   --d-font-serif: "Cormorant", "Cormorant Garamond", Georgia, serif;
   --d-font-sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+
+  /* Override Shopify/Flux's active font vars (Josefin Sans) with the brand
+     stack. Flux binds --font-heading-family to every heading AND the .h0-.h6
+     utility classes, and --font-body-family to .text-body / form helpers /
+     nav. Redefining them here makes ALL stock components inherit brand fonts,
+     so Josefin Sans no longer leaks into stock section titles. */
+  --font-heading-family: var(--d-font-serif);
+  --font-body-family:    var(--d-font-sans);
 }
 
 /* ============================================
