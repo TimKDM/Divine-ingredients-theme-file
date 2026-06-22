@@ -1106,9 +1106,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-disc-body{ order: 1 !important; padding: 32px 20px !important; }
   .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; }
   .d-disc-h{ font-size: 30px !important; }
-  /* Image collage: single column (one image per row) on mobile */
-  .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(4, 1fr) !important; }
+  /* Image collage: single column of the 3 single-tea images (hide the set image) */
+  .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
   .d-disc-tile{ aspect-ratio: auto !important; }
+  .d-disc-tile:first-child{ display: none !important; }
 
   /* #9 Preet photo centered on mobile (full-width band, face centered) */
   .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
