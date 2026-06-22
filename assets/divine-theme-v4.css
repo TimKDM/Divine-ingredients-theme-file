@@ -1112,13 +1112,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-discovery{ grid-template-columns: 1.28fr 0.72fr !important; gap: 0 !important; }
   .d-disc-body{ order: 1 !important; padding: 32px 20px !important; }
   /* drop the white framing padding so the image strip sits flush (no gap) */
-  .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; padding: 0 !important; }
+  .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; padding: 0 !important; background: var(--d-forest) !important; }
   .d-disc-h{ font-size: 30px !important; }
   /* Image collage: single column of the 3 single-tea images (hide the set image) */
   .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
-  .d-disc-tile{ aspect-ratio: auto !important; }
+  .d-disc-tile{ aspect-ratio: auto !important; background: var(--d-forest) !important; }
   .d-disc-tile:first-child{ display: none !important; }
-  /* show the full product photo (no cropping) — fit within each tile */
+  /* show the full product photo (no cropping) — fit within each tile, on the section bg */
   .d-disc-tile-img{ object-fit: contain !important; }
 
   /* #9 Preet photo centered on mobile (full-width band, face centered) */
