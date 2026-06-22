@@ -843,9 +843,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
 .d-page-hero{
   padding:80px 80px 0;background:var(--d-white);display:grid;
   grid-template-columns:1fr 1fr;gap:2px;align-items:stretch;
+  position:relative;z-index:2;
 }
 .d-ph-left{
-  display:flex;flex-direction:column;justify-content:flex-end;
+  display:flex;flex-direction:column;justify-content:center;
   padding-bottom:72px;padding-right:64px;
 }
 .d-ph-kicker{
@@ -864,7 +865,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   font-family:var(--d-font-sans);
 }
 .d-ph-right{
-  position:relative;background:var(--d-beige-lt);min-height:560px;overflow:hidden;
+  position:relative;background:var(--d-beige-lt);min-height:500px;overflow:hidden;
+  margin-bottom:-72px;z-index:2;
 }
 .d-ph-img{
   width:100%;height:100%;object-fit:cover;display:block;
@@ -1037,7 +1039,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-breadcrumb{padding:14px 40px}
   .d-page-hero{padding:60px 40px 0;grid-template-columns:1fr}
   .d-ph-left{padding-right:0;padding-bottom:48px}
-  .d-ph-right{min-height:400px}
+  /* stack cleanly on mobile: no downward bleed (would overlap the text) */
+  .d-ph-right{min-height:400px;margin-bottom:0 !important}
   .d-pullquote{padding:64px 40px}
   .d-story-section{padding:72px 40px;grid-template-columns:1fr;gap:48px}
   .d-story-sidebar{position:static;display:grid;grid-template-columns:repeat(3,1fr)}
