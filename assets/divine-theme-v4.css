@@ -1118,6 +1118,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
   .d-disc-tile{ aspect-ratio: auto !important; }
   .d-disc-tile:first-child{ display: none !important; }
+  /* show the full product photo (no cropping) — fit within each tile */
+  .d-disc-tile-img{ object-fit: contain !important; }
 
   /* #9 Preet photo centered on mobile (full-width band, face centered) */
   .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
