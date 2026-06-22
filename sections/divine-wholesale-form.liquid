@@ -36,8 +36,7 @@
     font-family: var(--d-font-sans);
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    letter-spacing: 0;
     color: var(--color-accent-dark, #1F3018);
     display: block;
     margin-bottom: 10px;
@@ -84,8 +83,7 @@
     font-family: var(--d-font-sans);
     font-size: {{ section.settings.form_header_font_size | default: 13 }}px;
     font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0;
     color: var(--color-accent-dark, #1F3018);
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -116,8 +114,7 @@
     font-family: var(--d-font-sans);
     font-size: {{ section.settings.form_label_font_size | default: 11 }}px;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0;
     margin-bottom: 8px;
     color: rgb(var(--color-foreground));
   }
@@ -193,8 +190,7 @@
     font-family: var(--d-font-sans);
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0;
     background: var(--color-accent-dark, #1F3018);
     color: #fff;
     border: none;
@@ -277,11 +273,11 @@
 
       {%- comment -%} Business Information {%- endcomment -%}
       <fieldset class="d-wsf-fieldset">
-        <legend class="d-wsf-legend">Business Information</legend>
+        <legend class="d-wsf-legend">Business information</legend>
 
         <div class="d-wsf-row">
           <div class="d-wsf-field">
-            <label class="d-wsf-label" for="WholesaleForm-company">Company / Business name<span class="req">*</span></label>
+            <label class="d-wsf-label" for="WholesaleForm-company">Company / business name<span class="req">*</span></label>
             <input class="d-wsf-input" type="text" id="WholesaleForm-company" name="contact[Company Name]" required>
           </div>
         </div>
@@ -324,7 +320,7 @@
             <input class="d-wsf-input" type="url" id="WholesaleForm-website" name="contact[Website]" placeholder="https://">
           </div>
           <div class="d-wsf-field">
-            <label class="d-wsf-label" for="WholesaleForm-social">Instagram / Social handle</label>
+            <label class="d-wsf-label" for="WholesaleForm-social">Instagram / social handle</label>
             <input class="d-wsf-input" type="text" id="WholesaleForm-social" name="contact[Social Handle]" placeholder="@yourbrand">
           </div>
         </div>
@@ -333,7 +329,7 @@
 
       {%- comment -%} Shipping / Business Address {%- endcomment -%}
       <fieldset class="d-wsf-fieldset">
-        <legend class="d-wsf-legend">Business Address</legend>
+        <legend class="d-wsf-legend">Business address</legend>
 
         <div class="d-wsf-row">
           <div class="d-wsf-field">
@@ -348,11 +344,11 @@
             <input class="d-wsf-input" type="text" id="WholesaleForm-city" name="contact[City]" autocomplete="address-level2">
           </div>
           <div class="d-wsf-field">
-            <label class="d-wsf-label" for="WholesaleForm-state">State / Province</label>
+            <label class="d-wsf-label" for="WholesaleForm-state">State / province</label>
             <input class="d-wsf-input" type="text" id="WholesaleForm-state" name="contact[State Or Province]" autocomplete="address-level1">
           </div>
           <div class="d-wsf-field">
-            <label class="d-wsf-label" for="WholesaleForm-zip">Zip / Postal code</label>
+            <label class="d-wsf-label" for="WholesaleForm-zip">Zip / postal code</label>
             <input class="d-wsf-input" type="text" id="WholesaleForm-zip" name="contact[Postal Code]" autocomplete="postal-code">
           </div>
         </div>
@@ -367,7 +363,7 @@
 
       {%- comment -%} Contact Person {%- endcomment -%}
       <fieldset class="d-wsf-fieldset">
-        <legend class="d-wsf-legend">Primary Contact</legend>
+        <legend class="d-wsf-legend">Primary contact</legend>
 
         <div class="d-wsf-row d-wsf-row--2">
           <div class="d-wsf-field">
@@ -404,7 +400,7 @@
 
       {%- comment -%} Product Interest {%- endcomment -%}
       <fieldset class="d-wsf-fieldset">
-        <legend class="d-wsf-legend">Product Interest</legend>
+        <legend class="d-wsf-legend">Product interest</legend>
 
         <div class="d-wsf-row">
           <div class="d-wsf-field">
@@ -462,7 +458,7 @@
       </fieldset>
 
       <div class="d-wsf-submit-row">
-        <button type="submit" class="d-wsf-submit">Submit Trade Inquiry</button>
+        <button type="submit" class="d-wsf-submit">Submit trade inquiry</button>
         <p class="d-wsf-note">{{ section.settings.submit_note }}</p>
       </div>
 
