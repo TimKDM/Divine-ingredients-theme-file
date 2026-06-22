@@ -865,8 +865,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   font-family:var(--d-font-sans);
 }
 .d-ph-right{
-  position:relative;background:var(--d-beige-lt);min-height:500px;overflow:hidden;
-  margin-bottom:-72px;z-index:2;
+  position:relative;background:var(--d-beige-lt);min-height:460px;overflow:hidden;
+  margin-bottom:-125px;z-index:2;
 }
 .d-ph-img{
   width:100%;height:100%;object-fit:cover;display:block;
@@ -1099,6 +1099,17 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   .d-powders-collage--9{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
   .d-powders-collage--9 .d-powders-tile{ aspect-ratio: auto !important; }
   .d-powders-collage--9 .d-powders-tile:nth-child(n+4){ display: none !important; }
+
+  /* Chai Edit (discovery): mirror of powders — keep content-left / image-right
+     (don't stack), narrower image column, collage as a single column */
+  .d-discovery{ grid-template-columns: 1.28fr 0.72fr !important; }
+  .d-disc-body{ order: 1 !important; padding: 32px 20px !important; }
+  .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; }
+  .d-disc-h{ font-size: 30px !important; }
+  /* Image collage: single column of the 3 single-tea images (hide the set image) */
+  .d-disc-collage{ grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 1fr) !important; }
+  .d-disc-tile{ aspect-ratio: auto !important; }
+  .d-disc-tile:first-child{ display: none !important; }
 
   /* #9 Preet photo centered on mobile (full-width band, face centered) */
   .d-story-right{ padding: 0 !important; min-height: 0 !important; aspect-ratio: 4 / 3; }
