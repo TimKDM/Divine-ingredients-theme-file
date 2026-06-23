@@ -1,0 +1,336 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Say Hello",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We're Real People. <em>Let's Talk.</em></p>",
+            "heading_size": "large",
+            "heading_style": "default",
+            "heading_tag": "h1",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#272727"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Questions about our sourcing, an order, a sample, or a wholesale partnership? Every email lands in a real inbox. No chatbots, no ticket queues. We reply personally, usually within 24 hours.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "option-2",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    },
+    "methods": {
+      "type": "multicolumn",
+      "blocks": {
+        "email": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "disable_autoplay": false,
+            "title": "Email Us",
+            "text": "<p>orders@divineingredients.com</p><p>Sent to a real person. Typically a reply within 24 hours.</p>",
+            "link_label": "Send an email",
+            "link": "mailto:orders@divineingredients.com",
+            "open_new_tab_1": false
+          }
+        },
+        "samples": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "disable_autoplay": false,
+            "title": "Request a Sample",
+            "text": "<p>Trying us out before committing to a full bag or a bulk order? We'll send a sample so you can taste the difference for yourself.</p>",
+            "link_label": "Email a sample request",
+            "link": "mailto:orders@divineingredients.com?subject=Sample%20Request",
+            "open_new_tab_1": false
+          }
+        }
+      },
+      "block_order": [
+        "email",
+        "samples"
+      ],
+      "settings": {
+        "multicolumn_style": "style-two",
+        "enable_card_background": false,
+        "caption": "Image Caption",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Get in Touch",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "image_width": "fourth",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "open_new_tab_2": false,
+        "color_scheme": "option-1",
+        "color_scheme_1": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "disable_arrow_mobile": true
+      }
+    },
+    "certs": {
+      "type": "divine-cert-bar",
+      "blocks": {
+        "usda": {
+          "type": "cert",
+          "settings": {
+            "icon": "usda",
+            "label": "USDA Organic"
+          }
+        },
+        "ccof": {
+          "type": "cert",
+          "settings": {
+            "icon": "ccof",
+            "label": "CCOF Certified"
+          }
+        },
+        "non_gmo": {
+          "type": "cert",
+          "settings": {
+            "icon": "non-gmo",
+            "label": "Non-GMO"
+          }
+        },
+        "lab": {
+          "type": "cert",
+          "settings": {
+            "icon": "lab-tested",
+            "label": "Lab Tested"
+          }
+        },
+        "vegan": {
+          "type": "cert",
+          "settings": {
+            "icon": "vegan",
+            "label": "Vegan"
+          }
+        }
+      },
+      "block_order": [
+        "usda",
+        "ccof",
+        "non_gmo",
+        "lab",
+        "vegan"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Trusted & Certified",
+        "use_alt_bg": false,
+        "background_color": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "body_font_size": 10,
+        "heading_font_size": 11
+      }
+    },
+    "contact-form": {
+      "type": "divine-contact",
+      "settings": {
+        "kicker": "Get in touch",
+        "heading": "<p>Send us a <em>message</em></p>",
+        "subtext": "Tell us about your order, a question on sourcing, a sample request, or anything else. The more detail, the faster we can help.",
+        "button_label": "Send message",
+        "success_message": "Thank you. Your message is on its way. We'll be in touch within one business day.",
+        "background": "white",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "quick-help": {
+      "type": "multicolumn",
+      "blocks": {
+        "track": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "disable_autoplay": false,
+            "title": "Track Your Order",
+            "text": "<p>Check status, shipping, and delivery details for a recent order.</p>",
+            "link_label": "View orders",
+            "link": "/account/orders",
+            "open_new_tab_1": false
+          }
+        },
+        "shipping": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "disable_autoplay": false,
+            "title": "Shipping & Returns",
+            "text": "<p>How we ship, what to expect, and our straightforward return policy.</p>",
+            "link_label": "Read policy",
+            "link": "/policies/shipping-policy",
+            "open_new_tab_1": false
+          }
+        },
+        "faq": {
+          "type": "column",
+          "settings": {
+            "hide_image": true,
+            "disable_autoplay": false,
+            "title": "Sourcing & FAQ",
+            "text": "<p>Where our ingredients come from, how we test for purity, and answers to common questions.</p>",
+            "link_label": "Browse FAQ",
+            "link": "/pages/faq",
+            "open_new_tab_1": false
+          }
+        }
+      },
+      "block_order": [
+        "track",
+        "shipping",
+        "faq"
+      ],
+      "settings": {
+        "multicolumn_style": "style-two",
+        "enable_card_background": true,
+        "caption": "Image Caption",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "title": "Looking for Something Specific?",
+        "heading_size": "medium",
+        "heading_style": "default",
+        "heading_tag": "h2",
+        "image_width": "fourth",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "open_new_tab_2": false,
+        "color_scheme": "option-3",
+        "color_scheme_1": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "disable_arrow_mobile": true
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Thinking Wholesale?</p>",
+            "heading_size": "medium",
+            "heading_style": "default",
+            "heading_tag": "h2",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#272727"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We partner with cafés, retailers, and private-label brands who want premium organic ingredients at scale, with the same sourcing transparency and lab documentation our retail customers get. Let's build something together.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Apply for Wholesale",
+            "button_link": "/pages/wholesale",
+            "open_new_tab_1": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "open_new_tab_2": false,
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "option-4",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero",
+    "methods",
+    "certs",
+    "contact-form",
+    "quick-help",
+    "cta"
+  ]
+}
