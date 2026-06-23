@@ -1110,7 +1110,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
 
   /* Chai Edit (discovery): mirror of powders — keep content-left / image-right
      (don't stack), narrower image column, collage as a single column */
-  .d-discovery{ grid-template-columns: 1.28fr 0.72fr !important; gap: 0 !important; }
+  .d-discovery{ grid-template-columns: 1fr 1fr !important; gap: 0 !important; }
   .d-disc-body{ order: 1 !important; padding: 32px 20px !important; }
   /* drop the white framing padding so the image strip sits flush (no gap) */
   .d-disc-img-wrap{ min-height: 0 !important; order: 2 !important; padding: 0 !important; background: var(--d-forest) !important; }
