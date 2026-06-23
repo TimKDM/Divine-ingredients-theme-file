@@ -294,15 +294,15 @@
         "image_4": "shopify://shop_images/cocoa_powder.jpg",
         "image_5": "shopify://shop_images/Firefly_Gemini_Flash_make_the_powder_in_the_bowl_the_same_color_as_the_image_without_the_bowl._651357.png",
         "image_6": "shopify://shop_images/molasses_powder.jpg",
-        "image_7": "shopify://shop_images/lucuma_powder.jpg",
-        "image_8": "shopify://shop_images/rose_petals_powder.jpg",
+        "image_7": "shopify://shop_images/Firefly_make_the_powder_in_the_bowl_the_same_color_as_the_image_without_the_bowl._742738.png",
+        "image_8": "shopify://shop_images/lucuma_powder.jpg",
         "image_9": "shopify://shop_images/coconut_milk_powder.jpg",
         "caption": "Daily superfoods",
         "title": "<p>Superfood<br><em>powders</em></p>",
         "text": "Mushroom powders, fruit powders, and superfoods for smoothies, lattes, and cooking. Every one independently lab tested. No filters, nothing added.",
         "button_label": "Browse all powders",
         "button_link": "shopify://collections/all-powders",
-        "background_color": "#D4CAAE",
+        "background_color": "#d4caae",
         "padding_top": 68,
         "padding_bottom": 68,
         "margin_top": 0,
@@ -360,7 +360,7 @@
         "background_color": "",
         "text_color": "",
         "accent_color": "",
-        "card_background_color": "#D4CAAE",
+        "card_background_color": "#d4caae",
         "padding_top": 72,
         "padding_bottom": 72,
         "margin_top": 0,
@@ -405,11 +405,12 @@
         "include_y9tppw": {
           "type": "include",
           "settings": {
-            "text": "3 handpicked bestselling teas"
+            "text": "3 handpicked bestselling chai"
           }
         },
         "include_x7zAb6": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "text": "3 handpicked bestselling teas"
           }
@@ -445,7 +446,6 @@
         "image_2": "shopify://shop_images/tea-chai-gift.png",
         "image_3": "shopify://shop_images/tea-chai-gift3.png",
         "image_4": "shopify://shop_images/herbal-chai-1.png",
-        "side_image": "shopify://shop_images/tea-box-logo.png",
         "caption": "New from Divine Ingredients",
         "heading": "<p>The <em>Chai Edit</em></p>",
         "text": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
