@@ -317,7 +317,7 @@
         "pick_tea": {
           "type": "product",
           "settings": {
-            "product": "mumbai-chai"
+            "product": "mumbai-black-chai"
           }
         },
         "pick_powder": {
