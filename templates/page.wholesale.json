@@ -20,12 +20,6 @@
     "divine_wholesale": {
       "type": "divine-wholesale",
       "blocks": {
-        "feature_1": {
-          "type": "feature",
-          "settings": {
-            "text": ""
-          }
-        },
         "feature_2": {
           "type": "feature",
           "settings": {
@@ -58,7 +52,6 @@
         }
       },
       "block_order": [
-        "feature_1",
         "feature_2",
         "feature_3",
         "feature_4",
