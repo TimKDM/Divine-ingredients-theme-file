@@ -11,6 +11,7 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "title_font_size": 40,
         "show_collection_description": false,
@@ -25,11 +26,11 @@
         "fallback_heading": "All Products",
         "padding_top": 6,
         "padding_bottom": 0
-      },
-      "disabled": true
+      }
     },
     "subcollections": {
       "type": "subcollections",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "medium",
@@ -52,8 +53,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "disable_arrow_mobile": true
-      },
-      "disabled": true
+      }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
@@ -73,7 +73,7 @@
             "heading_tag": "h2",
             "subheading": "Clean, earthy, and seriously good. Try our premium matcha",
             "link_label": "Order Now",
-            "link": "shopify://products/supreme-matcha",
+            "link": "shopify://products/organic-supreme-matcha-powder",
             "show_text_box": false,
             "image_overlay_opacity": 70,
             "color_scheme": "option-3"
@@ -104,6 +104,7 @@
         "promo_row",
         "promo_row_1"
       ],
+      "disabled": true,
       "settings": {
         "card_title_font_size": 22,
         "products_per_page": 12,
@@ -133,17 +134,16 @@
         "padding_top": 20,
         "padding_bottom": 72,
         "ignore_spacing": true
-      },
-      "disabled": true
+      }
     },
     "collection_description": {
       "type": "collection-description",
+      "disabled": true,
       "settings": {
         "color_scheme": "option-1",
         "padding_top": 36,
         "padding_bottom": 36
-      },
-      "disabled": true
+      }
     },
     "collection_faq": {
       "type": "collapsible-content",
@@ -204,6 +204,7 @@
     },
     "recently_viewed_products": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "caption": "You were eyeing these",
         "text_style": "caption-with-letter-spacing",
@@ -219,8 +220,7 @@
         "columns_mobile": "3",
         "margin_spacing": "negative",
         "margin_top": 0
-      },
-      "disabled": true
+      }
     },
     "certification_logos": {
       "type": "image-gallery",
@@ -283,6 +283,7 @@
     },
     "quick_info_bar": {
       "type": "quick-info-bar",
+      "disabled": true,
       "settings": {
         "heading-1": "Free Shipping",
         "caption-1": "On orders over $75",
@@ -302,8 +303,7 @@
         "ignore_spacing": true,
         "margin_spacing": "negative",
         "margin_top": 0
-      },
-      "disabled": true
+      }
     },
     "divine_collection": {
       "type": "divine-collection",
