@@ -76,11 +76,64 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Thinking Wholesale?</p>",
+            "heading_size": "medium",
+            "heading_style": "default",
+            "heading_tag": "h2",
+            "highlight_option": "underline-hand",
+            "word_animation_color": "#272727"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We partner with caf\u00e9s, retailers, and private-label brands who want premium organic ingredients at scale, with the same sourcing transparency and lab documentation our retail customers get. Let's build something together.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Apply for Wholesale",
+            "button_link": "/pages/wholesale",
+            "open_new_tab_1": false,
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "open_new_tab_2": false,
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "option-4",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "ignore_spacing": false,
+        "margin_spacing": "negative",
+        "margin_top": 0,
+        "mobile_content_alignment": "left"
+      }
     }
   },
   "order": [
     "main",
     "hero",
-    "contact-form"
+    "contact-form",
+    "cta"
   ]
 }
