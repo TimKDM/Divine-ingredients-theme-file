@@ -12,57 +12,43 @@
     "divine_hero": {
       "type": "divine-hero",
       "blocks": {
-        "badge": {
-          "type": "badge",
+        "slide_1": {
+          "type": "image_slide",
           "settings": {
-            "text": "USDA Organic \u00b7 CCOF Certified \u00b7 Lab Tested Every Batch",
-            "badge_bg": "",
-            "badge_color": ""
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {}
-        },
-        "subtitle": {
-          "type": "subtitle",
-          "settings": {}
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
+            "image": "shopify://shop_images/heroposter.jpg",
+            "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
+            "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections",
-            "btn1_bg": "",
-            "btn1_color": "",
-            "button_label_2": "",
-            "button_link_2": "",
-            "btn2_color": ""
+            "overlay_opacity": 100,
+            "text_position": "left"
+          }
+        },
+        "slide_2": {
+          "type": "image_slide",
+          "settings": {
+            "overlay_opacity": 100,
+            "text_position": "left"
+          }
+        },
+        "slide_3": {
+          "type": "video_slide",
+          "settings": {
+            "video": "shopify://files/videos/divineherovideo.mp4",
+            "poster": "shopify://shop_images/heroposter.jpg",
+            "overlay_opacity": 100
           }
         }
       },
       "block_order": [
-        "badge",
-        "heading",
-        "subtitle",
-        "buttons"
+        "slide_1",
+        "slide_2",
+        "slide_3"
       ],
       "settings": {
-        "image": "shopify://shop_images/heroposter.jpg",
-        "video": "shopify://files/videos/divineherovideo.mp4",
-        "video_url": "",
-        "autoplay": true,
-        "loop": true,
-        "muted": true,
-        "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
-        "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
         "image_height": 95,
-        "overlay_opacity": 100,
         "margin_top": 0,
-        "margin_bottom": 0,
-        "body_font_size": 16,
-        "heading_font_size": 88,
-        "badge_font_size": 11
+        "margin_bottom": 0
       }
     },
     "divine_ticker": {
