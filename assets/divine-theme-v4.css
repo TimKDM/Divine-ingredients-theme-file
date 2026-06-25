@@ -1955,7 +1955,9 @@ input, textarea, select, button,
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   max-width: 1200px;
-  margin: 0 auto;
+  /* left-align with the kicker/heading at the section's padding edge
+     (was margin: 0 auto, which centered the block and left a gap on wide screens) */
+  margin: 0;
 }
 /* Single block left (e.g. only steeping/uses) — center it on the page */
 .d-pdp-details-grid--single{
