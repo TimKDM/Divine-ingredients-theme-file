@@ -35,8 +35,8 @@
             "button_link_1": "shopify://collections",
             "btn1_bg": "",
             "btn1_color": "",
-            "button_label_2": "Find Your Blend",
-            "button_link_2": "shopify://collections/zen-greens-green-tea",
+            "button_label_2": "",
+            "button_link_2": "",
             "btn2_color": ""
           }
         }
@@ -263,15 +263,6 @@
             "link": "shopify://collections/organic-superfood-powders"
           }
         },
-        "p_2": {
-          "type": "powder",
-          "settings": {
-            "collection": "",
-            "title": "Fruit Powders",
-            "description": "Blueberry \u00b7 Taro \u00b7 Tart Cherries \u00b7 Rose Petals \u00b7 Date",
-            "link": "shopify://collections/organic-fruit-powders"
-          }
-        },
         "p_3": {
           "type": "powder",
           "settings": {
@@ -284,7 +275,6 @@
       },
       "block_order": [
         "p_1",
-        "p_2",
         "p_3"
       ],
       "settings": {
@@ -380,7 +370,7 @@
         "text": "<p>Divine Ingredients began, as many good things do, with a simple habit. For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for, and more importantly, what didn't belong.</p><p>So she set a new standard. One rooted in honesty, not marketing. Every ingredient is sourced with intention, tested with rigour, and chosen because it earns its place, not because it sounds good on a label.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence. Precise, uncompromising, yet deeply personal. Because when you know better, you choose better.</p>",
         "signature": "<em>Preet Bhullar,</em> Founder",
         "button_label": "Read our story",
-        "button_link": "shopify://pages/about-us",
+        "button_link": "shopify://pages/our-story",
         "button_bg": "",
         "button_color": "",
         "cap_label": "Founded by",
@@ -432,9 +422,16 @@
           "settings": {
             "text": "Herbal Chai \u00b7 Caffeine-free, calm & comforting"
           }
+        },
+        "include_70cups": {
+          "type": "include",
+          "settings": {
+            "text": "Each box yields up to 70 cups"
+          }
         }
       },
       "block_order": [
+        "include_70cups",
         "include_y9tppw",
         "include_x7zAb6",
         "i_1",
@@ -458,7 +455,9 @@
         "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 36,
-        "heading_font_size": 50
+        "heading_font_size": 50,
+        "button_label_2": "Build a Sip & Share Box",
+        "button_link_2": "shopify://products/sip-and-share-box"
       }
     },
     "divine_newsletter": {

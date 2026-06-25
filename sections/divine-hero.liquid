@@ -30,6 +30,30 @@
       opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     }
   {% endif %}
+  /* "Ready to discover?" prompt chip (fades in after a delay, click to open the Chai Edit modal) */
+  #shopify-section-{{ section.id }} .d-hero-prompt{
+    position: absolute; bottom: 28px; right: 28px; z-index: 5;
+    display: flex; align-items: center; gap: 8px;
+    opacity: 0; visibility: hidden; transform: translateY(10px); pointer-events: none;
+    transition: opacity .45s ease, transform .45s ease, visibility .45s;
+  }
+  #shopify-section-{{ section.id }} .d-hero-prompt.is-visible{
+    opacity: 1; visibility: visible; transform: none; pointer-events: auto;
+  }
+  #shopify-section-{{ section.id }} .d-hero-prompt__btn{
+    background: var(--d-beige-lt); color: var(--d-black); border: none;
+    border-radius: 100px; padding: 13px 24px; cursor: pointer;
+    font-family: var(--d-font-sans); font-size: 13px; font-weight: 500; letter-spacing: .04em;
+    box-shadow: 0 8px 28px rgba(0,0,0,.28); transition: transform .12s;
+  }
+  #shopify-section-{{ section.id }} .d-hero-prompt__btn:hover{ transform: translateY(-1px); }
+  #shopify-section-{{ section.id }} .d-hero-prompt__dismiss{
+    background: rgba(17,20,16,.5); color: #fff; border: none; border-radius: 50%;
+    width: 26px; height: 26px; font-size: 16px; line-height: 1; cursor: pointer; padding: 0;
+  }
+  @media(max-width: 720px){
+    #shopify-section-{{ section.id }} .d-hero-prompt{ bottom: 18px; right: 18px; }
+  }
 {%- endstyle -%}
 
 <section class="d-hero">
@@ -90,7 +114,52 @@
       </div>
     {%- endif -%}
   </div>
+
+  {%- if section.settings.enable_chai_prompt -%}
+    <div class="d-hero-prompt" data-prompt-delay="{{ section.settings.prompt_delay | default: 5 }}">
+      <button type="button" class="d-hero-prompt__btn" data-open-chai-popup>{{ section.settings.prompt_label | default: 'Ready to discover?' }}</button>
+      <button type="button" class="d-hero-prompt__dismiss" aria-label="Dismiss">&times;</button>
+    </div>
+    {% render 'chai-edit-popup' %}
+  {%- endif -%}
 </section>
+
+{%- if section.settings.enable_chai_prompt -%}
+<script>
+  (function(){
+    var prompt = document.querySelector('.d-hero-prompt');
+    if (!prompt || prompt.dataset.bound) return;
+    prompt.dataset.bound = '1';
+    var KEY = 'dChaiPromptSeen';
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+
+    var delay = (parseFloat(prompt.getAttribute('data-prompt-delay')) || 5) * 1000;
+    var dismissBtn = prompt.querySelector('.d-hero-prompt__dismiss');
+    var openBtn = prompt.querySelector('.d-hero-prompt__btn');
+    var hero = prompt.closest('.d-hero') || prompt;
+    var shown = false, timer = null;
+
+    function reveal(){ if (!shown) { shown = true; prompt.classList.add('is-visible'); } }
+    function markSeen(){ try { sessionStorage.setItem(KEY, '1'); } catch (e) {} }
+    function hide(){ prompt.classList.remove('is-visible'); }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting && !timer && !shown) { timer = setTimeout(reveal, delay); }
+        });
+      }, { threshold: 0.25 });
+      io.observe(hero);
+    } else {
+      timer = setTimeout(reveal, delay);
+    }
+
+    if (dismissBtn) dismissBtn.addEventListener('click', function(){ hide(); markSeen(); });
+    // Opening the modal (handled by the snippet via [data-open-chai-popup]) also retires the chip for the session
+    if (openBtn) openBtn.addEventListener('click', function(){ hide(); markSeen(); });
+  })();
+</script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -215,6 +284,33 @@
       "step": 1,
       "default": 11,
       "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Chai Edit prompt"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_chai_prompt",
+      "label": "Show \"Ready to discover?\" prompt",
+      "info": "Fades in over the hero after a delay; opens the Chai Edit pop-up on click.",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "prompt_label",
+      "label": "Prompt label",
+      "default": "Ready to discover?"
+    },
+    {
+      "type": "range",
+      "id": "prompt_delay",
+      "label": "Prompt delay",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
     }
   ],
   "blocks": [
