@@ -15,7 +15,7 @@
         "badge": {
           "type": "badge",
           "settings": {
-            "text": "USDA Organic · CCOF Certified · Lab Tested Every Batch",
+            "text": "USDA Organic \u00b7 CCOF Certified \u00b7 Lab Tested Every Batch",
             "badge_bg": "",
             "badge_color": ""
           }
@@ -166,7 +166,7 @@
             "tag": "",
             "heading": "Immunity",
             "description": "Antioxidant-rich blends for daily defence and seasonal support.",
-            "subtitle": "Turmeric Wellness · Ginger Lemon · Elderberry Boost · Tulsi Holy Basil · Echinacea Defence",
+            "subtitle": "Turmeric Wellness \u00b7 Ginger Lemon \u00b7 Elderberry Boost \u00b7 Tulsi Holy Basil \u00b7 Echinacea Defence",
             "cta": "Shop Immunity",
             "link": ""
           }
@@ -179,7 +179,7 @@
             "tag": "",
             "heading": "Wind Down",
             "description": "Calming botanicals and herbal blends for restful evenings.",
-            "subtitle": "Chamomile Care · Serenity · Relax Hemp · Lavender Calm · Lemon Balm",
+            "subtitle": "Chamomile Care \u00b7 Serenity \u00b7 Relax Hemp \u00b7 Lavender Calm \u00b7 Lemon Balm",
             "cta": "Shop Wind Down",
             "link": ""
           }
@@ -192,7 +192,7 @@
             "tag": "",
             "heading": "Gut Reset",
             "description": "Digestive teas and after-meal botanicals to settle the system.",
-            "subtitle": "Peppermint · Fennel Digestive · Ginger Turmeric · Licorice Root · Triphala Blend",
+            "subtitle": "Peppermint \u00b7 Fennel Digestive \u00b7 Ginger Turmeric \u00b7 Licorice Root \u00b7 Triphala Blend",
             "cta": "Shop Gut Reset",
             "link": ""
           }
@@ -205,7 +205,7 @@
             "tag": "",
             "heading": "Focus & Energy",
             "description": "Bright greens, matcha, and adaptogens for steady, focused energy.",
-            "subtitle": "Ceremonial Matcha · Sencha · Genmaicha · Yerba Mate · Energize Hemp",
+            "subtitle": "Ceremonial Matcha \u00b7 Sencha \u00b7 Genmaicha \u00b7 Yerba Mate \u00b7 Energize Hemp",
             "cta": "Shop Focus",
             "link": ""
           }
@@ -218,7 +218,7 @@
             "tag": "",
             "heading": "Detox",
             "description": "Cleansing herbs and bitter botanicals for gentle detoxification.",
-            "subtitle": "Dandelion Root · Milk Thistle · Nettle Cleanse · Burdock · Detox Greens",
+            "subtitle": "Dandelion Root \u00b7 Milk Thistle \u00b7 Nettle Cleanse \u00b7 Burdock \u00b7 Detox Greens",
             "cta": "Shop Detox",
             "link": ""
           }
@@ -259,7 +259,7 @@
           "settings": {
             "collection": "",
             "title": "Mushroom Powders",
-            "description": "Lion's Mane · Reishi · Cordyceps",
+            "description": "Lion's Mane \u00b7 Reishi \u00b7 Cordyceps",
             "link": "shopify://collections/organic-superfood-powders"
           }
         },
@@ -268,7 +268,7 @@
           "settings": {
             "collection": "",
             "title": "Fruit Powders",
-            "description": "Blueberry · Taro · Tart Cherries · Rose Petals · Date",
+            "description": "Blueberry \u00b7 Taro \u00b7 Tart Cherries \u00b7 Rose Petals \u00b7 Date",
             "link": "shopify://collections/organic-fruit-powders"
           }
         },
@@ -277,7 +277,7 @@
           "settings": {
             "collection": "",
             "title": "Superfood Blends",
-            "description": "Ashwagandha · Rhodiola · Coconut Milk · Molasses · Coffee Cherry",
+            "description": "Ashwagandha \u00b7 Rhodiola \u00b7 Coconut Milk \u00b7 Molasses \u00b7 Coffee Cherry",
             "link": "shopify://collections/organic-superfood-powders"
           }
         }
@@ -375,7 +375,7 @@
       "settings": {
         "image": "shopify://shop_images/preet-hero-image.png",
         "caption": "Our Story",
-        "pull_quote": "\"…turning the label over and asking,<br>'but what's really in this?'\"",
+        "pull_quote": "\"\u2026turning the label over and asking,<br>'but what's really in this?'\"",
         "heading": "",
         "text": "<p>Divine Ingredients began, as many good things do, with a simple habit. For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for, and more importantly, what didn't belong.</p><p>So she set a new standard. One rooted in honesty, not marketing. Every ingredient is sourced with intention, tested with rigour, and chosen because it earns its place, not because it sounds good on a label.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence. Precise, uncompromising, yet deeply personal. Because when you know better, you choose better.</p>",
         "signature": "<em>Preet Bhullar,</em> Founder",
@@ -418,19 +418,19 @@
         "i_1": {
           "type": "include",
           "settings": {
-            "text": "Mumbai Masala Chai · Bold & spiced black tea"
+            "text": "Mumbai Masala Chai \u00b7 Bold & spiced black tea"
           }
         },
         "i_2": {
           "type": "include",
           "settings": {
-            "text": "Tulsi Chai · Holy basil infusion, soothing & refreshing"
+            "text": "Tulsi Chai \u00b7 Holy basil infusion, soothing & refreshing"
           }
         },
         "i_4": {
           "type": "include",
           "settings": {
-            "text": "Herbal Chai · Caffeine-free, calm & comforting"
+            "text": "Herbal Chai \u00b7 Caffeine-free, calm & comforting"
           }
         }
       },
@@ -452,7 +452,7 @@
         "price": "",
         "price_note": "",
         "button_label": "Get the Chai Edit",
-        "button_link": "shopify://products/the-chai-edit",
+        "button_link": "/cart",
         "background_color": "#1f3018",
         "padding_top": 0,
         "padding_bottom": 0,

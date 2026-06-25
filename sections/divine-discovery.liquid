@@ -19,6 +19,7 @@
   #shopify-section-{{ section.id }} .d-disc-h{
     font-size: {{ section.settings.heading_font_size | default: 50 }}px;
   }
+  #shopify-section-{{ section.id }} .d-disc-cta-form{ align-self: flex-start; margin: 0; }
 {%- endstyle -%}
 
 {%- liquid
@@ -128,7 +129,26 @@
     {%- endif -%}
 
     {%- if section.settings.button_label != blank -%}
-      <a href="{{ section.settings.button_link | default: '/products/discovery-set' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
+      {%- comment -%}
+        If a Chai Edit product is available (picked, or resolved by handle),
+        the button adds it to the cart and lands on the cart page so the
+        customer can check out. Until that product exists, fall back to a
+        normal link (the cart) instead of a dead product URL.
+      {%- endcomment -%}
+      {%- liquid
+        assign cta_product = section.settings.cta_product
+        if cta_product == blank
+          assign cta_product = all_products[section.settings.cta_product_handle | default: 'the-chai-edit']
+        endif
+      -%}
+      {%- if cta_product != blank and cta_product.available -%}
+        {%- form 'product', cta_product, id: 'DChaiEditForm', class: 'd-disc-cta-form' -%}
+          <input type="hidden" name="id" value="{{ cta_product.selected_or_first_available_variant.id }}">
+          <button type="submit" name="add" class="d-btn-hp">{{ section.settings.button_label }}</button>
+        {%- endform -%}
+      {%- else -%}
+        <a href="{{ section.settings.button_link | default: '/cart' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
+      {%- endif -%}
     {%- endif -%}
   </div>
 </section>
@@ -204,7 +224,21 @@
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button link"
+      "label": "Button link",
+      "info": "Used only when no Chai Edit product is set/available below. Defaults to the cart."
+    },
+    {
+      "type": "product",
+      "id": "cta_product",
+      "label": "Chai Edit product (button adds to cart)",
+      "info": "When set, the button adds this product to the cart and goes to the cart page. Leave blank to auto-detect by handle below."
+    },
+    {
+      "type": "text",
+      "id": "cta_product_handle",
+      "label": "Chai Edit product handle (auto-detect)",
+      "default": "the-chai-edit",
+      "info": "Fallback used if no product is picked above; the button activates automatically once a product with this handle is published."
     },
     {
       "type": "color",
