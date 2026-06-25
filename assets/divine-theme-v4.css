@@ -1955,7 +1955,7 @@ input, textarea, select, button,
 .d-pdp-details-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 148px;
   max-width: 1200px;
   /* center the block on the page so it lines up with the centered
      "Additional Information" caption above it */
