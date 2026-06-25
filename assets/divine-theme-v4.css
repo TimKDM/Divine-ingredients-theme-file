@@ -1947,9 +1947,11 @@ input, textarea, select, button,
   background: var(--d-forest);
   margin-bottom: 40px;
 }
-/* Single centered block: center the kicker + accent line above it */
-.d-pdp-details--single .d-pdp-details-title{ text-align: center; }
-.d-pdp-details--single .d-pdp-details-line{ margin-left: auto; margin-right: auto; }
+/* Center the "Additional Information" kicker + its accent line on product pages.
+   Heading, specs table and steeping section are unaffected (they live inside
+   .d-pdp-details-grid, below this caption). */
+.d-pdp-details-title{ text-align: center; }
+.d-pdp-details-line{ margin-left: auto; margin-right: auto; }
 .d-pdp-details-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
