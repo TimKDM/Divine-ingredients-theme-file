@@ -148,6 +148,10 @@
         <a href="{{ section.settings.button_link | default: '/cart' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
       {%- endif -%}
     {%- endif -%}
+
+    {%- if section.settings.button_label_2 != blank -%}
+      <a href="{{ section.settings.button_link_2 | default: '#' }}" class="d-btn-hg" style="align-self:flex-start;margin-top:16px">{{ section.settings.button_label_2 }} →</a>
+    {%- endif -%}
   </div>
 </section>
 
@@ -224,6 +228,17 @@
       "id": "button_link",
       "label": "Button link",
       "info": "Used only when no Chai Edit product is set/available below. Defaults to the cart."
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary button label",
+      "info": "Optional. Shown as a lighter secondary link below the main button."
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary button link"
     },
     {
       "type": "product",
