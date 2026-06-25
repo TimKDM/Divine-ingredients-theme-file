@@ -141,11 +141,8 @@
           assign cta_product = all_products[section.settings.cta_product_handle | default: 'the-chai-edit']
         endif
       -%}
-      {%- if cta_product != blank and cta_product.available -%}
-        {%- form 'product', cta_product, id: 'DChaiEditForm', class: 'd-disc-cta-form' -%}
-          <input type="hidden" name="id" value="{{ cta_product.selected_or_first_available_variant.id }}">
-          <button type="submit" name="add" class="d-btn-hp">{{ section.settings.button_label }}</button>
-        {%- endform -%}
+      {%- if cta_product != blank -%}
+        <a href="{{ cta_product.url }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
       {%- else -%}
         <a href="{{ section.settings.button_link | default: '/cart' }}" class="d-btn-hp" style="align-self:flex-start">{{ section.settings.button_label }}</a>
       {%- endif -%}
