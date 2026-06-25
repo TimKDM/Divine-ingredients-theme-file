@@ -432,9 +432,16 @@
           "settings": {
             "text": "Herbal Chai \u00b7 Caffeine-free, calm & comforting"
           }
+        },
+        "include_70cups": {
+          "type": "include",
+          "settings": {
+            "text": "Each box yields up to 70 cups"
+          }
         }
       },
       "block_order": [
+        "include_70cups",
         "include_y9tppw",
         "include_x7zAb6",
         "i_1",
