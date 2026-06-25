@@ -138,7 +138,8 @@
       {%- liquid
         assign cta_product = section.settings.cta_product
         if cta_product == blank
-          assign cta_product = all_products[section.settings.cta_product_handle | default: 'the-chai-edit']
+          assign cta_handle = section.settings.cta_product_handle | default: 'the-chai-edit'
+          assign cta_product = all_products[cta_handle]
         endif
       -%}
       {%- if cta_product != blank -%}
