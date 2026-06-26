@@ -67,6 +67,9 @@
               {%- endif -%}
               <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
               <div class="d-hero-content">
+                {%- if block.settings.caption != blank -%}
+                  <div class="d-hero-kicker"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.caption }}</div>
+                {%- endif -%}
                 {%- if block.settings.heading != blank -%}
                   <h2 class="d-hero-h1"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
                 {%- endif -%}
@@ -102,8 +105,11 @@
                 <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
               {%- endif -%}
               <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
-              {%- if block.settings.heading != blank or block.settings.subtitle != blank or block.settings.button_label_1 != blank -%}
+              {%- if block.settings.caption != blank or block.settings.heading != blank or block.settings.subtitle != blank or block.settings.button_label_1 != blank -%}
                 <div class="d-hero-content">
+                  {%- if block.settings.caption != blank -%}
+                    <div class="d-hero-kicker"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.caption }}</div>
+                  {%- endif -%}
                   {%- if block.settings.heading != blank -%}
                     <h2 class="d-hero-h1"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
                   {%- endif -%}
@@ -191,6 +197,7 @@
       "name": "Image slide",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "caption", "label": "Caption (above heading)" },
         { "type": "html", "id": "heading", "label": "Heading" },
         { "type": "textarea", "id": "subtitle", "label": "Subtitle" },
         { "type": "text", "id": "button_label_1", "label": "Primary button label" },
@@ -212,6 +219,7 @@
         { "type": "video", "id": "video", "label": "Video" },
         { "type": "image_picker", "id": "poster", "label": "Poster / fallback image" },
         { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
+        { "type": "text", "id": "caption", "label": "Caption (above heading)" },
         { "type": "html", "id": "heading", "label": "Heading (optional)" },
         { "type": "textarea", "id": "subtitle", "label": "Subtitle (optional)" },
         { "type": "text", "id": "button_label_1", "label": "Button label (optional)" },
