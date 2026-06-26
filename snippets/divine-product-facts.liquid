@@ -91,6 +91,7 @@
         {%- assign parts = line | split: '|' -%}
         {%- assign k = parts[0] | strip -%}
         {%- assign v = parts[1] | default: '' | strip -%}
+        {%- if product.type == 'Spices' and k == 'Contains caffeine' -%}{%- continue -%}{%- endif -%}
         {%- if k != blank or v != blank -%}
           <div class="d-things-row">
             <div class="d-things-key">{{ k }}</div>
@@ -105,6 +106,7 @@
         {%- assign parts = line | split: '|' -%}
         {%- assign k = parts[0] | strip -%}
         {%- assign v = parts[1] | default: '' | strip -%}
+        {%- if product.type == 'Spices' and k == 'Contains caffeine' -%}{%- continue -%}{%- endif -%}
         {%- if k != blank or v != blank -%}
           <div class="d-meta-row">
             <div class="d-meta-label">{{ k }}</div>
