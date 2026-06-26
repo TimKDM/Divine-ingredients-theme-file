@@ -1,21 +1,5 @@
-{%- liquid
-  assign kicker_text = ''
-  assign btn1_label = ''
-  assign btn1_link = ''
-  assign btn2_label = ''
-  assign btn2_link = ''
-  for block in section.blocks
-    case block.type
-      when 'badge'
-        assign kicker_text = block.settings.text
-      when 'buttons'
-        assign btn1_label = block.settings.button_label_1
-        assign btn1_link = block.settings.button_link_1
-        assign btn2_label = block.settings.button_label_2
-        assign btn2_link = block.settings.button_link_2
-    endcase
-  endfor
--%}
+{{ 'swiper.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper.min.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   #shopify-section-{{ section.id }} .d-hero{
@@ -25,14 +9,30 @@
       height: {{ section.settings.image_height }}vh;
     {% endif %}
   }
-  {% if section.settings.overlay_opacity != blank %}
-    #shopify-section-{{ section.id }} .d-hero-overlay{
-      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    }
-  {% endif %}
+  /* Slider: each slide replicates the hero frame (full-bleed media + bottom copy) */
+  #shopify-section-{{ section.id }} .d-hero--slider{ display: block; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper,
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-wrapper,
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide{ height: 100%; width: 100%; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide{
+    position: relative; display: flex; align-items: flex-end;
+    overflow: hidden; background: var(--d-black);
+  }
+  #shopify-section-{{ section.id }} .d-hero-content--center{
+    margin: 0 auto; text-align: center; max-width: 760px;
+  }
+  #shopify-section-{{ section.id }} .d-hero-content--center .d-hero-p{ margin-left: auto; margin-right: auto; }
+  #shopify-section-{{ section.id }} .d-hero-content--center .d-hero-btns{ justify-content: center; }
+  /* Pagination dots */
+  #shopify-section-{{ section.id }} .swiper-pagination{ bottom: 22px; z-index: 6; }
+  #shopify-section-{{ section.id }} .swiper-pagination-bullet{
+    width: 9px; height: 9px; background: var(--d-beige-lt); opacity: .45;
+  }
+  #shopify-section-{{ section.id }} .swiper-pagination-bullet-active{ opacity: 1; }
+
   /* "Ready to discover?" prompt chip (fades in after a delay, click to open the Chai Edit modal) */
   #shopify-section-{{ section.id }} .d-hero-prompt{
-    position: absolute; bottom: 28px; right: 28px; z-index: 5;
+    position: absolute; bottom: 28px; right: 28px; z-index: 12;
     display: flex; align-items: center; gap: 8px;
     opacity: 0; visibility: hidden; transform: translateY(10px); pointer-events: none;
     transition: opacity .45s ease, transform .45s ease, visibility .45s;
@@ -56,63 +56,80 @@
   }
 {%- endstyle -%}
 
-<section class="d-hero">
-  {%- if section.settings.video != blank -%}
-    {%- assign poster_url = section.settings.image | image_url: width: 1500 -%}
-    <video
-      class="d-hero-media"
-      {% if section.settings.autoplay %}autoplay{% endif %}
-      {% if section.settings.loop %}loop{% endif %}
-      {% if section.settings.muted %}muted{% endif %}
-      playsinline
-      preload="metadata"
-      {% if poster_url != blank %}poster="{{ poster_url }}"{% endif %}
-    >
-      {%- for source in section.settings.video.sources -%}
-        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+<section class="d-hero d-hero--slider">
+  <div class="swiper" id="DHeroSwiper-{{ section.id }}">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {%- assign ov = block.settings.overlay_opacity | default: 100 -%}
+        <div class="swiper-slide" {{ block.shopify_attributes }}>
+          {%- case block.type -%}
+
+            {%- when 'image_slide' -%}
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 2000 | image_tag:
+                  loading: 'eager', widths: '750, 1000, 1500, 2000', sizes: '100vw',
+                  class: 'd-hero-media', alt: block.settings.image.alt | default: shop.name }}
+              {%- else -%}
+                <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
+              {%- endif -%}
+              <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
+              <div class="d-hero-content{% if block.settings.text_position == 'center' %} d-hero-content--center{% endif %}">
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="d-hero-h1">{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+                {%- endif -%}
+                {%- if block.settings.subtitle != blank -%}
+                  <p class="d-hero-p">{{ block.settings.subtitle }}</p>
+                {%- endif -%}
+                {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
+                  <div class="d-hero-btns">
+                    {%- if block.settings.button_label_1 != blank -%}
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                    {%- endif -%}
+                    {%- if block.settings.button_label_2 != blank -%}
+                      <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-hg">{{ block.settings.button_label_2 }} →</a>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+
+            {%- when 'video_slide' -%}
+              {%- assign poster_url = block.settings.poster | image_url: width: 1500 -%}
+              {%- if block.settings.video != blank -%}
+                <video class="d-hero-media" autoplay muted loop playsinline preload="metadata"
+                  {% if poster_url != blank %}poster="{{ poster_url }}"{% endif %}>
+                  {%- for source in block.settings.video.sources -%}
+                    <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                  {%- endfor -%}
+                </video>
+              {%- elsif block.settings.poster != blank -%}
+                {{ block.settings.poster | image_url: width: 2000 | image_tag:
+                  loading: 'lazy', widths: '750, 1000, 1500, 2000', sizes: '100vw',
+                  class: 'd-hero-media', alt: shop.name }}
+              {%- else -%}
+                <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
+              {%- endif -%}
+              <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
+              {%- if block.settings.heading != blank or block.settings.subtitle != blank or block.settings.button_label_1 != blank -%}
+                <div class="d-hero-content">
+                  {%- if block.settings.heading != blank -%}
+                    <h2 class="d-hero-h1">{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+                  {%- endif -%}
+                  {%- if block.settings.subtitle != blank -%}
+                    <p class="d-hero-p">{{ block.settings.subtitle }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.button_label_1 != blank -%}
+                    <div class="d-hero-btns">
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        </div>
       {%- endfor -%}
-    </video>
-  {%- elsif section.settings.video_url != blank -%}
-    <div class="d-hero-media">
-      {{ section.settings.video_url | external_video_url: autoplay: section.settings.autoplay, loop: section.settings.loop, muted: section.settings.muted | external_video_tag: loading: 'lazy', class: 'd-hero-media' }}
     </div>
-  {%- elsif section.settings.image != blank -%}
-    {{ section.settings.image | image_url: width: 2000 | image_tag:
-      loading: 'eager',
-      widths: '750, 1000, 1500, 2000',
-      sizes: '100vw',
-      class: 'd-hero-media',
-      alt: section.settings.image.alt | default: shop.name
-    }}
-  {%- else -%}
-    <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
-  {%- endif -%}
-
-  <div class="d-hero-overlay"></div>
-
-  <div class="d-hero-content">
-    {%- if kicker_text != blank -%}
-      <div class="d-hero-kicker">{{ kicker_text }}</div>
-    {%- endif -%}
-
-    {%- if section.settings.heading != blank -%}
-      <h1 class="d-hero-h1">{{ section.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h1>
-    {%- endif -%}
-
-    {%- if section.settings.subtitle != blank -%}
-      <p class="d-hero-p">{{ section.settings.subtitle }}</p>
-    {%- endif -%}
-
-    {%- if btn1_label != blank or btn2_label != blank -%}
-      <div class="d-hero-btns">
-        {%- if btn1_label != blank -%}
-          <a href="{{ btn1_link | default: '#' }}" class="d-btn-hp">{{ btn1_label }}</a>
-        {%- endif -%}
-        {%- if btn2_label != blank -%}
-          <a href="{{ btn2_link | default: '#' }}" class="d-btn-hg">{{ btn2_label }} →</a>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
+    <div class="swiper-pagination"></div>
   </div>
 
   {%- if section.settings.enable_chai_prompt -%}
@@ -124,10 +141,31 @@
   {%- endif -%}
 </section>
 
+<script>
+  (function(){
+    var sel = '#DHeroSwiper-{{ section.id }}';
+    function init(){
+      var el = document.querySelector(sel);
+      if (!el || el.dataset.inited) return;
+      if (typeof Swiper === 'undefined') { return window.setTimeout(init, 60); }
+      el.dataset.inited = '1';
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      new Swiper(el, {
+        loop: true,
+        speed: 800,
+        autoplay: reduce ? false : { delay: 6000, disableOnInteraction: false },
+        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true }
+      });
+    }
+    if (document.readyState !== 'loading') init();
+    else document.addEventListener('DOMContentLoaded', init);
+  })();
+</script>
+
 {%- if section.settings.enable_chai_prompt -%}
 <script>
   (function(){
-    var prompt = document.querySelector('.d-hero-prompt');
+    var prompt = document.querySelector('#shopify-section-{{ section.id }} .d-hero-prompt');
     if (!prompt || prompt.dataset.bound) return;
     prompt.dataset.bound = '1';
     var KEY = 'dChaiPromptSeen';
@@ -155,7 +193,6 @@
     }
 
     if (dismissBtn) dismissBtn.addEventListener('click', function(){ hide(); markSeen(); });
-    // Opening the modal (handled by the snippet via [data-open-chai-popup]) also retires the chip for the session
     if (openBtn) openBtn.addEventListener('click', function(){ hide(); markSeen(); });
   })();
 </script>
@@ -166,55 +203,8 @@
   "name": "Divine Hero",
   "tag": "section",
   "class": "divine-hero-section",
+  "max_blocks": 3,
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Background image",
-      "info": "Used as poster while the video loads, and as the fallback when no video is set"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "Background video (upload)",
-      "info": "Preferred. Plays inline at fullscreen behind the hero copy. Falls back to image."
-    },
-    {
-      "type": "url",
-      "id": "video_url",
-      "label": "Background video URL (YouTube/Vimeo)",
-      "info": "Used only when no video file is uploaded above."
-    },
-    {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "Autoplay video",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "loop",
-      "label": "Loop video",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "muted",
-      "label": "Mute video",
-      "default": true
-    },
-    {
-      "type": "html",
-      "id": "heading",
-      "label": "Heading",
-      "default": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>"
-    },
-    {
-      "type": "textarea",
-      "id": "subtitle",
-      "label": "Subtitle",
-      "default": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork."
-    },
     {
       "type": "range",
       "id": "image_height",
@@ -224,16 +214,6 @@
       "step": 5,
       "default": 95,
       "unit": "vh"
-    },
-    {
-      "type": "range",
-      "id": "overlay_opacity",
-      "label": "Overlay opacity",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 100,
-      "unit": "%"
     },
     {
       "type": "range",
@@ -253,36 +233,6 @@
       "max": 100,
       "step": 4,
       "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "body_font_size",
-      "label": "Body font size",
-      "min": 12,
-      "max": 22,
-      "step": 1,
-      "default": 16,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "heading_font_size",
-      "label": "Heading font size",
-      "min": 18,
-      "max": 120,
-      "step": 2,
-      "default": 88,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "badge_font_size",
-      "label": "Badge font size",
-      "min": 8,
-      "max": 22,
-      "step": 1,
-      "default": 11,
       "unit": "px"
     },
     {
@@ -315,82 +265,31 @@
   ],
   "blocks": [
     {
-      "type": "badge",
-      "name": "Badge",
-      "limit": 1,
+      "type": "image_slide",
+      "name": "Image slide",
       "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Badge text",
-          "default": "USDA Organic · CCOF Certified · Lab Tested Every Batch"
-        },
-        {
-          "type": "color",
-          "id": "badge_bg",
-          "label": "Badge background"
-        },
-        {
-          "type": "color",
-          "id": "badge_color",
-          "label": "Badge text color"
-        }
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "html", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "subtitle", "label": "Subtitle" },
+        { "type": "text", "id": "button_label_1", "label": "Primary button label" },
+        { "type": "url", "id": "button_link_1", "label": "Primary button link" },
+        { "type": "text", "id": "button_label_2", "label": "Secondary button label" },
+        { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
+        { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
+        { "type": "select", "id": "text_position", "label": "Text position", "options": [ { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" } ], "default": "left" }
       ]
     },
     {
-      "type": "heading",
-      "name": "Heading",
-      "limit": 1,
-      "settings": []
-    },
-    {
-      "type": "subtitle",
-      "name": "Subtitle",
-      "limit": 1,
-      "settings": []
-    },
-    {
-      "type": "buttons",
-      "name": "Buttons",
-      "limit": 1,
+      "type": "video_slide",
+      "name": "Video slide",
       "settings": [
-        {
-          "type": "text",
-          "id": "button_label_1",
-          "label": "Primary button label",
-          "default": "Shop Now"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "Primary button link"
-        },
-        {
-          "type": "color",
-          "id": "btn1_bg",
-          "label": "Primary button background"
-        },
-        {
-          "type": "color",
-          "id": "btn1_color",
-          "label": "Primary button text color"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "label": "Secondary button label",
-          "default": "Find Your Blend"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "Secondary button link"
-        },
-        {
-          "type": "color",
-          "id": "btn2_color",
-          "label": "Secondary button color"
-        }
+        { "type": "video", "id": "video", "label": "Video" },
+        { "type": "image_picker", "id": "poster", "label": "Poster / fallback image" },
+        { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
+        { "type": "html", "id": "heading", "label": "Heading (optional)" },
+        { "type": "textarea", "id": "subtitle", "label": "Subtitle (optional)" },
+        { "type": "text", "id": "button_label_1", "label": "Button label (optional)" },
+        { "type": "url", "id": "button_link_1", "label": "Button link (optional)" }
       ]
     }
   ],
@@ -398,10 +297,9 @@
     {
       "name": "Divine Hero",
       "blocks": [
-        { "type": "badge" },
-        { "type": "heading" },
-        { "type": "subtitle" },
-        { "type": "buttons" }
+        { "type": "image_slide" },
+        { "type": "image_slide" },
+        { "type": "video_slide" }
       ]
     }
   ]
