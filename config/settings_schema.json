@@ -1008,7 +1008,7 @@
         "type": "text",
         "id": "free_shipping_amount",
         "label": "Minimum amount",
-        "default": "100",
+        "default": "99",
         "info": "Use only round numbers. No letters or symbols. "
       },
       {

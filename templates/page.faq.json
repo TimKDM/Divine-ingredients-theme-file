@@ -202,7 +202,7 @@
           "settings": {
             "heading": "How much is shipping?",
             "icon": "question_mark",
-            "row_content": "<p>It depends on your location and order size. You'll see all the options and costs at checkout. Pro tip: orders over $100 ship free.</p>",
+            "row_content": "<p>It depends on your location and order size. You'll see all the options and costs at checkout. Pro tip: orders over $99 ship free.</p>",
             "page": ""
           }
         },
