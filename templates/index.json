@@ -257,10 +257,20 @@
             "description": "Ashwagandha \u00b7 Rhodiola \u00b7 Coconut Milk \u00b7 Molasses \u00b7 Coffee Cherry",
             "link": "shopify://collections/organic-superfood-powders"
           }
+        },
+        "p_2": {
+          "type": "powder",
+          "settings": {
+            "collection": "",
+            "title": "Fruit Powders",
+            "description": "Blueberry \u00b7 Taro \u00b7 Tart Cherries \u00b7 Rose Petals \u00b7 Date",
+            "link": "shopify://collections/organic-fruit-powders"
+          }
         }
       },
       "block_order": [
         "p_1",
+        "p_2",
         "p_3"
       ],
       "settings": {
