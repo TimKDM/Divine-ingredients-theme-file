@@ -71,6 +71,17 @@
   else
     assign facts_source = fallback
   endif
+  assign is_tea = false
+  if product.tags contains 'Category_Tea'
+    assign is_tea = true
+  endif
+  assign is_matcha = false
+  if product.tags contains 'Type_Matcha' or product.type contains 'Matcha' or product.title contains 'Matcha'
+    assign is_matcha = true
+  endif
+  if style == 'things' and is_tea and is_matcha == false
+    assign facts_source = facts_source | append: nl | append: '4 oz makes | 40–45 cups'
+  endif
   assign facts_lines = facts_source | split: nl
 -%}
 {%- if facts_source != blank -%}
