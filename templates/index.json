@@ -16,12 +16,16 @@
           "type": "image_slide",
           "settings": {
             "image": "shopify://shop_images/hero-ube-kdm.jpg",
+            "caption": "",
             "heading": "New Drop<br>\nUbe Powder",
             "subtitle": "",
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://products/organic-ube-powder",
             "button_label_2": "",
             "button_link_2": "",
+            "button_bg": "",
+            "button_color": "",
+            "button_color_2": "",
             "overlay_opacity": 0,
             "content_position": "top_left",
             "text_color": "#560579"
@@ -31,14 +35,18 @@
           "type": "image_slide",
           "settings": {
             "image": "shopify://shop_images/hero-chai-kdm.jpg",
+            "caption": "New From Divine",
             "heading": "The Chai Edit",
-            "subtitle": "",
+            "subtitle": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://products/the-chai-edit",
             "button_label_2": "",
             "button_link_2": "",
+            "button_bg": "",
+            "button_color": "",
+            "button_color_2": "",
             "overlay_opacity": 0,
-            "content_position": "bottom_left",
+            "content_position": "center",
             "text_color": "#e8e0cc"
           }
         },
@@ -48,10 +56,13 @@
             "video": "shopify://files/videos/divineherovideo.mp4",
             "poster": "shopify://shop_images/heroposter.jpg",
             "overlay_opacity": 0,
+            "caption": "",
             "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
             "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections/all",
+            "button_bg": "",
+            "button_color": "",
             "content_position": "bottom_left",
             "text_color": "#e8e0cc"
           }
