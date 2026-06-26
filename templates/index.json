@@ -15,7 +15,7 @@
         "slide_1": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/ube-header-edit-KDM.png",
+            "image": "shopify://shop_images/ube-v2-edit-KDM.png",
             "caption": "",
             "heading": "New Drop<br>\nUbe Powder",
             "subtitle": "",
@@ -23,12 +23,12 @@
             "button_link_1": "shopify://products/organic-ube-powder",
             "button_label_2": "",
             "button_link_2": "",
-            "button_bg": "",
-            "button_color": "",
+            "button_bg": "#7E03B3",
+            "button_color": "#FFFFFF",
             "button_color_2": "",
             "overlay_opacity": 0,
             "content_position": "top_left",
-            "text_color": "#560579"
+            "text_color": "#7E03B3"
           }
         },
         "slide_2": {
