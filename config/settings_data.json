@@ -70,7 +70,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "enable_cross_sell": true,
+    "enable_cross_sell": false,
     "cross_sell_collection": "oolong-tea",
     "cross_sell_label": "Cross-Sell",
     "in_stock_background_color": "#D4CAAE",
