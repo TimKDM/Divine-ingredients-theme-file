@@ -32,7 +32,7 @@
             "image": "shopify://shop_images/hero-chai-kdm.jpg",
             "heading": "The Chai Edit",
             "subtitle": "",
-            "button_label_1": "",
+            "button_label_1": "Shop Now",
             "button_link_1": "shopify://products/the-chai-edit",
             "button_label_2": "",
             "button_link_2": "",
@@ -48,8 +48,8 @@
             "overlay_opacity": 0,
             "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
             "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
-            "button_label_1": "",
-            "button_link_1": ""
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all"
           }
         }
       },
