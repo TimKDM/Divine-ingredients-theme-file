@@ -114,7 +114,7 @@
           "type": "trust_item",
           "settings": {
             "icon": "shield",
-            "text": "Free Shipping Over $100",
+            "text": "Free Shipping Over $99",
             "link": ""
           }
         }
@@ -480,7 +480,7 @@
         "perk_2": {
           "type": "perk",
           "settings": {
-            "text": "Free shipping on orders over $100"
+            "text": "Free shipping on orders over $99"
           }
         },
         "perk_3": {
