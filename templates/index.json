@@ -16,11 +16,13 @@
           "type": "image_slide",
           "settings": {
             "image": "shopify://shop_images/hero-ube-kdm.jpg",
-            "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
-            "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
+            "heading": "New Drop<br>\nUbe Powder",
+            "subtitle": "",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
-            "overlay_opacity": 100,
+            "button_link_1": "shopify://products/organic-ube-powder",
+            "button_label_2": "",
+            "button_link_2": "",
+            "overlay_opacity": 0,
             "text_position": "left"
           }
         },
@@ -28,7 +30,13 @@
           "type": "image_slide",
           "settings": {
             "image": "shopify://shop_images/hero-chai-kdm.jpg",
-            "overlay_opacity": 100,
+            "heading": "The Chai Edit",
+            "subtitle": "",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "overlay_opacity": 0,
             "text_position": "left"
           }
         },
@@ -37,7 +45,11 @@
           "settings": {
             "video": "shopify://files/videos/divineherovideo.mp4",
             "poster": "shopify://shop_images/heroposter.jpg",
-            "overlay_opacity": 100
+            "overlay_opacity": 100,
+            "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
+            "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
+            "button_label_1": "",
+            "button_link_1": ""
           }
         }
       },
@@ -153,7 +165,7 @@
             "tag": "",
             "heading": "Immunity",
             "description": "Antioxidant-rich blends for daily defence and seasonal support.",
-            "subtitle": "Turmeric Wellness \u00b7 Ginger Lemon \u00b7 Elderberry Boost \u00b7 Tulsi Holy Basil \u00b7 Echinacea Defence",
+            "subtitle": "Turmeric Wellness · Ginger Lemon · Elderberry Boost · Tulsi Holy Basil · Echinacea Defence",
             "cta": "Shop Immunity",
             "link": ""
           }
@@ -166,7 +178,7 @@
             "tag": "",
             "heading": "Wind Down",
             "description": "Calming botanicals and herbal blends for restful evenings.",
-            "subtitle": "Chamomile Care \u00b7 Serenity \u00b7 Relax Hemp \u00b7 Lavender Calm \u00b7 Lemon Balm",
+            "subtitle": "Chamomile Care · Serenity · Relax Hemp · Lavender Calm · Lemon Balm",
             "cta": "Shop Wind Down",
             "link": ""
           }
@@ -179,7 +191,7 @@
             "tag": "",
             "heading": "Gut Reset",
             "description": "Digestive teas and after-meal botanicals to settle the system.",
-            "subtitle": "Peppermint \u00b7 Fennel Digestive \u00b7 Ginger Turmeric \u00b7 Licorice Root \u00b7 Triphala Blend",
+            "subtitle": "Peppermint · Fennel Digestive · Ginger Turmeric · Licorice Root · Triphala Blend",
             "cta": "Shop Gut Reset",
             "link": ""
           }
@@ -192,7 +204,7 @@
             "tag": "",
             "heading": "Focus & Energy",
             "description": "Bright greens, matcha, and adaptogens for steady, focused energy.",
-            "subtitle": "Ceremonial Matcha \u00b7 Sencha \u00b7 Genmaicha \u00b7 Yerba Mate \u00b7 Energize Hemp",
+            "subtitle": "Ceremonial Matcha · Sencha · Genmaicha · Yerba Mate · Energize Hemp",
             "cta": "Shop Focus",
             "link": ""
           }
@@ -205,7 +217,7 @@
             "tag": "",
             "heading": "Detox",
             "description": "Cleansing herbs and bitter botanicals for gentle detoxification.",
-            "subtitle": "Dandelion Root \u00b7 Milk Thistle \u00b7 Nettle Cleanse \u00b7 Burdock \u00b7 Detox Greens",
+            "subtitle": "Dandelion Root · Milk Thistle · Nettle Cleanse · Burdock · Detox Greens",
             "cta": "Shop Detox",
             "link": ""
           }
@@ -246,16 +258,7 @@
           "settings": {
             "collection": "",
             "title": "Mushroom Powders",
-            "description": "Lion's Mane \u00b7 Reishi \u00b7 Cordyceps",
-            "link": "shopify://collections/organic-superfood-powders"
-          }
-        },
-        "p_3": {
-          "type": "powder",
-          "settings": {
-            "collection": "",
-            "title": "Superfood Blends",
-            "description": "Ashwagandha \u00b7 Rhodiola \u00b7 Coconut Milk \u00b7 Molasses \u00b7 Coffee Cherry",
+            "description": "Lion's Mane · Reishi · Cordyceps",
             "link": "shopify://collections/organic-superfood-powders"
           }
         },
@@ -264,8 +267,17 @@
           "settings": {
             "collection": "",
             "title": "Fruit Powders",
-            "description": "Blueberry \u00b7 Taro \u00b7 Tart Cherries \u00b7 Rose Petals \u00b7 Date",
+            "description": "Blueberry · Taro · Tart Cherries · Rose Petals · Date",
             "link": "shopify://collections/organic-fruit-powders"
+          }
+        },
+        "p_3": {
+          "type": "powder",
+          "settings": {
+            "collection": "",
+            "title": "Superfood Blends",
+            "description": "Ashwagandha · Rhodiola · Coconut Milk · Molasses · Coffee Cherry",
+            "link": "shopify://collections/organic-superfood-powders"
           }
         }
       },
@@ -362,7 +374,7 @@
       "settings": {
         "image": "shopify://shop_images/preet-hero-image.png",
         "caption": "Our Story",
-        "pull_quote": "\"\u2026turning the label over and asking,<br>'but what's really in this?'\"",
+        "pull_quote": "\"…turning the label over and asking,<br>'but what's really in this?'\"",
         "heading": "",
         "text": "<p>Divine Ingredients began, as many good things do, with a simple habit. For Preet Bhullar, that question wasn't fleeting curiosity. With a background in microbiology and quality control, she knew exactly what to look for, and more importantly, what didn't belong.</p><p>So she set a new standard. One rooted in honesty, not marketing. Every ingredient is sourced with intention, tested with rigour, and chosen because it earns its place, not because it sounds good on a label.</p><p>As a women-owned brand, Divine Ingredients carries a quiet confidence. Precise, uncompromising, yet deeply personal. Because when you know better, you choose better.</p>",
         "signature": "<em>Preet Bhullar,</em> Founder",
@@ -389,6 +401,12 @@
     "divine_discovery": {
       "type": "divine-discovery",
       "blocks": {
+        "include_70cups": {
+          "type": "include",
+          "settings": {
+            "text": "Each box yields up to 70 cups"
+          }
+        },
         "include_y9tppw": {
           "type": "include",
           "settings": {
@@ -405,25 +423,19 @@
         "i_1": {
           "type": "include",
           "settings": {
-            "text": "Mumbai Masala Chai \u00b7 Bold & spiced black tea"
+            "text": "Mumbai Masala Chai · Bold & spiced black tea"
           }
         },
         "i_2": {
           "type": "include",
           "settings": {
-            "text": "Tulsi Chai \u00b7 Holy basil infusion, soothing & refreshing"
+            "text": "Tulsi Chai · Holy basil infusion, soothing & refreshing"
           }
         },
         "i_4": {
           "type": "include",
           "settings": {
-            "text": "Herbal Chai \u00b7 Caffeine-free, calm & comforting"
-          }
-        },
-        "include_70cups": {
-          "type": "include",
-          "settings": {
-            "text": "Each box yields up to 70 cups"
+            "text": "Herbal Chai · Caffeine-free, calm & comforting"
           }
         }
       },
@@ -447,14 +459,16 @@
         "price_note": "",
         "button_label": "Get the Chai Edit",
         "button_link": "/cart",
+        "button_label_2": "Build a Sip & Share Box",
+        "button_link_2": "shopify://products/sip-and-share-box",
+        "cta_product": "",
+        "cta_product_handle": "the-chai-edit",
         "background_color": "#1f3018",
         "padding_top": 0,
         "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 36,
-        "heading_font_size": 50,
-        "button_label_2": "Build a Sip & Share Box",
-        "button_link_2": "shopify://products/sip-and-share-box"
+        "heading_font_size": 50
       }
     },
     "divine_newsletter": {
