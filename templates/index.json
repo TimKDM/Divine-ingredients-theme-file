@@ -23,7 +23,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "overlay_opacity": 0,
-            "text_position": "left"
+            "content_position": "top_left",
+            "text_color": "#560579"
           }
         },
         "slide_2": {
@@ -37,7 +38,8 @@
             "button_label_2": "",
             "button_link_2": "",
             "overlay_opacity": 0,
-            "text_position": "left"
+            "content_position": "bottom_left",
+            "text_color": "#e8e0cc"
           }
         },
         "slide_3": {
@@ -49,7 +51,9 @@
             "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
             "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/all"
+            "button_link_1": "shopify://collections/all",
+            "content_position": "bottom_left",
+            "text_color": "#e8e0cc"
           }
         }
       },
