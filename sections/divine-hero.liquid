@@ -18,11 +18,28 @@
     position: relative; display: flex; align-items: flex-end;
     overflow: hidden; background: var(--d-black);
   }
-  #shopify-section-{{ section.id }} .d-hero-content--center{
-    margin: 0 auto; text-align: center; max-width: 760px;
-  }
-  #shopify-section-{{ section.id }} .d-hero-content--center .d-hero-p{ margin-left: auto; margin-right: auto; }
-  #shopify-section-{{ section.id }} .d-hero-content--center .d-hero-btns{ justify-content: center; }
+  /* Media brightness fix — override the global .d-hero-media{opacity:.62} dim */
+  #shopify-section-{{ section.id }} .d-hero-media{ opacity: 1; }
+  /* Per-slide content position (quadrants + center) */
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide.d-hp--top_left{ align-items: flex-start; justify-content: flex-start; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide.d-hp--top_right{ align-items: flex-start; justify-content: flex-end; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide.d-hp--bottom_left{ align-items: flex-end; justify-content: flex-start; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide.d-hp--bottom_right{ align-items: flex-end; justify-content: flex-end; }
+  #shopify-section-{{ section.id }} .d-hero--slider .swiper-slide.d-hp--center{ align-items: center; justify-content: center; }
+  /* Right-aligned positions */
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--top_right .d-hero-content,
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--bottom_right .d-hero-content{ text-align: right; }
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--top_right .d-hero-p,
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--bottom_right .d-hero-p{ margin-left: auto; }
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--top_right .d-hero-btns,
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--bottom_right .d-hero-btns{ justify-content: flex-end; }
+  /* Center position */
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--center .d-hero-content{ text-align: center; max-width: 760px; }
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--center .d-hero-p{ margin: 0 auto; }
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--center .d-hero-btns{ justify-content: center; }
+  /* Top positions: move the content padding to the top */
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--top_left .d-hero-content,
+  #shopify-section-{{ section.id }} .swiper-slide.d-hp--top_right .d-hero-content{ padding-top: 72px; padding-bottom: 0; }
   /* Pagination dots */
   #shopify-section-{{ section.id }} .swiper-pagination{ bottom: 22px; z-index: 6; }
   #shopify-section-{{ section.id }} .swiper-pagination-bullet{
@@ -36,7 +53,8 @@
     <div class="swiper-wrapper">
       {%- for block in section.blocks -%}
         {%- assign ov = block.settings.overlay_opacity | default: 100 -%}
-        <div class="swiper-slide" {{ block.shopify_attributes }}>
+        {%- assign pos = block.settings.content_position | default: 'bottom_left' -%}
+        <div class="swiper-slide d-hp--{{ pos }}" {{ block.shopify_attributes }}>
           {%- case block.type -%}
 
             {%- when 'image_slide' -%}
@@ -48,20 +66,23 @@
                 <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
               {%- endif -%}
               <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
-              <div class="d-hero-content{% if block.settings.text_position == 'center' %} d-hero-content--center{% endif %}">
+              <div class="d-hero-content">
+                {%- if block.settings.caption != blank -%}
+                  <div class="d-hero-kicker"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.caption }}</div>
+                {%- endif -%}
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="d-hero-h1">{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+                  <h2 class="d-hero-h1"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
                 {%- endif -%}
                 {%- if block.settings.subtitle != blank -%}
-                  <p class="d-hero-p">{{ block.settings.subtitle }}</p>
+                  <p class="d-hero-p"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.subtitle }}</p>
                 {%- endif -%}
                 {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
                   <div class="d-hero-btns">
                     {%- if block.settings.button_label_1 != blank -%}
-                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp"{% if block.settings.button_bg != blank or block.settings.button_color != blank %} style="{% if block.settings.button_bg != blank %}background:{{ block.settings.button_bg }};{% endif %}{% if block.settings.button_color != blank %}color:{{ block.settings.button_color }};{% endif %}"{% endif %}>{{ block.settings.button_label_1 }}</a>
                     {%- endif -%}
                     {%- if block.settings.button_label_2 != blank -%}
-                      <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-hg">{{ block.settings.button_label_2 }} →</a>
+                      <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-hg"{% if block.settings.button_color_2 != blank %} style="color:{{ block.settings.button_color_2 }};border-color:{{ block.settings.button_color_2 }}"{% endif %}>{{ block.settings.button_label_2 }} →</a>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -84,17 +105,20 @@
                 <div class="d-hero-media" style="background:linear-gradient(135deg,#1F3018,#111410);"></div>
               {%- endif -%}
               <div class="d-hero-overlay" style="opacity:{{ ov | divided_by: 100.0 }}"></div>
-              {%- if block.settings.heading != blank or block.settings.subtitle != blank or block.settings.button_label_1 != blank -%}
+              {%- if block.settings.caption != blank or block.settings.heading != blank or block.settings.subtitle != blank or block.settings.button_label_1 != blank -%}
                 <div class="d-hero-content">
+                  {%- if block.settings.caption != blank -%}
+                    <div class="d-hero-kicker"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.caption }}</div>
+                  {%- endif -%}
                   {%- if block.settings.heading != blank -%}
-                    <h2 class="d-hero-h1">{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
+                    <h2 class="d-hero-h1"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h2>
                   {%- endif -%}
                   {%- if block.settings.subtitle != blank -%}
-                    <p class="d-hero-p">{{ block.settings.subtitle }}</p>
+                    <p class="d-hero-p"{% if block.settings.text_color != blank %} style="color:{{ block.settings.text_color }}"{% endif %}>{{ block.settings.subtitle }}</p>
                   {%- endif -%}
                   {%- if block.settings.button_label_1 != blank -%}
                     <div class="d-hero-btns">
-                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp"{% if block.settings.button_bg != blank or block.settings.button_color != blank %} style="{% if block.settings.button_bg != blank %}background:{{ block.settings.button_bg }};{% endif %}{% if block.settings.button_color != blank %}color:{{ block.settings.button_color }};{% endif %}"{% endif %}>{{ block.settings.button_label_1 }}</a>
                     </div>
                   {%- endif -%}
                 </div>
@@ -173,14 +197,19 @@
       "name": "Image slide",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "caption", "label": "Caption (above heading)" },
         { "type": "html", "id": "heading", "label": "Heading" },
         { "type": "textarea", "id": "subtitle", "label": "Subtitle" },
         { "type": "text", "id": "button_label_1", "label": "Primary button label" },
         { "type": "url", "id": "button_link_1", "label": "Primary button link" },
         { "type": "text", "id": "button_label_2", "label": "Secondary button label" },
         { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
+        { "type": "color", "id": "button_bg", "label": "Primary button background" },
+        { "type": "color", "id": "button_color", "label": "Primary button text color" },
+        { "type": "color", "id": "button_color_2", "label": "Secondary button color" },
         { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
-        { "type": "select", "id": "text_position", "label": "Text position", "options": [ { "value": "left", "label": "Left" }, { "value": "center", "label": "Center" } ], "default": "left" }
+        { "type": "select", "id": "content_position", "label": "Content position", "options": [ { "value": "top_left", "label": "Top left" }, { "value": "top_right", "label": "Top right" }, { "value": "bottom_left", "label": "Bottom left" }, { "value": "bottom_right", "label": "Bottom right" }, { "value": "center", "label": "Center" } ], "default": "bottom_left" },
+        { "type": "color", "id": "text_color", "label": "Text color", "default": "#E8E0CC" }
       ]
     },
     {
@@ -190,10 +219,15 @@
         { "type": "video", "id": "video", "label": "Video" },
         { "type": "image_picker", "id": "poster", "label": "Poster / fallback image" },
         { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
+        { "type": "text", "id": "caption", "label": "Caption (above heading)" },
         { "type": "html", "id": "heading", "label": "Heading (optional)" },
         { "type": "textarea", "id": "subtitle", "label": "Subtitle (optional)" },
         { "type": "text", "id": "button_label_1", "label": "Button label (optional)" },
-        { "type": "url", "id": "button_link_1", "label": "Button link (optional)" }
+        { "type": "url", "id": "button_link_1", "label": "Button link (optional)" },
+        { "type": "color", "id": "button_bg", "label": "Button background" },
+        { "type": "color", "id": "button_color", "label": "Button text color" },
+        { "type": "select", "id": "content_position", "label": "Content position", "options": [ { "value": "top_left", "label": "Top left" }, { "value": "top_right", "label": "Top right" }, { "value": "bottom_left", "label": "Bottom left" }, { "value": "bottom_right", "label": "Bottom right" }, { "value": "center", "label": "Center" } ], "default": "bottom_left" },
+        { "type": "color", "id": "text_color", "label": "Text color", "default": "#E8E0CC" }
       ]
     }
   ],
