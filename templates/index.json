@@ -15,7 +15,7 @@
         "slide_1": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/heroposter.jpg",
+            "image": "shopify://shop_images/hero-ube-kdm.jpg",
             "heading": "<p>Honest<br>ingredients.<br><em>Nothing more.</em></p>",
             "subtitle": "Teas, superfoods, and botanicals sourced directly from the farms we know. Tested before they reach you. No filters, no synthetics, no guesswork.",
             "button_label_1": "Shop Now",
@@ -27,6 +27,7 @@
         "slide_2": {
           "type": "image_slide",
           "settings": {
+            "image": "shopify://shop_images/hero-chai-kdm.jpg",
             "overlay_opacity": 100,
             "text_position": "left"
           }
@@ -264,7 +265,7 @@
             "collection": "",
             "title": "Fruit Powders",
             "description": "Blueberry \u00b7 Taro \u00b7 Tart Cherries \u00b7 Rose Petals \u00b7 Date",
-            "link": "shopify://collections/fruit-sweeteners"
+            "link": "shopify://collections/organic-fruit-powders"
           }
         }
       },
