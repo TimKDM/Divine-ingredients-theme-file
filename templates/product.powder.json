@@ -59,7 +59,7 @@
         "cert_badge_text": "USDA Organic",
         "bulk_text": "",
         "price_note": "Free shipping on orders over $99",
-        "default_facts": "Product type | Organic Mushroom Powder\nIngredients | 100% Organic. Whole fruiting body\nFillers or carriers | None. Just the mushroom.\nCertifications | USDA Organic · CCOF Certified · Third-party lab tested\nAllergens | Processed in a facility that handles nuts and seeds.\nStorage | Store in a cool, dry place. Reseal after use. Best used within 12 months of opening."
+        "default_facts": "Product type | Organic Powder\nIngredients | 100% Organic. See product description for the full ingredient list\nFillers or carriers | None. Just the powder.\nCertifications | USDA Organic · CCOF Certified · Third-party lab tested\nAllergens | Processed in a facility that handles nuts and seeds.\nStorage | Store in a cool, dry place. Reseal after use. Best used within 12 months of opening."
       }
     },
     "divine_product_details": {
@@ -70,11 +70,11 @@
           "settings": {
             "heading": "The full story, no fine print",
             "row_1_key": "Product type",
-            "row_1_val": "Organic Mushroom Powder",
+            "row_1_val": "Organic Powder",
             "row_2_key": "Ingredients",
-            "row_2_val": "100% Organic. Whole fruiting body",
+            "row_2_val": "100% Organic. See product description for the full ingredient list",
             "row_3_key": "Fillers or carriers",
-            "row_3_val": "None. Just the mushroom.",
+            "row_3_val": "None. Just the powder.",
             "row_4_key": "Certifications",
             "row_4_val": "USDA Organic · CCOF Certified · Third-party lab tested",
             "row_5_key": "Allergens",
