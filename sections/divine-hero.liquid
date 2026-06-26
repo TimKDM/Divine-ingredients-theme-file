@@ -76,10 +76,10 @@
                 {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
                   <div class="d-hero-btns">
                     {%- if block.settings.button_label_1 != blank -%}
-                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp"{% if block.settings.button_bg != blank or block.settings.button_color != blank %} style="{% if block.settings.button_bg != blank %}background:{{ block.settings.button_bg }};{% endif %}{% if block.settings.button_color != blank %}color:{{ block.settings.button_color }};{% endif %}"{% endif %}>{{ block.settings.button_label_1 }}</a>
                     {%- endif -%}
                     {%- if block.settings.button_label_2 != blank -%}
-                      <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-hg">{{ block.settings.button_label_2 }} →</a>
+                      <a href="{{ block.settings.button_link_2 | default: '#' }}" class="d-btn-hg"{% if block.settings.button_color_2 != blank %} style="color:{{ block.settings.button_color_2 }};border-color:{{ block.settings.button_color_2 }}"{% endif %}>{{ block.settings.button_label_2 }} →</a>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -112,7 +112,7 @@
                   {%- endif -%}
                   {%- if block.settings.button_label_1 != blank -%}
                     <div class="d-hero-btns">
-                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp">{{ block.settings.button_label_1 }}</a>
+                      <a href="{{ block.settings.button_link_1 | default: '#' }}" class="d-btn-hp"{% if block.settings.button_bg != blank or block.settings.button_color != blank %} style="{% if block.settings.button_bg != blank %}background:{{ block.settings.button_bg }};{% endif %}{% if block.settings.button_color != blank %}color:{{ block.settings.button_color }};{% endif %}"{% endif %}>{{ block.settings.button_label_1 }}</a>
                     </div>
                   {%- endif -%}
                 </div>
@@ -197,6 +197,9 @@
         { "type": "url", "id": "button_link_1", "label": "Primary button link" },
         { "type": "text", "id": "button_label_2", "label": "Secondary button label" },
         { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
+        { "type": "color", "id": "button_bg", "label": "Primary button background" },
+        { "type": "color", "id": "button_color", "label": "Primary button text color" },
+        { "type": "color", "id": "button_color_2", "label": "Secondary button color" },
         { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "default": 100, "unit": "%" },
         { "type": "select", "id": "content_position", "label": "Content position", "options": [ { "value": "top_left", "label": "Top left" }, { "value": "top_right", "label": "Top right" }, { "value": "bottom_left", "label": "Bottom left" }, { "value": "bottom_right", "label": "Bottom right" }, { "value": "center", "label": "Center" } ], "default": "bottom_left" },
         { "type": "color", "id": "text_color", "label": "Text color", "default": "#E8E0CC" }
@@ -213,6 +216,8 @@
         { "type": "textarea", "id": "subtitle", "label": "Subtitle (optional)" },
         { "type": "text", "id": "button_label_1", "label": "Button label (optional)" },
         { "type": "url", "id": "button_link_1", "label": "Button link (optional)" },
+        { "type": "color", "id": "button_bg", "label": "Button background" },
+        { "type": "color", "id": "button_color", "label": "Button text color" },
         { "type": "select", "id": "content_position", "label": "Content position", "options": [ { "value": "top_left", "label": "Top left" }, { "value": "top_right", "label": "Top right" }, { "value": "bottom_left", "label": "Bottom left" }, { "value": "bottom_right", "label": "Bottom right" }, { "value": "center", "label": "Center" } ], "default": "bottom_left" },
         { "type": "color", "id": "text_color", "label": "Text color", "default": "#E8E0CC" }
       ]
