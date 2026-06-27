@@ -33,7 +33,10 @@
 {%- endfor -%}
 {%- assign group_key_list = group_keys | split: '|' | uniq -%}
 
-<section class="d-coll" id="DColl-{{ section.id }}">
+<section class="d-coll" id="DColl-{{ section.id }}"
+  data-total-pages="{{ paginate.pages }}"
+  data-collection-url="{{ collection.url }}"
+  data-section-id="{{ section.id }}">
 
   {%- if section.settings.show_breadcrumb -%}
     <nav class="d-breadcrumb d-coll-breadcrumb" aria-label="Breadcrumb">
@@ -132,21 +135,22 @@
                   endif
                 -%}
               {%- endfor -%}
-              {%- if count > 0 -%}
-                <button
-                  type="button"
-                  class="d-filter-option"
-                  data-coll-filter
-                  data-group="{{ gk }}"
-                  data-val="{{ val }}"
-                  aria-pressed="false"
-                  {{ block.shopify_attributes }}
-                >
-                  <span class="d-fo-check" aria-hidden="true"></span>
-                  <span class="d-fo-label">{{ block.settings.label }}</span>
-                  <span class="d-fo-count">{{ count }}</span>
-                </button>
-              {%- endif -%}
+              {%- comment -%} Always render the option; counts are recomputed client-side
+                once the full product set is loaded (count>0 gate removed so options for
+                products beyond the first page still appear). {%- endcomment -%}
+              <button
+                type="button"
+                class="d-filter-option"
+                data-coll-filter
+                data-group="{{ gk }}"
+                data-val="{{ val }}"
+                aria-pressed="false"
+                {{ block.shopify_attributes }}
+              >
+                <span class="d-fo-check" aria-hidden="true"></span>
+                <span class="d-fo-label">{{ block.settings.label }}</span>
+                <span class="d-fo-count">{{ count }}</span>
+              </button>
             {%- endif -%}
           {%- endfor -%}
         {%- endcapture -%}
@@ -404,6 +408,57 @@
         sorted.forEach(function(c){ grid.appendChild(c); });
       });
     }
+
+    /* Recompute sidebar option counts from the full card set; hide zero-count options */
+    function recomputeCounts(){
+      root.querySelectorAll('[data-coll-filter]').forEach(function(opt){
+        var g = opt.dataset.group, v = opt.dataset.val, n = 0;
+        cards.forEach(function(card){
+          if (g === 'cat')       { if ((card.dataset.cat  || '') === v) n++; }
+          else if (g === 'type') { if ((card.dataset.type || '') === v) n++; }
+          else if (g === 'func') { if ((card.dataset.func || '').split(' ').indexOf(v) !== -1) n++; }
+        });
+        var c = opt.querySelector('.d-fo-count');
+        if (c) c.textContent = n;
+        opt.style.display = n === 0 ? 'none' : '';
+      });
+    }
+
+    /* Shopify paginate caps at 50/page; this grid has no pagination UI, so fetch the
+       remaining pages via the Section Rendering API and append them, then recompute. */
+    function loadAllPages(){
+      var totalPages = parseInt(root.dataset.totalPages, 10) || 1;
+      recomputeCounts();
+      if (totalPages <= 1) return;
+      var baseUrl = root.dataset.collectionUrl;
+      var sectionId = root.dataset.sectionId;
+      var reqs = [];
+      for (var p = 2; p <= totalPages; p++) {
+        var sep = baseUrl.indexOf('?') === -1 ? '?' : '&';
+        reqs.push(fetch(baseUrl + sep + 'section_id=' + encodeURIComponent(sectionId) + '&page=' + p)
+          .then(function(r){ return r.ok ? r.text() : ''; }));
+      }
+      Promise.all(reqs).then(function(htmls){
+        var parser = new DOMParser();
+        var seen = {};
+        cards.forEach(function(c){ seen[c.getAttribute('href')] = true; });
+        htmls.forEach(function(html){
+          if (!html) return;
+          var doc = parser.parseFromString(html, 'text/html');
+          doc.querySelectorAll('[data-coll-card]').forEach(function(card){
+            var href = card.getAttribute('href');
+            if (href && seen[href]) return;   /* skip dupes if a page repeats */
+            seen[href] = true;
+            grid.appendChild(card);
+          });
+        });
+        cards = Array.from(root.querySelectorAll('[data-coll-card]'));
+        recomputeCounts();
+        update();
+      }).catch(function(){ /* page 1 already rendered; fail quietly */ });
+    }
+
+    loadAllPages();
   })();
 </script>
 
