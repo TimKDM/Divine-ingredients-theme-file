@@ -38,6 +38,14 @@
   data-collection-url="{{ collection.url }}"
   data-section-id="{{ section.id }}">
 
+  <style>
+    #DColl-{{ section.id }} .d-coll-seal {
+      width: 34px; height: 34px; flex-shrink: 0;
+      margin-left: auto; margin-right: 10px;
+      border-radius: 4px;
+    }
+  </style>
+
   {%- if section.settings.show_breadcrumb -%}
     <nav class="d-breadcrumb d-coll-breadcrumb" aria-label="Breadcrumb">
       <a href="{{ routes.root_url }}">Home</a>
@@ -246,6 +254,11 @@
                   </div>
                   <div class="d-coll-card-from">{{ cart.currency.iso_code }}</div>
                 </div>
+                {%- if p.tags contains 'Certified Organic' -%}
+                  <img class="d-coll-seal"
+                    src="{{ 'Organic4colorsealJPG.jpg' | file_url }}"
+                    alt="USDA Certified Organic" width="34" height="34" loading="lazy">
+                {%- endif -%}
                 <span class="d-coll-card-add" aria-hidden="true">+</span>
               </div>
             </div>
