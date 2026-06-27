@@ -46,6 +46,31 @@
     width: 9px; height: 9px; background: var(--d-beige-lt); opacity: .45;
   }
   #shopify-section-{{ section.id }} .swiper-pagination-bullet-active{ opacity: 1; }
+  /* Prev/next arrows */
+  #shopify-section-{{ section.id }} .swiper-button-prev,
+  #shopify-section-{{ section.id }} .swiper-button-next{
+    --swiper-navigation-size: 20px;
+    width: 46px; height: 46px; margin-top: 0; top: 50%; transform: translateY(-50%);
+    border-radius: 50%; padding: 0; cursor: pointer; z-index: 6;
+    color: var(--d-beige-lt);
+    background: rgba(17,20,16,.35);
+    border: 1px solid rgba(232,224,204,.3);
+    transition: background .18s, border-color .18s;
+  }
+  #shopify-section-{{ section.id }} .swiper-button-prev:hover,
+  #shopify-section-{{ section.id }} .swiper-button-next:hover{
+    background: rgba(17,20,16,.6); border-color: rgba(232,224,204,.65);
+  }
+  #shopify-section-{{ section.id }} .swiper-button-prev::after,
+  #shopify-section-{{ section.id }} .swiper-button-next::after{ font-weight: 700; }
+  #shopify-section-{{ section.id }} .swiper-button-prev{ left: 22px; }
+  #shopify-section-{{ section.id }} .swiper-button-next{ right: 22px; }
+  @media(max-width: 720px){
+    #shopify-section-{{ section.id }} .swiper-button-prev,
+    #shopify-section-{{ section.id }} .swiper-button-next{ width: 38px; height: 38px; }
+    #shopify-section-{{ section.id }} .swiper-button-prev{ left: 12px; }
+    #shopify-section-{{ section.id }} .swiper-button-next{ right: 12px; }
+  }
 {%- endstyle -%}
 
 <section class="d-hero d-hero--slider">
@@ -129,6 +154,8 @@
       {%- endfor -%}
     </div>
     <div class="swiper-pagination"></div>
+    <button type="button" class="swiper-button-prev d-hero-nav" aria-label="Previous slide"></button>
+    <button type="button" class="swiper-button-next d-hero-nav" aria-label="Next slide"></button>
   </div>
 </section>
 
@@ -145,7 +172,11 @@
         loop: true,
         speed: 800,
         autoplay: reduce ? false : { delay: 6000, disableOnInteraction: false },
-        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true }
+        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+        navigation: {
+          prevEl: el.querySelector('.swiper-button-prev'),
+          nextEl: el.querySelector('.swiper-button-next')
+        }
       });
     }
     if (document.readyState !== 'loading') init();
