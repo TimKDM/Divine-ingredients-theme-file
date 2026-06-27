@@ -39,11 +39,10 @@
   data-section-id="{{ section.id }}">
 
   <style>
-    #DColl-{{ section.id }} .d-coll-card-img { position: relative; }
     #DColl-{{ section.id }} .d-coll-seal {
-      position: absolute; bottom: 8px; right: 8px;
-      width: 46px; height: 46px; z-index: 2; pointer-events: none;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,.25));
+      width: 34px; height: 34px; flex-shrink: 0;
+      margin-left: auto; margin-right: 10px;
+      border-radius: 4px;
     }
   </style>
 
@@ -226,11 +225,6 @@
               {%- else -%}
                 {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
               {%- endif -%}
-              {%- if p.tags contains 'Certified Organic' -%}
-                <img class="d-coll-seal"
-                  src="{{ 'Organic4colorsealJPG.jpg' | file_url }}"
-                  alt="USDA Certified Organic" width="46" height="46" loading="lazy">
-              {%- endif -%}
               {%- assign tag_lc = p.tags | join: ',' | downcase -%}
               <div class="d-coll-badges">
                 {%- if tag_lc contains 'best-seller' or tag_lc contains 'best seller' -%}
@@ -260,6 +254,11 @@
                   </div>
                   <div class="d-coll-card-from">{{ cart.currency.iso_code }}</div>
                 </div>
+                {%- if p.tags contains 'Certified Organic' -%}
+                  <img class="d-coll-seal"
+                    src="{{ 'Organic4colorsealJPG.jpg' | file_url }}"
+                    alt="USDA Certified Organic" width="34" height="34" loading="lazy">
+                {%- endif -%}
                 <span class="d-coll-card-add" aria-hidden="true">+</span>
               </div>
             </div>
