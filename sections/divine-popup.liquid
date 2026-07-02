@@ -40,7 +40,13 @@
     {%- endif -%}
 
     {%- form 'customer', class: 'd-popup-form' -%}
+      {%- comment -%} Capture success inside the form block; `form` is nil outside it,
+        so the script below must read this flag, not form.posted_successfully?. {%- endcomment -%}
+      {%- if form.posted_successfully? -%}{%- assign d_popup_posted = true -%}{%- endif -%}
       <input type="hidden" name="contact[tags]" value="newsletter,popup">
+      {%- comment -%} Opt the subscriber into email marketing so Shopify creates a marketing
+        contact and fires the "Welcome new subscribers" automation. {%- endcomment -%}
+      <input type="hidden" name="contact[accepts_marketing]" value="1">
       <label for="DivinePopupEmail-{{ section.id }}" class="d-sr-only">Email address</label>
       <div class="d-popup-row">
         <input
@@ -74,9 +80,9 @@
     var root = document.getElementById('DivinePopup-{{ section.id }}');
     if (!root) return;
 
-    /* If the form just submitted successfully, Shopify reloads the page and
-       sets form.posted_successfully. We surface that with .is-success. */
-    {%- if form.posted_successfully? -%}
+    /* If the form just submitted successfully, Shopify reloads the page; we
+       captured that inside the customer-form block (form is nil out here). */
+    {%- if d_popup_posted -%}
       root.classList.add('is-open', 'is-success');
       root.setAttribute('aria-hidden','false');
       setCookie();
