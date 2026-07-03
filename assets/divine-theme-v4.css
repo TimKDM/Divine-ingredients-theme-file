@@ -286,8 +286,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   display:flex;align-items:center;gap:18px;flex-wrap:wrap;
   opacity:0;animation:d-up .7s .4s forwards;
 }
-/* Centered hero slides (e.g. Chai Edit circle) need more air above the buttons */
-.d-hp--center .d-hero-btns { margin-top: 52px; }
 .d-btn-hp{
   background:var(--d-beige-lt);color:var(--d-black);
   font-family:var(--d-font-sans);font-size:12px;font-weight:500;
@@ -2786,3 +2784,11 @@ input, textarea, select, button,
   font-family: var(--d-font-sans) !important;
   font-weight: 400 !important;
 }
+
+/* Chai Edit hero (centered slides): smaller content block, centered in the image circle */
+.d-hp--center .d-hero-content{ transform: translateY(36px); padding-bottom: 0; }
+.d-hp--center .d-hero-kicker{ font-size: 10px; margin-bottom: 14px; }
+.d-hp--center .d-hero-h1{ font-size: 50px; line-height: 1.05; margin-bottom: 16px; }
+.d-hp--center .d-hero-p{ font-size: 14.5px; line-height: 1.75; }
+.d-hp--center .d-hero-btns{ margin-top: 28px; }
+.d-hp--center .d-btn-hp{ font-size: 15px; padding: 13px 30px; }
