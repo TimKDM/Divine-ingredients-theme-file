@@ -286,6 +286,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--d-font-sans); }
   display:flex;align-items:center;gap:18px;flex-wrap:wrap;
   opacity:0;animation:d-up .7s .4s forwards;
 }
+/* Centered hero slides (e.g. Chai Edit circle) need more air above the buttons */
+.d-hp--center .d-hero-btns { margin-top: 52px; }
 .d-btn-hp{
   background:var(--d-beige-lt);color:var(--d-black);
   font-family:var(--d-font-sans);font-size:12px;font-weight:500;
