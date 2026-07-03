@@ -55,6 +55,7 @@
     {%- endif -%}
 
     {% form 'customer', class: 'newsletter-form' %}
+      <input type="hidden" name="contact[accepts_marketing]" value="1">
       {%- if form.errors -%}
         <div class="subscribe-message">
           {{ form.errors | default_errors }}
@@ -343,6 +344,7 @@ document.addEventListener("shopify:section:select", initializeModal);
     {%- endif -%}
 
     {% form 'customer', class: 'newsletter-form' %}
+      <input type="hidden" name="contact[accepts_marketing]" value="1">
       {%- if form.errors -%}
         <div class="subscribe-message">
           {{ form.errors | default_errors }}
