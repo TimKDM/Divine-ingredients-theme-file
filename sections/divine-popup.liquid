@@ -80,15 +80,6 @@
     var root = document.getElementById('DivinePopup-{{ section.id }}');
     if (!root) return;
 
-    /* If the form just submitted successfully, Shopify reloads the page; we
-       captured that inside the customer-form block (form is nil out here). */
-    {%- if d_popup_posted -%}
-      root.classList.add('is-open', 'is-success');
-      root.setAttribute('aria-hidden','false');
-      setCookie();
-      return;
-    {%- endif -%}
-
     var cookieName = root.dataset.cookieName || 'divine_popup_seen';
     var cookieDays = parseInt(root.dataset.cookieDays || '14', 10);
     var delay = (parseInt(root.dataset.delay || '5', 10)) * 1000;
@@ -107,15 +98,32 @@
       root.setAttribute('aria-hidden','false');
       var firstInput = root.querySelector('input[type="email"]');
       if (firstInput) setTimeout(function(){ firstInput.focus(); }, 50);
-      document.addEventListener('keydown', escClose);
     }
     function close(){
       root.classList.remove('is-open');
       root.setAttribute('aria-hidden','true');
       setCookie();
-      document.removeEventListener('keydown', escClose);
     }
     function escClose(e){ if (e.key === 'Escape') close(); }
+
+    /* Wire dismiss controls FIRST so they work in every state, including
+       the post-submit success state (X button, click outside the card, Esc). */
+    root.querySelectorAll('[data-popup-close]').forEach(function(b){
+      b.addEventListener('click', close);
+    });
+    root.addEventListener('click', function(e){
+      if (e.target === root) close();
+    });
+    document.addEventListener('keydown', escClose);
+
+    /* If the form just submitted successfully, show the success state.
+       The dismiss controls above still close it. */
+    {%- if d_popup_posted -%}
+      root.classList.add('is-open', 'is-success');
+      root.setAttribute('aria-hidden','false');
+      setCookie();
+      return;
+    {%- endif -%}
 
     /* Theme editor: always open when this section is selected so merchant can style it */
     if (window.Shopify && Shopify.designMode) {
@@ -130,13 +138,6 @@
     if (getCookie(cookieName)) return;
 
     setTimeout(open, delay);
-
-    root.querySelectorAll('[data-popup-close]').forEach(function(b){
-      b.addEventListener('click', close);
-    });
-    root.addEventListener('click', function(e){
-      if (e.target === root) close();
-    });
   })();
 </script>
 {%- endunless -%}
