@@ -23,21 +23,21 @@
             "button_link_1": "shopify://products/organic-ube-powder",
             "button_label_2": "",
             "button_link_2": "",
-            "button_bg": "#7E03B3",
-            "button_color": "#FFFFFF",
+            "button_bg": "#7e03b3",
+            "button_color": "#ffffff",
             "button_color_2": "",
             "overlay_opacity": 0,
             "content_position": "top_left",
-            "text_color": "#7E03B3"
+            "text_color": "#7e03b3"
           }
         },
         "slide_2": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/hero-chai-kdm.jpg",
+            "image": "shopify://shop_images/the-chai-edit-kdm-v6.png",
             "caption": "New From Divine",
             "heading": "The Chai Edit",
-            "subtitle": "Three iconic blends. One moment of calm. Mumbai Masala, Tulsi, and Herbal Chai. Handcrafted for chai lovers.",
+            "subtitle": "Three iconic blends. One moment of calm. <br>Mumbai Masala, Tulsi, and Herbal Chai. <br>\nHandcrafted for chai lovers.",
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://products/the-chai-edit",
             "button_label_2": "",
@@ -46,7 +46,7 @@
             "button_color": "",
             "button_color_2": "",
             "overlay_opacity": 0,
-            "content_position": "top_left",
+            "content_position": "center",
             "text_color": "#e8e0cc"
           }
         },

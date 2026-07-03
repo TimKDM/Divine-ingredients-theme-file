@@ -69,7 +69,7 @@
     "divine_popup": {
       "type": "divine-popup",
       "settings": {
-        "enabled": false,
+        "enabled": true,
         "kicker": "Welcome to Divine",
         "heading": "<p>20% off your <em>first order.</em></p>",
         "text": "Real ingredients. Lab-tested. Sourced direct from the farms. Drop your email and we'll send your 20% off code, plus first looks at new arrivals.",
@@ -78,7 +78,7 @@
         "fine_print": "By signing up you agree to receive marketing emails. Unsubscribe any time.",
         "success_message": "Thanks. Your 20% off code is on its way. Welcome to <em>Divine</em>.",
         "delay": 5,
-        "cookie_days": 14
+        "cookie_days": 7
       }
     }
   },
