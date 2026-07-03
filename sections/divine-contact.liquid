@@ -70,6 +70,7 @@
         {%- if form.errors -%}
           <div class="d-contact-error">{{ form.errors | default_errors }}</div>
         {%- endif -%}
+        <input type="hidden" name="contact[tags]" value="contact-inquiry">
         <div class="d-contact-row">
           <label class="d-sr-only" for="DContactName-{{ section.id }}">Name</label>
           <input class="d-contact-input" type="text" id="DContactName-{{ section.id }}" name="contact[name]" placeholder="Your name" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" autocomplete="name">
