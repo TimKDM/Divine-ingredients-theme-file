@@ -35,11 +35,49 @@
 }
 
 /* ============================================
+   CORMORANT — FULL FACE (theme-owned)
+   --d-font-serif lists "Cormorant" first, but the only external source
+   for it is the Google Fonts <link> in theme.liquid. When that CSS has
+   not loaded yet (the hero is the first thing painted, above the fold)
+   or does not apply, "Cormorant" has no face to resolve to and headings
+   drop to the Georgia fallback in the stack — which is why the center
+   hero heading looked like a different font than the rest of the site.
+   Declare the full Cormorant family here from the same gstatic source
+   the Google Fonts CSS uses, so every .d-* heading renders real
+   Cormorant regardless of the external stylesheet. Declared BEFORE the
+   digit-remap faces below so those still win for 0-9. */
+@font-face{
+  font-family:"Cormorant";
+  font-style:normal;font-weight:300;font-display:swap;
+  src:local("Cormorant"),local("Cormorant-Light"),
+      url("https://fonts.gstatic.com/s/cormorant/v24/H4c2BXOCl9bbnla_nHIA47NMUjsNbCVrFk9TQ7Q.ttf") format("truetype");
+}
+@font-face{
+  font-family:"Cormorant";
+  font-style:normal;font-weight:400;font-display:swap;
+  src:local("Cormorant"),local("Cormorant-Regular"),
+      url("https://fonts.gstatic.com/s/cormorant/v24/H4c2BXOCl9bbnla_nHIA47NMUjsNbCVrFhFTQ7Q.ttf") format("truetype");
+}
+@font-face{
+  font-family:"Cormorant";
+  font-style:normal;font-weight:500;font-display:swap;
+  src:local("Cormorant Medium"),local("Cormorant-Medium"),
+      url("https://fonts.gstatic.com/s/cormorant/v24/H4c2BXOCl9bbnla_nHIA47NMUjsNbCVrFiNTQ7Q.ttf") format("truetype");
+}
+@font-face{
+  font-family:"Cormorant";
+  font-style:italic;font-weight:400;font-display:swap;
+  src:local("Cormorant Italic"),local("Cormorant-Italic"),
+      url("https://fonts.gstatic.com/s/cormorant/v24/H4c0BXOCl9bbnla_nHIq6oGzilJm9otsA9kQq_dq6A.ttf") format("truetype");
+}
+
+/* ============================================
    NUMBERS ALWAYS IN JOST
    Re-declares the serif family with a unicode-range limited to the
-   digits 0-9, pointing those glyphs at Jost. Because this stylesheet
-   loads AFTER the Google Fonts CSS, these faces win for 0-9 while
-   Cormorant still renders all other text. Body text is already Jost.
+   digits 0-9, pointing those glyphs at Jost. Because these faces are
+   declared AFTER the full Cormorant family above (and after the Google
+   Fonts CSS), they win for 0-9 while Cormorant still renders all other
+   text. Body text is already Jost.
    ============================================ */
 @font-face{
   font-family:"Cormorant";
