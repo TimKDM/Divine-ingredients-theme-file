@@ -34,7 +34,7 @@
         "slide_2": {
           "type": "image_slide",
           "settings": {
-            "image": "shopify://shop_images/the-chai-edit-kdm-v7.png",
+            "image": "shopify://shop_images/hero-chai-kdm.jpg",
             "caption": "New From Divine",
             "heading": "The Chai Edit",
             "subtitle": "Three iconic blends. One moment of calm. <br>Mumbai Masala, Tulsi, and Herbal Chai. <br>\nHandcrafted for chai lovers.",
@@ -46,7 +46,7 @@
             "button_color": "",
             "button_color_2": "",
             "overlay_opacity": 0,
-            "content_position": "center",
+            "content_position": "bottom_left",
             "text_color": "#e8e0cc"
           }
         },
